@@ -22,6 +22,7 @@ import { overrideChip } from '../chip/ChipOverrides';
 import { overrideDialog } from '../dialog/DialogOverrides';
 import { overrideDrawer } from '../drawer/DrawerOverrides';
 import { overrideIconButton } from '../icon-button/IconButtonOverrides';
+import { overrideLinearProgress } from '../linear-progress/LinearProgressOverrides';
 import { overrideLink } from '../link/LinkOverrides';
 import { overrideList } from '../list/ListOverrides';
 import { overrideMenu } from '../menu/MenuOverrides';
@@ -104,6 +105,7 @@ function createTheme(): SuperDispatchTheme {
   overrideTooltip(theme);
   overrideTypography(theme);
   overridePagination(theme);
+  overrideLinearProgress(theme);
 
   return theme;
 }
