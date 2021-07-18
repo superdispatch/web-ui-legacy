@@ -56,7 +56,7 @@ const useStyles = makeStyles(
 export interface AdaptiveToolbarItem {
   key: Key;
   label: ReactNode;
-  onClick?: (event: MouseEvent<HTMLLIElement>) => void;
+  onClick?: (event: MouseEvent<HTMLElement>) => void;
   ButtonProps?: Omit<ButtonProps, 'type' | 'onClick'>;
 }
 
@@ -129,7 +129,7 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
                 >
                   <Button
                     type="button"
-                    onClick={() => item.onClick}
+                    onClick={(event) => item.onClick?.(event)}
                     {...item.ButtonProps}
                   >
                     <Typography noWrap={true} variant="inherit">
