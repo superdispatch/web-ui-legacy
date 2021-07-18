@@ -14,13 +14,14 @@ import {
   forwardRef,
   ForwardRefExoticComponent,
   Key,
+  MouseEvent,
   ReactNode,
   RefAttributes,
   useLayoutEffect,
   useRef,
   useState,
 } from 'react';
-import { Button, ButtonProps } from '../button/Button';
+import { Button } from '../button/Button';
 
 function useResizeObserver<T extends HTMLElement>(
   node: null | undefined | T,
@@ -55,8 +56,7 @@ const useStyles = makeStyles(
 export interface AdaptiveToolbarItem {
   key: Key;
   label: ReactNode;
-  onClick?: () => void;
-  ButtonProps?: Omit<ButtonProps, 'type' | 'onClick'>;
+  onClick?: (event: MouseEvent<HTMLLIElement>) => void;
 }
 
 export interface AdaptiveToolbarProps
@@ -126,11 +126,7 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
                     itemNodes.current[idx] = node;
                   }}
                 >
-                  <Button
-                    type="button"
-                    onClick={item.onClick}
-                    {...item.ButtonProps}
-                  >
+                  <Button type="button" onClick={() => item.onClick}>
                     <Typography noWrap={true} variant="inherit">
                       {item.label}
                     </Typography>
@@ -161,8 +157,8 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
                 {menuItems.map((item) => (
                   <MenuItem
                     key={item.key}
-                    onClick={() => {
-                      item.onClick?.();
+                    onClick={(event) => {
+                      item.onClick?.(event);
                       setMenuButtonRef(undefined);
                     }}
                   >
