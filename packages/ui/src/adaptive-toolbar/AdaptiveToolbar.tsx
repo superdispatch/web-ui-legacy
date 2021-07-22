@@ -129,7 +129,7 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
                 >
                   <Button
                     type="button"
-                    onClick={(event) => item.onClick?.(event)}
+                    onClick={item.onClick}
                     {...item.ButtonProps}
                   >
                     <Typography noWrap={true} variant="inherit">
