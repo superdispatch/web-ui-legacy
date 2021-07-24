@@ -72,12 +72,7 @@ export const DescriptionItem = forwardRef<HTMLDivElement, DescriptionItemProps>(
     const isEmptyChildren = isEmptyReactNode(children);
 
     return (
-      <Columns
-        id={id}
-        ref={ref}
-        space={['xsmall', 'xxsmall']}
-        aria-label={ariaLabel}
-      >
+      <Columns id={id} ref={ref} space="xsmall" aria-label={ariaLabel}>
         {!!(icon || inset) && (
           <Column width="content">
             <DescriptionItemIcon>{icon}</DescriptionItemIcon>
