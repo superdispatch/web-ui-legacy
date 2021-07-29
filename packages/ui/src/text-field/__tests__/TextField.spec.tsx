@@ -23,12 +23,12 @@ it('checks default props', () => {
   `);
   expect(props.MuiFormHelperText).toMatchInlineSnapshot(`undefined`);
   expect(props.MuiTextField).toMatchInlineSnapshot(`
-    Object {
-      "rows": 4,
-      "rowsMax": 4,
-      "variant": "outlined",
-    }
-  `);
+Object {
+  "maxRows": 4,
+  "minRows": 4,
+  "variant": "outlined",
+}
+`);
 });
 
 it('checks component css', () => {
