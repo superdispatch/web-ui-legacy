@@ -35,9 +35,7 @@ function parseSpace(space: unknown): string {
 
 export type MarginProp = 'auto' | SpaceProp | NegativeSpaceProp;
 function parseMargin(input: unknown): string {
-  if (input === 'auto') {
-    return input;
-  }
+  if (input === 'auto') return input;
 
   let prefix = '';
 
@@ -59,10 +57,11 @@ const normalizeBorderRadius = createRuleNormalizer<BorderRadiusProp>({
   small: 4,
 });
 
-export type BorderWidthProp = 'none' | 'small' | 'large';
+export type BorderWidthProp = 'none' | 'small' | 'medium' | 'large';
 const normalizeBorderWidth = createRuleNormalizer<BorderWidthProp>({
   none: 0,
   small: 1,
+  medium: 2,
   large: 4,
 });
 
@@ -101,6 +100,12 @@ interface BoxRules {
   marginBottom?: ResponsiveProp<MarginProp>;
 
   borderRadius?: ResponsiveProp<BorderRadiusProp>;
+  borderTopLeftRadius?: ResponsiveProp<BorderRadiusProp>;
+  borderTopRightRadius?: ResponsiveProp<BorderRadiusProp>;
+  borderBottomLeftRadius?: ResponsiveProp<BorderRadiusProp>;
+  borderBottomRightRadius?: ResponsiveProp<BorderRadiusProp>;
+
+  fontSize?: ResponsiveProp<Property.FontSize>;
 
   width?: ResponsiveProp<Property.Width>;
   maxWidth?: ResponsiveProp<Property.MaxWidth>;
@@ -152,6 +157,12 @@ const normalizers: Record<keyof BoxRules, undefined | RuleNormalizer> = {
   paddingBottom: parseSpace,
 
   borderRadius: normalizeBorderRadius,
+  borderTopLeftRadius: normalizeBorderRadius,
+  borderTopRightRadius: normalizeBorderRadius,
+  borderBottomLeftRadius: normalizeBorderRadius,
+  borderBottomRightRadius: normalizeBorderRadius,
+
+  fontSize: undefined,
 
   width: undefined,
   maxWidth: undefined,
@@ -179,9 +190,7 @@ function injectRule(
   value: unknown,
   normalizer: undefined | RuleNormalizer,
 ): void {
-  if (normalizer != null) {
-    value = normalizer(value);
-  }
+  if (normalizer != null) value = normalizer(value);
 
   if (value != null) {
     let rules = styles[breakpoint];
@@ -222,15 +231,14 @@ export const Box: ForwardRefExoticComponent<BoxProps> = styled.div<BoxProps>(
     };
 
     for (const k in props) {
-      if (Object.prototype.hasOwnProperty.call(props, k)) {
+      if (Object.prototype.hasOwnProperty.call(props, k) && k in normalizers) {
         const key = k as keyof BoxRules;
         const prop = props[key];
 
-        if (prop != null && key in normalizers) {
+        if (prop != null) {
           const [mobile, tablet, desktop] = parseResponsiveProp(prop);
 
           const normalizer = normalizers[key];
-
           injectRule(styles, key, xs, mobile, normalizer);
           injectRule(styles, key, sm, tablet, normalizer);
           injectRule(styles, key, md, desktop, normalizer);

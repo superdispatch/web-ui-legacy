@@ -2,8 +2,8 @@ import { CircularProgress, SvgIcon } from '@material-ui/core';
 import { Error } from '@material-ui/icons';
 import { mdiUpload } from '@mdi/js';
 import { CardButton, Color, Column, Columns } from '@superdispatch/ui';
-import { forwardRef, lazy, ReactElement, ReactNode, Suspense } from 'react';
-import { FileRejection } from 'react-dropzone';
+import { forwardRef, ReactElement, ReactNode, Suspense } from 'react';
+import Dropzone, { FileRejection } from 'react-dropzone';
 import styled from 'styled-components';
 
 export function toBytes(input: number, unit: 'kb' | 'mb' | 'gb'): number {
@@ -12,13 +12,23 @@ export function toBytes(input: number, unit: 'kb' | 'mb' | 'gb'): number {
   return input * (1 << 10);
 }
 
+const KILOBYTE = 1024;
+const BYTE_UNITS = [
+  'B',
+  'KB',
+  'MB',
+  'GB',
+  'TB',
+  'PB',
+  'EB',
+  'ZB',
+  'YB',
+] as const;
 export function formatBytes(bytes: number): string {
   if (bytes === 0) return '0 Bytes';
-  const kilobyte = 1024;
-  const units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-  const unitIndex = Math.floor(Math.log(bytes) / Math.log(kilobyte));
-  const unit = units[unitIndex];
-  return `${(bytes / Math.pow(kilobyte, unitIndex)).toFixed(2)} ${unit}`;
+  const unitIndex = Math.floor(Math.log(bytes) / Math.log(KILOBYTE));
+  const unit = BYTE_UNITS[unitIndex] as string;
+  return `${(bytes / Math.pow(KILOBYTE, unitIndex)).toFixed(2)} ${unit}`;
 }
 
 const StyledCardButton = styled(CardButton)<{
@@ -26,8 +36,6 @@ const StyledCardButton = styled(CardButton)<{
 }>(({ status }) => ({
   backgroundColor: status === 'active' ? Color.Blue50 : undefined,
 }));
-
-const Dropzone = lazy(() => import('react-dropzone'));
 
 interface UploadRejectionProps {
   maxSize?: number;
@@ -40,11 +48,8 @@ function UploadRejection({
   maxSize,
   rejection,
 }: UploadRejectionProps): null | ReactElement {
-  if (rejection.errors.length === 0) {
-    return null;
-  }
-
   const [error] = rejection.errors;
+  if (!error) return null;
 
   return (
     <Columns align="center">
@@ -128,7 +133,7 @@ export const FileDropZone = forwardRef<HTMLButtonElement, FileDropZoneProps>(
             isDragReject,
             getRootProps,
             getInputProps,
-            fileRejections,
+            fileRejections: [fileRejection],
           }) => {
             return (
               <>
@@ -144,11 +149,11 @@ export const FileDropZone = forwardRef<HTMLButtonElement, FileDropZoneProps>(
                     isDragActive ? 'active' : isDragReject ? 'error' : 'idle'
                   }
                   error={
-                    !!fileRejections.length && (
+                    !!fileRejection && (
                       <UploadRejection
                         accept={accept}
                         maxSize={maxSize}
-                        rejection={fileRejections[0]}
+                        rejection={fileRejection}
                       />
                     )
                   }
