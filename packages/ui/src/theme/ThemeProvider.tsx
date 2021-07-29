@@ -1,6 +1,6 @@
 import {
   createGenerateClassName,
-  createMuiTheme,
+  createTheme as createMuiTheme,
   CssBaseline,
 } from '@material-ui/core';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
