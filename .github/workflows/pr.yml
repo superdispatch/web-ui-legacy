@@ -1,8 +1,21 @@
 name: PR
 
-on: pull_request
+on:
+  pull_request:
+    branches-ignore:
+      - 'dependabot/*'
+  workflow_run:
+    workflows: ['Dependabot PR']
+    types:
+      - completed
 
 jobs:
+  pr-check:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - run: echo "OK"
+
   checks:
     runs-on: ubuntu-latest
     steps:
@@ -15,6 +28,7 @@ jobs:
       - uses: codecov/codecov-action@v2.0.2
 
   build:
+    needs: pr-check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,6 +39,7 @@ jobs:
           build_command: 'yarn build'
 
   preview:
+    needs: pr-check
     runs-on: ubuntu-latest
 
     outputs:
@@ -46,6 +61,7 @@ jobs:
 
   e2e:
     needs:
+      - pr-check
       - checks
       - preview
     runs-on: ubuntu-latest
