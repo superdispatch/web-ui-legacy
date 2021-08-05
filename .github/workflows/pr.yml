@@ -11,6 +11,8 @@ jobs:
   pr-check:
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - run: echo "OK"
 
   checks:
     runs-on: ubuntu-latest
