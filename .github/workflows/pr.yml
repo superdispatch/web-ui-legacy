@@ -2,14 +2,16 @@ name: PR
 
 on:
   pull_request:
-    branches-ignore:
-      - 'dependabot/*'
   workflow_run:
-    workflows: ['Dependabot']
+    workflows: ['Dependabot PR']
     types:
       - completed
 
 jobs:
+  pr-check:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' || github.event.workflow_run.conclusion == 'success' }}
+
   checks:
     runs-on: ubuntu-latest
     steps:
@@ -22,7 +24,7 @@ jobs:
       - uses: codecov/codecov-action@v1
 
   build:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    needs: pr-check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -33,7 +35,7 @@ jobs:
           build_command: 'yarn build'
 
   preview:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    needs: pr-check
     runs-on: ubuntu-latest
 
     outputs:
@@ -54,8 +56,8 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_HOSTING_SERVICE_ACCOUNT_JSON }}
 
   e2e:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     needs:
+      - pr-check
       - checks
       - preview
     runs-on: ubuntu-latest
