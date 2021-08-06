@@ -3,7 +3,7 @@ name: PR
 on:
   pull_request:
     branches-ignore:
-      - 'dependabot/*'
+      - 'dependabot/**'
   workflow_run:
     workflows: ['Dependabot PR']
     types:
