@@ -12,7 +12,7 @@
     ]
   },
   "scripts": {
-    "postinstall": "husky install",
+    "postinstall": "husky install && js-tools lint:yarn-deduplicate --fix",
     "build": "lerna run version --no-private",
     "build-size": "yarn build && size-limit",
     "check:types": "yarn tsc && yarn tsc --project cypress",
