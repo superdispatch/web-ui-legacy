@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import { CSSProperties, makeStyles } from '@material-ui/styles';
 import clsx from 'clsx';
-import { forwardRef, ForwardRefExoticComponent } from 'react';
+import { forwardRef, ForwardRefExoticComponent, useState } from 'react';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export type InfoCardClassKey = 'sizeLarge' | 'content' | CardClassKey;
@@ -38,6 +38,7 @@ export const InfoCard: ForwardRefExoticComponent<InfoCardProps> = forwardRef(
   (
     {
       size,
+      square,
       classes,
       children,
       className,
@@ -51,12 +52,22 @@ export const InfoCard: ForwardRefExoticComponent<InfoCardProps> = forwardRef(
       sizeLarge: sizeLargeClassName,
       ...styles
     } = useStyles({ classes });
+    const [rootNode, setRootNode] = useState<HTMLElement | null>(null);
+
+    const clientRect = rootNode?.getBoundingClientRect();
+    const isFullWidth = clientRect?.width === window.innerWidth;
 
     return (
       <Card
         {...props}
-        ref={ref}
+        ref={(node: HTMLElement) => {
+          setRootNode(node);
+          if (typeof ref === 'function') {
+            ref(node);
+          }
+        }}
         classes={styles}
+        square={square ?? isFullWidth}
         className={clsx(className, { [sizeLargeClassName]: size === 'large' })}
       >
         <CardContent
