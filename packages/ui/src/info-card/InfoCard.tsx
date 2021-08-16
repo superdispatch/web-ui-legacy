@@ -10,11 +10,22 @@ import clsx from 'clsx';
 import { forwardRef, ForwardRefExoticComponent, useState } from 'react';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
-export type InfoCardClassKey = 'sizeLarge' | 'content' | CardClassKey;
+export type InfoCardClassKey =
+  | 'sizeLarge'
+  | 'content'
+  | 'fullWidth'
+  | CardClassKey;
 
 const useStyles = makeStyles(
   (theme: SuperDispatchTheme): Record<InfoCardClassKey, CSSProperties> => ({
-    root: {},
+    root: {
+      '&$fullWidth': {
+        borderRadius: 0,
+        borderLeftWidth: 0,
+        borderRightWidth: 0,
+      },
+    },
+    fullWidth: {},
     sizeLarge: {},
     content: {
       padding: theme.spacing(2),
@@ -50,6 +61,7 @@ export const InfoCard: ForwardRefExoticComponent<InfoCardProps> = forwardRef(
     const {
       content: contentClassName,
       sizeLarge: sizeLargeClassName,
+      fullWidth: fullWidthClassName,
       ...styles
     } = useStyles({ classes });
     const [rootNode, setRootNode] = useState<HTMLElement | null>(null);
@@ -67,8 +79,10 @@ export const InfoCard: ForwardRefExoticComponent<InfoCardProps> = forwardRef(
           }
         }}
         classes={styles}
-        square={square ?? isFullWidth}
-        className={clsx(className, { [sizeLargeClassName]: size === 'large' })}
+        className={clsx(className, {
+          [sizeLargeClassName]: size === 'large',
+          [fullWidthClassName]: isFullWidth,
+        })}
       >
         <CardContent
           {...cardContentProps}
