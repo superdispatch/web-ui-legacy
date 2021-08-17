@@ -2,11 +2,9 @@ name: PR
 
 on:
   pull_request:
-    types:
-      - unlabeled
+    types: [unlabeled]
   pull_request_target:
-    types:
-      - labeled
+    types: [labeled]
 
 jobs:
   checks:
