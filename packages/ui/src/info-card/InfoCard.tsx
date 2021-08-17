@@ -7,14 +7,25 @@ import {
 } from '@material-ui/core';
 import { CSSProperties, makeStyles } from '@material-ui/styles';
 import clsx from 'clsx';
-import { forwardRef, ForwardRefExoticComponent } from 'react';
+import { forwardRef, ForwardRefExoticComponent, useState } from 'react';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
-export type InfoCardClassKey = 'sizeLarge' | 'content' | CardClassKey;
+export type InfoCardClassKey =
+  | 'sizeLarge'
+  | 'content'
+  | 'fullWidth'
+  | CardClassKey;
 
 const useStyles = makeStyles(
   (theme: SuperDispatchTheme): Record<InfoCardClassKey, CSSProperties> => ({
-    root: {},
+    root: {
+      '&$fullWidth': {
+        borderRadius: 0,
+        borderLeftWidth: 0,
+        borderRightWidth: 0,
+      },
+    },
+    fullWidth: {},
     sizeLarge: {},
     content: {
       padding: theme.spacing(2),
@@ -38,6 +49,7 @@ export const InfoCard: ForwardRefExoticComponent<InfoCardProps> = forwardRef(
   (
     {
       size,
+      square,
       classes,
       children,
       className,
@@ -49,15 +61,28 @@ export const InfoCard: ForwardRefExoticComponent<InfoCardProps> = forwardRef(
     const {
       content: contentClassName,
       sizeLarge: sizeLargeClassName,
+      fullWidth: fullWidthClassName,
       ...styles
     } = useStyles({ classes });
+    const [rootNode, setRootNode] = useState<HTMLElement | null>(null);
+
+    const clientRect = rootNode?.getBoundingClientRect();
+    const isFullWidth = clientRect?.width === window.innerWidth;
 
     return (
       <Card
         {...props}
-        ref={ref}
+        ref={(node: HTMLElement) => {
+          setRootNode(node);
+          if (typeof ref === 'function') {
+            ref(node);
+          }
+        }}
         classes={styles}
-        className={clsx(className, { [sizeLargeClassName]: size === 'large' })}
+        className={clsx(className, {
+          [sizeLargeClassName]: size === 'large',
+          [fullWidthClassName]: isFullWidth,
+        })}
       >
         <CardContent
           {...cardContentProps}
