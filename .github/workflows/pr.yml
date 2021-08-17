@@ -1,6 +1,8 @@
 name: PR
 
 on:
+  pull_request:
+    types: [unlabeled]
   pull_request_target:
     types: [labeled]
 
