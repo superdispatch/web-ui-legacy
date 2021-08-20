@@ -112,7 +112,7 @@
     "@testing-library/react": "^12.0.0",
     "@testing-library/react-hooks": "^7.0.1",
     "@testing-library/user-event": "^13.1.9",
-    "@types/css": "^0.0.31",
+    "@types/css": "^0.0.33",
     "@types/faker": "^5.5.6",
     "@types/jest": "^26.0.23",
     "@types/lodash": "^4.14.170",
