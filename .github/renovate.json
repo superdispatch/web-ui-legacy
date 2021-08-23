@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "config:base",
+    "group:all",
+    "schedule:earlyMondays",
+    ":automergeAll",
+    ":dependencyDashboard",
+    ":maintainLockFilesWeekly"
+  ],
+  "postUpdateOptions": ["yarnDedupeHighest"]
+}

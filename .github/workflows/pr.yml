@@ -2,20 +2,10 @@ name: PR
 
 on:
   pull_request:
-  pull_request_target:
-    types: [labeled]
 
 jobs:
-  check-author:
-    runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'pull_request_target' || github.event_name == 'pull_request' && github.actor != 'dependabot[bot]' }}
-    steps:
-      - run: echo "OK"
-
   checks:
     runs-on: ubuntu-latest
-    needs:
-      - check-author
     steps:
       - uses: styfle/cancel-workflow-action@0.9.1
       - uses: actions/checkout@v2
@@ -26,11 +16,11 @@ jobs:
       - run: yarn lint
       - run: yarn test
       - uses: codecov/codecov-action@v2.0.2
+      - uses: EndBug/add-and-commit@v7
+        if: ${{ failure() && github.actor == 'renovate' }}
 
   build:
     runs-on: ubuntu-latest
-    needs:
-      - check-author
     steps:
       - uses: actions/checkout@v2
       - uses: umidbekk/actions/npm/install@v1
@@ -41,8 +31,6 @@ jobs:
 
   preview:
     runs-on: ubuntu-latest
-    needs:
-      - check-author
 
     outputs:
       deploy-url: ${{ steps.deploy.outputs.details_url }}
@@ -63,7 +51,6 @@ jobs:
 
   e2e:
     needs:
-      - check-author
       - checks
       - preview
     runs-on: ubuntu-latest
