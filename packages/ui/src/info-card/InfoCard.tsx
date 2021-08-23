@@ -7,8 +7,23 @@ import {
 } from '@material-ui/core';
 import { CSSProperties, makeStyles } from '@material-ui/styles';
 import clsx from 'clsx';
-import { forwardRef, ForwardRefExoticComponent, useState } from 'react';
+import {
+  ForwardedRef,
+  forwardRef,
+  ForwardRefExoticComponent,
+  useState,
+} from 'react';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
+
+function assignRef<T>(ref: ForwardedRef<T>, value: T): void {
+  if (ref) {
+    if (typeof ref === 'object') {
+      ref.current = value;
+    } else {
+      ref(value);
+    }
+  }
+}
 
 export type InfoCardClassKey =
   | 'sizeLarge'
@@ -72,11 +87,9 @@ export const InfoCard: ForwardRefExoticComponent<InfoCardProps> = forwardRef(
     return (
       <Card
         {...props}
-        ref={(node: HTMLElement) => {
-          setRootNode(node);
-          if (typeof ref === 'function') {
-            ref(node);
-          }
+        ref={(node) => {
+          assignRef(ref, node);
+          setRootNode(node as HTMLElement);
         }}
         classes={styles}
         className={clsx(className, {
