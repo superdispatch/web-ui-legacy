@@ -16,6 +16,8 @@ jobs:
       - run: yarn lint
       - run: yarn test
       - uses: codecov/codecov-action@v2.0.2
+      - uses: EndBug/add-and-commit@v7
+        if: ${{ failure() && github.actor == 'renovate' && github.event_name == 'pull_request' }}
 
   build:
     runs-on: ubuntu-latest
