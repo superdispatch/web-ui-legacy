@@ -1,6 +1,6 @@
 import { ButtonBase, ButtonBaseProps, Typography } from '@material-ui/core';
 import { Color, Stack } from '@superdispatch/ui';
-import React, { forwardRef, ReactNode } from 'react';
+import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
 
 const ButtonRoot = styled(ButtonBase)`
@@ -59,14 +59,14 @@ const ButtonRoot = styled(ButtonBase)`
 
 type ButtonAreaVariant = 'danger' | 'success';
 
-interface Props extends ButtonBaseProps {
+export interface ButtonAreaProps extends ButtonBaseProps {
   icon: ReactNode;
   active?: boolean;
   fullWidth?: boolean;
   variant?: ButtonAreaVariant;
 }
 
-export const ButtonArea = forwardRef<HTMLButtonElement, Props>(
+export const ButtonArea = forwardRef<HTMLButtonElement, ButtonAreaProps>(
   ({ icon, children, variant, active, disabled, fullWidth, ...props }, ref) => (
     <ButtonRoot
       ref={ref}
