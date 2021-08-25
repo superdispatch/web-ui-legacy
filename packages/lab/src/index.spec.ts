@@ -7,6 +7,7 @@ test('api', () => {
       "AnchorButton": React.forwardRef(AnchorButton),
       "Box": React.forwardRef(Box),
       "Button": React.forwardRef(Button),
+      "ButtonArea": React.forwardRef(ButtonArea),
       "DescriptionItem": React.forwardRef(DescriptionItem),
       "FileDropZone": React.forwardRef(FileDropZone),
       "FileListItem": React.forwardRef(FileListItem),

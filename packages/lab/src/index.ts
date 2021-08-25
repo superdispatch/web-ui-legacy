@@ -1,5 +1,6 @@
 export * from './alert/Alert';
 export * from './box/Box';
+export * from './button-area/ButtonArea';
 export * from './button/Button';
 export * from './description-item/DescriptionItem';
 export * from './file-drop-zone/FileDropZone';
