@@ -9,6 +9,6 @@
   "schedule": [
     "before 3am on Monday",
     "before 3am on Thursday"
-  ]
+  ],
   "postUpdateOptions": ["yarnDedupeHighest"]
 }
