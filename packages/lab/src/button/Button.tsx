@@ -450,7 +450,6 @@ export const AnchorButton = forwardRef<HTMLAnchorElement, AnchorButtonProps>(
       <ButtonRoot
         {...buttonProps}
         as="a"
-        // @ts-expect-error Issue somewhere in `react` or `styled-components` types.
         ref={ref}
         rel={rel}
         href={href}
