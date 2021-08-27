@@ -17,7 +17,7 @@ jobs:
       - run: yarn check:types
       - run: yarn lint
       - run: yarn test
-      - uses: codecov/codecov-action@v2.0.2
+      - uses: codecov/codecov-action@v2.0.3
       - run: yarn build
 
   docs:
