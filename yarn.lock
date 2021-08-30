@@ -3742,10 +3742,10 @@
     resolve-from "^5.0.0"
     store2 "^2.12.0"
 
-"@superdispatch/babel-preset@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@superdispatch/babel-preset/-/babel-preset-0.4.0.tgz#d7bdcc62f4a73f251f4082425241c3209a1720fc"
-  integrity sha512-8cn3sXLmwFXhDSS7uM2nMG6Ys9HAvWykjXFunWoV3lLHTTpg4orFgdgLJmYzjggfZ1QL6gMFxYun/vwXWp2CBA==
+"@superdispatch/babel-preset@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@superdispatch/babel-preset/-/babel-preset-0.5.0.tgz#f0e4239111cc1f05880e9297637893cee6ae9f5a"
+  integrity sha512-Y0ctzdaW0dwA0c9JIcarQvPPqSA+mdxql5Mf6BpseijpD6EfhBrE5SHF0NNVvRqtS7ZLQyBsZdMl7KqYksl71Q==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
@@ -3759,10 +3759,10 @@
     babel-plugin-dev-expression "^0.2.2"
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
 
-"@superdispatch/eslint-plugin@0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@superdispatch/eslint-plugin/-/eslint-plugin-0.4.1.tgz#7f8962584a08617c3ee727a9f1e495290359cdef"
-  integrity sha512-BLVBOGxQSd8fAKLs/XmNytB87PyO9KPsti8RzC76vk6MYV2iYcIfVjdbpzAGg7R0ZIaxsw21dEpmN95X8OZCfg==
+"@superdispatch/eslint-plugin@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@superdispatch/eslint-plugin/-/eslint-plugin-0.5.0.tgz#4309c77bc7ca8ac77871e31e7c510526c92378f9"
+  integrity sha512-W7qQj2BmkPehQyDHXV9OAVFUYbiHpcnEQV4u6oSO30UjX9XYI95RRz1qpRKR5n8lIPRKxIBkh6pzKwUi1Ogozw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.14.1"
     "@typescript-eslint/parser" "^4.14.1"
@@ -3781,10 +3781,10 @@
     eslint-plugin-testing-library "^4.6.0"
     lodash "^4.17.19"
 
-"@superdispatch/js-tools@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@superdispatch/js-tools/-/js-tools-0.4.0.tgz#6b201b771af4f30743a8ba65f9e8ec04dbd394bf"
-  integrity sha512-fgKFeehkW4koeSGgbV2KNGTZuIY8Z0+Nte/QpnOqHD32MtSTNdirtXMgdFzd88B1F5H8/PMlaILRhVifJjZwlw==
+"@superdispatch/js-tools@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@superdispatch/js-tools/-/js-tools-0.5.0.tgz#98d741adb362a56edaff38874a5fcffbfa524b56"
+  integrity sha512-1DwCQqZLLe7Kpm+IE5YWCPuRQNXQg9tFeFrdLOcUrUY0srN32IgePttVXgSBD/FD3Rosa7po4RaKPVhYZ8W6vA==
   dependencies:
     "@oclif/command" "^1.8.0"
     "@oclif/config" "^1.17.0"
@@ -3795,18 +3795,18 @@
     listr "^0.14.3"
     yarn-deduplicate "^3.1.0"
 
-"@superdispatch/prettier-config@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@superdispatch/prettier-config/-/prettier-config-0.4.0.tgz#534be3ba73e64c68eca2e877431385af3bc9f6a6"
-  integrity sha512-ZzpR9aXbU6vidRL2cQrgi/Ksi4bWilrse6YwjuX5aQVlLOmO6hL+0QNaiTGQw8uxRUB7t8aWnJI5jH1bW8Q13Q==
+"@superdispatch/prettier-config@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@superdispatch/prettier-config/-/prettier-config-0.5.0.tgz#9f0517b9b111a034b2c548cbc6e675681e8d6a8e"
+  integrity sha512-Q++mikPxpt+ck2xxEcMxDB5/P6D1oSLK7D6A5clFpOCmc9sGLXq4G7jAo23eRJ26xx46qpbz9PDiaNHJAgrNGA==
   dependencies:
     prettier-plugin-organize-imports "^2.1.0"
     prettier-plugin-packagejson "^2.2.9"
 
-"@superdispatch/tsconfig@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@superdispatch/tsconfig/-/tsconfig-0.4.0.tgz#c58b53ee66a0d87656192fe4fe19f5c06efdeee5"
-  integrity sha512-FScUsMwxcPD71CaoTgIoGh/Es2sZo1+C4l9rD6DOUk6v7lvkbhlsHWUcH8hvhoxiP7fDHjuoyN5nN5N9PHP2Bw==
+"@superdispatch/tsconfig@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@superdispatch/tsconfig/-/tsconfig-0.5.0.tgz#7d7f8fa437cb8572338d6aad16a000fa9f26f795"
+  integrity sha512-uURgREUE9o/3m5kRIyoMOCWy0BF5Nh98An3nj6aklsvPhWA1FoUqoPoX2/ZDzIOk4/EHzQilyw94Ng8yzf/Vvw==
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
@@ -18070,10 +18070,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@4.3.5, typescript@^4.3.2:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
-  integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
+typescript@4.4.2, typescript@^4.3.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
+  integrity sha512-gzP+t5W4hdy4c+68bfcv0t400HVJMMd2+H9B7gae1nQlBzCqvrXX+6GL/b3GAgyTH966pzrZ70/fRjwAtZksSQ==
 
 typescript@^3.7.0:
   version "3.9.10"
