@@ -109,7 +109,7 @@
     "@superdispatch/tsconfig": "0.5.0",
     "@testing-library/cypress": "8.0.1",
     "@testing-library/jest-dom": "5.14.1",
-    "@testing-library/react": "12.0.0",
+    "@testing-library/react": "12.1.0",
     "@testing-library/react-hooks": "7.0.2",
     "@testing-library/user-event": "13.2.1",
     "@types/css": "0.0.33",
