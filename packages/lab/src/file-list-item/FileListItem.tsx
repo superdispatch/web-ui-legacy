@@ -7,7 +7,7 @@ import {
   Tooltip,
 } from '@material-ui/core';
 import { CheckCircle, Delete, Error, Image, Refresh } from '@material-ui/icons';
-import { mdiPdfBox, mdiTextBox } from '@mdi/js';
+import { mdiFilePdfBox, mdiTextBox } from '@mdi/js';
 import {
   Color,
   Column,
@@ -35,7 +35,7 @@ const FileListItemProgress = styled(CircularProgress)`
 
 const PdfIcon = memo((props: SvgIconProps) => (
   <SvgIcon {...props}>
-    <path d={mdiPdfBox} />
+    <path d={mdiFilePdfBox} />
   </SvgIcon>
 ));
 const TextBoxIcon = memo((props: SvgIconProps) => (
