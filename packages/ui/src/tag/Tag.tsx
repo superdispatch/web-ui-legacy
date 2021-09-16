@@ -82,6 +82,7 @@ export interface TagProps
 
   color: 'grey' | 'blue' | 'green' | 'purple' | 'red' | 'teal' | 'yellow';
   variant: 'subtle' | 'bold';
+  fontWeight?: 'regular' | 'bold';
 }
 
 export const Tag: ForwardRefExoticComponent<TagProps> = forwardRef(
@@ -93,6 +94,7 @@ export const Tag: ForwardRefExoticComponent<TagProps> = forwardRef(
       classes,
       className,
       noWrap = true,
+      fontWeight = 'bold',
       component = 'div' as const,
       ...props
     },
@@ -104,9 +106,9 @@ export const Tag: ForwardRefExoticComponent<TagProps> = forwardRef(
       <Typography
         {...props}
         ref={ref}
-        variant="body1"
         noWrap={noWrap}
         component={component}
+        variant={fontWeight === 'bold' ? 'body1' : 'body2'}
         className={cx(
           styles.root,
           color === 'grey' && styles.colorGrey,
