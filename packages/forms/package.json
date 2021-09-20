@@ -22,7 +22,7 @@
   "peerDependencies": {
     "@material-ui/core": "^4.8.0",
     "formik": "^2.1.4",
-    "react": "^16.8.0"
+    "react": "^16.8.0 || ^17.0.0"
   },
   "publishConfig": {
     "access": "public",
