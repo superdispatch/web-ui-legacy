@@ -22,7 +22,7 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-root {
-      color: Color.Grey400;
+      color: Color.Dark400;
       height: 32px;
       margin: 0 3px;
       padding: 0 6px;
@@ -63,7 +63,7 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-page.Mui-disabled {
-      color: Color.Grey100;
+      color: Color.Dark100;
     }
 
     .MuiPaginationItem-page.Mui-selected:hover,
@@ -72,7 +72,7 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-page.Mui-selected.Mui-disabled {
-      color: Color.Grey100;
+      color: Color.Dark100;
       opacity: 1;
       background-color: Color.Silver400;
     }

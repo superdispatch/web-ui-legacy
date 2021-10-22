@@ -11,7 +11,7 @@ it('checks component css', () => {
   expect(renderCSS(<IconButton />, ['MuiIconButton'])).toMatchInlineSnapshot(`
 .MuiIconButton-root {
   flex: 0 0 auto;
-  color: Color.Grey100;
+  color: Color.Dark100;
   padding: 12px;
   overflow: visible;
   font-size: 1.5rem;
@@ -32,11 +32,11 @@ it('checks component css', () => {
 }
 
 .MuiIconButton-root:active {
-  color: Color.Grey500;
+  color: Color.Dark500;
 }
 
 .MuiIconButton-root:hover {
-  color: Color.Grey300;
+  color: Color.Dark300;
 }
 
 .MuiIconButton-root:focus {

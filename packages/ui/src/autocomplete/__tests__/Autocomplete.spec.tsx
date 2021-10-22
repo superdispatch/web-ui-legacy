@@ -260,12 +260,12 @@ it('checks component css', () => {
     }
 
     .MuiAutocomplete-loading {
-      color: Color.Grey200;
+      color: Color.Dark200;
       padding: 14px 16px;
     }
 
     .MuiAutocomplete-noOptions {
-      color: Color.Grey200;
+      color: Color.Dark200;
       padding: 14px 16px;
     }
 

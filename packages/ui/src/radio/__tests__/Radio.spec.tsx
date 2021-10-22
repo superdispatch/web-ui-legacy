@@ -38,7 +38,7 @@ it('checks default props', () => {
 it('checks component css', () => {
   expect(renderCSS(<Radio />, ['MuiRadio'])).toMatchInlineSnapshot(`
 .MuiRadio-root {
-  color: Color.Grey100;
+  color: Color.Dark100;
   margin-top: -5px;
   margin-bottom: -5px;
 }
@@ -56,7 +56,7 @@ it('checks component css', () => {
 }
 
 .MuiRadio-colorPrimary:hover:not(.Mui-checked) {
-  color: Color.Grey100;
+  color: Color.Dark100;
 }
 
 .MuiRadio-colorPrimary.Mui-checked:hover {

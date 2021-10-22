@@ -53,7 +53,7 @@ it('checks default props', () => {
 it('checks component css', () => {
   expect(renderCSS(<Checkbox />, ['MuiCheckbox'])).toMatchInlineSnapshot(`
 .MuiCheckbox-root {
-  color: Color.Grey100;
+  color: Color.Dark100;
   margin-top: -5px;
   margin-bottom: -5px;
 }
@@ -71,7 +71,7 @@ it('checks component css', () => {
 }
 
 .MuiCheckbox-colorPrimary:hover:not(.Mui-checked) {
-  color: Color.Grey100;
+  color: Color.Dark100;
 }
 
 .MuiCheckbox-colorPrimary.Mui-checked:hover {
