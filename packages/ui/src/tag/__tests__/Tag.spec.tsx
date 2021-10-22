@@ -13,7 +13,7 @@ it('checks component css', () => {
     }
 
     .SD-Tag-variantSubtle.SD-Tag-colorGrey {
-      color: Color.Grey300;
+      color: Color.Dark300;
       background-color: Color.Silver200;
     }
 
@@ -52,7 +52,7 @@ it('checks component css', () => {
     }
 
     .SD-Tag-variantBold.SD-Tag-colorGrey {
-      background-color: Color.Grey300;
+      background-color: Color.Dark300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorBlue {

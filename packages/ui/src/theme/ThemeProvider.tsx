@@ -65,10 +65,10 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
       },
 
       text: {
-        primary: Color.Grey500,
-        secondary: Color.Grey200,
-        hint: Color.Grey100,
-        disabled: Color.Grey100,
+        primary: Color.Dark500,
+        secondary: Color.Dark200,
+        hint: Color.Dark100,
+        disabled: Color.Dark100,
       },
 
       divider: Color.Silver400,

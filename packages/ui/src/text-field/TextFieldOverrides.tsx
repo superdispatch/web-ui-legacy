@@ -18,7 +18,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
     root: {
       ...theme.typography.body2,
 
-      color: Color.Grey400,
+      color: Color.Dark400,
 
       '&$error': { color: undefined },
       '&$focused': { color: undefined },
@@ -88,7 +88,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
   theme.overrides.MuiSelect = {
     icon: {
       top: 'calc(50% - 0.5em)',
-      '$disabled &': { color: Color.Grey100 },
+      '$disabled &': { color: Color.Dark100 },
 
       fontSize: theme.spacing(3),
       [sm]: { fontSize: theme.spacing(2) },

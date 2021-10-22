@@ -11,7 +11,7 @@ const ButtonRoot = styled(ButtonBase)`
   border-style: solid;
   border-color: ${Color.Silver500};
 
-  color: ${Color.Grey100};
+  color: ${Color.Dark100};
   background-color: ${Color.White};
 
   & svg {

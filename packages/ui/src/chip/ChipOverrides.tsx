@@ -29,7 +29,7 @@ export function overrideChip(theme: SuperDispatchTheme): void {
       backgroundColor: Color.Silver200,
       '&$disabled': {
         opacity: undefined,
-        color: Color.Grey100,
+        color: Color.Dark100,
       },
     },
 
@@ -79,7 +79,7 @@ export function overrideChip(theme: SuperDispatchTheme): void {
 
       '& > svg': {
         borderRadius: '50%',
-        color: Color.Grey200,
+        color: Color.Dark200,
         fontSize: '1em',
       },
     },
@@ -95,7 +95,7 @@ export function overrideChip(theme: SuperDispatchTheme): void {
     },
 
     icon: {
-      color: Color.Grey100,
+      color: Color.Dark100,
       fontSize: '1em',
       marginRight: undefined,
     },

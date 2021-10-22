@@ -36,7 +36,7 @@ const useStyles = makeStyles<
     },
 
     variantSubtle: {
-      '&$colorGrey': { color: Color.Grey300, backgroundColor: Color.Silver200 },
+      '&$colorGrey': { color: Color.Dark300, backgroundColor: Color.Silver200 },
       '&$colorBlue': { color: Color.Blue500, backgroundColor: Color.Blue50 },
       '&$colorGreen': { color: Color.Green500, backgroundColor: Color.Green50 },
       '&$colorPurple': {
@@ -54,7 +54,7 @@ const useStyles = makeStyles<
     variantBold: {
       color: Color.White,
 
-      '&$colorGrey': { backgroundColor: Color.Grey300 },
+      '&$colorGrey': { backgroundColor: Color.Dark300 },
       '&$colorBlue': { backgroundColor: Color.Blue500 },
       '&$colorGreen': { backgroundColor: Color.Green500 },
       '&$colorPurple': { backgroundColor: Color.Purple500 },

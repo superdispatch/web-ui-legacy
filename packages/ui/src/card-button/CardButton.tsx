@@ -56,7 +56,7 @@ const useStyles = makeStyles<
     },
 
     disabled: {
-      color: Color.Grey200,
+      color: Color.Dark200,
       borderColor: Color.Silver500,
       backgroundColor: Color.Silver100,
     },

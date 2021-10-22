@@ -42,7 +42,7 @@ const useStyles = makeStyles(
       marginRight: theme.spacing(1),
 
       '& > .MuiSvgIcon-root': {
-        color: Color.Grey100,
+        color: Color.Dark100,
         fontSize: theme.spacing(3),
 
         [theme.breakpoints.up('sm')]: {

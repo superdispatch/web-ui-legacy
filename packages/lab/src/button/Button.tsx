@@ -131,7 +131,7 @@ function getPrimaryVariables(size: ButtonSizeProp): ButtonVariables {
 
 function getNeutralVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: Color.Grey500,
+    textColor: Color.Dark500,
     borderColor: Color.Silver500,
     outlineColor: Color.Blue100,
     backgroundColor: Color.White,

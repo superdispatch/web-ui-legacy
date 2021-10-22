@@ -30,7 +30,7 @@ const DescriptionItemIcon = styled.div(
       align-items: center;
 
       & > .MuiSvgIcon-root {
-        color: ${Color.Grey100};
+        color: ${Color.Dark100};
       }
 
       ${descriptionItemIconMixin(20)};

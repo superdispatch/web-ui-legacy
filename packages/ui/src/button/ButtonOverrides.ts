@@ -289,7 +289,7 @@ export function overrideButton(theme: SuperDispatchTheme): void {
     },
 
     outlinedPrimary: outlinedVariant(
-      Color.Grey500,
+      Color.Dark500,
       Color.Silver500,
       Color.Silver500,
       Color.Silver400,
@@ -297,7 +297,7 @@ export function overrideButton(theme: SuperDispatchTheme): void {
       Color.Blue300,
       Color.Blue100,
       Color.Blue50,
-      Color.Grey200,
+      Color.Dark200,
       Color.White,
     ),
 

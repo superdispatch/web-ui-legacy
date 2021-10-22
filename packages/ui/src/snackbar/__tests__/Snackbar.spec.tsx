@@ -156,7 +156,7 @@ it('checks component css', () => {
 
     .SD-SnackbarContent-root {
       color: Color.White;
-      background-color: Color.Grey500;
+      background-color: Color.Dark500;
     }
 
     .SD-SnackbarContent-root.SD-SnackbarContent-variantError {

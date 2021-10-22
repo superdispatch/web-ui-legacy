@@ -75,7 +75,7 @@ export const basic = () => (
       </Button>
     </Stack>
 
-    <Box backgroundColor="Grey500" padding="xsmall" borderRadius="small">
+    <Box backgroundColor="Dark500" padding="xsmall" borderRadius="small">
       <Stack align="center">
         <Button variant="inverted">Inverted</Button>
         <Button variant="inverted" active={true}>
@@ -170,7 +170,7 @@ export const anchor = () => {
         </AnchorButton>
       </Stack>
 
-      <Box backgroundColor="Grey500" padding="xsmall" borderRadius="small">
+      <Box backgroundColor="Dark500" padding="xsmall" borderRadius="small">
         <Stack align="center">
           <AnchorButton href="/" variant="inverted">
             Inverted
@@ -267,7 +267,7 @@ export const fullWidth = () => (
       </Button>
     </Stack>
 
-    <Box backgroundColor="Grey500" padding="xsmall" borderRadius="small">
+    <Box backgroundColor="Dark500" padding="xsmall" borderRadius="small">
       <Stack>
         <Button fullWidth={true} variant="inverted">
           Inverted
@@ -632,7 +632,7 @@ export const sizes = () => (
       </Inline>
     </Stack>
 
-    <Box backgroundColor="Grey500" padding="xsmall" borderRadius="small">
+    <Box backgroundColor="Dark500" padding="xsmall" borderRadius="small">
       <Stack space="small" align="center">
         <Inline>
           <Button variant="inverted" size="small">

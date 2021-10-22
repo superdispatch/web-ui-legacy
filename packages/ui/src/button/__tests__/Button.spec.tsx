@@ -333,7 +333,7 @@ it('checks component css', () => {
     }
 
     .MuiButton-outlinedPrimary {
-      color: Color.Grey500;
+      color: Color.Dark500;
       box-shadow: inset 0 0 0 1px Color.Silver500, 0 0 0 2px Color.Transparent;
       background-color: Color.White;
     }
@@ -361,7 +361,7 @@ it('checks component css', () => {
     }
 
     .MuiButton-outlinedPrimary.Mui-disabled[aria-busy='true'] {
-      color: Color.Grey200;
+      color: Color.Dark200;
     }
 
     @media (hover: none) {
