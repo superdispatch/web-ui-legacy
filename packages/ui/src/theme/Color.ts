@@ -1,7 +1,5 @@
 export type ColorVariant =
-  /**@deprecated Use dark */
   | 'grey'
-  | 'dark'
   | 'silver'
   | 'blue'
   | 'green'

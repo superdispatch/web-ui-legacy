@@ -32,7 +32,7 @@ import {
 
 export type CalendarDayHighlightColor = Exclude<
   ColorVariant,
-  'dark' | 'grey' | 'silver'
+  'grey' | 'silver'
 >;
 
 export type CalendarClassNames =
