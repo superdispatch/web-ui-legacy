@@ -33,7 +33,7 @@ export function overrideRadio(theme: SuperDispatchTheme): void {
 
   theme.overrides.MuiRadio = {
     root: {
-      color: Color.Grey100,
+      color: Color.Dark100,
       marginTop: theme.spacing(-0.625),
       marginBottom: theme.spacing(-0.625),
     },
@@ -44,7 +44,7 @@ export function overrideRadio(theme: SuperDispatchTheme): void {
       },
 
       '&:hover:not($checked)': {
-        color: Color.Grey100,
+        color: Color.Dark100,
       },
     },
   };

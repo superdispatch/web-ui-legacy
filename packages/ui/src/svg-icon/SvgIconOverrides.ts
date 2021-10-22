@@ -26,7 +26,7 @@ export function overrideSvgIcon(theme: SuperDispatchTheme): void {
     },
 
     colorAction: {
-      color: Color.Grey100,
+      color: Color.Dark100,
     },
   };
 }

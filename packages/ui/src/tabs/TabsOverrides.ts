@@ -12,7 +12,7 @@ export function overrideTabs(theme: SuperDispatchTheme): void {
     root: { minHeight: theme.spacing(6) },
     scrollButtons: {
       opacity: 1,
-      color: Color.Grey100,
+      color: Color.Dark100,
       width: theme.spacing(4),
       transition: theme.transitions.create('opacity', {
         duration: theme.transitions.duration.short,
@@ -38,7 +38,7 @@ export function overrideTabs(theme: SuperDispatchTheme): void {
     },
 
     textColorPrimary: {
-      color: Color.Grey500,
+      color: Color.Dark500,
       '&:hover, &:focus': { color: Color.Blue300 },
     },
   };

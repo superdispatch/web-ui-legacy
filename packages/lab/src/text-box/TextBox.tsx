@@ -29,8 +29,8 @@ export type TextDisplayProp =
   | 'inherit';
 
 const normalizeTextColor = createRuleNormalizer<TextColorProp>({
-  primary: Color.Grey500,
-  secondary: Color.Grey200,
+  primary: Color.Dark500,
+  secondary: Color.Dark200,
 
   white: Color.White,
   blue: Color.Blue300,

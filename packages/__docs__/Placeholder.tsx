@@ -22,7 +22,7 @@ export const Placeholder = forwardRef<HTMLDivElement, PlaceholderProps>(
       {code ? (
         <strong
           style={{
-            color: Color.Grey100,
+            color: Color.Dark100,
             padding: '8px',
             height: '100%',
             display: 'flex',
@@ -34,7 +34,7 @@ export const Placeholder = forwardRef<HTMLDivElement, PlaceholderProps>(
       ) : text ? (
         <strong
           style={{
-            color: Color.Grey100,
+            color: Color.Dark100,
             padding: '8px',
             width: '100%',
             height: '100%',

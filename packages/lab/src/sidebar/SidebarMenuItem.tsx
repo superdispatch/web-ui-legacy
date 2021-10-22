@@ -50,12 +50,12 @@ const SidebarMenuItemBadge = styled.div`
   padding-right: 4px;
   border-radius: 100px;
 
-  color: ${Color.Grey500};
+  color: ${Color.Dark500};
   background-color: ${Color.Silver300};
 
   .MuiButtonBase-root[aria-current='true'] & {
     color: ${Color.White};
-    background-color: ${Color.Grey450};
+    background-color: ${Color.Dark450};
   }
 `;
 

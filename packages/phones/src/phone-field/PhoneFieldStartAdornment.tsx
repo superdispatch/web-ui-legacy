@@ -56,9 +56,9 @@ export const PhoneFieldStartAdornment = forwardRef<
         <PhoneFieldFlag country={country} />
 
         {isExpanded ? (
-          <ArrowDropUp htmlColor={Color.Grey200} />
+          <ArrowDropUp htmlColor={Color.Dark200} />
         ) : (
-          <ArrowDropDown htmlColor={Color.Grey200} />
+          <ArrowDropDown htmlColor={Color.Dark200} />
         )}
 
         <Typography color="textPrimary">{countryCode}</Typography>

@@ -78,7 +78,7 @@ export function overrideSwitch(theme: SuperDispatchTheme): void {
 
       '&$checked$disabled + $track': { backgroundColor: Color.Blue100 },
 
-      '&:hover + $track': { backgroundColor: Color.Grey100 },
+      '&:hover + $track': { backgroundColor: Color.Dark100 },
 
       '&.Mui-focusVisible + $track': {
         boxShadow: `0 0 0 3px ${Color.Blue100}`,

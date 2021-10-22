@@ -4,7 +4,7 @@ import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 export function overrideIconButton(theme: SuperDispatchTheme): void {
   theme.overrides.MuiIconButton = {
     root: {
-      color: Color.Grey100,
+      color: Color.Dark100,
 
       backgroundColor: Color.Transparent,
 
@@ -13,8 +13,8 @@ export function overrideIconButton(theme: SuperDispatchTheme): void {
       }),
 
       '&:hover': { backgroundColor: Color.Transparent },
-      '&:active': { color: Color.Grey500 },
-      '&:hover ': { color: Color.Grey300 },
+      '&:active': { color: Color.Dark500 },
+      '&:hover ': { color: Color.Dark300 },
       '&:focus': { backgroundColor: Color.Silver400 },
 
       '&$disabled': { color: Color.Silver500 },

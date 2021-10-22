@@ -77,7 +77,7 @@ it('checks component css', () => {
     }
 
     .MuiTab-textColorPrimary {
-      color: Color.Grey500;
+      color: Color.Dark500;
     }
 
     .MuiTab-textColorPrimary.Mui-selected {
@@ -85,7 +85,7 @@ it('checks component css', () => {
     }
 
     .MuiTab-textColorPrimary.Mui-disabled {
-      color: Color.Grey100;
+      color: Color.Dark100;
     }
 
     .MuiTab-textColorPrimary:hover,
@@ -94,7 +94,7 @@ it('checks component css', () => {
     }
 
     .MuiTab-textColorSecondary {
-      color: Color.Grey200;
+      color: Color.Dark200;
     }
 
     .MuiTab-textColorSecondary.Mui-selected {
@@ -102,7 +102,7 @@ it('checks component css', () => {
     }
 
     .MuiTab-textColorSecondary.Mui-disabled {
-      color: Color.Grey100;
+      color: Color.Dark100;
     }
 
     .MuiTab-fullWidth {
@@ -170,7 +170,7 @@ it('checks component css', () => {
     }
 
     .MuiTabs-scrollButtons {
-      color: Color.Grey100;
+      color: Color.Dark100;
       width: 32px;
       opacity: 1;
       transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;

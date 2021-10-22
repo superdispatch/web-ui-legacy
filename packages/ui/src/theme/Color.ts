@@ -29,12 +29,25 @@ export enum Color {
   // Neutral Colors
   //
 
+  /**@deprecated Use Dark100 */
   Grey100 = '#8F949E',
+  /**@deprecated Use Dark200 */
   Grey200 = '#6A707C',
+  /**@deprecated Use Dark300 */
   Grey300 = '#5B6371',
+  /**@deprecated Use Dark400 */
   Grey400 = '#323C4E',
+  /**@deprecated Use Dark450 */
   Grey450 = '#222F44',
+  /**@deprecated Use Dark500 */
   Grey500 = '#192334',
+
+  Dark100 = '#8F949E',
+  Dark200 = '#6A707C',
+  Dark300 = '#5B6371',
+  Dark400 = '#323C4E',
+  Dark450 = '#222F44',
+  Dark500 = '#192334',
 
   Silver100 = '#F6F7F8',
   Silver200 = '#F3F5F8',

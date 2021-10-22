@@ -23,12 +23,12 @@ it('checks default props', () => {
   `);
   expect(props.MuiFormHelperText).toMatchInlineSnapshot(`undefined`);
   expect(props.MuiTextField).toMatchInlineSnapshot(`
-Object {
-  "maxRows": 4,
-  "minRows": 4,
-  "variant": "outlined",
-}
-`);
+    Object {
+      "maxRows": 4,
+      "minRows": 4,
+      "variant": "outlined",
+    }
+  `);
 });
 
 it('checks component css', () => {
@@ -46,6 +46,7 @@ it('checks component css', () => {
             ),
           }}
         />
+
         <TextField select={true}>
           <MenuItem />
         </TextField>
@@ -90,7 +91,7 @@ it('checks component css', () => {
     }
 
     .MuiFormHelperText-root {
-      color: Color.Grey200;
+      color: Color.Dark200;
       margin: 0;
       font-size: 14px;
       margin-top: 4px;
@@ -108,7 +109,7 @@ it('checks component css', () => {
     }
 
     .MuiFormHelperText-root.Mui-disabled {
-      color: Color.Grey100;
+      color: Color.Dark100;
     }
 
     .MuiFormHelperText-root.Mui-error {
@@ -120,7 +121,7 @@ it('checks component css', () => {
     }
 
     .MuiFormLabel-root {
-      color: Color.Grey400;
+      color: Color.Dark400;
       padding: 0;
       font-size: 14px;
       font-family: 'Inter', sans-serif;
@@ -208,7 +209,7 @@ it('checks component css', () => {
     }
 
     .MuiInputBase-root {
-      color: Color.Grey500;
+      color: Color.Dark500;
       cursor: text;
       display: inline-flex;
       position: relative;
@@ -228,7 +229,7 @@ it('checks component css', () => {
     }
 
     .MuiInputBase-root.Mui-disabled {
-      color: Color.Grey100;
+      color: Color.Dark100;
       cursor: default;
       background-color: Color.Silver100;
     }
@@ -577,7 +578,7 @@ it('checks component css', () => {
     }
 
     .Mui-disabled .MuiSelect-icon {
-      color: Color.Grey100;
+      color: Color.Dark100;
     }
 
     @media (min-width: 600px) {

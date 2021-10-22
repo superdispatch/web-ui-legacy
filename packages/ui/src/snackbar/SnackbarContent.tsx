@@ -32,7 +32,7 @@ const useStyles = makeStyles<
   (theme) => ({
     root: {
       color: Color.White,
-      backgroundColor: Color.Grey500,
+      backgroundColor: Color.Dark500,
       '&$variantError': {
         color: Color.White,
         backgroundColor: Color.Red500,

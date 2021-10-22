@@ -110,7 +110,7 @@ const useStyles = makeStyles<
       justifyContent: 'center',
       textDecoration: 'none',
 
-      color: Color.Grey300,
+      color: Color.Dark300,
       width: theme.spacing(5),
       height: theme.spacing(5),
     },
@@ -199,7 +199,7 @@ const useStyles = makeStyles<
       },
 
       '&$disabled': {
-        color: Color.Grey100,
+        color: Color.Dark100,
         '&$selected:not($outside):after': {
           backgroundColor: Color.Silver300,
         },
@@ -207,7 +207,7 @@ const useStyles = makeStyles<
 
       '&:not($outside):not($disabled)': {
         cursor: 'pointer',
-        color: Color.Grey500,
+        color: Color.Dark500,
 
         '&:not($selected):not(:active)': {
           '&$today': {
