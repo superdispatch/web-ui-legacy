@@ -18,6 +18,7 @@ jobs:
         with:
           token: ${{ github.token }}
           name: Test
+          action_url: 'https://github.com'
           conclusion: ${{ job.status }}
           actions: |
             [{ "label": "Update Snapshots", "description": "", "identifier": "update-snapshots" }]
