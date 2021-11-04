@@ -9,12 +9,19 @@ jobs:
     steps:
       - uses: styfle/cancel-workflow-action@0.9.1
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
       - uses: umidbekk/actions/npm/install@v1
       - run: yarn check:types
       - run: yarn lint
       - run: yarn test
+        id: test
+      - uses: LouisBrunner/checks-action@v1.1.1
+        if: ${{ steps.test.status == 'failed' }}
+        with:
+          token: ${{ github.token }}
+          name: Test
+          conclusion: ${{ job.status }}
+          actions: |
+            [{ "label": "Update Snapshots", "description": "", "identifier": "update-snapshots" } }]
       - uses: codecov/codecov-action@v2.1.0
       - uses: EndBug/add-and-commit@v7
         if: ${{ failure() && github.actor == 'renovate' }}

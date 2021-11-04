@@ -3,7 +3,7 @@ import * as api from '..';
 it('exposes public api', () => {
   expect(api).toMatchInlineSnapshot(`
 Object {
-  "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
+  "AdaptiveToolbar": React.forwardRef(AdaptiveToolbars),
   "AvatarButton": React.forwardRef(AvatarButton),
   "Button": React.forwardRef(Button),
   "CardButton": React.forwardRef(CardButton),

@@ -1,0 +1,21 @@
+name: Update snapshots
+on:
+  check_run:
+    types: [requested_action]
+jobs:
+  update-snapshots:
+    if: ${{ github.event.requested_action.identifier == 'update-snapshots' }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: vars
+        run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.vars.outputs.branch }}
+      - uses: umidbekk/actions/npm/install@v1
+      - uses: fregante/setup-git-user@v1
+      - run: yarn test -u
+      - run: |
+          git add .
+          git commit -m "Update snapshots"
+          git push origin "HEAD:$REF"
