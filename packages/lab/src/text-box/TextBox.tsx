@@ -12,6 +12,7 @@ import { createRuleNormalizer } from '../utils/RuleNormalizer';
 
 export type TextAlignProp = 'left' | 'right' | 'center';
 export type TextColorProp =
+  | 'inherit'
   | 'primary'
   | 'secondary'
   | 'white'
@@ -29,6 +30,8 @@ export type TextDisplayProp =
   | 'inherit';
 
 const normalizeTextColor = createRuleNormalizer<TextColorProp>({
+  inherit: 'inherit',
+
   primary: Color.Dark500,
   secondary: Color.Dark200,
 
