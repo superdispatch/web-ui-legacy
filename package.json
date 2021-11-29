@@ -115,7 +115,7 @@
     "@types/css": "0.0.33",
     "@types/faker": "5.5.8",
     "@types/jest": "27.0.1",
-    "@types/lodash": "4.14.173",
+    "@types/lodash": "4.14.177",
     "@types/luxon": "1.27.1",
     "@types/mockdate": "3.0.0",
     "@types/prettier": "2.3.2",
