@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import { TextBox } from '../text-box/TextBox';
 
 const SidebarSubheaderRoot = styled.div`
+  display: flex;
+  align-items: center;
+
   height: 40px;
   max-height: 40px;
   padding-left: 24px;
@@ -22,7 +25,7 @@ export const SidebarSubheader = forwardRef<
 >(({ id, action, children }, ref) => {
   return (
     <SidebarSubheaderRoot ref={ref}>
-      <Columns space="xsmall">
+      <Columns space="xsmall" align="center">
         <Column>
           <TextBox id={id} variant="heading-6" color="secondary" noWrap={true}>
             {children}
