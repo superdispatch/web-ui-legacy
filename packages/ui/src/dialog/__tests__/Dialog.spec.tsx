@@ -97,10 +97,16 @@ it('checks component css', () => {
     }
 
     .MuiDialog-paperWidthXs {
-      max-width: 444px;
+      max-width: 360px;
     }
 
     @media (max-width: 507.95px) {
+      .MuiDialog-paperWidthXs.MuiDialog-paperScrollBody {
+        max-width: calc(100% - 64px);
+      }
+    }
+
+    @media (max-width: 423.95px) {
       .MuiDialog-paperWidthXs.MuiDialog-paperScrollBody {
         max-width: calc(100% - 64px);
       }
