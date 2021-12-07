@@ -135,7 +135,7 @@
     "csstype": "3.0.9",
     "cypress": "8.4.1",
     "dedent": "0.7.0",
-    "eslint": "7.32.0",
+    "eslint": "8.4.1",
     "eslint-plugin-eslint-config": "2.0.0",
     "execa": "5.1.1",
     "fontsource-inter": "4.0.0",
