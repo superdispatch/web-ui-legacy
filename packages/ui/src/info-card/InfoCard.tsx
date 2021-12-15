@@ -7,23 +7,9 @@ import {
 } from '@material-ui/core';
 import { CSSProperties, makeStyles } from '@material-ui/styles';
 import clsx from 'clsx';
-import {
-  ForwardedRef,
-  forwardRef,
-  ForwardRefExoticComponent,
-  useState,
-} from 'react';
+import { forwardRef, ForwardRefExoticComponent, useState } from 'react';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
-
-function assignRef<T>(ref: ForwardedRef<T>, value: T): void {
-  if (ref) {
-    if (typeof ref === 'object') {
-      ref.current = value;
-    } else {
-      ref(value);
-    }
-  }
-}
+import { assignRef } from '../utils/mergeRefs';
 
 export type InfoCardClassKey =
   | 'sizeLarge'
