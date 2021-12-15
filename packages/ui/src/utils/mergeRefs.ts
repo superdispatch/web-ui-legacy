@@ -5,13 +5,17 @@ export function mergeRefs<T>(
 ): (node: T) => void {
   return (node) => {
     refs.forEach((ref) => {
-      if (ref) {
-        if (typeof ref === 'function') {
-          ref(node);
-        } else {
-          (ref as MutableRefObject<T>).current = node;
-        }
-      }
+      assignRef(ref, node);
     });
   };
+}
+
+export function assignRef<T>(ref: Ref<T> | undefined, value: T): void {
+  if (ref) {
+    if (typeof ref === 'function') {
+      ref(value);
+    } else {
+      (ref as MutableRefObject<T>).current = value;
+    }
+  }
 }
