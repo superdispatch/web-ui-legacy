@@ -1,5 +1,5 @@
 import { Color } from '@superdispatch/ui';
-import React, { forwardRef, useEffect, useState } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 // eslint-disable-next-line import/no-internal-modules
 import { CSSTransitionProps } from 'react-transition-group/CSSTransition';
