@@ -1,7 +1,9 @@
 export {
   Alert,
+  Banner,
   Box,
   Button,
+  ButtonArea,
   DescriptionItem,
   FileDropZone,
   FileListItem,

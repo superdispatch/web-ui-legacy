@@ -1,4 +1,5 @@
 export * from './alert/Alert';
+export * from './banner/Banner';
 export * from './box/Box';
 export * from './button-area/ButtonArea';
 export * from './button/Button';
