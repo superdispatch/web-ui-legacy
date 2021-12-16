@@ -5,6 +5,7 @@ test('api', () => {
     Object {
       "Alert": React.forwardRef(Alert),
       "AnchorButton": React.forwardRef(AnchorButton),
+      "Banner": React.forwardRef(Banner),
       "Box": React.forwardRef(Box),
       "Button": React.forwardRef(Button),
       "ButtonArea": React.forwardRef(ButtonArea),
