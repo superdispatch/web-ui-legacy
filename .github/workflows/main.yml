@@ -13,6 +13,8 @@ jobs:
       - uses: styfle/cancel-workflow-action@0.9.1
       - uses: actions/checkout@v2
       - uses: umidbekk/actions/npm/install@v1
+        with:
+          cache-key: yarn-v3
 
       - run: yarn check:types
       - run: yarn lint
@@ -26,6 +28,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: umidbekk/actions/npm/install@v1
+        with:
+          cache-key: yarn-v3
 
       - run: yarn docs
       - id: deploy
@@ -44,6 +48,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: umidbekk/actions/npm/install@v1
+        with:
+          cache-key: yarn-v3
       - run: yarn cypress install
       - run: yarn percy exec -- cypress run
         env:

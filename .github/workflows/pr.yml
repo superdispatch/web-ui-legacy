@@ -12,6 +12,8 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - uses: umidbekk/actions/npm/install@v1
+        with:
+          cache-key: yarn-v3
       - run: yarn check:types
       - run: yarn lint
       - run: yarn test
@@ -24,6 +26,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: umidbekk/actions/npm/install@v1
+        with:
+          cache-key: yarn-v3
       - uses: superdispatch/actions/build-size/limit@v1
         with:
           install_command: 'yarn install'
@@ -38,6 +42,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: umidbekk/actions/npm/install@v1
+        with:
+          cache-key: yarn-v3
       - run: yarn storybook:build
       - run: yarn playroom:build
       - id: deploy
@@ -57,6 +63,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: umidbekk/actions/npm/install@v1
+        with:
+          cache-key: yarn-v3
       - run: yarn cypress install
       - run: yarn percy exec -- cypress run
         env:
