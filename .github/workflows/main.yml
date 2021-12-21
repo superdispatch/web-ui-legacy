@@ -26,6 +26,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: umidbekk/actions/npm/install@v1
+        with:
+          cache-key: yarn-v3
 
       - run: yarn docs
       - id: deploy
