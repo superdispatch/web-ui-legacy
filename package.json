@@ -136,7 +136,7 @@
     "babel-plugin-object-to-json-parse": "0.2.2",
     "babel-plugin-optimize-clsx": "2.6.2",
     "css": "3.0.0",
-    "csstype": "3.0.9",
+    "csstype": "3.0.10",
     "cypress": "8.4.1",
     "dedent": "0.7.0",
     "eslint": "7.32.0",
