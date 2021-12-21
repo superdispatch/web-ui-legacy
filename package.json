@@ -12,7 +12,7 @@
     ]
   },
   "scripts": {
-    "postinstall": "husky install && js-tools lint:yarn-deduplicate --fix",
+    "postinstall": "patch-package && husky install && js-tools lint:yarn-deduplicate --fix",
     "build": "lerna run version --no-private",
     "build-size": "yarn build && size-limit",
     "check:types": "yarn tsc && yarn tsc --project cypress",
@@ -82,6 +82,10 @@
   },
   "resolutions": {
     "react-docgen-typescript": "2.1.0"
+  },
+  "dependencies": {
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0"
   },
   "devDependencies": {
     "@codemod/cli": "2.3.2",

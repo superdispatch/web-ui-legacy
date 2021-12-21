@@ -1,0 +1,12 @@
+diff --git a/node_modules/playroom/node_modules/webpack-sources/lib/ReplaceSource.js b/node_modules/playroom/node_modules/webpack-sources/lib/ReplaceSource.js
+index 86cf8e7..1839b8c 100644
+--- a/node_modules/playroom/node_modules/webpack-sources/lib/ReplaceSource.js
++++ b/node_modules/playroom/node_modules/webpack-sources/lib/ReplaceSource.js
+@@ -284,6 +284,7 @@ class ReplaceSource extends Source {
+ 						}
+ 						while (match !== null) {
+ 							const contentLine = match[0];
++							console.log(contentLine);
+ 							onChunk(
+ 								contentLine,
+ 								line,
