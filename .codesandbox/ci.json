@@ -1,5 +1,5 @@
 {
-  "node": "12",
+  "node": "16",
   "buildCommand": "build",
   "packages": [
     "packages/dates",
