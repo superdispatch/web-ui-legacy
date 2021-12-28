@@ -91,8 +91,8 @@
     "react-docgen-typescript": "2.1.0"
   },
   "dependencies": {
-    "patch-package": "^6.4.7",
-    "postinstall-postinstall": "^2.1.0"
+    "patch-package": "6.4.7",
+    "postinstall-postinstall": "2.1.0"
   },
   "devDependencies": {
     "@codemod/cli": "2.3.2",
@@ -146,7 +146,7 @@
     "csstype": "3.0.10",
     "cypress": "8.4.1",
     "dedent": "0.7.0",
-    "enhanced-resolve": "^5.8.3",
+    "enhanced-resolve": "5.8.3",
     "eslint": "8.5.0",
     "eslint-plugin-eslint-config": "2.0.0",
     "execa": "5.1.1",
