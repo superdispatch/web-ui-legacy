@@ -158,7 +158,7 @@
     "lerna": "4.0.0",
     "lint-staged": "11.1.2",
     "lodash": "4.17.21",
-    "lorem-ipsum": "2.0.3",
+    "lorem-ipsum": "2.0.4",
     "mockdate": "3.0.5",
     "npm-run-all": "4.1.5",
     "playroom": "0.27.4",
