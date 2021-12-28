@@ -1,4 +1,4 @@
-import { act, fireEvent, screen, waitFor } from '@testing-library/react';
+import { fireEvent, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderFormField } from '../__testutils__/renderFormField';
 import { FormikCheckboxField } from './FormikCheckboxField';
@@ -19,13 +19,8 @@ test('handles changes', async () => {
 
   const field = screen.getByLabelText('Agree');
 
-  act(() => {
-    userEvent.click(field);
-  });
-
-  act(() => {
-    fireEvent.blur(field);
-  });
+  userEvent.click(field);
+  fireEvent.blur(field);
 
   expect(field).not.toBeChecked();
   expect(handleChange).toHaveBeenCalledTimes(1);
@@ -57,13 +52,8 @@ test('format and parse value', async () => {
 
   expect(field).not.toBeChecked();
 
-  act(() => {
-    userEvent.click(field);
-  });
-
-  act(() => {
-    fireEvent.blur(field);
-  });
+  userEvent.click(field);
+  fireEvent.blur(field);
 
   expect(field).toBeChecked();
 
@@ -94,13 +84,8 @@ test('format and parse value with enum', async () => {
   expect(field).toBeChecked();
 
   for (const status of ['inactive', 'active']) {
-    act(() => {
-      userEvent.click(field);
-    });
-
-    act(() => {
-      fireEvent.blur(field);
-    });
+    userEvent.click(field);
+    fireEvent.blur(field);
 
     if (status === 'active') {
       // eslint-disable-next-line jest/no-conditional-expect
@@ -142,13 +127,8 @@ test('validates field', async () => {
 
   expect(field).toBeValid();
 
-  act(() => {
-    userEvent.click(field);
-  });
-
-  act(() => {
-    fireEvent.blur(field);
-  });
+  userEvent.click(field);
+  fireEvent.blur(field);
 
   await screen.findByText('Check agree before continue');
 });

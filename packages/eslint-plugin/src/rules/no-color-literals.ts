@@ -58,7 +58,6 @@ export const rule = createRule<[], MessageIds>({
     fixable: 'code',
     docs: {
       recommended: 'error',
-      category: 'Possible Errors',
       description: 'Disallows to use Material UI modules',
     },
     schema: [],

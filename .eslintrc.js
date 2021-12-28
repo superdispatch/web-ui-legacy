@@ -10,13 +10,14 @@ module.exports = {
   },
 
   overrides: [
-    {
-      files: '.eslintrc.js',
-      plugins: ['eslint-config'],
-      rules: {
-        'eslint-config/sort-rules': 'error',
-      },
-    },
+    // enable when eslint 8 supported https://github.com/G-Rath/eslint-plugin-eslint-config/pull/15
+    // {
+    //   files: '.eslintrc.js',
+    //   plugins: ['eslint-config'],
+    //   rules: {
+    //     'eslint-config/sort-rules': 'error',
+    //   },
+    // },
 
     {
       files: '*.js',
@@ -124,6 +125,7 @@ module.exports = {
       extends: ['plugin:@superdispatch/ts-jest'],
       rules: {
         '@typescript-eslint/no-namespace': 'off',
+        '@typescript-eslint/no-unsafe-argument': 'off',
         'import/no-anonymous-default-export': 'off',
       },
     },

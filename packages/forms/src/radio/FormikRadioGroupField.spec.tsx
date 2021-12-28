@@ -1,5 +1,5 @@
 import { RadioField } from '@superdispatch/ui';
-import { act, fireEvent, screen, waitFor } from '@testing-library/react';
+import { fireEvent, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderFormField } from '../__testutils__/renderFormField';
 import { FormikRadioGroupField } from './FormikRadioGroupField';
@@ -26,13 +26,8 @@ test('changes', async () => {
 
   const red = screen.getByLabelText('Red');
 
-  act(() => {
-    userEvent.click(red);
-  });
-
-  act(() => {
-    fireEvent.blur(red);
-  });
+  userEvent.click(red);
+  fireEvent.blur(red);
 
   expect(onChange).toHaveBeenCalledTimes(1);
   expect(onBlur).toHaveBeenCalledTimes(1);
@@ -69,13 +64,8 @@ test('errors', async () => {
 
   const red = screen.getByLabelText('Red');
 
-  act(() => {
-    userEvent.click(red);
-  });
-
-  act(() => {
-    fireEvent.blur(red);
-  });
+  userEvent.click(red);
+  fireEvent.blur(red);
 
   view.submitForm();
 

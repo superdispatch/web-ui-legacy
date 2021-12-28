@@ -1,4 +1,4 @@
-import { act, fireEvent, screen, waitFor } from '@testing-library/react';
+import { fireEvent, screen, waitFor } from '@testing-library/react';
 import { renderFormField } from '../__testutils__/renderFormField';
 import { FormikPhoneField } from './FormikPhoneField';
 
@@ -21,16 +21,12 @@ test('basic', async () => {
   expect(handleBlur).toHaveBeenCalledTimes(0);
   expect(handleChange).toHaveBeenCalledTimes(0);
 
-  act(() => {
-    fireEvent.change(input, { target: { value: '123' } });
-  });
+  fireEvent.change(input, { target: { value: '123' } });
 
   expect(handleBlur).toHaveBeenCalledTimes(0);
   expect(handleChange).toHaveBeenCalledTimes(1);
 
-  act(() => {
-    fireEvent.blur(input);
-  });
+  fireEvent.blur(input);
 
   expect(handleBlur).toHaveBeenCalledTimes(1);
   expect(handleChange).toHaveBeenCalledTimes(1);
@@ -66,10 +62,8 @@ test('validation', async () => {
 
   expect(screen.getByRole('textbox')).toBeValid();
 
-  act(() => {
-    fireEvent.change(screen.getByRole('textbox'), {
-      target: { value: '20155501' },
-    });
+  fireEvent.change(screen.getByRole('textbox'), {
+    target: { value: '20155501' },
   });
 
   view.submitForm();
