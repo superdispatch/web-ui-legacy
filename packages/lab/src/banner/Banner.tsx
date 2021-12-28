@@ -67,37 +67,39 @@ const CustomTransition = forwardRef<
   </CSSTransition>
 ));
 
-const BannerContent = styled(CustomTransition)(({ border = 'bottom' }) => {
-  return css`
-    height: 0;
-    width: 100%;
-    overflow: hidden;
+const BannerContent = styled(CustomTransition)<CustomerTransitionProps>(
+  ({ border = 'bottom' }) => {
+    return css`
+      height: 0;
+      width: 100%;
+      overflow: hidden;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    color: ${Color.White};
-    background-color: ${Color.White};
+      color: ${Color.White};
+      background-color: ${Color.White};
 
-    &-enter-active {
-      animation: ${enterAnimation(border)} 2s 1s forwards;
-    }
+      &-enter-active {
+        animation: ${enterAnimation(border)} 2s 1s forwards;
+      }
 
-    &-enter-done {
-      ${enterMixin(border)};
-    }
+      &-enter-done {
+        ${enterMixin(border)};
+      }
 
-    &-exit {
-      ${enterMixin(border)};
-    }
+      &-exit {
+        ${enterMixin(border)};
+      }
 
-    &-exit-active {
-      min-height: 0;
-      transition: min-height 2s 1s;
-    }
-  `;
-});
+      &-exit-active {
+        min-height: 0;
+        transition: min-height 2s 1s;
+      }
+    `;
+  },
+);
 
 type BannerProps = Omit<
   CustomerTransitionProps,
