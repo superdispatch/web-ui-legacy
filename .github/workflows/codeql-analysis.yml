@@ -1,10 +1,10 @@
-name: "CodeQL"
+name: 'CodeQL'
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   schedule:
     - cron: '28 4 * * 4'
 
@@ -18,9 +18,9 @@ jobs:
       security-events: write
 
     steps:
-     - uses: actions/checkout@v2
-     - uses: github/codeql-action/init@v1
-       with:
-         languages: javascript
+      - uses: actions/checkout@v2
+      - uses: github/codeql-action/init@v1
+        with:
+          languages: javascript
 
-     - uses: github/codeql-action/analyze@v1
+      - uses: github/codeql-action/analyze@v1
