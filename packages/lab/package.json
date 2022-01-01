@@ -20,6 +20,8 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7.0.0",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/material": "^5.2.5",
     "react": "^17.0.2",
     "styled-components": "^5.2.1"
   },
