@@ -1,6 +1,6 @@
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import SaveIcon from '@material-ui/icons/Save';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import SaveIcon from '@mui/icons-material/Save';
 import { Meta } from '@storybook/react';
 import { Inline, Stack } from '@superdispatch/ui';
 import { Box } from '../box/Box';

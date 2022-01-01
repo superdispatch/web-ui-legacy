@@ -1,4 +1,4 @@
-import { ThumbDown, ThumbUp } from '@material-ui/icons';
+import { ThumbDown, ThumbUp } from '@mui/icons-material';
 import { Meta } from '@storybook/react';
 import { Column, Columns, Stack } from '@superdispatch/ui';
 import { ButtonArea } from './ButtonArea';

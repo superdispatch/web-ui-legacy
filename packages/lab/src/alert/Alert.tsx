@@ -1,8 +1,8 @@
-import { CheckCircle, Error, Info } from '@material-ui/icons';
+import { CheckCircle, Error, Info } from '@mui/icons-material';
 import {
   Alert as MaterialAlert,
   AlertProps as MaterialAlertProps,
-} from '@material-ui/lab';
+} from '@mui/lab';
 import { Color } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled, { css, SimpleInterpolation } from 'styled-components';

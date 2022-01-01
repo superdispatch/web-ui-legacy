@@ -1,5 +1,5 @@
-import { ButtonBase } from '@material-ui/core';
-import { OpenInNew } from '@material-ui/icons';
+import { OpenInNew } from '@mui/icons-material';
+import { ButtonBase } from '@mui/material';
 import { Color, Column, Columns, Inline } from '@superdispatch/ui';
 import {
   forwardRef,

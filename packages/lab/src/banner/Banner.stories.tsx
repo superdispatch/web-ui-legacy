@@ -1,4 +1,4 @@
-import { Link } from '@material-ui/core';
+import { Link } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Inline, Stack } from '@superdispatch/ui';
 import { UseState } from '@superdispatch/ui-docs';
