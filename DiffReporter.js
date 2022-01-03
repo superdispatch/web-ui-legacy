@@ -87,13 +87,13 @@ async function processInlineSnapshots(test) {
   const snapshotsV4 = await getInlineSnapshotValues(pathV4);
 
   if (!snapshotsV4) {
-    console.warn('MUIReporter: v4 snapshots not found for ' + test.path);
+    console.warn('DiffReporter: v4 snapshots not found for ' + test.path);
     return;
   }
 
   if (snapshots.length !== snapshotsV4.length) {
     console.warn(
-      'MUIReporter: v4 and v5 snapshots are not the same length for ' +
+      'DiffReporter: v4 and v5 snapshots are not the same length for ' +
         test.path,
     );
     return;
@@ -112,12 +112,6 @@ async function processInlineSnapshots(test) {
   }
 
   if (diffs.length) {
-    if (process.env.CI) {
-      throw new Error(
-        'MUIReporter: Snapshots diffs generated for ' + test.path,
-      );
-    }
-
     const diffPath = getDiffPath(test.path);
     await fs.writeFile(diffPath, diffs.join('\n'));
   }
@@ -151,12 +145,6 @@ async function processFileSnapshots(test) {
   const snapshot = await fs.readFile(snapshotPath);
   const snapshotV4 = await fs.readFile(snapshotPathV4);
   if (snapshot.toString() !== snapshotV4.toString()) {
-    if (process.env.CI) {
-      throw new Error(
-        'MUIReporter: Snapshots diffs generated for ' + test.path,
-      );
-    }
-
     const diffPath = getDiffPath(snapshotPath);
     await fs.writeFile(
       diffPath,
