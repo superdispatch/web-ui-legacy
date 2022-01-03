@@ -57,8 +57,16 @@
       "tsx",
       "cjs"
     ],
+    "moduleNameMapper": {
+      "^@mui/styled-engine(.*)": "<rootDir>/node_modules/@mui/styled-engine$1",
+      "^styled-components$": "<rootDir>/node_modules/styled-components/dist/styled-components.browser.cjs.js"
+    },
     "modulePathIgnorePatterns": [
       ".+/pkg/.+"
+    ],
+    "reporters": [
+      "default",
+      "<rootDir>/DiffReporter.js"
     ],
     "resetMocks": true,
     "resolver": "./jest-resolver.js",
@@ -88,6 +96,7 @@
     ]
   },
   "resolutions": {
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@^5.1.0",
     "react-docgen-typescript": "2.1.0"
   },
   "dependencies": {
@@ -100,6 +109,10 @@
     "@material-ui/icons": "4.11.2",
     "@material-ui/lab": "4.0.0-alpha.60",
     "@mdi/js": "6.1.95",
+    "@mui/icons-material": "5.2.5",
+    "@mui/lab": "5.0.0-alpha.62",
+    "@mui/material": "5.2.3",
+    "@mui/styles": "5.2.3",
     "@percy/cli": "1.0.0-beta.71",
     "@percy/cypress": "3.1.1",
     "@pika/pack": "0.5.0",

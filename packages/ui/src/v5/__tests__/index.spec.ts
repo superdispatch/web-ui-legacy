@@ -1,15 +1,8 @@
-import * as api from '..';
+import * as api5 from '..';
 
 it('exposes public api', () => {
-  const { v5, ...v4 } = api;
-  expect(v4).toMatchInlineSnapshot(`
+  expect(api5).toMatchInlineSnapshot(`
     Object {
-      "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
-      "AvatarButton": React.forwardRef(AvatarButton),
-      "Button": React.forwardRef(Button),
-      "CardButton": React.forwardRef(CardButton),
-      "CheckboxField": React.forwardRef(CheckboxField),
-      "CheckboxGroupField": React.forwardRef(CheckboxGroupField),
       "Color": Object {
         "Black": "#000",
         "Black20": "rgba(0, 0, 0, 0.2)",
@@ -81,48 +74,8 @@ it('exposes public api', () => {
         "Yellow500": "#DB7500",
         "Yellow75": "#FFF1C2",
       },
-      "Column": React.forwardRef(Column),
-      "Columns": React.forwardRef(Columns),
-      "DescriptionList": React.forwardRef(DescriptionList),
-      "DescriptionListItem": React.forwardRef(DescriptionListItem),
-      "DrawerActions": React.forwardRef(DrawerActions),
-      "DrawerContent": React.forwardRef(DrawerContent),
-      "DrawerList": React.forwardRef(DrawerList),
-      "DrawerTitle": React.forwardRef(DrawerTitle),
-      "GridStack": React.forwardRef(GridStack),
-      "InfoCard": React.forwardRef(InfoCard),
-      "Inline": React.forwardRef(Inline),
-      "InlineGrid": React.forwardRef(InlineGrid),
-      "OverflowText": React.forwardRef(OverflowText),
-      "RadioField": React.forwardRef(RadioField),
-      "RadioGroupField": React.forwardRef(RadioGroupField),
-      "ResponsiveContextProvider": [Function],
-      "Snackbar": React.forwardRef(Snackbar),
-      "SnackbarContent": React.forwardRef(SnackbarContent),
-      "SnackbarStackConsumer": [Function],
-      "SnackbarStackProvider": [Function],
-      "Stack": React.forwardRef(Stack),
-      "Tag": React.forwardRef(Tag),
       "ThemeProvider": [Function],
-      "Tiles": React.forwardRef(Tiles),
-      "VisibilityObserver": [Function],
-      "assignRef": [Function],
       "isColorProp": [Function],
-      "isEmptyReactNode": [Function],
-      "mergeRefs": [Function],
-      "parseAlignProp": [Function],
-      "parseCollapsedBelow": [Function],
-      "parseResponsiveProp": [Function],
-      "parseSpaceProp": [Function],
-      "renderChildren": [Function],
-      "useCollapseBreakpoint": [Function],
-      "useResponsiveContext": [Function],
-      "useResponsiveProp": [Function],
-      "useResponsivePropRecord": [Function],
-      "useResponsiveValue": [Function],
-      "useSnackbarStack": [Function],
-      "useUID": [Function],
-      "useVisibilityObserver": [Function],
     }
   `);
 });

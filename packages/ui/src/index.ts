@@ -38,3 +38,4 @@ export * from './utils/mergeRefs';
 export * from './utils/renderChildren';
 export * from './utils/useUID';
 export * from './utils/VisibilityObserver';
+export * as v5 from './v5';
