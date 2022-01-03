@@ -107,7 +107,7 @@ async function processInlineSnapshots(test) {
     const diffContent = diffString(snapshot, snapshotV4);
 
     if (diffContent.length) {
-      diffs.push(diffString(snapshot, snapshotV4));
+      diffs.push(diffString(snapshotV4, snapshot));
     }
   }
 
@@ -148,7 +148,7 @@ async function processFileSnapshots(test) {
     const diffPath = getDiffPath(snapshotPath);
     await fs.writeFile(
       diffPath,
-      diffString(snapshot.toString(), snapshotV4.toString()),
+      diffString(snapshotV4.toString(), snapshot.toString()),
     );
   }
 }
