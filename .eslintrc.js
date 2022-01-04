@@ -22,6 +22,9 @@ module.exports = {
     {
       files: '*.js',
       extends: 'plugin:@superdispatch/node',
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
     },
 
     {

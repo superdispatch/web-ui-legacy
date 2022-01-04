@@ -1,7 +1,9 @@
 import { spyLogs } from '@superdispatch/jestutils';
-import { resetMockDate } from '@superdispatch/ui-testutils';
+import {
+  getForwardRefSerializer,
+  resetMockDate,
+} from '@superdispatch/ui-testutils';
 import '@testing-library/jest-dom';
-import { ForwardRef } from 'react-is';
 
 spyLogs({ warn: 'forbid', error: 'forbid' });
 
@@ -23,7 +25,4 @@ Object.defineProperty(document, 'baseURI', {
   writable: true,
 });
 
-expect.addSnapshotSerializer({
-  test: (value) => value?.$$typeof === ForwardRef,
-  serialize: (value) => `React.forwardRef(${value.displayName || 'unknown'})`,
-});
+expect.addSnapshotSerializer(getForwardRefSerializer());
