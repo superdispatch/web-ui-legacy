@@ -67,13 +67,16 @@ function takeStorySnapshot(
 }
 
 Cypress.Commands.add('getAllStories', getAllStories);
-function getAllStories(namespace: string) {
+function getAllStories(namespace: string): Cypress.Chainable<StoreItem[]> {
   return storyAPI().then((api) => {
-    const store = api.store();
-    const stories = store.getStoriesJsonData().stories as StoreItem[];
     const result: StoreItem[] = [];
+    const store = api.store();
+    const stories = store.getStoriesJsonData().stories as Record<
+      string,
+      StoreItem
+    >;
 
-    for (const story of stories) {
+    for (const story of Object.values(stories)) {
       if (story.kind.startsWith(namespace)) {
         result.push(story);
       }
