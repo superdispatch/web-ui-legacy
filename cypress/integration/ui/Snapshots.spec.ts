@@ -2,14 +2,14 @@ it('takes snapshots', () => {
   cy.visitStorybook();
 
   for (const namespace of [
-    'Data Display',
-    'Surfaces',
-    'Layout',
-    'Inputs',
-    'Feedback',
-    'Navigation',
+    /^Data Display/,
+    /^Surfaces/,
+    /^Layout/,
+    /^Inputs/,
+    'Navigation/Tabs',
+    'Navigation/Link',
   ]) {
-    cy.getAllStories(namespace).then((stories) => {
+    cy.getStoriesByKind(namespace).then((stories) => {
       for (const story of stories) {
         cy.takeStorySnapshot(story.kind, story.name, ['mobile', 'desktop']);
       }

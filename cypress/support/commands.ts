@@ -9,7 +9,7 @@ declare global {
       visitStorybook: typeof visitStorybook;
       takeSnapshots: typeof takeSnapshots;
       takeStorySnapshot: typeof takeStorySnapshot;
-      getAllStories: typeof getAllStories;
+      getStoriesByKind: typeof getStoriesByKind;
     }
   }
 }
@@ -66,8 +66,10 @@ function takeStorySnapshot(
   cy.takeSnapshots(`${kind}: ${name}`, widths);
 }
 
-Cypress.Commands.add('getAllStories', getAllStories);
-function getAllStories(namespace: string): Cypress.Chainable<StoreItem[]> {
+Cypress.Commands.add('getStoriesByKind', getStoriesByKind);
+function getStoriesByKind(
+  kind: string | RegExp,
+): Cypress.Chainable<StoreItem[]> {
   return storyAPI().then((api) => {
     const result: StoreItem[] = [];
     const store = api.store();
@@ -77,7 +79,11 @@ function getAllStories(namespace: string): Cypress.Chainable<StoreItem[]> {
     >;
 
     for (const story of Object.values(stories)) {
-      if (story.kind.startsWith(namespace)) {
+      if (typeof kind === 'string') {
+        if (kind && story.kind === kind) {
+          result.push(story);
+        }
+      } else if (story.kind.match(kind)) {
         result.push(story);
       }
     }
