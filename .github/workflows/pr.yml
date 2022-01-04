@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v3
+          cache-key: yarn-v4
       - run: yarn check:types
       - run: yarn lint
       - run: yarn test
