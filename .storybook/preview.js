@@ -12,6 +12,10 @@ injectDisplayNames(require('@material-ui/lab'));
 injectDisplayNames(require('@material-ui/core'));
 injectDisplayNames(require('@material-ui/icons'), { suffix: 'Icon' });
 
+injectDisplayNames(require('@mui/lab'));
+injectDisplayNames(require('@mui/material'));
+injectDisplayNames(require('@mui/icons-material'), { suffix: 'Icon' });
+
 function injectDisplayNames(module, { suffix = '' } = {}) {
   for (const [key, value] of Object.entries(module)) {
     if (

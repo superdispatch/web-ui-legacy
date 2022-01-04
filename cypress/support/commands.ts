@@ -1,4 +1,5 @@
 import type { ClientApi } from '@storybook/client-api';
+import { StoreItem } from '@storybook/client-api/dist/ts3.9/types';
 
 declare global {
   namespace Cypress {
@@ -8,6 +9,7 @@ declare global {
       visitStorybook: typeof visitStorybook;
       takeSnapshots: typeof takeSnapshots;
       takeStorySnapshot: typeof takeStorySnapshot;
+      getAllStories: typeof getAllStories;
     }
   }
 }
@@ -62,4 +64,21 @@ function takeStorySnapshot(
 ): void {
   cy.selectStory(kind, name);
   cy.takeSnapshots(`${kind}: ${name}`, widths);
+}
+
+Cypress.Commands.add('getAllStories', getAllStories);
+function getAllStories(namespace: string) {
+  return storyAPI().then((api) => {
+    const store = api.store();
+    const stories = store.getStoriesJsonData().stories as StoreItem[];
+    const result: StoreItem[] = [];
+
+    for (const story of stories) {
+      if (story.kind.startsWith(namespace)) {
+        result.push(story);
+      }
+    }
+
+    return result;
+  });
 }
