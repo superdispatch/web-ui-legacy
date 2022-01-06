@@ -13,5 +13,5 @@ export default {
 export const basic = () => <Avatar />;
 export const text = () => <Avatar>A1</Avatar>;
 export const image = () => (
-  <Avatar src="https://source.unsplash.com/featured/?face" />
+  <Avatar src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80" />
 );

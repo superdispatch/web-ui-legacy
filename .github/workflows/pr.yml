@@ -60,7 +60,23 @@ jobs:
         with:
           cache-key: yarn-v3
       - run: yarn cypress install
-      - run: yarn percy exec -- cypress run
+      - run: yarn cypress run
         env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           CYPRESS_HOST: ${{ needs.preview.outputs.deploy-url }}
+
+  visual-testing:
+    needs:
+      - checks
+      - preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - uses: umidbekk/actions/npm/install@v2
+        with:
+          cache-key: yarn-v3
+
+      - uses: superdispatch/actions/update-snapshots@v1.5
+        with:
+          command: yarn test-visual-ci ${{ needs.preview.outputs.deploy-url }}
+          update-command: yarn visual-update-ci ${{ needs.preview.outputs.deploy-url }}

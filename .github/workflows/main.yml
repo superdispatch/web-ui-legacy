@@ -51,3 +51,14 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           CYPRESS_HOST: https://ui.superdispatch.org
+
+  visual-testing:
+    needs:
+      - checks
+      - docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: umidbekk/actions/prepare-node-repo@v2
+        with:
+          cache-key: yarn-v3
+      - run: yarn test-visual-ci https://ui.superdispatch.org
