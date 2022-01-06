@@ -20,14 +20,3 @@ it('selects by label', () => {
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
   );
 });
-
-it('takes snapshots', () => {
-  cy.takeStorySnapshot('Lab/DescriptionItem', 'Basic', ['mobile', 'desktop']);
-  cy.takeStorySnapshot('Lab/DescriptionItem', 'Wrap', ['mobile', 'desktop']);
-  cy.takeStorySnapshot('Lab/DescriptionItem', 'Fallback', [
-    'mobile',
-    'desktop',
-  ]);
-  cy.takeStorySnapshot('Lab/DescriptionItem', 'Inset', ['mobile', 'desktop']);
-  cy.takeStorySnapshot('Lab/DescriptionItem', 'Complex', ['mobile', 'desktop']);
-});

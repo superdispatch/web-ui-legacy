@@ -57,10 +57,10 @@ export const textLoading = () => (
 
 export const pictureBasic = () => (
   <Inline space="small" verticalAlign="center">
-    <AvatarButton src="https://source.unsplash.com/featured/256x256/?avatar" />
+    <AvatarButton src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80&w=256&h=256" />
     <AvatarButton
       size="large"
-      src="https://source.unsplash.com/featured/256x256/?avatar"
+      src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80&w=256&h=256"
     />
   </Inline>
 );
@@ -69,12 +69,12 @@ export const pictureDisabled = () => (
   <Inline space="small" verticalAlign="center">
     <AvatarButton
       disabled={true}
-      src="https://source.unsplash.com/featured/256x256/?avatar"
+      src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80&w=256&h=256"
     />
     <AvatarButton
       size="large"
       disabled={true}
-      src="https://source.unsplash.com/featured/256x256/?avatar"
+      src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80&w=256&h=256"
     />
   </Inline>
 );
@@ -83,12 +83,12 @@ export const pictureLoading = () => (
   <Inline space="small" verticalAlign="center">
     <AvatarButton
       isLoading={true}
-      src="https://source.unsplash.com/featured/256x256/?avatar"
+      src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80&w=256&h=256"
     />
     <AvatarButton
       size="large"
       isLoading={true}
-      src="https://source.unsplash.com/featured/256x256/?avatar"
+      src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80&w=256&h=256"
     />
   </Inline>
 );
@@ -125,25 +125,25 @@ export const interactive = () => (
             <AvatarButton
               disabled={state}
               onClick={handleClick}
-              src="https://source.unsplash.com/featured/?face"
+              src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80"
             />
             <AvatarButton
               size="large"
               disabled={state}
               onClick={handleClick}
-              src="https://source.unsplash.com/featured/?face"
+              src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80"
             />
 
             <AvatarButton
               isLoading={state}
               onClick={handleClick}
-              src="https://source.unsplash.com/featured/?face"
+              src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80"
             />
             <AvatarButton
               size="large"
               isLoading={state}
               onClick={handleClick}
-              src="https://source.unsplash.com/featured/?face"
+              src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80"
             />
           </Inline>
         </Stack>

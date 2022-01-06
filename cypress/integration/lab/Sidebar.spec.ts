@@ -22,10 +22,3 @@ it('docks to the screen', () => {
 
   cy.scrollTo('bottom');
 });
-
-it('takes snapshots', () => {
-  cy.takeStorySnapshot('Lab/Sidebar', 'Basic', ['mobile', 'desktop']);
-  cy.takeStorySnapshot('Lab/Sidebar', 'List', ['mobile', 'desktop']);
-  cy.takeStorySnapshot('Lab/Sidebar', 'Checkbox', ['mobile', 'desktop']);
-  cy.takeStorySnapshot('Lab/Sidebar', 'Complex', ['mobile', 'desktop']);
-});
