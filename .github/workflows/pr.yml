@@ -55,8 +55,7 @@ jobs:
       - preview
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: umidbekk/actions/npm/install@v2
+      - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v4
       - run: yarn cypress install
@@ -64,3 +63,14 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           CYPRESS_HOST: ${{ needs.preview.outputs.deploy-url }}
+
+  visual-testing:
+    needs:
+      - checks
+      - preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: umidbekk/actions/prepare-node-repo@v2
+        with:
+          cache-key: yarn-v4
+      - run: yarn test:visual-ci ${{ needs.preview.outputs.deploy-url }}
