@@ -55,7 +55,7 @@ jobs:
   visual-testing:
     needs:
       - checks
-      - preview
+      - docs
     runs-on: ubuntu-latest
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
