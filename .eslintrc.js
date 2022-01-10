@@ -65,6 +65,7 @@ module.exports = {
               '@material-ui/core/transitions',
               '@material-ui/core/styles/createTypography',
               '@material-ui/core/styles/createBreakpoints',
+              '@mui/material/styles/createTypography',
             ],
           },
         ],

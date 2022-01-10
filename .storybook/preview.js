@@ -1,6 +1,6 @@
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import { addDecorator, addParameters } from '@storybook/react';
-import { ThemeProvider } from '@superdispatch/ui';
+import { ThemeProvider, v5 } from '@superdispatch/ui';
 import 'fontsource-inter/400.css';
 import 'fontsource-inter/500.css';
 import 'fontsource-inter/600.css';
@@ -28,19 +28,24 @@ function injectDisplayNames(module, { suffix = '' } = {}) {
 }
 
 addDecorator(withPlayroom);
-addDecorator((story, context) => (
-  <Suspense fallback="Loading story…">
-    <div data-story={context.id}>
-      <ThemeProvider injectFirst={false}>{story()}</ThemeProvider>
-    </div>
-  </Suspense>
-));
+addDecorator((story, { id, parameters }) => {
+  const Provider = parameters.v5 ? v5.ThemeProvider : ThemeProvider;
+  return (
+    <Suspense fallback="Loading story…">
+      <div data-story={id}>
+        <Provider injectFirst={false}>{story()}</Provider>
+      </div>
+    </Suspense>
+  );
+});
 
 function SuperDispatchDocsContainer(props) {
   return (
-    <ThemeProvider injectFirst={false}>
-      <DocsContainer {...props} />
-    </ThemeProvider>
+    <v5.ThemeProvider injectFirst={false}>
+      <ThemeProvider injectFirst={false}>
+        <DocsContainer {...props} />
+      </ThemeProvider>
+    </v5.ThemeProvider>
   );
 }
 

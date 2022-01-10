@@ -4,6 +4,7 @@ import {
   resetMockDate,
 } from '@superdispatch/ui-testutils';
 import '@testing-library/jest-dom';
+import 'jest-styled-components';
 
 spyLogs({ warn: 'forbid', error: 'forbid' });
 
