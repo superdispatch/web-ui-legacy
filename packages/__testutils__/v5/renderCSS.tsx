@@ -177,6 +177,8 @@ export function renderCSS(ui: React.ReactElement, component: string) {
     );
   }
 
+  renderedCSS.add(css);
+
   return css;
 }
 

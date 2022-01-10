@@ -31,7 +31,7 @@
 - }
 +     strong,
 +     b {
-+       font-weight: 700;
++       font-weight: 600;
 +     }
 
 - body {
@@ -43,35 +43,33 @@
 -   line-height: 20px;
 -   background-color: #fafafa;
 - }
--
++     body {
++       margin: 0;
++       color: Color.Dark500;
++       font-size: 14px;
++       line-height: 20px;
++       font-weight: 600;
++       font-family: 'Inter', sans-serif;
++       background-color: Color.White;
++     }
+
 - @media (min-width: 0px) and (max-width: 599.95px) {
 -   body {
 -     font-size: 16px;
 -     line-height: 24px;
 -   }
 - }
--
++     @media (min-width: 0px) and (max-width: 599.95px) {
++       body {
++         font-size: 16px;
++         line-height: 24px;
++       }
++     }
+
 - @media print {
 -   body {
 -     background-color: Color.White;
 -   }
-- }
-+     body {
-+       margin: 0;
-+       color: Color.Dark500;
-+       font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-+       font-weight: 400;
-+       font-size: 1rem;
-+       line-height: 1.5;
-+       -webkit-letter-spacing: 0.00938em;
-+       -moz-letter-spacing: 0.00938em;
-+       -ms-letter-spacing: 0.00938em;
-+       letter-spacing: 0.00938em;
-+       background-color: Color.White;
-+     }
-
-- body::backdrop {1
--   background-color: #fafafa;
 - }
 +     @media print {
 +       body {
@@ -79,7 +77,11 @@
 +       }
 +     }
 
+- body::backdrop {
+-   background-color: #fafafa;
+- }
+-
 +     body::backdrop {
 +       background-color: Color.White;
 +     }
-+
++   

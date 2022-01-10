@@ -17,21 +17,24 @@ it('checks component css', () => {
 
     strong,
     b {
-      font-weight: 700;
+      font-weight: 600;
     }
 
     body {
       margin: 0;
       color: Color.Dark500;
-      font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-      font-weight: 400;
-      font-size: 1rem;
-      line-height: 1.5;
-      -webkit-letter-spacing: 0.00938em;
-      -moz-letter-spacing: 0.00938em;
-      -ms-letter-spacing: 0.00938em;
-      letter-spacing: 0.00938em;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
       background-color: Color.White;
+    }
+
+    @media (min-width: 0px) and (max-width: 599.95px) {
+      body {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
 
     @media print {
