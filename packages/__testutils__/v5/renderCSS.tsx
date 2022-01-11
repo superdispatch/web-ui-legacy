@@ -8,6 +8,7 @@ import {
 } from 'css';
 import { get } from 'lodash';
 import { format } from 'prettier';
+import React from 'react';
 import * as sc from 'styled-components';
 
 const colors = new Map<string, string>(
@@ -129,9 +130,17 @@ export function renderCSS(ui: React.ReactElement, component: string) {
   const allClassNames = componentClassNames.flat();
 
   for (const classNames of componentClassNames) {
-    for (const className of classNames) {
-      if (globalClassNames.has(generateClassSelector(className))) {
-        componentHashes.set(className, classNames);
+    for (const possibleHash of classNames) {
+      if (globalClassNames.has(generateClassSelector(possibleHash))) {
+        const formattedClassName = generateClassSelector(
+          classNames.filter((className) => {
+            return !hashes.has(className);
+          }),
+        );
+
+        const prev = componentHashes.get(possibleHash) || [];
+        componentHashes.set(possibleHash, [...prev, formattedClassName]);
+        break;
       }
     }
   }
@@ -167,13 +176,9 @@ export function renderCSS(ui: React.ReactElement, component: string) {
   let css = formatAST(sheet);
 
   for (const [hash, classNames] of componentHashes.entries()) {
-    const formattedClassName = classNames.filter((className) => {
-      return !hashes.has(className);
-    });
-
     css = css.replaceAll(
       generateClassSelector(hash),
-      generateClassSelector(...formattedClassName),
+      Array.from(new Set(classNames)).join(', '),
     );
   }
 
@@ -182,6 +187,6 @@ export function renderCSS(ui: React.ReactElement, component: string) {
   return css;
 }
 
-function generateClassSelector(...classNames: string[]) {
-  return '.' + classNames.join('.');
+function generateClassSelector(...classNames: string[] | string[][]) {
+  return '.' + classNames.flat().join('.');
 }
