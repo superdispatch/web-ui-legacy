@@ -1,12 +1,6 @@
 'use strict';
 
 module.exports = {
-  diffingEngine: 'looks-same',
-
-  'looks-same': {
-    highlightColor: 'rgba(255,0,0,0.55)',
-  },
-
   storiesFilter:
     /^Data Display|^Surfaces|^Inputs|^Navigation\/Tabs|^Navigation\/Link/i,
 

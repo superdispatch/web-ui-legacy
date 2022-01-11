@@ -27,9 +27,28 @@ function injectDisplayNames(module, { suffix = '' } = {}) {
   }
 }
 
+function ThemeProviderV5({ children }) {
+  return (
+    <v5.ThemeProvider
+      injectFirst={false}
+      modifier={(theme) => {
+        theme.components.MuiCssBaseline ||= {};
+        theme.components.MuiCssBaseline.styleOverrides = {
+          body: {
+            background: '#fafafa', // use same color with mui4 to detect visual difference
+          },
+        };
+        return theme;
+      }}
+    >
+      {children}
+    </v5.ThemeProvider>
+  );
+}
+
 addDecorator(withPlayroom);
 addDecorator((story, { id, parameters }) => {
-  const Provider = parameters.v5 ? v5.ThemeProvider : ThemeProvider;
+  const Provider = parameters.v5 ? ThemeProviderV5 : ThemeProvider;
   return (
     <Suspense fallback="Loading story…">
       <div data-story={id}>
