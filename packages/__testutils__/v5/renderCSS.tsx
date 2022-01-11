@@ -8,7 +8,7 @@ import {
 } from 'css';
 import { get } from 'lodash';
 import { format } from 'prettier';
-import React from 'react';
+import { ReactElement } from 'react';
 import * as sc from 'styled-components';
 
 const colors = new Map<string, string>(
@@ -104,7 +104,7 @@ function getHashes() {
   return hashes;
 }
 
-export function renderCSS(ui: React.ReactElement, component: string) {
+export function renderCSS(ui: ReactElement, component: string) {
   render(<v5.ThemeProvider>{ui}</v5.ThemeProvider>);
 
   const sheet = parseStyleSheet();
