@@ -8,6 +8,10 @@ import { createBreakpoints } from '@mui/system';
 import { useConstant } from '@superdispatch/hooks';
 import { Rule, StyleSheet } from 'jss';
 import { ReactElement, ReactNode } from 'react';
+import {
+  createTypographyOptions,
+  overrideTypography,
+} from '../typography/TypographyOverrides';
 import { Color } from './Color';
 import { SuperDispatchTheme } from './SuperDispatchTheme';
 
@@ -41,10 +45,14 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
       divider: Color.Silver400,
     },
 
-    components: {},
-  });
+    typography: createTypographyOptions(breakpoints),
 
-  return theme as SuperDispatchTheme;
+    components: {},
+  }) as SuperDispatchTheme;
+
+  overrideTypography(theme);
+
+  return theme;
 }
 
 const generateMaterialClassName = createGenerateClassName();

@@ -1,10 +1,11 @@
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 import { PropsLink } from '@superdispatch/ui-docs';
-import { Stack } from '../stack/Stack';
+import { Stack } from '../../stack/Stack';
 
 export default {
   title: 'Data Display/Typography',
   parameters: {
+    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/typography/#props" />
     ),

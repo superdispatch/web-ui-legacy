@@ -1,7 +1,15 @@
 import { v5 } from '@superdispatch/ui';
 import { render } from '@testing-library/react';
-import { parse as parseCSS, stringify as stringifyCSS, Stylesheet } from 'css';
+import {
+  parse as parseCSS,
+  Rule,
+  stringify as stringifyCSS,
+  Stylesheet,
+} from 'css';
+import { get } from 'lodash';
 import { format } from 'prettier';
+import { ReactElement } from 'react';
+import * as sc from 'styled-components';
 
 const colors = new Map<string, string>(
   Object.entries(v5.Color).map(([k, v]) => [v, `Color.${k}`]),
@@ -16,26 +24,19 @@ const colorRegExp = new RegExp(
 
 const renderedCSS = new Set<string>();
 
-function getAllSheets(): Element[] {
-  return Array.from(document.querySelectorAll('[data-styled]'));
-}
+function getSCSheet(): Element {
+  // eslint-disable-next-line testing-library/no-node-access
+  const sheet = document.querySelector('[data-styled]');
 
-function getSheets(): Element[] {
-  const sheets = getAllSheets();
-
-  if (sheets.length === 0) {
-    throw new Error('There are no mounted JSS components.');
+  if (!sheet) {
+    throw new Error('There are no mounted SC components.');
   }
 
-  return sheets;
+  return sheet;
 }
 
 function parseStyleSheet(): Stylesheet {
-  return parseCSS(
-    getSheets()
-      .map((node) => node.textContent)
-      .join('\n'),
-  );
+  return parseCSS(getSCSheet().textContent || '');
 }
 
 function formatAST(sheet: Stylesheet): string {
@@ -55,15 +56,137 @@ expect.addSnapshotSerializer({
 
 export function extractGlobalCSS(): string {
   const targetSheet = parseStyleSheet();
-  const formatted = formatAST(targetSheet);
-
-  renderedCSS.add(formatted);
-
-  return formatted;
+  return formatAST(targetSheet);
 }
 
 export function renderGlobalCSS() {
   render(<v5.ThemeProvider />);
 
-  return extractGlobalCSS();
+  const css = extractGlobalCSS();
+  renderedCSS.add(css);
+
+  return css;
+}
+
+function stripClassName(className: string): string {
+  return className.replace(/\./, '');
+}
+
+function getClassNames() {
+  let hashes = new Set();
+  const sheet = parseStyleSheet();
+
+  for (const rule of sheet.stylesheet?.rules || []) {
+    // todo handle media?
+    if ('selectors' in rule && rule.selectors) {
+      hashes = new Set([...rule.selectors, ...hashes]);
+    }
+  }
+
+  return hashes;
+}
+
+function getHashes() {
+  const sheet = get(sc, ['__PRIVATE__', 'masterSheet']);
+
+  if (!sheet) {
+    throw new Error('Could neither find styled-components secret internals');
+  }
+
+  const hashes = new Set();
+
+  for (const [mainHash, childHashSet] of sheet.names) {
+    hashes.add(mainHash);
+
+    for (const childHash of childHashSet) hashes.add(childHash);
+  }
+
+  return hashes;
+}
+
+export function renderCSS(ui: ReactElement, component: string) {
+  render(<v5.ThemeProvider>{ui}</v5.ThemeProvider>);
+
+  const sheet = parseStyleSheet();
+
+  if (!sheet.stylesheet) {
+    throw new Error('Cannot parse style sheet.');
+  }
+
+  const componentClassNames: string[][] = [];
+  const elements = Array.from(
+    // eslint-disable-next-line testing-library/no-node-access
+    document.querySelectorAll(`[class*="${component}"]`),
+  );
+
+  for (const element of elements) {
+    componentClassNames.push(Array.from(element.classList));
+  }
+
+  const rules = [];
+  const hashes = getHashes();
+  const globalClassNames = getClassNames();
+  const componentHashes: Map<string, string[]> = new Map();
+  const allClassNames = componentClassNames.flat();
+
+  for (const classNames of componentClassNames) {
+    for (const possibleHash of classNames) {
+      if (globalClassNames.has(generateClassSelector(possibleHash))) {
+        const formattedClassName = generateClassSelector(
+          classNames.filter((className) => {
+            return !hashes.has(className);
+          }),
+        );
+
+        const prev = componentHashes.get(possibleHash) || [];
+        componentHashes.set(possibleHash, [...prev, formattedClassName]);
+        break;
+      }
+    }
+  }
+
+  function filterRule(rule: Rule): boolean {
+    const { selectors = [] } = rule;
+
+    return (
+      !!rule.declarations?.length &&
+      selectors.some((className) => {
+        return allClassNames.includes(stripClassName(className));
+      })
+    );
+  }
+
+  for (const rule of sheet.stylesheet.rules) {
+    if ('media' in rule && 'rules' in rule) {
+      const atRules = rule.rules?.filter(filterRule);
+
+      if (atRules?.length) {
+        rule.rules = atRules;
+        rules.push(rule);
+      }
+    }
+
+    if ('selectors' in rule && filterRule(rule)) {
+      rules.push(rule);
+    }
+  }
+
+  sheet.stylesheet.rules = rules;
+
+  let css = formatAST(sheet);
+
+  for (const [hash, classNames] of componentHashes.entries()) {
+    css = css.replaceAll(
+      generateClassSelector(hash),
+      Array.from(new Set(classNames)).join(', '),
+    );
+  }
+
+  renderedCSS.add(css);
+
+  return css;
+}
+
+function generateClassSelector(...classNames: string[] | string[][]) {
+  return '.' + classNames.flat().join('.');
 }
