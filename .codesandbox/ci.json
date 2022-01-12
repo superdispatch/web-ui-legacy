@@ -1,6 +1,7 @@
 {
   "node": "16",
   "buildCommand": "build",
+  "sandboxes": ["/cra"],
   "packages": [
     "packages/dates",
     "packages/eslint-plugin",
