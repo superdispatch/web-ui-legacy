@@ -12,7 +12,7 @@
     ]
   },
   "scripts": {
-    "postinstall": "patch-package && husky install && js-tools lint:yarn-deduplicate --fix",
+    "postinstall": "husky install && js-tools lint:yarn-deduplicate --fix",
     "build": "turbo run version",
     "build-size": "yarn build && size-limit",
     "check:types": "yarn tsc && yarn tsc --project cypress",
@@ -102,10 +102,6 @@
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@^5.1.0",
     "react": "^17",
     "react-docgen-typescript": "2.1.0"
-  },
-  "dependencies": {
-    "patch-package": "^6.4.7",
-    "postinstall-postinstall": "^2.1.0"
   },
   "devDependencies": {
     "@codemod/cli": "2.3.2",
