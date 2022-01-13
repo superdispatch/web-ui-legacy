@@ -1,14 +1,14 @@
 import isLokiRunning from '@loki/is-loki-running';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import SaveIcon from '@material-ui/icons/Save';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import SaveIcon from '@mui/icons-material/Save';
 import { Meta } from '@storybook/react';
 import { Inline, Stack } from '../';
 import { Button } from './Button';
 
 const isLoading = !isLokiRunning();
 
-export default { title: 'Navigation/Button v4', component: Button } as Meta;
+export default { title: 'Navigation/Button', component: Button } as Meta;
 
 export const basic = () => (
   <Inline verticalAlign="center" horizontalAlign="center">

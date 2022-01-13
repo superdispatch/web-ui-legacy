@@ -8,6 +8,7 @@ import { createBreakpoints } from '@mui/system';
 import { useConstant } from '@superdispatch/hooks';
 import { Rule, StyleSheet } from 'jss';
 import { ReactElement, ReactNode } from 'react';
+import { overrideButton } from '../button/ButtonOverrides';
 import {
   createTypographyOptions,
   overrideTypography,
@@ -50,6 +51,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
     components: {},
   }) as SuperDispatchTheme;
 
+  overrideButton(theme);
   overrideTypography(theme);
 
   return theme;

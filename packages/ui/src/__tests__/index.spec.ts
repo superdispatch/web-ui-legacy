@@ -82,7 +82,7 @@ it('exposes public api', () => {
         "Yellow75": "#FFF1C2",
       },
       "Column": React.forwardRef(Column),
-      "Columns": React.forwardRef(Columns),
+      "Columns": React.forwardRef(styled.div),
       "DescriptionList": React.forwardRef(DescriptionList),
       "DescriptionListItem": React.forwardRef(DescriptionListItem),
       "DrawerActions": React.forwardRef(DrawerActions),
