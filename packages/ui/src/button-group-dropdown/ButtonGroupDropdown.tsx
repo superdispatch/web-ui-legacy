@@ -8,7 +8,7 @@ import {
 import * as React from 'react';
 import { forwardRef, MouseEvent, ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
-import { Color, mergeRefs } from '..';
+import { Color, mergeRefs, useUID } from '..';
 import { Button, ButtonProps } from '../button/Button';
 
 function CaretDownIcon(): ReactElement {
@@ -31,12 +31,12 @@ const DropDownButton = styled(Button)`
 interface ButtonGroupDropdownProps extends Omit<ButtonProps, 'children'> {
   label?: ReactNode;
   children: ReactNode;
-  MenuListProps?: MuiMenuListProps;
+  MenuListProps?: Omit<MuiMenuListProps, 'id'>;
   ButtonGroupProps?: MuiButtonGroupProps;
 }
 
 export const ButtonGroupDropdown = forwardRef<
-  HTMLDivElement,
+  HTMLButtonElement,
   ButtonGroupDropdownProps
 >(
   (
@@ -52,6 +52,7 @@ export const ButtonGroupDropdown = forwardRef<
     },
     ref,
   ) => {
+    const uid = useUID();
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef<HTMLDivElement | null>(null);
 
@@ -74,11 +75,12 @@ export const ButtonGroupDropdown = forwardRef<
     return (
       <>
         <ButtonGroup
-          ref={mergeRefs(ref, anchorRef)}
-          fullWidth={buttonProps.fullWidth}
           {...ButtonGroupProps}
+          ref={mergeRefs(ButtonGroupProps?.ref, anchorRef)}
+          fullWidth={ButtonGroupProps?.fullWidth || buttonProps.fullWidth}
         >
           <Button
+            ref={ref}
             onClick={handleClick}
             disabled={isLoading}
             isLoading={isLoading}
@@ -92,6 +94,9 @@ export const ButtonGroupDropdown = forwardRef<
             disabled={isLoading}
             color={buttonProps.color}
             variant={buttonProps.variant}
+            aria-haspopup="menu"
+            aria-controls={open ? uid : undefined}
+            aria-expanded={open ? 'true' : undefined}
           >
             <CaretDownIcon />
           </DropDownButton>
@@ -109,6 +114,7 @@ export const ButtonGroupDropdown = forwardRef<
           <div style={{ minWidth: anchorRef.current?.clientWidth }}>
             <MenuList
               {...MenuListProps}
+              id={uid}
               onClick={() => {
                 setOpen(false);
               }}
