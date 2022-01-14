@@ -20,3 +20,31 @@ export const basic = () => (
     ].map((label) => ({ label, key: label }))}
   />
 );
+
+export const group = () => (
+  <AdaptiveToolbar
+    items={[
+      { key: 'edit', label: 'Edit' },
+      { key: 'delete', label: 'Delete' },
+      { key: 'cancel_order', label: 'Cancel Order' },
+      { key: 'cancel_offer', label: 'Cancel Offer' },
+      { key: 'send_offer', label: 'Send Offer', groupKey: '1' },
+      {
+        key: 'post_to_slb',
+        label: 'Post to SLB',
+        groupKey: '2',
+        ButtonProps: { color: 'primary' },
+        dropdown: [
+          {
+            key: 'post_to_all',
+            label: 'Post to SLB & CD',
+          },
+          {
+            key: 'post_to_cd',
+            label: 'Post to CD',
+          },
+        ],
+      },
+    ]}
+  />
+);
