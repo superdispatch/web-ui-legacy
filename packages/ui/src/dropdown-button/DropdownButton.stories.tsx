@@ -3,7 +3,7 @@ import { Meta } from '@storybook/react';
 import { DropdownButton } from './DropdownButton';
 
 export default {
-  title: 'Navigation/ButtonGroupDropdown',
+  title: 'Navigation/DropdownButton',
   component: DropdownButton,
 } as Meta;
 
