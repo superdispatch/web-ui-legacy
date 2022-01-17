@@ -11,6 +11,7 @@ export * from './drawer/DrawerActions';
 export * from './drawer/DrawerContent';
 export * from './drawer/DrawerList';
 export * from './drawer/DrawerTitle';
+export * from './dropdown-button/DropdownButton';
 export * from './grid/GridStack';
 export * from './grid/InlineGrid';
 export * from './info-card/InfoCard';
