@@ -1,15 +1,15 @@
 import { MenuItem } from '@material-ui/core';
 import { Meta } from '@storybook/react';
-import { ButtonGroupDropdown } from './ButtonGroupDropdown';
+import { DropdownButton } from './DropdownButton';
 
 export default {
   title: 'Navigation/ButtonGroupDropdown',
-  component: ButtonGroupDropdown,
+  component: DropdownButton,
 } as Meta;
 
 export const basic = () => (
-  <ButtonGroupDropdown label="Post to SLB">
+  <DropdownButton label="Post to SLB">
     <MenuItem>Post to SLB & CD</MenuItem>
     <MenuItem>Post to CD</MenuItem>
-  </ButtonGroupDropdown>
+  </DropdownButton>
 );

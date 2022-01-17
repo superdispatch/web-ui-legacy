@@ -1,6 +1,5 @@
 export * from './adaptive-toolbar/AdaptiveToolbar';
 export * from './avatar-button/AvatarButton';
-export * from './button-group-dropdown/ButtonGroupDropdown';
 export * from './button/Button';
 export * from './card-button/CardButton';
 export * from './checkbox/CheckboxField';
@@ -12,6 +11,7 @@ export * from './drawer/DrawerActions';
 export * from './drawer/DrawerContent';
 export * from './drawer/DrawerList';
 export * from './drawer/DrawerTitle';
+export * from './dropdown-button/DropdownButton';
 export * from './grid/GridStack';
 export * from './grid/InlineGrid';
 export * from './info-card/InfoCard';

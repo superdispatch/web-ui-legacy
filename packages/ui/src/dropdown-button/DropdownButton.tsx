@@ -22,22 +22,22 @@ function CaretDownIcon(): ReactElement {
   );
 }
 
-const DropDownButton = styled(Button)`
+const CaretButton = styled(Button)`
   width: auto;
   ${({ variant }) =>
     variant === 'contained' && `border-left: 1px solid ${Color.Blue500}`};
 `;
 
-interface ButtonGroupDropdownProps extends Omit<ButtonProps, 'children'> {
+interface DropdownButtonProps extends Omit<ButtonProps, 'children'> {
   label?: ReactNode;
   children: ReactNode;
   MenuListProps?: Omit<MuiMenuListProps, 'id'>;
   ButtonGroupProps?: MuiButtonGroupProps;
 }
 
-export const ButtonGroupDropdown = forwardRef<
+export const DropdownButton = forwardRef<
   HTMLButtonElement,
-  ButtonGroupDropdownProps
+  DropdownButtonProps
 >(
   (
     {
@@ -89,7 +89,7 @@ export const ButtonGroupDropdown = forwardRef<
             {label}
           </Button>
 
-          <DropDownButton
+          <CaretButton
             onClick={handleToggle}
             disabled={isLoading}
             color={buttonProps.color}
@@ -99,7 +99,7 @@ export const ButtonGroupDropdown = forwardRef<
             aria-expanded={open ? 'true' : undefined}
           >
             <CaretDownIcon />
-          </DropDownButton>
+          </CaretButton>
         </ButtonGroup>
 
         <Popover
@@ -128,4 +128,4 @@ export const ButtonGroupDropdown = forwardRef<
   },
 );
 
-export default ButtonGroupDropdown;
+export default DropdownButton;

@@ -22,8 +22,8 @@ import {
   useRef,
   useState,
 } from 'react';
-import { ButtonGroupDropdown } from '../button-group-dropdown/ButtonGroupDropdown';
 import { Button, ButtonProps } from '../button/Button';
+import { DropdownButton } from '../dropdown-button/DropdownButton';
 
 function useResizeObserver<T extends HTMLElement>(
   node: null | undefined | T,
@@ -138,7 +138,7 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
                   }}
                 >
                   {item.dropdown ? (
-                    <ButtonGroupDropdown
+                    <DropdownButton
                       type="button"
                       onClick={item.onClick}
                       label={item.label}
@@ -152,7 +152,7 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
                           {dropdownItem.label}
                         </MenuItem>
                       ))}
-                    </ButtonGroupDropdown>
+                    </DropdownButton>
                   ) : (
                     <Button
                       type="button"
