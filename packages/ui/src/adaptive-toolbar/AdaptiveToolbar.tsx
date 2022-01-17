@@ -126,8 +126,14 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
 
     return (
       <Toolbar {...props} ref={ref}>
-        <Grid container={true} spacing={1} ref={setRootNode}>
-          <Grid item={true} className={styles.actions}>
+        <Grid
+          container={true}
+          spacing={1}
+          wrap="nowrap"
+          ref={setRootNode}
+          className={styles.actions}
+        >
+          <Grid item={true}>
             <Grid container={true} spacing={1} wrap="nowrap" component="div">
               {items.map((item, idx) => (
                 <Grid
