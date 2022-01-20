@@ -1,4 +1,5 @@
 export * from './adaptive-toolbar/AdaptiveToolbar';
+export * from './adaptive-vertical-toolbar/AdaptiveVerticalToolbar';
 export * from './avatar-button/AvatarButton';
 export * from './button/Button';
 export * from './card-button/CardButton';
@@ -37,5 +38,6 @@ export * from './tiles/Tiles';
 export * from './utils/isEmptyReactNode';
 export * from './utils/mergeRefs';
 export * from './utils/renderChildren';
+export * from './utils/ResizeObserver';
 export * from './utils/useUID';
 export * from './utils/VisibilityObserver';

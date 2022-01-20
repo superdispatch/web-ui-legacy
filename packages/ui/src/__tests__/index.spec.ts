@@ -4,6 +4,7 @@ it('exposes public api', () => {
   expect(api).toMatchInlineSnapshot(`
     Object {
       "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
+      "AdaptiveVerticalToolbar": React.forwardRef(AdaptiveVerticalToolbar),
       "AvatarButton": React.forwardRef(AvatarButton),
       "Button": React.forwardRef(Button),
       "CardButton": React.forwardRef(CardButton),
@@ -116,6 +117,7 @@ it('exposes public api', () => {
       "parseSpaceProp": [Function],
       "renderChildren": [Function],
       "useCollapseBreakpoint": [Function],
+      "useResizeObserver": [Function],
       "useResponsiveContext": [Function],
       "useResponsiveProp": [Function],
       "useResponsivePropRecord": [Function],

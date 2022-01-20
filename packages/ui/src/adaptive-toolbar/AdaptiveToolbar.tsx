@@ -1,4 +1,3 @@
-import { ResizeObserver } from '@juggle/resize-observer';
 import {
   Divider,
   Grid,
@@ -10,7 +9,6 @@ import {
 } from '@material-ui/core';
 import { MoreHoriz } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/styles';
-import { useEventHandler } from '@superdispatch/hooks';
 import {
   forwardRef,
   ForwardRefExoticComponent,
@@ -18,37 +16,12 @@ import {
   MouseEvent,
   ReactNode,
   RefAttributes,
-  useLayoutEffect,
   useRef,
   useState,
 } from 'react';
 import { Button, ButtonProps } from '../button/Button';
 import { DropdownButton } from '../dropdown-button/DropdownButton';
-
-function useResizeObserver<T extends HTMLElement>(
-  node: null | undefined | T,
-  observer: (node: T) => void,
-): void {
-  const handler = useEventHandler(observer);
-
-  useLayoutEffect(() => {
-    if (!node) {
-      return;
-    }
-
-    const resizeObserver = new ResizeObserver(() => {
-      handler(node);
-    });
-
-    resizeObserver.observe(node);
-
-    handler(node);
-
-    return () => {
-      resizeObserver.disconnect();
-    };
-  }, [node, handler]);
-}
+import { useResizeObserver } from '../utils/ResizeObserver';
 
 const useStyles = makeStyles(
   { actions: { overflow: 'hidden' } },
