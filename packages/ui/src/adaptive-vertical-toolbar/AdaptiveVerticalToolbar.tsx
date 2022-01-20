@@ -20,7 +20,7 @@ import { useResizeObserver } from '../utils/ResizeObserver';
 
 const useStyles = makeStyles(
   { root: { overflow: 'hidden', height: '100%' } },
-  { name: 'SD-AdaptiveToolbar' },
+  { name: 'SD-AdaptiveVerticalToolbar' },
 );
 
 const defaultMoreElement = (
