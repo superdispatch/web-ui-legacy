@@ -21,7 +21,7 @@ export const basic = () => (
           'Archive',
           'Delete',
         ].map((label) => ({ label, key: label }))}
-        render={(item) => <li>{item.label}</li>}
+        renderItem={(item) => <li>{item.label}</li>}
       />
     </CardContent>
   </Card>
@@ -41,7 +41,7 @@ export const customMore = () => (
           'Archive',
           'Delete',
         ].map((label) => ({ label, key: label }))}
-        render={(item) => <li>{item.label}</li>}
+        renderItem={(item) => <li>{item.label}</li>}
         moreElement={<li>··· More</li>}
       />
     </CardContent>
