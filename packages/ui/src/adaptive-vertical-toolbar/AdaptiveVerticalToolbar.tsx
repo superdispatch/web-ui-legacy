@@ -1,4 +1,4 @@
-import { Grid, Menu, MenuItem, ToolbarProps } from '@material-ui/core';
+import { Divider, Grid, Menu, MenuItem, ToolbarProps } from '@material-ui/core';
 import { MoreHoriz } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/styles';
 import {
@@ -32,6 +32,7 @@ const defaultMoreElement = (
 export interface AdaptiveVerticalToolbarItem {
   key: Key;
   label: ReactNode;
+  menuGroupKey?: Key;
   onClick?: (event: MouseEvent<HTMLElement>) => void;
 }
 
@@ -139,17 +140,26 @@ export const AdaptiveVerticalToolbar: ForwardRefExoticComponent<AdaptiveVertical
                   setMenuButtonRef(undefined);
                 }}
               >
-                {menuItems.map((item) => (
-                  <MenuItem
-                    key={item.key}
-                    onClick={(event) => {
-                      item.onClick?.(event);
-                      setMenuButtonRef(undefined);
-                    }}
-                  >
-                    {item.label}
-                  </MenuItem>
-                ))}
+                {menuItems.map((item, index, arr) => {
+                  const next = arr[index + 1];
+                  return (
+                    <>
+                      <MenuItem
+                        key={item.key}
+                        onClick={(event) => {
+                          item.onClick?.(event);
+                          setMenuButtonRef(undefined);
+                        }}
+                      >
+                        {item.label}
+                      </MenuItem>
+
+                      {next && next.menuGroupKey !== item.menuGroupKey && (
+                        <Divider />
+                      )}
+                    </>
+                  );
+                })}
               </Menu>
             </Grid>
           )}
