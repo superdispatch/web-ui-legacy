@@ -143,7 +143,7 @@
     "cypress": "8.4.1",
     "dedent": "0.7.0",
     "enhanced-resolve": "5.8.3",
-    "eslint": "8.5.0",
+    "eslint": "8.7.0",
     "eslint-plugin-eslint-config": "2.0.0",
     "execa": "5.1.1",
     "fontsource-inter": "4.0.0",
