@@ -109,11 +109,9 @@ function containedVariant(
   disabledBackground: Color,
 ): CSSInterpolation {
   return {
-    '&': {
-      color: text,
-      backgroundColor,
-      boxShadow: outlineShadow(),
-    },
+    color: text,
+    backgroundColor,
+    boxShadow: outlineShadow(),
 
     '&:hover': {
       backgroundColor: active,
@@ -212,7 +210,7 @@ export function overrideButton(theme: SuperDispatchTheme): void {
           fontSize: '24px',
           [sm]: { fontSize: '20px' },
 
-          [`.${buttonClasses.sizeLarge} &`]: {
+          [`.${buttonClasses.sizeLarge}&`]: {
             fontSize: '28px',
             [sm]: { fontSize: '24px' },
           },
@@ -258,9 +256,9 @@ export function overrideButton(theme: SuperDispatchTheme): void {
       textSizeLarge: sizeLarge(theme),
 
       outlined: {
-        border: 'initial',
+        border: 'none',
         padding: 'initial',
-        [`&.${buttonClasses.disabled}`]: { border: 'initial' },
+        [`&.${buttonClasses.disabled}`]: { border: 'none' },
 
         '&[data-color="error"]': outlinedVariant(
           Color.Red300,
@@ -319,30 +317,30 @@ export function overrideButton(theme: SuperDispatchTheme): void {
       outlinedSizeLarge: sizeLarge(theme),
 
       contained: {
-        boxShadow: 'initial',
+        boxShadow: 'none',
         backgroundColor: 'initial',
 
         '&:hover': {
-          boxShadow: 'initial',
+          boxShadow: 'none',
           backgroundColor: 'initial',
-          [`&.${buttonClasses.disabled}`]: { backgroundColor: 'initial' },
+          [`&.${buttonClasses.disabled}`]: { backgroundColor: 'none' },
           '@media (hover: none)': {
-            boxShadow: 'initial',
-            backgroundColor: 'initial',
+            boxShadow: 'none',
+            backgroundColor: 'none',
           },
         },
 
         '&:active': {
-          boxShadow: 'initial',
+          boxShadow: 'none',
         },
 
         [`&.${buttonClasses.focusVisible}`]: {
-          boxShadow: 'initial',
+          boxShadow: 'none',
         },
 
         [`&.${buttonClasses.disabled}`]: {
           color: 'initial',
-          boxShadow: 'initial',
+          boxShadow: 'none',
           backgroundColor: 'initial',
         },
 
