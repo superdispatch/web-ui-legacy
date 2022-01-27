@@ -1,4 +1,4 @@
-import { Divider, Grid, Menu, MenuItem, ToolbarProps } from '@material-ui/core';
+import { Divider, Grid, Menu, MenuItem } from '@material-ui/core';
 import { MoreHoriz } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/styles';
 import {
@@ -37,10 +37,12 @@ export interface AdaptiveVerticalToolbarItem {
 }
 
 export interface AdaptiveVerticalToolbarProps
-  extends RefAttributes<HTMLDivElement>,
-    Omit<ToolbarProps, 'children'> {
+  extends RefAttributes<HTMLDivElement> {
+  disableGutters?: boolean;
+
   items: AdaptiveVerticalToolbarItem[];
   renderItem?: (item: AdaptiveVerticalToolbarItem) => ReactNode;
+  renderMenuItem?: (item: AdaptiveVerticalToolbarItem) => ReactNode;
 
   moreElement?: ReactElement<{
     onClick: EventHandler<MouseEvent<HTMLElement>>;
@@ -52,8 +54,10 @@ export const AdaptiveVerticalToolbar: ForwardRefExoticComponent<AdaptiveVertical
     (
       {
         items,
+        disableGutters,
         moreElement = defaultMoreElement,
         renderItem = (item: AdaptiveVerticalToolbarItem) => item.label,
+        renderMenuItem = (item: AdaptiveVerticalToolbarItem) => item.label,
       },
       ref,
     ) => {
@@ -104,11 +108,11 @@ export const AdaptiveVerticalToolbar: ForwardRefExoticComponent<AdaptiveVertical
 
       return (
         <Grid
-          spacing={1}
           direction="column"
           container={true}
           wrap="nowrap"
           className={styles.root}
+          spacing={disableGutters ? undefined : 1}
           ref={mergeRefs(ref, (node) => {
             setRootNode(node);
           })}
@@ -151,7 +155,7 @@ export const AdaptiveVerticalToolbar: ForwardRefExoticComponent<AdaptiveVertical
                           setMenuButtonRef(undefined);
                         }}
                       >
-                        {item.label}
+                        {renderMenuItem(item)}
                       </MenuItem>
 
                       {next && next.menuGroupKey !== item.menuGroupKey && (
