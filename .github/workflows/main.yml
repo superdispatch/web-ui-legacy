@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v4
+          cache-key: yarn-v5
 
       - run: yarn check:types
       - run: yarn lint
@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v4
+          cache-key: yarn-v5
 
       - run: yarn docs
       - id: deploy
@@ -45,7 +45,7 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v4
+          cache-key: yarn-v5
       - run: yarn cypress install
       - run: yarn percy exec -- cypress run
         env:
@@ -60,5 +60,5 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v4
+          cache-key: yarn-v5
       - run: yarn test:visual-ci https://ui.superdispatch.org
