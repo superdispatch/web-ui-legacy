@@ -1,13 +1,10 @@
-import {
-  Button as MaterialButton,
-  ButtonProps as MuiButtonProps,
-  CircularProgress,
-} from '@mui/material';
+import { LoadingButton, LoadingButtonProps } from '@mui/lab';
+import { CircularProgress } from '@mui/material';
 import { forwardRef, ForwardRefExoticComponent, RefAttributes } from 'react';
 
 export interface ButtonProps
   extends RefAttributes<HTMLButtonElement>,
-    Omit<MuiButtonProps, 'color'> {
+    Omit<LoadingButtonProps, 'color' | 'loading' | 'loadingIndicator'> {
   rel?: string;
   target?: string;
   isActive?: boolean;
@@ -17,34 +14,20 @@ export interface ButtonProps
 
 export const Button: ForwardRefExoticComponent<ButtonProps> = forwardRef(
   (
-    {
-      size,
-      children,
-      disabled,
-      isActive,
-      isLoading,
-      color = 'primary',
-      ...props
-    },
+    { size, children, isActive, isLoading, color = 'primary', ...props },
     ref,
   ) => (
-    <MaterialButton
+    <LoadingButton
       {...props}
       ref={ref}
       size={size}
       data-color={color}
-      aria-busy={isLoading}
+      loading={isLoading}
       aria-expanded={isActive}
-      disabled={disabled || isLoading}
+      color={color === 'primary' ? color : 'inherit'}
+      loadingIndicator={<CircularProgress size="1em" color="inherit" />}
     >
-      {!isLoading ? (
-        children
-      ) : (
-        <>
-          {children}
-          <CircularProgress size="1em" color="inherit" />
-        </>
-      )}
-    </MaterialButton>
+      {children}
+    </LoadingButton>
   ),
 );

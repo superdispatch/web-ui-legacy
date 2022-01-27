@@ -8,7 +8,11 @@ import { Button } from './Button';
 
 const isLoading = !isLokiRunning();
 
-export default { title: 'Navigation/Button', component: Button } as Meta;
+export default {
+  title: 'Navigation/Button',
+  component: Button,
+  parameters: { v5: true },
+} as Meta;
 
 export const basic = () => (
   <Inline verticalAlign="center" horizontalAlign="center">

@@ -1,5 +1,6 @@
+import { loadingButtonClasses } from '@mui/lab';
 import { buttonClasses } from '@mui/material';
-import { CSSProperties } from '@mui/styles';
+import { CSSInterpolation } from '@mui/system';
 import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
@@ -12,7 +13,7 @@ function textVariant(
   outline: Color,
   background: Color,
   progress: Color,
-): CSSProperties {
+): CSSInterpolation {
   return {
     '&': {
       color: text,
@@ -38,7 +39,7 @@ function textVariant(
       boxShadow: outlineShadow(),
       backgroundColor: Color.Transparent,
 
-      '&[aria-busy="true"]': {
+      [`& .${loadingButtonClasses.loadingIndicator}`]: {
         color: progress,
       },
     },
@@ -63,18 +64,16 @@ function outlinedVariant(
   activeBackground: Color,
   progress: Color,
   backgroundColor: Color,
-): CSSProperties {
+): CSSInterpolation {
   return {
-    '&': {
-      backgroundColor,
-      color: staleText,
-      border: undefined,
-      boxShadow: outlinedBorder(staleBorder),
-    },
+    backgroundColor,
+    color: staleText,
+    border: 0,
+    boxShadow: outlinedBorder(staleBorder),
 
     '&:hover': {
       color: activeText,
-      border: undefined,
+      border: 0,
       backgroundColor: activeBackground,
       boxShadow: outlinedBorder(activeBorder),
     },
@@ -94,7 +93,7 @@ function outlinedVariant(
       color: disabledText,
       boxShadow: outlinedBorder(disabledBorder),
 
-      '&[aria-busy="true"]': {
+      [`& .${loadingButtonClasses.loadingIndicator}`]: {
         color: progress,
       },
     },
@@ -108,7 +107,7 @@ function containedVariant(
   active: Color,
   disabledText: Color,
   disabledBackground: Color,
-): CSSProperties {
+): CSSInterpolation {
   return {
     '&': {
       color: text,
@@ -132,6 +131,37 @@ function containedVariant(
       color: disabledText,
       boxShadow: outlineShadow(),
       backgroundColor: disabledBackground,
+
+      [`& .${loadingButtonClasses.loadingIndicator}`]: {
+        color: disabledText,
+      },
+    },
+  };
+}
+
+function sizeSmall(theme: SuperDispatchTheme): CSSInterpolation {
+  const sm = theme.breakpoints.up('sm');
+  return {
+    ...theme.typography.button,
+
+    padding: theme.spacing(0.5, 3),
+    [sm]: { padding: theme.spacing(0.25, 2) },
+  };
+}
+
+function sizeLarge(theme: SuperDispatchTheme): CSSInterpolation {
+  const sm = theme.breakpoints.up('sm');
+  return {
+    ...theme.typography.button,
+
+    fontSize: '18px',
+    lineHeight: '28px',
+    padding: theme.spacing(1.75, 8),
+
+    [sm]: {
+      fontSize: '16px',
+      lineHeight: '24px',
+      padding: theme.spacing(1, 4),
     },
   };
 }
@@ -139,6 +169,16 @@ function containedVariant(
 export function overrideButton(theme: SuperDispatchTheme): void {
   const sm = theme.breakpoints.up('sm');
 
+  theme.components.MuiLoadingButton = {
+    styleOverrides: {
+      loadingIndicator: {
+        color: 'inherit',
+
+        fontSize: theme.spacing(2),
+        [`.${buttonClasses.sizeLarge} &`]: { fontSize: theme.spacing(3) },
+      },
+    },
+  };
   theme.components.MuiButton = {
     defaultProps: {
       color: 'primary',
@@ -161,61 +201,29 @@ export function overrideButton(theme: SuperDispatchTheme): void {
         [sm]: { padding: theme.spacing(0.75, 2) },
 
         '&:hover': {
-          backgroundColor: undefined,
-          [`&.${buttonClasses.disabled}`]: { backgroundColor: undefined },
-          '@media (hover: none)': { backgroundColor: undefined },
+          backgroundColor: 'initial',
+          [`&.${buttonClasses.disabled}`]: { backgroundColor: 'initial' },
+          '@media (hover: none)': { backgroundColor: 'initial' },
         },
 
-        [`&.${buttonClasses.disabled}`]: { color: undefined },
+        [`&.${buttonClasses.disabled}`]: { color: 'initial' },
 
-        '&[aria-busy="true"]': {
-          // '& $label': {
-          //   visibility: 'hidden',
-          //
-          //   '& > [role="progressbar"]': {
-          //     position: 'absolute',
-          //     visibility: 'visible',
-          //     top: 'calc(50% - 0.5em)',
-          //     left: 'calc(50% - 0.5em)',
-          //
-          //     fontSize: theme.spacing(2),
-          //     '$sizeLarge &': { fontSize: theme.spacing(3) },
-          //   },
-          // },
+        '& > .MuiSvgIcon-root': {
+          fontSize: '24px',
+          [sm]: { fontSize: '20px' },
+
+          [`.${buttonClasses.sizeLarge} &`]: {
+            fontSize: '28px',
+            [sm]: { fontSize: '24px' },
+          },
         },
       },
 
-      // label: {
-      //   '& > .MuiSvgIcon-root': {
-      //     fontSize: '24px',
-      //     [sm]: { fontSize: '20px' },
-      //
-      //     '$sizeLarge &': {
-      //       fontSize: '28px',
-      //       [sm]: { fontSize: '24px' },
-      //     },
-      //   },
-      // },
-
-      sizeSmall: {
-        padding: theme.spacing(0.5, 3),
-        [sm]: { padding: theme.spacing(0.25, 2) },
-      },
-
-      sizeLarge: {
-        fontSize: '18px',
-        lineHeight: '28px',
-        padding: theme.spacing(1.75, 8),
-
-        [sm]: {
-          fontSize: '16px',
-          lineHeight: '24px',
-          padding: theme.spacing(1, 4),
-        },
-      },
+      sizeSmall: sizeSmall(theme),
+      sizeLarge: sizeLarge(theme),
 
       text: {
-        padding: undefined,
+        padding: 'initial',
 
         '&[data-color="error"]': textVariant(
           Color.Red300,
@@ -246,13 +254,13 @@ export function overrideButton(theme: SuperDispatchTheme): void {
         Color.Blue200,
       ),
 
-      textSizeSmall: { padding: undefined, fontSize: undefined },
-      textSizeLarge: { padding: undefined, fontSize: undefined },
+      textSizeSmall: sizeSmall(theme),
+      textSizeLarge: sizeLarge(theme),
 
       outlined: {
-        border: undefined,
-        padding: undefined,
-        [`&.${buttonClasses.disabled}`]: { border: undefined },
+        border: 'initial',
+        padding: 'initial',
+        [`&.${buttonClasses.disabled}`]: { border: 'initial' },
 
         '&[data-color="error"]': outlinedVariant(
           Color.Red300,
@@ -307,35 +315,35 @@ export function overrideButton(theme: SuperDispatchTheme): void {
         Color.White,
       ),
 
-      outlinedSizeSmall: { padding: undefined, fontSize: undefined },
-      outlinedSizeLarge: { padding: undefined, fontSize: undefined },
+      outlinedSizeSmall: sizeSmall(theme),
+      outlinedSizeLarge: sizeLarge(theme),
 
       contained: {
-        boxShadow: 'unset',
-        backgroundColor: 'unset',
+        boxShadow: 'initial',
+        backgroundColor: 'initial',
 
         '&:hover': {
-          boxShadow: undefined,
-          backgroundColor: undefined,
-          [`&.${buttonClasses.disabled}`]: { backgroundColor: undefined },
+          boxShadow: 'initial',
+          backgroundColor: 'initial',
+          [`&.${buttonClasses.disabled}`]: { backgroundColor: 'initial' },
           '@media (hover: none)': {
-            boxShadow: undefined,
-            backgroundColor: undefined,
+            boxShadow: 'initial',
+            backgroundColor: 'initial',
           },
         },
 
         '&:active': {
-          boxShadow: undefined,
+          boxShadow: 'initial',
         },
 
         [`&.${buttonClasses.focusVisible}`]: {
-          boxShadow: undefined,
+          boxShadow: 'initial',
         },
 
         [`&.${buttonClasses.disabled}`]: {
-          color: undefined,
-          boxShadow: undefined,
-          backgroundColor: undefined,
+          color: 'initial',
+          boxShadow: 'initial',
+          backgroundColor: 'initial',
         },
 
         '&[data-color="error"]': containedVariant(
@@ -375,8 +383,8 @@ export function overrideButton(theme: SuperDispatchTheme): void {
         Color.Blue100,
       ),
 
-      containedSizeSmall: { padding: undefined, fontSize: undefined },
-      containedSizeLarge: { padding: undefined, fontSize: undefined },
+      containedSizeSmall: sizeSmall(theme),
+      containedSizeLarge: sizeLarge(theme),
     },
   };
 }
