@@ -15,6 +15,7 @@ export default {
     ),
   ],
   parameters: {
+    v5: true,
     componentSubtitle: (
       <>
         Heavily inspired by the{' '}

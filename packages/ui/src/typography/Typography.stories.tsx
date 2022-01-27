@@ -3,7 +3,7 @@ import { PropsLink } from '@superdispatch/ui-docs';
 import { Stack } from '../stack/Stack';
 
 export default {
-  title: 'Data Display/Typography v4',
+  title: 'v4/Data Display/Typography',
   parameters: {
     loki: { skip: true },
     componentSubtitle: (

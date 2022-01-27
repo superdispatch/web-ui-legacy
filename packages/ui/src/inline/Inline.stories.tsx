@@ -5,7 +5,7 @@ import { Box } from '@superdispatch/ui-lab';
 import { Inline } from './Inline';
 
 export default {
-  title: 'Layout/Inline',
+  title: 'v4/Layout/Inline',
   component: Inline,
   decorators: [
     (Story) => (

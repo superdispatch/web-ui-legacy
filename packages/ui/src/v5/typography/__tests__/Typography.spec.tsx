@@ -50,14 +50,12 @@ it('checks component css', () => {
         'MuiTypography-body2',
         'MuiTypography-body1',
         'MuiTypography-caption',
-        'MuiTypography-button',
         'MuiTypography-h1',
         'MuiTypography-h2',
         'MuiTypography-h3',
         'MuiTypography-h4',
         'MuiTypography-h5',
         'MuiTypography-h6',
-        'MuiTypography-subtitle1',
         'MuiTypography-subtitle2',
         'MuiTypography-overline',
         'MuiTypography-alignLeft',
@@ -102,7 +100,7 @@ it('checks component css', () => {
       font-family: "Inter",sans-serif;
     }
 
-    .MuiTypography-button {
+    .MuiTypography-h1 {
       margin: 0;
       font-size: 32px;
       line-height: 40px;
@@ -110,7 +108,7 @@ it('checks component css', () => {
       font-family: "Inter",sans-serif;
     }
 
-    .MuiTypography-h1 {
+    .MuiTypography-h2 {
       margin: 0;
       font-size: 24px;
       line-height: 28px;
@@ -118,7 +116,7 @@ it('checks component css', () => {
       font-family: "Inter",sans-serif;
     }
 
-    .MuiTypography-h2 {
+    .MuiTypography-h3 {
       margin: 0;
       font-size: 20px;
       line-height: 28px;
@@ -126,7 +124,7 @@ it('checks component css', () => {
       font-family: "Inter",sans-serif;
     }
 
-    .MuiTypography-h3 {
+    .MuiTypography-h4 {
       margin: 0;
       font-size: 16px;
       line-height: 24px;
@@ -134,7 +132,7 @@ it('checks component css', () => {
       font-family: "Inter",sans-serif;
     }
 
-    .MuiTypography-h4 {
+    .MuiTypography-h5 {
       margin: 0;
       font-size: 12px;
       line-height: 16px;
@@ -147,7 +145,7 @@ it('checks component css', () => {
       font-family: "Inter",sans-serif;
     }
 
-    .MuiTypography-h5 {
+    .MuiTypography-h6 {
       margin: 0;
       font-family: "Inter",sans-serif;
       font-weight: 400;
@@ -155,7 +153,7 @@ it('checks component css', () => {
       line-height: 1.75;
     }
 
-    .MuiTypography-h6 {
+    .MuiTypography-subtitle2 {
       margin: 0;
       font-family: "Inter",sans-serif;
       font-weight: 500;
@@ -163,7 +161,7 @@ it('checks component css', () => {
       line-height: 1.57;
     }
 
-    .MuiTypography-subtitle1 {
+    .MuiTypography-overline {
       margin: 0;
       font-family: "Inter",sans-serif;
       font-weight: 400;
@@ -172,7 +170,7 @@ it('checks component css', () => {
       text-transform: uppercase;
     }
 
-    .MuiTypography-subtitle2 {
+    .MuiTypography-alignLeft {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -181,7 +179,7 @@ it('checks component css', () => {
       text-align: left;
     }
 
-    .MuiTypography-overline {
+    .MuiTypography-alignCenter {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -190,7 +188,7 @@ it('checks component css', () => {
       text-align: center;
     }
 
-    .MuiTypography-alignLeft {
+    .MuiTypography-alignRight {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -199,7 +197,7 @@ it('checks component css', () => {
       text-align: right;
     }
 
-    .MuiTypography-alignCenter {
+    .MuiTypography-alignJustify {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -208,7 +206,7 @@ it('checks component css', () => {
       text-align: justify;
     }
 
-    .MuiTypography-alignRight {
+    .MuiTypography-noWrap {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -219,7 +217,7 @@ it('checks component css', () => {
       white-space: nowrap;
     }
 
-    .MuiTypography-alignJustify {
+    .MuiTypography-gutterBottom {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -228,7 +226,7 @@ it('checks component css', () => {
       margin-bottom: 0.35em;
     }
 
-    .MuiTypography-noWrap {
+    .MuiTypography-paragraph {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -237,7 +235,7 @@ it('checks component css', () => {
       margin-bottom: 16px;
     }
 
-    .MuiTypography-gutterBottom {
+    .MuiTypography-colorInherit {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -246,7 +244,7 @@ it('checks component css', () => {
       color: inherit;
     }
 
-    .MuiTypography-paragraph {
+    .MuiTypography-colorPrimary {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -255,7 +253,7 @@ it('checks component css', () => {
       color: Color.Blue300;
     }
 
-    .MuiTypography-colorInherit {
+    .MuiTypography-colorSecondary {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -264,7 +262,7 @@ it('checks component css', () => {
       color: #9c27b0;
     }
 
-    .MuiTypography-colorPrimary {
+    .MuiTypography-colorTextPrimary {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -273,7 +271,7 @@ it('checks component css', () => {
       color: Color.Dark500;
     }
 
-    .MuiTypography-colorSecondary {
+    .MuiTypography-colorTextSecondary {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -282,7 +280,7 @@ it('checks component css', () => {
       color: Color.Dark200;
     }
 
-    .MuiTypography-colorTextPrimary {
+    .MuiTypography-colorError {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -291,7 +289,7 @@ it('checks component css', () => {
       color: Color.Red300;
     }
 
-    .MuiTypography-colorTextSecondary {
+    .MuiTypography-displayInline {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -300,7 +298,7 @@ it('checks component css', () => {
       display: inline;
     }
 
-    .MuiTypography-colorError {
+    .MuiTypography-displayBlock {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -331,51 +329,37 @@ it('checks component css', () => {
     }
 
     @media (min-width:0px) and (max-width:599.95px) {
-      .MuiTypography-button {
+      .MuiTypography-h1 {
         font-size: 28px;
         line-height: 36px;
       }
     }
 
     @media (min-width:0px) and (max-width:599.95px) {
-      .MuiTypography-h1 {
+      .MuiTypography-h2 {
         font-size: 22px;
         line-height: 26px;
       }
     }
 
     @media (min-width:0px) and (max-width:599.95px) {
-      .MuiTypography-h2 {
+      .MuiTypography-h3 {
         font-size: 20px;
         line-height: 26px;
       }
     }
 
     @media (min-width:0px) and (max-width:599.95px) {
-      .MuiTypography-h3 {
+      .MuiTypography-h4 {
         font-size: 17px;
         line-height: 26px;
       }
     }
 
     @media (min-width:0px) and (max-width:599.95px) {
-      .MuiTypography-h4 {
+      .MuiTypography-h5 {
         font-size: 14px;
         line-height: 20px;
-      }
-    }
-
-    @media (min-width:0px) and (max-width:599.95px) {
-      .MuiTypography-subtitle2 {
-        font-size: 16px;
-        line-height: 24px;
-      }
-    }
-
-    @media (min-width:0px) and (max-width:599.95px) {
-      .MuiTypography-overline {
-        font-size: 16px;
-        line-height: 24px;
       }
     }
 
@@ -465,6 +449,20 @@ it('checks component css', () => {
 
     @media (min-width:0px) and (max-width:599.95px) {
       .MuiTypography-colorError {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .MuiTypography-displayInline {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .MuiTypography-displayBlock {
         font-size: 16px;
         line-height: 24px;
       }

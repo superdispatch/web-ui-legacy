@@ -5,7 +5,7 @@ import { Box } from '@superdispatch/ui-lab';
 import { Stack } from './Stack';
 
 export default {
-  title: 'Layout/Stack',
+  title: 'v4/Layout/Stack',
   component: Stack,
   decorators: [
     (Story) => (

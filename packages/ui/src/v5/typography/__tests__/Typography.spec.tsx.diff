@@ -1,58 +1,44 @@
-- v4
-+ v5
-
-  Object {
-    "Object": Object {
--     ",": "",
-+     "variant": "body2,",
-    },
-  }
+Compared values have no visual difference.
 - v4
 + v5
 
 @@ -1,144 +1,212 @@
   Object {
     ".MuiTypography-alignCenter": Object {
--     "textAlign": "center",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
 +     "margin": "0",
-+     "textAlign": "justify",
+      "textAlign": "center",
     },
     ".MuiTypography-alignJustify": Object {
--     "textAlign": "justify",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
 +     "margin": "0",
-+     "marginBottom": "0.35em",
+      "textAlign": "justify",
     },
     ".MuiTypography-alignLeft": Object {
--     "textAlign": "left",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
 +     "margin": "0",
-+     "textAlign": "right",
+      "textAlign": "left",
     },
     ".MuiTypography-alignRight": Object {
--     "textAlign": "right",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
 +     "margin": "0",
-+     "overflow": "hidden",
-+     "textOverflow": "ellipsis",
-+     "whiteSpace": "nowrap",
+      "textAlign": "right",
     },
     ".MuiTypography-body1": Object {
 -     "fontFamily": "'Inter', sans-serif",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
       "fontSize": "14px",
       "fontWeight": 600,
       "lineHeight": "20px",
@@ -60,53 +46,45 @@
     },
     ".MuiTypography-body2": Object {
 -     "fontFamily": "'Inter', sans-serif",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
       "fontSize": "14px",
       "fontWeight": 400,
       "lineHeight": "20px",
 +     "margin": "0",
     },
-    ".MuiTypography-button": Object {
+-   ".MuiTypography-button": Object {
 -     "fontFamily": "'Inter', sans-serif",
 -     "fontSize": "14px",
 -     "fontWeight": 600,
 -     "lineHeight": "20px",
-+     "fontFamily": "Inter,sans-serif",
-+     "fontSize": "32px",
-+     "fontWeight": 700,
-+     "lineHeight": "40px",
-+     "margin": "0",
-    },
+-   },
     ".MuiTypography-caption": Object {
 -     "fontFamily": "'Inter', sans-serif",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
       "fontSize": "12px",
       "fontWeight": 400,
       "lineHeight": "16px",
 +     "margin": "0",
     },
     ".MuiTypography-colorError": Object {
--     "color": "Color.Red300",
-+     "display": "block",
-+     "fontFamily": "Inter,sans-serif",
+      "color": "Color.Red300",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
 +     "margin": "0",
     },
     ".MuiTypography-colorInherit": Object {
--     "color": "inherit",
-+     "color": "#9c27b0",
-+     "fontFamily": "Inter,sans-serif",
+      "color": "inherit",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
 +     "margin": "0",
     },
     ".MuiTypography-colorPrimary": Object {
--     "color": "Color.Blue300",
-+     "color": "Color.Dark500",
-+     "fontFamily": "Inter,sans-serif",
+      "color": "Color.Blue300",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
@@ -114,78 +92,86 @@
     },
     ".MuiTypography-colorSecondary": Object {
 -     "color": "#f50057",
-+     "color": "Color.Dark200",
-+     "fontFamily": "Inter,sans-serif",
++     "color": "#9c27b0",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
 +     "margin": "0",
     },
     ".MuiTypography-colorTextPrimary": Object {
--     "color": "Color.Dark500",
-+     "color": "Color.Red300",
-+     "fontFamily": "Inter,sans-serif",
+      "color": "Color.Dark500",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
 +     "margin": "0",
     },
     ".MuiTypography-colorTextSecondary": Object {
--     "color": "Color.Dark200",
--   },
--   ".MuiTypography-displayBlock": Object {
--     "display": "block",
--   },
--   ".MuiTypography-displayInline": Object {
+      "color": "Color.Dark200",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+    },
+    ".MuiTypography-displayBlock": Object {
+      "display": "block",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+    },
+    ".MuiTypography-displayInline": Object {
       "display": "inline",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
 +     "margin": "0",
     },
     ".MuiTypography-gutterBottom": Object {
--     "marginBottom": "0.35em",
-+     "color": "inherit",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
 +     "margin": "0",
+      "marginBottom": "0.35em",
     },
     ".MuiTypography-h1": Object {
 -     "fontFamily": "'Inter', sans-serif",
--     "fontSize": "32px",
--     "fontWeight": 700,
--     "lineHeight": "40px",
--   },
--   ".MuiTypography-h2": Object {
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "32px",
+      "fontWeight": 700,
+      "lineHeight": "40px",
++     "margin": "0",
+    },
+    ".MuiTypography-h2": Object {
 -     "fontFamily": "'Inter', sans-serif",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
       "fontSize": "24px",
       "fontWeight": 500,
       "lineHeight": "28px",
 +     "margin": "0",
     },
--   ".MuiTypography-h3": Object {
+    ".MuiTypography-h3": Object {
 -     "fontFamily": "'Inter', sans-serif",
-+   ".MuiTypography-h2": Object {
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
       "fontSize": "20px",
       "fontWeight": 500,
       "lineHeight": "28px",
 +     "margin": "0",
     },
--   ".MuiTypography-h4": Object {
+    ".MuiTypography-h4": Object {
 -     "fontFamily": "'Inter', sans-serif",
-+   ".MuiTypography-h3": Object {
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
       "fontSize": "16px",
       "fontWeight": 500,
       "lineHeight": "24px",
 +     "margin": "0",
     },
--   ".MuiTypography-h5": Object {
+    ".MuiTypography-h5": Object {
 -     "fontFamily": "'Inter', sans-serif",
 -     "fontSize": "14px",
 -     "fontWeight": 600,
@@ -193,10 +179,9 @@
 -   },
 -   ".MuiTypography-h6": Object {
 -     "fontFamily": "'Inter', sans-serif",
-+   ".MuiTypography-h4": Object {
 +     "MozLetterSpacing": "0.1em",
 +     "WebkitLetterSpacing": "0.1em",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
       "fontSize": "12px",
       "fontWeight": 700,
       "letterSpacing": "0.1em",
@@ -205,82 +190,62 @@
 +     "msLetterSpacing": "0.1em",
       "textTransform": "uppercase",
     },
-+   ".MuiTypography-h5": Object {
-+     "fontFamily": "Inter,sans-serif",
++   ".MuiTypography-h6": Object {
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "1rem",
 +     "fontWeight": 400,
 +     "lineHeight": 1.75,
 +     "margin": "0",
 +   },
-+   ".MuiTypography-h6": Object {
-+     "fontFamily": "Inter,sans-serif",
-+     "fontSize": "0.875rem",
-+     "fontWeight": 500,
-+     "lineHeight": 1.57,
-+     "margin": "0",
-+   },
     ".MuiTypography-noWrap": Object {
--     "overflow": "hidden",
--     "textOverflow": "ellipsis",
--     "whiteSpace": "nowrap",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
 +     "margin": "0",
-+     "marginBottom": "16px",
+      "overflow": "hidden",
+      "textOverflow": "ellipsis",
+      "whiteSpace": "nowrap",
     },
     ".MuiTypography-overline": Object {
 -     "fontFamily": "'Inter', sans-serif",
--     "fontSize": "0.75rem",
-+     "fontFamily": "Inter,sans-serif",
-+     "fontSize": "14px",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "0.75rem",
       "fontWeight": 400,
--     "lineHeight": 2.66,
--     "textTransform": "uppercase",
-+     "lineHeight": "20px",
+      "lineHeight": 2.66,
 +     "margin": "0",
-+     "textAlign": "center",
+      "textTransform": "uppercase",
     },
     ".MuiTypography-paragraph": Object {
 -     "marginBottom": "16px",
 -   },
 -   ".MuiTypography-root": Object {
-+     "color": "Color.Blue300",
-+     "fontFamily": "Inter,sans-serif",
++     "fontFamily": "'Inter',sans-serif",
 +     "fontSize": "14px",
 +     "fontWeight": 400,
 +     "lineHeight": "20px",
       "margin": "0",
-    },
+-   },
 -   ".MuiTypography-srOnly": Object {
 -     "height": "1px",
 -     "overflow": "hidden",
 -     "position": "absolute",
 -     "width": "1px",
 -   },
-    ".MuiTypography-subtitle1": Object {
+-   ".MuiTypography-subtitle1": Object {
 -     "fontFamily": "'Inter', sans-serif",
 -     "fontSize": "1rem",
-+     "fontFamily": "Inter,sans-serif",
-+     "fontSize": "0.75rem",
-      "fontWeight": 400,
+-     "fontWeight": 400,
 -     "lineHeight": 1.75,
-+     "lineHeight": 2.66,
-+     "margin": "0",
-+     "textTransform": "uppercase",
++     "marginBottom": "16px",
     },
     ".MuiTypography-subtitle2": Object {
 -     "fontFamily": "'Inter', sans-serif",
--     "fontSize": "0.875rem",
--     "fontWeight": 500,
--     "lineHeight": 1.57,
-+     "fontFamily": "Inter,sans-serif",
-+     "fontSize": "14px",
-+     "fontWeight": 400,
-+     "lineHeight": "20px",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "0.875rem",
+      "fontWeight": 500,
+      "lineHeight": 1.57,
 +     "margin": "0",
-+     "textAlign": "left",
     },
 -   "@media (min-width: 0px) and (max-width: 599.95px)": Array [
 +   "@media (min-width:0px) and (max-width:599.95px)": Array [
@@ -289,58 +254,33 @@
           "fontSize": "16px",
           "lineHeight": "24px",
         },
-@@ -155,47 +223,127 @@
-          "lineHeight": "20px",
-        },
+@@ -151,18 +219,12 @@
       },
       Object {
-        ".MuiTypography-button": Object {
+        ".MuiTypography-caption": Object {
+          "fontSize": "14px",
+          "lineHeight": "20px",
+-       },
+        },
+-     Object {
+-       ".MuiTypography-button": Object {
 -         "fontSize": "16px",
 -         "lineHeight": "24px",
-+         "fontSize": "28px",
-+         "lineHeight": "36px",
-        },
       },
+-     },
       Object {
         ".MuiTypography-h1": Object {
--         "fontSize": "28px",
--         "lineHeight": "36px",
-+         "fontSize": "22px",
-+         "lineHeight": "26px",
+          "fontSize": "28px",
+          "lineHeight": "36px",
         },
-      },
-      Object {
-        ".MuiTypography-h2": Object {
--         "fontSize": "22px",
-+         "fontSize": "20px",
+@@ -185,17 +247,103 @@
           "lineHeight": "26px",
         },
       },
       Object {
-        ".MuiTypography-h3": Object {
--         "fontSize": "20px",
-+         "fontSize": "17px",
-          "lineHeight": "26px",
-        },
-      },
-      Object {
-        ".MuiTypography-h4": Object {
--         "fontSize": "17px",
--         "lineHeight": "26px",
+        ".MuiTypography-h5": Object {
 +         "fontSize": "14px",
 +         "lineHeight": "20px",
-+       },
-+     },
-+     Object {
-+       ".MuiTypography-subtitle2": Object {
-+         "fontSize": "16px",
-+         "lineHeight": "24px",
-+       },
-+     },
-+     Object {
-+       ".MuiTypography-overline": Object {
-+         "fontSize": "16px",
-+         "lineHeight": "24px",
 +       },
 +     },
 +     Object {
@@ -351,11 +291,14 @@
 +     },
 +     Object {
 +       ".MuiTypography-alignCenter": Object {
-+         "fontSize": "16px",
-+         "lineHeight": "24px",
-+       },
-+     },
-+     Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+      },
+      Object {
+-       ".MuiTypography-h6": Object {
+-         "fontSize": "14px",
+-         "lineHeight": "20px",
 +       ".MuiTypography-alignRight": Object {
 +         "fontSize": "16px",
 +         "lineHeight": "24px",
@@ -401,26 +344,34 @@
 +       ".MuiTypography-colorSecondary": Object {
 +         "fontSize": "16px",
 +         "lineHeight": "24px",
-        },
-      },
-      Object {
--       ".MuiTypography-h5": Object {
++       },
++     },
++     Object {
 +       ".MuiTypography-colorTextPrimary": Object {
-          "fontSize": "16px",
-          "lineHeight": "24px",
-        },
-      },
-      Object {
--       ".MuiTypography-h6": Object {
--         "fontSize": "14px",
--         "lineHeight": "20px",
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
 +       ".MuiTypography-colorTextSecondary": Object {
 +         "fontSize": "16px",
 +         "lineHeight": "24px",
         },
-      },
++     },
 +     Object {
 +       ".MuiTypography-colorError": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
+        },
++     },
++     Object {
++       ".MuiTypography-displayInline": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-displayBlock": Object {
 +         "fontSize": "16px",
 +         "lineHeight": "24px",
 +       },
