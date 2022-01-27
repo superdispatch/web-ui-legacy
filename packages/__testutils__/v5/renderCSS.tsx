@@ -1,6 +1,13 @@
 import { v5 } from '@superdispatch/ui';
 import { render } from '@testing-library/react';
-import { parse as parseCSS, stringify as stringifyCSS, Stylesheet } from 'css';
+import {
+  AtRule,
+  Comment,
+  parse as parseCSS,
+  Rule,
+  stringify as stringifyCSS,
+  Stylesheet,
+} from 'css';
 import { styleSheetSerializer } from 'jest-styled-components';
 import { identity } from 'lodash';
 import { format } from 'prettier';
@@ -73,12 +80,15 @@ function defaultClassFormatter(index: number) {
 
 export function renderCSS(ui: ReactElement, displayNames: string[]) {
   let firstUnmatchedClass: string | undefined;
+  let classNameMaxIndex = 0;
+
   const { container } = render(<v5.ThemeProvider>{ui}</v5.ThemeProvider>);
 
   styleSheetSerializer.setStyleSheetSerializerOptions({
     addStyles: true,
     classNameFormatter(index) {
       const formattedClass = displayNames[index];
+      classNameMaxIndex = Math.max(classNameMaxIndex, index);
 
       if (!formattedClass) {
         firstUnmatchedClass ||= defaultClassFormatter(index);
@@ -102,7 +112,15 @@ export function renderCSS(ui: ReactElement, displayNames: string[]) {
     const unmatchedStyle = getStyleByClass(firstUnmatchedClass, css);
 
     throw Error(
-      `renderCSS: Unmatched class for style \n\n "${unmatchedStyle}"`,
+      `renderCSS: Unmatched class "${firstUnmatchedClass}" for style \n\n "${unmatchedStyle}"`,
+    );
+  }
+
+  if (displayNames.length !== classNameMaxIndex + 1) {
+    throw RangeError(
+      `renderCSS: displayNames out of range. Expected ${
+        classNameMaxIndex + 1
+      } but got ${displayNames.length}`,
     );
   }
 
@@ -119,12 +137,28 @@ function getStyleByClass(className: string, css: string) {
     throw new Error('There are no stylesheet.');
   }
 
-  targetSheet.stylesheet.rules = targetSheet.stylesheet.rules.filter((rule) => {
-    if ('selectors' in rule) {
-      return rule.selectors?.some((selector) => selector.includes(className));
-    }
-    return false;
-  });
+  function filterRules(rules: Array<Rule | Comment | AtRule>) {
+    return rules.filter((rule) => {
+      if ('selectors' in rule) {
+        return rule.selectors?.some((selector) => {
+          return (
+            selector === `.${className}` ||
+            new RegExp(`\\.${className}\\W`).test(selector)
+          );
+        });
+      }
+      if ('rules' in rule && rule.rules) {
+        rule.rules = filterRules(rule.rules);
+
+        if (rule.rules.length > 0) {
+          return true;
+        }
+      }
+      return false;
+    });
+  }
+
+  targetSheet.stylesheet.rules = filterRules(targetSheet.stylesheet.rules);
 
   return formatAST(targetSheet);
 }
