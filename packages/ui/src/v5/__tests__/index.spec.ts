@@ -3,6 +3,7 @@ import * as api5 from '..';
 it('exposes public api', () => {
   expect(api5).toMatchInlineSnapshot(`
     Object {
+      "Button": React.forwardRef(Button),
       "Color": Object {
         "Black": "#000",
         "Black20": "rgba(0, 0, 0, 0.2)",
@@ -74,6 +75,8 @@ it('exposes public api', () => {
         "Yellow500": "#DB7500",
         "Yellow75": "#FFF1C2",
       },
+      "Inline": React.forwardRef(Inline),
+      "Stack": React.forwardRef(Stack),
       "ThemeProvider": [Function],
       "isColorProp": [Function],
     }

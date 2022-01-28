@@ -7,7 +7,24 @@ const traverse = require('@babel/traverse').default;
 const { diff } = require('jest-diff');
 const { parseAsync } = require('@babel/core');
 
-function diffString(a, b) {
+const postcss = require('postcss');
+const postcssJs = require('postcss-js');
+
+function objectifyCSS(css) {
+  const root = postcss.parse(css);
+
+  return postcssJs.objectify(root);
+}
+
+function diffSnapshots(a, b) {
+  try {
+    // try to parse the CSS first
+    a = objectifyCSS(a);
+    b = objectifyCSS(b.replace(/"/g, "'"));
+  } catch (error) {
+    // continue diffing as strings
+  }
+
   return diff(a, b, {
     expand: false,
     contextLines: -1, // Forces to use default from Jest
@@ -104,10 +121,10 @@ async function processInlineSnapshots(test) {
   for (let i = 0; i < snapshots.length; i++) {
     const snapshot = snapshots[i];
     const snapshotV4 = snapshotsV4[i];
-    const diffContent = diffString(snapshot, snapshotV4);
+    const diffContent = diffSnapshots(snapshotV4, snapshot);
 
     if (diffContent.length) {
-      diffs.push(diffString(snapshotV4, snapshot));
+      diffs.push(diffContent);
     }
   }
 
@@ -148,7 +165,7 @@ async function processFileSnapshots(test) {
     const diffPath = getDiffPath(snapshotPath);
     await fs.writeFile(
       diffPath,
-      diffString(snapshotV4.toString(), snapshot.toString()),
+      diffSnapshots(snapshotV4.toString(), snapshot.toString()),
     );
   }
 }

@@ -8,11 +8,13 @@ import { createBreakpoints } from '@mui/system';
 import { useConstant } from '@superdispatch/hooks';
 import { Rule, StyleSheet } from 'jss';
 import { ReactElement, ReactNode } from 'react';
+import { overrideButton } from '../button/ButtonOverrides';
 import {
   createTypographyOptions,
   overrideTypography,
 } from '../typography/TypographyOverrides';
 import { Color } from './Color';
+import { overrideCssBaseline } from './CssBaselineOverrides';
 import { SuperDispatchTheme } from './SuperDispatchTheme';
 
 function createSuperDispatchTheme(): SuperDispatchTheme {
@@ -50,7 +52,9 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
     components: {},
   }) as SuperDispatchTheme;
 
+  overrideButton(theme);
   overrideTypography(theme);
+  overrideCssBaseline(theme);
 
   return theme;
 }

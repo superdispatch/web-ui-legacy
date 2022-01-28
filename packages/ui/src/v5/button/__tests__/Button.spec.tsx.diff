@@ -1,0 +1,2264 @@
+Compared values have no visual difference.
+- v4
++ v5
+
+@@ -1,47 +1,910 @@
+  Object {
+-   ".MuiButton-colorInherit": Object {
+-     "borderColor": "currentColor",
+-     "color": "inherit",
++   ".Mui-outlined": Object {
++     "WebkitTransition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.White",
++     "border": Array [
++       "1px solid rgba(0,117,255,0.5)",
++       "none",
++       "0",
++     ],
++     "borderRadius": "4px",
++     "boxShadow": "inset 0 0 0 1px Color.Silver500,0 0 0 2px Color.Transparent",
++     "color": Array [
++       "Color.Blue300",
++       "Color.Dark500",
++     ],
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 600,
++     "lineHeight": "20px",
++     "minWidth": Array [
++       "64px",
++       "48px",
++     ],
++     "padding": Array [
++       "5px 15px",
++       "10px 24px",
++       "initial",
++     ],
++     "transition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".Mui-outlined > .MuiSvgIcon-root": Object {
++     "fontSize": "24px",
++   },
++   ".Mui-outlined.Mui-disabled": Object {
++     "backgroundColor": "Color.White",
++     "border": "none",
++     "boxShadow": "inset 0 0 0 1px Color.Silver400,0 0 0 2px Color.Transparent",
++     "color": "Color.Silver500",
++   },
++   ".Mui-outlined.Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Dark200",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge": Object {
++     "WebkitTransition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.White",
++     "border": Array [
++       "1px solid rgba(0,117,255,0.5)",
++       "none",
++       "0",
++     ],
++     "borderRadius": "4px",
++     "boxShadow": "inset 0 0 0 1px Color.Silver500,0 0 0 2px Color.Transparent",
++     "color": Array [
++       "Color.Blue300",
++       "Color.Dark500",
++     ],
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "0.9375rem",
++       "18px",
++       "18px",
++     ],
++     "fontWeight": Array [
++       600,
++       600,
++       600,
++     ],
++     "lineHeight": Array [
++       "20px",
++       "28px",
++       "28px",
++     ],
++     "minWidth": Array [
++       "64px",
++       "48px",
++     ],
++     "padding": Array [
++       "7px 21px",
++       "10px 24px",
++       "initial",
++       "14px 64px",
++       "14px 64px",
++     ],
++     "transition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".Mui-outlined.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++     "fontSize": "24px",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge.Mui-disabled": Object {
++     "backgroundColor": "Color.White",
++     "border": "none",
++     "boxShadow": "inset 0 0 0 1px Color.Silver400,0 0 0 2px Color.Transparent",
++     "color": "Color.Silver500",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge.Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Dark200",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Blue100",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge:hover": Object {
++     "WebkitTextDecoration": "none",
++     "backgroundColor": "Color.Blue50",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent",
++     "color": "Color.Blue300",
++     "textDecoration": "none",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge:hover.Mui-disabled": Object {
++     "backgroundColor": "initial",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[aria-expanded='true']": Object {
++     "backgroundColor": "Color.Blue50",
++     "boxShadow": "inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent",
++     "color": "Color.Blue300",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='error']": Object {
++     "backgroundColor": "Color.White",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent",
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='error'].Mui-disabled": Object {
++     "backgroundColor": "Color.White",
++     "boxShadow": "inset 0 0 0 1px Color.Red100,0 0 0 2px Color.Transparent",
++     "color": "Color.Red100",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='error'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='error']:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Red100",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='error']:hover": Object {
++     "backgroundColor": "Color.Red50",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent",
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='error'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Red50",
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent",
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='success']": Object {
++     "backgroundColor": "Color.White",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent",
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='success'].Mui-disabled": Object {
++     "backgroundColor": "Color.White",
++     "boxShadow": "inset 0 0 0 1px Color.Green100,0 0 0 2px Color.Transparent",
++     "color": "Color.Green100",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='success'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='success']:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Green100",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='success']:hover": Object {
++     "backgroundColor": "Color.Green50",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent",
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='success'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Green50",
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent",
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='white']": Object {
++     "backgroundColor": "Color.Transparent",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='white'].Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "inset 0 0 0 1px Color.White40,0 0 0 2px Color.Transparent",
++     "color": "Color.White50",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='white'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White50",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='white']:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.White40",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='white']:hover": Object {
++     "backgroundColor": "Color.White10",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".Mui-outlined.MuiButton-sizeLarge[data-color='white'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.White10",
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall": Object {
++     "WebkitTransition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.White",
++     "border": Array [
++       "1px solid rgba(0,117,255,0.5)",
++       "none",
++       "0",
++     ],
++     "borderRadius": "4px",
++     "boxShadow": "inset 0 0 0 1px Color.Silver500,0 0 0 2px Color.Transparent",
++     "color": Array [
++       "Color.Blue300",
++       "Color.Dark500",
++     ],
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "0.8125rem",
++       "14px",
++       "14px",
++     ],
++     "fontWeight": Array [
++       600,
++       600,
++       600,
++     ],
++     "lineHeight": Array [
++       "20px",
++       "20px",
++       "20px",
++     ],
++     "minWidth": Array [
++       "64px",
++       "48px",
++     ],
++     "padding": Array [
++       "3px 9px",
++       "10px 24px",
++       "initial",
++       "4px 24px",
++       "4px 24px",
++     ],
++     "transition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".Mui-outlined.MuiButton-sizeSmall > .MuiSvgIcon-root": Object {
++     "fontSize": "24px",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall.Mui-disabled": Object {
++     "backgroundColor": "Color.White",
++     "border": "none",
++     "boxShadow": "inset 0 0 0 1px Color.Silver400,0 0 0 2px Color.Transparent",
++     "color": "Color.Silver500",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall.Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Dark200",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Blue100",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall:hover": Object {
++     "WebkitTextDecoration": "none",
++     "backgroundColor": "Color.Blue50",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent",
++     "color": "Color.Blue300",
++     "textDecoration": "none",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall:hover.Mui-disabled": Object {
++     "backgroundColor": "initial",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[aria-expanded='true']": Object {
++     "backgroundColor": "Color.Blue50",
++     "boxShadow": "inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent",
++     "color": "Color.Blue300",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='error']": Object {
++     "backgroundColor": "Color.White",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent",
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='error'].Mui-disabled": Object {
++     "backgroundColor": "Color.White",
++     "boxShadow": "inset 0 0 0 1px Color.Red100,0 0 0 2px Color.Transparent",
++     "color": "Color.Red100",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='error'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='error']:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Red100",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='error']:hover": Object {
++     "backgroundColor": "Color.Red50",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent",
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='error'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Red50",
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent",
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='success']": Object {
++     "backgroundColor": "Color.White",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent",
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='success'].Mui-disabled": Object {
++     "backgroundColor": "Color.White",
++     "boxShadow": "inset 0 0 0 1px Color.Green100,0 0 0 2px Color.Transparent",
++     "color": "Color.Green100",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='success'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='success']:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Green100",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='success']:hover": Object {
++     "backgroundColor": "Color.Green50",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent",
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='success'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Green50",
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent",
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='white']": Object {
++     "backgroundColor": "Color.Transparent",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='white'].Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "inset 0 0 0 1px Color.White40,0 0 0 2px Color.Transparent",
++     "color": "Color.White50",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='white'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White50",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='white']:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.White40",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='white']:hover": Object {
++     "backgroundColor": "Color.White10",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".Mui-outlined.MuiButton-sizeSmall[data-color='white'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.White10",
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".Mui-outlined:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Blue100",
++   },
++   ".Mui-outlined:hover": Object {
++     "WebkitTextDecoration": "none",
++     "backgroundColor": "Color.Blue50",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent",
++     "color": "Color.Blue300",
++     "textDecoration": "none",
++   },
++   ".Mui-outlined:hover.Mui-disabled": Object {
++     "backgroundColor": "initial",
++   },
++   ".Mui-outlined[aria-expanded='true']": Object {
++     "backgroundColor": "Color.Blue50",
++     "boxShadow": "inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent",
++     "color": "Color.Blue300",
++   },
++   ".Mui-outlined[data-color='error']": Object {
++     "backgroundColor": "Color.White",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent",
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined[data-color='error'].Mui-disabled": Object {
++     "backgroundColor": "Color.White",
++     "boxShadow": "inset 0 0 0 1px Color.Red100,0 0 0 2px Color.Transparent",
++     "color": "Color.Red100",
++   },
++   ".Mui-outlined[data-color='error'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined[data-color='error']:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Red100",
++   },
++   ".Mui-outlined[data-color='error']:hover": Object {
++     "backgroundColor": "Color.Red50",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent",
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined[data-color='error'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Red50",
++     "boxShadow": "inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent",
++     "color": "Color.Red300",
++   },
++   ".Mui-outlined[data-color='success']": Object {
++     "backgroundColor": "Color.White",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent",
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined[data-color='success'].Mui-disabled": Object {
++     "backgroundColor": "Color.White",
++     "boxShadow": "inset 0 0 0 1px Color.Green100,0 0 0 2px Color.Transparent",
++     "color": "Color.Green100",
++   },
++   ".Mui-outlined[data-color='success'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined[data-color='success']:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Green100",
++   },
++   ".Mui-outlined[data-color='success']:hover": Object {
++     "backgroundColor": "Color.Green50",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent",
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined[data-color='success'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Green50",
++     "boxShadow": "inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent",
++     "color": "Color.Green300",
++   },
++   ".Mui-outlined[data-color='white']": Object {
++     "backgroundColor": "Color.Transparent",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".Mui-outlined[data-color='white'].Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "inset 0 0 0 1px Color.White40,0 0 0 2px Color.Transparent",
++     "color": "Color.White50",
++   },
++   ".Mui-outlined[data-color='white'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White50",
++   },
++   ".Mui-outlined[data-color='white']:focus": Object {
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.White40",
++   },
++   ".Mui-outlined[data-color='white']:hover": Object {
++     "backgroundColor": "Color.White10",
++     "border": "0",
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".Mui-outlined[data-color='white'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.White10",
++     "boxShadow": "inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-EndIcon": Object {
++     "display": "inherit",
++     "marginLeft": "8px",
++     "marginRight": "-4px",
++   },
++   ".MuiButton-EndIcon > *:nth-of-type(1)": Object {
++     "fontSize": "20px",
++   },
++   ".MuiButton-EndIcon.MuiButton-sizeSmall": Object {
++     "display": "inherit",
++     "marginLeft": "8px",
++     "marginRight": "-2px",
++   },
++   ".MuiButton-EndIcon.MuiButton-sizeSmall > *:nth-of-type(1)": Object {
++     "fontSize": "18px",
++   },
++   ".MuiButton-StartIcon": Object {
++     "display": "inherit",
++     "marginLeft": "-4px",
++     "marginRight": "8px",
++   },
++   ".MuiButton-StartIcon > *:nth-of-type(1)": Object {
++     "fontSize": "20px",
++   },
++   ".MuiButton-StartIcon.MuiButton-sizeSmall": Object {
++     "display": "inherit",
++     "marginLeft": "-2px",
++     "marginRight": "8px",
++   },
++   ".MuiButton-StartIcon.MuiButton-sizeSmall > *:nth-of-type(1)": Object {
++     "fontSize": "18px",
+    },
+    ".MuiButton-contained": Object {
+-     "color": "rgba(0, 0, 0, 0.87)",
++     "WebkitTransition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": Array [
++       "Color.Blue300",
++       "initial",
++       "Color.Blue300",
++     ],
++     "borderRadius": "4px",
++     "boxShadow": Array [
++       "0px 3px 1px -2px Color.Black20,0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
++       "none",
++       "0 0 0 0px Color.Transparent",
++     ],
++     "color": Array [
++       "Color.White",
++       "Color.White",
++     ],
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "0.9375rem",
++       "18px",
++       "18px",
++     ],
++     "fontWeight": Array [
++       600,
++       600,
++       600,
++     ],
++     "lineHeight": Array [
++       "20px",
++       "28px",
++       "28px",
++     ],
++     "minWidth": Array [
++       "64px",
++       "48px",
++     ],
++     "padding": Array [
++       "8px 22px",
++       "10px 24px",
++       "14px 64px",
++       "14px 64px",
++     ],
++     "transition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
+    },
+-   ".MuiButton-containedPrimary": Object {
+-     "backgroundColor": "Color.Blue300",
++   ".MuiButton-contained > .MuiSvgIcon-root": Object {
++     "fontSize": "24px",
++   },
++   ".MuiButton-contained.Mui-disabled": Object {
++     "backgroundColor": "Color.Blue100",
+      "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
+      "color": "Color.White",
+    },
+-   ".MuiButton-containedPrimary.Mui-disabled": Object {
++   ".MuiButton-contained.Mui-focusVisible": Object {
++     "boxShadow": "none",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge": Object {
++     "WebkitTransition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": Array [
++       "Color.Blue300",
++       "initial",
++       "Color.Blue300",
++     ],
++     "borderRadius": "4px",
++     "boxShadow": Array [
++       "0px 3px 1px -2px Color.Black20,0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
++       "none",
++       "0 0 0 0px Color.Transparent",
++     ],
++     "color": Array [
++       "Color.White",
++       "Color.White",
++     ],
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 600,
++     "lineHeight": "20px",
++     "minWidth": Array [
++       "64px",
++       "48px",
++     ],
++     "padding": Array [
++       "6px 16px",
++       "10px 24px",
++     ],
++     "transition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++     "fontSize": "24px",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge.Mui-disabled": Object {
+      "backgroundColor": "Color.Blue100",
+      "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.White",
+    },
+-   ".MuiButton-containedPrimary:focus": Object {
++   ".MuiButton-contained.MuiButton-sizeLarge.Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge.Mui-focusVisible": Object {
++     "boxShadow": "none",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge:active": Object {
++     "boxShadow": "none",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge:focus": Object {
+      "boxShadow": "0 0 0 3px Color.Blue100",
+    },
+-   ".MuiButton-containedPrimary:hover": Object {
++   ".MuiButton-contained.MuiButton-sizeLarge:hover": Object {
++     "WebkitTextDecoration": "none",
+      "backgroundColor": "Color.Blue500",
++     "boxShadow": "none",
++     "textDecoration": "none",
+    },
+-   ".MuiButton-containedPrimary[aria-expanded='true']": Object {
++   ".MuiButton-contained.MuiButton-sizeLarge:hover.Mui-disabled": Object {
++     "backgroundColor": "none",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[aria-expanded='true']": Object {
+      "backgroundColor": "Color.Blue500",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='error']": Object {
++     "backgroundColor": "Color.Red300",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='error'].Mui-disabled": Object {
++     "backgroundColor": "Color.Red100",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='error'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='error']:focus": Object {
++     "boxShadow": "0 0 0 3px Color.Red100",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='error']:hover": Object {
++     "backgroundColor": "Color.Red500",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='error'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Red500",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='success']": Object {
++     "backgroundColor": "Color.Green300",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='success'].Mui-disabled": Object {
++     "backgroundColor": "Color.Green100",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='success'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='success']:focus": Object {
++     "boxShadow": "0 0 0 3px Color.Green100",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='success']:hover": Object {
++     "backgroundColor": "Color.Green500",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='success'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Green500",
+    },
+-   ".MuiButton-containedSecondary": Object {
+-     "backgroundColor": "#f50057",
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='white']": Object {
++     "backgroundColor": "Color.White20",
++     "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='white'].Mui-disabled": Object {
++     "backgroundColor": "Color.White08",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White50",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='white'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White50",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='white']:focus": Object {
++     "boxShadow": "0 0 0 3px Color.White40",
+    },
+-   ".MuiButton-containedSecondary:hover": Object {
+-     "backgroundColor": "#c51162",
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='white']:hover": Object {
++     "backgroundColor": "Color.White40",
++   },
++   ".MuiButton-contained.MuiButton-sizeLarge[data-color='white'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.White40",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall": Object {
++     "WebkitTransition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": Array [
++       "Color.Blue300",
++       "initial",
++       "Color.Blue300",
++     ],
++     "borderRadius": "4px",
++     "boxShadow": Array [
++       "0px 3px 1px -2px Color.Black20,0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
++       "none",
++       "0 0 0 0px Color.Transparent",
++     ],
++     "color": Array [
++       "Color.White",
++       "Color.White",
++     ],
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "0.8125rem",
++       "14px",
++       "14px",
++     ],
++     "fontWeight": Array [
++       600,
++       600,
++       600,
++     ],
++     "lineHeight": Array [
++       "20px",
++       "20px",
++       "20px",
++     ],
++     "minWidth": Array [
++       "64px",
++       "48px",
++     ],
++     "padding": Array [
++       "4px 10px",
++       "10px 24px",
++       "4px 24px",
++       "4px 24px",
++     ],
++     "transition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall > .MuiSvgIcon-root": Object {
++     "fontSize": "24px",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall.Mui-disabled": Object {
++     "backgroundColor": "Color.Blue100",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall.Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall.Mui-focusVisible": Object {
++     "boxShadow": "none",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall:active": Object {
++     "boxShadow": "none",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall:focus": Object {
++     "boxShadow": "0 0 0 3px Color.Blue100",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall:hover": Object {
++     "WebkitTextDecoration": "none",
++     "backgroundColor": "Color.Blue500",
++     "boxShadow": "none",
++     "textDecoration": "none",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall:hover.Mui-disabled": Object {
++     "backgroundColor": "none",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[aria-expanded='true']": Object {
++     "backgroundColor": "Color.Blue500",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='error']": Object {
++     "backgroundColor": "Color.Red300",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='error'].Mui-disabled": Object {
++     "backgroundColor": "Color.Red100",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='error'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='error']:focus": Object {
++     "boxShadow": "0 0 0 3px Color.Red100",
+    },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='error']:hover": Object {
++     "backgroundColor": "Color.Red500",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='error'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Red500",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='success']": Object {
++     "backgroundColor": "Color.Green300",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='success'].Mui-disabled": Object {
++     "backgroundColor": "Color.Green100",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='success'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='success']:focus": Object {
++     "boxShadow": "0 0 0 3px Color.Green100",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='success']:hover": Object {
++     "backgroundColor": "Color.Green500",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='success'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Green500",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='white']": Object {
++     "backgroundColor": "Color.White20",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='white'].Mui-disabled": Object {
++     "backgroundColor": "Color.White08",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White50",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='white'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White50",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='white']:focus": Object {
++     "boxShadow": "0 0 0 3px Color.White40",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='white']:hover": Object {
++     "backgroundColor": "Color.White40",
++   },
++   ".MuiButton-contained.MuiButton-sizeSmall[data-color='white'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.White40",
++   },
++   ".MuiButton-contained:active": Object {
++     "boxShadow": "none",
++   },
++   ".MuiButton-contained:focus": Object {
++     "boxShadow": "0 0 0 3px Color.Blue100",
++   },
++   ".MuiButton-contained:hover": Object {
++     "WebkitTextDecoration": "none",
++     "backgroundColor": "Color.Blue500",
++     "boxShadow": "none",
++     "textDecoration": "none",
++   },
++   ".MuiButton-contained:hover.Mui-disabled": Object {
++     "backgroundColor": "none",
++   },
++   ".MuiButton-contained[aria-expanded='true']": Object {
++     "backgroundColor": "Color.Blue500",
++   },
+    ".MuiButton-contained[data-color='error']": Object {
+      "backgroundColor": "Color.Red300",
+      "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.White",
+    },
+    ".MuiButton-contained[data-color='error'].Mui-disabled": Object {
+      "backgroundColor": "Color.Red100",
+      "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-contained[data-color='error'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
+      "color": "Color.White",
+    },
+    ".MuiButton-contained[data-color='error']:focus": Object {
+      "boxShadow": "0 0 0 3px Color.Red100",
+    },
+@@ -59,10 +922,13 @@
+    ".MuiButton-contained[data-color='success'].Mui-disabled": Object {
+      "backgroundColor": "Color.Green100",
+      "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.White",
+    },
++   ".MuiButton-contained[data-color='success'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White",
++   },
+    ".MuiButton-contained[data-color='success']:focus": Object {
+      "boxShadow": "0 0 0 3px Color.Green100",
+    },
+    ".MuiButton-contained[data-color='success']:hover": Object {
+      "backgroundColor": "Color.Green500",
+@@ -78,258 +944,488 @@
+    ".MuiButton-contained[data-color='white'].Mui-disabled": Object {
+      "backgroundColor": "Color.White08",
+      "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.White50",
+    },
++   ".MuiButton-contained[data-color='white'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White50",
++   },
+    ".MuiButton-contained[data-color='white']:focus": Object {
+      "boxShadow": "0 0 0 3px Color.White40",
+    },
+    ".MuiButton-contained[data-color='white']:hover": Object {
+      "backgroundColor": "Color.White40",
+    },
+    ".MuiButton-contained[data-color='white'][aria-expanded='true']": Object {
+      "backgroundColor": "Color.White40",
+    },
+-   ".MuiButton-disableElevation": Object {
+-     "boxShadow": "none",
++   ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++     "fontSize": "28px",
+    },
+-   ".MuiButton-disableElevation.Mui-disabled": Object {
+-     "boxShadow": "none",
++   ".MuiButton-text": Object {
++     "WebkitTransition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
++     "borderColor": "currentColor",
++     "borderRadius": "4px",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Blue300",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 600,
++     "lineHeight": "20px",
++     "minWidth": Array [
++       "64px",
++       "48px",
++     ],
++     "padding": Array [
++       "6px 8px",
++       "10px 24px",
++       "initial",
++     ],
++     "transition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
+    },
+-   ".MuiButton-disableElevation.Mui-focusVisible": Object {
+-     "boxShadow": "none",
++   ".MuiButton-text > .MuiSvgIcon-root": Object {
++     "fontSize": "24px",
+    },
+-   ".MuiButton-disableElevation:active": Object {
+-     "boxShadow": "none",
++   ".MuiButton-text.Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Blue100",
+    },
+-   ".MuiButton-disableElevation:hover": Object {
++   ".MuiButton-text.Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Blue200",
++   },
++   ".MuiButton-text.Mui-focusVisible": Object {
+      "boxShadow": "none",
+    },
+-   ".MuiButton-endIcon": Object {
+-     "display": "inherit",
+-     "marginLeft": "8px",
+-     "marginRight": "-4px",
++   ".MuiButton-text.MuiButton-sizeLarge": Object {
++     "WebkitTransition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
++     "borderRadius": "4px",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Blue300",
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "0.9375rem",
++       "18px",
++       "18px",
++     ],
++     "fontWeight": Array [
++       600,
++       600,
++       600,
++     ],
++     "lineHeight": Array [
++       "20px",
++       "28px",
++       "28px",
++     ],
++     "minWidth": Array [
++       "64px",
++       "48px",
++     ],
++     "padding": Array [
++       "8px 11px",
++       "10px 24px",
++       "initial",
++       "14px 64px",
++       "14px 64px",
++     ],
++     "transition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
+    },
+-   ".MuiButton-endIcon.MuiButton-iconSizeSmall": Object {
+-     "marginRight": "-2px",
++   ".MuiButton-text.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++     "fontSize": "24px",
+    },
+-   ".MuiButton-fullWidth": Object {
+-     "width": "100%",
++   ".MuiButton-text.MuiButton-sizeLarge.Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Blue100",
+    },
+-   ".MuiButton-iconSizeLarge > *:first-child": Object {
+-     "fontSize": "22px",
++   ".MuiButton-text.MuiButton-sizeLarge.Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Blue200",
+    },
+-   ".MuiButton-iconSizeMedium > *:first-child": Object {
+-     "fontSize": "20px",
++   ".MuiButton-text.MuiButton-sizeLarge:focus": Object {
++     "backgroundColor": "Color.Blue50",
++     "boxShadow": "0 0 0 2px Color.Blue100",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge:hover": Object {
++     "WebkitTextDecoration": "none",
++     "backgroundColor": "Color.Blue50",
++     "textDecoration": "none",
+    },
+-   ".MuiButton-iconSizeSmall > *:first-child": Object {
+-     "fontSize": "18px",
++   ".MuiButton-text.MuiButton-sizeLarge:hover.Mui-disabled": Object {
++     "backgroundColor": "initial",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[aria-expanded='true']": Object {
++     "backgroundColor": "Color.Blue50",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='error']": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Red300",
+    },
+-   ".MuiButton-label": Object {
+-     "alignItems": "inherit",
+-     "display": "inherit",
+-     "justifyContent": "inherit",
+-     "width": "100%",
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='error'].Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Red100",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='error'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Red200",
+    },
+-   ".MuiButton-label > .MuiSvgIcon-root": Object {
+-     "fontSize": "24px",
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='error']:focus": Object {
++     "backgroundColor": "Color.Red50",
++     "boxShadow": "0 0 0 2px Color.Red100",
+    },
+-   ".MuiButton-outlinedPrimary": Object {
+-     "backgroundColor": "Color.White",
+-     "boxShadow": "inset 0 0 0 1px Color.Silver500, 0 0 0 2px Color.Transparent",
+-     "color": "Color.Dark500",
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='error']:hover": Object {
++     "backgroundColor": "Color.Red50",
+    },
+-   ".MuiButton-outlinedPrimary.Mui-disabled": Object {
+-     "backgroundColor": "Color.White",
+-     "boxShadow": "inset 0 0 0 1px Color.Silver400, 0 0 0 2px Color.Transparent",
+-     "color": "Color.Silver500",
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='error'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Red50",
+    },
+-   ".MuiButton-outlinedPrimary.Mui-disabled[aria-busy='true']": Object {
+-     "color": "Color.Dark200",
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='success']": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Green300",
+    },
+-   ".MuiButton-outlinedPrimary:focus": Object {
+-     "boxShadow": "inset 0 0 0 1px Color.Blue300, 0 0 0 2px Color.Blue100",
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='success'].Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Green100",
+    },
+-   ".MuiButton-outlinedPrimary:hover": Object {
+-     "backgroundColor": "Color.Blue50",
+-     "boxShadow": "inset 0 0 0 1px Color.Blue300, 0 0 0 2px Color.Transparent",
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='success'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Green200",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='success']:focus": Object {
++     "backgroundColor": "Color.Green50",
++     "boxShadow": "0 0 0 2px Color.Green100",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='success']:hover": Object {
++     "backgroundColor": "Color.Green50",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='success'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Green50",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='white']": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='white'].Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White50",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='white'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White50",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='white']:focus": Object {
++     "backgroundColor": "Color.White10",
++     "boxShadow": "0 0 0 2px Color.White50",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='white']:hover": Object {
++     "backgroundColor": "Color.White10",
++   },
++   ".MuiButton-text.MuiButton-sizeLarge[data-color='white'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.White10",
++   },
++   ".MuiButton-text.MuiButton-sizeSmall": Object {
++     "WebkitTransition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
++     "borderRadius": "4px",
++     "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.Blue300",
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "0.8125rem",
++       "14px",
++       "14px",
++     ],
++     "fontWeight": Array [
++       600,
++       600,
++       600,
++     ],
++     "lineHeight": Array [
++       "20px",
++       "20px",
++       "20px",
++     ],
++     "minWidth": Array [
++       "64px",
++       "48px",
++     ],
++     "padding": Array [
++       "4px 5px",
++       "10px 24px",
++       "initial",
++       "4px 24px",
++       "4px 24px",
++     ],
++     "transition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
+    },
+-   ".MuiButton-outlinedPrimary[aria-expanded='true']": Object {
++   ".MuiButton-text.MuiButton-sizeSmall > .MuiSvgIcon-root": Object {
++     "fontSize": "24px",
++   },
++   ".MuiButton-text.MuiButton-sizeSmall.Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Blue100",
++   },
++   ".MuiButton-text.MuiButton-sizeSmall.Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Blue200",
++   },
++   ".MuiButton-text.MuiButton-sizeSmall:focus": Object {
+      "backgroundColor": "Color.Blue50",
+-     "boxShadow": "inset 0 0 0 1px Color.Blue300, 0 0 0 2px Color.Transparent",
+-     "color": "Color.Blue300",
++     "boxShadow": "0 0 0 2px Color.Blue100",
+    },
+-   ".MuiButton-outlinedSecondary": Object {
+-     "border": "1px solid rgba(245, 0, 87, 0.5)",
+-     "color": "#f50057",
++   ".MuiButton-text.MuiButton-sizeSmall:hover": Object {
++     "WebkitTextDecoration": "none",
++     "backgroundColor": "Color.Blue50",
++     "textDecoration": "none",
+    },
+-   ".MuiButton-outlinedSecondary.Mui-disabled": Object {
+-     "border": "1px solid Color.Silver400",
++   ".MuiButton-text.MuiButton-sizeSmall:hover.Mui-disabled": Object {
++     "backgroundColor": "initial",
+    },
+-   ".MuiButton-outlinedSecondary:hover": Object {
+-     "backgroundColor": "rgba(245, 0, 87, 0.04)",
+-     "border": "1px solid #f50057",
++   ".MuiButton-text.MuiButton-sizeSmall[aria-expanded='true']": Object {
++     "backgroundColor": "Color.Blue50",
+    },
+-   ".MuiButton-outlined[data-color='error']": Object {
+-     "backgroundColor": "Color.White",
+-     "boxShadow": "inset 0 0 0 1px Color.Red300, 0 0 0 2px Color.Transparent",
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='error']": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.Red300",
+    },
+-   ".MuiButton-outlined[data-color='error'].Mui-disabled": Object {
+-     "backgroundColor": "Color.White",
+-     "boxShadow": "inset 0 0 0 1px Color.Red100, 0 0 0 2px Color.Transparent",
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='error'].Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.Red100",
+    },
+-   ".MuiButton-outlined[data-color='error'].Mui-disabled[aria-busy='true']": Object {
+-     "color": "Color.Red300",
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='error'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Red200",
+    },
+-   ".MuiButton-outlined[data-color='error']:focus": Object {
+-     "boxShadow": "inset 0 0 0 1px Color.Red300, 0 0 0 2px Color.Red100",
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='error']:focus": Object {
++     "backgroundColor": "Color.Red50",
++     "boxShadow": "0 0 0 2px Color.Red100",
+    },
+-   ".MuiButton-outlined[data-color='error']:hover": Object {
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='error']:hover": Object {
+      "backgroundColor": "Color.Red50",
+-     "boxShadow": "inset 0 0 0 1px Color.Red300, 0 0 0 2px Color.Transparent",
+-     "color": "Color.Red300",
+    },
+-   ".MuiButton-outlined[data-color='error'][aria-expanded='true']": Object {
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='error'][aria-expanded='true']": Object {
+      "backgroundColor": "Color.Red50",
+-     "boxShadow": "inset 0 0 0 1px Color.Red300, 0 0 0 2px Color.Transparent",
+-     "color": "Color.Red300",
+    },
+-   ".MuiButton-outlined[data-color='success']": Object {
+-     "backgroundColor": "Color.White",
+-     "boxShadow": "inset 0 0 0 1px Color.Green300, 0 0 0 2px Color.Transparent",
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='success']": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.Green300",
+    },
+-   ".MuiButton-outlined[data-color='success'].Mui-disabled": Object {
+-     "backgroundColor": "Color.White",
+-     "boxShadow": "inset 0 0 0 1px Color.Green100, 0 0 0 2px Color.Transparent",
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='success'].Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.Green100",
+    },
+-   ".MuiButton-outlined[data-color='success'].Mui-disabled[aria-busy='true']": Object {
+-     "color": "Color.Green300",
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='success'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Green200",
+    },
+-   ".MuiButton-outlined[data-color='success']:focus": Object {
+-     "boxShadow": "inset 0 0 0 1px Color.Green300, 0 0 0 2px Color.Green100",
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='success']:focus": Object {
++     "backgroundColor": "Color.Green50",
++     "boxShadow": "0 0 0 2px Color.Green100",
+    },
+-   ".MuiButton-outlined[data-color='success']:hover": Object {
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='success']:hover": Object {
+      "backgroundColor": "Color.Green50",
+-     "boxShadow": "inset 0 0 0 1px Color.Green300, 0 0 0 2px Color.Transparent",
+-     "color": "Color.Green300",
+    },
+-   ".MuiButton-outlined[data-color='success'][aria-expanded='true']": Object {
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='success'][aria-expanded='true']": Object {
+      "backgroundColor": "Color.Green50",
+-     "boxShadow": "inset 0 0 0 1px Color.Green300, 0 0 0 2px Color.Transparent",
+-     "color": "Color.Green300",
+    },
+-   ".MuiButton-outlined[data-color='white']": Object {
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='white']": Object {
+      "backgroundColor": "Color.Transparent",
+-     "boxShadow": "inset 0 0 0 1px Color.White50, 0 0 0 2px Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.White",
+    },
+-   ".MuiButton-outlined[data-color='white'].Mui-disabled": Object {
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='white'].Mui-disabled": Object {
+      "backgroundColor": "Color.Transparent",
+-     "boxShadow": "inset 0 0 0 1px Color.White40, 0 0 0 2px Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.White50",
+    },
+-   ".MuiButton-outlined[data-color='white'].Mui-disabled[aria-busy='true']": Object {
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='white'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
+      "color": "Color.White50",
+    },
+-   ".MuiButton-outlined[data-color='white']:focus": Object {
+-     "boxShadow": "inset 0 0 0 1px Color.White50, 0 0 0 2px Color.White40",
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='white']:focus": Object {
++     "backgroundColor": "Color.White10",
++     "boxShadow": "0 0 0 2px Color.White50",
+    },
+-   ".MuiButton-outlined[data-color='white']:hover": Object {
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='white']:hover": Object {
+      "backgroundColor": "Color.White10",
+-     "boxShadow": "inset 0 0 0 1px Color.White50, 0 0 0 2px Color.Transparent",
+-     "color": "Color.White",
+    },
+-   ".MuiButton-outlined[data-color='white'][aria-expanded='true']": Object {
++   ".MuiButton-text.MuiButton-sizeSmall[data-color='white'][aria-expanded='true']": Object {
+      "backgroundColor": "Color.White10",
+-     "boxShadow": "inset 0 0 0 1px Color.White50, 0 0 0 2px Color.Transparent",
+-     "color": "Color.White",
+    },
+-   ".MuiButton-root": Object {
++   ".MuiButton-text.MuiButton-textPrimary": Object {
++     "WebkitTransition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
+      "borderRadius": "4px",
+-     "boxSizing": "border-box",
+-     "fontFamily": "'Inter', sans-serif",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Blue300",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "14px",
+      "fontWeight": 600,
+      "lineHeight": "20px",
+-     "minWidth": "48px",
+-     "padding": "10px 24px",
+-     "transition": "color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+-         border 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+-         box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+-         background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "minWidth": Array [
++       "64px",
++       "48px",
++     ],
++     "padding": Array [
++       "6px 8px",
++       "10px 24px",
++       "initial",
++     ],
++     "transition": Array [
++       "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "width": "100%",
+    },
+-   ".MuiButton-root:hover": Object {
++   ".MuiButton-text.MuiButton-textPrimary > .MuiSvgIcon-root": Object {
++     "fontSize": "24px",
++   },
++   ".MuiButton-text.MuiButton-textPrimary.Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Blue100",
++   },
++   ".MuiButton-text.MuiButton-textPrimary.Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Blue200",
++   },
++   ".MuiButton-text.MuiButton-textPrimary:focus": Object {
++     "backgroundColor": "Color.Blue50",
++     "boxShadow": "0 0 0 2px Color.Blue100",
++   },
++   ".MuiButton-text.MuiButton-textPrimary:hover": Object {
++     "WebkitTextDecoration": "none",
++     "backgroundColor": "Color.Blue50",
+      "textDecoration": "none",
+    },
+-   ".MuiButton-root[aria-busy='true'] .MuiButton-label": Object {
+-     "visibility": "hidden",
++   ".MuiButton-text.MuiButton-textPrimary:hover.Mui-disabled": Object {
++     "backgroundColor": "initial",
++   },
++   ".MuiButton-text.MuiButton-textPrimary[aria-expanded='true']": Object {
++     "backgroundColor": "Color.Blue50",
+    },
+-   ".MuiButton-root[aria-busy='true'] .MuiButton-label > [role='progressbar']": Object {
+-     "fontSize": "16px",
+-     "left": "calc(50% - 0.5em)",
+-     "position": "absolute",
+-     "top": "calc(50% - 0.5em)",
+-     "visibility": "visible",
++   ".MuiButton-text.MuiButton-textPrimary[data-color='error']": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Red300",
+    },
+-   ".MuiButton-sizeLarge": Object {
+-     "fontSize": "18px",
+-     "lineHeight": "28px",
+-     "padding": "14px 64px",
++   ".MuiButton-text.MuiButton-textPrimary[data-color='error'].Mui-disabled": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Red100",
+    },
+-   ".MuiButton-sizeLarge
+-       .MuiButton-root[aria-busy='true']
+-       .MuiButton-label
+-       > [role='progressbar']": Object {
+-     "fontSize": "24px",
++   ".MuiButton-text.MuiButton-textPrimary[data-color='error'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Red200",
+    },
+-   ".MuiButton-sizeLarge .MuiButton-label > .MuiSvgIcon-root": Object {
+-     "fontSize": "28px",
++   ".MuiButton-text.MuiButton-textPrimary[data-color='error']:focus": Object {
++     "backgroundColor": "Color.Red50",
++     "boxShadow": "0 0 0 2px Color.Red100",
+    },
+-   ".MuiButton-sizeSmall": Object {
+-     "padding": "4px 24px",
++   ".MuiButton-text.MuiButton-textPrimary[data-color='error']:hover": Object {
++     "backgroundColor": "Color.Red50",
+    },
+-   ".MuiButton-startIcon": Object {
+-     "display": "inherit",
+-     "marginLeft": "-4px",
+-     "marginRight": "8px",
++   ".MuiButton-text.MuiButton-textPrimary[data-color='error'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Red50",
+    },
+-   ".MuiButton-startIcon.MuiButton-iconSizeSmall": Object {
+-     "marginLeft": "-2px",
++   ".MuiButton-text.MuiButton-textPrimary[data-color='success']": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.Green300",
+    },
+-   ".MuiButton-textPrimary": Object {
++   ".MuiButton-text.MuiButton-textPrimary[data-color='success'].Mui-disabled": Object {
+      "backgroundColor": "Color.Transparent",
+      "boxShadow": "0 0 0 0px Color.Transparent",
+-     "color": "Color.Blue300",
++     "color": "Color.Green100",
++   },
++   ".MuiButton-text.MuiButton-textPrimary[data-color='success'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.Green200",
++   },
++   ".MuiButton-text.MuiButton-textPrimary[data-color='success']:focus": Object {
++     "backgroundColor": "Color.Green50",
++     "boxShadow": "0 0 0 2px Color.Green100",
++   },
++   ".MuiButton-text.MuiButton-textPrimary[data-color='success']:hover": Object {
++     "backgroundColor": "Color.Green50",
++   },
++   ".MuiButton-text.MuiButton-textPrimary[data-color='success'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.Green50",
++   },
++   ".MuiButton-text.MuiButton-textPrimary[data-color='white']": Object {
++     "backgroundColor": "Color.Transparent",
++     "boxShadow": "0 0 0 0px Color.Transparent",
++     "color": "Color.White",
+    },
+-   ".MuiButton-textPrimary.Mui-disabled": Object {
++   ".MuiButton-text.MuiButton-textPrimary[data-color='white'].Mui-disabled": Object {
+      "backgroundColor": "Color.Transparent",
+      "boxShadow": "0 0 0 0px Color.Transparent",
+-     "color": "Color.Blue100",
++     "color": "Color.White50",
++   },
++   ".MuiButton-text.MuiButton-textPrimary[data-color='white'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
++     "color": "Color.White50",
++   },
++   ".MuiButton-text.MuiButton-textPrimary[data-color='white']:focus": Object {
++     "backgroundColor": "Color.White10",
++     "boxShadow": "0 0 0 2px Color.White50",
++   },
++   ".MuiButton-text.MuiButton-textPrimary[data-color='white']:hover": Object {
++     "backgroundColor": "Color.White10",
++   },
++   ".MuiButton-text.MuiButton-textPrimary[data-color='white'][aria-expanded='true']": Object {
++     "backgroundColor": "Color.White10",
+    },
+-   ".MuiButton-textPrimary.Mui-disabled[aria-busy='true']": Object {
+-     "color": "Color.Blue200",
++   ".MuiButton-text:active": Object {
++     "boxShadow": "none",
+    },
+-   ".MuiButton-textPrimary:focus": Object {
++   ".MuiButton-text:focus": Object {
+      "backgroundColor": "Color.Blue50",
+      "boxShadow": "0 0 0 2px Color.Blue100",
+    },
+-   ".MuiButton-textPrimary:hover": Object {
+-     "backgroundColor": "Color.Blue50",
+-   },
+-   ".MuiButton-textPrimary[aria-expanded='true']": Object {
++   ".MuiButton-text:hover": Object {
++     "WebkitTextDecoration": "none",
+      "backgroundColor": "Color.Blue50",
++     "boxShadow": "none",
++     "textDecoration": "none",
+    },
+-   ".MuiButton-textSecondary": Object {
+-     "color": "#f50057",
++   ".MuiButton-text:hover.Mui-disabled": Object {
++     "backgroundColor": "initial",
+    },
+-   ".MuiButton-textSecondary:hover": Object {
+-     "backgroundColor": "rgba(245, 0, 87, 0.04)",
++   ".MuiButton-text[aria-expanded='true']": Object {
++     "backgroundColor": "Color.Blue50",
+    },
+    ".MuiButton-text[data-color='error']": Object {
+      "backgroundColor": "Color.Transparent",
+      "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.Red300",
+@@ -337,11 +1433,11 @@
+    ".MuiButton-text[data-color='error'].Mui-disabled": Object {
+      "backgroundColor": "Color.Transparent",
+      "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.Red100",
+    },
+-   ".MuiButton-text[data-color='error'].Mui-disabled[aria-busy='true']": Object {
++   ".MuiButton-text[data-color='error'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
+      "color": "Color.Red200",
+    },
+    ".MuiButton-text[data-color='error']:focus": Object {
+      "backgroundColor": "Color.Red50",
+      "boxShadow": "0 0 0 2px Color.Red100",
+@@ -360,11 +1456,11 @@
+    ".MuiButton-text[data-color='success'].Mui-disabled": Object {
+      "backgroundColor": "Color.Transparent",
+      "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.Green100",
+    },
+-   ".MuiButton-text[data-color='success'].Mui-disabled[aria-busy='true']": Object {
++   ".MuiButton-text[data-color='success'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
+      "color": "Color.Green200",
+    },
+    ".MuiButton-text[data-color='success']:focus": Object {
+      "backgroundColor": "Color.Green50",
+      "boxShadow": "0 0 0 2px Color.Green100",
+@@ -383,11 +1479,11 @@
+    ".MuiButton-text[data-color='white'].Mui-disabled": Object {
+      "backgroundColor": "Color.Transparent",
+      "boxShadow": "0 0 0 0px Color.Transparent",
+      "color": "Color.White50",
+    },
+-   ".MuiButton-text[data-color='white'].Mui-disabled[aria-busy='true']": Object {
++   ".MuiButton-text[data-color='white'].Mui-disabled .MuiLoadingButton-loadingIndicator": Object {
+      "color": "Color.White50",
+    },
+    ".MuiButton-text[data-color='white']:focus": Object {
+      "backgroundColor": "Color.White10",
+      "boxShadow": "0 0 0 2px Color.White50",
+@@ -396,73 +1492,623 @@
+      "backgroundColor": "Color.White10",
+    },
+    ".MuiButton-text[data-color='white'][aria-expanded='true']": Object {
+      "backgroundColor": "Color.White10",
+    },
+-   "@media (hover: none)": Array [
++   ".MuiButtonBase": Object {
++     "MozAppearance": "none",
++     "MozUserSelect": "none",
++     "WebkitAlignItems": "center",
++     "WebkitAppearance": "none",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
++     "WebkitTapHighlightColor": "transparent",
++     "WebkitTextDecoration": "none",
++     "WebkitUserSelect": "none",
++     "alignItems": "center",
++     "backgroundColor": "transparent",
++     "border": "0",
++     "borderRadius": "0",
++     "boxSizing": "border-box",
++     "color": "inherit",
++     "cursor": "pointer",
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
++     "justifyContent": "center",
++     "margin": "0",
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
++     "msUserSelect": "none",
++     "outline": "0",
++     "padding": "0",
++     "position": "relative",
++     "textDecoration": "none",
++     "userSelect": "none",
++     "verticalAlign": "middle",
++   },
++   ".MuiButtonBase.Mui-disabled": Object {
++     "cursor": "default",
++     "pointerEvents": "none",
++   },
++   ".MuiButtonBase::-moz-focus-inner": Object {
++     "borderStyle": "none",
++   },
++   ".MuiLoadingButton": Object {
++     "WebkitTransition": "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "transition": "background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".MuiLoadingButton .MuiLoadingButton-startIconLoadingStart,
++     .MuiLoadingButton .MuiLoadingButton-endIconLoadingEnd": Object {
++     "WebkitTransition": "opacity 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "opacity": 0,
++     "transition": "opacity 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".MuiLoadingButton.MuiLoadingButton-loading": Object {
++     "color": "transparent",
++   },
++   ".MuiTouchRipple": Object {
++     "borderRadius": "inherit",
++     "bottom": "0",
++     "left": "0",
++     "overflow": "hidden",
++     "pointerEvents": "none",
++     "position": "absolute",
++     "right": "0",
++     "top": "0",
++     "zIndex": 0,
++   },
++   "@media (hover:none)": Array [
+      Object {
+-       ".MuiButton-textPrimary:hover": Object {
++       ".MuiButton-text.MuiButton-textPrimary:hover": Object {
+          "backgroundColor": "transparent",
++       },
+      },
++     Object {
++       ".MuiButton-text.MuiButton-textPrimary:hover": Object {
++         "backgroundColor": "initial",
++       },
+      },
+      Object {
+-       ".MuiButton-textSecondary:hover": Object {
++       ".MuiButton-text:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiButton-text:hover": Object {
++         "backgroundColor": "initial",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeSmall:hover": Object {
+          "backgroundColor": "transparent",
+        },
+      },
+      Object {
+-       ".MuiButton-outlinedPrimary:hover": Object {
++       ".Mui-outlined.MuiButton-sizeSmall:hover": Object {
++         "backgroundColor": "initial",
++       },
++     },
++     Object {
++       ".Mui-outlined:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".Mui-outlined:hover": Object {
++         "backgroundColor": "initial",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeLarge:hover": Object {
+          "backgroundColor": "transparent",
+        },
+      },
+      Object {
+-       ".MuiButton-outlinedSecondary:hover": Object {
++       ".Mui-outlined.MuiButton-sizeLarge:hover": Object {
++         "backgroundColor": "initial",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeSmall:hover": Object {
+          "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeSmall:hover": Object {
++         "backgroundColor": "initial",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeLarge:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeLarge:hover": Object {
++         "backgroundColor": "initial",
+        },
+      },
+      Object {
+-       ".MuiButton-containedPrimary:hover": Object {
++       ".MuiButton-contained.MuiButton-sizeSmall:hover": Object {
++         "backgroundColor": "Color.Blue300",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeSmall:hover": Object {
++         "backgroundColor": "initial",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeSmall:hover": Object {
++         "backgroundColor": "none",
++         "boxShadow": "none",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeLarge:hover": Object {
++         "backgroundColor": "Color.Blue300",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeLarge:hover": Object {
++         "backgroundColor": "initial",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeLarge:hover": Object {
++         "backgroundColor": "none",
++         "boxShadow": "none",
++       },
++     },
++     Object {
++       ".MuiButton-contained:hover": Object {
+          "backgroundColor": "Color.Blue300",
++       },
++     },
++     Object {
++       ".MuiButton-contained:hover": Object {
++         "backgroundColor": "initial",
++       },
++     },
++     Object {
++       ".MuiButton-contained:hover": Object {
++         "backgroundColor": "none",
++         "boxShadow": "none",
++       },
++     },
++     Object {
++       ".MuiButton-text:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiButton-text:hover": Object {
++         "backgroundColor": "initial",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-textPrimary:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-textPrimary:hover": Object {
++         "backgroundColor": "initial",
++       },
++     },
++   ],
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {
++       ".MuiButton-text.MuiButton-textPrimary": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
+        },
+      },
+      Object {
+-       ".MuiButton-containedSecondary:hover": Object {
+-         "backgroundColor": "#f50057",
++       ".MuiButton-text": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeSmall": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeSmall": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeSmall": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".Mui-outlined": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeLarge": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeLarge": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeLarge": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeSmall": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeSmall": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeSmall": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeLarge": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeLarge": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeLarge": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeSmall": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeSmall": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeSmall": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeLarge": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-contained": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-contained": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-contained": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-textPrimary": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
+        },
+      },
++     Object {},
++     Object {},
+    ],
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Object {
+-     ".MuiButton-root": Object {
++   "@media (min-width:600px)": Array [
++     Object {
++       ".MuiButton-text.MuiButton-textPrimary": Object {
++         "padding": "6px 16px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-textPrimary > .MuiSvgIcon-root": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text": Object {
++         "padding": "6px 16px",
++       },
++     },
++     Object {
++       ".MuiButton-text > .MuiSvgIcon-root": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "24px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeSmall": Object {
++         "padding": "6px 16px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeSmall > .MuiSvgIcon-root": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "24px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeSmall": Object {
++         "padding": "2px 16px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeSmall": Object {
++         "padding": "2px 16px",
++       },
++     },
++     Object {
++       ".Mui-outlined": Object {
++         "padding": "6px 16px",
++       },
++     },
++     Object {
++       ".Mui-outlined > .MuiSvgIcon-root": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "24px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeLarge": Object {
++         "padding": "6px 16px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "24px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeLarge": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++         "padding": "8px 32px",
++       },
++     },
++     Object {
++       ".Mui-outlined.MuiButton-sizeLarge": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++         "padding": "8px 32px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeSmall": Object {
++         "padding": "6px 16px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeSmall > .MuiSvgIcon-root": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeSmall": Object {
++         "padding": "2px 16px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeSmall": Object {
++         "padding": "2px 16px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeLarge": Object {
++         "padding": "6px 16px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-sizeLarge": Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
++         "padding": "8px 32px",
+        },
+      },
+-   "@media (min-width: 600px)": Array [
+      Object {
+-       ".MuiButton-root": Object {
++       ".MuiButton-text.MuiButton-sizeLarge": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++         "padding": "8px 32px",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeSmall": Object {
+          "padding": "6px 16px",
+        },
+      },
+      Object {
+-       ".MuiButton-label > .MuiSvgIcon-root": Object {
++       ".MuiButton-contained.MuiButton-sizeSmall > .MuiSvgIcon-root": Object {
+          "fontSize": "20px",
+        },
+      },
+      Object {
+-       ".MuiButton-sizeLarge .MuiButton-label > .MuiSvgIcon-root": Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
+          "fontSize": "24px",
+        },
+      },
+      Object {
+-       ".MuiButton-sizeSmall": Object {
++       ".MuiButton-contained.MuiButton-sizeSmall": Object {
++         "padding": "2px 16px",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeSmall": Object {
+          "padding": "2px 16px",
+        },
+      },
+      Object {
+-       ".MuiButton-sizeLarge": Object {
++       ".MuiButton-contained.MuiButton-sizeLarge": Object {
++         "padding": "6px 16px",
++       },
++     },
++     Object {
++       ".MuiButton-contained.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-contained": Object {
++         "padding": "6px 16px",
++       },
++     },
++     Object {
++       ".MuiButton-contained > .MuiSvgIcon-root": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-contained": Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "padding": "8px 32px",
++       },
++     },
++     Object {
++       ".MuiButton-contained": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++         "padding": "8px 32px",
++       },
++     },
++     Object {
++       ".MuiButton-text": Object {
++         "padding": "6px 16px",
++       },
++     },
++     Object {
++       ".MuiButton-text > .MuiSvgIcon-root": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "24px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-textPrimary": Object {
++         "padding": "6px 16px",
++       },
++     },
++     Object {
++       ".MuiButton-text.MuiButton-textPrimary > .MuiSvgIcon-root": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
++       ".MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root": Object {
++         "fontSize": "24px",
++       },
++     },
++   ],
++   "@media print": Array [
++     Object {
++       ".MuiButtonBase": Object {
++         "colorAdjust": "exact",
+        },
+      },
++     Object {},
+    ],
+  }

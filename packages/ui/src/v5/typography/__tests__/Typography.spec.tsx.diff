@@ -1,498 +1,383 @@
+Compared values have no visual difference.
 - v4
 + v5
 
-
+@@ -1,144 +1,212 @@
+  Object {
+    ".MuiTypography-alignCenter": Object {
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+      "textAlign": "center",
+    },
+    ".MuiTypography-alignJustify": Object {
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+      "textAlign": "justify",
+    },
+    ".MuiTypography-alignLeft": Object {
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+      "textAlign": "left",
+    },
+    ".MuiTypography-alignRight": Object {
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+      "textAlign": "right",
+    },
+    ".MuiTypography-body1": Object {
+-     "fontFamily": "'Inter', sans-serif",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "14px",
+      "fontWeight": 600,
+      "lineHeight": "20px",
++     "margin": "0",
+    },
+    ".MuiTypography-body2": Object {
+-     "fontFamily": "'Inter', sans-serif",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px",
++     "margin": "0",
+    },
+-   ".MuiTypography-button": Object {
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 600,
+-     "lineHeight": "20px",
+-   },
+    ".MuiTypography-caption": Object {
+-     "fontFamily": "'Inter', sans-serif",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "12px",
+      "fontWeight": 400,
+      "lineHeight": "16px",
++     "margin": "0",
+    },
+    ".MuiTypography-colorError": Object {
+      "color": "Color.Red300",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+    },
+    ".MuiTypography-colorInherit": Object {
+      "color": "inherit",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+    },
+    ".MuiTypography-colorPrimary": Object {
+      "color": "Color.Blue300",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+    },
+    ".MuiTypography-colorSecondary": Object {
+-     "color": "#f50057",
++     "color": "#9c27b0",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+    },
+    ".MuiTypography-colorTextPrimary": Object {
+      "color": "Color.Dark500",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+    },
+    ".MuiTypography-colorTextSecondary": Object {
+      "color": "Color.Dark200",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+    },
+    ".MuiTypography-displayBlock": Object {
+      "display": "block",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+    },
+    ".MuiTypography-displayInline": Object {
+      "display": "inline",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+    },
+    ".MuiTypography-gutterBottom": Object {
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+      "marginBottom": "0.35em",
+    },
+    ".MuiTypography-h1": Object {
+-     "fontFamily": "'Inter', sans-serif",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "32px",
+      "fontWeight": 700,
+      "lineHeight": "40px",
++     "margin": "0",
+    },
+    ".MuiTypography-h2": Object {
+-     "fontFamily": "'Inter', sans-serif",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "24px",
+      "fontWeight": 500,
+      "lineHeight": "28px",
++     "margin": "0",
+    },
+    ".MuiTypography-h3": Object {
+-     "fontFamily": "'Inter', sans-serif",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "20px",
+      "fontWeight": 500,
+      "lineHeight": "28px",
++     "margin": "0",
+    },
+    ".MuiTypography-h4": Object {
+-     "fontFamily": "'Inter', sans-serif",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "16px",
+      "fontWeight": 500,
+      "lineHeight": "24px",
++     "margin": "0",
+    },
+    ".MuiTypography-h5": Object {
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 600,
+-     "lineHeight": "20px",
+-   },
+-   ".MuiTypography-h6": Object {
+-     "fontFamily": "'Inter', sans-serif",
++     "MozLetterSpacing": "0.1em",
++     "WebkitLetterSpacing": "0.1em",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "12px",
+      "fontWeight": 700,
+      "letterSpacing": "0.1em",
+      "lineHeight": "16px",
++     "margin": "0",
++     "msLetterSpacing": "0.1em",
+      "textTransform": "uppercase",
+    },
++   ".MuiTypography-h6": Object {
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "1rem",
++     "fontWeight": 400,
++     "lineHeight": 1.75,
++     "margin": "0",
++   },
+    ".MuiTypography-noWrap": Object {
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
+      "overflow": "hidden",
+      "textOverflow": "ellipsis",
+      "whiteSpace": "nowrap",
+    },
+    ".MuiTypography-overline": Object {
+-     "fontFamily": "'Inter', sans-serif",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "0.75rem",
+      "fontWeight": 400,
+      "lineHeight": 2.66,
++     "margin": "0",
+      "textTransform": "uppercase",
+    },
+    ".MuiTypography-paragraph": Object {
+-     "marginBottom": "16px",
+-   },
+-   ".MuiTypography-root": Object {
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
+      "margin": "0",
+-   },
+-   ".MuiTypography-srOnly": Object {
+-     "height": "1px",
+-     "overflow": "hidden",
+-     "position": "absolute",
+-     "width": "1px",
+-   },
+-   ".MuiTypography-subtitle1": Object {
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "1rem",
+-     "fontWeight": 400,
+-     "lineHeight": 1.75,
++     "marginBottom": "16px",
+    },
+    ".MuiTypography-subtitle2": Object {
+-     "fontFamily": "'Inter', sans-serif",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "0.875rem",
+      "fontWeight": 500,
+      "lineHeight": 1.57,
++     "margin": "0",
+    },
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Array [
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
       Object {
--       "variant": "body2",
-+       "defaultProps": Object {
-+         "variant": "body2",
+        ".MuiTypography-body2": Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+@@ -151,18 +219,12 @@
+      },
+      Object {
+        ".MuiTypography-caption": Object {
+          "fontSize": "14px",
+          "lineHeight": "20px",
+-       },
+        },
+-     Object {
+-       ".MuiTypography-button": Object {
+-         "fontSize": "16px",
+-         "lineHeight": "24px",
+      },
+-     },
+      Object {
+        ".MuiTypography-h1": Object {
+          "fontSize": "28px",
+          "lineHeight": "36px",
+        },
+@@ -185,17 +247,104 @@
+          "lineHeight": "26px",
+        },
+      },
+      Object {
+        ".MuiTypography-h5": Object {
++         "fontSize": "14px",
++         "lineHeight": "20px",
 +       },
-      }
-    
-- v4
-+ v5
-
-
-- .MuiTypography-root {
-+ .MuiTypography-root.MuiTypography-body2 {
-    margin: 0;
-- }
--
-- .MuiTypography-body2 {
-    font-size: 14px;
--   font-family: 'Inter', sans-serif;
--   font-weight: 400;
-    line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-  }
-
-  @media (min-width: 0px) and (max-width: 599.95px) {
--   .MuiTypography-body2 {
-+   .MuiTypography-root.MuiTypography-body2 {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
-
-- .MuiTypography-body1 {
-+ .MuiTypography-root.MuiTypography-body1, .MuiTypography-root.MuiTypography-button, .MuiTypography-root.MuiTypography-h5 {
-+   margin: 0;
-    font-size: 14px;
--   font-family: 'Inter', sans-serif;
--   font-weight: 600;
-    line-height: 20px;
-+   font-weight: 600;
-+   font-family: 'Inter', sans-serif;
-  }
-
-  @media (min-width: 0px) and (max-width: 599.95px) {
--   .MuiTypography-body1 {
-+   .MuiTypography-root.MuiTypography-body1, .MuiTypography-root.MuiTypography-button, .MuiTypography-root.MuiTypography-h5 {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
-
-- .MuiTypography-caption {
-+ .MuiTypography-root.MuiTypography-caption {
-+   margin: 0;
-    font-size: 12px;
-+   line-height: 16px;
-+   font-weight: 400;
-    font-family: 'Inter', sans-serif;
--   font-weight: 400;
--   line-height: 16px;
-  }
-
-  @media (min-width: 0px) and (max-width: 599.95px) {
--   .MuiTypography-caption {
-+   .MuiTypography-root.MuiTypography-caption {
-      font-size: 14px;
-      line-height: 20px;
-    }
-  }
-
-- .MuiTypography-button {
--   font-size: 14px;
--   font-family: 'Inter', sans-serif;
--   font-weight: 600;
--   line-height: 20px;
-- }
--
-- @media (min-width: 0px) and (max-width: 599.95px) {
--   .MuiTypography-button {
--     font-size: 16px;
--     line-height: 24px;
--   }
-- }
--
-- .MuiTypography-h1 {
-+ .MuiTypography-root.MuiTypography-h1 {
-+   margin: 0;
-    font-size: 32px;
-+   line-height: 40px;
-+   font-weight: 700;
-    font-family: 'Inter', sans-serif;
--   font-weight: 700;
--   line-height: 40px;
-  }
-
-  @media (min-width: 0px) and (max-width: 599.95px) {
--   .MuiTypography-h1 {
-+   .MuiTypography-root.MuiTypography-h1 {
-      font-size: 28px;
-      line-height: 36px;
-    }
-  }
-
-- .MuiTypography-h2 {
-+ .MuiTypography-root.MuiTypography-h2 {
-+   margin: 0;
-    font-size: 24px;
--   font-family: 'Inter', sans-serif;
-+   line-height: 28px;
-    font-weight: 500;
--   line-height: 28px;
-+   font-family: 'Inter', sans-serif;
-  }
-
-  @media (min-width: 0px) and (max-width: 599.95px) {
--   .MuiTypography-h2 {
-+   .MuiTypography-root.MuiTypography-h2 {
-      font-size: 22px;
-      line-height: 26px;
-    }
-  }
-
-- .MuiTypography-h3 {
-+ .MuiTypography-root.MuiTypography-h3 {
-+   margin: 0;
-    font-size: 20px;
--   font-family: 'Inter', sans-serif;
-+   line-height: 28px;
-    font-weight: 500;
--   line-height: 28px;
-+   font-family: 'Inter', sans-serif;
-  }
-
-  @media (min-width: 0px) and (max-width: 599.95px) {
--   .MuiTypography-h3 {
-+   .MuiTypography-root.MuiTypography-h3 {
-      font-size: 20px;
-      line-height: 26px;
-    }
-  }
-
-- .MuiTypography-h4 {
-+ .MuiTypography-root.MuiTypography-h4 {
-+   margin: 0;
-    font-size: 16px;
--   font-family: 'Inter', sans-serif;
-+   line-height: 24px;
-    font-weight: 500;
--   line-height: 24px;
-+   font-family: 'Inter', sans-serif;
-  }
-
-  @media (min-width: 0px) and (max-width: 599.95px) {
--   .MuiTypography-h4 {
-+   .MuiTypography-root.MuiTypography-h4 {
-      font-size: 17px;
-      line-height: 26px;
-    }
-  }
-
-- .MuiTypography-h5 {
--   font-size: 14px;
--   font-family: 'Inter', sans-serif;
--   font-weight: 600;
--   line-height: 20px;
-- }
--
-- @media (min-width: 0px) and (max-width: 599.95px) {
--   .MuiTypography-h5 {
--     font-size: 16px;
--     line-height: 24px;
--   }
-- }
--
-- .MuiTypography-h6 {
-+ .MuiTypography-root.MuiTypography-h6 {
-+   margin: 0;
-    font-size: 12px;
--   font-family: 'Inter', sans-serif;
-+   line-height: 16px;
-    font-weight: 700;
--   line-height: 16px;
-+   -webkit-letter-spacing: 0.1em;
-+   -moz-letter-spacing: 0.1em;
-+   -ms-letter-spacing: 0.1em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-+   font-family: 'Inter', sans-serif;
-  }
-
-  @media (min-width: 0px) and (max-width: 599.95px) {
--   .MuiTypography-h6 {
-+   .MuiTypography-root.MuiTypography-h6 {
-      font-size: 14px;
-      line-height: 20px;
-    }
-  }
-
-- .MuiTypography-subtitle1 {
--   font-size: 1rem;
-+ .MuiTypography-root.MuiTypography-subtitle1 {
-+   margin: 0;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-+   font-size: 1rem;
-    line-height: 1.75;
-  }
-
-- .MuiTypography-subtitle2 {
--   font-size: 0.875rem;
-+ .MuiTypography-root.MuiTypography-subtitle2 {
-+   margin: 0;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-+   font-size: 0.875rem;
-    line-height: 1.57;
-  }
-
-- .MuiTypography-overline {
--   font-size: 0.75rem;
-+ .MuiTypography-root.MuiTypography-overline {
-+   margin: 0;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-+   font-size: 0.75rem;
-    line-height: 2.66;
-    text-transform: uppercase;
-  }
-
-- .MuiTypography-srOnly {
--   width: 1px;
--   height: 1px;
--   overflow: hidden;
--   position: absolute;
-+ .MuiTypography-root.MuiTypography-body2.MuiTypography-alignLeft {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-+   text-align: left;
-  }
-
-- .MuiTypography-alignLeft {
--   text-align: left;
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.MuiTypography-alignLeft {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-  }
-
-- .MuiTypography-alignCenter {
-+ .MuiTypography-root.MuiTypography-body2.MuiTypography-alignCenter {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    text-align: center;
-  }
-
-- .MuiTypography-alignRight {
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.MuiTypography-alignCenter {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-+ }
-+
-+ .MuiTypography-root.MuiTypography-body2.MuiTypography-alignRight {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    text-align: right;
-  }
-
-- .MuiTypography-alignJustify {
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.MuiTypography-alignRight {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-+ }
-+
-+ .MuiTypography-root.MuiTypography-body2.MuiTypography-alignJustify {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    text-align: justify;
-  }
-
-- .MuiTypography-noWrap {
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.MuiTypography-alignJustify {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-+ }
-+
-+ .MuiTypography-root.MuiTypography-body2.MuiTypography-noWrap {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    overflow: hidden;
--   white-space: nowrap;
-    text-overflow: ellipsis;
-+   white-space: nowrap;
-  }
-
-- .MuiTypography-gutterBottom {
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.MuiTypography-noWrap {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-+ }
-+
-+ .MuiTypography-root.MuiTypography-body2.MuiTypography-gutterBottom {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    margin-bottom: 0.35em;
-  }
-
-- .MuiTypography-paragraph {
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.MuiTypography-gutterBottom {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-+ }
-+
-+ .MuiTypography-root.MuiTypography-body2.MuiTypography-paragraph {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    margin-bottom: 16px;
-  }
-
-- .MuiTypography-colorInherit {
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.MuiTypography-paragraph {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-+ }
-+
-+ .MuiTypography-root.MuiTypography-body2.colorInherit {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    color: inherit;
-  }
-
-- .MuiTypography-colorPrimary {
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.colorInherit {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-+ }
-+
-+ .MuiTypography-root.MuiTypography-body2.colorPrimary {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    color: Color.Blue300;
-  }
-
-- .MuiTypography-colorSecondary {
--   color: #f50057;
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.colorPrimary {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-+ }
-+
-+ .MuiTypography-root.MuiTypography-body2.colorSecondary {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-+   color: #9c27b0;
-+ }
-+
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.colorSecondary {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-  }
-
-- .MuiTypography-colorTextPrimary {
-+ .MuiTypography-root.MuiTypography-body2.colorTextPrimary {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    color: Color.Dark500;
-+ }
-+
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.colorTextPrimary {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-  }
-
-- .MuiTypography-colorTextSecondary {
-+ .MuiTypography-root.MuiTypography-body2.colorTextSecondary {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    color: Color.Dark200;
-  }
-
-- .MuiTypography-colorError {
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.colorTextSecondary {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-+ }
-+
-+ .MuiTypography-root.MuiTypography-body2.colorError {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    color: Color.Red300;
-  }
-
-- .MuiTypography-displayInline {
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.colorError {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-+ }
-+
-+ .MuiTypography-root.MuiTypography-body2.displayInline {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    display: inline;
-  }
-
-- .MuiTypography-displayBlock {
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.displayInline {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
-+ }
-+
-+ .MuiTypography-root.MuiTypography-body2.displayBlock {
-+   margin: 0;
-+   font-size: 14px;
-+   line-height: 20px;
-+   font-weight: 400;
-+   font-family: 'Inter', sans-serif;
-    display: block;
-+ }
-+
-+ @media (min-width: 0px) and (max-width: 599.95px) {
-+   .MuiTypography-root.MuiTypography-body2.displayBlock {
-+     font-size: 16px;
-+     line-height: 24px;
-+   }
++     },
++     Object {
++       ".MuiTypography-alignLeft": Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+      },
+      Object {
+-       ".MuiTypography-h6": Object {
+-         "fontSize": "14px",
+-         "lineHeight": "20px",
++       ".MuiTypography-alignCenter": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-alignRight": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-alignJustify": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-noWrap": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-gutterBottom": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-paragraph": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-colorInherit": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-colorPrimary": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-colorSecondary": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-colorTextPrimary": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-colorTextSecondary": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-colorError": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
+        },
+      },
++     Object {
++       ".MuiTypography-displayInline": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiTypography-displayBlock": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {},
++     Object {},
+    ],
++   "@media print": Object {},
   }
