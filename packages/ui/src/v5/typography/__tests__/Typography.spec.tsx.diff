@@ -273,7 +273,7 @@ Compared values have no visual difference.
           "fontSize": "28px",
           "lineHeight": "36px",
         },
-@@ -185,17 +247,103 @@
+@@ -185,17 +247,104 @@
           "lineHeight": "26px",
         },
       },
@@ -285,12 +285,6 @@ Compared values have no visual difference.
 +     },
 +     Object {
 +       ".MuiTypography-alignLeft": Object {
-+         "fontSize": "16px",
-+         "lineHeight": "24px",
-+       },
-+     },
-+     Object {
-+       ".MuiTypography-alignCenter": Object {
           "fontSize": "16px",
           "lineHeight": "24px",
         },
@@ -299,6 +293,12 @@ Compared values have no visual difference.
 -       ".MuiTypography-h6": Object {
 -         "fontSize": "14px",
 -         "lineHeight": "20px",
++       ".MuiTypography-alignCenter": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
 +       ".MuiTypography-alignRight": Object {
 +         "fontSize": "16px",
 +         "lineHeight": "24px",
@@ -356,14 +356,14 @@ Compared values have no visual difference.
 +       ".MuiTypography-colorTextSecondary": Object {
 +         "fontSize": "16px",
 +         "lineHeight": "24px",
-        },
++       },
 +     },
 +     Object {
 +       ".MuiTypography-colorError": Object {
 +         "fontSize": "16px",
 +         "lineHeight": "24px",
         },
-+     },
+      },
 +     Object {
 +       ".MuiTypography-displayInline": Object {
 +         "fontSize": "16px",
@@ -376,6 +376,7 @@ Compared values have no visual difference.
 +         "lineHeight": "24px",
 +       },
 +     },
++     Object {},
 +     Object {},
     ],
 +   "@media print": Object {},

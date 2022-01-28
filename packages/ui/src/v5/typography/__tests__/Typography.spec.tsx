@@ -475,5 +475,9 @@ it('checks component css', () => {
     @media print {
 
     }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
   `);
 });
