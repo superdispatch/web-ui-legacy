@@ -5,6 +5,7 @@ import 'fontsource-inter/400.css';
 import 'fontsource-inter/500.css';
 import 'fontsource-inter/600.css';
 import 'fontsource-inter/700.css';
+import { merge } from 'lodash';
 import React, { Suspense } from 'react';
 import { withPlayroom } from 'storybook-addon-playroom';
 
@@ -32,12 +33,14 @@ function ThemeProviderV5({ children }) {
     <v5.ThemeProvider
       injectFirst={false}
       modifier={(theme) => {
-        theme.components.MuiCssBaseline ||= {};
-        theme.components.MuiCssBaseline.styleOverrides = {
-          body: {
-            background: '#fafafa', // use same color with mui4 to detect visual difference
+        merge(theme.components.MuiCssBaseline, {
+          styleOverrides: {
+            body: {
+              background: '#fafafa', // use same color with mui4 to detect visual difference
+            },
           },
-        };
+        });
+
         return theme;
       }}
     >
