@@ -34,7 +34,7 @@
     "storybook:start": "start-storybook -p 5000 --ci",
     "tdd": "jest --watch",
     "test": "jest --coverage --forceExit",
-    "approve-changes": "loki approve",
+    "test:visual-approve": "loki approve",
     "test:visual": "loki test --port 5000 --chromeRetries 2",
     "test:visual-ci": "loki test --requireReference --verboseRenderer --reactUri",
     "test-branch": "yarn test --changedSince origin/main",

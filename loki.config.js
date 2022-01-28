@@ -2,7 +2,7 @@
 
 module.exports = {
   storiesFilter:
-    /^Data Display|^Surfaces|^Inputs|^Navigation\/Tabs|^Navigation\/Link/i,
+    /^Data Display|^Surfaces|^Inputs|^Navigation\/Tabs|^Navigation\/Link|^Navigation\/Button|^Layout/i,
 
   configurations: {
     'chrome.laptop': {
