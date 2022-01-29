@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo "test9" > test.txt
+      - run: echo "test10" > test.txt
 
       - id: vars
         run: echo "::set-output name=branch::${GITHUB_HEAD_REF##*/}"
@@ -37,7 +37,7 @@ jobs:
         with:
           token: ${{ steps.generate_token.outputs.token }}
           name: Test
-          conclusion: action_required
+          conclusion: neutral
           action_url: 'https://github.com/superdispatch'
           output: |
             {"summary": "Approve", "actions": [{"label": "Approve Changes", "description": "Approve", "identifier": "commit-changes"}]}
