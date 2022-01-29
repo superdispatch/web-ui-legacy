@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo "test5" > test.txt
+      - run: echo "test6" > test.txt
 
       - id: vars
         run: echo "::set-output name=branch::${GITHUB_HEAD_REF##*/}"
@@ -27,10 +27,17 @@ jobs:
           message: 'chore: approve visual changes'
           new_branch: ${{ steps.vars.outputs.branch }}-${{ github.run_id }}
 
+      - id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.GH_APP_APP_ID }}
+          private_key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+
       - uses: LouisBrunner/checks-action@v1.2.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ steps.generate_token.outputs.token }}
           name: Test
+          conclusion: completed
           action_url: 'https://github.com/superdispatch'
           output: |
             {"summary": "Approve", "actions": [{"label": "Approve Changes", "description": "Approve", "identifier": "commit-changes"}]}
