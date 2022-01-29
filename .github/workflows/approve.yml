@@ -7,10 +7,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo "test" > test.txt
+      - run: echo "test2" > test.txt
 
       - id: vars
         run: echo "::set-output name=branch::${GITHUB_HEAD_REF##*/}"
+
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.vars.outputs.branch }}-${{ github.run_id }}
 
       - uses: EndBug/add-and-commit@v7
         with:
@@ -21,7 +25,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           name: Test
-          action_url: ''
+          action_url: '-'
           conclusion: action_required
           output: |
             {"summary": "Approve", "actions": [{"label": "Approve Changes", "description": "Approve", "identifier": "commit-changes"}]}
