@@ -1,0 +1,26 @@
+on:
+  pull_request:
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: echo "test" > test.txt
+
+      - id: vars
+        run: echo "::set-output name=branch::${GITHUB_HEAD_REF##*/}"
+
+      - uses: EndBug/add-and-commit@v7
+        with:
+          message: 'chore: approve visual changes'
+          new_branch: ${{ steps.vars.outputs.branch }}-${{ github.run_id }}
+
+      - uses: LouisBrunner/checks-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: Test
+          conclusion: action_required
+          output: |
+            {"summary": "Approve", "actions": [{"label": "Approve Changes", "description": "Approve", "identifier": "commit-changes"}]}
