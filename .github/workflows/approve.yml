@@ -21,6 +21,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           name: Test
+          action_url: ''
           conclusion: action_required
           output: |
             {"summary": "Approve", "actions": [{"label": "Approve Changes", "description": "Approve", "identifier": "commit-changes"}]}
