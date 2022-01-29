@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo "test7" > test.txt
+      - run: echo "test8" > test.txt
 
       - id: vars
         run: echo "::set-output name=branch::${GITHUB_HEAD_REF##*/}"
