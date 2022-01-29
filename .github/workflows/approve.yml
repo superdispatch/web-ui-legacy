@@ -7,10 +7,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo "test2" > test.txt
+      - run: echo "test3" > test.txt
 
       - id: vars
         run: echo "::set-output name=branch::${GITHUB_HEAD_REF##*/}"
+
+      - uses: peterjgrainger/action-create-branch@v2.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branch: ${{ steps.vars.outputs.branch }}-${{ github.run_id }}
 
       - uses: actions/checkout@v2
         with:
