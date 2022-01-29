@@ -17,7 +17,7 @@ jobs:
           message: 'chore: approve visual changes'
           new_branch: ${{ steps.vars.outputs.branch }}-${{ github.run_id }}
 
-      - uses: LouisBrunner/checks-action@v1
+      - uses: LouisBrunner/checks-action@v1.2.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           name: Test
