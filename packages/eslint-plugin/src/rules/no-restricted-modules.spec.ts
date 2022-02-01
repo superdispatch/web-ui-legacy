@@ -9,6 +9,25 @@ ruleTester.run('no-restricted-modules', rule, {
   valid: ['import { Box } from "styled-system"'],
   invalid: [
     {
+      code: 'import { LoadingButton } from "@mui/lab"',
+      errors: [
+        {
+          line: 1,
+          endLine: 1,
+          column: 10,
+          endColumn: 23,
+          messageId: 'restrict',
+          data: {
+            restrictedName: 'LoadingButton',
+            restrictedModule: '@mui/lab',
+            suggestedName: 'Button',
+            suggestedModule: '@superdispatch/ui-lab',
+          },
+        },
+      ],
+    },
+
+    {
       code: 'import { Box } from "@material-ui/core"',
       errors: [
         {

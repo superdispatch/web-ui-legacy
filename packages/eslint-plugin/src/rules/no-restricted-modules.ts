@@ -26,6 +26,9 @@ const RESTRICTIONS: Restrictions = {
     Snackbar: ['Snackbar', '@superdispatch/ui'],
     SnackbarContent: ['SnackbarContent', '@superdispatch/ui'],
   },
+  '@mui/lab': {
+    LoadingButton: ['Button', '@superdispatch/ui-lab'],
+  },
   '@superdispatch/ui': {
     Button: ['Button', '@superdispatch/ui-lab'],
     GridStack: ['Stack', '@superdispatch/ui'],
