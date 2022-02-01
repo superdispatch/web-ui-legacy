@@ -1,11 +1,12 @@
-import { Card, CardContent, Typography } from '@material-ui/core';
+import { Card, CardContent, Typography } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { PropsLink } from '@superdispatch/ui-docs';
 import { Box } from '@superdispatch/ui-lab';
 
 export default {
-  title: 'v4/Surfaces/Card',
+  title: 'Surfaces/Card',
   parameters: {
+    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/card/#props" />
     ),
