@@ -1,0 +1,105 @@
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+- v4
++ v5
+
+  Object {
+    ".MuiCard-root": Object {
+      "overflow": "hidden",
+    },
+    ".MuiCardActions-root": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
+      "alignItems": "center",
+-     "display": "flex",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "msFlexAlign": "center",
+      "padding": "8px",
+    },
+-   ".MuiCardActions-spacing > :not(:first-child)": Object {
++   ".MuiCardActions-spacing": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "alignItems": "center",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "msFlexAlign": "center",
++     "padding": "8px",
++   },
++   ".MuiCardActions-spacing > :not(:first-of-type)": Object {
+      "marginLeft": "8px",
+    },
+    ".MuiCardContent-root": Object {
+      "padding": "16px",
++   },
++   ".MuiCardContent-root:last-child": Object {
++     "paddingBottom": "16px",
+    },
+    ".MuiCardHeader-action": Object {
++     "WebkitAlignSelf": "flex-start",
++     "WebkitFlex": "0 0 auto",
+      "alignSelf": "flex-start",
+      "flex": "0 0 auto",
++     "marginBottom": "-4px",
+      "marginRight": "-8px",
+-     "marginTop": "-8px",
++     "marginTop": "-4px",
++     "msFlex": "0 0 auto",
++     "msFlexItemAlign": "start",
+    },
+    ".MuiCardHeader-avatar": Object {
++     "WebkitFlex": "0 0 auto",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
+      "flex": "0 0 auto",
+      "marginRight": "16px",
++     "msFlex": "0 0 auto",
+    },
+    ".MuiCardHeader-content": Object {
++     "WebkitFlex": "1 1 auto",
+      "flex": "1 1 auto",
++     "msFlex": "1 1 auto",
+    },
+    ".MuiCardHeader-root": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
+      "alignItems": "center",
+-     "display": "flex",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "msFlexAlign": "center",
+      "padding": "16px",
++   },
++   ".MuiPaper-root": Object {
++     "WebkitTransition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "backgroundColor": "Color.White",
++     "border": "1px solid Color.Silver400",
++     "borderRadius": "4px",
++     "color": "Color.Dark500",
++     "transition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
++   ],
++   "@media print": Object {},
+  }

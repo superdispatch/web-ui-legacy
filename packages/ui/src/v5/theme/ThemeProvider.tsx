@@ -9,6 +9,7 @@ import { useConstant } from '@superdispatch/hooks';
 import { Rule, StyleSheet } from 'jss';
 import { ReactElement, ReactNode } from 'react';
 import { overrideButton } from '../button/ButtonOverrides';
+import { overrideCard } from '../card/CardOverrides';
 import {
   createTypographyOptions,
   overrideTypography,
@@ -52,6 +53,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
     components: {},
   }) as SuperDispatchTheme;
 
+  overrideCard(theme);
   overrideButton(theme);
   overrideTypography(theme);
   overrideCssBaseline(theme);
