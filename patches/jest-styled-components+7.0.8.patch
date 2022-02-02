@@ -1,0 +1,26 @@
+diff --git a/node_modules/jest-styled-components/src/styleSheetSerializer.js b/node_modules/jest-styled-components/src/styleSheetSerializer.js
+index 0fd2109..d12e5db 100644
+--- a/node_modules/jest-styled-components/src/styleSheetSerializer.js
++++ b/node_modules/jest-styled-components/src/styleSheetSerializer.js
+@@ -99,7 +99,7 @@ const getClassNamesFromSelectorsByHashes = (classNames, hashes) => {
+ const replaceClassNames = (result, classNames, style, classNameFormatter) =>
+   classNames
+     .filter((className) => style.includes(className))
+-    .reduce((acc, className, index) => acc.replace(new RegExp(className, 'g'), classNameFormatter(index++)), result);
++    .reduce((acc, className, index) => acc.replace(new RegExp(className, 'g'), classNameFormatter(index++, className)), result);
+ 
+ const stripUnreferencedClassNames = (result, classNames) =>
+   classNames.reduce((acc, className) => acc.replace(new RegExp(`${className}\\s?`, 'g'), ''), result);
+diff --git a/node_modules/jest-styled-components/typings/index.d.ts b/node_modules/jest-styled-components/typings/index.d.ts
+index 0349834..c55d239 100644
+--- a/node_modules/jest-styled-components/typings/index.d.ts
++++ b/node_modules/jest-styled-components/typings/index.d.ts
+@@ -24,7 +24,7 @@ declare global {
+ 
+ export interface StyledComponentsSerializerOptions {
+   addStyles?: boolean,
+-  classNameFormatter?: (index: number) => string 
++  classNameFormatter?: (index: number, className: string) => string
+ }
+ 
+ export declare const styleSheetSerializer: Exclude<Plugin, NewPlugin> & {

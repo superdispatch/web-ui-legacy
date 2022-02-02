@@ -132,6 +132,7 @@ module.exports = {
         '@typescript-eslint/no-namespace': 'off',
         '@typescript-eslint/no-unsafe-argument': 'off',
         'import/no-anonymous-default-export': 'off',
+        'testing-library/no-node-access': 'off',
       },
     },
 

@@ -34,7 +34,6 @@ function replaceThemeColors(style: string) {
 const renderedCSS = new Set<string>();
 
 function getSCSheet(): Element {
-  // eslint-disable-next-line testing-library/no-node-access
   const sheet = document.querySelector('[data-styled]');
 
   if (!sheet) {
@@ -74,10 +73,6 @@ export function renderGlobalCSS() {
   return css;
 }
 
-function defaultClassFormatter(index: number) {
-  return `Mui-${index}`;
-}
-
 export function renderCSS(ui: ReactElement, displayNames: string[]) {
   let firstUnmatchedClass: string | undefined;
   let classNameMaxIndex = 0;
@@ -86,13 +81,13 @@ export function renderCSS(ui: ReactElement, displayNames: string[]) {
 
   styleSheetSerializer.setStyleSheetSerializerOptions({
     addStyles: true,
-    classNameFormatter(index) {
+    classNameFormatter(index, className) {
       const formattedClass = displayNames[index];
       classNameMaxIndex = Math.max(classNameMaxIndex, index);
 
       if (!formattedClass) {
-        firstUnmatchedClass ||= defaultClassFormatter(index);
-        return defaultClassFormatter(index);
+        firstUnmatchedClass ||= className;
+        return className;
       }
 
       return formattedClass;
@@ -100,7 +95,6 @@ export function renderCSS(ui: ReactElement, displayNames: string[]) {
   });
 
   let css = styleSheetSerializer.print(
-    // eslint-disable-next-line testing-library/no-node-access
     container.firstChild,
     () => '', // do not print code
     identity,
@@ -109,10 +103,14 @@ export function renderCSS(ui: ReactElement, displayNames: string[]) {
   );
 
   if (firstUnmatchedClass) {
-    const unmatchedStyle = getStyleByClass(firstUnmatchedClass, css);
+    const associatedStyles = getStyleByClass(firstUnmatchedClass, css);
+    const associatedClasses = Array.from(
+      document.getElementsByClassName(firstUnmatchedClass),
+      (el) => el.className,
+    ).join('\n');
 
     throw Error(
-      `renderCSS: Unmatched class "${firstUnmatchedClass}" for style \n\n "${unmatchedStyle}"`,
+      `renderCSS: Unmatched class "${firstUnmatchedClass}" \n\n Associated classes: ${associatedClasses} \n\n Associated styles: \n\n "${associatedStyles}"`,
     );
   }
 

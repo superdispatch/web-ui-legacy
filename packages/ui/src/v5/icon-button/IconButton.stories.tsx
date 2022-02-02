@@ -1,11 +1,12 @@
-import { IconButton } from '@material-ui/core';
-import { Save as SaveIcon } from '@material-ui/icons';
+import { Save as SaveIcon } from '@mui/icons-material';
+import { IconButton } from '@mui/material';
 import { PropsLink } from '@superdispatch/ui-docs';
 import { Inline } from '..';
 
 export default {
-  title: 'v4/Inputs/IconButton',
+  title: 'Inputs/IconButton',
   parameters: {
+    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/icon-button/#props" />
     ),
