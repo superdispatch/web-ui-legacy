@@ -37,7 +37,7 @@ it('checks component css', () => {
         'MuiIconButton-sizeLarge',
         'MuiIconButton-edgeEnd',
         'MuiIconButton-edgeStart',
-        '?',
+        'MuiIconButton-root-2',
       ],
     ),
   ).toMatchInlineSnapshot(`
@@ -109,10 +109,11 @@ it('checks component css', () => {
       color: rgba(0,0,0,0.54);
       -webkit-transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
-      color: Color.Dark100;
       background-color: Color.Transparent;
       -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      padding: 12px;
+      font-size: 1.5rem;
     }
 
     .MuiIconButton-root:hover {
@@ -122,6 +123,10 @@ it('checks component css', () => {
     .MuiIconButton-root.Mui-disabled {
       background-color: transparent;
       color: Color.Silver400;
+    }
+
+    .MuiIconButton-root:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled) {
+      color: Color.Dark100;
     }
 
     .MuiIconButton-root:hover {
@@ -157,11 +162,11 @@ it('checks component css', () => {
       -webkit-transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       color: inherit;
-      color: Color.Dark100;
       background-color: Color.Transparent;
       -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-      color: inherit;
+      padding: 12px;
+      font-size: 1.5rem;
     }
 
     .MuiIconButton-colorInherit:hover {
@@ -171,6 +176,10 @@ it('checks component css', () => {
     .MuiIconButton-colorInherit.Mui-disabled {
       background-color: transparent;
       color: Color.Silver400;
+    }
+
+    .MuiIconButton-colorInherit:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled) {
+      color: Color.Dark100;
     }
 
     .MuiIconButton-colorInherit:hover {
@@ -206,10 +215,11 @@ it('checks component css', () => {
       -webkit-transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       color: Color.Blue300;
-      color: Color.Dark100;
       background-color: Color.Transparent;
       -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      padding: 12px;
+      font-size: 1.5rem;
     }
 
     .MuiIconButton-disabled:hover {
@@ -223,6 +233,10 @@ it('checks component css', () => {
     .MuiIconButton-disabled.Mui-disabled {
       background-color: transparent;
       color: Color.Silver400;
+    }
+
+    .MuiIconButton-disabled:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled) {
+      color: Color.Dark100;
     }
 
     .MuiIconButton-disabled:hover {
@@ -270,10 +284,11 @@ it('checks component css', () => {
       -webkit-transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       color: #9c27b0;
-      color: Color.Dark100;
       background-color: Color.Transparent;
       -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      padding: 12px;
+      font-size: 1.5rem;
     }
 
     .MuiIconButton-colorSecondary:hover {
@@ -287,6 +302,10 @@ it('checks component css', () => {
     .MuiIconButton-colorSecondary.Mui-disabled {
       background-color: transparent;
       color: Color.Silver400;
+    }
+
+    .MuiIconButton-colorSecondary:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled) {
+      color: Color.Dark100;
     }
 
     .MuiIconButton-colorSecondary:hover {
@@ -323,10 +342,11 @@ it('checks component css', () => {
       transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       padding: 5px;
       font-size: 1.125rem;
-      color: Color.Dark100;
       background-color: Color.Transparent;
       -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      padding: 3px;
+      font-size: 1.125rem;
     }
 
     .MuiIconButton-sizeSmall:hover {
@@ -336,6 +356,10 @@ it('checks component css', () => {
     .MuiIconButton-sizeSmall.Mui-disabled {
       background-color: transparent;
       color: Color.Silver400;
+    }
+
+    .MuiIconButton-sizeSmall:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled) {
+      color: Color.Dark100;
     }
 
     .MuiIconButton-sizeSmall:hover {
@@ -372,7 +396,6 @@ it('checks component css', () => {
       transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       padding: 12px;
       font-size: 1.75rem;
-      color: Color.Dark100;
       background-color: Color.Transparent;
       -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
@@ -385,6 +408,10 @@ it('checks component css', () => {
     .MuiIconButton-sizeLarge.Mui-disabled {
       background-color: transparent;
       color: Color.Silver400;
+    }
+
+    .MuiIconButton-sizeLarge:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled) {
+      color: Color.Dark100;
     }
 
     .MuiIconButton-sizeLarge:hover {
@@ -420,11 +447,12 @@ it('checks component css', () => {
       -webkit-transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       margin-right: -12px;
-      color: Color.Dark100;
       background-color: Color.Transparent;
       -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       margin-right: -8px;
+      padding: 12px;
+      font-size: 1.5rem;
     }
 
     .MuiIconButton-edgeEnd:hover {
@@ -434,6 +462,10 @@ it('checks component css', () => {
     .MuiIconButton-edgeEnd.Mui-disabled {
       background-color: transparent;
       color: Color.Silver400;
+    }
+
+    .MuiIconButton-edgeEnd:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled) {
+      color: Color.Dark100;
     }
 
     .MuiIconButton-edgeEnd:hover {
@@ -469,11 +501,12 @@ it('checks component css', () => {
       -webkit-transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       margin-left: -12px;
-      color: Color.Dark100;
       background-color: Color.Transparent;
       -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       margin-left: -8px;
+      padding: 12px;
+      font-size: 1.5rem;
     }
 
     .MuiIconButton-edgeStart:hover {
@@ -483,6 +516,10 @@ it('checks component css', () => {
     .MuiIconButton-edgeStart.Mui-disabled {
       background-color: transparent;
       color: Color.Silver400;
+    }
+
+    .MuiIconButton-edgeStart:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled) {
+      color: Color.Dark100;
     }
 
     .MuiIconButton-edgeStart:hover {
@@ -505,7 +542,7 @@ it('checks component css', () => {
       color: Color.Silver500;
     }
 
-    .? {
+    .MuiIconButton-root-2 {
       text-align: center;
       -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
@@ -517,34 +554,39 @@ it('checks component css', () => {
       color: rgba(0,0,0,0.54);
       -webkit-transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
-      color: Color.Dark100;
       background-color: Color.Transparent;
       -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      padding: 12px;
+      font-size: 1.5rem;
     }
 
-    .?.Mui-disabled {
+    .MuiIconButton-root-2.Mui-disabled {
       background-color: transparent;
       color: Color.Silver400;
     }
 
-    .?:hover {
+    .MuiIconButton-root-2:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled) {
+      color: Color.Dark100;
+    }
+
+    .MuiIconButton-root-2:hover {
       background-color: Color.Transparent;
     }
 
-    .?:active {
+    .MuiIconButton-root-2:active {
       color: Color.Dark500;
     }
 
-    .?:hover {
+    .MuiIconButton-root-2:hover {
       color: Color.Dark300;
     }
 
-    .?:focus {
+    .MuiIconButton-root-2:focus {
       background-color: Color.Silver400;
     }
 
-    .?.Mui-disabled {
+    .MuiIconButton-root-2.Mui-disabled {
       color: Color.Silver500;
     }
 
