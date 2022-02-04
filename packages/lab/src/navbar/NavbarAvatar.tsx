@@ -1,6 +1,6 @@
 import { Avatar, AvatarProps, Typography } from '@material-ui/core';
 import { Color, Column, Columns, Stack } from '@superdispatch/ui';
-import React, { ReactElement, ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
 import { useNavbarContext } from './NavbarContext';
 
