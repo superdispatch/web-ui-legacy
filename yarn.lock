@@ -3750,10 +3750,10 @@
     resolve-from "^5.0.0"
     store2 "^2.12.0"
 
-"@superdispatch/babel-preset@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@superdispatch/babel-preset/-/babel-preset-0.7.0.tgz#b251c1c0e8a2448641c4ff36747e2c44d589f0ca"
-  integrity sha512-bgv8IUTp+axvvypdq/k08AO1wPvMKcUMB02nBJtoXWRvkNqQ+JUMgcJGiPt98IMA7PoqDRVdhXkr2BI1HhRm8Q==
+"@superdispatch/babel-preset@0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@superdispatch/babel-preset/-/babel-preset-0.7.4.tgz#00a42498c559e729e88cd75ba07f2bc7532cf124"
+  integrity sha512-0tkovb3SaU/zL03HOJY9Z7jGrePJnH7af5YTrtLB10IW3oNSqDpwIIisqWVevAwVtvaj0XtbJTN/mD7Wd8LWBw==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
