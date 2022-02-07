@@ -115,7 +115,7 @@
     "@superdispatch/prettier-config": "0.7.0",
     "@superdispatch/tsconfig": "0.7.0",
     "@testing-library/cypress": "8.0.2",
-    "@testing-library/jest-dom": "5.16.1",
+    "@testing-library/jest-dom": "5.16.2",
     "@testing-library/react": "12.1.2",
     "@testing-library/react-hooks": "7.0.2",
     "@testing-library/user-event": "13.5.0",
