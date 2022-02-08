@@ -32,16 +32,16 @@ const Header = styled.div`
 
 const Wrapper = styled.div<{ isMobile: boolean }>`
   display: flex;
-  padding: 16px 0 0;
+  flex: 1;
+  flex-direction: column;
+
   overflow: hidden;
+  padding-top: 16px;
+  background: #1b2638;
+  transition: width 0.3s linear;
 
   height: 100%;
   width: ${({ isMobile }) => (isMobile ? '280px' : 'initial')};
-
-  flex: 1;
-  flex-direction: column;
-  background: #1b2638;
-  transition: width 0.3s linear;
 
   &[data-expanded='true'] {
     width: ${({ isMobile }) => (isMobile ? '280px' : '240px')};

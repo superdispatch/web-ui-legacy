@@ -72,9 +72,6 @@ export interface NavbarBottomBarItem {
   component?: ComponentType<HTMLAttributes<HTMLElement>>;
 }
 
-// todo
-// support hasMenuBadge?
-
 interface NavbarBottomBarProps {
   items: NavbarBottomBarItem[];
   hasMenuBadge?: boolean;

@@ -34,6 +34,8 @@ interface NavbarProps {
   items: NavbarItemOptions[];
   bottomItems: NavbarBottomBarItem[];
   footer?: ReactNode;
+
+  hasExtraBadge?: boolean;
 }
 
 export function Navbar({
@@ -43,6 +45,7 @@ export function Navbar({
   bottomItems,
   children,
   containerStyle,
+  hasExtraBadge,
 }: NavbarProps): ReactElement {
   const theme = useTheme();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -54,7 +57,7 @@ export function Navbar({
   const [isExpanded, setIsExpanded] = useState(matches);
 
   const list = <NavbarList footer={footer} items={items} header={header} />;
-  const hasBadge = items.some((item) => item.badge);
+  const hasBadge = hasExtraBadge || items.some((item) => item.badge);
 
   const ctx = useMemo(
     () => ({
