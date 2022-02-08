@@ -9,11 +9,14 @@ import {
 } from '@material-ui/icons';
 import { Meta } from '@storybook/react';
 import { noop } from 'lodash';
-import { Navbar, NavbarAvatar, NavbarMenu } from '../..';
+import { Box, Navbar, NavbarAvatar, NavbarMenu, TextBox } from '../..';
 
 export default {
   title: 'Lab/Navbar',
   component: Navbar,
+  parameters: {
+    layout: 'fullscreen',
+  },
 } as Meta;
 
 const bottomItems = [
@@ -55,51 +58,52 @@ const menuItems = [
   },
 ];
 
+const items = [
+  {
+    icon: <People />,
+    label: 'Customers',
+    groupKey: 1,
+    key: 'Customers',
+  },
+  {
+    icon: <Settings />,
+    label: 'Settings',
+    groupKey: 2,
+    key: 'Settings',
+  },
+  {
+    icon: <Dashboard />,
+    label: 'Dashboard',
+    groupKey: 2,
+    key: 'Dashbaord',
+  },
+];
+
 export const basic = () => {
   return (
-    <Navbar
-      items={[
-        {
-          icon: <People />,
-          label: 'Customers',
-          groupKey: 1,
-          key: 'Customers',
-        },
-        {
-          icon: <Settings />,
-          label: 'Settings',
-          groupKey: 2,
-          key: 'Settings',
-        },
-        {
-          icon: <Dashboard />,
-          label: 'Dashboard',
-          groupKey: 2,
-          key: 'Dashbaord',
-        },
-      ]}
-      bottomItems={bottomItems}
-      containerStyle={{ height: '100vh', overflow: 'auto' }}
-      header={
-        <img
-          alt=""
-          width="161px"
-          src="https://source.unsplash.com/featured/256x256/?avatar"
-        />
-      }
-      footer={
-        <NavbarMenu items={menuItems}>
-          <NavbarAvatar
-            title="John"
-            subtitle="Smith"
-            src="https://source.unsplash.com/featured/256x256/?avatar"
-          >
-            JS
-          </NavbarAvatar>
-        </NavbarMenu>
-      }
-    >
-      Hello
-    </Navbar>
+    <Box height="100vh">
+      <Navbar
+        items={items}
+        bottomItems={bottomItems}
+        header={
+          <TextBox variant="heading-3" color="white">
+            Super Navbar
+          </TextBox>
+        }
+        footer={
+          <NavbarMenu items={menuItems}>
+            <NavbarAvatar
+              title="John"
+              subtitle="Smith"
+              src="https://source.unsplash.com/featured/256x256/?avatar"
+            >
+              JS
+            </NavbarAvatar>
+          </NavbarMenu>
+        }
+      >
+        Hello
+      </Navbar>
+    </Box>
   );
 };

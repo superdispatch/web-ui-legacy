@@ -16,9 +16,12 @@ const StyledBottomNavigation = styled(BottomNavigation)`
 `;
 
 const StyledBottomNavigationAction = styled(BottomNavigationAction)`
-  color: ${Color.Silver500};
-  padding: 6px 0 8px;
-  line-height: 20px;
+  && {
+    background: #1b2638;
+    color: ${Color.Silver500};
+    padding: 6px 0 8px;
+    line-height: 20px;
+  }
 
   &:first-child {
     padding-left: 12px;

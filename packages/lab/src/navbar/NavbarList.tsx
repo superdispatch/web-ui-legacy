@@ -6,7 +6,13 @@ import {
   Inline,
   useResponsiveValue,
 } from '@superdispatch/ui';
-import { ComponentType, HTMLAttributes, ReactElement, ReactNode } from 'react';
+import {
+  ComponentType,
+  HTMLAttributes,
+  ReactElement,
+  ReactNode,
+  useMemo,
+} from 'react';
 import styled from 'styled-components';
 import { useNavbarContext } from './NavbarContext';
 import {
@@ -25,13 +31,16 @@ const Header = styled.div`
 `;
 
 const Wrapper = styled.div<{ isMobile: boolean }>`
-  padding: 16px 0 0;
-  background: #1b2638;
-  flex: 1;
   display: flex;
-  flex-direction: column;
-  overflow: auto;
+  padding: 16px 0 0;
+  overflow: hidden;
+
+  height: 100%;
   width: ${({ isMobile }) => (isMobile ? '280px' : 'initial')};
+
+  flex: 1;
+  flex-direction: column;
+  background: #1b2638;
   transition: width 0.3s linear;
 
   &[data-expanded='true'] {
@@ -50,8 +59,8 @@ const Wrapper = styled.div<{ isMobile: boolean }>`
 const ExpandIconButton = styled(IconButton)`
   color: ${Color.Silver500};
 
-  &:focus {
-    background: inherit;
+  &&:focus {
+    background-color: inherit;
   }
 `;
 
@@ -102,7 +111,7 @@ export function NavbarMenuItem({
   );
 }
 
-const NavbarListContent = styled.div`
+const Content = styled.div`
   height: 100%;
   min-height: 50px;
 
@@ -137,14 +146,18 @@ export function NavbarList({
     }
   }
 
-  const filteredItems: NavbarItemOptions[] = items
-    .filter((item) => {
-      return isSidebarOpened || !!item.icon;
-    })
-    .map((item) => ({
-      ...item,
-      menuGroupKey: item.groupKey,
-    }));
+  const filteredItems: NavbarItemOptions[] = useMemo(
+    () =>
+      items
+        .filter((item) => {
+          return isSidebarOpened || !!item.icon;
+        })
+        .map((item) => ({
+          ...item,
+          menuGroupKey: item.groupKey,
+        })),
+    [items, isSidebarOpened],
+  );
 
   return (
     <Wrapper isMobile={isMobile} data-expanded={isSidebarOpened}>
@@ -164,7 +177,7 @@ export function NavbarList({
         )}
       </Header>
 
-      <NavbarListContent aria-expanded={isSidebarOpened}>
+      <Content aria-expanded={isSidebarOpened}>
         <AdaptiveVerticalToolbar
           disableGutters={true}
           items={filteredItems}
@@ -186,7 +199,7 @@ export function NavbarList({
           )}
           moreElement={<NavbarItem icon={<MoreHoriz />} label="More" />}
         />
-      </NavbarListContent>
+      </Content>
 
       <Footer>{footer}</Footer>
     </Wrapper>

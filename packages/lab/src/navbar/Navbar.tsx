@@ -17,7 +17,6 @@ const Aside = styled.aside`
   display: flex;
   flex-direction: column;
   overflow: auto;
-  z-index: 4;
 `;
 
 const Main = styled.main`
@@ -25,7 +24,6 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   overflow: auto;
-  z-index: 1;
 `;
 
 interface NavbarProps {
@@ -73,6 +71,7 @@ export function Navbar({
       <div
         style={{
           display: 'flex',
+          height: '100%',
           flexDirection: isMobile ? 'column' : 'row',
           ...containerStyle,
         }}
