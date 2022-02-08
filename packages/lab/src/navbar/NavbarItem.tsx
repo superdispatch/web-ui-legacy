@@ -1,9 +1,8 @@
-import { Color } from '@superdispatch/ui';
+import { Color, useUID } from '@superdispatch/ui';
 import {
   ComponentType,
   CSSProperties,
   HTMLAttributes,
-  Key,
   MouseEvent,
   ReactElement,
   ReactNode,
@@ -33,10 +32,12 @@ export const NavbarLabel = styled.span`
   text-overflow: ellipsis;
 `;
 
-const NavbarItemRoot = styled.div<{
-  paddedTop?: boolean;
+const NavbarItemRoot = styled.div.withConfig<{
   disableHover?: boolean;
-}>`
+}>({
+  shouldForwardProp: (prop, defaultFn) =>
+    prop !== 'disableHover' && defaultFn(prop),
+})`
   width: 100%;
 
   display: flex;
@@ -51,7 +52,7 @@ const NavbarItemRoot = styled.div<{
   padding: 8px 16px;
   border-left: 4px solid transparent;
 
-  ${({ disableHover }: { disableHover?: boolean }) =>
+  ${({ disableHover }) =>
     !disableHover &&
     css`
       &:hover,
@@ -69,26 +70,18 @@ const NavbarItemRoot = styled.div<{
   }
 `;
 
-export interface NavbarItemOptions {
-  key: Key;
-  label: ReactNode;
-  groupKey?: string | number;
-
+export interface NavbarItemProps {
+  style?: CSSProperties;
   onClick?: (event: MouseEvent<HTMLElement>) => void;
   component?: ComponentType<HTMLAttributes<HTMLElement>>;
 
+  label: ReactNode;
   icon?: ReactNode;
   badge?: ReactNode;
-  hide?: boolean;
-
   disableHover?: boolean;
   paddedTop?: boolean;
   paddedLeft?: boolean;
   backgroundColor?: string;
-}
-
-interface NavbarItemProps extends Omit<NavbarItemOptions, 'key'> {
-  style?: CSSProperties;
 }
 
 export function NavbarItem({
@@ -103,11 +96,14 @@ export function NavbarItem({
   disableHover,
   style,
 }: NavbarItemProps): ReactElement {
+  const uid = useUID();
+
   return (
     <NavbarItemRoot
       disableHover={disableHover}
       onClick={onClick}
       as={component}
+      aria-labelledby={uid}
       style={{
         marginTop: paddedTop ? '16px' : '0',
         paddingLeft: paddedLeft ? '52px' : '20px',
@@ -116,12 +112,10 @@ export function NavbarItem({
     >
       {icon}
 
-      <NavbarLabel>{label}</NavbarLabel>
+      <NavbarLabel id={uid}>{label}</NavbarLabel>
 
       {badge != null && (
-        <NavbarBadge data-cypress="count" backgroundColor={backgroundColor}>
-          {badge}
-        </NavbarBadge>
+        <NavbarBadge backgroundColor={backgroundColor}>{badge}</NavbarBadge>
       )}
     </NavbarItemRoot>
   );

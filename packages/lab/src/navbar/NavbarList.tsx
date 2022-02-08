@@ -9,6 +9,8 @@ import {
 import {
   ComponentType,
   HTMLAttributes,
+  Key,
+  MouseEvent,
   ReactElement,
   ReactNode,
   useMemo,
@@ -18,7 +20,7 @@ import { useNavbarContext } from './NavbarContext';
 import {
   NavbarBadge,
   NavbarItem,
-  NavbarItemOptions,
+  NavbarItemProps,
   NavbarLabel,
 } from './NavbarItem';
 
@@ -71,7 +73,7 @@ const Footer = styled.div`
   margin: 16px 0 8px;
 `;
 
-const NavbarMenuItemRoot = styled.div`
+const Root = styled.div`
   color: inherit;
   background-color: unset;
   border-left: unset;
@@ -90,7 +92,7 @@ const NavbarMenuItemRoot = styled.div`
 interface NavbarMenuItemProps {
   icon?: ReactNode;
   label: ReactNode;
-  onClick?: () => void;
+  onClick?: (event: MouseEvent<HTMLElement>) => void;
   component?: ComponentType<HTMLAttributes<HTMLElement>>;
 }
 
@@ -101,13 +103,13 @@ export function NavbarMenuItem({
   component,
 }: NavbarMenuItemProps): ReactElement {
   return (
-    <NavbarMenuItemRoot as={component} onClick={onClick}>
+    <Root as={component} onClick={onClick}>
       <Inline space="xsmall" verticalAlign="center">
         {icon}
 
         <NavbarLabel>{label}</NavbarLabel>
       </Inline>
-    </NavbarMenuItemRoot>
+    </Root>
   );
 }
 
@@ -121,6 +123,12 @@ const Content = styled.div`
     }
   }
 `;
+
+export interface NavbarItemOptions extends NavbarItemProps {
+  key: Key;
+  groupKey?: Key;
+  hide?: boolean;
+}
 
 interface NavbarListProps {
   header: ReactNode;
@@ -138,19 +146,14 @@ export function NavbarList({
 
   const { isExpanded, isDrawerOpen, setDrawerOpen, setIsExpanded } =
     useNavbarContext();
-  const isSidebarOpened = isMobile ? isDrawerOpen : isExpanded;
 
-  function hideMobileSidebar(): void {
-    if (isMobile) {
-      setDrawerOpen(false);
-    }
-  }
+  const isSidebarOpened = isMobile ? isDrawerOpen : isExpanded;
 
   const filteredItems: NavbarItemOptions[] = useMemo(
     () =>
       items
         .filter((item) => {
-          return isSidebarOpened || !!item.icon;
+          return !item.hide && (isSidebarOpened || !!item.icon);
         })
         .map((item) => ({
           ...item,
@@ -162,7 +165,7 @@ export function NavbarList({
   return (
     <Wrapper isMobile={isMobile} data-expanded={isSidebarOpened}>
       <Header>
-        {(isExpanded || isSidebarOpened) && header}
+        {isSidebarOpened && header}
 
         {!isMobile && (
           <ExpandIconButton
@@ -189,13 +192,27 @@ export function NavbarList({
             return (
               <NavbarItem
                 {...item}
-                onClick={hideMobileSidebar}
+                onClick={(event) => {
+                  item.onClick?.(event);
+
+                  if (!event.isDefaultPrevented()) {
+                    setDrawerOpen(false);
+                  }
+                }}
                 paddedTop={prev && prev.groupKey !== navbarItem.groupKey}
               />
             );
           }}
           renderMenuItem={(item) => (
-            <NavbarMenuItem {...item} onClick={hideMobileSidebar} />
+            <NavbarMenuItem
+              {...item}
+              onClick={(event) => {
+                item.onClick?.(event);
+                if (!event.isDefaultPrevented()) {
+                  setDrawerOpen(false);
+                }
+              }}
+            />
           )}
           moreElement={<NavbarItem icon={<MoreHoriz />} label="More" />}
         />

@@ -12,6 +12,7 @@ export * from './navbar/NavbarAvatar';
 export * from './navbar/NavbarBottomBar';
 export { useNavbarContext } from './navbar/NavbarContext';
 export * from './navbar/NavbarItem';
+export { NavbarItemOptions } from './navbar/NavbarList';
 export * from './navbar/NavbarMenu';
 export * from './sidebar/Sidebar';
 export * from './sidebar/SidebarContainer';

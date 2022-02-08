@@ -10,8 +10,7 @@ import {
 import styled from 'styled-components';
 import { NavbarBottomBar, NavbarBottomBarItem } from './NavbarBottomBar';
 import { NavbarContext } from './NavbarContext';
-import { NavbarItemOptions } from './NavbarItem';
-import { NavbarList } from './NavbarList';
+import { NavbarItemOptions, NavbarList } from './NavbarList';
 
 const Aside = styled.aside`
   display: flex;
