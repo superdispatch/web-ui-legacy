@@ -56,7 +56,6 @@ export function Navbar({
   const matches = useMediaQuery(theme.breakpoints.up('md'), { noSsr: true });
   const [isExpanded, setIsExpanded] = useState(matches);
 
-  const list = <NavbarList footer={footer} items={items} header={header} />;
   const hasBadge = hasExtraBadge || items.some((item) => item.badge);
 
   const ctx = useMemo(
@@ -79,7 +78,11 @@ export function Navbar({
           ...containerStyle,
         }}
       >
-        {!isMobile && <Aside>{list}</Aside>}
+        {!isMobile && (
+          <Aside>
+            <NavbarList header={header} items={items} footer={footer} />
+          </Aside>
+        )}
 
         <Main>{children}</Main>
 
@@ -100,7 +103,7 @@ export function Navbar({
             },
           }}
         >
-          {list}
+          <NavbarList header={header} items={items} footer={footer} />
         </Drawer>
       </div>
     </NavbarContext.Provider>
