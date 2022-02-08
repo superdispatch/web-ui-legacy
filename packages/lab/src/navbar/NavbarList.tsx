@@ -24,7 +24,7 @@ import {
 
 const Header = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-shrink: 0;
   margin: 0 16px;
@@ -51,7 +51,7 @@ const Wrapper = styled.div<{ isMobile: boolean }>`
     width: ${({ isMobile }) => (isMobile ? '280px' : '72px')};
 
     & > ${Header} {
-      flex-direction: column;
+      justify-content: center;
     }
   }
 `;
