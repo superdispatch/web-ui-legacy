@@ -82,22 +82,22 @@ export function NavbarMenu({ items, children }: NavbarMenuProps): ReactElement {
       >
         {items
           .filter((item) => item.visible !== false)
-          .map((item, index, arr) => {
-            return (
-              <>
-                <StyledMenuItem key={item.key} onClick={item.onClick}>
-                  <Inline space="small" verticalAlign="center">
-                    {item.icon}
+          .flatMap((item, index, arr) => {
+            return [
+              <StyledMenuItem key={item.key} onClick={item.onClick}>
+                <Inline space="small" verticalAlign="center">
+                  {item.icon}
 
-                    <Typography style={{ color: Color.Dark500 }}>
-                      {item.label}
-                    </Typography>
-                  </Inline>
-                </StyledMenuItem>
+                  <Typography style={{ color: Color.Dark500 }}>
+                    {item.label}
+                  </Typography>
+                </Inline>
+              </StyledMenuItem>,
 
-                {index !== arr.length - 1 && <Divider />}
-              </>
-            );
+              index !== arr.length - 1 && (
+                <Divider key={`${item.key}-divider`} />
+              ),
+            ];
           })}
       </Menu>
     </>
