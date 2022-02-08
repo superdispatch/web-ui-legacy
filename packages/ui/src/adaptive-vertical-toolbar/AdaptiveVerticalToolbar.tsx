@@ -144,25 +144,23 @@ export const AdaptiveVerticalToolbar: ForwardRefExoticComponent<AdaptiveVertical
                   setMenuButtonRef(undefined);
                 }}
               >
-                {menuItems.map((item, index, arr) => {
+                {menuItems.flatMap((item, index, arr) => {
                   const next = arr[index + 1];
-                  return (
-                    <>
-                      <MenuItem
-                        key={item.key}
-                        onClick={(event) => {
-                          item.onClick?.(event);
-                          setMenuButtonRef(undefined);
-                        }}
-                      >
-                        {renderMenuItem(item)}
-                      </MenuItem>
+                  return [
+                    <MenuItem
+                      key={item.key}
+                      onClick={(event) => {
+                        item.onClick?.(event);
+                        setMenuButtonRef(undefined);
+                      }}
+                    >
+                      {renderMenuItem(item)}
+                    </MenuItem>,
 
-                      {next && next.menuGroupKey !== item.menuGroupKey && (
-                        <Divider />
-                      )}
-                    </>
-                  );
+                    next && next.menuGroupKey !== item.menuGroupKey && (
+                      <Divider key={`${item.key}-divider`} />
+                    ),
+                  ];
                 })}
               </Menu>
             </Grid>
