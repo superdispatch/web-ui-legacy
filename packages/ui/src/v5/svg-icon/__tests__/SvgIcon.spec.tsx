@@ -179,6 +179,7 @@ it('checks component css', () => {
       font-size: inherit;
       display: inherit;
       font-size: var(--mui-svg-icon-size,32px);
+      font-size: inherit;
     }
 
     .MuiSvgIcon-fontSizeSmall {
@@ -260,6 +261,12 @@ it('checks component css', () => {
     @media (min-width:600px) {
       .MuiSvgIcon-fontSizeInherit {
         font-size: var(--mui-svg-icon-size,24px);
+      }
+    }
+
+    @media (min-width:600px) {
+      .MuiSvgIcon-fontSizeInherit {
+        font-size: inherit;
       }
     }
 
