@@ -16,8 +16,7 @@ import { VisibilityObserver } from '../utils/VisibilityObserver';
 
 const Root = styled(Typography, {
   name: 'SD-OverflowText',
-  shouldForwardProp: (prop, defaultFn) =>
-    prop !== 'truncated' && defaultFn(prop),
+  shouldForwardProp: (prop) => prop !== 'truncated',
 })<TypographyProps & { truncated?: boolean }>(({ truncated, theme }) => ({
   marginBottom: -1,
   borderBottom: '1px dashed transparent',

@@ -14,6 +14,7 @@ import { overrideCard } from '../card/CardOverrides';
 import { overrideIconButton } from '../icon-button/IconButtonOverrides';
 import { overridePaper } from '../paper/PaperOverrides';
 import { overrideToolbar } from '../toolbar/ToolbarOverrides';
+import { overrideTooltip } from '../tooltip/TooltipOverrides';
 import {
   createTypographyOptions,
   overrideTypography,
@@ -61,6 +62,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   overrideButton(theme);
   overrideAppBar(theme);
   overridePaper(theme);
+  overrideTooltip(theme);
   overrideToolbar(theme);
   overrideIconButton(theme);
   overrideTypography(theme);

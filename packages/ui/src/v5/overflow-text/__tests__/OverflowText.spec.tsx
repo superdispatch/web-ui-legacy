@@ -23,6 +23,9 @@ it('checks component css', () => {
       line-height: 20px;
       font-weight: 400;
       font-family: "Inter",sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .SD-OverflowText-root {

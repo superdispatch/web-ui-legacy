@@ -1,13 +1,13 @@
 import isLokiRunning from '@loki/is-loki-running';
-import { Button, Tooltip } from '@material-ui/core';
+import { Button, Tooltip } from '@mui/material';
 import { PropsLink } from '@superdispatch/ui-docs';
 import { Box } from '@superdispatch/ui-lab';
 import { Inline } from '../inline/Inline';
 
 export default {
-  title: 'v4/Data Display/Tooltip',
+  title: 'Data Display/Tooltip',
   parameters: {
-    loki: { skip: true },
+    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/tooltip/#props" />
     ),

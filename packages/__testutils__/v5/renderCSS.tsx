@@ -77,7 +77,7 @@ export function renderCSS(ui: ReactElement, displayNames: string[]) {
   let firstUnmatchedClass: string | undefined;
   let classNameMaxIndex = 0;
 
-  const { container } = render(<v5.ThemeProvider>{ui}</v5.ThemeProvider>);
+  render(<v5.ThemeProvider>{ui}</v5.ThemeProvider>);
 
   styleSheetSerializer.setStyleSheetSerializerOptions({
     addStyles: true,
@@ -95,7 +95,7 @@ export function renderCSS(ui: ReactElement, displayNames: string[]) {
   });
 
   let css = styleSheetSerializer.print(
-    container.firstChild,
+    document.body,
     () => '', // do not print code
     identity,
     {} as any,
