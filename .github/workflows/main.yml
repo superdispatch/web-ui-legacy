@@ -61,4 +61,4 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v6
-      - run: yarn test:visual-ci https://ui.superdispatch.org
+      - run: yarn test-visual-ci https://ui.superdispatch.org

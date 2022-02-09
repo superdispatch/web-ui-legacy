@@ -47,7 +47,7 @@ export const sizes = () => (
       <SaveIcon fontSize="inherit" />
     </IconButton>
 
-    <IconButton>
+    <IconButton size="large">
       <SaveIcon fontSize="inherit" />
     </IconButton>
   </Inline>

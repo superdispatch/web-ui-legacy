@@ -15,6 +15,13 @@ export function overrideSvgIcon(theme: SuperDispatchTheme): void {
         },
       },
 
+      fontSizeInherit: {
+        fontSize: 'inherit',
+        [sm]: {
+          fontSize: 'inherit',
+        },
+      },
+
       fontSizeSmall: {
         fontSize: 'var(--mui-svg-icon-size, 24px)',
         [sm]: {
