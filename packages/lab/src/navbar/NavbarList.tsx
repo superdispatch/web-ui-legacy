@@ -25,11 +25,12 @@ import {
 } from './NavbarItem';
 
 const Header = styled.div`
+  margin: 0 16px 8px;
+
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   flex-shrink: 0;
-  margin: 0 16px;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const Wrapper = styled.div<{ isMobile: boolean }>`

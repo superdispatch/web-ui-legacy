@@ -67,6 +67,7 @@ export function NavbarMenu({ items, children }: NavbarMenuProps): ReactElement {
         open={!!anchor}
         anchorEl={anchor}
         onClose={hideProfileMenu}
+        onClick={hideProfileMenu}
         anchorOrigin={{
           vertical: 'top',
           horizontal: 'center',
@@ -75,10 +76,6 @@ export function NavbarMenu({ items, children }: NavbarMenuProps): ReactElement {
           vertical: 'bottom',
           horizontal: 'center',
         }}
-        onClick={() => {
-          hideProfileMenu();
-        }}
-        PaperProps={{ 'aria-label': 'profile menu' }}
       >
         {items
           .filter((item) => item.visible !== false)
