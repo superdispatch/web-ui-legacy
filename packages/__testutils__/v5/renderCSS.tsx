@@ -106,7 +106,7 @@ export function renderCSS(ui: ReactElement, displayNames: string[]) {
     const associatedStyles = getStyleByClass(firstUnmatchedClass, css);
     const associatedClasses = Array.from(
       document.getElementsByClassName(firstUnmatchedClass),
-      (el) => el.className,
+      (el) => Array.from(el.classList).join(','),
     ).join('\n');
 
     throw Error(

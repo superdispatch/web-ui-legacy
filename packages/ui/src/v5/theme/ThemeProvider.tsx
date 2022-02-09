@@ -13,6 +13,7 @@ import { overrideButton } from '../button/ButtonOverrides';
 import { overrideCard } from '../card/CardOverrides';
 import { overrideIconButton } from '../icon-button/IconButtonOverrides';
 import { overridePaper } from '../paper/PaperOverrides';
+import { overrideSvgIcon } from '../svg-icon/SvgIconOverrides';
 import { overrideToolbar } from '../toolbar/ToolbarOverrides';
 import { overrideTooltip } from '../tooltip/TooltipOverrides';
 import {
@@ -63,6 +64,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   overrideAppBar(theme);
   overridePaper(theme);
   overrideTooltip(theme);
+  overrideSvgIcon(theme);
   overrideToolbar(theme);
   overrideIconButton(theme);
   overrideTypography(theme);
