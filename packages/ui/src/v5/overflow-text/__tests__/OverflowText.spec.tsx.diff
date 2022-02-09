@@ -1,0 +1,42 @@
+- v4
++ v5
+
+  Object {
++   ".MuiTypography-root": Object {
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
++     "overflow": "hidden",
++     "textOverflow": "ellipsis",
++     "whiteSpace": "nowrap",
++   },
+    ".SD-OverflowText-root": Object {
++     "WebkitTransition": "border 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "borderBottom": "1px dashed transparent",
+      "marginBottom": "-1px",
+-     "transition": "border 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+-   },
+-   ".SD-OverflowText-root.SD-OverflowText-truncated": Object {
+-     "borderBottomColor": "Color.Silver500",
+-     "cursor": "pointer",
++     "transition": "border 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+    ".SD-OverflowText-sentinel": Object {
+      "display": "inline-block",
+      "height": "100%",
+      "width": "1px",
+    },
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
++     Object {
++       ".MuiTypography-root": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++   ],
++   "@media print": Object {},
+  }

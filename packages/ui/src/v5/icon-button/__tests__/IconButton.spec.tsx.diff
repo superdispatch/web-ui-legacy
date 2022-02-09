@@ -1,0 +1,562 @@
+Compared values have no visual difference.
+- v4
++ v5
+
+@@ -1,51 +1,349 @@
+  Object {
++   ".MuiButtonBase-root": Object {
++     "MozAppearance": "none",
++     "MozUserSelect": "none",
++     "WebkitAlignItems": "center",
++     "WebkitAppearance": "none",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
++     "WebkitTapHighlightColor": "transparent",
++     "WebkitTextDecoration": "none",
++     "WebkitUserSelect": "none",
++     "alignItems": "center",
++     "backgroundColor": "transparent",
++     "border": "0",
++     "borderRadius": "0",
++     "boxSizing": "border-box",
++     "color": "inherit",
++     "cursor": "pointer",
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
++     "justifyContent": "center",
++     "margin": "0",
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
++     "msUserSelect": "none",
++     "outline": "0",
++     "padding": "0",
++     "position": "relative",
++     "textDecoration": "none",
++     "userSelect": "none",
++     "verticalAlign": "middle",
++   },
++   ".MuiButtonBase-root.Mui-disabled": Object {
++     "cursor": "default",
++     "pointerEvents": "none",
++   },
++   ".MuiButtonBase-root::-moz-focus-inner": Object {
++     "borderStyle": "none",
++   },
+    ".MuiIconButton-colorInherit": Object {
+-     "color": "inherit",
++     "WebkitFlex": "0 0 auto",
++     "WebkitTransition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
++     "borderRadius": "50%",
++     "color": Array [
++       "rgba(0,0,0,0.54)",
++       "inherit",
++     ],
++     "flex": "0 0 auto",
++     "fontSize": Array [
++       "1.5rem",
++       "1.5rem",
++     ],
++     "msFlex": "0 0 auto",
++     "overflow": "visible",
++     "padding": Array [
++       "8px",
++       "12px",
++     ],
++     "textAlign": "center",
++     "transition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
+    },
+-   ".MuiIconButton-colorPrimary": Object {
+-     "color": "Color.Blue300",
++   ".MuiIconButton-colorInherit.Mui-disabled": Object {
++     "backgroundColor": "transparent",
++     "color": "Color.Silver500",
+    },
+-   ".MuiIconButton-colorPrimary:active": Object {
+-     "color": "Color.Blue500",
++   ".MuiIconButton-colorInherit:active": Object {
++     "color": "Color.Dark500",
++   },
++   ".MuiIconButton-colorInherit:focus": Object {
++     "backgroundColor": "Color.Silver400",
+    },
+-   ".MuiIconButton-colorPrimary:focus": Object {
+-     "backgroundColor": "Color.Blue50",
++   ".MuiIconButton-colorInherit:hover": Object {
++     "backgroundColor": "Color.Transparent",
++     "color": "Color.Dark300",
+    },
+-   ".MuiIconButton-colorPrimary:hover": Object {
+-     "backgroundColor": "rgba(0, 117, 255, 0.04)",
+-     "color": "Color.Blue300",
++   ".MuiIconButton-colorInherit:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled)": Object {
++     "color": "Color.Dark100",
+    },
+    ".MuiIconButton-colorSecondary": Object {
+-     "color": "#f50057",
++     "WebkitFlex": "0 0 auto",
++     "WebkitTransition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
++     "borderRadius": "50%",
++     "color": Array [
++       "rgba(0,0,0,0.54)",
++       "#9c27b0",
++     ],
++     "flex": "0 0 auto",
++     "fontSize": Array [
++       "1.5rem",
++       "1.5rem",
++     ],
++     "msFlex": "0 0 auto",
++     "overflow": "visible",
++     "padding": Array [
++       "8px",
++       "12px",
++     ],
++     "textAlign": "center",
++     "transition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".MuiIconButton-colorSecondary.Mui-disabled": Object {
++     "backgroundColor": "transparent",
++     "color": "Color.Silver500",
++   },
++   ".MuiIconButton-colorSecondary:active": Object {
++     "color": "Color.Dark500",
+    },
++   ".MuiIconButton-colorSecondary:focus": Object {
++     "backgroundColor": "Color.Silver400",
++   },
+    ".MuiIconButton-colorSecondary:hover": Object {
+-     "backgroundColor": "rgba(245, 0, 87, 0.04)",
++     "backgroundColor": "Color.Transparent",
++     "color": "Color.Dark300",
++   },
++   ".MuiIconButton-colorSecondary:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled)": Object {
++     "color": "Color.Dark100",
++   },
++   ".MuiIconButton-disabled": Object {
++     "WebkitFlex": "0 0 auto",
++     "WebkitTransition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
++     "borderRadius": "50%",
++     "color": Array [
++       "rgba(0,0,0,0.54)",
++       "Color.Blue300",
++     ],
++     "flex": "0 0 auto",
++     "fontSize": Array [
++       "1.5rem",
++       "1.5rem",
++     ],
++     "msFlex": "0 0 auto",
++     "overflow": "visible",
++     "padding": Array [
++       "8px",
++       "12px",
++     ],
++     "textAlign": "center",
++     "transition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".MuiIconButton-disabled.Mui-disabled": Object {
++     "backgroundColor": "transparent",
++     "color": "Color.Silver500",
++   },
++   ".MuiIconButton-disabled:active": Object {
++     "color": "Color.Blue500",
++   },
++   ".MuiIconButton-disabled:focus": Object {
++     "backgroundColor": "Color.Blue50",
++   },
++   ".MuiIconButton-disabled:hover": Object {
++     "backgroundColor": "Color.Transparent",
++     "color": "Color.Blue300",
++   },
++   ".MuiIconButton-disabled:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled)": Object {
++     "color": "Color.Dark100",
+    },
+    ".MuiIconButton-edgeEnd": Object {
+-     "marginRight": "-8px",
++     "WebkitFlex": "0 0 auto",
++     "WebkitTransition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
++     "borderRadius": "50%",
++     "color": "rgba(0,0,0,0.54)",
++     "flex": "0 0 auto",
++     "fontSize": Array [
++       "1.5rem",
++       "1.5rem",
++     ],
++     "marginRight": Array [
++       "-12px",
++       "-8px",
++     ],
++     "msFlex": "0 0 auto",
++     "overflow": "visible",
++     "padding": Array [
++       "8px",
++       "12px",
++     ],
++     "textAlign": "center",
++     "transition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".MuiIconButton-edgeEnd.Mui-disabled": Object {
++     "backgroundColor": "transparent",
++     "color": "Color.Silver500",
++   },
++   ".MuiIconButton-edgeEnd:active": Object {
++     "color": "Color.Dark500",
+    },
++   ".MuiIconButton-edgeEnd:focus": Object {
++     "backgroundColor": "Color.Silver400",
++   },
++   ".MuiIconButton-edgeEnd:hover": Object {
++     "backgroundColor": "Color.Transparent",
++     "color": "Color.Dark300",
++   },
++   ".MuiIconButton-edgeEnd:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled)": Object {
++     "color": "Color.Dark100",
++   },
+    ".MuiIconButton-edgeStart": Object {
+-     "marginLeft": "-8px",
++     "WebkitFlex": "0 0 auto",
++     "WebkitTransition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
++     "borderRadius": "50%",
++     "color": "rgba(0,0,0,0.54)",
++     "flex": "0 0 auto",
++     "fontSize": Array [
++       "1.5rem",
++       "1.5rem",
++     ],
++     "marginLeft": Array [
++       "-12px",
++       "-8px",
++     ],
++     "msFlex": "0 0 auto",
++     "overflow": "visible",
++     "padding": Array [
++       "8px",
++       "12px",
++     ],
++     "textAlign": "center",
++     "transition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".MuiIconButton-edgeStart.Mui-disabled": Object {
++     "backgroundColor": "transparent",
++     "color": "Color.Silver500",
++   },
++   ".MuiIconButton-edgeStart:active": Object {
++     "color": "Color.Dark500",
++   },
++   ".MuiIconButton-edgeStart:focus": Object {
++     "backgroundColor": "Color.Silver400",
++   },
++   ".MuiIconButton-edgeStart:hover": Object {
++     "backgroundColor": "Color.Transparent",
++     "color": "Color.Dark300",
+    },
+-   ".MuiIconButton-label": Object {
+-     "alignItems": "inherit",
+-     "display": "flex",
+-     "justifyContent": "inherit",
+-     "width": "100%",
++   ".MuiIconButton-edgeStart:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled)": Object {
++     "color": "Color.Dark100",
+    },
+    ".MuiIconButton-root": Object {
++     "WebkitFlex": "0 0 auto",
++     "WebkitTransition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
+      "backgroundColor": "Color.Transparent",
+      "borderRadius": "50%",
+-     "color": "Color.Dark100",
++     "color": "rgba(0,0,0,0.54)",
++     "flex": "0 0 auto",
++     "fontSize": Array [
++       "1.5rem",
++       "1.5rem",
++     ],
++     "msFlex": "0 0 auto",
++     "overflow": "visible",
++     "padding": Array [
++       "8px",
++       "12px",
++     ],
++     "textAlign": "center",
++     "transition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".MuiIconButton-root-2": Object {
++     "WebkitFlex": "0 0 auto",
++     "WebkitTransition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
++     "borderRadius": "50%",
++     "color": "rgba(0,0,0,0.54)",
+      "flex": "0 0 auto",
+-     "fontSize": "1.5rem",
++     "fontSize": Array [
++       "1.5rem",
++       "1.5rem",
++     ],
++     "msFlex": "0 0 auto",
+      "overflow": "visible",
+-     "padding": "12px",
++     "padding": Array [
++       "8px",
++       "12px",
++     ],
+      "textAlign": "center",
+-     "transition": "color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+-     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "transition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".MuiIconButton-root-2.Mui-disabled": Object {
++     "backgroundColor": "transparent",
++     "color": "Color.Silver500",
++   },
++   ".MuiIconButton-root-2:active": Object {
++     "color": "Color.Dark500",
++   },
++   ".MuiIconButton-root-2:focus": Object {
++     "backgroundColor": "Color.Silver400",
++   },
++   ".MuiIconButton-root-2:hover": Object {
++     "backgroundColor": "Color.Transparent",
++     "color": "Color.Dark300",
++   },
++   ".MuiIconButton-root-2:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled)": Object {
++     "color": "Color.Dark100",
+    },
+    ".MuiIconButton-root.Mui-disabled": Object {
+      "backgroundColor": "transparent",
+      "color": "Color.Silver500",
+    },
+@@ -54,36 +352,175 @@
+    },
+    ".MuiIconButton-root:focus": Object {
+      "backgroundColor": "Color.Silver400",
+    },
+    ".MuiIconButton-root:hover": Object {
++     "backgroundColor": "Color.Transparent",
++     "color": "Color.Dark300",
++   },
++   ".MuiIconButton-root:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled)": Object {
++     "color": "Color.Dark100",
++   },
++   ".MuiIconButton-sizeLarge": Object {
++     "WebkitFlex": "0 0 auto",
++     "WebkitTransition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
++     "borderRadius": "50%",
++     "color": "rgba(0,0,0,0.54)",
++     "flex": "0 0 auto",
++     "fontSize": Array [
++       "1.5rem",
++       "1.75rem",
++     ],
++     "msFlex": "0 0 auto",
++     "overflow": "visible",
++     "padding": Array [
++       "8px",
++       "12px",
++     ],
++     "textAlign": "center",
++     "transition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++   },
++   ".MuiIconButton-sizeLarge.Mui-disabled": Object {
++     "backgroundColor": "transparent",
++     "color": "Color.Silver500",
++   },
++   ".MuiIconButton-sizeLarge:active": Object {
++     "color": "Color.Dark500",
++   },
++   ".MuiIconButton-sizeLarge:focus": Object {
++     "backgroundColor": "Color.Silver400",
++   },
++   ".MuiIconButton-sizeLarge:hover": Object {
+      "backgroundColor": "Color.Transparent",
+      "color": "Color.Dark300",
++   },
++   ".MuiIconButton-sizeLarge:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled)": Object {
++     "color": "Color.Dark100",
+    },
+    ".MuiIconButton-sizeSmall": Object {
+-     "fontSize": "1.125rem",
+-     "padding": "3px",
++     "WebkitFlex": "0 0 auto",
++     "WebkitTransition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
++     "backgroundColor": "Color.Transparent",
++     "borderRadius": "50%",
++     "color": "rgba(0,0,0,0.54)",
++     "flex": "0 0 auto",
++     "fontSize": Array [
++       "1.5rem",
++       "1.125rem",
++       "1.125rem",
++     ],
++     "msFlex": "0 0 auto",
++     "overflow": "visible",
++     "padding": Array [
++       "8px",
++       "5px",
++       "3px",
++     ],
++     "textAlign": "center",
++     "transition": Array [
++       "background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms",
++       "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     ],
+    },
+-   ".MuiIconButton-sizeSmall.MuiIconButton-edgeEnd": Object {
+-     "marginRight": "-3px",
++   ".MuiIconButton-sizeSmall.Mui-disabled": Object {
++     "backgroundColor": "transparent",
++     "color": "Color.Silver500",
+    },
+-   ".MuiIconButton-sizeSmall.MuiIconButton-edgeStart": Object {
+-     "marginLeft": "-3px",
++   ".MuiIconButton-sizeSmall:active": Object {
++     "color": "Color.Dark500",
+    },
+-   "@media (hover: none)": Array [
++   ".MuiIconButton-sizeSmall:focus": Object {
++     "backgroundColor": "Color.Silver400",
++   },
++   ".MuiIconButton-sizeSmall:hover": Object {
++     "backgroundColor": "Color.Transparent",
++     "color": "Color.Dark300",
++   },
++   ".MuiIconButton-sizeSmall:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled)": Object {
++     "color": "Color.Dark100",
++   },
++   ".MuiTouchRipple": Object {
++     "borderRadius": "inherit",
++     "bottom": "0",
++     "left": "0",
++     "overflow": "hidden",
++     "pointerEvents": "none",
++     "position": "absolute",
++     "right": "0",
++     "top": "0",
++     "zIndex": 0,
++   },
++   "@media (hover:none)": Array [
+      Object {
+        ".MuiIconButton-root:hover": Object {
+          "backgroundColor": "transparent",
+        },
+      },
+      Object {
+-       ".MuiIconButton-colorPrimary:hover": Object {
++       ".MuiIconButton-colorInherit:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiIconButton-disabled:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiIconButton-disabled:hover": Object {
+          "backgroundColor": "transparent",
+        },
+      },
+      Object {
+        ".MuiIconButton-colorSecondary:hover": Object {
+          "backgroundColor": "transparent",
+        },
+      },
++     Object {
++       ".MuiIconButton-colorSecondary:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiIconButton-sizeSmall:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiIconButton-sizeLarge:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiIconButton-edgeEnd:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiIconButton-edgeStart:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++   ],
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
++   ],
++   "@media print": Array [
++     Object {
++       ".MuiButtonBase-root": Object {
++         "colorAdjust": "exact",
++       },
++     },
++     Object {},
+    ],
+  }

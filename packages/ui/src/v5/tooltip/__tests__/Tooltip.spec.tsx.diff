@@ -1,0 +1,281 @@
+Compared values have no visual difference.
+- v4
++ v5
+
+  Object {
+    ".MuiTooltip-arrow": Object {
+      "boxSizing": "border-box",
+-     "color": "Color.Dark400",
++     "color": Array [
++       "rgba(97,97,97,0.9)",
++       "Color.Dark400",
++     ],
+      "fontSize": "8px",
+      "height": "0.71em",
+      "overflow": "hidden",
+      "position": "absolute",
+      "width": "1em",
+    },
+    ".MuiTooltip-arrow::before": Object {
++     "WebkitTransform": "rotate(45deg)",
+      "backgroundColor": "currentColor",
+      "content": "''",
+      "display": "block",
+      "height": "100%",
+      "margin": "auto",
++     "msTransform": "rotate(45deg)",
+      "transform": "rotate(45deg)",
+      "width": "100%",
+    },
+    ".MuiTooltip-popper": Object {
++     "pointerEvents": "auto",
++     "zIndex": 1500,
++   },
++   ".MuiTooltip-popperArrow": Object {
+      "pointerEvents": "none",
+      "zIndex": 1500,
+    },
+-   ".MuiTooltip-popperArrow[x-placement*='bottom'] .MuiTooltip-arrow": Object {
+-     "left": "0",
+-     "marginLeft": "4px",
+-     "marginRight": "4px",
++   ".MuiTooltip-popperArrow[data-popper-placement*='bottom'] .MuiTooltip-arrow": Object {
+      "marginTop": "-0.71em",
+      "top": "0",
+    },
+-   ".MuiTooltip-popperArrow[x-placement*='bottom'] .MuiTooltip-arrow::before": Object {
++   ".MuiTooltip-popperArrow[data-popper-placement*='bottom'] .MuiTooltip-arrow::before": Object {
++     "WebkitTransformOrigin": "0 100%",
+      "borderTopLeftRadius": "2px",
++     "msTransformOrigin": "0 100%",
+      "transformOrigin": "0 100%",
+    },
+-   ".MuiTooltip-popperArrow[x-placement*='left'] .MuiTooltip-arrow": Object {
++   ".MuiTooltip-popperArrow[data-popper-placement*='left'] .MuiTooltip-arrow": Object {
+      "height": "1em",
+-     "marginBottom": "4px",
+      "marginRight": "-0.71em",
+-     "marginTop": "4px",
+      "right": "0",
+      "width": "0.71em",
+    },
+-   ".MuiTooltip-popperArrow[x-placement*='left'] .MuiTooltip-arrow::before": Object {
++   ".MuiTooltip-popperArrow[data-popper-placement*='left'] .MuiTooltip-arrow::before": Object {
++     "WebkitTransformOrigin": "0 0",
+      "borderTopRightRadius": "2px",
++     "msTransformOrigin": "0 0",
+      "transformOrigin": "0 0",
+    },
+-   ".MuiTooltip-popperArrow[x-placement*='right'] .MuiTooltip-arrow": Object {
++   ".MuiTooltip-popperArrow[data-popper-placement*='right'] .MuiTooltip-arrow": Object {
+      "height": "1em",
+      "left": "0",
+-     "marginBottom": "4px",
+      "marginLeft": "-0.71em",
+-     "marginTop": "4px",
+      "width": "0.71em",
+    },
+-   ".MuiTooltip-popperArrow[x-placement*='right'] .MuiTooltip-arrow::before": Object {
++   ".MuiTooltip-popperArrow[data-popper-placement*='right'] .MuiTooltip-arrow::before": Object {
++     "WebkitTransformOrigin": "100% 100%",
+      "borderBottomLeftRadius": "2px",
++     "msTransformOrigin": "100% 100%",
+      "transformOrigin": "100% 100%",
+    },
+-   ".MuiTooltip-popperArrow[x-placement*='top'] .MuiTooltip-arrow": Object {
++   ".MuiTooltip-popperArrow[data-popper-placement*='top'] .MuiTooltip-arrow": Object {
+      "bottom": "0",
+-     "left": "0",
+      "marginBottom": "-0.71em",
+-     "marginLeft": "4px",
+-     "marginRight": "4px",
+    },
+-   ".MuiTooltip-popperArrow[x-placement*='top'] .MuiTooltip-arrow::before": Object {
++   ".MuiTooltip-popperArrow[data-popper-placement*='top'] .MuiTooltip-arrow::before": Object {
++     "WebkitTransformOrigin": "100% 0",
+      "borderBottomRightRadius": "2px",
++     "msTransformOrigin": "100% 0",
+      "transformOrigin": "100% 0",
+    },
+    ".MuiTooltip-popperInteractive": Object {
+      "pointerEvents": "auto",
+-   },
+-   ".MuiTooltip-tooltip": Object {
+-     "backgroundColor": "Color.Dark400",
+-     "borderRadius": "4px",
+-     "color": "Color.White",
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 400,
+-     "lineHeight": "20px",
+-     "maxWidth": "300px",
+-     "padding": "8px 12px",
+-     "wordWrap": "break-word",
+-   },
+-   ".MuiTooltip-tooltipArrow": Object {
+-     "margin": "0",
+-     "position": "relative",
++     "zIndex": 1500,
+    },
+-   ".MuiTooltip-tooltipPlacementBottom": Object {
+-     "margin": "24px 0",
++   ".MuiTooltip-popper[data-popper-placement*='bottom'] .MuiTooltip-arrow": Object {
++     "WebkitTransformOrigin": "center top",
++     "marginTop": "14px",
++     "msTransformOrigin": "center top",
++     "top": "0",
+      "transformOrigin": "center top",
+    },
+-   ".MuiTooltip-tooltipPlacementLeft": Object {
+-     "margin": "0 24px",
++   ".MuiTooltip-popper[data-popper-placement*='bottom'] .MuiTooltip-arrow::before": Object {
++     "WebkitTransformOrigin": "0 100%",
++     "borderTopLeftRadius": "2px",
++     "msTransformOrigin": "0 100%",
++     "transformOrigin": "0 100%",
++   },
++   ".MuiTooltip-popper[data-popper-placement*='left'] .MuiTooltip-arrow": Object {
++     "WebkitTransformOrigin": "right center",
++     "height": "1em",
++     "marginRight": "14px",
++     "msTransformOrigin": "right center",
++     "right": "0",
+      "transformOrigin": "right center",
++     "width": "0.71em",
+    },
+-   ".MuiTooltip-tooltipPlacementRight": Object {
+-     "margin": "0 24px",
++   ".MuiTooltip-popper[data-popper-placement*='left'] .MuiTooltip-arrow::before": Object {
++     "WebkitTransformOrigin": "0 0",
++     "borderTopRightRadius": "2px",
++     "msTransformOrigin": "0 0",
++     "transformOrigin": "0 0",
++   },
++   ".MuiTooltip-popper[data-popper-placement*='right'] .MuiTooltip-arrow": Object {
++     "WebkitTransformOrigin": "left center",
++     "height": "1em",
++     "left": "0",
++     "marginLeft": "14px",
++     "msTransformOrigin": "left center",
+      "transformOrigin": "left center",
++     "width": "0.71em",
+    },
+-   ".MuiTooltip-tooltipPlacementTop": Object {
+-     "margin": "24px 0",
++   ".MuiTooltip-popper[data-popper-placement*='right'] .MuiTooltip-arrow::before": Object {
++     "WebkitTransformOrigin": "100% 100%",
++     "borderBottomLeftRadius": "2px",
++     "msTransformOrigin": "100% 100%",
++     "transformOrigin": "100% 100%",
++   },
++   ".MuiTooltip-popper[data-popper-placement*='top'] .MuiTooltip-arrow": Object {
++     "WebkitTransformOrigin": "center bottom",
++     "bottom": "0",
++     "marginBottom": "14px",
++     "msTransformOrigin": "center bottom",
+      "transformOrigin": "center bottom",
+    },
+-   ".MuiTooltip-touch": Object {
+-     "fontSize": "0.875rem",
+-     "fontWeight": 400,
+-     "lineHeight": "1.14286em",
+-     "padding": "8px 16px",
++   ".MuiTooltip-popper[data-popper-placement*='top'] .MuiTooltip-arrow::before": Object {
++     "WebkitTransformOrigin": "100% 0",
++     "borderBottomRightRadius": "2px",
++     "msTransformOrigin": "100% 0",
++     "transformOrigin": "100% 0",
+    },
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Object {
+    ".MuiTooltip-tooltip": Object {
+-       "fontSize": "16px",
+-       "lineHeight": "24px",
++     "backgroundColor": Array [
++       "rgba(97,97,97,0.92)",
++       "Color.Dark400",
++     ],
++     "borderRadius": "4px",
++     "color": "Color.White",
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "0.6875rem",
++       "14px",
++     ],
++     "fontWeight": Array [
++       500,
++       400,
++     ],
++     "lineHeight": "20px",
++     "margin": "2px",
++     "maxWidth": "300px",
++     "padding": Array [
++       "4px 8px",
++       "8px 12px",
++     ],
++     "wordWrap": "break-word",
+    },
+-   },
+-   "@media (min-width: 600px)": Array [
+-     Object {
+-       ".MuiTooltip-tooltipPlacementLeft": Object {
+-         "margin": "0 14px",
+-       },
+-     },
+-     Object {
+-       ".MuiTooltip-tooltipPlacementRight": Object {
+-         "margin": "0 14px",
+-       },
++   ".MuiTooltip-tooltipArrow": Object {
++     "backgroundColor": Array [
++       "rgba(97,97,97,0.92)",
++       "Color.Dark400",
++     ],
++     "borderRadius": "4px",
++     "color": "Color.White",
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "0.6875rem",
++       "14px",
++     ],
++     "fontWeight": Array [
++       500,
++       400,
++     ],
++     "lineHeight": "20px",
++     "margin": "0",
++     "maxWidth": "300px",
++     "padding": Array [
++       "4px 8px",
++       "8px 12px",
++     ],
++     "position": "relative",
++     "wordWrap": "break-word",
+    },
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
+      Object {
+-       ".MuiTooltip-tooltipPlacementTop": Object {
+-         "margin": "14px 0",
++       ".MuiTooltip-tooltipArrow": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
+        },
+      },
+      Object {
+-       ".MuiTooltip-tooltipPlacementBottom": Object {
+-         "margin": "14px 0",
++       ".MuiTooltip-tooltip": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
+        },
+      },
++     Object {},
++     Object {},
+    ],
++   "@media print": Object {},
+  }

@@ -1,0 +1,288 @@
+Compared values have no visual difference.
+- v4
++ v5
+
+  Object {
+    ".MuiSvgIcon-colorAction": Object {
+-     "color": "Color.Dark100",
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
++     "color": Array [
++       "rgba(0,0,0,0.54)",
++       "Color.Dark100",
++     ],
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "1.5rem",
++       "var(--mui-svg-icon-size,32px)",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
+    },
+    ".MuiSvgIcon-colorDisabled": Object {
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
+      "color": "Color.Silver400",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "1.5rem",
++       "var(--mui-svg-icon-size,32px)",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
+    },
+    ".MuiSvgIcon-colorError": Object {
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
+      "color": "Color.Red300",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "1.5rem",
++       "var(--mui-svg-icon-size,32px)",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
+    },
+    ".MuiSvgIcon-colorPrimary": Object {
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
+      "color": "Color.Blue300",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "1.5rem",
++       "var(--mui-svg-icon-size,32px)",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
+    },
+    ".MuiSvgIcon-colorSecondary": Object {
+-     "color": "#f50057",
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
++     "color": "#9c27b0",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "1.5rem",
++       "var(--mui-svg-icon-size,32px)",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
+    },
+    ".MuiSvgIcon-fontSizeInherit": Object {
+-     "fontSize": "inherit",
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "inherit",
++       "var(--mui-svg-icon-size,32px)",
++       "inherit",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
+    },
+    ".MuiSvgIcon-fontSizeLarge": Object {
+-     "fontSize": "var(--mui-svg-icon-size, 32px)",
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "2.1875rem",
++       "var(--mui-svg-icon-size,32px)",
++       "var(--mui-svg-icon-size,32px)",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
+    },
+    ".MuiSvgIcon-fontSizeSmall": Object {
+-     "fontSize": "var(--mui-svg-icon-size, 24px)",
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "1.25rem",
++       "var(--mui-svg-icon-size,32px)",
++       "var(--mui-svg-icon-size,24px)",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
+    },
+    ".MuiSvgIcon-root": Object {
+-     "display": "inherit",
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
+      "fill": "currentColor",
+      "flexShrink": 0,
+-     "fontSize": "var(--mui-svg-icon-size, 32px)",
++     "fontSize": Array [
++       "1.5rem",
++       "var(--mui-svg-icon-size,32px)",
++     ],
+      "height": "1em",
+-     "transition": "fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "userSelect": "none",
+      "width": "1em",
+    },
+-   "@media (min-width: 600px)": Array [
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
++   ],
++   "@media (min-width:600px)": Array [
+      Object {
+        ".MuiSvgIcon-root": Object {
+-         "fontSize": "var(--mui-svg-icon-size, 24px)",
++         "fontSize": "var(--mui-svg-icon-size,24px)",
++       },
++     },
++     Object {
++       ".MuiSvgIcon-colorPrimary": Object {
++         "fontSize": "var(--mui-svg-icon-size,24px)",
++       },
++     },
++     Object {
++       ".MuiSvgIcon-colorSecondary": Object {
++         "fontSize": "var(--mui-svg-icon-size,24px)",
++       },
++     },
++     Object {
++       ".MuiSvgIcon-colorError": Object {
++         "fontSize": "var(--mui-svg-icon-size,24px)",
++       },
++     },
++     Object {
++       ".MuiSvgIcon-colorAction": Object {
++         "fontSize": "var(--mui-svg-icon-size,24px)",
++       },
++     },
++     Object {
++       ".MuiSvgIcon-colorDisabled": Object {
++         "fontSize": "var(--mui-svg-icon-size,24px)",
++       },
++     },
++     Object {
++       ".MuiSvgIcon-fontSizeInherit": Object {
++         "fontSize": "var(--mui-svg-icon-size,24px)",
++       },
++     },
++     Object {
++       ".MuiSvgIcon-fontSizeInherit": Object {
++         "fontSize": "inherit",
+        },
+      },
+      Object {
+        ".MuiSvgIcon-fontSizeSmall": Object {
+-         "fontSize": "var(--mui-svg-icon-size, 16px)",
++         "fontSize": "var(--mui-svg-icon-size,24px)",
++       },
++     },
++     Object {
++       ".MuiSvgIcon-fontSizeSmall": Object {
++         "fontSize": "var(--mui-svg-icon-size,16px)",
+        },
+      },
++     Object {
++       ".MuiSvgIcon-fontSizeLarge": Object {
++         "fontSize": "var(--mui-svg-icon-size,24px)",
++       },
++     },
+    ],
++   "@media print": Object {},
+  }

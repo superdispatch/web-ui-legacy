@@ -1,0 +1,122 @@
+Compared values have no visual difference.
+- v4
++ v5
+
+  Object {
+    ".MuiToolbar-dense": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "alignItems": "center",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
+      "minHeight": "48px",
+-   },
+-   ".MuiToolbar-gutters": Object {
++     "msFlexAlign": "center",
+      "paddingLeft": "16px",
+      "paddingRight": "16px",
++     "position": "relative",
+    },
+-   ".MuiToolbar-regular": Object {
+-     "minHeight": "64px",
++   ".MuiToolbar-disableGutters": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "alignItems": "center",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "minHeight": Array [
++       "56px",
++       "64px",
++     ],
++     "msFlexAlign": "center",
++     "position": "relative",
+    },
+-   ".MuiToolbar-root": Object {
++   ".MuiToolbar-regular-gutters": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
+      "alignItems": "center",
+-     "display": "flex",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "minHeight": Array [
++       "56px",
++       "64px",
++     ],
++     "msFlexAlign": "center",
++     "paddingLeft": "16px",
++     "paddingRight": "16px",
+      "position": "relative",
++   },
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
++   ],
++   "@media (min-width:0px) and (orientation:landscape)": Array [
++     Object {
++       ".MuiToolbar-regular-gutters": Object {
++         "minHeight": "48px",
++       },
+      },
+-   "@media (min-width: 0px) and (orientation: landscape)": Object {
+-     ".MuiToolbar-regular": Object {
++     Object {
++       ".MuiToolbar-disableGutters": Object {
+          "minHeight": "48px",
+        },
+      },
+-   "@media (min-width: 600px)": Array [
++   ],
++   "@media (min-width:600px)": Array [
+      Object {
+-       ".MuiToolbar-gutters": Object {
++       ".MuiToolbar-regular-gutters": Object {
++         "paddingLeft": "24px",
++         "paddingRight": "24px",
++       },
++     },
++     Object {
++       ".MuiToolbar-regular-gutters": Object {
++         "minHeight": "64px",
++       },
++     },
++     Object {
++       ".MuiToolbar-regular-gutters": Object {
+          "paddingLeft": "16px",
+          "paddingRight": "16px",
+        },
+      },
+      Object {
+-       ".MuiToolbar-regular": Object {
++       ".MuiToolbar-disableGutters": Object {
+          "minHeight": "64px",
++       },
++     },
++     Object {
++       ".MuiToolbar-dense": Object {
++         "paddingLeft": "24px",
++         "paddingRight": "24px",
++       },
++     },
++     Object {
++       ".MuiToolbar-dense": Object {
++         "paddingLeft": "16px",
++         "paddingRight": "16px",
+        },
+      },
+    ],
++   "@media print": Object {},
+  }

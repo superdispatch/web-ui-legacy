@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v5
+          cache-key: yarn-v6
       - run: yarn check:types
       - run: yarn lint
       - run: yarn test
@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v5
+          cache-key: yarn-v6
       - uses: superdispatch/actions/build-size/limit@v1
         with:
           install_command: 'yarn install'
@@ -37,7 +37,7 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v5
+          cache-key: yarn-v6
       - run: yarn storybook:build
       - run: yarn playroom:build
       - id: deploy
@@ -57,7 +57,7 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v5
+          cache-key: yarn-v6
       - run: yarn cypress install
       - run: yarn percy exec -- cypress run
         env:
@@ -72,8 +72,8 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v5
-      - run: yarn test:visual-ci ${{ needs.preview.outputs.deploy-url }}
+          cache-key: yarn-v6
+      - run: yarn test-visual-ci ${{ needs.preview.outputs.deploy-url }}
 
       - if: ${{ failure() }}
         uses: actions/upload-artifact@v2

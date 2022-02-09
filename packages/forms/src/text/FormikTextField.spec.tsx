@@ -63,7 +63,6 @@ test('errors', async () => {
 
   const errorID = screen.getByRole('textbox').getAttribute('aria-describedby');
 
-  // eslint-disable-next-line testing-library/no-node-access
   expect(document.getElementById(errorID!)).toMatchInlineSnapshot(`
     <p
       class="MuiFormHelperText-root MuiFormHelperText-contained Mui-error MuiFormHelperText-filled"
@@ -95,7 +94,6 @@ test('formatErrors', async () => {
 
   const errorID = screen.getByRole('textbox').getAttribute('aria-describedby');
 
-  // eslint-disable-next-line testing-library/no-node-access
   expect(document.getElementById(errorID!)).toMatchInlineSnapshot(`
     <p
       class="MuiFormHelperText-root MuiFormHelperText-contained Mui-error"

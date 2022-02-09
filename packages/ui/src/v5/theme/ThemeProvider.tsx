@@ -8,8 +8,14 @@ import { createBreakpoints } from '@mui/system';
 import { useConstant } from '@superdispatch/hooks';
 import { Rule, StyleSheet } from 'jss';
 import { ReactElement, ReactNode } from 'react';
+import { overrideAppBar } from '../app-bar/AppBarOverrides';
 import { overrideButton } from '../button/ButtonOverrides';
 import { overrideCard } from '../card/CardOverrides';
+import { overrideIconButton } from '../icon-button/IconButtonOverrides';
+import { overridePaper } from '../paper/PaperOverrides';
+import { overrideSvgIcon } from '../svg-icon/SvgIconOverrides';
+import { overrideToolbar } from '../toolbar/ToolbarOverrides';
+import { overrideTooltip } from '../tooltip/TooltipOverrides';
 import {
   createTypographyOptions,
   overrideTypography,
@@ -55,6 +61,12 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
 
   overrideCard(theme);
   overrideButton(theme);
+  overrideAppBar(theme);
+  overridePaper(theme);
+  overrideTooltip(theme);
+  overrideSvgIcon(theme);
+  overrideToolbar(theme);
+  overrideIconButton(theme);
   overrideTypography(theme);
   overrideCssBaseline(theme);
 
