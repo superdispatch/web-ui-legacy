@@ -5,9 +5,6 @@ import { OverflowText } from './OverflowText';
 export default {
   title: 'v4/Data Display/OverflowText',
   component: OverflowText,
-  parameters: {
-    loki: { skip: true },
-  },
   decorators: [
     (Story) => (
       <Box maxWidth="200px">

@@ -3,9 +3,8 @@ import { PropsLink } from '@superdispatch/ui-docs';
 import { Inline } from '../inline/Inline';
 
 export default {
-  title: 'Data Display/SvgIcon',
+  title: 'v4/Data Display/SvgIcon',
   parameters: {
-    loki: { skip: true },
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/svg-icon/#props" />
     ),
