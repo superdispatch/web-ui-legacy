@@ -96,7 +96,7 @@ jobs:
 
                 await exec.exec('git', ['config', 'user.name', 'github_actor']);
                 await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
-                await exec.exec('git', ['push', 'origin', branch]);
+                await exec.exec('git', ['push', 'origin', `HEAD:${branch}`]);
 
                 for (const file of files) {
                   core.warning('Detected visual change.', { file });
