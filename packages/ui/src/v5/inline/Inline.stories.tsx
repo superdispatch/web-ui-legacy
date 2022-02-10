@@ -20,7 +20,7 @@ export default {
       <>
         Heavily inspired by the{' '}
         <Link href="https://seek-oss.github.io/braid-design-system/components/Inline">
-          Inline
+          Inline2
         </Link>{' '}
         component from the{' '}
         <Link href="https://seek-oss.github.io/braid-design-system">

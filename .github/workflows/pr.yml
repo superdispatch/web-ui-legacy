@@ -73,10 +73,32 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v6
-      - run: yarn test-visual-ci ${{ needs.preview.outputs.deploy-url }}
-
-      - if: ${{ failure() }}
-        uses: actions/upload-artifact@v2
+      - run: yarn visual-update-ci ${{ needs.preview.outputs.deploy-url }}
+      - uses: actions/github-script@v5
         with:
-          name: visual-changes
-          path: .loki
+          script: |
+            let changes = '';
+
+            await exec.exec('git', ['status', '--porcelain'], {
+              stdout: (data: Buffer) => {
+                changes += data.toString();
+              },
+              stderr: (data: Buffer) => {
+                changes += data.toString();
+              }  
+            });
+
+            console.log(context, changes);
+
+            if (changes.length) {
+                const branch = context.ref.split('/').pop();
+                const files = changes.split('\n').map(file => file.slice(2));
+
+                await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
+                await exec.exec('git', ['push', 'origin', branch]);
+
+
+                for (const file of files) {
+                  core.warning('Detected visual change.', { file });
+                }
+            }
