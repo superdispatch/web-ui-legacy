@@ -80,10 +80,10 @@ jobs:
             let changes = '';
 
             await exec.exec('git', ['status', '--porcelain'], {
-              stdout: (data: Buffer) => {
+              stdout: (data) => {
                 changes += data.toString();
               },
-              stderr: (data: Buffer) => {
+              stderr: (data) => {
                 changes += data.toString();
               }  
             });
