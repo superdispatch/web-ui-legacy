@@ -131,6 +131,7 @@ jobs:
                 const files = changes.split('\n').map(file => file.split(' ').shift());
             
                 await exec.exec('git', ['config', 'user.name', 'github_actor']);
+                await exec.exec('git', ['add', '.']);
                 await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
                 await exec.exec('git', ['push']);
             
