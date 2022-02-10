@@ -88,17 +88,41 @@ jobs:
               }  
             });
 
-            console.log(context, changes, process.env);
             console.log(changes);
-            console.log(process.env);
 
             if (changes.length) {
-                const branch = process.env.HEAD_REF.split('/').pop();
+                const branch = process.env.HEAD_REF;
                 const files = changes.split('\n').map(file => file.slice(2));
 
-                await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
-                await exec.exec('git', ['push', 'origin', branch]);
+                let output = '';
 
+                await exec.exec('git', ['--config.user=github_actor'], {
+                  stdout: (data) => {
+                    output += data.toString();
+                  },
+                  stderr: (data) => {
+                    output += data.toString();
+                  }  
+                });
+                await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.'], {
+                  stdout: (data) => {
+                    output += data.toString();
+                  },
+                  stderr: (data) => {
+                    output += data.toString();
+                  }  
+                });
+                await exec.exec('git', ['push', 'origin', branch], {
+                  stdout: (data) => {
+                    output += data.toString();
+                  },
+                  stderr: (data) => {
+                    output += data.toString();
+                  }  
+                });
+
+
+                console.log(output);
 
                 for (const file of files) {
                   core.warning('Detected visual change.', { file });
