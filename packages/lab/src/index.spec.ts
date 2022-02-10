@@ -9,9 +9,19 @@ test('api', () => {
       "Box": React.forwardRef(Box),
       "Button": React.forwardRef(Button),
       "ButtonArea": React.forwardRef(ButtonArea),
+      "Container": React.forwardRef(Container),
       "DescriptionItem": React.forwardRef(DescriptionItem),
       "FileDropZone": React.forwardRef(FileDropZone),
       "FileListItem": React.forwardRef(FileListItem),
+      "Navbar": [Function],
+      "NavbarAvatar": [Function],
+      "NavbarBadge": React.forwardRef(NavbarItem__NavbarBadge),
+      "NavbarBottomBar": [Function],
+      "NavbarItem": [Function],
+      "NavbarLabel": React.forwardRef(NavbarItem__NavbarLabel),
+      "NavbarList": [Function],
+      "NavbarMenu": [Function],
+      "NavbarMenuItem": [Function],
       "Sidebar": React.forwardRef(Sidebar),
       "SidebarContainer": React.forwardRef(SidebarContainer),
       "SidebarDivider": React.forwardRef(SidebarDivider),
@@ -22,6 +32,7 @@ test('api', () => {
       "TextBox": React.forwardRef(TextBox),
       "formatBytes": [Function],
       "toBytes": [Function],
+      "useNavbarContext": [Function],
     }
   `);
 });
