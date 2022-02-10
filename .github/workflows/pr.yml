@@ -70,12 +70,14 @@ jobs:
       - preview
     runs-on: ubuntu-latest
     steps:
-      - uses: umidbekk/actions/prepare-node-repo@v2
-        with:
-          cache-key: yarn-v6
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
+      - uses: actions/setup-node@v2
+      - uses: umidbekk/actions/npm/install@v2
+        with:
+          cache-key: yarn-v6
+
       - run: yarn visual-update-ci ${{ needs.preview.outputs.deploy-url }}
       - uses: actions/github-script@v5
         with:
@@ -102,6 +104,6 @@ jobs:
                 await exec.exec('git', ['push', 'origin', `HEAD:${branch}`]);
 
                 for (const file of files) {
-                  core.warning('Detected visual change.', { file });
+                  core.warning('Detected visual change.', { title: 'Image updated', file });
                 }
             }
