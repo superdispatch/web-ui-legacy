@@ -80,49 +80,23 @@ jobs:
             let changes = '';
 
             await exec.exec('git', ['status', '--porcelain'], {
-              stdout: (data) => {
-                changes += data.toString();
-              },
-              stderr: (data) => {
-                changes += data.toString();
-              }  
+              listeners: {
+                stdout: (data) => {
+                  changes += data.toString();
+                },
+                stderr: (data) => {
+                  changes += data.toString();
+                }
+              }
             });
-
-            console.log(changes);
 
             if (changes.length) {
                 const branch = process.env.HEAD_REF;
                 const files = changes.split('\n').map(file => file.slice(2));
 
-                let output = '';
-
-                await exec.exec('git', ['--config.user=github_actor'], {
-                  stdout: (data) => {
-                    output += data.toString();
-                  },
-                  stderr: (data) => {
-                    output += data.toString();
-                  }  
-                });
-                await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.'], {
-                  stdout: (data) => {
-                    output += data.toString();
-                  },
-                  stderr: (data) => {
-                    output += data.toString();
-                  }  
-                });
-                await exec.exec('git', ['push', 'origin', branch], {
-                  stdout: (data) => {
-                    output += data.toString();
-                  },
-                  stderr: (data) => {
-                    output += data.toString();
-                  }  
-                });
-
-
-                console.log(output);
+                await exec.exec('git', ['config', 'user.name=github_actor']);
+                await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
+                await exec.exec('git', ['push', 'origin', branch]);
 
                 for (const file of files) {
                   core.warning('Detected visual change.', { file });
