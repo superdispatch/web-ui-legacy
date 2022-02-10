@@ -193,6 +193,7 @@ export function NavbarList({
             return (
               <NavbarItem
                 {...item}
+                gutter={prev && prev.groupKey !== navbarItem.groupKey}
                 onClick={(event) => {
                   item.onClick?.(event);
 
@@ -200,7 +201,6 @@ export function NavbarList({
                     setDrawerOpen(false);
                   }
                 }}
-                paddedTop={prev && prev.groupKey !== navbarItem.groupKey}
               />
             );
           }}

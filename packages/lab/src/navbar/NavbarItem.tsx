@@ -1,17 +1,14 @@
 import { Color, useUID } from '@superdispatch/ui';
 import {
   ComponentType,
-  CSSProperties,
   HTMLAttributes,
   MouseEvent,
   ReactElement,
   ReactNode,
 } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-export const NavbarBadge = styled.span<{
-  backgroundColor?: string;
-}>`
+export const NavbarBadge = styled.span`
   flex-shrink: 0;
   padding: 4px 6px;
   min-width: 20px;
@@ -20,9 +17,17 @@ export const NavbarBadge = styled.span<{
   font-weight: 400;
   border-radius: 10px;
   text-align: center;
-  color: ${({ backgroundColor }) =>
-    backgroundColor ? Color.White : 'inherit'};
-  background: ${({ backgroundColor }) => backgroundColor || '#131c2a'};
+  background: #131c2a;
+
+  &[data-variant='primary'] {
+    color: ${Color.White};
+    background: ${Color.Blue300};
+  }
+
+  &[data-variant='danger'] {
+    color: ${Color.White};
+    background: ${Color.Red500};
+  }
 `;
 
 export const NavbarLabel = styled.span`
@@ -32,12 +37,7 @@ export const NavbarLabel = styled.span`
   text-overflow: ellipsis;
 `;
 
-const NavbarItemRoot = styled.div.withConfig<{
-  disableHover?: boolean;
-}>({
-  shouldForwardProp: (prop, defaultFn) =>
-    prop !== 'disableHover' && defaultFn(prop),
-})`
+const NavbarItemRoot = styled.div`
   width: 100%;
 
   display: flex;
@@ -52,70 +52,63 @@ const NavbarItemRoot = styled.div.withConfig<{
   padding: 8px 16px;
   border-left: 4px solid transparent;
 
-  ${({ disableHover }) =>
-    !disableHover &&
-    css`
-      &:hover,
-      &[aria-current] {
-        background-color: #2f394a;
-        color: ${Color.White};
-        border-left-color: ${Color.Blue300};
-      }
-    `}
+  &:hover,
+  &[aria-current] {
+    background-color: #2f394a;
+    color: ${Color.White};
+    border-left-color: ${Color.Blue300};
+  }
+`;
 
-  & > img,
-  & > svg {
-    width: 24px;
-    margin-right: 8px;
+const IconWrapper = styled.div`
+  width: 24px;
+  margin-right: 8px;
+
+  & svg {
+    font-size: 24px;
   }
 `;
 
 export interface NavbarItemProps {
-  style?: CSSProperties;
   onClick?: (event: MouseEvent<HTMLElement>) => void;
   component?: ComponentType<HTMLAttributes<HTMLElement>>;
 
   label: ReactNode;
   icon?: ReactNode;
   badge?: ReactNode;
-  disableHover?: boolean;
-  paddedTop?: boolean;
-  paddedLeft?: boolean;
-  backgroundColor?: string;
+  ident?: number;
+  gutter?: boolean;
+  variant?: 'danger' | 'primary';
 }
 
 export function NavbarItem({
   label,
-  paddedLeft,
-  paddedTop,
-  backgroundColor,
+  gutter,
   badge,
   icon,
   component,
   onClick,
-  disableHover,
-  style,
+  variant,
+  ident = 0,
 }: NavbarItemProps): ReactElement {
   const uid = useUID();
 
   return (
     <NavbarItemRoot
-      disableHover={disableHover}
-      onClick={onClick}
       as={component}
+      onClick={onClick}
       aria-labelledby={uid}
       style={{
-        marginTop: paddedTop ? '16px' : '0',
-        paddingLeft: paddedLeft ? '52px' : '20px',
-        ...style,
+        marginTop: gutter ? '16px' : '0',
+        paddingLeft: (ident + 1) * 20,
       }}
     >
-      {icon}
+      <IconWrapper>{icon}</IconWrapper>
 
       <NavbarLabel id={uid}>{label}</NavbarLabel>
 
       {badge != null && (
-        <NavbarBadge backgroundColor={backgroundColor}>{badge}</NavbarBadge>
+        <NavbarBadge data-variant={variant}>{badge}</NavbarBadge>
       )}
     </NavbarItemRoot>
   );

@@ -11,16 +11,24 @@ export const Container = forwardRef<HTMLDivElement, ContainerProps>(
 
     useLayoutEffect(() => {
       if (!fullViewportHeight) {
+        if (nodeRef.current) {
+          nodeRef.current.style.removeProperty('height');
+          nodeRef.current.style.removeProperty('--vh');
+        }
         return;
       }
 
-      const node = nodeRef.current;
-
       function updateHeight(): void {
-        if (node) {
+        if (nodeRef.current) {
           // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-          node.style.setProperty('height', 'calc(var(--vh, 1vh) * 100)');
-          node.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+          nodeRef.current.style.setProperty(
+            'height',
+            'calc(var(--vh, 1vh) * 100)',
+          );
+          nodeRef.current.style.setProperty(
+            '--vh',
+            `${window.innerHeight * 0.01}px`,
+          );
         }
       }
 
@@ -29,11 +37,6 @@ export const Container = forwardRef<HTMLDivElement, ContainerProps>(
       window.addEventListener('resize', updateHeight);
 
       return () => {
-        if (node) {
-          node.style.removeProperty('height');
-          node.style.removeProperty('--vh');
-        }
-
         window.removeEventListener('resize', updateHeight);
       };
     }, [fullViewportHeight]);
