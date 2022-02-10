@@ -20,7 +20,7 @@ export default {
       <>
         Heavily inspired by the{' '}
         <Link href="https://seek-oss.github.io/braid-design-system/components/Inline">
-          Inline2
+          Inline
         </Link>{' '}
         component from the{' '}
         <Link href="https://seek-oss.github.io/braid-design-system">
@@ -34,7 +34,6 @@ export default {
 
 export const basic = () => (
   <Inline>
-    <Placeholder width={48} height={48} />
     <Placeholder width={48} height={48} />
     <Placeholder width={48} height={48} />
     <Placeholder width={48} height={48} />

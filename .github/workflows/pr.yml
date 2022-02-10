@@ -88,10 +88,12 @@ jobs:
               }  
             });
 
-            console.log(context, changes);
+            console.log(context, changes, process.env);
+            console.log(changes);
+            console.log(process.env);
 
             if (changes.length) {
-                const branch = context.ref.split('/').pop();
+                const branch = process.env.HEAD_REF.split('/').pop();
                 const files = changes.split('\n').map(file => file.slice(2));
 
                 await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
