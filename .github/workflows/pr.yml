@@ -97,13 +97,16 @@ jobs:
 
             if (changes.length) {
                 const branch = process.env.GITHUB_HEAD_REF;
-                const files = changes.split('\n').map(file => file.split(' ').shift());
+                const files = changes
+                    .split('\n')
+                    .filter(Boolean)
+                    .map(file => file.split(' ').shift());
 
                 await exec.exec('git', ['config', 'user.name', 'github_actor']);
                 await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
                 await exec.exec('git', ['push', 'origin', `HEAD:${branch}`]);
 
                 for (const file of files) {
-                  core.warning('Detected visual change.', { title: 'Image updated', file });
+                  core.warning('Detected visual change.', { title: 'Image updated', file, startLine: 1, startColumn: 1 });
                 }
             }
