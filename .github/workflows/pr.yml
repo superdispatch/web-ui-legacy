@@ -73,6 +73,9 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v6
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
       - run: yarn visual-update-ci ${{ needs.preview.outputs.deploy-url }}
       - uses: actions/github-script@v5
         with:
@@ -98,46 +101,6 @@ jobs:
                 await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
                 await exec.exec('git', ['push', 'origin', `HEAD:${branch}`]);
 
-                for (const file of files) {
-                  core.warning('Detected visual change.', { file });
-                }
-            }
-
-  temp:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: umidbekk/actions/prepare-node-repo@v2
-        with:
-          cache-key: yarn-v6
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-      - run: echo test > test.txt
-      - uses: actions/github-script@v5
-        with:
-          script: |
-            let changes = '';
-            
-            await exec.exec('git', ['status', '--porcelain'], {
-              listeners: {
-                stdout: (data) => {
-                  changes += data.toString();
-                },
-                stderr: (data) => {
-                  changes += data.toString();
-                }
-              }
-            });
-            
-            if (changes.length) {
-                const branch = process.env.GITHUB_HEAD_REF;
-                const files = changes.split('\n').map(file => file.split(' ').shift());
-            
-                await exec.exec('git', ['config', 'user.name', 'github_actor']);
-                await exec.exec('git', ['add', '.']);
-                await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
-                await exec.exec('git', ['push']);
-            
                 for (const file of files) {
                   core.warning('Detected visual change.', { file });
                 }
