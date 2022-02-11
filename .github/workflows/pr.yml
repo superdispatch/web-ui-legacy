@@ -102,6 +102,9 @@ jobs:
                     .filter(Boolean)
                     .map(file => file.split(' ').shift());
 
+                await exec.exec('git', ['config', 'user.name', 'github_actions']);
+                await exec.exec('git', ['config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com']);
+
                 await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
                 await exec.exec('git', ['push', 'origin', `HEAD:${branch}`]);
 
