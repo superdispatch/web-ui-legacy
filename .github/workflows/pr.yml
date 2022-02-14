@@ -82,20 +82,42 @@ jobs:
       - uses: actions/github-script@v5
         with:
           script: |
-            let changes = '';
+            function getCurrentCommitHash() {
+              let output = '';
 
-            await exec.exec('git', ['status', '--porcelain'], {
-              listeners: {
-                stdout: (data) => {
-                  changes += data.toString();
-                },
-                stderr: (data) => {
-                  changes += data.toString();
+              await exec.exec('git', ['rev-parse', 'HEAD'], {
+                listeners: {
+                  stdout: (data) => {
+                    output += data.toString();
+                  },
+                  stderr: (data) => {
+                    output += data.toString();
+                  }
                 }
-              }
-            });
+              });
+
+              return output;
+            }
+
+            function getChangedFiles() {
+              let output = '';
+
+              await exec.exec('git', ['status', '--porcelain'], {
+                listeners: {
+                  stdout: (data) => {
+                    output += data.toString();
+                  },
+                  stderr: (data) => {
+                    output += data.toString();
+                  }
+                }
+              });
+
+              return output;
+            }
 
             const branch = process.env.GITHUB_HEAD_REF;
+            const changes = await getChangedFiles();
             const files = changes
               .split('\n')
               .filter(Boolean)
@@ -108,14 +130,13 @@ jobs:
                 await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
                 await exec.exec('git', ['push', 'origin', `HEAD:${branch}`]);
 
-                const filesUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/pull/${context.issue.number}/files`;
+                const hash = await getCurrentCommitHash();
+                const commitUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/pull/${context.issue.number}/commits/${hash}`;
 
                 github.rest.issues.createComment({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  body: `Detected visual changes:
-                    ${files.map(file => `- [${file}](${filesUrl}#:~:text=${file})`).join('\n')}
-                  `
+                  body: `Detected visual changes. Updated in commit ${commitUrl}`
                 });
             }
