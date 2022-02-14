@@ -152,7 +152,7 @@
     "jest": "27.4.5",
     "jest-watch-typeahead": "1.0.0",
     "lerna": "4.0.0",
-    "lint-staged": "11.1.2",
+    "lint-staged": "11.1.4",
     "lodash": "4.17.21",
     "lorem-ipsum": "2.0.4",
     "mockdate": "3.0.5",
