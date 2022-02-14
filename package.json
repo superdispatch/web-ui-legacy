@@ -36,6 +36,7 @@
     "test": "jest --coverage --forceExit",
     "visual-approve": "loki approve",
     "visual-update": "loki update --port 5000 --chromeRetries 2",
+    "visual-update-ci": "loki update --requireReference --verboseRenderer --reactUri",
     "test-visual": "loki test --port 5000 --chromeRetries 2",
     "test-visual-ci": "loki test --requireReference --verboseRenderer --reactUri",
     "test-branch": "yarn test --changedSince origin/main",
