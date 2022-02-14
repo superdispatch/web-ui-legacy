@@ -95,23 +95,27 @@ jobs:
               }
             });
 
-            if (changes.length) {
-                const branch = process.env.GITHUB_HEAD_REF;
-                const files = changes
-                    .split('\n')
-                    .filter(Boolean)
-                    .map(file => file.split(' ').shift());
+            const branch = process.env.GITHUB_HEAD_REF;
+            const files = changes
+              .split('\n')
+              .filter(Boolean)
+              .map(file => file.split(' ').shift());
 
+            if (files.length) {
                 await exec.exec('git', ['config', 'user.name', 'github_actions']);
                 await exec.exec('git', ['config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com']);
 
                 await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
                 await exec.exec('git', ['push', 'origin', `HEAD:${branch}`]);
 
+                const filesUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/pull/${context.issue.number}/files`;
+
                 github.rest.issues.createComment({
                   issue_number: context.issue.number,
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  body: 'Detected visual changes:\n\n' + files.join('\n')
+                  body: `Detected visual changes:
+                    ${files.map(file => `- ${filesUrl}#:~:text=${file}`).join('\n')}
+                  `
                 });
             }
