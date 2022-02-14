@@ -82,7 +82,7 @@ jobs:
       - uses: actions/github-script@v5
         with:
           script: |
-            function execCommand(commandLine, args = [], options = {}) {
+            async function execCommand(commandLine, args = [], options = {}) {
               let output = '';
 
               await exec.exec(commandLine, args, {
