@@ -43,6 +43,7 @@ export const basic = () => (
     <Placeholder width={48} height={48} />
     <Placeholder width={48} height={48} />
     <Placeholder width={48} height={48} />
+    <Placeholder width={48} height={48} />
   </Inline>
 );
 

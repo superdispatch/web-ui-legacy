@@ -9,6 +9,10 @@ export default {
 export const basic = () => (
   <AdaptiveToolbar
     items={[
+      'Send Offer',
+      'Post to SLB',
+      'Change Date Ranges',
+      'Increase Price By',
       'Mark as Accepted',
       'Send Customer Invoice',
       'Archive',
