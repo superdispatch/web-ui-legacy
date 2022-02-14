@@ -82,27 +82,11 @@ jobs:
       - uses: actions/github-script@v5
         with:
           script: |
-            function getCurrentCommitHash() {
+            function execCommand(commandLine, args = [], options = {}) {
               let output = '';
 
-              await exec.exec('git', ['rev-parse', 'HEAD'], {
-                listeners: {
-                  stdout: (data) => {
-                    output += data.toString();
-                  },
-                  stderr: (data) => {
-                    output += data.toString();
-                  }
-                }
-              });
-
-              return output;
-            }
-
-            function getChangedFiles() {
-              let output = '';
-
-              await exec.exec('git', ['status', '--porcelain'], {
+              await exec.exec(commandLine, args, {
+                ...options,
                 listeners: {
                   stdout: (data) => {
                     output += data.toString();
@@ -117,7 +101,7 @@ jobs:
             }
 
             const branch = process.env.GITHUB_HEAD_REF;
-            const changes = await getChangedFiles();
+            const changes = await execCommand('git', ['status', '--porcelain']);
             const files = changes
               .split('\n')
               .filter(Boolean)
@@ -130,7 +114,7 @@ jobs:
                 await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
                 await exec.exec('git', ['push', 'origin', `HEAD:${branch}`]);
 
-                const hash = await getCurrentCommitHash();
+                const hash = await execCommand('git', ['rev-parse', 'HEAD']);
                 const commitUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/pull/${context.issue.number}/commits/${hash}`;
 
                 github.rest.issues.createComment({
