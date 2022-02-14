@@ -115,7 +115,7 @@ jobs:
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   body: `Detected visual changes:
-                    ${files.map(file => `- ${filesUrl}#:~:text=${file}`).join('\n')}
+                    ${files.map(file => `- [${file}](${filesUrl}#:~:text=${file})`).join('\n')}
                   `
                 });
             }
