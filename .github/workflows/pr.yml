@@ -99,7 +99,7 @@ jobs:
             const files = changes
               .split('\n')
               .filter(Boolean)
-              .map(file => file.split(' ').shift());
+              .map(file => file.split(' ').pop());
 
             if (files.length) {
                 await exec.exec('git', ['config', 'user.name', 'github_actions']);
