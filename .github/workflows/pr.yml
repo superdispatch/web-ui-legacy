@@ -78,7 +78,7 @@ jobs:
         with:
           cache-key: yarn-v6
 
-      - uses: superdispatch/actions/update-snapshots@1.5
+      - uses: superdispatch/actions/update-snapshots@v1.5
         with:
           command: yarn test-visual-ci ${{ needs.preview.outputs.deploy-url }}
           update-command: yarn visual-update-ci ${{ needs.preview.outputs.deploy-url }}
