@@ -71,8 +71,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v2
       - uses: umidbekk/actions/npm/install@v2
         with:
