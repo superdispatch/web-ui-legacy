@@ -71,51 +71,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v2
       - uses: umidbekk/actions/npm/install@v2
         with:
           cache-key: yarn-v6
 
-      - run: yarn visual-update-ci ${{ needs.preview.outputs.deploy-url }}
-      - uses: actions/github-script@v5
+      - uses: superdispatch/actions/update-snapshots@v1.5
         with:
-          script: |
-            let changes = '';
-
-            await exec.exec('git', ['status', '--porcelain'], {
-              listeners: {
-                stdout: (data) => {
-                  changes += data.toString();
-                },
-                stderr: (data) => {
-                  changes += data.toString();
-                }
-              }
-            });
-
-            const branch = process.env.GITHUB_HEAD_REF;
-            const files = changes
-              .split('\n')
-              .filter(Boolean)
-              .map(file => file.split(' ').pop());
-
-            if (files.length) {
-                await exec.exec('git', ['config', 'user.name', 'github_actions']);
-                await exec.exec('git', ['config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com']);
-
-                await exec.exec('git', ['commit', '-am', 'chore: Updated visual changes.']);
-                await exec.exec('git', ['push', 'origin', `HEAD:${branch}`]);
-
-                const filesUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/pull/${context.issue.number}/files`;
-
-                github.rest.issues.createComment({
-                  issue_number: context.issue.number,
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  body: `Detected visual changes:
-                    ${files.map(file => `- [${file}](${filesUrl}#:~:text=${file})`).join('\n')}
-                  `
-                });
-            }
+          command: yarn test-visual-ci ${{ needs.preview.outputs.deploy-url }}
+          update-command: yarn visual-update-ci ${{ needs.preview.outputs.deploy-url }}
