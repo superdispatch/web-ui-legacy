@@ -88,7 +88,7 @@
     ]
   },
   "resolutions": {
-    "react-docgen-typescript": "2.1.0"
+    "react-docgen-typescript": "2.1.1"
   },
   "devDependencies": {
     "@codemod/cli": "2.3.2",
