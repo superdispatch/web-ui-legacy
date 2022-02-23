@@ -705,15 +705,15 @@ it('checks component css', () => {
     }
 
     .MuiFormLabel.Mui-error {
-      color: unset;
+      color: Color.Dark400;
     }
 
     .MuiFormLabel.Mui-focused {
-      color: unset;
+      color: Color.Dark400;
     }
 
     .MuiFormLabel.Mui-disabled {
-      color: unset;
+      color: Color.Dark400;
     }
 
     .MuiInputLabel {

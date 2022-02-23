@@ -108,21 +108,11 @@ Compared values have no visual difference.
       "color": "Color.Dark100",
     },
 -   ".MuiFormHelperText-root.Mui-error": Object {
--     "color": "Color.Red300",
--   },
--   ".MuiFormLabel-asterisk.Mui-error": Object {
 +   ".MuiFormHelperText.Mui-error": Object {
       "color": "Color.Red300",
     },
--   ".MuiFormLabel-colorSecondary.Mui-focused": Object {
--     "color": "#f50057",
--   },
--   ".MuiFormLabel-root": Object {
--     "color": "Color.Dark400",
--     "fontFamily": "'Inter', sans-serif",
--     "fontSize": "14px",
--     "fontWeight": 400,
--     "lineHeight": "20px",
+-   ".MuiFormLabel-asterisk.Mui-error": Object {
+-     "color": "Color.Red300",
 +   ".MuiFormLabel": Object {
 +     "color": Array [
 +       "Color.Dark200",
@@ -144,24 +134,34 @@ Compared values have no visual difference.
 +       "1.4375em",
 +       "20px",
 +     ],
-      "padding": "0",
++     "padding": "0",
 +     "position": "relative",
+    },
+-   ".MuiFormLabel-colorSecondary.Mui-focused": Object {
+-     "color": "#f50057",
++   ".MuiFormLabel.Mui-disabled": Object {
++     "color": "Color.Dark400",
+    },
+-   ".MuiFormLabel-root": Object {
++   ".MuiFormLabel.Mui-error": Object {
+      "color": "Color.Dark400",
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 400,
+-     "lineHeight": "20px",
+-     "padding": "0",
     },
 -   ".MuiInputAdornment-disablePointerEvents": Object {
 -     "pointerEvents": "none",
-+   ".MuiFormLabel.Mui-disabled": Object {
-+     "color": "unset",
++   ".MuiFormLabel.Mui-focused": Object {
++     "color": "Color.Dark400",
     },
 -   ".MuiInputAdornment-filled.MuiInputAdornment-positionStart:not(.MuiInputAdornment-hiddenLabel)": Object {
 -     "marginTop": "16px",
-+   ".MuiFormLabel.Mui-error": Object {
-+     "color": "unset",
-    },
+-   },
 -   ".MuiInputAdornment-positionEnd": Object {
 -     "marginLeft": "8px",
-+   ".MuiFormLabel.Mui-focused": Object {
-+     "color": "unset",
-    },
+-   },
 -   ".MuiInputAdornment-positionEnd .MuiIconButton-root": Object {
 -     "marginRight": "-4px",
 -   },
