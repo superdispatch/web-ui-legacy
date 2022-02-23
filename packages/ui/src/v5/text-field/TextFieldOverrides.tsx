@@ -29,9 +29,9 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
 
         color: Color.Dark400,
 
-        [`&.${formLabelClasses.error}`]: { color: 'unset' },
-        [`&.${formLabelClasses.focused}`]: { color: 'unset' },
-        [`&.${formLabelClasses.disabled}`]: { color: 'unset' },
+        [`&.${formLabelClasses.error}`]: { color: Color.Dark400 },
+        [`&.${formLabelClasses.focused}`]: { color: Color.Dark400 },
+        [`&.${formLabelClasses.disabled}`]: { color: Color.Dark400 },
       },
     },
   };
