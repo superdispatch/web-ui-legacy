@@ -1,0 +1,1279 @@
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+- v4
++ v5
+
+  Object {
+-   ".Mui-disabled .MuiSelect-icon": Object {
++   "$disabled .MuiSelect-icon": Object {
+      "color": "Color.Dark100",
+    },
+-   ".MuiFormControl-fullWidth": Object {
+-     "width": "100%",
+-   },
+-   ".MuiFormControl-marginDense": Object {
+-     "marginBottom": "4px",
+-     "marginTop": "8px",
+-   },
+-   ".MuiFormControl-marginNormal": Object {
+-     "marginBottom": "8px",
+-     "marginTop": "16px",
++   ".MuiFormControl": Object {
++     "WebkitFlexDirection": "column",
++     "border": "0",
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
++     "flexDirection": "column",
++     "margin": "0",
++     "minWidth": "0",
++     "msFlexDirection": "column",
++     "padding": "0",
++     "position": "relative",
++     "verticalAlign": "top",
+    },
+-   ".MuiFormControl-root": Object {
++   ".MuiFormControl-fullWidth": Object {
++     "WebkitFlexDirection": "column",
+      "border": "0",
+-     "display": "inline-flex",
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
+      "flexDirection": "column",
+      "margin": "0",
+      "minWidth": "0",
++     "msFlexDirection": "column",
+      "padding": "0",
+      "position": "relative",
+      "verticalAlign": "top",
++     "width": "100%",
+    },
+-   ".MuiFormHelperText-marginDense": Object {
+-     "marginTop": "4px",
+-   },
+-   ".MuiFormHelperText-root": Object {
++   ".MuiFormHelperText": Object {
+      "color": "Color.Dark200",
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 400,
+-     "lineHeight": "20px",
+-     "margin": "0",
+-     "marginTop": "4px",
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "12px",
++       "14px",
++     ],
++     "fontWeight": Array [
++       400,
++       400,
++     ],
++     "lineHeight": Array [
++       "16px",
++       "20px",
++     ],
++     "marginBottom": "0",
++     "marginLeft": Array [
++       "14px",
++       "unset",
++     ],
++     "marginRight": Array [
++       "14px",
++       "unset",
++     ],
++     "marginTop": Array [
++       "3px",
++       "4px",
++     ],
+      "textAlign": "left",
+    },
+-   ".MuiFormHelperText-root.Mui-disabled": Object {
++   ".MuiFormHelperText.Mui-disabled": Object {
+      "color": "Color.Dark100",
+    },
+-   ".MuiFormHelperText-root.Mui-error": Object {
+-     "color": "Color.Red300",
+-   },
+-   ".MuiFormLabel-asterisk.Mui-error": Object {
++   ".MuiFormHelperText.Mui-error": Object {
+      "color": "Color.Red300",
+    },
+-   ".MuiFormLabel-colorSecondary.Mui-focused": Object {
+-     "color": "#f50057",
+-   },
+-   ".MuiFormLabel-root": Object {
+-     "color": "Color.Dark400",
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 400,
+-     "lineHeight": "20px",
++   ".MuiFormLabel": Object {
++     "color": Array [
++       "Color.Dark200",
++       "Color.Dark400",
++     ],
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "14px",
++       "14px",
++     ],
++     "fontWeight": Array [
++       600,
++       400,
++     ],
++     "lineHeight": Array [
++       "1.4375em",
++       "20px",
++     ],
+      "padding": "0",
++     "position": "relative",
+    },
+-   ".MuiInputAdornment-disablePointerEvents": Object {
+-     "pointerEvents": "none",
++   ".MuiFormLabel.Mui-disabled": Object {
++     "color": "unset",
+    },
+-   ".MuiInputAdornment-filled.MuiInputAdornment-positionStart:not(.MuiInputAdornment-hiddenLabel)": Object {
+-     "marginTop": "16px",
++   ".MuiFormLabel.Mui-error": Object {
++     "color": "unset",
+    },
+-   ".MuiInputAdornment-positionEnd": Object {
+-     "marginLeft": "8px",
++   ".MuiFormLabel.Mui-focused": Object {
++     "color": "unset",
+    },
+-   ".MuiInputAdornment-positionEnd .MuiIconButton-root": Object {
+-     "marginRight": "-4px",
+-   },
+-   ".MuiInputAdornment-positionStart": Object {
++   ".MuiInputAdornment": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "alignItems": "center",
++     "color": "rgba(0,0,0,0.54)",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "height": "0.01em",
+      "marginRight": "8px",
++     "maxHeight": "2em",
++     "msFlexAlign": "center",
++     "whiteSpace": "nowrap",
+    },
+-   ".MuiInputAdornment-positionStart .MuiIconButton-root": Object {
++   ".MuiInputAdornment .MuiIconButton-root": Object {
+      "marginLeft": "-4px",
++     "padding": "8px",
+    },
+-   ".MuiInputAdornment-root": Object {
++   ".MuiInputAdornment .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall)": Object {
++     "fontSize": "24px",
++   },
++   ".MuiInputAdornment-positionEnd": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
+      "alignItems": "center",
+-     "display": "flex",
++     "color": "rgba(0,0,0,0.54)",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
+      "height": "0.01em",
++     "marginLeft": "8px",
+      "maxHeight": "2em",
++     "msFlexAlign": "center",
+      "whiteSpace": "nowrap",
+    },
+-   ".MuiInputAdornment-root .MuiIconButton-root": Object {
++   ".MuiInputAdornment-positionEnd .MuiIconButton-root": Object {
++     "marginRight": "-4px",
+      "padding": "8px",
+    },
+-   ".MuiInputAdornment-root .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall)": Object {
++   ".MuiInputAdornment-positionEnd .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall)": Object {
+      "fontSize": "24px",
++   },
++   ".MuiInputBase": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "alignItems": "center",
++     "boxSizing": "border-box",
++     "color": "Color.Dark500",
++     "cursor": "text",
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "14px",
++       "14px",
++     ],
++     "fontWeight": Array [
++       600,
++       400,
++     ],
++     "lineHeight": Array [
++       "1.4375em",
++       "20px",
++     ],
++     "msFlexAlign": "center",
++     "position": "relative",
+    },
+    ".MuiInputBase-fullWidth": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "alignItems": "center",
++     "boxSizing": "border-box",
++     "color": "Color.Dark500",
++     "cursor": "text",
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "14px",
++       "14px",
++     ],
++     "fontWeight": Array [
++       600,
++       400,
++     ],
++     "lineHeight": Array [
++       "1.4375em",
++       "20px",
++     ],
++     "msFlexAlign": "center",
++     "position": "relative",
+      "width": "100%",
+    },
+-   ".MuiInputBase-input": Object {
++   ".MuiInputBase-fullWidth.Mui-disabled": Object {
++     "backgroundColor": "Color.Silver100",
++     "color": "Color.Dark100",
++     "cursor": "default",
++   },
++   ".MuiInputBase-inputAdornedEnd": Object {
++     "MozLetterSpacing": "inherit",
++     "WebkitAnimationDuration": "10ms",
++     "WebkitAnimationName": "mui-auto-fill-cancel",
++     "WebkitLetterSpacing": "inherit",
+      "WebkitTapHighlightColor": "transparent",
+      "animationDuration": "10ms",
+      "animationName": "mui-auto-fill-cancel",
+      "background": "none",
+      "border": "0",
+      "boxSizing": "content-box",
+      "color": "currentColor",
+      "display": "block",
+      "font": "inherit",
+-     "height": "24px",
++     "height": Array [
++       "1.4375em",
++       "24px",
++     ],
+      "letterSpacing": "inherit",
+      "margin": "0",
+      "minWidth": "0",
+-     "padding": "6px 0 7px",
++     "msLetterSpacing": "inherit",
++     "padding": "4px 0 5px",
+      "textOverflow": "ellipsis",
+      "width": "100%",
+    },
+-   ".MuiInputBase-input.Mui-disabled": Object {
++   ".MuiInputBase-inputAdornedEnd.Mui-disabled": Object {
++     "WebkitTextFillColor": "Color.Dark100",
+      "opacity": 1,
+    },
+-   ".MuiInputBase-input:-ms-input-placeholder": Object {
++   ".MuiInputBase-inputAdornedEnd:-ms-input-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "color": "currentColor",
+      "opacity": 0.42,
+-     "transition": "opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+-   ".MuiInputBase-input:-webkit-autofill": Object {
++   ".MuiInputBase-inputAdornedEnd:-webkit-autofill": Object {
++     "WebkitAnimationDuration": "5000s",
++     "WebkitAnimationName": "mui-auto-fill",
+      "animationDuration": "5000s",
+      "animationName": "mui-auto-fill",
+    },
+-   ".MuiInputBase-input::-moz-placeholder": Object {
++   ".MuiInputBase-inputAdornedEnd::-moz-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "color": "currentColor",
+      "opacity": 0.42,
+-     "transition": "opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+-   ".MuiInputBase-input::-ms-input-placeholder": Object {
++   ".MuiInputBase-inputAdornedEnd::-ms-input-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "color": "currentColor",
+      "opacity": 0.42,
+-     "transition": "opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+-   ".MuiInputBase-input::-webkit-input-placeholder": Object {
++   ".MuiInputBase-inputAdornedEnd::-webkit-input-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "color": "currentColor",
+      "opacity": 0.42,
+-     "transition": "opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+-   ".MuiInputBase-input::-webkit-search-decoration": Object {
++   ".MuiInputBase-inputAdornedEnd::-webkit-search-decoration": Object {
+      "WebkitAppearance": "none",
+    },
+-   ".MuiInputBase-input:focus": Object {
++   ".MuiInputBase-inputAdornedEnd:focus": Object {
+      "outline": "0",
+    },
+-   ".MuiInputBase-input:invalid": Object {
++   ".MuiInputBase-inputAdornedEnd:invalid": Object {
+      "boxShadow": "none",
+    },
+-   ".MuiInputBase-inputMarginDense": Object {
+-     "paddingTop": "3px",
+-   },
+    ".MuiInputBase-inputMultiline": Object {
+-     "height": "auto",
++     "MozLetterSpacing": "inherit",
++     "WebkitAnimationDuration": "10ms",
++     "WebkitAnimationName": "mui-auto-fill-cancel",
++     "WebkitLetterSpacing": "inherit",
++     "WebkitTapHighlightColor": "transparent",
++     "animationDuration": "10ms",
++     "animationName": "mui-auto-fill-cancel",
++     "background": "none",
++     "border": "0",
++     "boxSizing": "content-box",
++     "color": "currentColor",
++     "display": "block",
++     "font": "inherit",
++     "height": Array [
++       "auto",
++       "24px",
++     ],
++     "letterSpacing": "inherit",
++     "margin": "0",
++     "minWidth": "0",
++     "msLetterSpacing": "inherit",
+      "padding": "0",
+-     "resize": "vertical",
++     "paddingTop": "0",
++     "resize": Array [
++       "none",
++       "vertical",
++     ],
++     "textOverflow": "ellipsis",
++     "width": "100%",
++   },
++   ".MuiInputBase-inputMultiline.Mui-disabled": Object {
++     "WebkitTextFillColor": "Color.Dark100",
++     "opacity": 1,
++   },
++   ".MuiInputBase-inputMultiline:-ms-input-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "color": "currentColor",
++     "opacity": 0.42,
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".MuiInputBase-inputMultiline:-webkit-autofill": Object {
++     "WebkitAnimationDuration": "5000s",
++     "WebkitAnimationName": "mui-auto-fill",
++     "animationDuration": "5000s",
++     "animationName": "mui-auto-fill",
++   },
++   ".MuiInputBase-inputMultiline::-moz-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "color": "currentColor",
++     "opacity": 0.42,
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".MuiInputBase-inputMultiline::-ms-input-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "color": "currentColor",
++     "opacity": 0.42,
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".MuiInputBase-inputMultiline::-webkit-input-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "color": "currentColor",
++     "opacity": 0.42,
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".MuiInputBase-inputMultiline::-webkit-search-decoration": Object {
++     "WebkitAppearance": "none",
++   },
++   ".MuiInputBase-inputMultiline:focus": Object {
++     "outline": "0",
++   },
++   ".MuiInputBase-inputMultiline:invalid": Object {
++     "boxShadow": "none",
++   },
++   ".MuiInputBase-inputSizeSmall": Object {
++     "MozLetterSpacing": "inherit",
++     "WebkitAnimationDuration": "10ms",
++     "WebkitAnimationName": "mui-auto-fill-cancel",
++     "WebkitLetterSpacing": "inherit",
++     "WebkitTapHighlightColor": "transparent",
++     "animationDuration": "10ms",
++     "animationName": "mui-auto-fill-cancel",
++     "background": "none",
++     "border": "0",
++     "boxSizing": "content-box",
++     "color": "currentColor",
++     "display": "block",
++     "font": "inherit",
++     "height": Array [
++       "1.4375em",
++       "24px",
++     ],
++     "letterSpacing": "inherit",
++     "margin": "0",
++     "minWidth": "0",
++     "msLetterSpacing": "inherit",
++     "padding": "4px 0 5px",
++     "paddingTop": "1px",
++     "textOverflow": "ellipsis",
++     "width": "100%",
++   },
++   ".MuiInputBase-inputSizeSmall.Mui-disabled": Object {
++     "WebkitTextFillColor": "Color.Dark100",
++     "opacity": 1,
++   },
++   ".MuiInputBase-inputSizeSmall:-ms-input-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "color": "currentColor",
++     "opacity": 0.42,
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".MuiInputBase-inputSizeSmall:-webkit-autofill": Object {
++     "WebkitAnimationDuration": "5000s",
++     "WebkitAnimationName": "mui-auto-fill",
++     "animationDuration": "5000s",
++     "animationName": "mui-auto-fill",
++   },
++   ".MuiInputBase-inputSizeSmall::-moz-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "color": "currentColor",
++     "opacity": 0.42,
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".MuiInputBase-inputSizeSmall::-ms-input-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "color": "currentColor",
++     "opacity": 0.42,
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".MuiInputBase-inputSizeSmall::-webkit-input-placeholder": Object {
++     "WebkitTransition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "color": "currentColor",
++     "opacity": 0.42,
++     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+-   ".MuiInputBase-inputTypeSearch": Object {
+-     "MozAppearance": "textfield",
+-     "WebkitAppearance": "textfield",
++   ".MuiInputBase-inputSizeSmall::-webkit-search-decoration": Object {
++     "WebkitAppearance": "none",
+    },
+-   ".MuiInputBase-multiline": Object {
+-     "padding": "6px 0 7px",
++   ".MuiInputBase-inputSizeSmall:focus": Object {
++     "outline": "0",
+    },
+-   ".MuiInputBase-multiline.MuiInputBase-marginDense": Object {
+-     "paddingTop": "3px",
++   ".MuiInputBase-inputSizeSmall:invalid": Object {
++     "boxShadow": "none",
+    },
+-   ".MuiInputBase-root": Object {
++   ".MuiInputBase-multiline": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
+      "alignItems": "center",
+      "boxSizing": "border-box",
+      "color": "Color.Dark500",
+      "cursor": "text",
+-     "display": "inline-flex",
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 400,
+-     "lineHeight": "20px",
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "14px",
++       "14px",
++     ],
++     "fontWeight": Array [
++       600,
++       400,
++     ],
++     "lineHeight": Array [
++       "1.4375em",
++       "20px",
++     ],
++     "msFlexAlign": "center",
++     "padding": "4px 0 5px",
+      "position": "relative",
+    },
+-   ".MuiInputBase-root.Mui-disabled": Object {
++   ".MuiInputBase-multiline.Mui-disabled": Object {
+      "backgroundColor": "Color.Silver100",
+      "color": "Color.Dark100",
+      "cursor": "default",
+    },
+-   ".MuiInputLabel-animated": Object {
+-     "transition": "color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+-         transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms",
++   ".MuiInputBase.Mui-disabled": Object {
++     "backgroundColor": "Color.Silver100",
++     "color": "Color.Dark100",
++     "cursor": "default",
+    },
+-   ".MuiInputLabel-filled": Object {
+-     "pointerEvents": "none",
+-     "transform": "translate(12px, 20px) scale(1)",
+-     "zIndex": 1,
++   ".MuiInputLabel": Object {
++     "WebkitTransform": Array [
++       "translate(14px,-9px) scale(0.75)",
++       "unset",
++       "unset",
++       "unset",
++     ],
++     "WebkitTransformOrigin": Array [
++       "top left",
++       "unset",
++       "unset",
++     ],
++     "WebkitTransition": Array [
++       "color 200ms cubic-bezier(0.0,0,0.2,1) 0ms,-webkit-transform 200ms cubic-bezier(0.0,0,0.2,1) 0ms,max-width 200ms cubic-bezier(0.0,0,0.2,1) 0ms",
++       "color 200ms cubic-bezier(0.0,0,0.2,1) 0ms,transform 200ms cubic-bezier(0.0,0,0.2,1) 0ms,max-width 200ms cubic-bezier(0.0,0,0.2,1) 0ms",
++     ],
++     "display": "block",
++     "left": Array [
++       "0",
++       "unset",
++     ],
++     "marginBottom": "4px",
++     "maxWidth": "calc(133% - 24px)",
++     "msTransform": Array [
++       "translate(14px,-9px) scale(0.75)",
++       "unset",
++       "unset",
++       "unset",
++     ],
++     "msTransformOrigin": Array [
++       "top left",
++       "unset",
++       "unset",
++     ],
++     "overflow": "hidden",
++     "pointerEvents": Array [
++       "none",
++       "unset",
++     ],
++     "position": Array [
++       "absolute",
++       "unset",
++     ],
++     "textOverflow": "ellipsis",
++     "top": Array [
++       "0",
++       "unset",
++     ],
++     "transform": Array [
++       "translate(14px,-9px) scale(0.75)",
++       "unset",
++       "unset",
++       "unset",
++     ],
++     "transformOrigin": Array [
++       "top left",
++       "unset",
++       "unset",
++     ],
++     "transition": "color 200ms cubic-bezier(0.0,0,0.2,1) 0ms,transform 200ms cubic-bezier(0.0,0,0.2,1) 0ms,max-width 200ms cubic-bezier(0.0,0,0.2,1) 0ms",
++     "whiteSpace": "nowrap",
++     "zIndex": Array [
++       1,
++       "unset",
++     ],
+    },
+-   ".MuiInputLabel-filled.MuiInputLabel-marginDense": Object {
+-     "transform": "translate(12px, 17px) scale(1)",
++   ".MuiOutlinedInput": Object {
++     "borderRadius": "4px",
++     "paddingLeft": Array [
++       "14px",
++       "8px",
++     ],
++     "position": "relative",
+    },
+-   ".MuiInputLabel-filled.MuiInputLabel-shrink": Object {
+-     "transform": "translate(12px, 10px) scale(0.75)",
++   ".MuiOutlinedInput-input": Object {
++     "padding": Array [
++       "16.5px 14px",
++       "10px 12px",
++     ],
++     "paddingLeft": "0",
+    },
+-   ".MuiInputLabel-filled.MuiInputLabel-shrink.MuiInputLabel-marginDense": Object {
+-     "transform": "translate(12px, 7px) scale(0.75)",
++   ".MuiOutlinedInput-input,.MuiInputBase-inputMultiline": Object {
++     "padding": Array [
++       "0",
++       "10px 12px",
++       "0",
++     ],
+    },
+-   ".MuiInputLabel-marginDense": Object {
+-     "transform": "translate(0, 21px) scale(1)",
++   ".MuiOutlinedInput-input,.MuiInputBase-inputMultiline.MuiInputBase-inputAdornedEnd": Object {
++     "paddingRight": "0",
+    },
+-   ".MuiInputLabel-outlined.MuiInputLabel-marginDense": Object {
+-     "transform": "translate(14px, 12px) scale(1)",
++   ".MuiOutlinedInput-input,.MuiInputBase-inputMultiline.MuiInputBase-inputAdornedStart": Object {
++     "paddingLeft": "0",
+    },
+-   ".MuiInputLabel-root": Object {
+-     "display": "block",
+-     "marginBottom": "4px",
++   ".MuiOutlinedInput-input,.MuiInputBase-inputMultiline:-webkit-autofill": Object {
++     "borderRadius": "inherit",
+    },
+-   ".MuiOutlinedInput-adornedEnd": Object {
+-     "paddingRight": "8px",
++   ".MuiOutlinedInput-input,.MuiInputBase-inputSizeSmall": Object {
++     "padding": Array [
++       "8.5px 14px",
++       "10px 12px",
++     ],
+    },
+-   ".MuiOutlinedInput-adornedStart": Object {
+-     "paddingLeft": "8px",
++   ".MuiOutlinedInput-input,.MuiInputBase-inputSizeSmall.MuiInputBase-inputAdornedEnd": Object {
++     "paddingRight": "0",
+    },
+-   ".MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline": Object {
+-     "borderColor": "#f50057",
++   ".MuiOutlinedInput-input,.MuiInputBase-inputSizeSmall.MuiInputBase-inputAdornedStart": Object {
++     "paddingLeft": "0",
+    },
+-   ".MuiOutlinedInput-input": Object {
+-     "padding": "10px 12px",
++   ".MuiOutlinedInput-input,.MuiInputBase-inputSizeSmall:-webkit-autofill": Object {
++     "borderRadius": "inherit",
++   },
++   ".MuiOutlinedInput-input.MuiInputBase-inputAdornedEnd": Object {
++     "paddingRight": "0",
+    },
++   ".MuiOutlinedInput-input.MuiInputBase-inputAdornedStart": Object {
++     "paddingLeft": "0",
++   },
+    ".MuiOutlinedInput-input:-webkit-autofill": Object {
+      "borderRadius": "inherit",
+    },
+-   ".MuiOutlinedInput-inputAdornedEnd": Object {
++   ".MuiOutlinedInput-multiline": Object {
++     "borderRadius": "4px",
++     "padding": Array [
++       "16.5px 14px",
++       "10px 12px",
++     ],
++     "paddingRight": "0",
++     "position": "relative",
++   },
++   ".MuiOutlinedInput-multiline.Mui-disabled .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Silver400",
++   },
++   ".MuiOutlinedInput-multiline.Mui-error .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Red300",
++   },
++   ".MuiOutlinedInput-multiline.Mui-focused .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Blue300",
++     "borderWidth": "2px",
++   },
++   ".MuiOutlinedInput-multiline.MuiInputBase-inputAdornedEnd": Object {
+      "paddingRight": "0",
+    },
+-   ".MuiOutlinedInput-inputAdornedStart": Object {
++   ".MuiOutlinedInput-multiline.MuiInputBase-inputAdornedStart": Object {
+      "paddingLeft": "0",
+    },
+-   ".MuiOutlinedInput-inputMarginDense": Object {
+-     "paddingBottom": "10.5px",
+-     "paddingTop": "10.5px",
++   ".MuiOutlinedInput-multiline:-webkit-autofill": Object {
++     "borderRadius": "inherit",
+    },
+-   ".MuiOutlinedInput-inputMultiline": Object {
+-     "padding": "0",
++   ".MuiOutlinedInput-multiline:hover .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "unset",
+    },
+-   ".MuiOutlinedInput-multiline": Object {
+-     "padding": "6px 8px",
++   ".MuiOutlinedInput-notched": Object {
++     "borderRadius": "inherit",
++     "borderStyle": "solid",
++     "borderWidth": "1px",
++     "bottom": "0",
++     "left": "0",
++     "margin": "0",
++     "minWidth": "0%",
++     "overflow": "hidden",
++     "padding": "0 8px",
++     "pointerEvents": "none",
++     "position": "absolute",
++     "right": "0",
++     "textAlign": "left",
++     "top": "-5px",
+    },
+-   ".MuiOutlinedInput-multiline.MuiOutlinedInput-marginDense": Object {
+-     "paddingBottom": "10.5px",
+-     "paddingTop": "10.5px",
+-   },
+    ".MuiOutlinedInput-notchedOutline": Object {
+-     "borderColor": "Color.Silver500",
++     "borderColor": Array [
++       "rgba(0,0,0,0.23)",
++       "Color.Silver500",
++     ],
+      "top": "0",
+    },
+    ".MuiOutlinedInput-notchedOutline legend": Object {
+      "display": "none",
+    },
+    ".MuiOutlinedInput-root": Object {
+      "borderRadius": "4px",
++     "paddingRight": Array [
++       "14px",
++       "8px",
++     ],
+      "position": "relative",
+    },
++   ".MuiOutlinedInput-root,.MuiInputBase-formControl": Object {
++     "borderRadius": "4px",
++     "position": "relative",
++   },
++   ".MuiOutlinedInput-root,.MuiInputBase-formControl.Mui-disabled .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Silver400",
++   },
++   ".MuiOutlinedInput-root,.MuiInputBase-formControl.Mui-error .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Red300",
++   },
++   ".MuiOutlinedInput-root,.MuiInputBase-formControl.Mui-focused .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Blue300",
++     "borderWidth": "2px",
++   },
++   ".MuiOutlinedInput-root,.MuiInputBase-formControl:hover .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "unset",
++   },
+    ".MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline": Object {
+      "borderColor": "Color.Silver400",
+    },
+    ".MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline": Object {
+      "borderColor": "Color.Red300",
+    },
+    ".MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": Object {
+      "borderColor": "Color.Blue300",
+      "borderWidth": "2px",
+    },
+-   ".MuiSelect-filled.MuiSelect-filled": Object {
+-     "paddingRight": "32px",
++   ".MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "unset",
+    },
+-   ".MuiSelect-icon": Object {
+-     "color": "rgba(0, 0, 0, 0.54)",
++   ".MuiOutlinedInput.Mui-disabled .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Silver400",
++   },
++   ".MuiOutlinedInput.Mui-error .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Red300",
++   },
++   ".MuiOutlinedInput.Mui-focused .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Blue300",
++     "borderWidth": "2px",
++   },
++   ".MuiOutlinedInput:hover .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "unset",
++   },
++   ".MuiSelect-icon,.MuiSelect-iconOutlined": Object {
++     "color": "rgba(0,0,0,0.54)",
+      "fontSize": "24px",
+      "pointerEvents": "none",
+      "position": "absolute",
+-     "right": "0",
+-     "top": "calc(50% - 0.5em)",
++     "right": Array [
++       "7px",
++       "12px",
++     ],
++     "top": Array [
++       "calc(50% - .5em)",
++       "calc(50% - 0.5em)",
++     ],
+    },
+-   ".MuiSelect-icon.Mui-disabled": Object {
++   ".MuiSelect-icon,.MuiSelect-iconOutlined.Mui-disabled": Object {
+      "color": "Color.Silver400",
+-   },
+-   ".MuiSelect-iconFilled": Object {
+-     "right": "7px",
+-   },
+-   ".MuiSelect-iconOpen": Object {
+-     "transform": "rotate(180deg)",
+    },
+    ".MuiSelect-iconOutlined": Object {
+-     "right": "12px",
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "1.5rem",
++       "var(--mui-svg-icon-size,32px)",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
+    },
+    ".MuiSelect-nativeInput": Object {
+      "bottom": "0",
++     "boxSizing": "border-box",
+      "left": "0",
+      "opacity": 0,
+      "pointerEvents": "none",
+      "position": "absolute",
+      "width": "100%",
+    },
+-   ".MuiSelect-outlined": Object {
+-     "borderRadius": "4px",
++   ".MuiSelect-root,.MuiOutlinedInput-input": Object {
++     "padding": Array [
++       "16.5px 14px",
++       "10px 12px",
++     ],
+    },
+-   ".MuiSelect-outlined.MuiSelect-outlined": Object {
+-     "paddingRight": "32px",
++   ".MuiSelect-root,.MuiOutlinedInput-input.MuiInputBase-inputAdornedEnd": Object {
++     "paddingRight": "0",
++   },
++   ".MuiSelect-root,.MuiOutlinedInput-input.MuiInputBase-inputAdornedStart": Object {
++     "paddingLeft": "0",
++   },
++   ".MuiSelect-root,.MuiOutlinedInput-input:-webkit-autofill": Object {
++     "borderRadius": "inherit",
+    },
+-   ".MuiSelect-select": Object {
++   ".MuiSelect-select,.SelectInput": Object {
+      "MozAppearance": "none",
++     "MozUserSelect": "none",
+      "WebkitAppearance": "none",
+-     "borderRadius": "0",
++     "WebkitUserSelect": "none",
++     "borderRadius": "4px",
+      "cursor": "pointer",
+-     "minWidth": "16px",
++     "msUserSelect": "none",
+      "userSelect": "none",
+    },
+-   ".MuiSelect-select.Mui-disabled": Object {
++   ".MuiSelect-select,.SelectInput.Mui-disabled": Object {
+      "cursor": "default",
+    },
+-   ".MuiSelect-select.MuiSelect-select": Object {
+-     "paddingRight": "24px",
++   ".MuiSelect-select,.SelectInput.MuiSelect-select": Object {
++     "height": "auto",
++     "minHeight": "1.4375em",
++     "overflow": "hidden",
++     "paddingRight": "36px",
++     "textOverflow": "ellipsis",
++     "whiteSpace": "nowrap",
++   },
++   ".MuiSelect-select,.SelectInput.MuiSelect-select,.SelectInput.MuiSelect-select,.SelectInput": Object {
++     "paddingRight": "32px",
+    },
+-   ".MuiSelect-select::-ms-expand": Object {
++   ".MuiSelect-select,.SelectInput.MuiSelect-select:focus": Object {
++     "backgroundColor": "unset",
++   },
++   ".MuiSelect-select,.SelectInput::-ms-expand": Object {
+      "display": "none",
+    },
+-   ".MuiSelect-select:focus": Object {
+-     "borderRadius": "0",
++   ".MuiSelect-select,.SelectInput:focus": Object {
++     "borderRadius": "4px",
+    },
+-   ".MuiSelect-select:not([multiple]) option,
+-     .MuiSelect-select:not([multiple]) optgroup": Object {
++   ".MuiSelect-select,.SelectInput:not([multiple]) option,
++     .MuiSelect-select,.SelectInput:not([multiple]) optgroup": Object {
+      "backgroundColor": "Color.White",
+    },
+-   ".MuiSelect-selectMenu": Object {
+-     "height": "auto",
+-     "minHeight": "1.1876em",
+-     "overflow": "hidden",
+-     "textOverflow": "ellipsis",
+-     "whiteSpace": "nowrap",
+-   },
+-   ".MuiSelect-selectMenu.MuiSelect-selectMenu": Object {
+-     "paddingRight": "36px",
+-   },
+-   ".MuiSelect-select[multiple]": Object {
++   ".MuiSelect-select,.SelectInput[multiple]": Object {
+      "height": "auto",
+    },
+-   ".PrivateNotchedOutline-legend-2": Object {
+-     "lineHeight": "11px",
+-     "padding": "0",
+-     "textAlign": "left",
+-     "transition": "width 150ms cubic-bezier(0, 0, 0.2, 1) 0ms",
+-   },
+-   ".PrivateNotchedOutline-legendLabelled-3": Object {
++   ".NotchedOutlineLegend": Object {
++     "WebkitTransition": "width 150ms cubic-bezier(0.0,0,0.2,1) 0ms",
++     "cssFloat": "unset",
+      "display": "block",
+      "fontSize": "0.75em",
+      "height": "11px",
++     "lineHeight": "11px",
+      "maxWidth": "0.01px",
+      "padding": "0",
+-     "textAlign": "left",
+-     "transition": "max-width 50ms cubic-bezier(0, 0, 0.2, 1) 0ms",
++     "transition": "width 150ms cubic-bezier(0.0,0,0.2,1) 0ms",
+      "visibility": "hidden",
++     "whiteSpace": "nowrap",
+      "width": "auto",
+    },
+-   ".PrivateNotchedOutline-legendLabelled-3 > span": Object {
++   ".NotchedOutlineLegend > span": Object {
+      "display": "inline-block",
+      "paddingLeft": "5px",
+      "paddingRight": "5px",
+    },
+-   ".PrivateNotchedOutline-legendNotched-4": Object {
+-     "maxWidth": "1000px",
+-     "transition": "max-width 100ms cubic-bezier(0, 0, 0.2, 1) 50ms",
++   "@media (hover:none)": Array [
++     Object {
++       ".MuiOutlinedInput:hover .MuiOutlinedInput-notchedOutline": Object {
++         "borderColor": "rgba(0,0,0,0.23)",
+        },
+-   ".PrivateNotchedOutline-root-1": Object {
+-     "borderRadius": "inherit",
+-     "borderStyle": "solid",
+-     "borderWidth": "1px",
+-     "bottom": "0",
+-     "left": "0",
+-     "margin": "0",
+-     "overflow": "hidden",
+-     "padding": "0 8px",
+-     "pointerEvents": "none",
+-     "position": "absolute",
+-     "right": "0",
+-     "top": "-5px",
+      },
+-   "@keyframes mui-auto-fill": Object {},
+-   "@keyframes mui-auto-fill-cancel": Object {},
+-   "@media (hover: none)": Object {
++     Object {
+        ".MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": Object {
+-       "borderColor": "rgba(0, 0, 0, 0.23)",
++         "borderColor": "rgba(0,0,0,0.23)",
++       },
++     },
++     Object {
++       ".MuiOutlinedInput-multiline:hover .MuiOutlinedInput-notchedOutline": Object {
++         "borderColor": "rgba(0,0,0,0.23)",
++       },
++     },
++     Object {
++       ".MuiOutlinedInput-root,.MuiInputBase-formControl:hover .MuiOutlinedInput-notchedOutline": Object {
++         "borderColor": "rgba(0,0,0,0.23)",
+        },
+      },
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Array [
++   ],
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
+      Object {
+-       ".MuiFormHelperText-root": Object {
++       ".MuiInputBase": Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+      },
+      Object {
+-       ".MuiFormLabel-root": Object {
++       ".MuiInputBase": Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+      },
+      Object {
+-       ".MuiInputBase-root": Object {
++       ".MuiInputBase-multiline": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiInputBase-multiline": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiInputBase-fullWidth": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiInputBase-fullWidth": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiFormHelperText": Object {
++         "fontSize": "14px",
++         "lineHeight": "20px",
++       },
++     },
++     Object {
++       ".MuiFormHelperText": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiFormLabel": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".MuiFormLabel": Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+      },
++     Object {},
++     Object {},
+    ],
+-   "@media (min-width: 600px)": Array [
++   "@media (min-width:600px)": Array [
+      Object {
+-       ".MuiInputAdornment-root .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall)": Object {
++       ".MuiSelect-iconOutlined": Object {
++         "fontSize": "var(--mui-svg-icon-size,24px)",
++       },
++     },
++     Object {
++       ".MuiInputAdornment .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall)": Object {
+          "fontSize": "20px",
+        },
+      },
+      Object {
+-       ".MuiInputAdornment-positionStart .MuiIconButton-root": Object {
++       ".MuiInputAdornment .MuiIconButton-root": Object {
+          "marginLeft": "-6px",
++       },
++     },
++     Object {
++       ".MuiInputAdornment-positionEnd .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall)": Object {
++         "fontSize": "20px",
+        },
+      },
+      Object {
+        ".MuiInputAdornment-positionEnd .MuiIconButton-root": Object {
+          "marginRight": "-6px",
+        },
+      },
+      Object {
+-       ".MuiInputBase-input": Object {
++       ".MuiInputBase-inputAdornedEnd": Object {
++         "height": "20px",
++       },
++     },
++     Object {
++       ".MuiInputBase-inputMultiline": Object {
+          "height": "20px",
+        },
+      },
+      Object {
++       ".MuiInputBase-inputSizeSmall": Object {
++         "height": "20px",
++       },
++     },
++     Object {
+        ".MuiOutlinedInput-input": Object {
+          "padding": "6px 8px",
+        },
+      },
+      Object {
+-       ".MuiSelect-selectMenu.MuiSelect-selectMenu": Object {
++       ".MuiOutlinedInput-multiline": Object {
++         "padding": "6px 8px",
++       },
++     },
++     Object {
++       ".MuiOutlinedInput-input,.MuiInputBase-inputMultiline": Object {
++         "padding": "6px 8px",
++       },
++     },
++     Object {
++       ".MuiOutlinedInput-input,.MuiInputBase-inputMultiline": Object {
++         "padding": "0",
++       },
++     },
++     Object {
++       ".MuiOutlinedInput-input,.MuiInputBase-inputSizeSmall": Object {
++         "padding": "6px 8px",
++       },
++     },
++     Object {
++       ".MuiSelect-root,.MuiOutlinedInput-input": Object {
++         "padding": "6px 8px",
++       },
++     },
++     Object {
++       ".MuiSelect-select,.SelectInput.MuiSelect-select": Object {
+          "right": "32px",
+        },
+      },
+      Object {
+-       ".MuiSelect-icon": Object {
++       ".MuiSelect-icon,.MuiSelect-iconOutlined": Object {
+          "fontSize": "16px",
+        },
+      },
+      Object {
+-       ".MuiSelect-iconOutlined": Object {
++       ".MuiSelect-icon,.MuiSelect-iconOutlined": Object {
+          "right": "8px",
+        },
+      },
+    ],
+-   "label[data-shrink='false']
+-       + .MuiInputBase-formControl
+-       .MuiInputBase-input:-ms-input-placeholder": Object {
++   "@media print": Object {},
++   "label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:-ms-input-placeholder": Object {
+      "opacity": "0 !important",
+    },
+-   "label[data-shrink='false']
+-       + .MuiInputBase-formControl
+-       .MuiInputBase-input::-moz-placeholder": Object {
++   "label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-moz-placeholder": Object {
+      "opacity": "0 !important",
+    },
+-   "label[data-shrink='false']
+-       + .MuiInputBase-formControl
+-       .MuiInputBase-input::-ms-input-placeholder": Object {
++   "label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-ms-input-placeholder": Object {
+      "opacity": "0 !important",
+    },
+-   "label[data-shrink='false']
+-       + .MuiInputBase-formControl
+-       .MuiInputBase-input::-webkit-input-placeholder": Object {
++   "label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-webkit-input-placeholder": Object {
+      "opacity": "0 !important",
+    },
+-   "label[data-shrink='false']
+-       + .MuiInputBase-formControl
+-       .MuiInputBase-input:focus:-ms-input-placeholder": Object {
++   "label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus:-ms-input-placeholder": Object {
+      "opacity": 0.42,
+    },
+-   "label[data-shrink='false']
+-       + .MuiInputBase-formControl
+-       .MuiInputBase-input:focus::-moz-placeholder": Object {
++   "label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-moz-placeholder": Object {
+      "opacity": 0.42,
+    },
+-   "label[data-shrink='false']
+-       + .MuiInputBase-formControl
+-       .MuiInputBase-input:focus::-ms-input-placeholder": Object {
++   "label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-ms-input-placeholder": Object {
+      "opacity": 0.42,
+    },
+-   "label[data-shrink='false']
+-       + .MuiInputBase-formControl
+-       .MuiInputBase-input:focus::-webkit-input-placeholder": Object {
++   "label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-webkit-input-placeholder": Object {
+      "opacity": 0.42,
+    },
+  }
