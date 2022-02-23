@@ -1,0 +1,275 @@
+- v4
++ v5
+
+@@ -2,11 +2,10 @@
+      Object {
+        "anchorOrigin": Object {
+          "horizontal": "left",
+          "vertical": "bottom",
+        },
+-       "getContentAnchorEl": null,
+        "transformOrigin": Object {
+          "horizontal": "left",
+          "vertical": "top",
+        },
+      }
+Compared values have no visual difference.
+- v4
++ v5
+
+  Object {
++   ".MuiBackdrop-root": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
++     "WebkitTapHighlightColor": "transparent",
++     "alignItems": "center",
++     "backgroundColor": "transparent",
++     "bottom": "0",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "justifyContent": "center",
++     "left": "0",
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
++     "position": "fixed",
++     "right": "0",
++     "top": "0",
++   },
++   ".MuiList-root": Object {
++     "listStyle": "none",
++     "margin": "0",
++     "padding": "0",
++     "paddingBottom": "8px",
++     "paddingTop": "8px",
++     "position": "relative",
++   },
+    ".MuiMenu-list": Object {
+      "outline": "0",
+    },
+    ".MuiMenu-paper": Object {
+      "WebkitOverflowScrolling": "touch",
+      "maxHeight": "calc(100% - 96px)",
+    },
+-   ".MuiMenuItem-dense": Object {
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 400,
+-     "lineHeight": "20px",
+-     "minHeight": "auto",
+-   },
+-   ".MuiMenuItem-root": Object {
++   ".MuiMenuItem-root,.MuiButtonBase-root": Object {
++     "MozAppearance": "none",
++     "MozUserSelect": "none",
++     "WebkitAlignItems": "center",
++     "WebkitAppearance": "none",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "start",
++     "WebkitJustifyContent": "flex-start",
++     "WebkitTapHighlightColor": "transparent",
++     "WebkitTextDecoration": "none",
++     "WebkitUserSelect": "none",
++     "alignItems": "center",
++     "backgroundColor": "transparent",
++     "border": "0",
++     "borderRadius": "0",
+      "boxSizing": "border-box",
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 400,
+-     "lineHeight": "20px",
++     "color": "inherit",
++     "cursor": "pointer",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "14px",
++       "14px",
++     ],
++     "fontWeight": Array [
++       600,
++       400,
++     ],
++     "justifyContent": "flex-start",
++     "lineHeight": Array [
++       "20px",
++       "20px",
++     ],
++     "margin": "0",
+      "minHeight": "48px",
+-     "overflow": "hidden",
+-     "paddingBottom": "8px",
+-     "paddingTop": "8px",
++     "msFlexAlign": "center",
++     "msFlexPack": "start",
++     "msUserSelect": "none",
++     "outline": "0",
++     "padding": "0",
++     "paddingBottom": Array [
++       "6px",
++       "8px",
++     ],
++     "paddingLeft": "16px",
++     "paddingRight": "16px",
++     "paddingTop": Array [
++       "6px",
++       "8px",
++     ],
++     "position": "relative",
++     "textDecoration": "none",
++     "userSelect": "none",
++     "verticalAlign": "middle",
+      "whiteSpace": "nowrap",
+-     "width": "auto",
+    },
+-   ".MuiPopover-paper": Object {
++   ".MuiMenuItem-root,.MuiButtonBase-root + .MuiDivider-inset": Object {
++     "marginLeft": "52px",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root + .MuiDivider-root": Object {
++     "marginBottom": "8px",
++     "marginTop": "8px",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root .MuiListItemIcon-root": Object {
++     "minWidth": "36px",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root .MuiListItemText-inset": Object {
++     "paddingLeft": "36px",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root .MuiListItemText-root": Object {
++     "marginBottom": "0",
++     "marginTop": "0",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root .MuiTouchRipple-root": Object {
++     "color": "Color.Blue100",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root.Mui-disabled": Object {
++     "cursor": "default",
++     "opacity": 0.38,
++     "pointerEvents": "none",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root.Mui-focusVisible": Object {
++     "backgroundColor": "rgba(0,0,0,0.12)",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root.Mui-selected": Object {
++     "backgroundColor": "rgba(0,117,255,0.08)",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root.Mui-selected,
++     .MuiMenuItem-root,.MuiButtonBase-root.Mui-selected:hover": Object {
++     "backgroundColor": "Color.Blue50",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root.Mui-selected.Mui-focusVisible": Object {
++     "backgroundColor": "rgba(0,117,255,0.2)",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root.Mui-selected.Mui-focusVisible,
++     .MuiMenuItem-root,.MuiButtonBase-root.Mui-selected:hover.Mui-focusVisible": Object {
++     "backgroundColor": "Color.Blue50",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root.Mui-selected:hover": Object {
++     "backgroundColor": "rgba(0,117,255,0.12)",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root::-moz-focus-inner": Object {
++     "borderStyle": "none",
++   },
++   ".MuiMenuItem-root,.MuiButtonBase-root:hover": Object {
++     "WebkitTextDecoration": "none",
++     "backgroundColor": "Color.Silver100",
++     "textDecoration": "none",
++   },
++   ".MuiModal-backdrop": Object {
++     "zIndex": -1,
++   },
++   ".MuiPaper-root,.MuiPopover-paper": Object {
++     "WebkitTransition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "backgroundColor": "Color.White",
++     "border": "1px solid Color.Silver400",
++     "borderRadius": "4px",
++     "bottom": "0",
++     "boxShadow": "none",
++     "color": "Color.Dark500",
++     "left": "0",
+      "maxHeight": "calc(100% - 32px)",
+      "maxWidth": "calc(100% - 32px)",
+      "minHeight": "16px",
+      "minWidth": "16px",
+      "outline": "0",
+      "overflowX": "hidden",
+      "overflowY": "auto",
+      "position": "absolute",
++     "right": "0",
++     "top": "0",
++     "transition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "zIndex": 1300,
+    },
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Array [
++   ".MuiTouchRipple-root-": Object {
++     "borderRadius": "inherit",
++     "bottom": "0",
++     "left": "0",
++     "overflow": "hidden",
++     "pointerEvents": "none",
++     "position": "absolute",
++     "right": "0",
++     "top": "0",
++     "zIndex": 0,
++   },
++   "@media (hover:none)": Array [
+      Object {
+-       ".MuiMenuItem-root": Object {
++       ".MuiMenuItem-root,.MuiButtonBase-root:hover": Object {
++         "backgroundColor": "transparent",
++       },
++     },
++     Object {
++       ".MuiMenuItem-root,.MuiButtonBase-root.Mui-selected:hover": Object {
++         "backgroundColor": "rgba(0,117,255,0.08)",
++       },
++     },
++   ],
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {
++       ".MuiMenuItem-root,.MuiButtonBase-root": Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+      },
+      Object {
+-       ".MuiMenuItem-dense": Object {
++       ".MuiMenuItem-root,.MuiButtonBase-root": Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+      },
++     Object {},
++     Object {},
+    ],
+-   "@media (min-width: 600px)": Object {
+-     ".MuiMenuItem-root": Object {
++   "@media (min-width:600px)": Object {
++     ".MuiMenuItem-root,.MuiButtonBase-root": Object {
+        "minHeight": "auto",
++     },
++   },
++   "@media print": Array [
++     Object {
++       ".MuiMenuItem-root,.MuiButtonBase-root": Object {
++         "colorAdjust": "exact",
+        },
+      },
++     Object {},
++   ],
+  }
