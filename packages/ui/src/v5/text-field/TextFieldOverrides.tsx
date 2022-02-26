@@ -83,7 +83,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
     styleOverrides: {
       root: {
         [`&:hover .${outlinedInputClasses.notchedOutline}`]: {
-          borderColor: 'unset',
+          borderColor: Color.Silver500,
         },
       },
 

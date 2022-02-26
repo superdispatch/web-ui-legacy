@@ -765,7 +765,7 @@ Compared values have no visual difference.
 -   ".MuiOutlinedInput-inputMultiline": Object {
 -     "padding": "0",
 +   ".MuiOutlinedInput-multiline:hover .MuiOutlinedInput-notchedOutline": Object {
-+     "borderColor": "unset",
++     "borderColor": "Color.Silver500",
     },
 -   ".MuiOutlinedInput-multiline": Object {
 -     "padding": "6px 8px",
@@ -823,7 +823,7 @@ Compared values have no visual difference.
 +     "borderWidth": "2px",
 +   },
 +   ".MuiOutlinedInput-root,.MuiInputBase-formControl:hover .MuiOutlinedInput-notchedOutline": Object {
-+     "borderColor": "unset",
++     "borderColor": "Color.Silver500",
 +   },
     ".MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline": Object {
       "borderColor": "Color.Silver400",
@@ -838,7 +838,7 @@ Compared values have no visual difference.
 -   ".MuiSelect-filled.MuiSelect-filled": Object {
 -     "paddingRight": "32px",
 +   ".MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": Object {
-+     "borderColor": "unset",
++     "borderColor": "Color.Silver500",
     },
 -   ".MuiSelect-icon": Object {
 -     "color": "rgba(0, 0, 0, 0.54)",
@@ -853,7 +853,7 @@ Compared values have no visual difference.
 +     "borderWidth": "2px",
 +   },
 +   ".MuiOutlinedInput:hover .MuiOutlinedInput-notchedOutline": Object {
-+     "borderColor": "unset",
++     "borderColor": "Color.Silver500",
 +   },
 +   ".MuiSelect-icon,.MuiSelect-iconOutlined": Object {
 +     "color": "rgba(0,0,0,0.54)",

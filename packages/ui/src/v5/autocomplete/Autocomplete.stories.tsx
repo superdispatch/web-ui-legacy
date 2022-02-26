@@ -1,11 +1,10 @@
-import { TextField } from '@material-ui/core';
-import { Autocomplete } from '@material-ui/lab';
+import { Autocomplete, TextField } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { PropsLink } from '@superdispatch/ui-docs';
 import { Box } from '@superdispatch/ui-lab';
 
 export default {
-  title: 'v4/Inputs/Autocomplete',
+  title: 'Inputs/Autocomplete',
   decorators: [
     (Story) => (
       <Box maxWidth="240px">
@@ -14,6 +13,7 @@ export default {
     ),
   ],
   parameters: {
+    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/autocomplete/#props" />
     ),

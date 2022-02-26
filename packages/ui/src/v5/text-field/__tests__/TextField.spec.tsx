@@ -829,7 +829,7 @@ it('checks component css', () => {
     }
 
     .MuiOutlinedInput:hover .MuiOutlinedInput-notchedOutline {
-      border-color: unset;
+      border-color: Color.Silver500;
     }
 
     .MuiOutlinedInput-root {
@@ -857,7 +857,7 @@ it('checks component css', () => {
     }
 
     .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
-      border-color: unset;
+      border-color: Color.Silver500;
     }
 
     .MuiOutlinedInput-multiline {
@@ -885,7 +885,7 @@ it('checks component css', () => {
     }
 
     .MuiOutlinedInput-multiline:hover .MuiOutlinedInput-notchedOutline {
-      border-color: unset;
+      border-color: Color.Silver500;
     }
 
     .MuiOutlinedInput-root,.MuiInputBase-formControl {
@@ -911,7 +911,7 @@ it('checks component css', () => {
     }
 
     .MuiOutlinedInput-root,.MuiInputBase-formControl:hover .MuiOutlinedInput-notchedOutline {
-      border-color: unset;
+      border-color: Color.Silver500;
     }
 
     .MuiOutlinedInput-notchedOutline {

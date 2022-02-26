@@ -1,0 +1,533 @@
+- v4
++ v5
+
+
+      Object {
+-       "popupIcon": <WithStyles(ForwardRef(SvgIcon))>
++       "popupIcon": <ForwardRef(SvgIcon)>
+          <path
+            d="M12 16.5L6 9h12l-6 7.5z"
+            fill="currentColor"
+          />
+-       </WithStyles(ForwardRef(SvgIcon))>,
++       </ForwardRef(SvgIcon)>,
+      }
+    
+- v4
++ v5
+
+  Object {
+-   ".MuiAutocomplete-clearIndicator": Object {
+-     "marginRight": "-2px",
++   ".MuiAutocomplete-fullWidth": Object {
++     "width": "100%",
++   },
++   ".MuiAutocomplete-fullWidth .MuiAutocomplete-input": Object {
++     "WebkitBoxFlex": "1",
++     "WebkitFlexGrow": "1",
++     "flexGrow": 1,
++     "msFlexPositive": "1",
++     "opacity": 1,
++     "textOverflow": "ellipsis",
++   },
++   ".MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot": Object {
++     "WebkitFlexWrap": "wrap",
++     "flexWrap": "wrap",
++     "msFlexWrap": "wrap",
++   },
++   ".MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot .MuiAutocomplete-input": Object {
++     "minWidth": "30px",
++     "width": "0",
++   },
++   ".MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']": Object {
++     "padding": "6px 8px",
++   },
++   ".MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-endAdornment": Object {
++     "right": "12px",
++   },
++   ".MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-input": Object {
+      "padding": "4px",
+-     "visibility": "hidden",
++     "width": "144px",
++   },
++   ".MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-input:first-child": Object {
++     "paddingLeft": "unset",
++   },
++   ".MuiAutocomplete-fullWidth .MuiAutocomplete-tag": Object {
++     "margin": "4px",
++     "maxWidth": "calc(100% - 6px)",
++   },
++   ".MuiAutocomplete-fullWidth .MuiFilledInput-root": Object {
++     "paddingLeft": "8px",
++     "paddingTop": "19px",
++   },
++   ".MuiAutocomplete-fullWidth .MuiFilledInput-root .MuiAutocomplete-endAdornment": Object {
++     "right": "9px",
++   },
++   ".MuiAutocomplete-fullWidth .MuiFilledInput-root .MuiFilledInput-input": Object {
++     "padding": "7px 4px",
++   },
++   ".MuiAutocomplete-fullWidth .MuiFilledInput-root.MuiInputBase-sizeSmall": Object {
++     "paddingBottom": "1px",
++   },
++   ".MuiAutocomplete-fullWidth .MuiFilledInput-root.MuiInputBase-sizeSmall .MuiFilledInput-input": Object {
++     "padding": "2.5px 4px",
++   },
++   ".MuiAutocomplete-fullWidth .MuiInput-root": Object {
++     "paddingBottom": "1px",
+    },
+-   ".MuiAutocomplete-endAdornment": Object {
+-     "alignItems": "center",
+-     "bottom": "0",
+-     "display": "flex",
+-     "position": "absolute",
+-     "right": "0",
+-     "top": "0",
++   ".MuiAutocomplete-fullWidth .MuiInput-root .MuiInput-input": Object {
++     "padding": "4px 4px 4px 0px",
++   },
++   ".MuiAutocomplete-fullWidth .MuiInput-root.MuiInputBase-sizeSmall .MuiInput-input": Object {
++     "padding": "2px 4px 3px 0",
+    },
+-   ".MuiAutocomplete-fullWidth": Object {
+-     "width": "100%",
++   ".MuiAutocomplete-fullWidth .MuiInputBase-hiddenLabel": Object {
++     "paddingTop": "8px",
+    },
+-   ".MuiAutocomplete-groupLabel": Object {
+-     "backgroundColor": "Color.White",
+-     "top": "-8px",
++   ".MuiAutocomplete-fullWidth .MuiOutlinedInput-root": Object {
++     "padding": "9px",
+    },
+-   ".MuiAutocomplete-groupUl": Object {
+-     "padding": "0",
++   ".MuiAutocomplete-fullWidth .MuiOutlinedInput-root .MuiAutocomplete-endAdornment": Object {
++     "right": "9px",
+    },
+-   ".MuiAutocomplete-groupUl .MuiAutocomplete-option": Object {
+-     "paddingLeft": "24px",
++   ".MuiAutocomplete-fullWidth .MuiOutlinedInput-root .MuiAutocomplete-input": Object {
++     "padding": "7.5px 4px 7.5px 6px",
+    },
+-   ".MuiAutocomplete-hasPopupIcon
+-       .MuiAutocomplete-inputRoot[class*='MuiFilledInput-root'],
+-     .MuiAutocomplete-hasClearIcon
+-       .MuiAutocomplete-inputRoot[class*='MuiFilledInput-root']": Object {
+-     "paddingRight": "39px",
++   ".MuiAutocomplete-fullWidth .MuiOutlinedInput-root.MuiInputBase-sizeSmall": Object {
++     "padding": "6px",
+    },
+-   ".MuiAutocomplete-hasPopupIcon
+-       .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'],
+-     .MuiAutocomplete-hasClearIcon
+-       .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']": Object {
+-     "paddingRight": "39px",
++   ".MuiAutocomplete-fullWidth .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input": Object {
++     "padding": "2.5px 4px 2.5px 6px",
+    },
+-   ".MuiAutocomplete-hasPopupIcon .MuiAutocomplete-inputRoot,
+-     .MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot": Object {
+-     "paddingRight": "30px",
++   ".MuiAutocomplete-fullWidth.Mui-focused .MuiAutocomplete-clearIndicator": Object {
++     "visibility": "visible",
+    },
+-   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon
+-       .MuiAutocomplete-inputRoot": Object {
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot": Object {
+      "paddingRight": "56px",
+    },
+-   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon
+-       .MuiAutocomplete-inputRoot[class*='MuiFilledInput-root']": Object {
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiFilledInput-root": Object {
+      "paddingRight": "65px",
+    },
+-   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon
+-       .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']": Object {
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiOutlinedInput-root": Object {
+      "paddingRight": "65px",
+    },
+-   ".MuiAutocomplete-input": Object {
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot,
++     .MuiAutocomplete-hasClearIcon.MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot": Object {
++     "paddingRight": "30px",
++   },
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot,
++     .MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot": Object {
++     "paddingRight": "30px",
++   },
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot,
++     .MuiAutocomplete-hasClearIcon.MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot": Object {
++     "paddingRight": "30px",
++   },
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiFilledInput-root,
++     .MuiAutocomplete-hasClearIcon.MuiAutocomplete-fullWidth .MuiFilledInput-root": Object {
++     "paddingRight": "39px",
++   },
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiFilledInput-root,
++     .MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiFilledInput-root": Object {
++     "paddingRight": "39px",
++   },
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiFilledInput-root,
++     .MuiAutocomplete-hasClearIcon.MuiAutocomplete-sizeSmall .MuiFilledInput-root": Object {
++     "paddingRight": "39px",
++   },
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiOutlinedInput-root,
++     .MuiAutocomplete-hasClearIcon.MuiAutocomplete-fullWidth .MuiOutlinedInput-root": Object {
++     "paddingRight": "39px",
++   },
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiOutlinedInput-root,
++     .MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiOutlinedInput-root": Object {
++     "paddingRight": "39px",
++   },
++   ".MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiOutlinedInput-root,
++     .MuiAutocomplete-hasClearIcon.MuiAutocomplete-sizeSmall .MuiOutlinedInput-root": Object {
++     "paddingRight": "39px",
++   },
++   ".MuiAutocomplete-root .MuiAutocomplete-input": Object {
++     "WebkitBoxFlex": "1",
++     "WebkitFlexGrow": "1",
+      "flexGrow": 1,
+-     "opacity": 0,
++     "msFlexPositive": "1",
++     "opacity": 1,
+      "textOverflow": "ellipsis",
+    },
+-   ".MuiAutocomplete-inputFocused": Object {
+-     "opacity": 1,
+-   },
+-   ".MuiAutocomplete-inputRoot": Object {
++   ".MuiAutocomplete-root .MuiAutocomplete-inputRoot": Object {
++     "WebkitFlexWrap": "wrap",
+      "flexWrap": "wrap",
++     "msFlexWrap": "wrap",
+    },
+-   ".MuiAutocomplete-inputRoot .MuiAutocomplete-input": Object {
++   ".MuiAutocomplete-root .MuiAutocomplete-inputRoot .MuiAutocomplete-input": Object {
+      "minWidth": "30px",
+      "width": "0",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiFilledInput-root']": Object {
++   ".MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']": Object {
++     "padding": "6px 8px",
++   },
++   ".MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-endAdornment": Object {
++     "right": "12px",
++   },
++   ".MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-input": Object {
++     "padding": "4px",
++     "width": "144px",
++   },
++   ".MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-input:first-child": Object {
++     "paddingLeft": "unset",
++   },
++   ".MuiAutocomplete-root .MuiAutocomplete-tag": Object {
++     "margin": "4px",
++     "maxWidth": "calc(100% - 6px)",
++   },
++   ".MuiAutocomplete-root .MuiFilledInput-root": Object {
+      "paddingLeft": "8px",
+      "paddingTop": "19px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiFilledInput-root']
+-       .MuiAutocomplete-endAdornment": Object {
++   ".MuiAutocomplete-root .MuiFilledInput-root .MuiAutocomplete-endAdornment": Object {
+      "right": "9px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiFilledInput-root']
+-       .MuiAutocomplete-input": Object {
+-     "padding": "9px 4px",
++   ".MuiAutocomplete-root .MuiFilledInput-root .MuiFilledInput-input": Object {
++     "padding": "7px 4px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiFilledInput-root'][class*='MuiFilledInput-marginDense']": Object {
++   ".MuiAutocomplete-root .MuiFilledInput-root.MuiInputBase-sizeSmall": Object {
+      "paddingBottom": "1px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiFilledInput-root'][class*='MuiFilledInput-marginDense']
+-       .MuiAutocomplete-input": Object {
+-     "padding": "4.5px 4px",
++   ".MuiAutocomplete-root .MuiFilledInput-root.MuiInputBase-sizeSmall .MuiFilledInput-input": Object {
++     "padding": "2.5px 4px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiInput-root']": Object {
++   ".MuiAutocomplete-root .MuiInput-root": Object {
+      "paddingBottom": "1px",
++   },
++   ".MuiAutocomplete-root .MuiInput-root .MuiInput-input": Object {
++     "padding": "4px 4px 4px 0px",
++   },
++   ".MuiAutocomplete-root .MuiInput-root.MuiInputBase-sizeSmall .MuiInput-input": Object {
++     "padding": "2px 4px 3px 0",
++   },
++   ".MuiAutocomplete-root .MuiInputBase-hiddenLabel": Object {
++     "paddingTop": "8px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiInput-root']
+-       .MuiAutocomplete-input:first-child": Object {
+-     "padding": "6px 0",
++   ".MuiAutocomplete-root .MuiOutlinedInput-root": Object {
++     "padding": "9px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiInput-root'] .MuiAutocomplete-input": Object {
+-     "padding": "4px",
++   ".MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-endAdornment": Object {
++     "right": "9px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiInput-root'][class*='MuiInput-marginDense']
+-       .MuiAutocomplete-input": Object {
+-     "padding": "4px 4px 5px",
++   ".MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input": Object {
++     "padding": "7.5px 4px 7.5px 6px",
++   },
++   ".MuiAutocomplete-root .MuiOutlinedInput-root.MuiInputBase-sizeSmall": Object {
++     "padding": "6px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiInput-root'][class*='MuiInput-marginDense']
+-       .MuiAutocomplete-input:first-child": Object {
+-     "padding": "3px 0 6px",
++   ".MuiAutocomplete-root .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input": Object {
++     "padding": "2.5px 4px 2.5px 6px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']": Object {
++   ".MuiAutocomplete-root.Mui-focused .MuiAutocomplete-clearIndicator": Object {
++     "visibility": "visible",
++   },
++   ".MuiAutocomplete-sizeSmall .MuiAutocomplete-input": Object {
++     "WebkitBoxFlex": "1",
++     "WebkitFlexGrow": "1",
++     "flexGrow": 1,
++     "msFlexPositive": "1",
++     "opacity": 1,
++     "textOverflow": "ellipsis",
++   },
++   ".MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot": Object {
++     "WebkitFlexWrap": "wrap",
++     "flexWrap": "wrap",
++     "msFlexWrap": "wrap",
++   },
++   ".MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot .MuiAutocomplete-input": Object {
++     "minWidth": "30px",
++     "width": "0",
++   },
++   ".MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']": Object {
+      "padding": "6px 8px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']
+-       .MuiAutocomplete-endAdornment": Object {
++   ".MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-endAdornment": Object {
+      "right": "12px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']
+-       .MuiAutocomplete-input": Object {
++   ".MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-input": Object {
+      "padding": "4px",
+      "width": "144px",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'][class*='MuiOutlinedInput-marginDense']": Object {
+-     "padding": "6px",
++   ".MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-input:first-child": Object {
++     "paddingLeft": "unset",
+    },
+-   ".MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'][class*='MuiOutlinedInput-marginDense']
+-       .MuiAutocomplete-input": Object {
+-     "padding": "4.5px 4px",
++   ".MuiAutocomplete-sizeSmall .MuiAutocomplete-tag": Object {
++     "margin": "4px",
++     "maxWidth": "calc(100% - 4px)",
+    },
+-   ".MuiAutocomplete-listbox": Object {
+-     "listStyle": "none",
+-     "margin": "0",
+-     "maxHeight": "40vh",
+-     "overflow": "auto",
+-     "padding": "8px 0",
++   ".MuiAutocomplete-sizeSmall .MuiFilledInput-root": Object {
++     "paddingLeft": "8px",
++     "paddingTop": "19px",
+    },
+-   ".MuiAutocomplete-loading": Object {
+-     "color": "Color.Dark200",
+-     "padding": "14px 16px",
++   ".MuiAutocomplete-sizeSmall .MuiFilledInput-root .MuiAutocomplete-endAdornment": Object {
++     "right": "9px",
+    },
+-   ".MuiAutocomplete-noOptions": Object {
+-     "color": "Color.Dark200",
+-     "padding": "14px 16px",
++   ".MuiAutocomplete-sizeSmall .MuiFilledInput-root .MuiFilledInput-input": Object {
++     "padding": "7px 4px",
+    },
+-   ".MuiAutocomplete-option": Object {
+-     "WebkitTapHighlightColor": "transparent",
+-     "alignItems": "center",
+-     "boxSizing": "border-box",
+-     "cursor": "pointer",
+-     "display": "flex",
+-     "justifyContent": "flex-start",
+-     "minHeight": "48px",
+-     "outline": "0",
+-     "paddingBottom": "6px",
+-     "paddingLeft": "16px",
+-     "paddingRight": "16px",
+-     "paddingTop": "6px",
++   ".MuiAutocomplete-sizeSmall .MuiFilledInput-root.MuiInputBase-sizeSmall": Object {
++     "paddingBottom": "1px",
+    },
+-   ".MuiAutocomplete-option:active": Object {
+-     "backgroundColor": "Color.Silver300",
++   ".MuiAutocomplete-sizeSmall .MuiFilledInput-root.MuiInputBase-sizeSmall .MuiFilledInput-input": Object {
++     "padding": "2.5px 4px",
+    },
+-   ".MuiAutocomplete-option[aria-disabled='true']": Object {
+-     "opacity": 0.38,
+-     "pointerEvents": "none",
++   ".MuiAutocomplete-sizeSmall .MuiInput-root": Object {
++     "paddingBottom": "1px",
+    },
+-   ".MuiAutocomplete-option[aria-selected='true']": Object {
+-     "backgroundColor": "Color.Silver300",
++   ".MuiAutocomplete-sizeSmall .MuiInput-root .MuiInput-input": Object {
++     "padding": "4px 4px 4px 0px",
+    },
+-   ".MuiAutocomplete-option[data-focus='true']": Object {
+-     "backgroundColor": "Color.Silver100",
++   ".MuiAutocomplete-sizeSmall .MuiInput-root.MuiInputBase-sizeSmall .MuiInput-input": Object {
++     "padding": "2px 4px 3px 0",
+    },
+-   ".MuiAutocomplete-paper": Object {
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 400,
+-     "lineHeight": "20px",
+-     "margin": "4px 0",
+-     "overflow": "hidden",
++   ".MuiAutocomplete-sizeSmall .MuiInputBase-hiddenLabel": Object {
++     "paddingTop": "8px",
+    },
+-   ".MuiAutocomplete-popper": Object {
+-     "zIndex": 1300,
++   ".MuiAutocomplete-sizeSmall .MuiOutlinedInput-root": Object {
++     "padding": "9px",
+    },
+-   ".MuiAutocomplete-popperDisablePortal": Object {
+-     "position": "absolute",
++   ".MuiAutocomplete-sizeSmall .MuiOutlinedInput-root .MuiAutocomplete-endAdornment": Object {
++     "right": "9px",
+    },
+-   ".MuiAutocomplete-popupIndicator": Object {
+-     "marginRight": "-2px",
+-     "padding": "2px",
++   ".MuiAutocomplete-sizeSmall .MuiOutlinedInput-root .MuiAutocomplete-input": Object {
++     "padding": "7.5px 4px 7.5px 6px",
+    },
+-   ".MuiAutocomplete-popupIndicator .MuiSvgIcon-root": Object {
+-     "fontSize": "24px",
++   ".MuiAutocomplete-sizeSmall .MuiOutlinedInput-root.MuiInputBase-sizeSmall": Object {
++     "padding": "6px",
+    },
+-   ".MuiAutocomplete-popupIndicatorOpen": Object {
+-     "transform": "rotate(180deg)",
++   ".MuiAutocomplete-sizeSmall .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input": Object {
++     "padding": "2.5px 4px 2.5px 6px",
+    },
+-   ".MuiAutocomplete-root.Mui-focused .MuiAutocomplete-clearIndicatorDirty": Object {
++   ".MuiAutocomplete-sizeSmall.Mui-focused .MuiAutocomplete-clearIndicator": Object {
+      "visibility": "visible",
+    },
+-   ".MuiAutocomplete-tag": Object {
+-     "margin": "4px",
+-     "maxWidth": "calc(100% - 6px)",
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
++   ],
++   "@media (min-width:600px)": Array [
++     Object {
++       ".MuiAutocomplete-root .MuiAutocomplete-tag": Object {
++         "margin": "2px",
++       },
++     },
++     Object {
++       ".MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']": Object {
++         "padding": "4px 6px",
++       },
++       ".MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-endAdornment": Object {
++         "right": "8px",
++       },
++       ".MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-input": Object {
++         "padding": "2px",
++       },
+      },
+-   ".MuiAutocomplete-tagSizeSmall": Object {
++     Object {
++       ".MuiAutocomplete-fullWidth .MuiAutocomplete-tag": Object {
+          "margin": "2px",
+-     "maxWidth": "calc(100% - 4px)",
+        },
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Object {
+-     ".MuiAutocomplete-paper": Object {
+-       "fontSize": "16px",
+-       "lineHeight": "24px",
++     },
++     Object {
++       ".MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']": Object {
++         "padding": "4px 6px",
++       },
++       ".MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-endAdornment": Object {
++         "right": "8px",
+        },
++       ".MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-input": Object {
++         "padding": "2px",
+        },
+-   "@media (min-width: 600px)": Array [
++     },
+      Object {
+-       ".MuiAutocomplete-tag": Object {
++       ".MuiAutocomplete-sizeSmall .MuiAutocomplete-tag": Object {
+          "margin": "2px",
+        },
+      },
+      Object {
+-       ".MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']": Object {
++       ".MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']": Object {
+          "padding": "4px 6px",
+        },
+-       ".MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']
+-         .MuiAutocomplete-endAdornment": Object {
++       ".MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-endAdornment": Object {
+          "right": "8px",
+        },
+-       ".MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']
+-         .MuiAutocomplete-input": Object {
++       ".MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] .MuiAutocomplete-input": Object {
+          "padding": "2px",
+        },
+      },
++   ],
++   "@media (pointer:fine)": Array [
+      Object {
+-       ".MuiAutocomplete-popupIndicator .MuiSvgIcon-root": Object {
+-         "fontSize": "16px",
++       ".MuiAutocomplete-root:hover .MuiAutocomplete-clearIndicator": Object {
++         "visibility": "visible",
+        },
+      },
+      Object {
+-       ".MuiAutocomplete-option": Object {
+-         "minHeight": "auto",
++       ".MuiAutocomplete-fullWidth:hover .MuiAutocomplete-clearIndicator": Object {
++         "visibility": "visible",
+        },
+      },
+-   ],
+-   "@media (pointer: fine)": Object {
+-     ".MuiAutocomplete-root:hover .MuiAutocomplete-clearIndicatorDirty": Object {
++     Object {
++       ".MuiAutocomplete-sizeSmall:hover .MuiAutocomplete-clearIndicator": Object {
+          "visibility": "visible",
+        },
+      },
++   ],
++   "@media print": Object {},
+  }
