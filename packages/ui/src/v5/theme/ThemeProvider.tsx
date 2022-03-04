@@ -9,6 +9,7 @@ import { useConstant } from '@superdispatch/hooks';
 import { Rule, StyleSheet } from 'jss';
 import { ReactElement, ReactNode } from 'react';
 import { overrideAppBar } from '../app-bar/AppBarOverrides';
+import { overrideAutocomplete } from '../autocomplete/AutocompleteOverrides';
 import { overrideAvatar } from '../avatar/AvatarOverrides';
 import { overrideButton } from '../button/ButtonOverrides';
 import { overrideCard } from '../card/CardOverrides';
@@ -74,6 +75,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   overrideMenu(theme);
   overrideAvatar(theme);
   overrideTextField(theme);
+  overrideAutocomplete(theme);
   overrideCssBaseline(theme);
 
   return theme;
