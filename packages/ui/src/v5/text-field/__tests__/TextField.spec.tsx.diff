@@ -113,6 +113,16 @@ Compared values have no visual difference.
     },
 -   ".MuiFormLabel-asterisk.Mui-error": Object {
 -     "color": "Color.Red300",
+-   },
+-   ".MuiFormLabel-colorSecondary.Mui-focused": Object {
+-     "color": "#f50057",
+-   },
+-   ".MuiFormLabel-root": Object {
+-     "color": "Color.Dark400",
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 400,
+-     "lineHeight": "20px",
 +   ".MuiFormLabel": Object {
 +     "color": Array [
 +       "Color.Dark200",
@@ -134,26 +144,12 @@ Compared values have no visual difference.
 +       "1.4375em",
 +       "20px",
 +     ],
-+     "padding": "0",
+      "padding": "0",
 +     "position": "relative",
-    },
--   ".MuiFormLabel-colorSecondary.Mui-focused": Object {
--     "color": "#f50057",
-+   ".MuiFormLabel.Mui-disabled": Object {
-+     "color": "Color.Dark400",
-    },
--   ".MuiFormLabel-root": Object {
-+   ".MuiFormLabel.Mui-error": Object {
-      "color": "Color.Dark400",
--     "fontFamily": "'Inter', sans-serif",
--     "fontSize": "14px",
--     "fontWeight": 400,
--     "lineHeight": "20px",
--     "padding": "0",
     },
 -   ".MuiInputAdornment-disablePointerEvents": Object {
 -     "pointerEvents": "none",
-+   ".MuiFormLabel.Mui-focused": Object {
++   ".MuiFormLabel.Mui-disabled": Object {
 +     "color": "Color.Dark400",
     },
 -   ".MuiInputAdornment-filled.MuiInputAdornment-positionStart:not(.MuiInputAdornment-hiddenLabel)": Object {
@@ -161,10 +157,14 @@ Compared values have no visual difference.
 -   },
 -   ".MuiInputAdornment-positionEnd": Object {
 -     "marginLeft": "8px",
--   },
++   ".MuiFormLabel.Mui-error": Object {
++     "color": "Color.Dark400",
+    },
 -   ".MuiInputAdornment-positionEnd .MuiIconButton-root": Object {
 -     "marginRight": "-4px",
--   },
++   ".MuiFormLabel.Mui-focused": Object {
++     "color": "Color.Dark400",
+    },
 -   ".MuiInputAdornment-positionStart": Object {
 +   ".MuiInputAdornment": Object {
 +     "WebkitAlignItems": "center",
@@ -443,16 +443,24 @@ Compared values have no visual difference.
 +     "color": "currentColor",
 +     "opacity": 0.42,
 +     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
-+   },
+    },
+-   ".MuiInputBase-inputTypeSearch": Object {
+-     "MozAppearance": "textfield",
+-     "WebkitAppearance": "textfield",
 +   ".MuiInputBase-inputMultiline::-webkit-search-decoration": Object {
 +     "WebkitAppearance": "none",
-+   },
+    },
+-   ".MuiInputBase-multiline": Object {
+-     "padding": "6px 0 7px",
 +   ".MuiInputBase-inputMultiline:focus": Object {
 +     "outline": "0",
-+   },
+    },
+-   ".MuiInputBase-multiline.MuiInputBase-marginDense": Object {
+-     "paddingTop": "3px",
 +   ".MuiInputBase-inputMultiline:invalid": Object {
 +     "boxShadow": "none",
-+   },
+    },
+-   ".MuiInputBase-root": Object {
 +   ".MuiInputBase-inputSizeSmall": Object {
 +     "MozLetterSpacing": "inherit",
 +     "WebkitAnimationDuration": "10ms",
@@ -513,24 +521,16 @@ Compared values have no visual difference.
 +     "color": "currentColor",
 +     "opacity": 0.42,
 +     "transition": "opacity 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
-    },
--   ".MuiInputBase-inputTypeSearch": Object {
--     "MozAppearance": "textfield",
--     "WebkitAppearance": "textfield",
++   },
 +   ".MuiInputBase-inputSizeSmall::-webkit-search-decoration": Object {
 +     "WebkitAppearance": "none",
-    },
--   ".MuiInputBase-multiline": Object {
--     "padding": "6px 0 7px",
++   },
 +   ".MuiInputBase-inputSizeSmall:focus": Object {
 +     "outline": "0",
-    },
--   ".MuiInputBase-multiline.MuiInputBase-marginDense": Object {
--     "paddingTop": "3px",
++   },
 +   ".MuiInputBase-inputSizeSmall:invalid": Object {
 +     "boxShadow": "none",
-    },
--   ".MuiInputBase-root": Object {
++   },
 +   ".MuiInputBase-multiline": Object {
 +     "WebkitAlignItems": "center",
 +     "WebkitBoxAlign": "center",
@@ -652,9 +652,7 @@ Compared values have no visual difference.
 +       1,
 +       "unset",
 +     ],
-    },
--   ".MuiInputLabel-filled.MuiInputLabel-marginDense": Object {
--     "transform": "translate(12px, 17px) scale(1)",
++   },
 +   ".MuiOutlinedInput": Object {
 +     "borderRadius": "4px",
 +     "paddingLeft": Array [
@@ -663,17 +661,15 @@ Compared values have no visual difference.
 +     ],
 +     "position": "relative",
     },
--   ".MuiInputLabel-filled.MuiInputLabel-shrink": Object {
--     "transform": "translate(12px, 10px) scale(0.75)",
+-   ".MuiInputLabel-filled.MuiInputLabel-marginDense": Object {
+-     "transform": "translate(12px, 17px) scale(1)",
 +   ".MuiOutlinedInput-input": Object {
 +     "padding": Array [
 +       "16.5px 14px",
 +       "10px 12px",
 +     ],
 +     "paddingLeft": "0",
-    },
--   ".MuiInputLabel-filled.MuiInputLabel-shrink.MuiInputLabel-marginDense": Object {
--     "transform": "translate(12px, 7px) scale(0.75)",
++   },
 +   ".MuiOutlinedInput-input,.MuiInputBase-inputMultiline": Object {
 +     "padding": Array [
 +       "0",
@@ -681,51 +677,55 @@ Compared values have no visual difference.
 +       "0",
 +     ],
     },
--   ".MuiInputLabel-marginDense": Object {
--     "transform": "translate(0, 21px) scale(1)",
+-   ".MuiInputLabel-filled.MuiInputLabel-shrink": Object {
+-     "transform": "translate(12px, 10px) scale(0.75)",
 +   ".MuiOutlinedInput-input,.MuiInputBase-inputMultiline.MuiInputBase-inputAdornedEnd": Object {
 +     "paddingRight": "0",
     },
--   ".MuiInputLabel-outlined.MuiInputLabel-marginDense": Object {
--     "transform": "translate(14px, 12px) scale(1)",
+-   ".MuiInputLabel-filled.MuiInputLabel-shrink.MuiInputLabel-marginDense": Object {
+-     "transform": "translate(12px, 7px) scale(0.75)",
 +   ".MuiOutlinedInput-input,.MuiInputBase-inputMultiline.MuiInputBase-inputAdornedStart": Object {
 +     "paddingLeft": "0",
     },
--   ".MuiInputLabel-root": Object {
--     "display": "block",
--     "marginBottom": "4px",
+-   ".MuiInputLabel-marginDense": Object {
+-     "transform": "translate(0, 21px) scale(1)",
 +   ".MuiOutlinedInput-input,.MuiInputBase-inputMultiline:-webkit-autofill": Object {
 +     "borderRadius": "inherit",
     },
--   ".MuiOutlinedInput-adornedEnd": Object {
--     "paddingRight": "8px",
+-   ".MuiInputLabel-outlined.MuiInputLabel-marginDense": Object {
+-     "transform": "translate(14px, 12px) scale(1)",
 +   ".MuiOutlinedInput-input,.MuiInputBase-inputSizeSmall": Object {
 +     "padding": Array [
 +       "8.5px 14px",
 +       "10px 12px",
 +     ],
     },
--   ".MuiOutlinedInput-adornedStart": Object {
--     "paddingLeft": "8px",
+-   ".MuiInputLabel-root": Object {
+-     "display": "block",
+-     "marginBottom": "4px",
 +   ".MuiOutlinedInput-input,.MuiInputBase-inputSizeSmall.MuiInputBase-inputAdornedEnd": Object {
 +     "paddingRight": "0",
     },
--   ".MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline": Object {
--     "borderColor": "#f50057",
+-   ".MuiOutlinedInput-adornedEnd": Object {
+-     "paddingRight": "8px",
 +   ".MuiOutlinedInput-input,.MuiInputBase-inputSizeSmall.MuiInputBase-inputAdornedStart": Object {
 +     "paddingLeft": "0",
     },
--   ".MuiOutlinedInput-input": Object {
--     "padding": "10px 12px",
+-   ".MuiOutlinedInput-adornedStart": Object {
+-     "paddingLeft": "8px",
 +   ".MuiOutlinedInput-input,.MuiInputBase-inputSizeSmall:-webkit-autofill": Object {
 +     "borderRadius": "inherit",
-+   },
+    },
+-   ".MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline": Object {
+-     "borderColor": "#f50057",
 +   ".MuiOutlinedInput-input.MuiInputBase-inputAdornedEnd": Object {
 +     "paddingRight": "0",
     },
+-   ".MuiOutlinedInput-input": Object {
+-     "padding": "10px 12px",
 +   ".MuiOutlinedInput-input.MuiInputBase-inputAdornedStart": Object {
 +     "paddingLeft": "0",
-+   },
+    },
     ".MuiOutlinedInput-input:-webkit-autofill": Object {
       "borderRadius": "inherit",
     },
@@ -736,39 +736,43 @@ Compared values have no visual difference.
 +       "16.5px 14px",
 +       "10px 12px",
 +     ],
-+     "paddingRight": "0",
-+     "position": "relative",
-+   },
-+   ".MuiOutlinedInput-multiline.Mui-disabled .MuiOutlinedInput-notchedOutline": Object {
-+     "borderColor": "Color.Silver400",
-+   },
-+   ".MuiOutlinedInput-multiline.Mui-error .MuiOutlinedInput-notchedOutline": Object {
-+     "borderColor": "Color.Red300",
-+   },
-+   ".MuiOutlinedInput-multiline.Mui-focused .MuiOutlinedInput-notchedOutline": Object {
-+     "borderColor": "Color.Blue300",
-+     "borderWidth": "2px",
-+   },
-+   ".MuiOutlinedInput-multiline.MuiInputBase-inputAdornedEnd": Object {
       "paddingRight": "0",
++     "position": "relative",
     },
 -   ".MuiOutlinedInput-inputAdornedStart": Object {
-+   ".MuiOutlinedInput-multiline.MuiInputBase-inputAdornedStart": Object {
-      "paddingLeft": "0",
+-     "paddingLeft": "0",
++   ".MuiOutlinedInput-multiline.Mui-disabled .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Silver400",
     },
 -   ".MuiOutlinedInput-inputMarginDense": Object {
 -     "paddingBottom": "10.5px",
 -     "paddingTop": "10.5px",
-+   ".MuiOutlinedInput-multiline:-webkit-autofill": Object {
-+     "borderRadius": "inherit",
++   ".MuiOutlinedInput-multiline.Mui-error .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Red300",
     },
 -   ".MuiOutlinedInput-inputMultiline": Object {
 -     "padding": "0",
-+   ".MuiOutlinedInput-multiline:hover .MuiOutlinedInput-notchedOutline": Object {
-+     "borderColor": "Color.Silver500",
++   ".MuiOutlinedInput-multiline.Mui-focused .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Blue300",
++     "borderWidth": "2px",
     },
 -   ".MuiOutlinedInput-multiline": Object {
 -     "padding": "6px 8px",
++   ".MuiOutlinedInput-multiline.MuiInputBase-inputAdornedEnd": Object {
++     "paddingRight": "0",
+    },
+-   ".MuiOutlinedInput-multiline.MuiOutlinedInput-marginDense": Object {
+-     "paddingBottom": "10.5px",
+-     "paddingTop": "10.5px",
++   ".MuiOutlinedInput-multiline.MuiInputBase-inputAdornedStart": Object {
++     "paddingLeft": "0",
++   },
++   ".MuiOutlinedInput-multiline:-webkit-autofill": Object {
++     "borderRadius": "inherit",
++   },
++   ".MuiOutlinedInput-multiline:hover .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Silver500",
++   },
 +   ".MuiOutlinedInput-notched": Object {
 +     "borderRadius": "inherit",
 +     "borderStyle": "solid",
@@ -785,10 +789,6 @@ Compared values have no visual difference.
 +     "textAlign": "left",
 +     "top": "-5px",
     },
--   ".MuiOutlinedInput-multiline.MuiOutlinedInput-marginDense": Object {
--     "paddingBottom": "10.5px",
--     "paddingTop": "10.5px",
--   },
     ".MuiOutlinedInput-notchedOutline": Object {
 -     "borderColor": "Color.Silver500",
 +     "borderColor": Array [
@@ -839,12 +839,12 @@ Compared values have no visual difference.
 -     "paddingRight": "32px",
 +   ".MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": Object {
 +     "borderColor": "Color.Silver500",
++   },
++   ".MuiOutlinedInput.Mui-disabled .MuiOutlinedInput-notchedOutline": Object {
++     "borderColor": "Color.Silver400",
     },
 -   ".MuiSelect-icon": Object {
 -     "color": "rgba(0, 0, 0, 0.54)",
-+   ".MuiOutlinedInput.Mui-disabled .MuiOutlinedInput-notchedOutline": Object {
-+     "borderColor": "Color.Silver400",
-+   },
 +   ".MuiOutlinedInput.Mui-error .MuiOutlinedInput-notchedOutline": Object {
 +     "borderColor": "Color.Red300",
 +   },
@@ -874,13 +874,13 @@ Compared values have no visual difference.
 -   ".MuiSelect-icon.Mui-disabled": Object {
 +   ".MuiSelect-icon,.MuiSelect-iconOutlined.Mui-disabled": Object {
       "color": "Color.Silver400",
--   },
+    },
 -   ".MuiSelect-iconFilled": Object {
 -     "right": "7px",
 -   },
 -   ".MuiSelect-iconOpen": Object {
 -     "transform": "rotate(180deg)",
-    },
+-   },
     ".MuiSelect-iconOutlined": Object {
 -     "right": "12px",
 +     "MozUserSelect": "none",
@@ -925,14 +925,14 @@ Compared values have no visual difference.
 -     "paddingRight": "32px",
 +   ".MuiSelect-root,.MuiOutlinedInput-input.MuiInputBase-inputAdornedEnd": Object {
 +     "paddingRight": "0",
-+   },
+    },
+-   ".MuiSelect-select": Object {
 +   ".MuiSelect-root,.MuiOutlinedInput-input.MuiInputBase-inputAdornedStart": Object {
 +     "paddingLeft": "0",
 +   },
 +   ".MuiSelect-root,.MuiOutlinedInput-input:-webkit-autofill": Object {
 +     "borderRadius": "inherit",
-    },
--   ".MuiSelect-select": Object {
++   },
 +   ".MuiSelect-select,.SelectInput": Object {
       "MozAppearance": "none",
 +     "MozUserSelect": "none",
@@ -961,11 +961,11 @@ Compared values have no visual difference.
 +   },
 +   ".MuiSelect-select,.SelectInput.MuiSelect-select,.SelectInput.MuiSelect-select,.SelectInput": Object {
 +     "paddingRight": "32px",
-    },
--   ".MuiSelect-select::-ms-expand": Object {
++   },
 +   ".MuiSelect-select,.SelectInput.MuiSelect-select:focus": Object {
 +     "backgroundColor": "unset",
-+   },
+    },
+-   ".MuiSelect-select::-ms-expand": Object {
 +   ".MuiSelect-select,.SelectInput::-ms-expand": Object {
       "display": "none",
     },
@@ -1062,27 +1062,23 @@ Compared values have no visual difference.
 +     Object {
 +       ".MuiOutlinedInput-root,.MuiInputBase-formControl:hover .MuiOutlinedInput-notchedOutline": Object {
 +         "borderColor": "rgba(0,0,0,0.23)",
-        },
-      },
--   "@media (min-width: 0px) and (max-width: 599.95px)": Array [
++       },
++     },
 +   ],
 +   "@media (min-width:0px) and (max-width:599.95px)": Array [
-      Object {
--       ".MuiFormHelperText-root": Object {
++     Object {
 +       ".MuiInputBase": Object {
-          "fontSize": "16px",
-          "lineHeight": "24px",
-        },
-      },
-      Object {
--       ".MuiFormLabel-root": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
 +       ".MuiInputBase": Object {
-          "fontSize": "16px",
-          "lineHeight": "24px",
-        },
-      },
-      Object {
--       ".MuiInputBase-root": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
 +       ".MuiInputBase-multiline": Object {
 +         "fontSize": "16px",
 +         "lineHeight": "24px",
@@ -1110,21 +1106,25 @@ Compared values have no visual difference.
 +       ".MuiFormHelperText": Object {
 +         "fontSize": "14px",
 +         "lineHeight": "20px",
-+       },
-+     },
-+     Object {
+        },
+      },
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Array [
+      Object {
+-       ".MuiFormHelperText-root": Object {
 +       ".MuiFormHelperText": Object {
-+         "fontSize": "16px",
-+         "lineHeight": "24px",
-+       },
-+     },
-+     Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+      },
+      Object {
+-       ".MuiFormLabel-root": Object {
 +       ".MuiFormLabel": Object {
-+         "fontSize": "16px",
-+         "lineHeight": "24px",
-+       },
-+     },
-+     Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+      },
+      Object {
+-       ".MuiInputBase-root": Object {
 +       ".MuiFormLabel": Object {
           "fontSize": "16px",
           "lineHeight": "24px",
@@ -1135,13 +1135,28 @@ Compared values have no visual difference.
     ],
 -   "@media (min-width: 600px)": Array [
 +   "@media (min-width:600px)": Array [
-      Object {
--       ".MuiInputAdornment-root .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall)": Object {
++     Object {
 +       ".MuiSelect-iconOutlined": Object {
 +         "fontSize": "var(--mui-svg-icon-size,24px)",
 +       },
 +     },
 +     Object {
++       ".MuiInputBase-inputAdornedEnd": Object {
++         "height": "20px",
++       },
++     },
++     Object {
++       ".MuiInputBase-inputMultiline": Object {
++         "height": "20px",
++       },
++     },
++     Object {
++       ".MuiInputBase-inputSizeSmall": Object {
++         "height": "20px",
++       },
++     },
+      Object {
+-       ".MuiInputAdornment-root .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall)": Object {
 +       ".MuiInputAdornment .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall)": Object {
           "fontSize": "20px",
         },
@@ -1150,41 +1165,27 @@ Compared values have no visual difference.
 -       ".MuiInputAdornment-positionStart .MuiIconButton-root": Object {
 +       ".MuiInputAdornment .MuiIconButton-root": Object {
           "marginLeft": "-6px",
-+       },
-+     },
-+     Object {
-+       ".MuiInputAdornment-positionEnd .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall)": Object {
-+         "fontSize": "20px",
         },
       },
       Object {
++       ".MuiInputAdornment-positionEnd .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall)": Object {
++         "fontSize": "20px",
++       },
++     },
++     Object {
         ".MuiInputAdornment-positionEnd .MuiIconButton-root": Object {
           "marginRight": "-6px",
         },
       },
       Object {
 -       ".MuiInputBase-input": Object {
-+       ".MuiInputBase-inputAdornedEnd": Object {
-+         "height": "20px",
-+       },
-+     },
-+     Object {
-+       ".MuiInputBase-inputMultiline": Object {
-          "height": "20px",
+-         "height": "20px",
++       ".MuiOutlinedInput-input": Object {
++         "padding": "6px 8px",
         },
       },
       Object {
-+       ".MuiInputBase-inputSizeSmall": Object {
-+         "height": "20px",
-+       },
-+     },
-+     Object {
-        ".MuiOutlinedInput-input": Object {
-          "padding": "6px 8px",
-        },
-      },
-      Object {
--       ".MuiSelect-selectMenu.MuiSelect-selectMenu": Object {
+-       ".MuiOutlinedInput-input": Object {
 +       ".MuiOutlinedInput-multiline": Object {
 +         "padding": "6px 8px",
 +       },
@@ -1206,10 +1207,11 @@ Compared values have no visual difference.
 +     },
 +     Object {
 +       ".MuiSelect-root,.MuiOutlinedInput-input": Object {
-+         "padding": "6px 8px",
-+       },
-+     },
-+     Object {
+          "padding": "6px 8px",
+        },
+      },
+      Object {
+-       ".MuiSelect-selectMenu.MuiSelect-selectMenu": Object {
 +       ".MuiSelect-select,.SelectInput.MuiSelect-select": Object {
           "right": "32px",
         },
