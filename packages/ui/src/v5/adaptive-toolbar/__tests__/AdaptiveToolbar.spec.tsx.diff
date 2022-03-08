@@ -1,0 +1,88 @@
+- v4
++ v5
+
+  Object {
++   ".MuiGrid-item": Object {
++     "WebkitFlexDirection": "row",
++     "boxSizing": "border-box",
++     "flexDirection": "row",
++     "margin": "0",
++     "msFlexDirection": "row",
++   },
++   ".MuiGrid-root": Object {
++     "WebkitFlexDirection": "row",
++     "WebkitFlexWrap": "nowrap",
++     "boxSizing": "border-box",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "flexDirection": "row",
++     "flexWrap": "nowrap",
++     "marginLeft": "-8px",
++     "marginTop": "-8px",
++     "msFlexDirection": "row",
++     "msFlexWrap": "nowrap",
++     "width": Array [
++       "100%",
++       "calc(100% + 8px)",
++     ],
++   },
++   ".MuiGrid-root > .MuiGrid-item": Object {
++     "paddingLeft": "8px",
++     "paddingTop": "8px",
++   },
++   ".MuiToolbar-root": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "alignItems": "center",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "minHeight": Array [
++       "56px",
++       "64px",
++     ],
++     "msFlexAlign": "center",
++     "paddingLeft": "16px",
++     "paddingRight": "16px",
++     "position": "relative",
++   },
+    ".SD-AdaptiveToolbar-actions": Object {
+      "overflow": "hidden",
++   },
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
++   ],
++   "@media (min-width:0px) and (orientation:landscape)": Object {
++     ".MuiToolbar-root": Object {
++       "minHeight": "48px",
++     },
+    },
++   "@media (min-width:600px)": Array [
++     Object {
++       ".MuiToolbar-root": Object {
++         "paddingLeft": "24px",
++         "paddingRight": "24px",
++       },
++     },
++     Object {
++       ".MuiToolbar-root": Object {
++         "minHeight": "64px",
++       },
++     },
++     Object {
++       ".MuiToolbar-root": Object {
++         "paddingLeft": "16px",
++         "paddingRight": "16px",
++       },
++     },
++   ],
++   "@media print": Object {},
+  }

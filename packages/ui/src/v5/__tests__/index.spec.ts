@@ -3,6 +3,7 @@ import * as api5 from '..';
 it('exposes public api', () => {
   expect(api5).toMatchInlineSnapshot(`
     Object {
+      "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
       "Button": React.forwardRef(Button),
       "Color": Object {
         "Black": "#000",
