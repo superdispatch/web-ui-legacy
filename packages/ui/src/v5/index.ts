@@ -1,3 +1,4 @@
+export * from './adaptive-toolbar/AdaptiveToolbar';
 export * from './button/Button';
 export * from './columns/Column';
 export * from './columns/Columns';

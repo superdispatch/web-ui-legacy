@@ -131,62 +131,6 @@ it('checks component css', () => {
       font-size: var(--mui-svg-icon-size,32px);
     }
 
-    .MuiInputAdornment {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      height: 0.01em;
-      max-height: 2em;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      white-space: nowrap;
-      color: rgba(0,0,0,0.54);
-      margin-right: 8px;
-    }
-
-    .MuiInputAdornment .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall) {
-      font-size: 24px;
-    }
-
-    .MuiInputAdornment .MuiIconButton-root {
-      padding: 8px;
-    }
-
-    .MuiInputAdornment .MuiIconButton-root {
-      margin-left: -4px;
-    }
-
-    .MuiInputAdornment-positionEnd {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      height: 0.01em;
-      max-height: 2em;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      white-space: nowrap;
-      color: rgba(0,0,0,0.54);
-      margin-left: 8px;
-    }
-
-    .MuiInputAdornment-positionEnd .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall) {
-      font-size: 24px;
-    }
-
-    .MuiInputAdornment-positionEnd .MuiIconButton-root {
-      padding: 8px;
-    }
-
-    .MuiInputAdornment-positionEnd .MuiIconButton-root {
-      margin-right: -4px;
-    }
-
     .MuiInputBase {
       font-size: 14px;
       line-height: 1.4375em;
@@ -716,6 +660,62 @@ it('checks component css', () => {
       color: Color.Dark400;
     }
 
+    .MuiInputAdornment {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 0.01em;
+      max-height: 2em;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      white-space: nowrap;
+      color: rgba(0,0,0,0.54);
+      margin-right: 8px;
+    }
+
+    .MuiInputAdornment .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall) {
+      font-size: 24px;
+    }
+
+    .MuiInputAdornment .MuiIconButton-root {
+      padding: 8px;
+    }
+
+    .MuiInputAdornment .MuiIconButton-root {
+      margin-left: -4px;
+    }
+
+    .MuiInputAdornment-positionEnd {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 0.01em;
+      max-height: 2em;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      white-space: nowrap;
+      color: rgba(0,0,0,0.54);
+      margin-left: 8px;
+    }
+
+    .MuiInputAdornment-positionEnd .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall) {
+      font-size: 24px;
+    }
+
+    .MuiInputAdornment-positionEnd .MuiIconButton-root {
+      padding: 8px;
+    }
+
+    .MuiInputAdornment-positionEnd .MuiIconButton-root {
+      margin-right: -4px;
+    }
+
     .MuiInputLabel {
       display: block;
       -webkit-transform-origin: top left;
@@ -1099,30 +1099,6 @@ it('checks component css', () => {
       }
     }
 
-    @media (min-width:600px) {
-      .MuiInputAdornment .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall) {
-        font-size: 20px;
-      }
-    }
-
-    @media (min-width:600px) {
-      .MuiInputAdornment .MuiIconButton-root {
-        margin-left: -6px;
-      }
-    }
-
-    @media (min-width:600px) {
-      .MuiInputAdornment-positionEnd .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall) {
-        font-size: 20px;
-      }
-    }
-
-    @media (min-width:600px) {
-      .MuiInputAdornment-positionEnd .MuiIconButton-root {
-        margin-right: -6px;
-      }
-    }
-
     @media (min-width:0px) and (max-width:599.95px) {
       .MuiInputBase {
         font-size: 16px;
@@ -1208,6 +1184,30 @@ it('checks component css', () => {
       .MuiFormLabel {
         font-size: 16px;
         line-height: 24px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .MuiInputAdornment .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall) {
+        font-size: 20px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .MuiInputAdornment .MuiIconButton-root {
+        margin-left: -6px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .MuiInputAdornment-positionEnd .MuiSvgIcon-root:not(.MuiSvgIcon-fontSizeSmall) {
+        font-size: 20px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .MuiInputAdornment-positionEnd .MuiIconButton-root {
+        margin-right: -6px;
       }
     }
 

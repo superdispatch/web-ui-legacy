@@ -1,10 +1,10 @@
 - v4
 + v5
 
-@@ -1,13 +1,8 @@
+@@ -1,13 +1,9 @@
 
       Object {
--       "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
+        "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
 -       "AvatarButton": React.forwardRef(AvatarButton),
         "Button": React.forwardRef(Button),
 -       "CardButton": React.forwardRef(CardButton),
@@ -15,7 +15,7 @@
           "Black20": "rgba(0, 0, 0, 0.2)",
           "Black50": "rgba(0, 0, 0, 0.5)",
           "Blue100": "#A8D1FF",
-@@ -77,47 +72,12 @@
+@@ -77,47 +73,12 @@
           "Yellow500": "#DB7500",
           "Yellow75": "#FFF1C2",
         },
