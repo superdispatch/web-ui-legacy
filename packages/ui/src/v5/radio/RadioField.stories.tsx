@@ -1,7 +1,12 @@
 import { FormControlLabel, FormGroup, Switch, TextField } from '@mui/material';
+import { Meta } from '@storybook/react';
 import { CheckboxField, RadioField, RadioGroupField } from '..';
 
-export default { title: 'Inputs/RadioField', component: RadioField };
+export default {
+  title: 'Inputs/RadioField',
+  component: RadioField,
+  parameters: { v5: true },
+} as Meta;
 
 export const basic = () => (
   <RadioField label="Label" helperText="Helper Text" />
