@@ -47,6 +47,9 @@ export function overrideCheckbox(theme: SuperDispatchTheme): void {
         [`&:not(.${checkboxClasses.checked})`]: {
           color: Color.Dark100,
         },
+        [`&.${checkboxClasses.disabled}`]: {
+          color: Color.Silver400,
+        },
       },
 
       colorPrimary: {
