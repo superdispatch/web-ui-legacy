@@ -180,6 +180,10 @@ it('checks component css', () => {
       color: Color.Silver500;
     }
 
+    .MuiCheckbox-colorPrimary:hover:not(.Mui-checked) {
+      color: Color.Dark100;
+    }
+
     @media (min-width:600px) {
       .MuiSvgIcon-root {
         font-size: var(--mui-svg-icon-size,24px);

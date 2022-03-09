@@ -105,31 +105,28 @@
     },
     ".MuiCheckbox-colorPrimary.Mui-checked.Mui-disabled": Object {
       "color": "Color.Silver500",
-    },
+-   },
 -   ".MuiCheckbox-colorPrimary.Mui-checked:hover": Object {
 -     "backgroundColor": "rgba(0, 117, 255, 0.04)",
--   },
+    },
     ".MuiCheckbox-colorPrimary.Mui-disabled": Object {
       "color": "Color.Silver400",
     },
--   ".MuiCheckbox-colorPrimary:hover:not(.Mui-checked)": Object {
--     "color": "Color.Dark100",
 +   ".MuiCheckbox-colorPrimary:hover": Object {
 +     "backgroundColor": "rgba(0,117,255,0.04)",
-    },
--   ".MuiCheckbox-colorSecondary.Mui-checked": Object {
--     "color": "#f50057",
++   },
+    ".MuiCheckbox-colorPrimary:hover:not(.Mui-checked)": Object {
+      "color": "Color.Dark100",
++   },
 +   ".MuiCheckbox.Mui-disabled": Object {
 +     "cursor": "default",
 +     "pointerEvents": "none",
-    },
--   ".MuiCheckbox-colorSecondary.Mui-checked:hover": Object {
--     "backgroundColor": "rgba(245, 0, 87, 0.04)",
++   },
 +   ".MuiCheckbox::-moz-focus-inner": Object {
 +     "borderStyle": "none",
     },
--   ".MuiCheckbox-colorSecondary.Mui-disabled": Object {
--     "color": "Color.Silver400",
+-   ".MuiCheckbox-colorSecondary.Mui-checked": Object {
+-     "color": "#f50057",
 +   ".MuiSvgIcon-root": Object {
 +     "MozUserSelect": "none",
 +     "WebkitFlexShrink": "0",
@@ -152,10 +149,8 @@
 +     "userSelect": "none",
 +     "width": "1em",
     },
--   ".MuiCheckbox-root": Object {
--     "color": "Color.Dark100",
--     "marginBottom": "-5px",
--     "marginTop": "-5px",
+-   ".MuiCheckbox-colorSecondary.Mui-checked:hover": Object {
+-     "backgroundColor": "rgba(245, 0, 87, 0.04)",
 +   ".MuiTouchRipple-root": Object {
 +     "borderRadius": "inherit",
 +     "bottom": "0",
@@ -166,7 +161,9 @@
 +     "right": "0",
 +     "top": "0",
 +     "zIndex": 0,
-+   },
+    },
+-   ".MuiCheckbox-colorSecondary.Mui-disabled": Object {
+-     "color": "Color.Silver400",
 +   ".SwitchBase-input": Object {
 +     "cursor": "inherit",
 +     "height": "100%",
@@ -179,13 +176,17 @@
 +     "width": "100%",
 +     "zIndex": 1,
     },
--   "@media (hover: none)": Array [
--     Object {
--       ".MuiCheckbox-colorPrimary.Mui-checked:hover": Object {
+-   ".MuiCheckbox-root": Object {
+-     "color": "Color.Dark100",
+-     "marginBottom": "-5px",
+-     "marginTop": "-5px",
 +   ".SwitchBase-root": Object {
 +     "borderRadius": "50%",
 +     "padding": "9px",
-+   },
+    },
+-   "@media (hover: none)": Array [
+-     Object {
+-       ".MuiCheckbox-colorPrimary.Mui-checked:hover": Object {
 +   "@media (hover:none)": Object {
 +     ".MuiCheckbox-colorPrimary:hover": Object {
         "backgroundColor": "transparent",

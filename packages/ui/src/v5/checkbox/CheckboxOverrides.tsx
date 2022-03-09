@@ -43,9 +43,19 @@ export function overrideCheckbox(theme: SuperDispatchTheme): void {
         marginBottom: theme.spacing(-0.625),
       },
 
+      indeterminate: {
+        [`&:not(.${checkboxClasses.checked})`]: {
+          color: Color.Dark100,
+        },
+      },
+
       colorPrimary: {
         [`&.${checkboxClasses.checked}.${checkboxClasses.disabled}`]: {
           color: Color.Silver500,
+        },
+
+        [`&:hover:not(.${checkboxClasses.checked})`]: {
+          color: Color.Dark100,
         },
       },
     },
