@@ -13,9 +13,11 @@ import { overrideAutocomplete } from '../autocomplete/AutocompleteOverrides';
 import { overrideAvatar } from '../avatar/AvatarOverrides';
 import { overrideButton } from '../button/ButtonOverrides';
 import { overrideCard } from '../card/CardOverrides';
+import { overrideCheckbox } from '../checkbox/CheckboxOverrides';
 import { overrideIconButton } from '../icon-button/IconButtonOverrides';
 import { overrideMenu } from '../menu/MenuOverrides';
 import { overridePaper } from '../paper/PaperOverrides';
+import { overrideRadio } from '../radio/RadioOverrides';
 import { overrideSvgIcon } from '../svg-icon/SvgIconOverrides';
 import { overrideTextField } from '../text-field/TextFieldOverrides';
 import { overrideToolbar } from '../toolbar/ToolbarOverrides';
@@ -77,6 +79,8 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   overrideTextField(theme);
   overrideAutocomplete(theme);
   overrideCssBaseline(theme);
+  overrideCheckbox(theme);
+  overrideRadio(theme);
 
   return theme;
 }

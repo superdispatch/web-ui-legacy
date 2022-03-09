@@ -1,0 +1,214 @@
+- v4
++ v5
+
+@@ -1,8 +1,8 @@
+
+      Object {
+-       "checkedIcon": <WithStyles(ForwardRef(SvgIcon))>
++       "checkedIcon": <ForwardRef(SvgIcon)>
+          <rect
+            fill="currentColor"
+            height="18"
+            rx="2"
+            width="18"
+@@ -11,24 +11,24 @@
+          />
+          <path
+            d="M15.73 8l-.63.63c-1.43 1.43-2.94 3.05-4.37 4.5l-1.9-1.57-.7-.57L7 12.38l.7.57 2.53 2.09.63.52.58-.58c1.6-1.62 3.35-3.5 4.93-5.08l.63-.63L15.73 8z"
+            fill="#fff"
+          />
+-       </WithStyles(ForwardRef(SvgIcon))>,
++       </ForwardRef(SvgIcon)>,
+        "color": "primary",
+-       "icon": <WithStyles(ForwardRef(SvgIcon))>
++       "icon": <ForwardRef(SvgIcon)>
+          <rect
+            fill="#fff"
+            height="17"
+            rx="1.5"
+            stroke="currentColor"
+            width="17"
+            x="3.5"
+            y="3.5"
+          />
+-       </WithStyles(ForwardRef(SvgIcon))>,
+-       "indeterminateIcon": <WithStyles(ForwardRef(SvgIcon))>
++       </ForwardRef(SvgIcon)>,
++       "indeterminateIcon": <ForwardRef(SvgIcon)>
+          <rect
+            fill="currentIcon"
+            height="18"
+            rx="2"
+            width="18"
+@@ -37,8 +37,8 @@
+          />
+          <path
+            d="M7 11h10v2H7v-2z"
+            fill="#fff"
+          />
+-       </WithStyles(ForwardRef(SvgIcon))>,
++       </ForwardRef(SvgIcon)>,
+      }
+    
+- v4
++ v5
+
+  Object {
+-   ".MuiCheckbox-colorPrimary.Mui-checked": Object {
++   ".MuiCheckbox": Object {
++     "MozAppearance": "none",
++     "MozUserSelect": "none",
++     "WebkitAlignItems": "center",
++     "WebkitAppearance": "none",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
++     "WebkitTapHighlightColor": "transparent",
++     "WebkitTextDecoration": "none",
++     "WebkitUserSelect": "none",
++     "alignItems": "center",
++     "backgroundColor": "transparent",
++     "border": "0",
++     "borderRadius": "0",
++     "boxSizing": "border-box",
++     "color": "inherit",
++     "cursor": "pointer",
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
++     "justifyContent": "center",
++     "margin": "0",
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
++     "msUserSelect": "none",
++     "outline": "0",
++     "padding": "0",
++     "position": "relative",
++     "textDecoration": "none",
++     "userSelect": "none",
++     "verticalAlign": "middle",
++   },
++   ".MuiCheckbox-colorPrimary": Object {
++     "color": Array [
++       "Color.Dark200",
++       "Color.Dark100",
++     ],
++     "marginBottom": "-5px",
++     "marginTop": "-5px",
++   },
++   ".MuiCheckbox-colorPrimary.Mui-checked,
++     .MuiCheckbox-colorPrimary.MuiCheckbox-indeterminate": Object {
+      "color": "Color.Blue300",
+    },
+    ".MuiCheckbox-colorPrimary.Mui-checked.Mui-disabled": Object {
+      "color": "Color.Silver500",
+-   },
+-   ".MuiCheckbox-colorPrimary.Mui-checked:hover": Object {
+-     "backgroundColor": "rgba(0, 117, 255, 0.04)",
+    },
+    ".MuiCheckbox-colorPrimary.Mui-disabled": Object {
+      "color": "Color.Silver400",
+    },
++   ".MuiCheckbox-colorPrimary:hover": Object {
++     "backgroundColor": "rgba(0,117,255,0.04)",
++   },
+    ".MuiCheckbox-colorPrimary:hover:not(.Mui-checked)": Object {
+      "color": "Color.Dark100",
++   },
++   ".MuiCheckbox.Mui-disabled": Object {
++     "cursor": "default",
++     "pointerEvents": "none",
++   },
++   ".MuiCheckbox::-moz-focus-inner": Object {
++     "borderStyle": "none",
+    },
+-   ".MuiCheckbox-colorSecondary.Mui-checked": Object {
+-     "color": "#f50057",
++   ".MuiSvgIcon-root": Object {
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "1.5rem",
++       "var(--mui-svg-icon-size,32px)",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
+    },
+-   ".MuiCheckbox-colorSecondary.Mui-checked:hover": Object {
+-     "backgroundColor": "rgba(245, 0, 87, 0.04)",
++   ".MuiTouchRipple-root": Object {
++     "borderRadius": "inherit",
++     "bottom": "0",
++     "left": "0",
++     "overflow": "hidden",
++     "pointerEvents": "none",
++     "position": "absolute",
++     "right": "0",
++     "top": "0",
++     "zIndex": 0,
+    },
+-   ".MuiCheckbox-colorSecondary.Mui-disabled": Object {
+-     "color": "Color.Silver400",
++   ".SwitchBase-input": Object {
++     "cursor": "inherit",
++     "height": "100%",
++     "left": "0",
++     "margin": "0",
++     "opacity": 0,
++     "padding": "0",
++     "position": "absolute",
++     "top": "0",
++     "width": "100%",
++     "zIndex": 1,
+    },
+-   ".MuiCheckbox-root": Object {
+-     "color": "Color.Dark100",
+-     "marginBottom": "-5px",
+-     "marginTop": "-5px",
++   ".SwitchBase-root": Object {
++     "borderRadius": "50%",
++     "padding": "9px",
+    },
+-   "@media (hover: none)": Array [
+-     Object {
+-       ".MuiCheckbox-colorPrimary.Mui-checked:hover": Object {
++   "@media (hover:none)": Object {
++     ".MuiCheckbox-colorPrimary:hover": Object {
+        "backgroundColor": "transparent",
++     },
++   },
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
++   ],
++   "@media (min-width:600px)": Object {
++     ".MuiSvgIcon-root": Object {
++       "fontSize": "var(--mui-svg-icon-size,24px)",
+      },
+    },
++   "@media print": Array [
+      Object {
+-       ".MuiCheckbox-colorSecondary.Mui-checked:hover": Object {
+-         "backgroundColor": "transparent",
++       ".MuiCheckbox": Object {
++         "colorAdjust": "exact",
+        },
+      },
++     Object {},
+    ],
+  }

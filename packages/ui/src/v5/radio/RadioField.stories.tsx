@@ -1,12 +1,7 @@
-import {
-  FormControlLabel,
-  FormGroup,
-  Switch,
-  TextField,
-} from '@material-ui/core';
+import { FormControlLabel, FormGroup, Switch, TextField } from '@mui/material';
 import { CheckboxField, RadioField, RadioGroupField } from '..';
 
-export default { title: 'v4/Inputs/RadioField', component: RadioField };
+export default { title: 'Inputs/RadioField', component: RadioField };
 
 export const basic = () => (
   <RadioField label="Label" helperText="Helper Text" />
