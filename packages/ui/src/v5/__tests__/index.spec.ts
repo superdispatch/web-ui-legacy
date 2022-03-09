@@ -5,6 +5,8 @@ it('exposes public api', () => {
     Object {
       "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
       "Button": React.forwardRef(Button),
+      "CheckboxField": React.forwardRef(CheckboxField),
+      "CheckboxGroupField": React.forwardRef(CheckboxGroupField),
       "Color": Object {
         "Black": "#000",
         "Black20": "rgba(0, 0, 0, 0.2)",
@@ -80,6 +82,8 @@ it('exposes public api', () => {
       "Columns": React.forwardRef(Columns),
       "Inline": React.forwardRef(Inline),
       "OverflowText": React.forwardRef(OverflowText),
+      "RadioField": React.forwardRef(RadioField),
+      "RadioGroupField": React.forwardRef(RadioGroupField),
       "Stack": React.forwardRef(Stack),
       "ThemeProvider": [Function],
       "isColorProp": [Function],
