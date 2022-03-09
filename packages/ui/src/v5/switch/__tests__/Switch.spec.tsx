@@ -1,10 +1,12 @@
 import { Switch } from '@mui/material';
-import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
+import { v5 } from '@superdispatch/ui-testutils';
+
+const { renderCSS, renderTheme } = v5;
 
 it('checks default props', () => {
-  const { props } = renderTheme();
+  const { components } = renderTheme();
 
-  expect(props.MuiSwitch).toMatchInlineSnapshot(`
+  expect(components.MuiSwitch?.defaultProps).toMatchInlineSnapshot(`
     Object {
       "color": "primary",
       "disableFocusRipple": true,
@@ -14,191 +16,291 @@ it('checks default props', () => {
 });
 
 it('checks component css', () => {
-  expect(renderCSS(<Switch />, ['MuiSwitch'])).toMatchInlineSnapshot(`
-.MuiSwitch-root {
-  width: 76px;
-  height: 44px;
-  display: inline-flex;
-  padding: 6px 12px;
-  z-index: 0;
-  overflow: hidden;
-  position: relative;
-  box-sizing: border-box;
-  flex-shrink: 0;
-  vertical-align: middle;
-}
+  expect(
+    renderCSS(<Switch />, [
+      'MuiSwitch',
+      'MuiSwitch-switchBase',
+      'SwitchBaseRoot',
+      'SwitchSwitchBase',
+      'SwitchBaseInput',
+      'MuiSwitch-track',
+      'MuiSwitch-track',
+    ]),
+  ).toMatchInlineSnapshot(`
+    .MuiSwitch-switchBase {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      background-color: transparent;
+      outline: 0;
+      border: 0;
+      margin: 0;
+      border-radius: 0;
+      padding: 0;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      vertical-align: middle;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      color: inherit;
+    }
 
-@media print {
-  .MuiSwitch-root {
-    color-adjust: exact;
-  }
-}
+    .MuiSwitch-switchBase::-moz-focus-inner {
+      border-style: none;
+    }
 
-@media (min-width: 600px) {
-  .MuiSwitch-root {
-    width: 64px;
-    height: 32px;
-    padding: 4px 12px;
-  }
-}
+    .MuiSwitch-switchBase.Mui-disabled {
+      pointer-events: none;
+      cursor: default;
+    }
 
-.MuiSwitch-edgeStart {
-  margin-left: -8px;
-}
+    .SwitchBaseRoot {
+      padding: 9px;
+      border-radius: 50%;
+    }
 
-.MuiSwitch-edgeEnd {
-  margin-right: -8px;
-}
+    .SwitchBaseInput {
+      cursor: inherit;
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
 
-.MuiSwitch-switchBase {
-  top: 0;
-  left: 8px;
-  color: #fafafa;
-  padding: 10px 8px;
-  z-index: 1;
-  position: absolute;
-  transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-}
+    .MuiSwitch {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      width: 58px;
+      height: 38px;
+      overflow: hidden;
+      padding: 12px;
+      box-sizing: border-box;
+      position: relative;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      z-index: 0;
+      vertical-align: middle;
+      width: 76px;
+      height: 44px;
+      padding: 6px 12px;
+    }
 
-.MuiSwitch-switchBase.Mui-checked {
-  transform: translateX(20px);
-}
+    .SwitchSwitchBase {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      color: Color.White;
+      -webkit-transition: left 150ms cubic-bezier(0.4,0,0.2,1) 0ms,-webkit-transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      -webkit-transition: left 150ms cubic-bezier(0.4,0,0.2,1) 0ms,transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: left 150ms cubic-bezier(0.4,0,0.2,1) 0ms,transform 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      left: 8px;
+      padding: 10px 8px;
+    }
 
-.MuiSwitch-switchBase.Mui-disabled {
-  color: #bdbdbd;
-}
+    .SwitchSwitchBase.Mui-checked {
+      -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      transform: translateX(20px);
+    }
 
-@media (min-width: 600px) {
-  .MuiSwitch-switchBase {
-    padding: 8px;
-  }
-}
+    .SwitchSwitchBase.Mui-disabled {
+      color: #f5f5f5;
+    }
 
-@media (min-width: 600px) {
-  .MuiSwitch-switchBase.Mui-checked {
-    transform: translateX(16px);
-  }
-}
+    .SwitchSwitchBase.Mui-checked + .MuiSwitch-track {
+      opacity: 0.5;
+    }
 
-.MuiSwitch-colorPrimary.Mui-disabled {
-  color: #bdbdbd;
-}
+    .SwitchSwitchBase.Mui-disabled + .MuiSwitch-track {
+      opacity: 0.12;
+    }
 
-.MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track {
-  background-color: Color.Blue300;
-}
+    .SwitchSwitchBase .MuiSwitch-input {
+      left: -100%;
+      width: 300%;
+    }
 
-.MuiSwitch-colorPrimary.Mui-disabled + .MuiSwitch-track {
-  background-color: Color.Silver300;
-}
+    .SwitchSwitchBase:hover {
+      background-color: rgba(0,0,0,0.04);
+    }
 
-.MuiSwitch-colorPrimary + .MuiSwitch-track {
-  background-color: Color.Silver500;
-}
+    .SwitchSwitchBase.Mui-checked {
+      color: Color.Blue300;
+    }
 
-.MuiSwitch-colorPrimary.Mui-checked.Mui-disabled + .MuiSwitch-track {
-  background-color: Color.Blue100;
-}
+    .SwitchSwitchBase.Mui-checked:hover {
+      background-color: rgba(0,117,255,0.04);
+    }
 
-.MuiSwitch-colorPrimary:hover + .MuiSwitch-track {
-  background-color: Color.Dark100;
-}
+    .SwitchSwitchBase.Mui-checked.Mui-disabled {
+      color: rgb(158,202,255);
+    }
 
-.MuiSwitch-colorPrimary.Mui-focusVisible + .MuiSwitch-track {
-  box-shadow: 0 0 0 3px Color.Blue100;
-}
+    .SwitchSwitchBase.Mui-checked + .MuiSwitch-track {
+      background-color: Color.Blue300;
+    }
 
-@media (hover: none) {
-  .MuiSwitch-colorPrimary.Mui-checked:hover {
-    background-color: transparent;
-  }
-}
+    .SwitchSwitchBase.Mui-checked {
+      -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      transform: translateX(20px);
+    }
 
-.MuiSwitch-colorPrimary.Mui-checked:hover + .MuiSwitch-track {
-  background-color: Color.Blue400;
-}
+    .SwitchSwitchBase.Mui-checked + .MuiSwitch-track {
+      opacity: 1;
+    }
 
-.MuiSwitch-colorSecondary.Mui-checked {
-  color: #f50057;
-}
+    .SwitchSwitchBase.Mui-disabled + .MuiSwitch-track {
+      opacity: 1;
+    }
 
-.MuiSwitch-colorSecondary.Mui-disabled {
-  color: #bdbdbd;
-}
+    .SwitchSwitchBase.Mui-checked:hover + .MuiSwitch-track {
+      background-color: Color.Blue400;
+    }
 
-.MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
-  background-color: #f50057;
-}
+    .SwitchSwitchBase + .MuiSwitch-track {
+      background-color: Color.Silver500;
+    }
 
-.MuiSwitch-colorSecondary.Mui-disabled + .MuiSwitch-track {
-  background-color: Color.Black;
-}
+    .SwitchSwitchBase.Mui-disabled + .MuiSwitch-track {
+      background-color: Color.Silver300;
+    }
 
-.MuiSwitch-colorSecondary.Mui-checked:hover {
-  background-color: rgba(245, 0, 87, 0.04);
-}
+    .SwitchSwitchBase.Mui-checked.Mui-disabled + .MuiSwitch-track {
+      background-color: Color.Blue100;
+    }
 
-@media (hover: none) {
-  .MuiSwitch-colorSecondary.Mui-checked:hover {
-    background-color: transparent;
-  }
-}
+    .SwitchSwitchBase:hover + .MuiSwitch-track {
+      background-color: Color.Dark100;
+    }
 
-.MuiSwitch-sizeSmall {
-  width: 40px;
-  height: 24px;
-  padding: 7px;
-}
+    .SwitchSwitchBase.Mui-focusVisible + .MuiSwitch-track {
+      box-shadow: 0 0 0 3px Color.Blue100;
+    }
 
-.MuiSwitch-sizeSmall .MuiSwitch-thumb {
-  width: 16px;
-  height: 16px;
-}
+    .MuiSwitch-track {
+      height: 100%;
+      width: 100%;
+      border-radius: 7px;
+      z-index: -1;
+      -webkit-transition: opacity 150ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: opacity 150ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      background-color: Color.Black;
+      opacity: 0.38;
+      opacity: 1;
+      box-shadow: 0 0 0 0 Color.Transparent;
+      -webkit-transition: box-shadow 150ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: box-shadow 150ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      border-radius: 16px;
+    }
 
-.MuiSwitch-sizeSmall .MuiSwitch-switchBase {
-  padding: 4px;
-}
+    .MuiSwitch-track {
+      box-shadow: 0px 2px 1px -1px Color.Black20,0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+      background-color: currentColor;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      color: Color.White;
+      box-shadow: none;
+      width: 24px;
+      height: 24px;
+    }
 
-.MuiSwitch-sizeSmall .MuiSwitch-switchBase.Mui-checked {
-  transform: translateX(16px);
-}
+    @media print {
+      .MuiSwitch-switchBase {
+        color-adjust: exact;
+      }
+    }
 
-.MuiSwitch-input {
-  left: -100%;
-  width: 300%;
-}
+    @media print {
+      .MuiSwitch {
+        color-adjust: exact;
+      }
+    }
 
-.MuiSwitch-thumb {
-  color: Color.White;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: currentColor;
-}
+    @media (min-width:600px) {
+      .MuiSwitch {
+        width: 64px;
+        height: 32px;
+        padding: 4px 12px;
+      }
+    }
 
-@media (min-width: 600px) {
-  .MuiSwitch-thumb {
-    width: 16px;
-    height: 16px;
-  }
-}
+    @media (hover:none) {
+      .SwitchSwitchBase:hover {
+        background-color: transparent;
+      }
+    }
 
-.MuiSwitch-track {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  box-shadow: 0 0 0 0 Color.Transparent;
-  transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  border-radius: 16px;
-  background-color: Color.Black;
-}
+    @media (hover:none) {
+      .SwitchSwitchBase.Mui-checked:hover {
+        background-color: transparent;
+      }
+    }
 
-@media (min-width: 600px) {
-  .MuiSwitch-track {
-    border-radius: 13px;
-  }
-}
-`);
+    @media (min-width:600px) {
+      .SwitchSwitchBase {
+        padding: 8px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .SwitchSwitchBase.Mui-checked {
+        -webkit-transform: translateX(16px);
+        -ms-transform: translateX(16px);
+        transform: translateX(16px);
+      }
+    }
+
+    @media (min-width:600px) {
+      .MuiSwitch-track {
+        border-radius: 13px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .MuiSwitch-track {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+  `);
 });
