@@ -5,8 +5,11 @@ import { Stack } from '../stack/Stack';
 import { AvatarButton } from './AvatarButton';
 
 export default {
-  title: 'v4/Inputs/Avatar Button',
+  title: 'Inputs/Avatar Button',
   component: AvatarButton,
+  parameters: {
+    v5: true,
+  },
 } as Meta;
 
 export const basic = () => (

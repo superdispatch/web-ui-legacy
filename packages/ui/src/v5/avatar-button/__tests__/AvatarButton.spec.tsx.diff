@@ -1,0 +1,314 @@
+- v4
++ v5
+
+  Object {
+-   ".SD-AvatarButton-button": Object {
+-     "borderRadius": "50%",
+-   },
+-   ".SD-AvatarButton-button:not([disabled])[aria-busy='false']:hover.SD-AvatarButton-withIcon
+-       > .SD-AvatarButton-overlay
+-       > svg,
+-     .SD-AvatarButton-button:not([disabled])[aria-busy='false']:focus.SD-AvatarButton-withIcon
+-       > .SD-AvatarButton-overlay
+-       > svg": Object {
+-     "opacity": 1,
+-   },
+-   ".SD-AvatarButton-button:not([disabled])[aria-busy='false']:hover.SD-AvatarButton-withIcon
+-       > .SD-AvatarButton-overlay,
+-     .SD-AvatarButton-button:not([disabled])[aria-busy='false']:focus.SD-AvatarButton-withIcon
+-       > .SD-AvatarButton-overlay": Object {
+-     "backgroundColor": "Color.Black50",
+-   },
+-   ".SD-AvatarButton-button:not([disabled])[aria-busy='false']:hover:not(.SD-AvatarButton-withIcon)
+-       > .SD-AvatarButton-overlay,
+-     .SD-AvatarButton-button:not([disabled])[aria-busy='false']:focus:not(.SD-AvatarButton-withIcon)
+-       > .SD-AvatarButton-overlay": Object {
+-     "backgroundColor": "Color.Black20",
+-   },
+-   ".SD-AvatarButton-button[disabled] > .SD-AvatarButton-overlay,
+-     .SD-AvatarButton-button[aria-busy='true'] > .SD-AvatarButton-overlay": Object {
+-     "backgroundColor": "Color.White50",
+-   },
+-   ".SD-AvatarButton-overlay": Object {
++   ".AvatarButton-overlay": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
++     "WebkitTransition": "background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "alignItems": "center",
+      "backgroundColor": "Color.Transparent",
+      "borderRadius": "50%",
+      "bottom": "0",
+-     "display": "flex",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
+      "justifyContent": "center",
+      "left": "0",
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
+      "position": "absolute",
+      "right": "0",
+      "top": "0",
+-     "transition": "background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "transition": "background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+-   ".SD-AvatarButton-overlay > svg": Object {
++   ".AvatarButton-overlay > svg": Object {
++     "WebkitTransition": "opacity 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "color": "Color.White",
+      "fontSize": "24px",
+      "opacity": 0,
+-     "transition": "opacity 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "transition": "opacity 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".MuiAvatar-fallback": Object {
++     "height": "75%",
++     "width": "75%",
++   },
++   ".MuiAvatar-root": Object {
++     "MozUserSelect": "none",
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitFlexShrink": "0",
++     "WebkitJustifyContent": "center",
++     "WebkitUserSelect": "none",
++     "alignItems": "center",
++     "backgroundColor": Array [
++       "#bdbdbd",
++       "Color.Silver300",
++     ],
++     "borderRadius": "50%",
++     "color": Array [
++       "Color.White",
++       "Color.Dark300",
++     ],
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "flexShrink": 0,
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "1.25rem",
++       "14px",
++     ],
++     "fontWeight": 600,
++     "height": Array [
++       "40px",
++       "40px",
++     ],
++     "justifyContent": "center",
++     "lineHeight": Array [
++       1,
++       "20px",
++     ],
++     "msFlexAlign": "center",
++     "msFlexNegative": "0",
++     "msFlexPack": "center",
++     "msUserSelect": "none",
++     "overflow": "hidden",
++     "position": "relative",
++     "textTransform": "uppercase",
++     "userSelect": "none",
++     "width": Array [
++       "40px",
++       "40px",
++     ],
+    },
+-   ".SD-AvatarButton-progress": Object {
+-     "fontSize": "40px",
++   ".MuiButtonBase-root": Object {
++     "MozAppearance": "none",
++     "MozUserSelect": "none",
++     "WebkitAlignItems": "center",
++     "WebkitAppearance": "none",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
++     "WebkitTapHighlightColor": "transparent",
++     "WebkitTextDecoration": "none",
++     "WebkitUserSelect": "none",
++     "alignItems": "center",
++     "backgroundColor": "transparent",
++     "border": "0",
++     "borderRadius": "0",
++     "boxSizing": "border-box",
++     "color": "inherit",
++     "cursor": "pointer",
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
++     "justifyContent": "center",
++     "margin": "0",
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
++     "msUserSelect": "none",
++     "outline": "0",
++     "padding": "0",
++     "position": "relative",
++     "textDecoration": "none",
++     "userSelect": "none",
++     "verticalAlign": "middle",
++   },
++   ".MuiButtonBase-root.Mui-disabled": Object {
++     "cursor": "default",
++     "pointerEvents": "none",
++   },
++   ".MuiButtonBase-root::-moz-focus-inner": Object {
++     "borderStyle": "none",
++   },
++   ".MuiSvgIcon-root": Object {
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "1.5rem",
++       "var(--mui-svg-icon-size,32px)",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
++   },
++   ".MuiTouchRipple-root": Object {
++     "borderRadius": "inherit",
++     "bottom": "0",
+      "left": "0",
++     "overflow": "hidden",
++     "pointerEvents": "none",
+      "position": "absolute",
++     "right": "0",
+      "top": "0",
++     "zIndex": 0,
+    },
+-   ".SD-AvatarButton-sizeLarge
+-       > .SD-AvatarButton-overlay
+-       > .SD-AvatarButton-progress": Object {
+-     "fontSize": "56px",
++   ".SD-AvatarButton": Object {
++     "borderRadius": "50%",
++   },
++   ".SD-AvatarButton:not([disabled])[aria-busy='false']:hover:not([data-with-icon='true']) > .AvatarButton-overlay,
++     .SD-AvatarButton:not([disabled])[aria-busy='false']:focus:not([data-with-icon='true']) > .AvatarButton-overlay": Object {
++     "backgroundColor": "Color.Black20",
+    },
+-   ".SD-AvatarButton-sizeLarge > .SD-AvatarButton-overlay > svg": Object {
++   ".SD-AvatarButton:not([disabled])[aria-busy='false']:hover[data-with-icon='true'] > .AvatarButton-overlay > svg,
++     .SD-AvatarButton:not([disabled])[aria-busy='false']:focus[data-with-icon='true'] > .AvatarButton-overlay > svg": Object {
++     "opacity": 1,
++   },
++   ".SD-AvatarButton:not([disabled])[aria-busy='false']:hover[data-with-icon='true'] > .AvatarButton-overlay,
++     .SD-AvatarButton:not([disabled])[aria-busy='false']:focus[data-with-icon='true'] > .AvatarButton-overlay": Object {
++     "backgroundColor": "Color.Black50",
++   },
++   ".SD-AvatarButton[data-size-large='true'] > .AvatarButton-overlay > svg": Object {
+      "fontSize": "32px",
+    },
+-   ".SD-AvatarButton-sizeLarge > .SD-AvatarButton-root": Object {
+-     "fontFamily": "'Inter', sans-serif",
++   ".SD-AvatarButton[data-size-large='true'] > .MuiAvatar-root": Object {
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "24px",
+      "fontWeight": 500,
+      "height": "56px",
+      "lineHeight": "28px",
+      "width": "56px",
+    },
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Object {
+-     ".SD-AvatarButton-sizeLarge > .SD-AvatarButton-root": Object {
+-       "fontSize": "22px",
+-       "lineHeight": "26px",
+-     },
++   ".SD-AvatarButton[disabled] > .AvatarButton-overlay,
++     .SD-AvatarButton[aria-busy='true'] > .AvatarButton-overlay": Object {
++     "backgroundColor": "Color.White50",
+    },
+-   "@media (min-width: 600px)": Array [
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
+      Object {
+-       ".SD-AvatarButton-overlay > svg": Object {
++       ".MuiAvatar-root": Object {
+          "fontSize": "16px",
++         "lineHeight": "24px",
+        },
+      },
+      Object {
+-       ".SD-AvatarButton-progress": Object {
+-         "fontSize": "32px",
++       ".SD-AvatarButton[data-size-large='true'] > .MuiAvatar-root": Object {
++         "fontSize": "22px",
++         "lineHeight": "26px",
++       },
++     },
++   ],
++   "@media (min-width:600px)": Array [
++     Object {
++       ".MuiSvgIcon-root": Object {
++         "fontSize": "var(--mui-svg-icon-size,24px)",
+        },
+      },
+      Object {
+-       ".SD-AvatarButton-sizeLarge > .SD-AvatarButton-overlay > svg": Object {
+-         "fontSize": "24px",
++       ".MuiAvatar-root": Object {
++         "height": "32px",
++         "width": "32px",
+        },
+      },
+      Object {
+-       ".SD-AvatarButton-sizeLarge
+-         > .SD-AvatarButton-overlay
+-         > .SD-AvatarButton-progress": Object {
+-         "fontSize": "64px",
++       ".AvatarButton-overlay > svg": Object {
++         "fontSize": "16px",
+        },
+      },
+      Object {
+-       ".SD-AvatarButton-sizeLarge > .SD-AvatarButton-root": Object {
++       ".SD-AvatarButton[data-size-large='true'] > .MuiAvatar-root": Object {
+          "height": "64px",
+          "width": "64px",
++       },
++     },
++     Object {},
++     Object {
++       ".SD-AvatarButton[data-size-large='true'] > .AvatarButton-overlay > svg": Object {
++         "fontSize": "24px",
++       },
++     },
++   ],
++   "@media print": Array [
++     Object {},
++     Object {
++       ".MuiButtonBase-root": Object {
++         "colorAdjust": "exact",
+        },
+      },
+    ],
+  }
