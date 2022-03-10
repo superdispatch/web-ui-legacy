@@ -4,6 +4,7 @@ it('exposes public api', () => {
   expect(api5).toMatchInlineSnapshot(`
     Object {
       "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
+      "AvatarButton": React.forwardRef(AvatarButton),
       "Button": React.forwardRef(Button),
       "CheckboxField": React.forwardRef(CheckboxField),
       "CheckboxGroupField": React.forwardRef(CheckboxGroupField),
