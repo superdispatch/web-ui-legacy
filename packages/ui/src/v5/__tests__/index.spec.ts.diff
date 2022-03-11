@@ -1,19 +1,7 @@
 - v4
 + v5
 
-@@ -1,11 +1,10 @@
-
-      Object {
-        "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
-        "AvatarButton": React.forwardRef(AvatarButton),
-        "Button": React.forwardRef(Button),
--       "CardButton": React.forwardRef(CardButton),
-        "CheckboxField": React.forwardRef(CheckboxField),
-        "CheckboxGroupField": React.forwardRef(CheckboxGroupField),
-        "Color": Object {
-          "Black": "#000",
-          "Black20": "rgba(0, 0, 0, 0.2)",
-@@ -77,47 +76,14 @@
+@@ -77,47 +77,14 @@
           "Yellow500": "#DB7500",
           "Yellow75": "#FFF1C2",
         },
