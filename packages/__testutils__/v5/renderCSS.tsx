@@ -73,7 +73,7 @@ export function renderGlobalCSS() {
   return css;
 }
 
-export function renderCSS(ui: ReactElement, displayNames: string[]) {
+export function renderCSS(ui: ReactElement, displayNames?: string[]) {
   let firstUnmatchedClass: string | undefined;
   let classNameMaxIndex = 0;
 
@@ -82,6 +82,10 @@ export function renderCSS(ui: ReactElement, displayNames: string[]) {
   styleSheetSerializer.setStyleSheetSerializerOptions({
     addStyles: true,
     classNameFormatter(index, className) {
+      if (!displayNames) {
+        return `c${index + 1}`;
+      }
+
       const formattedClass = displayNames[index];
       classNameMaxIndex = Math.max(classNameMaxIndex, index);
 
@@ -114,7 +118,7 @@ export function renderCSS(ui: ReactElement, displayNames: string[]) {
     );
   }
 
-  if (displayNames.length !== classNameMaxIndex + 1) {
+  if (displayNames && displayNames.length !== classNameMaxIndex + 1) {
     throw RangeError(
       `renderCSS: displayNames out of range. Expected ${
         classNameMaxIndex + 1

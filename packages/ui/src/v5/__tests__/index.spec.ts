@@ -6,6 +6,7 @@ it('exposes public api', () => {
       "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
       "AvatarButton": React.forwardRef(AvatarButton),
       "Button": React.forwardRef(Button),
+      "CardButton": React.forwardRef(CardButton),
       "CheckboxField": React.forwardRef(CheckboxField),
       "CheckboxGroupField": React.forwardRef(CheckboxGroupField),
       "Color": Object {
