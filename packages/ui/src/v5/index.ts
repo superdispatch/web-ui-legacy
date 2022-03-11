@@ -1,6 +1,7 @@
 export * from './adaptive-toolbar/AdaptiveToolbar';
 export * from './avatar-button/AvatarButton';
 export * from './button/Button';
+export * from './card-button/CardButton';
 export * from './checkbox/CheckboxField';
 export * from './checkbox/CheckboxGroudField';
 export * from './columns/Column';
