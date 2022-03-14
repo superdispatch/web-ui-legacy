@@ -6,6 +6,7 @@ export * from './checkbox/CheckboxField';
 export * from './checkbox/CheckboxGroudField';
 export * from './columns/Column';
 export * from './columns/Columns';
+export * from './description-list/DescriptionList';
 export * from './inline/Inline';
 export * from './overflow-text/OverflowText';
 export * from './radio/RadioField';
