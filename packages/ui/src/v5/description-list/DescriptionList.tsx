@@ -121,24 +121,6 @@ export const DescriptionListItem = forwardRef<
 // DescriptionList
 //
 
-function sizeVariant(
-  theme: SuperDispatchTheme,
-  mobileSpacing: number,
-  desktopSpacing: number,
-): CSSProperties {
-  return {
-    [`& > ${DescriptionListItemRoot}`]: {
-      '&:not(:last-child)': {
-        paddingBottom: theme.spacing(mobileSpacing),
-
-        [theme.breakpoints.up('sm')]: {
-          paddingBottom: theme.spacing(desktopSpacing),
-        },
-      },
-    },
-  };
-}
-
 const DescriptionListRoot = styled('div', {
   name: 'SD-DescriptionList',
   slot: 'Root',
@@ -150,6 +132,24 @@ const DescriptionListRoot = styled('div', {
     '&[data-size="large"]': sizeVariant(theme, 3, 2),
   };
 });
+
+function sizeVariant(
+  theme: SuperDispatchTheme,
+  mobileSpacing: number,
+  desktopSpacing: number,
+): CSSProperties {
+  return {
+    [`& > ${DescriptionListRoot}, & > ${DescriptionListItemRoot}`]: {
+      '&:not(:last-child)': {
+        paddingBottom: theme.spacing(mobileSpacing),
+
+        [theme.breakpoints.up('sm')]: {
+          paddingBottom: theme.spacing(desktopSpacing),
+        },
+      },
+    },
+  };
+}
 
 export interface DescriptionListProps {
   children?: ReactNode;

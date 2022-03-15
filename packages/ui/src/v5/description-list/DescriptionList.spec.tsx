@@ -222,7 +222,7 @@ test('css', () => {
       </DescriptionList>,
     ),
   ).toMatchInlineSnapshot(`
-    .c4 {
+    .c5 {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -234,7 +234,7 @@ test('css', () => {
       color: Color.Dark200;
     }
 
-    .c8 {
+    .c9 {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -246,7 +246,7 @@ test('css', () => {
       color: Color.Dark500;
     }
 
-    .c9 {
+    .c10 {
       margin: 0;
       font-size: 14px;
       line-height: 20px;
@@ -255,20 +255,20 @@ test('css', () => {
       color: Color.Dark200;
     }
 
-    .c5 {
+    .c6 {
       margin-bottom: -1px;
       border-bottom: 1px dashed transparent;
       -webkit-transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
     }
 
-    .c6 {
+    .c7 {
       width: 1px;
       height: 100%;
       display: inline-block;
     }
 
-    .c3 {
+    .c4 {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -279,7 +279,7 @@ test('css', () => {
       align-items: center;
     }
 
-    .c7 {
+    .c8 {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
@@ -287,32 +287,28 @@ test('css', () => {
       margin-right: 8px;
     }
 
-    .c7 > .MuiSvgIcon-root {
+    .c8 > .MuiSvgIcon-root {
       color: Color.Dark100;
       font-size: 24px;
     }
 
-    .c1 > .c2:not(:last-child) {
+    .c2 > .c1:not(:last-child),
+    .c2 > .c3:not(:last-child) {
       padding-bottom: 16px;
     }
 
-    .c1[data-size="small"] > .c2:not(:last-child) {
+    .c2[data-size="small"] > .c1:not(:last-child),
+    .c2[data-size="small"] > .c3:not(:last-child) {
       padding-bottom: 8px;
     }
 
-    .c1[data-size="large"] > .c2:not(:last-child) {
+    .c2[data-size="large"] > .c1:not(:last-child),
+    .c2[data-size="large"] > .c3:not(:last-child) {
       padding-bottom: 24px;
     }
 
     @media (min-width:0px) and (max-width:599.95px) {
-      .c4 {
-        font-size: 16px;
-        line-height: 24px;
-      }
-    }
-
-    @media (min-width:0px) and (max-width:599.95px) {
-      .c8 {
+      .c5 {
         font-size: 16px;
         line-height: 24px;
       }
@@ -325,26 +321,36 @@ test('css', () => {
       }
     }
 
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c10 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
     @media (min-width:600px) {
-      .c7 > .MuiSvgIcon-root {
+      .c8 > .MuiSvgIcon-root {
         font-size: 16px;
       }
     }
 
     @media (min-width:600px) {
-      .c1 > .c2:not(:last-child) {
+      .c2 > .c1:not(:last-child),
+      .c2 > .c3:not(:last-child) {
         padding-bottom: 8px;
       }
     }
 
     @media (min-width:600px) {
-      .c1[data-size="small"] > .c2:not(:last-child) {
+      .c2[data-size="small"] > .c1:not(:last-child),
+      .c2[data-size="small"] > .c3:not(:last-child) {
         padding-bottom: 4px;
       }
     }
 
     @media (min-width:600px) {
-      .c1[data-size="large"] > .c2:not(:last-child) {
+      .c2[data-size="large"] > .c1:not(:last-child),
+      .c2[data-size="large"] > .c3:not(:last-child) {
         padding-bottom: 16px;
       }
     }
