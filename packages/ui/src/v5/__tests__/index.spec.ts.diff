@@ -1,14 +1,12 @@
 - v4
 + v5
 
-@@ -77,47 +77,14 @@
-          "Yellow500": "#DB7500",
-          "Yellow75": "#FFF1C2",
+@@ -79,45 +79,14 @@
         },
         "Column": React.forwardRef(Column),
         "Columns": React.forwardRef(Columns),
--       "DescriptionList": React.forwardRef(DescriptionList),
--       "DescriptionListItem": React.forwardRef(DescriptionListItem),
+        "DescriptionList": React.forwardRef(DescriptionList),
+        "DescriptionListItem": React.forwardRef(DescriptionListItem),
 -       "DrawerActions": React.forwardRef(DrawerActions),
 -       "DrawerContent": React.forwardRef(DrawerContent),
 -       "DrawerList": React.forwardRef(DrawerList),

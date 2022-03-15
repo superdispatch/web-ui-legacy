@@ -82,6 +82,8 @@ it('exposes public api', () => {
       },
       "Column": React.forwardRef(Column),
       "Columns": React.forwardRef(Columns),
+      "DescriptionList": React.forwardRef(DescriptionList),
+      "DescriptionListItem": React.forwardRef(DescriptionListItem),
       "Inline": React.forwardRef(Inline),
       "OverflowText": React.forwardRef(OverflowText),
       "RadioField": React.forwardRef(RadioField),

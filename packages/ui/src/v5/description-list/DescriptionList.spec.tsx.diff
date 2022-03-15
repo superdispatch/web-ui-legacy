@@ -1,0 +1,364 @@
+- v4
++ v5
+
+
++     .c1 {
++       margin: 0;
++       font-size: 14px;
++       line-height: 20px;
++       font-weight: 400;
++       font-family: "Inter",sans-serif;
++       overflow: hidden;
++       text-overflow: ellipsis;
++       white-space: nowrap;
++       color: #192334;
++     }
++
++     .c3 {
++       margin: 0;
++       font-size: 14px;
++       line-height: 20px;
++       font-weight: 400;
++       font-family: "Inter",sans-serif;
++       color: #6A707C;
++     }
++
++     .c2 {
++       margin-bottom: -1px;
++       border-bottom: 1px dashed transparent;
++       -webkit-transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
++       transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
++     }
++
++     .c4 {
++       width: 1px;
++       height: 100%;
++       display: inline-block;
++     }
++
++     .c0 {
++       display: -webkit-box;
++       display: -webkit-flex;
++       display: -ms-flexbox;
++       display: flex;
++       -webkit-align-items: center;
++       -webkit-box-align: center;
++       -ms-flex-align: center;
++       align-items: center;
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     @media print {
++
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++       .c1 {
++         font-size: 16px;
++         line-height: 24px;
++       }
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++       .c3 {
++         font-size: 16px;
++         line-height: 24px;
++       }
++     }
++
+      <div
+        aria-labelledby="label-id"
+-       class="SD-DescriptionList-item"
++       class="c0"
+      >
+        <span
+-         class="MuiTypography-root SD-OverflowText-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-noWrap"
+-         title="Text"
++         aria-label="Text"
++         class="c1 MuiTypography-root MuiTypography-body2 MuiTypography-noWrap c2"
++         data-mui-internal-clone-element="true"
+        >
+          <span
+-           class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
++           class="c3 MuiTypography-root MuiTypography-body2"
+            id="label-id"
+          >
+            Label
+          </span>
+           
+          Text
+          <span
+-           class="SD-OverflowText-sentinel"
++           class="c4"
+          />
+        </span>
+      </div>
+    
+- v4
++ v5
+
+
++     .c1 {
++       margin: 0;
++       font-size: 14px;
++       line-height: 20px;
++       font-weight: 400;
++       font-family: "Inter",sans-serif;
++       overflow: hidden;
++       text-overflow: ellipsis;
++       white-space: nowrap;
++       color: #192334;
++     }
++
++     .c3 {
++       margin: 0;
++       font-size: 14px;
++       line-height: 20px;
++       font-weight: 400;
++       font-family: "Inter",sans-serif;
++       color: #6A707C;
++     }
++
++     .c2 {
++       margin-bottom: -1px;
++       border-bottom: 1px dashed transparent;
++       -webkit-transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
++       transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
++     }
++
++     .c4 {
++       width: 1px;
++       height: 100%;
++       display: inline-block;
++     }
++
++     .c0 {
++       display: -webkit-box;
++       display: -webkit-flex;
++       display: -ms-flexbox;
++       display: flex;
++       -webkit-align-items: center;
++       -webkit-box-align: center;
++       -ms-flex-align: center;
++       align-items: center;
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++       .c1 {
++         font-size: 16px;
++         line-height: 24px;
++       }
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++       .c3 {
++         font-size: 16px;
++         line-height: 24px;
++       }
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     @media print {
++
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
+      <div
+        aria-labelledby="uid_2"
+-       class="SD-DescriptionList-item"
++       class="c0"
+      >
+        <span
+-         class="MuiTypography-root SD-OverflowText-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-noWrap"
+-         title="Text"
++         aria-label="Text"
++         class="c1 MuiTypography-root MuiTypography-body2 MuiTypography-noWrap c2"
++         data-mui-internal-clone-element="true"
+        >
+          <span
+-           class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
++           class="c3 MuiTypography-root MuiTypography-body2"
+            id="uid_2"
+          >
+            Label
+          </span>
+           
+          Text
+          <span
+-           class="SD-OverflowText-sentinel"
++           class="c4"
+          />
+        </span>
+      </div>
+    
+- v4
++ v5
+
+  Object {
+-   ".SD-DescriptionList-icon": Object {
+-     "display": "inline-flex",
++   ".c10": Object {
++     "color": "Color.Dark200",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
++   },
++   ".c2 > .c1:not(:last-child),
++     .c2 > .c3:not(:last-child)": Object {
++     "paddingBottom": "16px",
++   },
++   ".c2[data-size='large'] > .c1:not(:last-child),
++     .c2[data-size='large'] > .c3:not(:last-child)": Object {
++     "paddingBottom": "24px",
++   },
++   ".c2[data-size='small'] > .c1:not(:last-child),
++     .c2[data-size='small'] > .c3:not(:last-child)": Object {
++     "paddingBottom": "8px",
++   },
++   ".c4": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "alignItems": "center",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "msFlexAlign": "center",
++   },
++   ".c5": Object {
++     "color": "Color.Dark200",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
++     "overflow": "hidden",
++     "textOverflow": "ellipsis",
++     "whiteSpace": "nowrap",
++   },
++   ".c6": Object {
++     "WebkitTransition": "border 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "borderBottom": "1px dashed transparent",
++     "marginBottom": "-1px",
++     "transition": "border 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".c7": Object {
++     "display": "inline-block",
++     "height": "100%",
++     "width": "1px",
++   },
++   ".c8": Object {
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
+      "marginRight": "8px",
+    },
+-   ".SD-DescriptionList-icon > .MuiSvgIcon-root": Object {
++   ".c8 > .MuiSvgIcon-root": Object {
+      "color": "Color.Dark100",
+      "fontSize": "24px",
+    },
+-   ".SD-DescriptionList-item": Object {
+-     "alignItems": "center",
+-     "display": "flex",
++   ".c9": Object {
++     "color": "Color.Dark500",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "14px",
++     "fontWeight": 400,
++     "lineHeight": "20px",
++     "margin": "0",
++     "overflow": "hidden",
++     "textOverflow": "ellipsis",
++     "whiteSpace": "nowrap",
+    },
+-   ".SD-DescriptionList-list > .SD-DescriptionList-list:not(:last-child),
+-     .SD-DescriptionList-list > .SD-DescriptionList-item:not(:last-child)": Object {
+-     "paddingBottom": "16px",
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {
++       ".c5": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".c9": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
++       },
++     },
++     Object {
++       ".c10": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
+        },
+-   ".SD-DescriptionList-listLarge > .SD-DescriptionList-list:not(:last-child),
+-     .SD-DescriptionList-listLarge > .SD-DescriptionList-item:not(:last-child)": Object {
+-     "paddingBottom": "24px",
++     },
++     Object {},
++     Object {},
++   ],
++   "@media (min-width:600px)": Array [
++     Object {
++       ".c8 > .MuiSvgIcon-root": Object {
++         "fontSize": "16px",
+        },
+-   ".SD-DescriptionList-listSmall > .SD-DescriptionList-list:not(:last-child),
+-     .SD-DescriptionList-listSmall > .SD-DescriptionList-item:not(:last-child)": Object {
+-     "paddingBottom": "8px",
+      },
+-   "@media (min-width: 600px)": Array [
+      Object {
+-       ".SD-DescriptionList-list > .SD-DescriptionList-list:not(:last-child),
+-       .SD-DescriptionList-list > .SD-DescriptionList-item:not(:last-child)": Object {
++       ".c2 > .c1:not(:last-child),
++       .c2 > .c3:not(:last-child)": Object {
+          "paddingBottom": "8px",
+        },
+      },
+      Object {
+-       ".SD-DescriptionList-listSmall > .SD-DescriptionList-list:not(:last-child),
+-       .SD-DescriptionList-listSmall > .SD-DescriptionList-item:not(:last-child)": Object {
++       ".c2[data-size='small'] > .c1:not(:last-child),
++       .c2[data-size='small'] > .c3:not(:last-child)": Object {
+          "paddingBottom": "4px",
+        },
+      },
+      Object {
+-       ".SD-DescriptionList-listLarge > .SD-DescriptionList-list:not(:last-child),
+-       .SD-DescriptionList-listLarge > .SD-DescriptionList-item:not(:last-child)": Object {
++       ".c2[data-size='large'] > .c1:not(:last-child),
++       .c2[data-size='large'] > .c3:not(:last-child)": Object {
+          "paddingBottom": "16px",
+        },
+      },
+-     Object {
+-       ".SD-DescriptionList-icon > .MuiSvgIcon-root": Object {
+-         "fontSize": "16px",
+-       },
+-     },
+    ],
++   "@media print": Object {},
+  }
