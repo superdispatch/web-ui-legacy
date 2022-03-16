@@ -9,7 +9,9 @@
 - [@superdispatch/phones](https://github.com/superdispatch/ui/tree/master/packages/phones) - Phone Number components
 - [@superdispatch/forms](https://github.com/superdispatch/ui/tree/master/packages/forms) - UI, Date, Time and Phone Number component adapters to work with forms
 
-##Troubleshooting ####`tsc` error: Output file '...' has not been built from source file '...'
+##Troubleshooting
+
+####`tsc` error: Output file '...' has not been built from source file '...'
 If error points at `@superdispatch/...` package, open respective package directory and run `yarn tsc` command.
 
 ####`tsc` error on `yarn run release` or `lerna publish` commands:
