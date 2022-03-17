@@ -1,4 +1,4 @@
-import { SvgIcon } from '@mui/material';
+import { chipClasses, SvgIcon } from '@mui/material';
 import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
@@ -25,18 +25,18 @@ export function overrideChip(theme: SuperDispatchTheme): void {
     styleOverrides: {
       root: {
         ...theme.typography.body2,
-        color: undefined,
-        height: undefined,
+        color: 'unset',
+        height: 'unset',
         borderRadius: 4,
         backgroundColor: Color.Silver200,
-        '&$disabled': {
-          opacity: undefined,
+        [`&.${chipClasses.disabled}`]: {
+          opacity: 1,
           color: Color.Dark100,
         },
       },
 
       sizeSmall: {
-        height: undefined,
+        height: 'unset',
       },
 
       labelSmall: {
@@ -47,10 +47,10 @@ export function overrideChip(theme: SuperDispatchTheme): void {
 
       clickable: {
         '&:hover, &:focus': {
-          backgroundColor: undefined,
+          backgroundColor: Color.Silver200,
         },
         '&:active': {
-          boxShadow: undefined,
+          boxShadow: 'unset',
         },
         '&:focus': {
           boxShadow: `0 0 0 2px ${Color.Silver300}`,
@@ -62,15 +62,16 @@ export function overrideChip(theme: SuperDispatchTheme): void {
 
       deletable: {
         '&:focus': {
-          backgroundColor: undefined,
+          backgroundColor: Color.Silver200,
           boxShadow: `0 0 0 2px ${Color.Silver300}`,
         },
       },
 
       deleteIcon: {
-        width: undefined,
-        height: undefined,
+        width: 'unset',
+        height: 'unset',
         display: 'flex',
+        fontSize: 14,
         transition: theme.transitions.create('background-color'),
 
         '&:active, &:hover, &:focus': {
@@ -87,8 +88,8 @@ export function overrideChip(theme: SuperDispatchTheme): void {
       },
 
       deleteIconSmall: {
-        width: undefined,
-        height: undefined,
+        width: 'unset',
+        height: 'unset',
 
         padding: theme.spacing(0.5),
         marginLeft: theme.spacing(-0.5),
@@ -99,14 +100,14 @@ export function overrideChip(theme: SuperDispatchTheme): void {
       icon: {
         color: Color.Dark100,
         fontSize: '1em',
-        marginRight: undefined,
+        marginRight: 'unset',
       },
 
       iconSmall: {
-        width: undefined,
-        height: undefined,
+        width: 'unset',
+        height: 'unset',
         marginLeft: 8,
-        marginRight: undefined,
+        marginRight: 'unset',
         [sm]: { marginLeft: 4 },
       },
     },

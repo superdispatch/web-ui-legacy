@@ -60,8 +60,11 @@ it('checks component css', () => {
       line-height: 20px;
       font-weight: 400;
       font-family: "Inter",sans-serif;
+      color: unset;
+      height: unset;
       border-radius: 4px;
       background-color: Color.Silver200;
+      height: unset;
     }
 
     .MuiChip-root.Mui-disabled {
@@ -120,17 +123,24 @@ it('checks component css', () => {
     .MuiChip-root .MuiChip-icon {
       color: Color.Dark100;
       font-size: 1em;
+      margin-right: unset;
     }
 
     .MuiChip-root .MuiChip-icon {
+      width: unset;
+      height: unset;
       margin-left: 8px;
+      margin-right: unset;
     }
 
     .MuiChip-root .MuiChip-deleteIcon {
+      width: unset;
+      height: unset;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      font-size: 14px;
       -webkit-transition: background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
     }
@@ -148,12 +158,15 @@ it('checks component css', () => {
     }
 
     .MuiChip-root .MuiChip-deleteIcon {
+      width: unset;
+      height: unset;
       padding: 4px;
       margin-left: -4px;
       margin-right: 2px;
     }
 
-    .MuiChip-root$disabled {
+    .MuiChip-root.Mui-disabled {
+      opacity: 1;
       color: Color.Dark100;
     }
 

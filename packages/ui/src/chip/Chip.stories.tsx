@@ -3,7 +3,7 @@ import { PropsLink } from '@superdispatch/ui-docs';
 import { Inline } from '..';
 
 export default {
-  title: 'Data Display/Chip',
+  title: 'v4/Data Display/Chip',
   parameters: {
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/chip/#props" />
