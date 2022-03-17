@@ -1,0 +1,356 @@
+- v4
++ v5
+
+
+      Object {
+        "deleteIcon": <div>
+-         <WithStyles(ForwardRef(SvgIcon))>
++         <ForwardRef(SvgIcon)>
+            <path
+              clipRule="evenodd"
+              d="M13.239 12L17 8.239 15.761 7 12 10.761 8.239 7 7 8.239 10.761 12 7 15.761 8.239 17 12 13.239 15.761 17 17 15.761 13.239 12z"
+              fill="currentColor"
+              fillRule="evenodd"
+            />
+-         </WithStyles(ForwardRef(SvgIcon))>
++         </ForwardRef(SvgIcon)>
+        </div>,
+        "size": "small",
+      }
+    
+- v4
++ v5
+
+@@ -1,185 +1,63 @@
+  Object {
+-   ".MuiChip-clickable": Object {
+-     "WebkitTapHighlightColor": "transparent",
+-     "cursor": "pointer",
+-     "userSelect": "none",
+-   },
+-   ".MuiChip-clickable.MuiChip-outlined:hover,
+- .MuiChip-clickable.MuiChip-outlined:focus,
+- .MuiChip-deletable.MuiChip-outlined:focus": Object {
+-     "backgroundColor": "rgba(25, 35, 52, 0.04)",
+-   },
+-   ".MuiChip-clickable.MuiChip-outlinedPrimary:hover,
+- .MuiChip-clickable.MuiChip-outlinedPrimary:focus,
+- .MuiChip-deletable.MuiChip-outlinedPrimary:focus": Object {
+-     "backgroundColor": "rgba(0, 117, 255, 0.04)",
+-   },
+-   ".MuiChip-clickable.MuiChip-outlinedSecondary:hover,
+- .MuiChip-clickable.MuiChip-outlinedSecondary:focus,
+- .MuiChip-deletable.MuiChip-outlinedSecondary:focus": Object {
+-     "backgroundColor": "rgba(245, 0, 87, 0.04)",
+-   },
+-   ".MuiChip-clickable:active,
+- .MuiChip-clickable:hover": Object {
+-     "backgroundColor": "Color.Silver300",
+-   },
+-   ".MuiChip-clickable:focus": Object {
+-     "boxShadow": "0 0 0 2px Color.Silver300",
+-   },
+-   ".MuiChip-clickableColorPrimary:hover,
+- .MuiChip-clickableColorPrimary:focus": Object {
+-     "backgroundColor": "rgb(20, 128, 255)",
+-   },
+-   ".MuiChip-clickableColorSecondary:hover,
+- .MuiChip-clickableColorSecondary:focus": Object {
+-     "backgroundColor": "rgb(245, 20, 100)",
+-   },
+-   ".MuiChip-colorPrimary": Object {
+-     "backgroundColor": "Color.Blue300",
+-     "color": "Color.White",
+-   },
+-   ".MuiChip-colorSecondary": Object {
+-     "backgroundColor": "#f50057",
+-     "color": "Color.White",
+-   },
+-   ".MuiChip-deletable:focus": Object {
+-     "boxShadow": "0 0 0 2px Color.Silver300",
+-   },
+-   ".MuiChip-deletableColorPrimary:focus": Object {
+-     "backgroundColor": "rgb(51, 144, 255)",
+-   },
+-   ".MuiChip-deletableColorSecondary:focus": Object {
+-     "backgroundColor": "rgb(247, 51, 120)",
+-   },
+-   ".MuiChip-deleteIcon": Object {
+-     "WebkitTapHighlightColor": "transparent",
+-     "color": "rgba(25, 35, 52, 0.26)",
+-     "cursor": "pointer",
+-     "display": "flex",
+-     "margin": "0 5px 0 -6px",
+-     "transition": "background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+-   },
+-   ".MuiChip-deleteIcon > svg": Object {
+-     "borderRadius": "50%",
+-     "color": "Color.Dark200",
+-     "fontSize": "1em",
+-   },
+-   ".MuiChip-deleteIcon:active > svg,
+- .MuiChip-deleteIcon:hover > svg,
+- .MuiChip-deleteIcon:focus > svg": Object {
+-     "backgroundColor": "Color.Silver400",
+-   },
+-   ".MuiChip-deleteIcon:hover": Object {
+-     "color": "rgba(25, 35, 52, 0.4)",
+-   },
+-   ".MuiChip-deleteIconColorPrimary": Object {
+-     "color": "rgba(255, 255, 255, 0.7)",
+-   },
+-   ".MuiChip-deleteIconColorPrimary:hover,
+- .MuiChip-deleteIconColorPrimary:active": Object {
+-     "color": "Color.White",
+-   },
+-   ".MuiChip-deleteIconColorSecondary": Object {
+-     "color": "rgba(255, 255, 255, 0.7)",
+-   },
+-   ".MuiChip-deleteIconColorSecondary:hover,
+- .MuiChip-deleteIconColorSecondary:active": Object {
+-     "color": "Color.White",
+-   },
+-   ".MuiChip-deleteIconOutlinedColorPrimary": Object {
+-     "color": "rgba(0, 117, 255, 0.7)",
+-   },
+-   ".MuiChip-deleteIconOutlinedColorPrimary:hover,
+- .MuiChip-deleteIconOutlinedColorPrimary:active": Object {
+-     "color": "Color.Blue300",
+-   },
+-   ".MuiChip-deleteIconOutlinedColorSecondary": Object {
+-     "color": "rgba(245, 0, 87, 0.7)",
+-   },
+-   ".MuiChip-deleteIconOutlinedColorSecondary:hover,
+- .MuiChip-deleteIconOutlinedColorSecondary:active": Object {
+-     "color": "#f50057",
+-   },
+-   ".MuiChip-deleteIconSmall": Object {
+-     "marginLeft": "-4px",
+-     "marginRight": "2px",
+-     "padding": "4px",
+-   },
+-   ".MuiChip-icon": Object {
+-     "color": "Color.Dark100",
+-     "fontSize": "1em",
+-     "marginLeft": "5px",
+-   },
+-   ".MuiChip-iconColorPrimary": Object {
+-     "color": "inherit",
+-   },
+-   ".MuiChip-iconColorSecondary": Object {
+-     "color": "inherit",
+-   },
+-   ".MuiChip-iconSmall": Object {
+-     "marginLeft": "8px",
+-   },
+    ".MuiChip-label": Object {
+      "overflow": "hidden",
+-     "paddingLeft": "12px",
+-     "paddingRight": "12px",
++     "paddingLeft": Array [
++       "8px",
++       "6px",
++     ],
++     "paddingRight": Array [
++       "8px",
++       "6px",
++     ],
+      "textOverflow": "ellipsis",
+      "whiteSpace": "nowrap",
+    },
+-   ".MuiChip-labelSmall": Object {
+-     "paddingLeft": "6px",
+-     "paddingRight": "6px",
+-   },
+-   ".MuiChip-outlined": Object {
+-     "backgroundColor": "transparent",
+-     "border": "1px solid rgba(0, 0, 0, 0.23)",
+-   },
+-   ".MuiChip-outlined .MuiChip-avatar": Object {
+-     "marginLeft": "4px",
+-   },
+-   ".MuiChip-outlined .MuiChip-avatarSmall": Object {
+-     "marginLeft": "2px",
+-   },
+-   ".MuiChip-outlined .MuiChip-deleteIcon": Object {
+-     "marginRight": "5px",
+-   },
+-   ".MuiChip-outlined .MuiChip-deleteIconSmall": Object {
+-     "marginRight": "3px",
+-   },
+-   ".MuiChip-outlined .MuiChip-icon": Object {
+-     "marginLeft": "4px",
+-   },
+-   ".MuiChip-outlined .MuiChip-iconSmall": Object {
+-     "marginLeft": "2px",
+-   },
+-   ".MuiChip-outlinedPrimary": Object {
+-     "border": "1px solid Color.Blue300",
+-     "color": "Color.Blue300",
+-   },
+-   ".MuiChip-outlinedSecondary": Object {
+-     "border": "1px solid #f50057",
+-     "color": "#f50057",
+-   },
+    ".MuiChip-root": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
++     "WebkitTextDecoration": "none",
++     "WebkitTransition": "background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "alignItems": "center",
+-     "backgroundColor": "Color.Silver200",
+-     "border": "none",
+-     "borderRadius": "4px",
++     "backgroundColor": Array [
++       "Color.Silver300",
++       "Color.Silver200",
++     ],
++     "border": "0",
++     "borderRadius": Array [
++       "16px",
++       "4px",
++     ],
+      "boxSizing": "border-box",
++     "color": "Color.Dark500",
+      "cursor": "default",
+-     "display": "inline-flex",
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "0.8125rem",
++       "14px",
++     ],
+      "fontWeight": 400,
++     "height": "24px",
+      "justifyContent": "center",
+      "lineHeight": "20px",
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
+      "outline": "0",
+      "padding": "0",
+      "textDecoration": "none",
+-     "transition": "background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+-     box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "transition": "background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "verticalAlign": "middle",
+      "whiteSpace": "nowrap",
+    },
+    ".MuiChip-root .MuiChip-avatar": Object {
+      "color": "#616161",
+@@ -188,48 +66,93 @@
+      "marginLeft": "5px",
+      "marginRight": "-6px",
+      "width": "24px",
+    },
+    ".MuiChip-root .MuiChip-avatarColorPrimary": Object {
+-     "backgroundColor": "rgb(0, 81, 178)",
++     "backgroundColor": "rgb(0,81,178)",
+      "color": "Color.White",
+    },
+    ".MuiChip-root .MuiChip-avatarColorSecondary": Object {
+-     "backgroundColor": "#c51162",
++     "backgroundColor": "#7b1fa2",
+      "color": "Color.White",
+    },
+    ".MuiChip-root .MuiChip-avatarSmall": Object {
+      "fontSize": "0.625rem",
+      "height": "18px",
+      "marginLeft": "4px",
+      "marginRight": "-4px",
+      "width": "18px",
+    },
+-   ".MuiChip-root.Mui-disabled": Object {
++   ".MuiChip-root .MuiChip-deleteIcon": Object {
++     "WebkitTapHighlightColor": "transparent",
++     "WebkitTransition": "background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "color": "rgba(25,35,52,0.26)",
++     "cursor": "pointer",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "fontSize": "16px",
++     "margin": "0 5px 0 -6px",
++     "marginLeft": "-4px",
++     "marginRight": "2px",
++     "padding": "4px",
++     "transition": "background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++   },
++   ".MuiChip-root .MuiChip-deleteIcon > svg": Object {
++     "borderRadius": "50%",
++     "color": "Color.Dark200",
++     "fontSize": "1em",
++   },
++   ".MuiChip-root .MuiChip-deleteIcon:active > svg,
++     .MuiChip-root .MuiChip-deleteIcon:hover > svg,
++     .MuiChip-root .MuiChip-deleteIcon:focus > svg": Object {
++     "backgroundColor": "Color.Silver400",
++   },
++   ".MuiChip-root .MuiChip-deleteIcon:hover": Object {
++     "color": "rgba(25,35,52,0.4)",
++   },
++   ".MuiChip-root .MuiChip-icon": Object {
++     "color": "Color.Dark100",
++     "fontSize": "1em",
++     "marginLeft": "8px",
++     "marginRight": "-4px",
++   },
++   ".MuiChip-root$disabled": Object {
+      "color": "Color.Dark100",
++   },
++   ".MuiChip-root.Mui-disabled": Object {
++     "opacity": 0.38,
+      "pointerEvents": "none",
+    },
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Object {
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {
+        ".MuiChip-root": Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+      },
+-   "@media (min-width: 600px)": Array [
++     Object {},
++     Object {},
++   ],
++   "@media (min-width:600px)": Array [
+      Object {
+-       ".MuiChip-iconSmall": Object {
++       ".MuiChip-root .MuiChip-icon": Object {
+          "marginLeft": "4px",
+        },
+      },
+      Object {
+-       ".MuiChip-labelSmall": Object {
+-         "paddingLeft": "4px",
+-         "paddingRight": "4px",
++       ".MuiChip-root .MuiChip-deleteIcon": Object {
++         "marginRight": "0",
+        },
+      },
+      Object {
+-       ".MuiChip-deleteIconSmall": Object {
+-         "marginRight": "0",
++       ".MuiChip-label": Object {
++         "paddingLeft": "4px",
++         "paddingRight": "4px",
+        },
+      },
+    ],
++   "@media print": Object {},
+  }

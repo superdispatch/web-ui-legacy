@@ -14,6 +14,7 @@ import { overrideAvatar } from '../avatar/AvatarOverrides';
 import { overrideButton } from '../button/ButtonOverrides';
 import { overrideCard } from '../card/CardOverrides';
 import { overrideCheckbox } from '../checkbox/CheckboxOverrides';
+import { overrideChip } from '../chip/ChipOverrides';
 import { overrideIconButton } from '../icon-button/IconButtonOverrides';
 import { overrideMenu } from '../menu/MenuOverrides';
 import { overridePaper } from '../paper/PaperOverrides';
@@ -83,6 +84,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   overrideCheckbox(theme);
   overrideRadio(theme);
   overrideSwitch(theme);
+  overrideChip(theme);
 
   return theme;
 }
