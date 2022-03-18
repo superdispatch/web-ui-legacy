@@ -1,3 +1,8 @@
+const NATIONAL_COUNTRY_CODE: Record<string, number | undefined> = {
+  RU: 8,
+  UZ: 8,
+};
+
 const COUNTRY_CODE_METADATA = [
   ['US', 1, 'United States'],
   ['CA', 1, 'Canada'],
@@ -278,4 +283,8 @@ export function getCountryCode(country: CountryISO): number {
 
 export function formatCountry(country: CountryISO): string {
   return COUNTRY_NAME_MAP.get(country) || 'Invalid Country ISO';
+}
+
+export function getNationalCountyCode(country: CountryISO): number | undefined {
+  return NATIONAL_COUNTRY_CODE[country];
 }

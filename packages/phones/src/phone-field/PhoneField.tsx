@@ -11,7 +11,10 @@ import {
   useRef,
   useState,
 } from 'react';
-import { CountryISO } from '../country-code-metadata/CountryCodeMetadata';
+import {
+  CountryISO,
+  getNationalCountyCode,
+} from '../country-code-metadata/CountryCodeMetadata';
 import { usePhoneService } from '../phone-service/PhoneService';
 import { PhoneFieldMenu } from './PhoneFieldMenu';
 import { PhoneFieldStartAdornment } from './PhoneFieldStartAdornment';
@@ -109,6 +112,26 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
       );
     }, [value, createState]);
 
+    /**
+     * Decorate phone value
+     * @description We can have an internal country code in the 'national' mode, it is not needed
+     * Lib "awesome-phonenumber" has no options with removing the prefix or getting a national prefix
+     * @example +7 8 (922) 004-55-66 -> +7 (922) 004-55-66
+     */
+    function decorateValue(phone: string, countryCode: CountryISO): string {
+      const nationalCode = getNationalCountyCode(countryCode);
+      if (!nationalCode) {
+        return phone;
+      }
+      const separator = `${nationalCode} `;
+      const isSeparator = phone.startsWith(separator);
+      if (isSeparator) {
+        const subNumber = phone.slice(separator.length);
+        return subNumber.trim();
+      }
+      return phone;
+    }
+
     return (
       <>
         <PhoneFieldMenu
@@ -127,8 +150,8 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
           type="tel"
           variant="outlined"
           autoComplete="off"
-          value={nationalNumber}
-          placeholder={placeholder}
+          value={decorateValue(nationalNumber, country)}
+          placeholder={decorateValue(placeholder, country)}
           ref={mergeRefs(ref, rootRef)}
           inputRef={inputRef}
           onBlur={(event) => {
