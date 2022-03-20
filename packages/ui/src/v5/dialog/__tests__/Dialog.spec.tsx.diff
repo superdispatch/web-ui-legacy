@@ -1,0 +1,301 @@
+Compared values have no visual difference.
+  Comparing two different types of values. Expected [32mobject[39m but received [31mstring[39m.
+Compared values have no visual difference.
+Compared values have no visual difference.
+- v4
++ v5
+
+  Object {
+-   ".MuiDialog-container": Object {
+-     "height": "100%",
+-     "outline": "0",
+-   },
+-   ".MuiDialog-paper": Object {
+-     "margin": "24px",
+-     "overflowY": "auto",
+-     "position": "relative",
+-   },
+-   ".MuiDialog-paperFullScreen": Object {
+-     "borderRadius": "0",
+-     "height": "100%",
+-     "margin": "0",
+-     "maxHeight": "none",
+-     "maxWidth": "100%",
+-     "width": "100%",
+-   },
+-   ".MuiDialog-paperFullScreen.MuiDialog-paperScrollBody": Object {
+-     "margin": "0",
+-     "maxWidth": "100%",
+-   },
+-   ".MuiDialog-paperFullWidth": Object {
+-     "width": "calc(100% - 64px)",
+-   },
+-   ".MuiDialog-paperScrollBody": Object {
+-     "display": "inline-block",
+-     "textAlign": "left",
+-     "verticalAlign": "middle",
+-   },
+-   ".MuiDialog-paperScrollPaper": Object {
+-     "display": "flex",
+-     "flexDirection": "column",
+-     "maxHeight": "calc(100% - 64px)",
+-   },
+-   ".MuiDialog-paperWidthFalse": Object {
+-     "maxWidth": "calc(100% - 64px)",
+-   },
+-   ".MuiDialog-paperWidthLg": Object {
+-     "maxWidth": "1280px",
+-   },
+-   ".MuiDialog-paperWidthMd": Object {
+-     "maxWidth": "960px",
+-   },
+-   ".MuiDialog-paperWidthSm": Object {
+-     "maxWidth": "600px",
+-   },
+-   ".MuiDialog-paperWidthXl": Object {
+-     "maxWidth": "1920px",
++   ".MuiDialogTitle-root + .c10": Object {
++     "paddingTop": "0",
+    },
+-   ".MuiDialog-paperWidthXs": Object {
+-     "maxWidth": "360px",
++   ".c1": Object {
++     "bottom": "0",
++     "left": "0",
++     "position": "fixed",
++     "right": "0",
++     "top": "0",
++     "zIndex": 1300,
+    },
+-   ".MuiDialog-scrollBody": Object {
+-     "overflowX": "hidden",
++   ".c11": Object {
++     "WebkitFlex": "1 1 auto",
++     "WebkitOverflowScrolling": "touch",
++     "flex": "1 1 auto",
++     "msFlex": "1 1 auto",
+      "overflowY": "auto",
+-     "textAlign": "center",
++     "padding": Array [
++       "20px 24px",
++       "0px 24px",
++     ],
+    },
+-   ".MuiDialog-scrollBody:after": Object {
+-     "content": "''",
+-     "display": "inline-block",
+-     "height": "100%",
+-     "verticalAlign": "middle",
+-     "width": "0",
+-   },
+-   ".MuiDialog-scrollPaper": Object {
++   ".c12": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "end",
++     "WebkitFlex": "0 0 auto",
++     "WebkitJustifyContent": "flex-end",
+      "alignItems": "center",
+-     "display": "flex",
+-     "justifyContent": "center",
+-   },
+-   ".MuiDialogActions-root": Object {
+-     "alignItems": "center",
+-     "display": "flex",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
+      "flex": "0 0 auto",
+      "justifyContent": "flex-end",
+-     "padding": "24px",
++     "msFlex": "0 0 auto",
++     "msFlexAlign": "center",
++     "msFlexPack": "end",
++     "padding": Array [
++       "8px",
++       "24px",
++     ],
+    },
+-   ".MuiDialogActions-spacing > :not(:first-child)": Object {
++   ".c12 > :not(:first-child)": Object {
+      "marginLeft": "16px",
+-   },
+-   ".MuiDialogContent-dividers": Object {
+-     "borderBottom": "1px solid Color.Silver400",
+-     "borderTop": "1px solid Color.Silver400",
+-     "padding": "16px 24px",
+-   },
+-   ".MuiDialogContent-root": Object {
+-     "WebkitOverflowScrolling": "touch",
+-     "flex": "1 1 auto",
+-     "overflowY": "auto",
+-     "padding": "0px 24px",
+-   },
+-   ".MuiDialogContent-root:first-child": Object {
+-     "paddingTop": "20px",
+-   },
+-   ".MuiDialogTitle-root": Object {
+-     "flex": "0 0 auto",
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "20px",
+-     "fontWeight": 500,
+-     "lineHeight": "28px",
+-     "margin": "0",
+-     "padding": "16px 24px",
+    },
+-   "@media (max-width: 1023.95px)": Object {
+-     ".MuiDialog-paperWidthMd.MuiDialog-paperScrollBody": Object {
+-       "maxWidth": "calc(100% - 64px)",
++   ".c12 > :not(:first-of-type)": Object {
++     "marginLeft": "8px",
+    },
++   ".c3": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
++     "WebkitTapHighlightColor": "transparent",
++     "alignItems": "center",
++     "backgroundColor": "Color.Black50",
++     "bottom": "0",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "justifyContent": "center",
++     "left": "0",
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
++     "position": "fixed",
++     "right": "0",
++     "top": "0",
+    },
+-   "@media (max-width: 1343.95px)": Object {
+-     ".MuiDialog-paperWidthLg.MuiDialog-paperScrollBody": Object {
+-       "maxWidth": "calc(100% - 64px)",
++   ".c4": Object {
++     "zIndex": -1,
+    },
+-   },
+-   "@media (max-width: 1983.95px)": Object {
+-     ".MuiDialog-paperWidthXl.MuiDialog-paperScrollBody": Object {
+-       "maxWidth": "calc(100% - 64px)",
++   ".c5": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
++     "alignItems": "center",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "height": "100%",
++     "justifyContent": "center",
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
++     "outline": "0",
+    },
+-   },
+-   "@media (max-width: 423.95px)": Object {
+-     ".MuiDialog-paperWidthXs.MuiDialog-paperScrollBody": Object {
+-       "maxWidth": "calc(100% - 64px)",
++   ".c6": Object {
++     "WebkitTransition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "backgroundColor": "Color.White",
++     "borderRadius": "4px",
++     "boxShadow": "0px 11px 15px -7px Color.Black20,0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
++     "color": "Color.Dark500",
++     "transition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
++   ".c7": Object {
++     "WebkitFlexDirection": "column",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "flexDirection": "column",
++     "margin": Array [
++       "32px",
++       "24px",
++     ],
++     "maxHeight": "calc(100% - 64px)",
++     "maxWidth": "600px",
++     "msFlexDirection": "column",
++     "overflowY": "auto",
++     "position": "relative",
+    },
+-   "@media (max-width: 507.95px)": Object {
+-     ".MuiDialog-paperWidthXs.MuiDialog-paperScrollBody": Object {
+-       "maxWidth": "calc(100% - 64px)",
++   ".c8": Object {
++     "MozLetterSpacing": "0.1em",
++     "WebkitLetterSpacing": "0.1em",
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "12px",
++     "fontWeight": 700,
++     "letterSpacing": "0.1em",
++     "lineHeight": "16px",
++     "margin": "0",
++     "msLetterSpacing": "0.1em",
++     "textTransform": "uppercase",
+    },
++   ".c9": Object {
++     "WebkitFlex": "0 0 auto",
++     "flex": "0 0 auto",
++     "msFlex": "0 0 auto",
++     "padding": "16px 24px",
+    },
+-   "@media (max-width: 663.95px)": Object {
+-     ".MuiDialog-paperWidthSm.MuiDialog-paperScrollBody": Object {
++   "@media (max-width:663.95px)": Object {
++     ".c7.MuiDialog-paperScrollBody": Object {
+        "maxWidth": "calc(100% - 64px)",
+      },
+    },
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Object {
+-     ".MuiDialogTitle-root": Object {
+-       "fontSize": "20px",
+-       "lineHeight": "26px",
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {
++       ".c8": Object {
++         "fontSize": "14px",
++         "lineHeight": "20px",
+        },
+      },
++     Object {},
++     Object {},
++   ],
+    "@media print": Array [
+      Object {
+-       ".MuiDialog-root": Object {
++       ".c2": Object {
+          "position": "absolute !important",
+        },
+      },
+      Object {
+-       ".MuiDialog-container": Object {
++       ".c5": Object {
+          "height": "auto",
+        },
+      },
+      Object {
+-       ".MuiDialog-paper": Object {
++       ".c7": Object {
+          "boxShadow": "none",
+          "overflowY": "visible",
+        },
+      },
++     Object {},
+    ],
+  }

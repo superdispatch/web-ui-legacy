@@ -1,11 +1,17 @@
-import { DialogActions, DialogContent, DialogTitle } from '@material-ui/core';
+import {
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Typography,
+} from '@mui/material';
 import { PropsLink, UseState } from '@superdispatch/ui-docs';
 import { Button } from '..';
 import { Dialog } from './Dialog.playroom';
 
 export default {
-  title: 'v4/Feedback/Dialog',
+  title: 'Feedback/Dialog',
   parameters: {
+    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/dialog/#props" />
     ),
@@ -31,7 +37,11 @@ export const basic = () => (
             setOpen(false);
           }}
         >
-          <DialogTitle>Use Google’s location service?</DialogTitle>
+          <DialogTitle>
+            <Typography variant="h4" component="span">
+              Use Google’s location service?
+            </Typography>
+          </DialogTitle>
           <DialogContent>
             Let Google help apps determine location. This means sending
             anonymous location data to Google, even when no apps are running.
