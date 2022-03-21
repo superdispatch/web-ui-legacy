@@ -168,6 +168,9 @@ export function overrideButton(theme: SuperDispatchTheme): void {
   const sm = theme.breakpoints.up('sm');
 
   theme.components.MuiLoadingButton = {
+    defaultProps: {
+      variant: 'outlined',
+    },
     styleOverrides: {
       loadingIndicator: {
         color: 'inherit',

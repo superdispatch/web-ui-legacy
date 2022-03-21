@@ -131,26 +131,34 @@ it('checks component css', () => {
       font-weight: 600;
       font-family: "Inter",sans-serif;
       min-width: 64px;
-      padding: 6px 8px;
+      padding: 5px 15px;
       border-radius: 4px;
       -webkit-transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      border: 1px solid rgba(0,117,255,0.5);
       color: Color.Blue300;
       min-width: 48px;
       -webkit-transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
       padding: 10px 24px;
+      border: none;
       padding: initial;
+      background-color: Color.White;
+      color: Color.Dark500;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.Silver500,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary:hover {
       -webkit-text-decoration: none;
       text-decoration: none;
       background-color: rgba(0,117,255,0.04);
+      border: 1px solid Color.Blue300;
     }
 
     .MuiButton-text.MuiButton-textPrimary.Mui-disabled {
       color: Color.Silver400;
+      border: 1px solid rgba(0,0,0,0.12);
     }
 
     .MuiButton-text.MuiButton-textPrimary:hover {
@@ -173,120 +181,137 @@ it('checks component css', () => {
       font-size: 28px;
     }
 
+    .MuiButton-text.MuiButton-textPrimary.Mui-disabled {
+      border: none;
+    }
+
     .MuiButton-text.MuiButton-textPrimary[data-color="error"] {
+      background-color: Color.White;
       color: Color.Red300;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="error"]:hover {
+      color: Color.Red300;
+      border: 0;
       background-color: Color.Red50;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="error"][aria-expanded="true"] {
+      color: Color.Red300;
       background-color: Color.Red50;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="error"]:focus {
-      background-color: Color.Red50;
-      box-shadow: 0 0 0 2px Color.Red100;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Red100;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="error"].Mui-disabled {
+      background-color: Color.White;
       color: Color.Red100;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      box-shadow: inset 0 0 0 1px Color.Red100,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="error"].Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Red200;
+      color: Color.Red300;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"] {
+      background-color: Color.White;
       color: Color.Green300;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"]:hover {
+      color: Color.Green300;
+      border: 0;
       background-color: Color.Green50;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"][aria-expanded="true"] {
+      color: Color.Green300;
       background-color: Color.Green50;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"]:focus {
-      background-color: Color.Green50;
-      box-shadow: 0 0 0 2px Color.Green100;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Green100;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"].Mui-disabled {
+      background-color: Color.White;
       color: Color.Green100;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      box-shadow: inset 0 0 0 1px Color.Green100,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"].Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Green200;
+      color: Color.Green300;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"] {
-      color: Color.White;
-      box-shadow: 0 0 0 0px Color.Transparent;
       background-color: Color.Transparent;
+      color: Color.White;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"]:hover {
+      color: Color.White;
+      border: 0;
       background-color: Color.White10;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"][aria-expanded="true"] {
+      color: Color.White;
       background-color: Color.White10;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"]:focus {
-      background-color: Color.White10;
-      box-shadow: 0 0 0 2px Color.White50;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.White40;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"].Mui-disabled {
-      color: Color.White50;
-      box-shadow: 0 0 0 0px Color.Transparent;
       background-color: Color.Transparent;
+      color: Color.White50;
+      box-shadow: inset 0 0 0 1px Color.White40,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"].Mui-disabled .MuiLoadingButton-loadingIndicator {
       color: Color.White50;
     }
 
-    .MuiButton-text.MuiButton-textPrimary {
-      color: Color.Blue300;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
-    }
-
     .MuiButton-text.MuiButton-textPrimary:hover {
+      color: Color.Blue300;
+      border: 0;
       background-color: Color.Blue50;
+      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[aria-expanded="true"] {
+      color: Color.Blue300;
       background-color: Color.Blue50;
+      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary:focus {
-      background-color: Color.Blue50;
-      box-shadow: 0 0 0 2px Color.Blue100;
+      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Blue100;
     }
 
     .MuiButton-text.MuiButton-textPrimary.Mui-disabled {
-      color: Color.Blue100;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      background-color: Color.White;
+      color: Color.Silver500;
+      box-shadow: inset 0 0 0 1px Color.Silver400,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary.Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Blue200;
+      color: Color.Dark200;
     }
 
     .MuiButton-text {
@@ -295,16 +320,18 @@ it('checks component css', () => {
       font-weight: 600;
       font-family: "Inter",sans-serif;
       min-width: 64px;
-      padding: 6px 8px;
+      padding: 5px 15px;
       border-radius: 4px;
       -webkit-transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      border: 1px solid rgba(0,0,0,0.23);
       color: inherit;
       border-color: currentColor;
       min-width: 48px;
       -webkit-transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
       padding: 10px 24px;
+      border: none;
       padding: initial;
     }
 
@@ -316,6 +343,7 @@ it('checks component css', () => {
 
     .MuiButton-text.Mui-disabled {
       color: Color.Silver400;
+      border: 1px solid rgba(0,0,0,0.12);
     }
 
     .MuiButton-text:hover {
@@ -338,87 +366,106 @@ it('checks component css', () => {
       font-size: 28px;
     }
 
+    .MuiButton-text.Mui-disabled {
+      border: none;
+    }
+
     .MuiButton-text[data-color="error"] {
+      background-color: Color.White;
       color: Color.Red300;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="error"]:hover {
+      color: Color.Red300;
+      border: 0;
       background-color: Color.Red50;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="error"][aria-expanded="true"] {
+      color: Color.Red300;
       background-color: Color.Red50;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="error"]:focus {
-      background-color: Color.Red50;
-      box-shadow: 0 0 0 2px Color.Red100;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Red100;
     }
 
     .MuiButton-text[data-color="error"].Mui-disabled {
+      background-color: Color.White;
       color: Color.Red100;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      box-shadow: inset 0 0 0 1px Color.Red100,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="error"].Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Red200;
+      color: Color.Red300;
     }
 
     .MuiButton-text[data-color="success"] {
+      background-color: Color.White;
       color: Color.Green300;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="success"]:hover {
+      color: Color.Green300;
+      border: 0;
       background-color: Color.Green50;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="success"][aria-expanded="true"] {
+      color: Color.Green300;
       background-color: Color.Green50;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="success"]:focus {
-      background-color: Color.Green50;
-      box-shadow: 0 0 0 2px Color.Green100;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Green100;
     }
 
     .MuiButton-text[data-color="success"].Mui-disabled {
+      background-color: Color.White;
       color: Color.Green100;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      box-shadow: inset 0 0 0 1px Color.Green100,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="success"].Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Green200;
+      color: Color.Green300;
     }
 
     .MuiButton-text[data-color="white"] {
-      color: Color.White;
-      box-shadow: 0 0 0 0px Color.Transparent;
       background-color: Color.Transparent;
+      color: Color.White;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="white"]:hover {
+      color: Color.White;
+      border: 0;
       background-color: Color.White10;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="white"][aria-expanded="true"] {
+      color: Color.White;
       background-color: Color.White10;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="white"]:focus {
-      background-color: Color.White10;
-      box-shadow: 0 0 0 2px Color.White50;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.White40;
     }
 
     .MuiButton-text[data-color="white"].Mui-disabled {
-      color: Color.White50;
-      box-shadow: 0 0 0 0px Color.Transparent;
       background-color: Color.Transparent;
+      color: Color.White50;
+      box-shadow: inset 0 0 0 1px Color.White40,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="white"].Mui-disabled .MuiLoadingButton-loadingIndicator {
@@ -625,12 +672,12 @@ it('checks component css', () => {
     }
 
     .Mui-outlined {
-      font-size: 14px;
+      font-size: 0.9375rem;
       line-height: 20px;
       font-weight: 600;
       font-family: "Inter",sans-serif;
       min-width: 64px;
-      padding: 5px 15px;
+      padding: 7px 21px;
       border-radius: 4px;
       -webkit-transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
@@ -646,6 +693,16 @@ it('checks component css', () => {
       color: Color.Dark500;
       border: 0;
       box-shadow: inset 0 0 0 1px Color.Silver500,0 0 0 2px Color.Transparent;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 600;
+      font-family: "Inter",sans-serif;
+      padding: 14px 64px;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 600;
+      font-family: "Inter",sans-serif;
+      padding: 14px 64px;
     }
 
     .Mui-outlined:hover {
@@ -814,205 +871,6 @@ it('checks component css', () => {
     }
 
     .Mui-outlined.MuiButton-sizeLarge {
-      font-size: 0.9375rem;
-      line-height: 20px;
-      font-weight: 600;
-      font-family: "Inter",sans-serif;
-      min-width: 64px;
-      padding: 7px 21px;
-      border-radius: 4px;
-      -webkit-transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-      transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
-      border: 1px solid rgba(0,117,255,0.5);
-      color: Color.Blue300;
-      min-width: 48px;
-      -webkit-transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-      transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
-      padding: 10px 24px;
-      border: none;
-      padding: initial;
-      background-color: Color.White;
-      color: Color.Dark500;
-      border: 0;
-      box-shadow: inset 0 0 0 1px Color.Silver500,0 0 0 2px Color.Transparent;
-      font-size: 18px;
-      line-height: 28px;
-      font-weight: 600;
-      font-family: "Inter",sans-serif;
-      padding: 14px 64px;
-      font-size: 18px;
-      line-height: 28px;
-      font-weight: 600;
-      font-family: "Inter",sans-serif;
-      padding: 14px 64px;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge:hover {
-      -webkit-text-decoration: none;
-      text-decoration: none;
-      background-color: rgba(0,117,255,0.04);
-      border: 1px solid Color.Blue300;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge.Mui-disabled {
-      color: Color.Silver400;
-      border: 1px solid rgba(0,0,0,0.12);
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge:hover {
-      background-color: initial;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge:hover.Mui-disabled {
-      background-color: initial;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge.Mui-disabled {
-      color: initial;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge > .MuiSvgIcon-root {
-      font-size: 24px;
-    }
-
-    .MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root {
-      font-size: 28px;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge.Mui-disabled {
-      border: none;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="error"] {
-      background-color: Color.White;
-      color: Color.Red300;
-      border: 0;
-      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="error"]:hover {
-      color: Color.Red300;
-      border: 0;
-      background-color: Color.Red50;
-      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="error"][aria-expanded="true"] {
-      color: Color.Red300;
-      background-color: Color.Red50;
-      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="error"]:focus {
-      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Red100;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="error"].Mui-disabled {
-      background-color: Color.White;
-      color: Color.Red100;
-      box-shadow: inset 0 0 0 1px Color.Red100,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="error"].Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Red300;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="success"] {
-      background-color: Color.White;
-      color: Color.Green300;
-      border: 0;
-      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="success"]:hover {
-      color: Color.Green300;
-      border: 0;
-      background-color: Color.Green50;
-      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="success"][aria-expanded="true"] {
-      color: Color.Green300;
-      background-color: Color.Green50;
-      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="success"]:focus {
-      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Green100;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="success"].Mui-disabled {
-      background-color: Color.White;
-      color: Color.Green100;
-      box-shadow: inset 0 0 0 1px Color.Green100,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="success"].Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Green300;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="white"] {
-      background-color: Color.Transparent;
-      color: Color.White;
-      border: 0;
-      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="white"]:hover {
-      color: Color.White;
-      border: 0;
-      background-color: Color.White10;
-      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="white"][aria-expanded="true"] {
-      color: Color.White;
-      background-color: Color.White10;
-      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="white"]:focus {
-      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.White40;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="white"].Mui-disabled {
-      background-color: Color.Transparent;
-      color: Color.White50;
-      box-shadow: inset 0 0 0 1px Color.White40,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[data-color="white"].Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.White50;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge:hover {
-      color: Color.Blue300;
-      border: 0;
-      background-color: Color.Blue50;
-      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge[aria-expanded="true"] {
-      color: Color.Blue300;
-      background-color: Color.Blue50;
-      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge:focus {
-      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Blue100;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge.Mui-disabled {
-      background-color: Color.White;
-      color: Color.Silver500;
-      box-shadow: inset 0 0 0 1px Color.Silver400,0 0 0 2px Color.Transparent;
-    }
-
-    .Mui-outlined.MuiButton-sizeLarge.Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Dark200;
-    }
-
-    .MuiButton-text.MuiButton-sizeSmall {
       font-size: 0.8125rem;
       line-height: 20px;
       font-weight: 600;
@@ -1038,6 +896,170 @@ it('checks component css', () => {
       font-weight: 600;
       font-family: "Inter",sans-serif;
       padding: 4px 24px;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge:hover {
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      background-color: rgba(0,117,255,0.04);
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge.Mui-disabled {
+      color: Color.Silver400;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge:hover {
+      background-color: initial;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge:hover.Mui-disabled {
+      background-color: initial;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge.Mui-disabled {
+      color: initial;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge > .MuiSvgIcon-root {
+      font-size: 24px;
+    }
+
+    .MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root {
+      font-size: 28px;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="error"] {
+      color: Color.Red300;
+      box-shadow: 0 0 0 0px Color.Transparent;
+      background-color: Color.Transparent;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="error"]:hover {
+      background-color: Color.Red50;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="error"][aria-expanded="true"] {
+      background-color: Color.Red50;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="error"]:focus {
+      background-color: Color.Red50;
+      box-shadow: 0 0 0 2px Color.Red100;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="error"].Mui-disabled {
+      color: Color.Red100;
+      box-shadow: 0 0 0 0px Color.Transparent;
+      background-color: Color.Transparent;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="error"].Mui-disabled .MuiLoadingButton-loadingIndicator {
+      color: Color.Red200;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="success"] {
+      color: Color.Green300;
+      box-shadow: 0 0 0 0px Color.Transparent;
+      background-color: Color.Transparent;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="success"]:hover {
+      background-color: Color.Green50;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="success"][aria-expanded="true"] {
+      background-color: Color.Green50;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="success"]:focus {
+      background-color: Color.Green50;
+      box-shadow: 0 0 0 2px Color.Green100;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="success"].Mui-disabled {
+      color: Color.Green100;
+      box-shadow: 0 0 0 0px Color.Transparent;
+      background-color: Color.Transparent;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="success"].Mui-disabled .MuiLoadingButton-loadingIndicator {
+      color: Color.Green200;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="white"] {
+      color: Color.White;
+      box-shadow: 0 0 0 0px Color.Transparent;
+      background-color: Color.Transparent;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="white"]:hover {
+      background-color: Color.White10;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="white"][aria-expanded="true"] {
+      background-color: Color.White10;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="white"]:focus {
+      background-color: Color.White10;
+      box-shadow: 0 0 0 2px Color.White50;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="white"].Mui-disabled {
+      color: Color.White50;
+      box-shadow: 0 0 0 0px Color.Transparent;
+      background-color: Color.Transparent;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[data-color="white"].Mui-disabled .MuiLoadingButton-loadingIndicator {
+      color: Color.White50;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge {
+      color: Color.Blue300;
+      box-shadow: 0 0 0 0px Color.Transparent;
+      background-color: Color.Transparent;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge:hover {
+      background-color: Color.Blue50;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge[aria-expanded="true"] {
+      background-color: Color.Blue50;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge:focus {
+      background-color: Color.Blue50;
+      box-shadow: 0 0 0 2px Color.Blue100;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge.Mui-disabled {
+      color: Color.Blue100;
+      box-shadow: 0 0 0 0px Color.Transparent;
+      background-color: Color.Transparent;
+    }
+
+    .Mui-outlined.MuiButton-sizeLarge.Mui-disabled .MuiLoadingButton-loadingIndicator {
+      color: Color.Blue200;
+    }
+
+    .MuiButton-text.MuiButton-sizeSmall {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      font-family: "Inter",sans-serif;
+      min-width: 64px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      -webkit-transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      color: Color.Blue300;
+      min-width: 48px;
+      -webkit-transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      padding: 10px 24px;
+      padding: initial;
     }
 
     .MuiButton-text.MuiButton-sizeSmall:hover {
@@ -1968,27 +1990,35 @@ it('checks component css', () => {
       font-weight: 600;
       font-family: "Inter",sans-serif;
       min-width: 64px;
-      padding: 6px 8px;
+      padding: 5px 15px;
       border-radius: 4px;
       -webkit-transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      border: 1px solid rgba(0,117,255,0.5);
       color: Color.Blue300;
       box-shadow: none;
       min-width: 48px;
       -webkit-transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
       padding: 10px 24px;
+      border: none;
       padding: initial;
+      background-color: Color.White;
+      color: Color.Dark500;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.Silver500,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text:hover {
       -webkit-text-decoration: none;
       text-decoration: none;
       background-color: rgba(0,117,255,0.04);
+      border: 1px solid Color.Blue300;
     }
 
     .MuiButton-text.Mui-disabled {
       color: Color.Silver400;
+      border: 1px solid rgba(0,0,0,0.12);
     }
 
     .MuiButton-text:hover {
@@ -2027,120 +2057,137 @@ it('checks component css', () => {
       font-size: 28px;
     }
 
+    .MuiButton-text.Mui-disabled {
+      border: none;
+    }
+
     .MuiButton-text[data-color="error"] {
+      background-color: Color.White;
       color: Color.Red300;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="error"]:hover {
+      color: Color.Red300;
+      border: 0;
       background-color: Color.Red50;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="error"][aria-expanded="true"] {
+      color: Color.Red300;
       background-color: Color.Red50;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="error"]:focus {
-      background-color: Color.Red50;
-      box-shadow: 0 0 0 2px Color.Red100;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Red100;
     }
 
     .MuiButton-text[data-color="error"].Mui-disabled {
+      background-color: Color.White;
       color: Color.Red100;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      box-shadow: inset 0 0 0 1px Color.Red100,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="error"].Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Red200;
+      color: Color.Red300;
     }
 
     .MuiButton-text[data-color="success"] {
+      background-color: Color.White;
       color: Color.Green300;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="success"]:hover {
+      color: Color.Green300;
+      border: 0;
       background-color: Color.Green50;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="success"][aria-expanded="true"] {
+      color: Color.Green300;
       background-color: Color.Green50;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="success"]:focus {
-      background-color: Color.Green50;
-      box-shadow: 0 0 0 2px Color.Green100;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Green100;
     }
 
     .MuiButton-text[data-color="success"].Mui-disabled {
+      background-color: Color.White;
       color: Color.Green100;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      box-shadow: inset 0 0 0 1px Color.Green100,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="success"].Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Green200;
+      color: Color.Green300;
     }
 
     .MuiButton-text[data-color="white"] {
-      color: Color.White;
-      box-shadow: 0 0 0 0px Color.Transparent;
       background-color: Color.Transparent;
+      color: Color.White;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="white"]:hover {
+      color: Color.White;
+      border: 0;
       background-color: Color.White10;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="white"][aria-expanded="true"] {
+      color: Color.White;
       background-color: Color.White10;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="white"]:focus {
-      background-color: Color.White10;
-      box-shadow: 0 0 0 2px Color.White50;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.White40;
     }
 
     .MuiButton-text[data-color="white"].Mui-disabled {
-      color: Color.White50;
-      box-shadow: 0 0 0 0px Color.Transparent;
       background-color: Color.Transparent;
+      color: Color.White50;
+      box-shadow: inset 0 0 0 1px Color.White40,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[data-color="white"].Mui-disabled .MuiLoadingButton-loadingIndicator {
       color: Color.White50;
     }
 
-    .MuiButton-text {
-      color: Color.Blue300;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
-    }
-
     .MuiButton-text:hover {
+      color: Color.Blue300;
+      border: 0;
       background-color: Color.Blue50;
+      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text[aria-expanded="true"] {
+      color: Color.Blue300;
       background-color: Color.Blue50;
+      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text:focus {
-      background-color: Color.Blue50;
-      box-shadow: 0 0 0 2px Color.Blue100;
+      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Blue100;
     }
 
     .MuiButton-text.Mui-disabled {
-      color: Color.Blue100;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      background-color: Color.White;
+      color: Color.Silver500;
+      box-shadow: inset 0 0 0 1px Color.Silver400,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Blue200;
+      color: Color.Dark200;
     }
 
     .MuiButton-text.MuiButton-textPrimary {
@@ -2149,27 +2196,35 @@ it('checks component css', () => {
       font-weight: 600;
       font-family: "Inter",sans-serif;
       min-width: 64px;
-      padding: 6px 8px;
+      padding: 5px 15px;
       border-radius: 4px;
       -webkit-transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 250ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      border: 1px solid rgba(0,117,255,0.5);
       color: Color.Blue300;
       width: 100%;
       min-width: 48px;
       -webkit-transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
       transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
       padding: 10px 24px;
+      border: none;
       padding: initial;
+      background-color: Color.White;
+      color: Color.Dark500;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.Silver500,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary:hover {
       -webkit-text-decoration: none;
       text-decoration: none;
       background-color: rgba(0,117,255,0.04);
+      border: 1px solid Color.Blue300;
     }
 
     .MuiButton-text.MuiButton-textPrimary.Mui-disabled {
       color: Color.Silver400;
+      border: 1px solid rgba(0,0,0,0.12);
     }
 
     .MuiButton-text.MuiButton-textPrimary:hover {
@@ -2192,120 +2247,137 @@ it('checks component css', () => {
       font-size: 28px;
     }
 
+    .MuiButton-text.MuiButton-textPrimary.Mui-disabled {
+      border: none;
+    }
+
     .MuiButton-text.MuiButton-textPrimary[data-color="error"] {
+      background-color: Color.White;
       color: Color.Red300;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="error"]:hover {
+      color: Color.Red300;
+      border: 0;
       background-color: Color.Red50;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="error"][aria-expanded="true"] {
+      color: Color.Red300;
       background-color: Color.Red50;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="error"]:focus {
-      background-color: Color.Red50;
-      box-shadow: 0 0 0 2px Color.Red100;
+      box-shadow: inset 0 0 0 1px Color.Red300,0 0 0 2px Color.Red100;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="error"].Mui-disabled {
+      background-color: Color.White;
       color: Color.Red100;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      box-shadow: inset 0 0 0 1px Color.Red100,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="error"].Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Red200;
+      color: Color.Red300;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"] {
+      background-color: Color.White;
       color: Color.Green300;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"]:hover {
+      color: Color.Green300;
+      border: 0;
       background-color: Color.Green50;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"][aria-expanded="true"] {
+      color: Color.Green300;
       background-color: Color.Green50;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"]:focus {
-      background-color: Color.Green50;
-      box-shadow: 0 0 0 2px Color.Green100;
+      box-shadow: inset 0 0 0 1px Color.Green300,0 0 0 2px Color.Green100;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"].Mui-disabled {
+      background-color: Color.White;
       color: Color.Green100;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      box-shadow: inset 0 0 0 1px Color.Green100,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="success"].Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Green200;
+      color: Color.Green300;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"] {
-      color: Color.White;
-      box-shadow: 0 0 0 0px Color.Transparent;
       background-color: Color.Transparent;
+      color: Color.White;
+      border: 0;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"]:hover {
+      color: Color.White;
+      border: 0;
       background-color: Color.White10;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"][aria-expanded="true"] {
+      color: Color.White;
       background-color: Color.White10;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"]:focus {
-      background-color: Color.White10;
-      box-shadow: 0 0 0 2px Color.White50;
+      box-shadow: inset 0 0 0 1px Color.White50,0 0 0 2px Color.White40;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"].Mui-disabled {
-      color: Color.White50;
-      box-shadow: 0 0 0 0px Color.Transparent;
       background-color: Color.Transparent;
+      color: Color.White50;
+      box-shadow: inset 0 0 0 1px Color.White40,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[data-color="white"].Mui-disabled .MuiLoadingButton-loadingIndicator {
       color: Color.White50;
     }
 
-    .MuiButton-text.MuiButton-textPrimary {
-      color: Color.Blue300;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
-    }
-
     .MuiButton-text.MuiButton-textPrimary:hover {
+      color: Color.Blue300;
+      border: 0;
       background-color: Color.Blue50;
+      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary[aria-expanded="true"] {
+      color: Color.Blue300;
       background-color: Color.Blue50;
+      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary:focus {
-      background-color: Color.Blue50;
-      box-shadow: 0 0 0 2px Color.Blue100;
+      box-shadow: inset 0 0 0 1px Color.Blue300,0 0 0 2px Color.Blue100;
     }
 
     .MuiButton-text.MuiButton-textPrimary.Mui-disabled {
-      color: Color.Blue100;
-      box-shadow: 0 0 0 0px Color.Transparent;
-      background-color: Color.Transparent;
+      background-color: Color.White;
+      color: Color.Silver500;
+      box-shadow: inset 0 0 0 1px Color.Silver400,0 0 0 2px Color.Transparent;
     }
 
     .MuiButton-text.MuiButton-textPrimary.Mui-disabled .MuiLoadingButton-loadingIndicator {
-      color: Color.Blue200;
+      color: Color.Dark200;
     }
 
     .MuiButton-StartIcon {
@@ -2545,6 +2617,36 @@ it('checks component css', () => {
     }
 
     @media (min-width:0px) and (max-width:599.95px) {
+      .Mui-outlined {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .Mui-outlined {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 8px 32px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .Mui-outlined {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .Mui-outlined {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 8px 32px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
       .Mui-outlined.MuiButton-sizeLarge {
         font-size: 16px;
         line-height: 24px;
@@ -2590,9 +2692,7 @@ it('checks component css', () => {
 
     @media (min-width:600px) {
       .Mui-outlined.MuiButton-sizeLarge {
-        font-size: 16px;
-        line-height: 24px;
-        padding: 8px 32px;
+        padding: 2px 16px;
       }
     }
 
@@ -2605,9 +2705,7 @@ it('checks component css', () => {
 
     @media (min-width:600px) {
       .Mui-outlined.MuiButton-sizeLarge {
-        font-size: 16px;
-        line-height: 24px;
-        padding: 8px 32px;
+        padding: 2px 16px;
       }
     }
 
@@ -2645,32 +2743,6 @@ it('checks component css', () => {
     @media (min-width:600px) {
       .MuiButton-sizeLarge.MuiButton-root.MuiButton-sizeLarge > .MuiSvgIcon-root {
         font-size: 24px;
-      }
-    }
-
-    @media (min-width:0px) and (max-width:599.95px) {
-      .MuiButton-text.MuiButton-sizeSmall {
-        font-size: 16px;
-        line-height: 24px;
-      }
-    }
-
-    @media (min-width:600px) {
-      .MuiButton-text.MuiButton-sizeSmall {
-        padding: 2px 16px;
-      }
-    }
-
-    @media (min-width:0px) and (max-width:599.95px) {
-      .MuiButton-text.MuiButton-sizeSmall {
-        font-size: 16px;
-        line-height: 24px;
-      }
-    }
-
-    @media (min-width:600px) {
-      .MuiButton-text.MuiButton-sizeSmall {
-        padding: 2px 16px;
       }
     }
 
