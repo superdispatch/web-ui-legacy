@@ -1,3 +1,4 @@
+import isLokiRunning from '@loki/is-loki-running';
 import { DialogActions, DialogContent, DialogTitle } from '@material-ui/core';
 import { PropsLink, UseState } from '@superdispatch/ui-docs';
 import { Button } from '..';
@@ -12,8 +13,10 @@ export default {
   },
 };
 
+const initialState = isLokiRunning();
+
 export const basic = () => (
-  <UseState initialState={false}>
+  <UseState initialState={initialState}>
     {(open, setOpen) => (
       <>
         <Button

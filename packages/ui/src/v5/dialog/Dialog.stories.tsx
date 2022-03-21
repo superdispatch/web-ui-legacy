@@ -1,9 +1,5 @@
-import {
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  Typography,
-} from '@mui/material';
+import isLokiRunning from '@loki/is-loki-running';
+import { DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import { PropsLink, UseState } from '@superdispatch/ui-docs';
 import { Button } from '..';
 import { Dialog } from './Dialog.playroom';
@@ -18,8 +14,10 @@ export default {
   },
 };
 
+const initialState = isLokiRunning();
+
 export const basic = () => (
-  <UseState initialState={false}>
+  <UseState initialState={initialState}>
     {(open, setOpen) => (
       <>
         <Button
@@ -37,11 +35,7 @@ export const basic = () => (
             setOpen(false);
           }}
         >
-          <DialogTitle>
-            <Typography variant="h4" component="span">
-              Use Google’s location service?
-            </Typography>
-          </DialogTitle>
+          <DialogTitle>Use Google’s location service?</DialogTitle>
           <DialogContent>
             Let Google help apps determine location. This means sending
             anonymous location data to Google, even when no apps are running.
@@ -55,10 +49,10 @@ export const basic = () => (
               Disagree
             </Button>
             <Button
+              variant="contained"
               onClick={() => {
                 setOpen(false);
               }}
-              variant="contained"
             >
               Agree
             </Button>

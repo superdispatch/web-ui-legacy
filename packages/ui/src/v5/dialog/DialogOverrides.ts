@@ -22,6 +22,13 @@ export function overrideDialog(theme: SuperDispatchTheme): void {
     },
   };
 
+  theme.components.MuiDialogTitle = {
+    defaultProps: {
+      // @ts-expect-error DialogTitleProps has missing type def
+      variant: 'h3',
+    },
+  };
+
   theme.components.MuiDialogContent = {
     styleOverrides: {
       root: { padding: theme.spacing(0, 3) },
