@@ -160,3 +160,12 @@ test('css', async () => {
     }
   `);
 });
+
+test('without national code', async () => {
+  renderComponent(<PhoneField value="+79220059805" />);
+
+  await screen.findByRole('textbox');
+
+  expect(screen.getByRole('button')).toHaveAttribute('title', 'Russia: +7');
+  expect(screen.getByRole('textbox')).toHaveValue('(922) 005-98-05');
+});

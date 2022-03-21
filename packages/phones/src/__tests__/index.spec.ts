@@ -13,6 +13,7 @@ test('api', () => {
       "SuspendedPhoneText": [Function],
       "formatCountry": [Function],
       "getCountryCode": [Function],
+      "getNationalCountyCode": [Function],
       "isCountryISO": [Function],
       "listCountries": [Function],
       "toCountryISO": [Function],
