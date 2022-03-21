@@ -12,9 +12,11 @@ it('checks default props', () => {
   const { components } = renderTheme();
 
   expect(components.MuiDialog?.defaultProps).toMatchInlineSnapshot(`undefined`);
-  expect(components.MuiDialogTitle?.defaultProps).toMatchInlineSnapshot(
-    `undefined`,
-  );
+  expect(components.MuiDialogTitle?.defaultProps).toMatchInlineSnapshot(`
+    Object {
+      "variant": "h3",
+    }
+  `);
   expect(components.MuiDialogContent?.defaultProps).toMatchInlineSnapshot(
     `undefined`,
   );
@@ -44,14 +46,9 @@ it('checks component css', () => {
 
     .c8 {
       margin: 0;
-      font-size: 12px;
-      line-height: 16px;
-      font-weight: 700;
-      -webkit-letter-spacing: 0.1em;
-      -moz-letter-spacing: 0.1em;
-      -ms-letter-spacing: 0.1em;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
       font-family: "Inter",sans-serif;
     }
 
@@ -174,8 +171,8 @@ it('checks component css', () => {
 
     @media (min-width:0px) and (max-width:599.95px) {
       .c8 {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 20px;
+        line-height: 26px;
       }
     }
 
