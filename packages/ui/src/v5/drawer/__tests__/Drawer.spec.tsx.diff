@@ -1,0 +1,397 @@
+Compared values have no visual difference.
+- v4
++ v5
+
+  Object {
+-   ".MuiDrawer-docked": Object {
+-     "flex": "0 0 auto",
+-   },
+-   ".MuiDrawer-paper": Object {
+-     "WebkitOverflowScrolling": "touch",
+-     "display": "flex",
+-     "flex": "1 0 auto",
+-     "flexDirection": "column",
+-     "height": "100%",
+-     "maxWidth": "100%",
+-     "minWidth": "100%",
+-     "outline": "0",
+-     "overflowY": "auto",
+-     "position": "fixed",
+-     "top": "0",
+-     "zIndex": 1200,
+-   },
+-   ".MuiDrawer-paperAnchorBottom": Object {
++   ".c1": Object {
+      "bottom": "0",
+-     "height": "auto",
+      "left": "0",
+-     "maxHeight": "100%",
++     "position": "fixed",
+      "right": "0",
+-     "top": "auto",
++     "top": "0",
++     "zIndex": 1300,
+    },
+-   ".MuiDrawer-paperAnchorDockedBottom": Object {
+-     "borderTop": "1px solid Color.Silver400",
++   ".c10": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "alignItems": "center",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "minHeight": Array [
++       "56px",
++       "64px",
++     ],
++     "msFlexAlign": "center",
++     "paddingLeft": "16px",
++     "paddingRight": "16px",
++     "position": "relative",
+    },
+-   ".MuiDrawer-paperAnchorDockedLeft": Object {
+-     "borderRight": "1px solid Color.Silver400",
++   ".c11.MuiToolbar-gutters": Object {
++     "paddingLeft": "24px",
++     "paddingRight": "24px",
+    },
+-   ".MuiDrawer-paperAnchorDockedRight": Object {
+-     "borderLeft": "1px solid Color.Silver400",
++   ".c12": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "WebkitFlexDirection": "row",
++     "WebkitFlexWrap": "wrap",
++     "alignItems": "center",
++     "boxSizing": "border-box",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "flexDirection": "row",
++     "flexWrap": "wrap",
++     "msFlexAlign": "center",
++     "msFlexDirection": "row",
++     "msFlexWrap": "wrap",
++     "width": "100%",
+    },
+-   ".MuiDrawer-paperAnchorDockedTop": Object {
+-     "borderBottom": "1px solid Color.Silver400",
++   ".c13": Object {
++     "WebkitBoxFlex": "1",
++     "WebkitFlexBasis": "0",
++     "WebkitFlexDirection": "row",
++     "WebkitFlexGrow": "1",
++     "boxSizing": "border-box",
++     "flexBasis": "0",
++     "flexDirection": "row",
++     "flexGrow": 1,
++     "margin": "0",
++     "maxWidth": "100%",
++     "minWidth": "0",
++     "msFlexDirection": "row",
++     "msFlexPositive": "1",
++     "msFlexPreferredSize": "0",
+    },
+-   ".MuiDrawer-paperAnchorLeft": Object {
+-     "left": "0",
+-     "right": "auto",
++   ".c14": Object {
++     "fontFamily": "'Inter',sans-serif",
++     "fontSize": "20px",
++     "fontWeight": 500,
++     "lineHeight": "28px",
++     "margin": "0",
++     "overflow": "hidden",
++     "textOverflow": "ellipsis",
++     "whiteSpace": "nowrap",
+    },
+-   ".MuiDrawer-paperAnchorRight": Object {
+-     "left": "auto",
+-     "right": "0",
++   ".c15": Object {
++     "maxWidth": "100%",
++     "padding": "16px 24px",
+    },
+-   ".MuiDrawer-paperAnchorTop": Object {
+-     "bottom": "auto",
+-     "height": "auto",
+-     "left": "0",
+-     "maxHeight": "100%",
+-     "right": "0",
+-     "top": "0",
++   ".c16": Object {
++     "listStyle": "none",
++     "margin": "0",
++     "padding": "0",
++     "paddingBottom": "8px",
++     "paddingTop": "8px",
++     "position": "relative",
+    },
+-   ".SD-DrawerActions-appBar.SD-DrawerActions-appBar": Object {
++   ".c17": Object {
++     "maxWidth": "100%",
++   },
++   ".c17 .MuiListItem-gutters": Object {
++     "paddingLeft": "24px",
++     "paddingRight": "24px",
++   },
++   ".c17 .MuiListItem-gutters .MuiListItemSecondaryAction-root": Object {
++     "right": "24px",
++   },
++   ".c17 .MuiListItem-gutters .MuiListItemSecondaryAction-root .MuiIconButton-edgeEnd": Object {
++     "marginRight": "-12px",
++   },
++   ".c17 .MuiListItem-gutters.MuiListItem-secondaryAction": Object {
++     "paddingRight": "48px",
++   },
++   ".c18": Object {
++     "WebkitTransition": "border-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "borderBottom": "none",
+      "borderLeft": "none",
+      "borderRight": "none",
+      "bottom": "0",
+      "top": "auto",
+-     "transition": "border-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "transition": "border-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+-   ".SD-DrawerActions-appBar.SD-DrawerActions-appBar:not(.SD-DrawerActions-appBarSticky)": Object {
++   ".c18:not([data-sticky='true'])": Object {
+      "borderTopColor": "Color.Transparent",
+    },
+-   ".SD-DrawerActions-toolbar.MuiToolbar-gutters": Object {
++   ".c19.MuiToolbar-gutters": Object {
+      "paddingLeft": "24px",
+      "paddingRight": "24px",
+    },
+-   ".SD-DrawerContent-root": Object {
+-     "maxWidth": "100%",
+-     "padding": "16px 24px",
++   ".c2": Object {
++     "zIndex": 1200,
+    },
+-   ".SD-DrawerList-root": Object {
+-     "maxWidth": "100%",
++   ".c3": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
++     "WebkitTapHighlightColor": "transparent",
++     "alignItems": "center",
++     "backgroundColor": "Color.Black50",
++     "bottom": "0",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "justifyContent": "center",
++     "left": "0",
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
++     "position": "fixed",
++     "right": "0",
++     "top": "0",
+    },
+-   ".SD-DrawerList-root
+-       .MuiListItem-gutters
+-       .MuiListItemSecondaryAction-root
+-       .MuiIconButton-edgeEnd": Object {
+-     "marginRight": "-12px",
++   ".c4": Object {
++     "zIndex": -1,
+    },
+-   ".SD-DrawerList-root .MuiListItem-gutters": Object {
+-     "paddingLeft": "24px",
+-     "paddingRight": "24px",
++   ".c5": Object {
++     "WebkitTransition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "backgroundColor": "Color.White",
++     "boxShadow": "0px 8px 10px -5px Color.Black20,0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
++     "color": "Color.Dark500",
++     "transition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+-   ".SD-DrawerList-root .MuiListItem-gutters .MuiListItemSecondaryAction-root": Object {
+-     "right": "24px",
++   ".c6": Object {
++     "WebkitFlex": "1 0 auto",
++     "WebkitFlexDirection": "column",
++     "WebkitOverflowScrolling": "touch",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "flex": "1 0 auto",
++     "flexDirection": "column",
++     "height": "100%",
++     "maxWidth": "100%",
++     "minWidth": "100%",
++     "msFlex": "1 0 auto",
++     "msFlexDirection": "column",
++     "outline": "0",
++     "overflowY": "auto",
++     "position": "fixed",
++     "right": "0",
++     "top": "0",
++     "zIndex": 1200,
++   },
++   ".c7": Object {
++     "WebkitTransition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "backgroundColor": "Color.White",
++     "border": "1px solid Color.Silver400",
++     "boxShadow": "none",
++     "color": "Color.Dark500",
++     "transition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+-   ".SD-DrawerList-root .MuiListItem-gutters.MuiListItem-secondaryAction": Object {
+-     "paddingRight": "48px",
++   ".c8": Object {
++     "WebkitFlexDirection": "column",
++     "WebkitFlexShrink": "0",
++     "boxSizing": "border-box",
++     "color": "inherit",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "flexDirection": "column",
++     "flexShrink": 0,
++     "left": "auto",
++     "msFlexDirection": "column",
++     "msFlexNegative": "0",
++     "position": Array [
++       "-webkit-sticky",
++       "sticky",
++     ],
++     "right": "0",
++     "top": "0",
++     "width": "100%",
++     "zIndex": 1100,
+    },
+-   ".SD-DrawerTitle-appBar.SD-DrawerTitle-appBar": Object {
++   ".c9": Object {
++     "WebkitTransition": "border-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+      "borderLeft": "none",
+      "borderRight": "none",
+      "borderTop": "none",
+-     "transition": "border-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++     "transition": "border-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+-   ".SD-DrawerTitle-appBar.SD-DrawerTitle-appBar:not(.SD-DrawerTitle-appBarSticky)": Object {
++   ".c9:not([data-sticky='true'])": Object {
+      "borderBottomColor": "Color.Transparent",
+    },
+-   ".SD-DrawerTitle-endAction": Object {
+-     "marginLeft": "4px",
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {
++       ".c14": Object {
++         "fontSize": "20px",
++         "lineHeight": "26px",
+        },
+-   ".SD-DrawerTitle-endAction .MuiIconButton-edgeEnd": Object {
+-     "marginRight": "-16px",
++     },
++     Object {},
++     Object {},
++   ],
++   "@media (min-width:0px) and (orientation:landscape)": Object {
++     ".c10": Object {
++       "minHeight": "48px",
++     },
+    },
+-   ".SD-DrawerTitle-startAction": Object {
+-     "marginRight": "4px",
++   "@media (min-width:600px)": Array [
++     Object {
++       ".c6": Object {
++         "maxWidth": "600px",
++         "minWidth": "432px",
+        },
+-   ".SD-DrawerTitle-startAction .MuiIconButton-edgeStart": Object {
+-     "marginLeft": "-16px",
+      },
+-   ".SD-DrawerTitle-toolbar.MuiToolbar-gutters": Object {
++     Object {
++       ".c10": Object {
+          "paddingLeft": "24px",
+          "paddingRight": "24px",
+        },
+-   "@media (min-width: 600px)": Object {
+-     ".MuiDrawer-paper": Object {
+-       "maxWidth": "600px",
+-       "minWidth": "432px",
++     },
++     Object {
++       ".c10": Object {
++         "minHeight": "64px",
++       },
++     },
++     Object {
++       ".c10": Object {
++         "paddingLeft": "16px",
++         "paddingRight": "16px",
+        },
+      },
+-   "@media (min-width: 960px)": Array [
++   ],
++   "@media (min-width:900px)": Array [
+      Object {
+-       ".SD-DrawerActions-toolbar.MuiToolbar-gutters": Object {
++       ".c19.MuiToolbar-gutters": Object {
+          "paddingLeft": "32px",
+          "paddingRight": "32px",
+        },
+      },
+      Object {
+-       ".SD-DrawerContent-root": Object {
++       ".c15": Object {
+          "padding": "16px 32px",
+        },
+      },
+      Object {
+-       ".SD-DrawerList-root
+-         .MuiListItem-gutters
+-         .MuiListItemSecondaryAction-root
+-         .MuiIconButton-edgeEnd": Object {
+-         "marginRight": "-16px",
+-       },
+-       ".SD-DrawerList-root .MuiListItem-gutters": Object {
++       ".c17 .MuiListItem-gutters": Object {
+          "paddingLeft": "32px",
+          "paddingRight": "32px",
+        },
+-       ".SD-DrawerList-root .MuiListItem-gutters .MuiListItemSecondaryAction-root": Object {
++       ".c17 .MuiListItem-gutters .MuiListItemSecondaryAction-root": Object {
+          "right": "32px",
++       },
++       ".c17 .MuiListItem-gutters .MuiListItemSecondaryAction-root .MuiIconButton-edgeEnd": Object {
++         "marginRight": "-16px",
+        },
+-       ".SD-DrawerList-root .MuiListItem-gutters.MuiListItem-secondaryAction": Object {
++       ".c17 .MuiListItem-gutters.MuiListItem-secondaryAction": Object {
+          "paddingRight": "64px",
+        },
+      },
+      Object {
+-       ".SD-DrawerTitle-toolbar.MuiToolbar-gutters": Object {
++       ".c11.MuiToolbar-gutters": Object {
+          "paddingLeft": "32px",
+          "paddingRight": "32px",
+        },
+      },
+    ],
++   "@media print": Object {},
+  }
