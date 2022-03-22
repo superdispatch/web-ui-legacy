@@ -25,6 +25,7 @@ export default {
   component: DrawerTitle,
   subcomponents: { DrawerList },
   parameters: {
+    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/drawer/#props" />
     ),
