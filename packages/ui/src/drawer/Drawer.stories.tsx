@@ -1,3 +1,4 @@
+import isLokiRunning from '@loki/is-loki-running';
 import {
   Drawer,
   IconButton,
@@ -12,6 +13,7 @@ import {
 } from '@material-ui/icons';
 import { Meta } from '@storybook/react';
 import { PropsLink, UseState } from '@superdispatch/ui-docs';
+import { Box } from '@superdispatch/ui-lab';
 import { Button, Inline, Stack } from '..';
 import { DrawerActions } from './DrawerActions';
 import { DrawerContent } from './DrawerContent';
@@ -27,10 +29,19 @@ export default {
       <PropsLink url="https://material-ui.com/api/drawer/#props" />
     ),
   },
+  decorators: [
+    (Story) => (
+      <Box minHeight="900px">
+        <Story />
+      </Box>
+    ),
+  ],
 } as Meta;
 
+const initialState = isLokiRunning();
+
 export const basic = () => (
-  <UseState initialState={false}>
+  <UseState initialState={initialState}>
     {(state, setState) => (
       <>
         <Button
@@ -76,7 +87,7 @@ export const basic = () => (
 );
 
 export const titleStartAction = () => (
-  <UseState initialState={false}>
+  <UseState initialState={initialState}>
     {(state, setState) => (
       <>
         <Button
@@ -108,7 +119,7 @@ export const titleStartAction = () => (
 );
 
 export const titleEndAction = () => (
-  <UseState initialState={false}>
+  <UseState initialState={initialState}>
     {(state, setState) => (
       <>
         <Button
@@ -140,7 +151,7 @@ export const titleEndAction = () => (
 );
 
 export const drawerList = () => (
-  <UseState initialState={false}>
+  <UseState initialState={initialState}>
     {(state, setState) => (
       <>
         <Button
