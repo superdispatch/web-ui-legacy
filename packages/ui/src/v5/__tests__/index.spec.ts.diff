@@ -1,16 +1,17 @@
 - v4
 + v5
 
-@@ -79,45 +79,14 @@
-        },
+@@ -80,44 +80,17 @@
         "Column": React.forwardRef(Column),
         "Columns": React.forwardRef(Columns),
         "DescriptionList": React.forwardRef(DescriptionList),
         "DescriptionListItem": React.forwardRef(DescriptionListItem),
--       "DrawerActions": React.forwardRef(DrawerActions),
+        "DrawerActions": React.forwardRef(DrawerActions),
 -       "DrawerContent": React.forwardRef(DrawerContent),
 -       "DrawerList": React.forwardRef(DrawerList),
--       "DrawerTitle": React.forwardRef(DrawerTitle),
++       "DrawerContent": React.forwardRef(SD-DrawerContent),
++       "DrawerList": React.forwardRef(Styled(ForwardRef(List))),
+        "DrawerTitle": React.forwardRef(DrawerTitle),
 -       "GridStack": React.forwardRef(GridStack),
 -       "InfoCard": React.forwardRef(InfoCard),
         "Inline": React.forwardRef(Inline),

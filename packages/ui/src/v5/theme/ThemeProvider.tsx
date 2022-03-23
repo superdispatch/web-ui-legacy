@@ -16,6 +16,7 @@ import { overrideCard } from '../card/CardOverrides';
 import { overrideCheckbox } from '../checkbox/CheckboxOverrides';
 import { overrideChip } from '../chip/ChipOverrides';
 import { overrideDialog } from '../dialog/DialogOverrides';
+import { overrideDrawer } from '../drawer/DrawerOverrides';
 import { overrideIconButton } from '../icon-button/IconButtonOverrides';
 import { overrideMenu } from '../menu/MenuOverrides';
 import { overridePaper } from '../paper/PaperOverrides';
@@ -87,6 +88,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   overrideSwitch(theme);
   overrideChip(theme);
   overrideDialog(theme);
+  overrideDrawer(theme);
 
   return theme;
 }
