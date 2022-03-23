@@ -211,7 +211,7 @@ it('checks component css', () => {
       transition: border-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
     }
 
-    .c18:not([data-sticky="true"]) {
+    .c18[data-sticky="false"] {
       border-top-color: Color.Transparent;
     }
 
@@ -254,7 +254,7 @@ it('checks component css', () => {
       transition: border-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
     }
 
-    .c9:not([data-sticky="true"]) {
+    .c9[data-sticky="false"] {
       border-bottom-color: Color.Transparent;
     }
 

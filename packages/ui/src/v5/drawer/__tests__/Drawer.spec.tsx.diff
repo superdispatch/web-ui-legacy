@@ -162,7 +162,7 @@ Compared values have no visual difference.
 +     "transition": "border-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
     },
 -   ".SD-DrawerActions-appBar.SD-DrawerActions-appBar:not(.SD-DrawerActions-appBarSticky)": Object {
-+   ".c18:not([data-sticky='true'])": Object {
++   ".c18[data-sticky='false']": Object {
       "borderTopColor": "Color.Transparent",
     },
 -   ".SD-DrawerActions-toolbar.MuiToolbar-gutters": Object {
@@ -290,7 +290,7 @@ Compared values have no visual difference.
 +     "transition": "border-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
     },
 -   ".SD-DrawerTitle-appBar.SD-DrawerTitle-appBar:not(.SD-DrawerTitle-appBarSticky)": Object {
-+   ".c9:not([data-sticky='true'])": Object {
++   ".c9[data-sticky='false']": Object {
       "borderBottomColor": "Color.Transparent",
     },
 -   ".SD-DrawerTitle-endAction": Object {
