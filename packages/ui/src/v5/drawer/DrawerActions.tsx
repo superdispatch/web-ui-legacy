@@ -12,7 +12,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => {
     borderBottom: 'none',
     transition: theme.transitions.create(['border-color']),
 
-    '&:not([data-sticky="true"])': {
+    '&[data-sticky="false"]': {
       borderTopColor: Color.Transparent,
     },
   };

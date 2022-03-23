@@ -1,6 +1,7 @@
 import isLokiRunning from '@loki/is-loki-running';
 import {
   ArrowBack as ArrowBackIcon,
+  Close as CloseIcon,
   Delete as DeleteIcon,
 } from '@mui/icons-material';
 import {
@@ -139,9 +140,9 @@ export const titleEndAction = () => (
         >
           <DrawerTitle
             title="Title"
-            startAction={
-              <IconButton edge="start">
-                <ArrowBackIcon />
+            endAction={
+              <IconButton edge="end">
+                <CloseIcon />
               </IconButton>
             }
           />
