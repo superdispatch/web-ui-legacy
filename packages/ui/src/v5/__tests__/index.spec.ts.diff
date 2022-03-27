@@ -1,7 +1,7 @@
 - v4
 + v5
 
-@@ -80,44 +80,17 @@
+@@ -80,44 +80,20 @@
         "Column": React.forwardRef(Column),
         "Columns": React.forwardRef(Columns),
         "DescriptionList": React.forwardRef(DescriptionList),
@@ -12,10 +12,10 @@
 +       "DrawerContent": React.forwardRef(SD-DrawerContent),
 +       "DrawerList": React.forwardRef(Styled(ForwardRef(List))),
         "DrawerTitle": React.forwardRef(DrawerTitle),
--       "GridStack": React.forwardRef(GridStack),
--       "InfoCard": React.forwardRef(InfoCard),
+        "GridStack": React.forwardRef(GridStack),
+        "InfoCard": React.forwardRef(InfoCard),
         "Inline": React.forwardRef(Inline),
--       "InlineGrid": React.forwardRef(InlineGrid),
+        "InlineGrid": React.forwardRef(InlineGrid),
         "OverflowText": React.forwardRef(OverflowText),
         "RadioField": React.forwardRef(RadioField),
         "RadioGroupField": React.forwardRef(RadioGroupField),

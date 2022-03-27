@@ -1,10 +1,16 @@
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Button } from '../button/Button';
 import { Stack } from '../stack/Stack';
 import { InfoCard } from './InfoCard';
 
-export default { title: 'v4/Surfaces/InfoCard', component: InfoCard } as Meta;
+export default {
+  title: 'Surfaces/InfoCard',
+  component: InfoCard,
+  parameters: {
+    v5: true,
+  },
+} as Meta;
 
 export const basic = () => (
   <InfoCard>
