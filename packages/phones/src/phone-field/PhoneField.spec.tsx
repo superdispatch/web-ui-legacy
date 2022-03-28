@@ -21,7 +21,7 @@ test('basic', async () => {
 
   expect(screen.getByRole('textbox')).toHaveAttribute(
     'placeholder',
-    '(201) 555-0123',
+    '201-555-0123',
   );
 
   expect(screen.getByRole('button')).toHaveTextContent('+1');
@@ -100,7 +100,7 @@ test('local state sync with the props', async () => {
 
   userEvent.type(screen.getByRole('textbox'), '!5@0#6$ %2^3&4* (5)6-7_8=');
 
-  expect(screen.getByRole('textbox')).toHaveValue('(506) 234-5678');
+  expect(screen.getByRole('textbox')).toHaveValue('506-234-5678');
   expect(screen.getByRole('button')).toHaveAttribute(
     'title',
     'United States: +1',
@@ -109,7 +109,7 @@ test('local state sync with the props', async () => {
   // Using same phone as in the state.
   view.rerender(<UncontrolledPhoneField value="+15062345678" />);
 
-  expect(screen.getByRole('textbox')).toHaveValue('(506) 234-5678');
+  expect(screen.getByRole('textbox')).toHaveValue('506-234-5678');
   expect(screen.getByRole('button')).toHaveAttribute(
     'title',
     'United States: +1',
@@ -118,7 +118,7 @@ test('local state sync with the props', async () => {
   // Using same phone number with the different format
   view.rerender(<UncontrolledPhoneField value="+1 (506) 234-5678" />);
 
-  expect(screen.getByRole('textbox')).toHaveValue('(506) 234-5678');
+  expect(screen.getByRole('textbox')).toHaveValue('506-234-5678');
   expect(screen.getByRole('button')).toHaveAttribute('title', 'Canada: +1');
 });
 

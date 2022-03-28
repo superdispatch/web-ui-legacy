@@ -30,7 +30,7 @@ function normalize(input: unknown): string {
   return '';
 }
 
-function normalizeSplicedNumber(country: CountryISO, input: unknown): string {
+function normalizeDisplayedNumber(country: CountryISO, input: unknown): string {
   const phone = normalize(input);
   const prefix = getPrefix(country);
 
@@ -196,7 +196,7 @@ export class PhoneService {
     const country = toCountryISO(regionCode);
 
     if (!displayedNumber) {
-      displayedNumber = normalizeSplicedNumber(country, input);
+      displayedNumber = normalizeDisplayedNumber(country, input);
     }
 
     return { country, displayedNumber };
@@ -218,10 +218,10 @@ export class PhoneService {
     if (!formatted) {
       country = toCountryISO(apn.getRegionCode());
 
-      const nationalNumber = normalizeSplicedNumber(country, phone);
+      const displayedNumber = normalizeDisplayedNumber(country, phone);
 
       if (format === 'national') {
-        return nationalNumber;
+        return displayedNumber;
       }
 
       let prefix = '';
@@ -238,8 +238,8 @@ export class PhoneService {
 
       formatted = prefix + getPrefix(country);
 
-      if (nationalNumber) {
-        formatted += separator + nationalNumber;
+      if (displayedNumber) {
+        formatted += separator + displayedNumber;
       }
     }
 
