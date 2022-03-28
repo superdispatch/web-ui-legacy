@@ -11,10 +11,7 @@ import {
   useRef,
   useState,
 } from 'react';
-import {
-  CountryISO,
-  getNationalCountyCode,
-} from '../country-code-metadata/CountryCodeMetadata';
+import { CountryISO } from '../country-code-metadata/CountryCodeMetadata';
 import { usePhoneService } from '../phone-service/PhoneService';
 import { PhoneFieldMenu } from './PhoneFieldMenu';
 import { PhoneFieldStartAdornment } from './PhoneFieldStartAdornment';
@@ -25,7 +22,7 @@ function normalizeValue(value: unknown): string {
 
 interface State {
   value: string;
-  nationalNumber: string;
+  displayedNumber: string;
   country: CountryISO;
 }
 
@@ -61,29 +58,29 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
     );
 
     const value = useMemo(() => normalizeValue(valueProp), [valueProp]);
-    const [{ country, nationalNumber }, setValue] = useState(() =>
+    const [{ country, displayedNumber }, setValue] = useState(() =>
       createState(value),
     );
 
     const placeholder = useMemo(
-      () => phoneService.APN.getExample(country).getNumber('national'),
+      () => phoneService.APN.getExample(country).getNumber('international'),
       [country, phoneService.APN],
     );
 
     function handleChange(
       fn: undefined | ((value: string) => void),
       nextCountry: CountryISO,
-      nextNationalNumber: string,
+      nextDisplayedNumber: string,
     ): void {
       if (fn) {
-        const nextValue = phoneService.format(nextNationalNumber, {
+        const nextValue = phoneService.format(nextDisplayedNumber, {
           country: nextCountry,
         });
 
         setValue({
           value: nextValue,
           country: nextCountry,
-          nationalNumber: nextNationalNumber,
+          displayedNumber: nextDisplayedNumber,
         });
 
         fn(nextValue);
@@ -100,7 +97,7 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
         handleChange(
           fn,
           country,
-          phoneService.format(nextValue, { country, format: 'national' }),
+          phoneService.format(nextValue, { country, format: 'international' }),
         );
       }
     }
@@ -112,26 +109,6 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
       );
     }, [value, createState]);
 
-    /**
-     * Decorate phone value
-     * @description We can have an internal country code in the 'national' mode, it is not needed
-     * Lib "awesome-phonenumber" has no options with removing the prefix or getting a national prefix
-     * @example +7 8 (922) 004-55-66 -> +7 (922) 004-55-66
-     */
-    function decorateValue(phone: string, countryCode: CountryISO): string {
-      const nationalCode = getNationalCountyCode(countryCode);
-      if (!nationalCode) {
-        return phone;
-      }
-      const separator = `${nationalCode} `;
-      const isSeparator = phone.startsWith(separator);
-      if (isSeparator) {
-        const subNumber = phone.slice(separator.length);
-        return subNumber.trim();
-      }
-      return phone;
-    }
-
     return (
       <>
         <PhoneFieldMenu
@@ -141,7 +118,7 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
             setMenuAnchor(null);
           }}
           onChange={(nextRegion) => {
-            handleChange(onChange, nextRegion, nationalNumber);
+            handleChange(onChange, nextRegion, displayedNumber);
           }}
         />
 
@@ -150,8 +127,8 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
           type="tel"
           variant="outlined"
           autoComplete="off"
-          value={decorateValue(nationalNumber, country)}
-          placeholder={decorateValue(placeholder, country)}
+          value={phoneService.deletePrefix(displayedNumber, country)}
+          placeholder={phoneService.deletePrefix(placeholder, country)}
           ref={mergeRefs(ref, rootRef)}
           inputRef={inputRef}
           onBlur={(event) => {

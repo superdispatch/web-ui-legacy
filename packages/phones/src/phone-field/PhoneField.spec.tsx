@@ -167,5 +167,5 @@ test('without national code', async () => {
   await screen.findByRole('textbox');
 
   expect(screen.getByRole('button')).toHaveAttribute('title', 'Russia: +7');
-  expect(screen.getByRole('textbox')).toHaveValue('(922) 005-98-05');
+  expect(screen.getByRole('textbox')).toHaveValue('922 005-98-05');
 });

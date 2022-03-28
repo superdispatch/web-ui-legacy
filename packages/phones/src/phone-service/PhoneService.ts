@@ -30,7 +30,7 @@ function normalize(input: unknown): string {
   return '';
 }
 
-function normalizeNational(country: CountryISO, input: unknown): string {
+function normalizeSplicedNumber(country: CountryISO, input: unknown): string {
   const phone = normalize(input);
   const prefix = getPrefix(country);
 
@@ -57,13 +57,13 @@ interface PhoneNumberJSON {
   regionCode: CountryISO;
   number: {
     input: string;
-    national?: string;
+    international?: string;
   };
 }
 
 export interface PhoneNumberInfo {
   country: CountryISO;
-  nationalNumber: string;
+  displayedNumber: string;
 }
 
 export type PhoneNumberFormat =
@@ -176,19 +176,30 @@ export class PhoneService {
     return invalidMessage;
   }
 
+  deletePrefix(phone: string, country: CountryISO): string | undefined {
+    const prefix = getPrefix(country);
+
+    if (phone.startsWith(PLUS_SIGN)) {
+      const subNumber = phone.slice(prefix.length);
+      return trim(subNumber);
+    }
+
+    return phone;
+  }
+
   getInfo(phone: string): PhoneNumberInfo {
     let {
       regionCode,
-      number: { input, national: nationalNumber },
+      number: { input, international: displayedNumber },
     } = this.getJSON(phone);
 
     const country = toCountryISO(regionCode);
 
-    if (!nationalNumber) {
-      nationalNumber = normalizeNational(country, input);
+    if (!displayedNumber) {
+      displayedNumber = normalizeSplicedNumber(country, input);
     }
 
-    return { country, nationalNumber };
+    return { country, displayedNumber };
   }
 
   format(
@@ -207,7 +218,7 @@ export class PhoneService {
     if (!formatted) {
       country = toCountryISO(apn.getRegionCode());
 
-      const nationalNumber = normalizeNational(country, phone);
+      const nationalNumber = normalizeSplicedNumber(country, phone);
 
       if (format === 'national') {
         return nationalNumber;
