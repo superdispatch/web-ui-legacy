@@ -22,7 +22,7 @@ function normalizeValue(value: unknown): string {
 
 interface State {
   value: string;
-  displayedNumber: string;
+  nationalNumber: string;
   country: CountryISO;
 }
 
@@ -58,7 +58,7 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
     );
 
     const value = useMemo(() => normalizeValue(valueProp), [valueProp]);
-    const [{ country, displayedNumber }, setValue] = useState(() =>
+    const [{ country, nationalNumber }, setValue] = useState(() =>
       createState(value),
     );
 
@@ -70,17 +70,17 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
     function handleChange(
       fn: undefined | ((value: string) => void),
       nextCountry: CountryISO,
-      nextDisplayedNumber: string,
+      nextNationalNumber: string,
     ): void {
       if (fn) {
-        const nextValue = phoneService.format(nextDisplayedNumber, {
+        const nextValue = phoneService.format(nextNationalNumber, {
           country: nextCountry,
         });
 
         setValue({
           value: nextValue,
           country: nextCountry,
-          displayedNumber: nextDisplayedNumber,
+          nationalNumber: nextNationalNumber,
         });
 
         fn(nextValue);
@@ -97,7 +97,7 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
         handleChange(
           fn,
           country,
-          phoneService.format(nextValue, { country, format: 'international' }),
+          phoneService.format(nextValue, { country, format: 'national' }),
         );
       }
     }
@@ -118,7 +118,7 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
             setMenuAnchor(null);
           }}
           onChange={(nextRegion) => {
-            handleChange(onChange, nextRegion, displayedNumber);
+            handleChange(onChange, nextRegion, nationalNumber);
           }}
         />
 
@@ -127,7 +127,7 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
           type="tel"
           variant="outlined"
           autoComplete="off"
-          value={phoneService.deletePrefix(displayedNumber, country)}
+          value={nationalNumber}
           placeholder={phoneService.deletePrefix(placeholder, country)}
           ref={mergeRefs(ref, rootRef)}
           inputRef={inputRef}
