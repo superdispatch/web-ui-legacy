@@ -1,8 +1,7 @@
 import { Meta } from '@storybook/react';
 import { Stack } from '@superdispatch/ui';
-import { LinkComponent } from 'react-anchorme';
 import { Box } from '../box/Box';
-import { LinkedText } from './LinkedText';
+import { LinkComponentProps, LinkedText } from './LinkedText';
 
 export default {
   title: 'Lab/LinkedText',
@@ -26,7 +25,7 @@ export const basic = () => (
 );
 
 export const customLinkComponent = () => {
-  const CustomLinkComponent: LinkComponent = ({ children, ...props }) => (
+  const CustomLinkComponent = ({ children, ...props }: LinkComponentProps) => (
     <a {...props}>
       <i>{children}</i>
     </a>

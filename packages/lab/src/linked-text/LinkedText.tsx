@@ -1,6 +1,19 @@
 import { Link } from '@material-ui/core';
-import React, { forwardRef, ReactElement } from 'react';
-import { Anchorme, LinkComponent, LinkComponentProps } from 'react-anchorme';
+import {
+  AnchorHTMLAttributes,
+  forwardRef,
+  FunctionComponent,
+  ReactElement,
+} from 'react';
+import { Anchorme } from 'react-anchorme';
+
+export type LinkComponentProps = Omit<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  'href'
+> & {
+  href: string;
+  truncate?: number;
+};
 
 const DefaultLinkComponent = forwardRef<HTMLAnchorElement, LinkComponentProps>(
   (
@@ -14,7 +27,7 @@ DefaultLinkComponent.displayName = 'DefaultLinkComponent';
 export interface LinkedTextProps
   extends Omit<LinkComponentProps, 'ref' | 'href'> {
   children?: null | string;
-  linkComponent?: LinkComponent;
+  linkComponent?: FunctionComponent<LinkComponentProps>;
 }
 
 export function LinkedText({
