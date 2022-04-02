@@ -1,4 +1,4 @@
-import { paginationItemClasses } from '@mui/lab';
+import { paginationItemClasses } from '@mui/material';
 import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
