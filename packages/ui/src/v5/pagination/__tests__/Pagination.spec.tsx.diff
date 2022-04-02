@@ -1,0 +1,188 @@
+Compared values have no visual difference.
+  Comparing two different types of values. Expected [32mobject[39m but received [31mstring[39m.
+- v4
++ v5
+
+  Object {
+-   ".MuiPagination-ul": Object {
+-     "alignItems": "center",
+-     "display": "flex",
+-     "flexWrap": "wrap",
+-     "listStyle": "none",
+-     "margin": "0",
+-     "padding": "0",
+-   },
+-   ".MuiPaginationItem-ellipsis": Object {
+-     "height": "auto",
+-   },
+-   ".MuiPaginationItem-ellipsis.Mui-disabled": Object {
+-     "opacity": 0.38,
+-   },
+-   ".MuiPaginationItem-icon": Object {
+-     "fontSize": "1.25rem",
+-     "margin": "0 -8px",
+-   },
+-   ".MuiPaginationItem-outlined": Object {
+-     "border": "1px solid rgba(0, 0, 0, 0.23)",
+-   },
+-   ".MuiPaginationItem-outlined.Mui-selected.Mui-disabled": Object {
+-     "border": "1px solid rgba(0, 0, 0, 0.12)",
+-   },
+-   ".MuiPaginationItem-outlinedPrimary.Mui-selected": Object {
+-     "backgroundColor": "rgba(0, 117, 255, 0.12)",
+-     "border": "1px solid rgba(0, 117, 255, 0.5)",
+-     "color": "Color.Blue300",
+-   },
+-   ".MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-disabled": Object {
+-     "color": "Color.Silver400",
+-   },
+-   ".MuiPaginationItem-outlinedPrimary.Mui-selected:hover,
+-     .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-focusVisible": Object {
+-     "backgroundColor": "rgba(0, 117, 255, 0.16)",
+-   },
+-   ".MuiPaginationItem-outlinedSecondary.Mui-selected": Object {
+-     "backgroundColor": "rgba(245, 0, 87, 0.12)",
+-     "border": "1px solid rgba(245, 0, 87, 0.5)",
+-     "color": "#f50057",
+-   },
+-   ".MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-disabled": Object {
+-     "color": "Color.Silver400",
+-   },
+-   ".MuiPaginationItem-outlinedSecondary.Mui-selected:hover,
+-     .MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-focusVisible": Object {
+-     "backgroundColor": "rgba(245, 0, 87, 0.16)",
+-   },
+-   ".MuiPaginationItem-page": Object {
+-     "transition": "color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+-         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+-   },
+-   ".MuiPaginationItem-page.Mui-disabled": Object {
+-     "color": "Color.Dark100",
+-   },
+-   ".MuiPaginationItem-page.Mui-focusVisible": Object {
+-     "backgroundColor": "Color.White",
+-     "border": "1px solid Color.Blue100",
+-     "borderRadius": "4px",
+-   },
+-   ".MuiPaginationItem-page.Mui-selected": Object {
+-     "backgroundColor": "Color.Silver400",
+-   },
+-   ".MuiPaginationItem-page.Mui-selected.Mui-disabled": Object {
+-     "backgroundColor": "Color.Silver400",
+-     "color": "Color.Dark100",
+-     "opacity": 1,
+-   },
+-   ".MuiPaginationItem-page.Mui-selected:hover,
+-     .MuiPaginationItem-page.Mui-selected.Mui-focusVisible": Object {
+-     "backgroundColor": "Color.Silver400",
+-   },
+-   ".MuiPaginationItem-page:hover": Object {
+-     "backgroundColor": "Color.Silver200",
+-   },
+-   ".MuiPaginationItem-root": Object {
+-     "borderRadius": "16px",
+-     "boxSizing": "border-box",
+-     "color": "Color.Dark400",
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 400,
+-     "height": "32px",
+-     "lineHeight": "20px",
+-     "margin": "0 3px",
+-     "minWidth": "32px",
+-     "padding": "0 6px",
+-     "textAlign": "center",
+-   },
+-   ".MuiPaginationItem-rounded": Object {
+-     "borderRadius": "4px",
+-   },
+-   ".MuiPaginationItem-sizeLarge": Object {
+-     "borderRadius": "20px",
+-     "fontSize": "0.9375rem",
+-     "height": "40px",
+-     "minWidth": "40px",
+-     "padding": "0 10px",
+-   },
+-   ".MuiPaginationItem-sizeLarge .MuiPaginationItem-icon": Object {
+-     "fontSize": "1.375rem",
+-   },
+-   ".MuiPaginationItem-sizeSmall": Object {
+-     "borderRadius": "13px",
+-     "height": "26px",
+-     "margin": "0 1px",
+-     "minWidth": "26px",
+-     "padding": "0 4px",
+-   },
+-   ".MuiPaginationItem-sizeSmall .MuiPaginationItem-icon": Object {
+-     "fontSize": "1.125rem",
+-   },
+-   ".MuiPaginationItem-textPrimary.Mui-selected": Object {
+-     "backgroundColor": "Color.Blue300",
+-     "color": "Color.White",
+-   },
+-   ".MuiPaginationItem-textPrimary.Mui-selected.Mui-disabled": Object {
+-     "color": "Color.Silver400",
+-   },
+-   ".MuiPaginationItem-textPrimary.Mui-selected:hover,
+-     .MuiPaginationItem-textPrimary.Mui-selected.Mui-focusVisible": Object {
+-     "backgroundColor": "rgb(0, 81, 178)",
+-   },
+-   ".MuiPaginationItem-textSecondary.Mui-selected": Object {
+-     "backgroundColor": "#f50057",
+-     "color": "Color.White",
+-   },
+-   ".MuiPaginationItem-textSecondary.Mui-selected.Mui-disabled": Object {
+-     "color": "Color.Silver400",
+-   },
+-   ".MuiPaginationItem-textSecondary.Mui-selected:hover,
+-     .MuiPaginationItem-textSecondary.Mui-selected.Mui-focusVisible": Object {
+-     "backgroundColor": "#c51162",
+-   },
+-   "@media (hover: none)": Array [
+-     Object {
+-       ".MuiPaginationItem-page.Mui-selected:hover,
+-       .MuiPaginationItem-page.Mui-selected.Mui-focusVisible": Object {
+-         "backgroundColor": "Color.Silver300",
+-       },
+-     },
+-     Object {
+-       ".MuiPaginationItem-page:hover": Object {
+-         "backgroundColor": "transparent",
+-       },
+-     },
+-     Object {
+-       ".MuiPaginationItem-textPrimary.Mui-selected:hover,
+-       .MuiPaginationItem-textPrimary.Mui-selected.Mui-focusVisible": Object {
+-         "backgroundColor": "Color.Blue300",
+-       },
+-     },
+-     Object {
+-       ".MuiPaginationItem-textSecondary.Mui-selected:hover,
+-       .MuiPaginationItem-textSecondary.Mui-selected.Mui-focusVisible": Object {
+-         "backgroundColor": "#f50057",
+-       },
+-     },
+-     Object {
+-       ".MuiPaginationItem-outlinedPrimary.Mui-selected:hover,
+-       .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-focusVisible": Object {
+-         "backgroundColor": "transparent",
+-       },
+-     },
+-     Object {
+-       ".MuiPaginationItem-outlinedSecondary.Mui-selected:hover,
+-       .MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-focusVisible": Object {
+-         "backgroundColor": "transparent",
+-       },
+-     },
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
+    ],
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Object {
+-     ".MuiPaginationItem-root": Object {
+-       "fontSize": "16px",
+-       "lineHeight": "24px",
+-     },
+-   },
++   "@media print": Object {},
+  }
