@@ -19,6 +19,7 @@ import { overrideDialog } from '../dialog/DialogOverrides';
 import { overrideDrawer } from '../drawer/DrawerOverrides';
 import { overrideIconButton } from '../icon-button/IconButtonOverrides';
 import { overrideMenu } from '../menu/MenuOverrides';
+import { overridePagination } from '../pagination/PaginationOverrides';
 import { overridePaper } from '../paper/PaperOverrides';
 import { overrideRadio } from '../radio/RadioOverrides';
 import { overrideSvgIcon } from '../svg-icon/SvgIconOverrides';
@@ -89,6 +90,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   overrideChip(theme);
   overrideDialog(theme);
   overrideDrawer(theme);
+  overridePagination(theme);
 
   return theme;
 }
