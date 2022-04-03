@@ -13,7 +13,7 @@ export default {
 export const basic = () => (
   <Typography>
     This is a{' '}
-    <Link href="#" target="_blank">
+    <Link href="#" target="_blank" color="">
       link
     </Link>{' '}
     in text with a <Link component="button">button link</Link>.

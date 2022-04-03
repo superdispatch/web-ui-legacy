@@ -1,0 +1,13 @@
+diff --git a/node_modules/@mui/material/Link/Link.js b/node_modules/@mui/material/Link/Link.js
+index 64f5f9d..20b82d4 100644
+--- a/node_modules/@mui/material/Link/Link.js
++++ b/node_modules/@mui/material/Link/Link.js
+@@ -47,7 +47,7 @@ const LinkRoot = styled(Typography, {
+     const {
+       ownerState
+     } = props;
+-    return [styles.root, styles[`underline${capitalize(ownerState.underline)}`], ownerState.component === 'button' && styles.button];
++    return [styles.root, styles[`color${capitalize(ownerState.color)}`], styles[`underline${capitalize(ownerState.underline)}`], ownerState.component === 'button' && styles.button];
+   }
+ })(({
+   theme,

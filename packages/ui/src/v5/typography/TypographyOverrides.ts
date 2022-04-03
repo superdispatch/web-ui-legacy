@@ -1,6 +1,16 @@
+import {} from '@mui/material';
 import { TypographyOptions } from '@mui/material/styles/createTypography';
 import { Breakpoints } from '@mui/system';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
+
+function createCSSVarName(component: string, property: string): string {
+  return `--mui-${component}-${property}`;
+}
+
+export const typographyVars = {
+  color: createCSSVarName('typography', 'color'),
+  backgroundImage: createCSSVarName('typography', 'backgroundImage'),
+};
 
 export function createTypographyOptions(
   breakpoints: Breakpoints,

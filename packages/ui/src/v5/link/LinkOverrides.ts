@@ -18,26 +18,15 @@ export function overrideLink(theme: SuperDispatchTheme): void {
 
         '&:focus': { outline: 'none' },
         '&:hover, &:active': { backgroundImage: line('currentColor') },
+      },
 
-        //todo
-        '&.MuiTypography-colorTextPrimary': {
-          backgroundImage: line(Color.Silver500),
+      // @ts-expect-error type def need in patch-package
+      colorTextPrimary: {
+        backgroundImage: line(Color.Silver500),
 
-          '&:focus, &:hover, &:active': {
-            color: Color.Blue300,
-            backgroundImage: line(Color.Blue300),
-          },
-        },
-
-        variant: {
-          primary: {
-            backgroundImage: line(Color.Silver500),
-
-            '&:focus, &:hover, &:active': {
-              color: Color.Blue300,
-              backgroundImage: line(Color.Blue300),
-            },
-          },
+        '&:focus, &:hover, &:active': {
+          color: Color.Blue300,
+          backgroundImage: line(Color.Blue300),
         },
       },
 
