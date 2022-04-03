@@ -1,0 +1,122 @@
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+- v4
++ v5
+
+  Object {
+-   ".MuiList-padding": Object {
+-     "paddingBottom": "8px",
+-     "paddingTop": "8px",
+-   },
+-   ".MuiList-root": Object {
+-     "listStyle": "none",
+-     "margin": "0",
+-     "padding": "0",
+-     "position": "relative",
+-   },
+-   ".MuiList-subheader": Object {
+-     "paddingTop": "0",
+-   },
+-   ".MuiListItem-alignItemsFlexStart": Object {
+-     "alignItems": "flex-start",
+-   },
+-   ".MuiListItem-button": Object {
+-     "transition": "background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+-   },
+-   ".MuiListItem-button:hover": Object {
+-     "backgroundColor": "Color.Silver100",
+-     "textDecoration": "none",
+-   },
+-   ".MuiListItem-container": Object {
+-     "position": "relative",
+-   },
+-   ".MuiListItem-dense": Object {
+-     "paddingBottom": "4px",
+-     "paddingTop": "4px",
+-   },
+-   ".MuiListItem-divider": Object {
+-     "backgroundClip": "padding-box",
+-     "borderBottom": "1px solid Color.Silver400",
+-   },
+-   ".MuiListItem-gutters": Object {
+-     "paddingLeft": "16px",
+-     "paddingRight": "16px",
+-   },
+-   ".MuiListItem-root": Object {
+-     "alignItems": "center",
+-     "boxSizing": "border-box",
+-     "display": "flex",
+-     "justifyContent": "flex-start",
+-     "paddingBottom": "8px",
+-     "paddingTop": "8px",
+-     "position": "relative",
+-     "textAlign": "left",
+-     "textDecoration": "none",
+-     "width": "100%",
+-   },
+-   ".MuiListItem-root .MuiTouchRipple-root": Object {
+-     "color": "Color.Blue100",
+-   },
+-   ".MuiListItem-root.Mui-disabled": Object {
+-     "opacity": 0.5,
+-   },
+-   ".MuiListItem-root.Mui-focusVisible": Object {
+-     "backgroundColor": "Color.Silver300",
+-   },
+-   ".MuiListItem-root.Mui-selected,
+-     .MuiListItem-root.Mui-selected:hover": Object {
+-     "backgroundColor": "Color.Blue50",
+-   },
+-   ".MuiListItem-secondaryAction": Object {
+-     "paddingRight": "48px",
+-   },
+-   ".MuiListItemAvatar-alignItemsFlexStart": Object {
+-     "marginTop": "8px",
+-   },
+-   ".MuiListItemAvatar-root": Object {
+-     "flexShrink": 0,
+-     "minWidth": "56px",
+-   },
+-   ".MuiListItemIcon-alignItemsFlexStart": Object {
+-     "marginTop": "8px",
+-   },
+-   ".MuiListItemIcon-root": Object {
+-     "color": "rgba(0, 0, 0, 0.54)",
+-     "display": "inline-flex",
+-     "flexShrink": 0,
+-     "minWidth": "56px",
+-   },
+-   ".MuiListItemSecondaryAction-root": Object {
+-     "position": "absolute",
+-     "right": "16px",
+-     "top": "50%",
+-     "transform": "translateY(-50%)",
+-   },
+-   ".MuiListItemText-inset": Object {
+-     "paddingLeft": "56px",
+-   },
+-   ".MuiListItemText-multiline": Object {
+-     "marginBottom": "6px",
+-     "marginTop": "6px",
+-   },
+-   ".MuiListItemText-root": Object {
+-     "flex": "1 1 auto",
+-     "marginBottom": "4px",
+-     "marginTop": "4px",
+-     "minWidth": "0",
+-   },
+-   "@media (hover: none)": Object {
+-     ".MuiListItem-button:hover": Object {
+-       "backgroundColor": "transparent",
+-     },
+-   },
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
++   ],
++   "@media print": Object {},
+  }
