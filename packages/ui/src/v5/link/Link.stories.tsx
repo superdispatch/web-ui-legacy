@@ -1,9 +1,14 @@
-import { Link, Typography } from '@material-ui/core';
+import { Link, Typography } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Box } from '@superdispatch/ui-lab';
 import { Stack } from '../stack/Stack';
 
-export default { title: 'v4/Navigation/Link' } as Meta;
+export default {
+  title: 'Navigation/Link',
+  parameters: {
+    v5: true,
+  },
+} as Meta;
 
 export const basic = () => (
   <Typography>

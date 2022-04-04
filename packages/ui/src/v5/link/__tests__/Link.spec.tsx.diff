@@ -1,0 +1,88 @@
+- v4
++ v5
+
+  Object {
+    "Object": Object {
+-     ",": "\"none\",",
++     ",": "'none',",
+    },
+  }
+- v4
++ v5
+
+  Object {
+-   ".MuiLink-button": Object {
+-     "MozAppearance": "none",
+-     "WebkitAppearance": "none",
+-     "WebkitTapHighlightColor": "transparent",
+-     "border": "0",
+-     "borderRadius": "0",
+-     "cursor": "pointer",
+-     "fontSize": "inherit",
+-     "lineHeight": "inherit",
+-     "margin": "0",
+-     "outline": "0",
+-     "padding": "0",
+-     "position": "relative",
+-     "textAlign": "inherit",
+-     "userSelect": "inherit",
+-     "verticalAlign": "inherit",
+-   },
+-   ".MuiLink-button.Mui-focusVisible": Object {
+-     "outline": "auto",
+-   },
+-   ".MuiLink-button::-moz-focus-inner": Object {
+-     "borderStyle": "none",
+-   },
+-   ".MuiLink-root": Object {
+-     "backgroundColor": "Color.Transparent",
+-     "backgroundPosition": "0 100%",
+-     "backgroundRepeat": "repeat-x",
+-     "backgroundSize": "100% 1px",
+-   },
+-   ".MuiLink-root.MuiTypography-colorTextPrimary": Object {
+-     "backgroundImage": "linear-gradient(
+-         to right,
+-         Color.Silver500 0%,
+-         Color.Silver500 100%
+-       )",
+-   },
+-   ".MuiLink-root.MuiTypography-colorTextPrimary:focus,
+-     .MuiLink-root.MuiTypography-colorTextPrimary:hover,
+-     .MuiLink-root.MuiTypography-colorTextPrimary:active": Object {
+-     "backgroundImage": "linear-gradient(
+-         to right,
+-         Color.Blue300 0%,
+-         Color.Blue300 100%
+-       )",
+-     "color": "Color.Blue300",
+-   },
+-   ".MuiLink-root:focus": Object {
+-     "outline": "none",
+-   },
+-   ".MuiLink-root:hover,
+-     .MuiLink-root:active": Object {
+-     "backgroundImage": "linear-gradient(
+-         to right,
+-         currentColor 0%,
+-         currentColor 100%
+-       )",
+-   },
+-   ".MuiLink-underlineAlways": Object {
+-     "textDecoration": "underline",
+-   },
+-   ".MuiLink-underlineHover": Object {
+-     "textDecoration": "none",
+-   },
+-   ".MuiLink-underlineHover:hover": Object {
+-     "textDecoration": "underline",
+-   },
+-   ".MuiLink-underlineNone": Object {
+-     "textDecoration": "none",
+-   },
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {},
++     Object {},
++   ],
++   "@media print": Object {},
+  }
