@@ -30,7 +30,7 @@ function normalize(input: unknown): string {
   return '';
 }
 
-function normalizeNational(country: CountryISO, input: unknown): string {
+function normalizeNationalNumber(country: CountryISO, input: unknown): string {
   const phone = normalize(input);
   const prefix = getPrefix(country);
 
@@ -57,7 +57,7 @@ interface PhoneNumberJSON {
   regionCode: CountryISO;
   number: {
     input: string;
-    national?: string;
+    international?: string;
   };
 }
 
@@ -176,16 +176,30 @@ export class PhoneService {
     return invalidMessage;
   }
 
+  deletePrefix(phone: string, country: CountryISO): string {
+    const prefix = getPrefix(country);
+
+    if (phone.startsWith(PLUS_SIGN)) {
+      const subNumber = phone.slice(prefix.length);
+      return trim(subNumber) as string;
+    }
+
+    return phone;
+  }
+
   getInfo(phone: string): PhoneNumberInfo {
     let {
       regionCode,
-      number: { input, national: nationalNumber },
+      number: { input, international: internationalNumber },
     } = this.getJSON(phone);
 
+    let nationalNumber = '';
     const country = toCountryISO(regionCode);
 
-    if (!nationalNumber) {
-      nationalNumber = normalizeNational(country, input);
+    if (!internationalNumber) {
+      nationalNumber = normalizeNationalNumber(country, input);
+    } else {
+      nationalNumber = this.deletePrefix(internationalNumber, country);
     }
 
     return { country, nationalNumber };
@@ -193,7 +207,11 @@ export class PhoneService {
 
   format(
     input: unknown,
-    { country, format = 'e164', fallback = '' }: PhoneFormatOptions = {},
+    {
+      fallback = '',
+      format = 'e164',
+      country: countryOption,
+    }: PhoneFormatOptions = {},
   ): string {
     const phone = normalize(input);
 
@@ -201,35 +219,61 @@ export class PhoneService {
       return fallback;
     }
 
-    const apn = this.createAPN(phone, country);
-    let formatted = apn.getNumber(format);
+    const apn = this.createAPN(phone, countryOption);
+    const country = countryOption || toCountryISO(apn.getRegionCode());
+
+    const formatted =
+      format === 'national'
+        ? this.formatNationalNumber(apn, country)
+        : apn.getNumber(format);
 
     if (!formatted) {
-      country = toCountryISO(apn.getRegionCode());
+      return this.customFormat(apn, phone, format);
+    }
 
-      const nationalNumber = normalizeNational(country, phone);
+    return formatted;
+  }
 
-      if (format === 'national') {
-        return nationalNumber;
-      }
+  formatNationalNumber(apn: APNType, country: CountryISO): string | undefined {
+    const internationalNumber = apn.getNumber('international');
 
-      let prefix = '';
-      let separator = '';
+    if (!internationalNumber) {
+      return undefined;
+    }
 
-      if (format === 'rfc3966') {
-        prefix = 'tel:';
-        separator = '-';
-      }
+    return this.deletePrefix(internationalNumber, country);
+  }
 
-      if (format === 'international') {
-        separator = ' ';
-      }
+  private customFormat(
+    apn: APNType,
+    phone: string,
+    format: PhoneNumberFormat,
+  ): string {
+    let formatted = '';
+    const country = toCountryISO(apn.getRegionCode());
 
-      formatted = prefix + getPrefix(country);
+    const nationalNumber = normalizeNationalNumber(country, phone);
 
-      if (nationalNumber) {
-        formatted += separator + nationalNumber;
-      }
+    if (format === 'national') {
+      return nationalNumber;
+    }
+
+    let prefix = '';
+    let separator = '';
+
+    if (format === 'rfc3966') {
+      prefix = 'tel:';
+      separator = '-';
+    }
+
+    if (format === 'international') {
+      separator = ' ';
+    }
+
+    formatted = prefix + getPrefix(country);
+
+    if (nationalNumber) {
+      formatted += separator + nationalNumber;
     }
 
     return formatted;

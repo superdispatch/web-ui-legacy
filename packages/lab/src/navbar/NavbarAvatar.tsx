@@ -38,9 +38,9 @@ export function NavbarAvatar({
 
         <Column>
           <Stack space="none">
-            <StyledTypography>{title}</StyledTypography>
+            <StyledTypography variant="caption">{title}</StyledTypography>
 
-            <StyledTypography>{subtitle}</StyledTypography>
+            <StyledTypography variant="caption">{subtitle}</StyledTypography>
           </Stack>
         </Column>
       </Columns>

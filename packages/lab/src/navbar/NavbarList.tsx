@@ -1,11 +1,6 @@
 import { IconButton } from '@material-ui/core';
-import { Menu as MenuIcon, MenuOpen, MoreHoriz } from '@material-ui/icons';
-import {
-  AdaptiveVerticalToolbar,
-  Color,
-  Inline,
-  useResponsiveValue,
-} from '@superdispatch/ui';
+import { Menu as MenuIcon, MenuOpen } from '@material-ui/icons';
+import { Color, Inline, useResponsiveValue } from '@superdispatch/ui';
 import {
   ComponentType,
   HTMLAttributes,
@@ -31,6 +26,7 @@ const Header = styled.div`
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
 `;
 
 const Wrapper = styled.div<{ isMobile: boolean }>`
@@ -72,6 +68,7 @@ const Footer = styled.div`
   display: flex;
   align-items: flex-end;
   margin: 16px 0 8px;
+  position: sticky;
 `;
 
 const Root = styled.div`
@@ -117,6 +114,7 @@ export function NavbarMenuItem({
 const Content = styled.div`
   height: 100%;
   min-height: 50px;
+  overflow: scroll;
 
   &[aria-expanded='false'] {
     ${NavbarBadge}, ${NavbarLabel} {
@@ -182,41 +180,25 @@ export function NavbarList({
       </Header>
 
       <Content aria-expanded={isSidebarOpened}>
-        <AdaptiveVerticalToolbar
-          disableGutters={true}
-          items={filteredItems}
-          renderItem={(item) => {
-            const navbarItem = item as NavbarItemOptions;
-            const index = filteredItems.indexOf(navbarItem);
-            const prev = filteredItems[index - 1];
+        {filteredItems.map((item) => {
+          const index = filteredItems.indexOf(item);
+          const prev = filteredItems[index - 1];
 
-            return (
-              <NavbarItem
-                {...item}
-                gutter={prev && prev.groupKey !== navbarItem.groupKey}
-                onClick={(event) => {
-                  item.onClick?.(event);
-
-                  if (!event.isDefaultPrevented()) {
-                    setDrawerOpen(false);
-                  }
-                }}
-              />
-            );
-          }}
-          renderMenuItem={(item) => (
-            <NavbarMenuItem
+          return (
+            <NavbarItem
               {...item}
+              key={item.key}
+              gutter={prev && prev.groupKey !== item.groupKey}
               onClick={(event) => {
                 item.onClick?.(event);
+
                 if (!event.isDefaultPrevented()) {
                   setDrawerOpen(false);
                 }
               }}
             />
-          )}
-          moreElement={<NavbarItem icon={<MoreHoriz />} label="More" />}
-        />
+          );
+        })}
       </Content>
 
       <Footer>{footer}</Footer>
