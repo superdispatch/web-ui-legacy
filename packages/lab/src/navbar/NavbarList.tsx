@@ -11,6 +11,11 @@ import {
   useMemo,
 } from 'react';
 import styled from 'styled-components';
+import {
+  NavbarAccordion,
+  NavbarAccordionLabel,
+  NavbarAccordionProps,
+} from './NavbarAccordion';
 import { useNavbarContext } from './NavbarContext';
 import {
   NavbarBadge,
@@ -117,12 +122,18 @@ const Content = styled.div`
   overflow: scroll;
 
   &[aria-expanded='false'] {
-    ${NavbarBadge}, ${NavbarLabel} {
-      visibility: hidden;
+    ${NavbarBadge}, ${NavbarLabel}, ${NavbarAccordionLabel}, .MuiAccordionSummary-expandIcon {
+      display: none;
     }
   }
 `;
 
+export interface NavbarAccordionOptions extends NavbarAccordionProps {
+  key: Key;
+  groupKey?: Key;
+  hide?: boolean;
+  items: NavbarItemOptions[];
+}
 export interface NavbarItemOptions extends NavbarItemProps {
   key: Key;
   groupKey?: Key;
@@ -131,7 +142,7 @@ export interface NavbarItemOptions extends NavbarItemProps {
 
 interface NavbarListProps {
   header: ReactNode;
-  items: NavbarItemOptions[];
+  items: Array<NavbarItemOptions | NavbarAccordionOptions>;
   footer?: ReactNode;
 }
 
@@ -148,18 +159,19 @@ export function NavbarList({
 
   const isSidebarOpened = isMobile ? isDrawerOpen : isExpanded;
 
-  const filteredItems: NavbarItemOptions[] = useMemo(
-    () =>
-      items
-        .filter((item) => {
-          return !item.hide && (isSidebarOpened || !!item.icon);
-        })
-        .map((item) => ({
-          ...item,
-          menuGroupKey: item.groupKey,
-        })),
-    [items, isSidebarOpened],
-  );
+  const filteredItems: Array<NavbarItemOptions | NavbarAccordionOptions> =
+    useMemo(
+      () =>
+        items
+          .filter((item) => {
+            return !item.hide && (isSidebarOpened || !!item.icon);
+          })
+          .map((item) => ({
+            ...item,
+            menuGroupKey: item.groupKey,
+          })),
+      [items, isSidebarOpened],
+    );
 
   return (
     <Wrapper isMobile={isMobile} data-expanded={isSidebarOpened}>
@@ -184,6 +196,18 @@ export function NavbarList({
           const index = filteredItems.indexOf(item);
           const prev = filteredItems[index - 1];
 
+          if ('items' in item) {
+            return (
+              <NavbarAccordion
+                {...item}
+                key={item.key}
+                gutter={prev && prev.groupKey !== item.groupKey}
+                onClick={() => {
+                  setDrawerOpen(false);
+                }}
+              />
+            );
+          }
           return (
             <NavbarItem
               {...item}

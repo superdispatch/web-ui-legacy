@@ -77,6 +77,27 @@ const items = [
     groupKey: 2,
     key: 'Dashbaord',
   },
+  {
+    icon: <AllInbox />,
+    label: 'Orders',
+    groupKey: 2,
+    key: 'Orders',
+    items: [
+      {
+        icon: <People />,
+        label: 'Customers',
+        groupKey: 2,
+        key: 'Customers',
+      },
+      {
+        icon: <Settings />,
+        label: 'Settings',
+        groupKey: 2,
+        key: 'Settings',
+        active: true,
+      },
+    ],
+  },
 ];
 
 export const basic = () => {
