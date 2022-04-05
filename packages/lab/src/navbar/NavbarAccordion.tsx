@@ -80,7 +80,7 @@ export interface NavbarAccordionProps {
   icon?: ReactNode;
   gutter?: boolean;
   items: NavbarItemOptions[];
-  onClick?: () => void;
+  onSelect?: () => void;
 }
 
 export function NavbarAccordion({
@@ -88,7 +88,7 @@ export function NavbarAccordion({
   icon,
   gutter,
   items,
-  onClick,
+  onSelect,
 }: NavbarAccordionProps): ReactElement {
   const uid = useUID();
   const { isExpanded: isMenuExpanded } = useNavbarContext();
@@ -137,7 +137,7 @@ export function NavbarAccordion({
               item.onClick?.(event);
 
               if (!event.isDefaultPrevented()) {
-                onClick?.();
+                onSelect?.();
               }
             }}
           />
