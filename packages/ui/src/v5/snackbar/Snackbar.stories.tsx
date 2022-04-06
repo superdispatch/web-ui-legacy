@@ -1,4 +1,5 @@
-import { FormControlLabel, FormGroup, Switch } from '@material-ui/core';
+import { FormControlLabel, FormGroup, Switch } from '@mui/material';
+import { Meta } from '@storybook/react';
 import { UseState } from '@superdispatch/ui-docs';
 import {
   Button,
@@ -9,10 +10,11 @@ import {
 } from '..';
 
 export default {
-  title: 'v4/Feedback/Snackbar',
+  title: 'Feedback/Snackbar',
   component: Snackbar,
   subcomponents: { SnackbarContent },
-};
+  parameters: { v5: true },
+} as Meta;
 
 export const basic = () => (
   <UseState initialState={false}>

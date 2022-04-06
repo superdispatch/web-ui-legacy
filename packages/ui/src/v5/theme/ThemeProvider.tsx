@@ -24,6 +24,7 @@ import { overrideMenu } from '../menu/MenuOverrides';
 import { overridePagination } from '../pagination/PaginationOverrides';
 import { overridePaper } from '../paper/PaperOverrides';
 import { overrideRadio } from '../radio/RadioOverrides';
+import { overrideSnackbar } from '../snackbar/SnackbarOverrides';
 import { overrideSvgIcon } from '../svg-icon/SvgIconOverrides';
 import { overrideSwitch } from '../switch/SwitchOverrides';
 import { overrideTextField } from '../text-field/TextFieldOverrides';
@@ -95,6 +96,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   overridePagination(theme);
   overrideList(theme);
   overrideLink(theme);
+  overrideSnackbar(theme);
 
   return theme;
 }
