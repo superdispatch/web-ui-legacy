@@ -35,6 +35,7 @@ export * from './theme/Color';
 export * from './theme/SuperDispatchTheme';
 export * from './theme/ThemeProvider';
 export * from './tiles/Tiles';
+export * from './utils/ExitTransitionPlaceholder';
 export * from './utils/isEmptyReactNode';
 export * from './utils/mergeRefs';
 export * from './utils/renderChildren';
