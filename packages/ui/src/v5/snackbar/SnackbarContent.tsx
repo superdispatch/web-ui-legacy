@@ -9,12 +9,7 @@ import {
 } from '@mui/material';
 import { ClassNameMap, makeStyles } from '@mui/styles';
 import clsx from 'clsx';
-import {
-  forwardRef,
-  ForwardRefExoticComponent,
-  ReactNode,
-  RefAttributes,
-} from 'react';
+import { forwardRef, ReactNode, RefAttributes } from 'react';
 import { Color } from '../theme/Color';
 
 type SnackbarContentClassKey =
@@ -71,7 +66,7 @@ const useStyles = makeStyles<
 export type SnackbarVariant = 'default' | 'error' | 'success';
 
 export interface SnackbarContentProps
-  extends RefAttributes<unknown>,
+  extends RefAttributes<HTMLDivElement>,
     Omit<MuiSnackbarContentProps, 'classes' | 'message' | 'variant'> {
   children?: ReactNode;
   onClose?: () => void;
@@ -79,69 +74,68 @@ export interface SnackbarContentProps
   classes?: Partial<ClassNameMap<SnackbarContentClassKey>>;
 }
 
-export const SnackbarContent: ForwardRefExoticComponent<SnackbarContentProps> =
-  forwardRef(
-    (
-      {
-        action,
-        children,
-        onClose,
-        className,
-        classes,
-        variant = 'default',
-        ...props
-      },
-      ref,
-    ) => {
-      const { icon, closeButton, variantError, variantSuccess, ...styles } =
-        useStyles({ classes });
-      const Icon =
-        variant === 'error'
-          ? Warning
-          : variant === 'success'
-          ? CheckCircle
-          : undefined;
-
-      return (
-        <MuiSnackbarContent
-          {...props}
-          ref={ref}
-          classes={styles}
-          className={clsx(className, {
-            [variantError]: variant === 'error',
-            [variantSuccess]: variant === 'success',
-          })}
-          message={
-            <>
-              {Icon && <Icon className={icon} />}
-              {children}
-            </>
-          }
-          action={
-            !action && !onClose ? null : (
-              <Grid
-                container={true}
-                spacing={1}
-                alignItems="center"
-                wrap="nowrap"
-              >
-                {!!action && <Grid item={true}>{action}</Grid>}
-
-                {onClose && (
-                  <Grid item={true}>
-                    <IconButton
-                      aria-label="close"
-                      onClick={onClose}
-                      className={closeButton}
-                    >
-                      <Close fontSize="small" />
-                    </IconButton>
-                  </Grid>
-                )}
-              </Grid>
-            )
-          }
-        />
-      );
+export const SnackbarContent = forwardRef<HTMLDivElement, SnackbarContentProps>(
+  (
+    {
+      action,
+      children,
+      onClose,
+      className,
+      classes,
+      variant = 'default',
+      ...props
     },
-  );
+    ref,
+  ) => {
+    const { icon, closeButton, variantError, variantSuccess, ...styles } =
+      useStyles({ classes });
+    const Icon =
+      variant === 'error'
+        ? Warning
+        : variant === 'success'
+        ? CheckCircle
+        : undefined;
+
+    return (
+      <MuiSnackbarContent
+        {...props}
+        ref={ref}
+        classes={styles}
+        className={clsx(className, {
+          [variantError]: variant === 'error',
+          [variantSuccess]: variant === 'success',
+        })}
+        message={
+          <>
+            {Icon && <Icon className={icon} />}
+            {children}
+          </>
+        }
+        action={
+          !action && !onClose ? null : (
+            <Grid
+              container={true}
+              spacing={1}
+              alignItems="center"
+              wrap="nowrap"
+            >
+              {!!action && <Grid item={true}>{action}</Grid>}
+
+              {onClose && (
+                <Grid item={true}>
+                  <IconButton
+                    aria-label="close"
+                    onClick={onClose}
+                    className={closeButton}
+                  >
+                    <Close fontSize="small" />
+                  </IconButton>
+                </Grid>
+              )}
+            </Grid>
+          )
+        }
+      />
+    );
+  },
+);
