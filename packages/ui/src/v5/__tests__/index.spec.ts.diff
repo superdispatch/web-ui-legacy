@@ -1,7 +1,7 @@
 - v4
 + v5
 
-@@ -80,44 +80,20 @@
+@@ -80,44 +80,25 @@
         "Column": React.forwardRef(Column),
         "Columns": React.forwardRef(Columns),
         "DescriptionList": React.forwardRef(DescriptionList),
@@ -20,10 +20,10 @@
         "RadioField": React.forwardRef(RadioField),
         "RadioGroupField": React.forwardRef(RadioGroupField),
 -       "ResponsiveContextProvider": [Function],
--       "Snackbar": React.forwardRef(Snackbar),
--       "SnackbarContent": React.forwardRef(SnackbarContent),
--       "SnackbarStackConsumer": [Function],
--       "SnackbarStackProvider": [Function],
+        "Snackbar": React.forwardRef(Snackbar),
+        "SnackbarContent": React.forwardRef(SnackbarContent),
+        "SnackbarStackConsumer": [Function],
+        "SnackbarStackProvider": [Function],
         "Stack": React.forwardRef(Stack),
 -       "Tag": React.forwardRef(Tag),
         "ThemeProvider": [Function],
@@ -43,7 +43,7 @@
 -       "useResponsiveProp": [Function],
 -       "useResponsivePropRecord": [Function],
 -       "useResponsiveValue": [Function],
--       "useSnackbarStack": [Function],
+        "useSnackbarStack": [Function],
 -       "useUID": [Function],
 -       "useVisibilityObserver": [Function],
       }

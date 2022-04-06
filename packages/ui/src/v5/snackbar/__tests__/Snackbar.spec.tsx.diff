@@ -1,0 +1,257 @@
+- v4
++ v5
+
+- undefined
++
++     Object {
++       "anchorOrigin": Object {
++         "horizontal": "center",
++         "vertical": "bottom",
++       },
++     }
++   
+Compared values have no visual difference.
+- v4
++ v5
+
+  Object {
+-   ".MuiSnackbar-anchorOriginBottomCenter": Object {
+-     "bottom": "0",
+-     "left": "0",
+-     "right": "0",
+-   },
+-   ".MuiSnackbar-anchorOriginBottomLeft": Object {
+-     "bottom": "8px",
+-     "justifyContent": "flex-start",
+-   },
+-   ".MuiSnackbar-anchorOriginBottomRight": Object {
+-     "bottom": "8px",
+-     "justifyContent": "flex-end",
+-   },
+-   ".MuiSnackbar-anchorOriginTopCenter": Object {
+-     "top": "8px",
+-   },
+-   ".MuiSnackbar-anchorOriginTopLeft": Object {
+-     "justifyContent": "flex-start",
+-     "top": "8px",
+-   },
+-   ".MuiSnackbar-anchorOriginTopRight": Object {
+-     "justifyContent": "flex-end",
+-     "top": "8px",
+-   },
+-   ".MuiSnackbar-root": Object {
++   ".c1": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
+      "alignItems": "center",
+-     "display": "flex",
++     "bottom": Array [
++       "8px",
++       "0",
++     ],
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
+      "justifyContent": "center",
+-     "left": "8px",
++     "left": Array [
++       "8px",
++       "0",
++     ],
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
+      "position": "fixed",
+-     "right": "8px",
++     "right": Array [
++       "8px",
++       "0",
++     ],
+      "zIndex": 1400,
+    },
+-   ".MuiSnackbarContent-action": Object {
+-     "alignItems": "center",
+-     "display": "flex",
+-     "marginLeft": "auto",
+-     "marginRight": "-8px",
+-     "paddingLeft": "16px",
++   ".c2": Object {
++     "WebkitTransition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "backgroundColor": "Color.White",
++     "boxShadow": "0px 3px 5px -1px Color.Black20,0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
++     "color": "Color.Dark500",
++     "transition": "box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
+    },
+-   ".MuiSnackbarContent-message": Object {
+-     "display": "flex",
+-     "flex": 1,
+-     "padding": "8px 0",
+-   },
+-   ".MuiSnackbarContent-root": Object {
++   ".c3": Object {
++     "WebkitAlignItems": "center",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxFlex": "1",
++     "WebkitFlexGrow": "1",
++     "WebkitFlexWrap": "wrap",
+      "alignItems": "center",
+-     "backgroundColor": "rgb(49, 49, 49)",
+-     "borderRadius": "0",
++     "backgroundColor": "rgb(50,50,50)",
++     "borderRadius": Array [
++       "4px",
++       "0",
++     ],
+      "color": "Color.White",
+-     "display": "flex",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
+      "flexGrow": 1,
+      "flexWrap": "wrap",
+-     "fontFamily": "'Inter', sans-serif",
++     "fontFamily": "'Inter',sans-serif",
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px",
+      "minHeight": "60px",
++     "msFlexAlign": "center",
++     "msFlexPositive": "1",
++     "msFlexWrap": "wrap",
+      "padding": "6px 16px",
+      "width": "100%",
+-   },
+-   ".SD-SnackbarContent-action": Object {
+-     "paddingLeft": "8px",
+-   },
+-   ".SD-SnackbarContent-closeButton": Object {
+-     "color": "Color.White40",
+    },
+-   ".SD-SnackbarContent-closeButton:hover,
+-     .SD-SnackbarContent-closeButton:focus": Object {
+-     "backgroundColor": "Color.White08",
+-     "color": "Color.White40",
++   ".c4": Object {
++     "WebkitFlex": "1",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "flex": 1,
++     "msFlex": "1",
++     "padding": "8px 0",
+    },
+-   ".SD-SnackbarContent-icon": Object {
+-     "fontSize": "24px",
+-     "marginRight": "8px",
+-   },
+-   ".SD-SnackbarContent-message": Object {
+-     "alignItems": "center",
+-   },
+-   ".SD-SnackbarContent-root": Object {
+-     "backgroundColor": "Color.Dark500",
+-     "color": "Color.White",
+-   },
+-   ".SD-SnackbarContent-root.SD-SnackbarContent-variantError": Object {
+-     "backgroundColor": "Color.Red500",
+-     "color": "Color.White",
+-   },
+-   "@media (max-width: 599.95px)": Object {
+-     ".SD-SnackbarContent-message": Object {
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {
++       ".c3": Object {
+          "fontSize": "16px",
++         "lineHeight": "24px",
+        },
+      },
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Object {
+-     ".MuiSnackbarContent-root": Object {
+-       "fontSize": "16px",
+-       "lineHeight": "24px",
++     Object {},
++     Object {},
++   ],
++   "@media (min-width:600px)": Array [
++     Object {
++       ".c3": Object {
++         "WebkitBoxFlex": "initial",
++         "WebkitFlexGrow": "initial",
++         "flexGrow": "initial",
++         "minWidth": "288px",
++         "msFlexPositive": "initial",
+        },
+      },
+-   "@media (min-width: 600px)": Array [
+      Object {
+-       ".MuiSnackbar-anchorOriginTopCenter": Object {
+-         "left": "50%",
+-         "right": "auto",
+-         "top": "24px",
+-         "transform": "translateX(-50%)",
++       ".c3": Object {
++         "borderRadius": "4px",
++         "maxWidth": "432px",
++         "width": "432px",
+        },
+      },
+      Object {
+-       ".MuiSnackbar-anchorOriginBottomCenter": Object {
++       ".c1": Object {
++         "WebkitTransform": "translateX(-50%)",
+          "bottom": "24px",
+          "left": "50%",
++         "msTransform": "translateX(-50%)",
+          "right": "auto",
+          "transform": "translateX(-50%)",
+-       },
+-     },
+-     Object {
+-       ".MuiSnackbar-anchorOriginTopRight": Object {
+-         "left": "auto",
+-         "right": "24px",
+-         "top": "24px",
+-       },
+-     },
+-     Object {
+-       ".MuiSnackbar-anchorOriginBottomRight": Object {
+-         "bottom": "24px",
+-         "left": "auto",
+-         "right": "24px",
+        },
+      },
+-     Object {
+-       ".MuiSnackbar-anchorOriginTopLeft": Object {
+-         "left": "24px",
+-         "right": "auto",
+-         "top": "24px",
+-       },
+-     },
+-     Object {
+-       ".MuiSnackbar-anchorOriginBottomLeft": Object {
+-         "bottom": "24px",
+-         "left": "24px",
+-         "right": "auto",
+-       },
+-     },
+-     Object {
+-       ".MuiSnackbarContent-root": Object {
+-         "borderRadius": "4px",
+-         "flexGrow": "initial",
+-         "maxWidth": "432px",
+-         "minWidth": "288px",
+-         "width": "432px",
+-       },
+-     },
+    ],
++   "@media print": Object {},
+  }
