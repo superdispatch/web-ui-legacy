@@ -90,6 +90,7 @@ it('exposes public api', () => {
       "DrawerList": React.forwardRef(DrawerList),
       "DrawerTitle": React.forwardRef(DrawerTitle),
       "DropdownButton": React.forwardRef(DropdownButton),
+      "ExitTransitionPlaceholder": [Function],
       "GridStack": React.forwardRef(GridStack),
       "InfoCard": React.forwardRef(InfoCard),
       "Inline": React.forwardRef(Inline),
