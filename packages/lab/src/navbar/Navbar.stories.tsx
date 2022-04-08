@@ -80,7 +80,7 @@ const items = [
   {
     icon: <AllInbox />,
     label: 'Orders',
-    groupKey: 2,
+    groupKey: 3,
     key: 'Orders',
     items: [
       {

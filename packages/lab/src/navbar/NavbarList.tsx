@@ -11,11 +11,7 @@ import {
   useMemo,
 } from 'react';
 import styled from 'styled-components';
-import {
-  NavbarAccordion,
-  NavbarAccordionLabel,
-  NavbarAccordionProps,
-} from './NavbarAccordion';
+import { NavbarAccordion, NavbarAccordionProps } from './NavbarAccordion';
 import { useNavbarContext } from './NavbarContext';
 import {
   NavbarBadge,
@@ -122,7 +118,7 @@ const Content = styled.div`
   overflow: scroll;
 
   &[aria-expanded='false'] {
-    ${NavbarBadge}, ${NavbarLabel}, ${NavbarAccordionLabel}, .MuiAccordionSummary-expandIcon {
+    ${NavbarBadge}, ${NavbarLabel} {
       display: none;
     }
   }

@@ -2,7 +2,7 @@ import { Accordion, AccordionSummary } from '@material-ui/core';
 import { ExpandMore } from '@material-ui/icons';
 import { Color, useUID } from '@superdispatch/ui';
 import { ReactElement, ReactNode, useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { useNavbarContext } from './NavbarContext';
 import { NavbarItem } from './NavbarItem';
 import { NavbarItemOptions } from './NavbarList';
@@ -12,9 +12,13 @@ export const NavbarAccordionLabel = styled.span`
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  &[data-expanded='false'] {
+    display: none;
+  }
 `;
 
-const NavbarAccordionRoot = styled(Accordion)`
+const NavbarAccordionRoot = styled(Accordion)<{ gutter: boolean }>(
+  ({ gutter }) => css`
   width: 100%;
   color: #c2c4c9;
   font-size: 14px;
@@ -24,6 +28,7 @@ const NavbarAccordionRoot = styled(Accordion)`
   outline: none;
   cursor: pointer;
   background-color: #1b2638;
+  margin-top: ${gutter ? '16px' : '0'}
 
   &:hover,
   &[aria-current] {
@@ -48,7 +53,8 @@ const NavbarAccordionRoot = styled(Accordion)`
   &&.MuiAccordion-root.Mui-expanded {
     margin: 0px;
   }
-`;
+`,
+);
 
 const NavbarAccordionSummary = styled(AccordionSummary)`
   border-left: 4px solid transparent;
@@ -62,6 +68,12 @@ const NavbarAccordionSummary = styled(AccordionSummary)`
   &:hover,
   &[data-active='true'] {
     border-left-color: ${Color.Blue300};
+  }
+
+  &[data-expanded='false'] {
+    .MuiAccordionSummary-expandIcon {
+      display: none;
+    }
   }
 `;
 
@@ -103,19 +115,22 @@ export function NavbarAccordion({
   return (
     <NavbarAccordionRoot
       aria-labelledby={uid}
+      gutter={!!gutter}
       expanded={isExpanded}
       onClick={() => {
         setExpanded(!isExpanded);
       }}
       square={true}
-      style={{ marginTop: gutter ? '16px' : '0' }}
     >
       <NavbarAccordionSummary
         data-active={!isExpanded && items.some((item) => item.active)}
+        data-expanded={isMenuExpanded}
         expandIcon={<ExpandMore />}
       >
         <IconWrapper>{icon}</IconWrapper>
-        <NavbarAccordionLabel id={uid}>{label}</NavbarAccordionLabel>
+        <NavbarAccordionLabel id={uid} data-expanded={isMenuExpanded}>
+          {label}
+        </NavbarAccordionLabel>
       </NavbarAccordionSummary>
 
       {items.map((item) => {
