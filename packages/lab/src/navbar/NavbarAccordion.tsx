@@ -60,7 +60,6 @@ const NavbarAccordionSummary = styled(AccordionSummary)`
   }
 
   &:hover,
-  &[aria-current],
   &[data-active='true'] {
     border-left-color: ${Color.Blue300};
   }
@@ -93,7 +92,7 @@ export function NavbarAccordion({
   const uid = useUID();
   const { isExpanded: isMenuExpanded } = useNavbarContext();
 
-  const [expanded, setExpanded] = useState(false);
+  const [isExpanded, setExpanded] = useState(false);
 
   useEffect(() => {
     if (!isMenuExpanded) {
@@ -104,17 +103,15 @@ export function NavbarAccordion({
   return (
     <NavbarAccordionRoot
       aria-labelledby={uid}
-      expanded={expanded}
+      expanded={isExpanded}
       onClick={() => {
-        setExpanded(!expanded);
+        setExpanded(!isExpanded);
       }}
       square={true}
       style={{ marginTop: gutter ? '16px' : '0' }}
     >
       <NavbarAccordionSummary
-        data-active={
-          !expanded && items.filter((item) => item.active).length > 0
-        }
+        data-active={!isExpanded && items.some((item) => item.active)}
         expandIcon={<ExpandMore />}
       >
         <IconWrapper>{icon}</IconWrapper>
