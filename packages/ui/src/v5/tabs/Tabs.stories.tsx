@@ -26,7 +26,7 @@ export const scrollButtons = () => (
     {(state, setState) => (
       <Tabs
         value={state}
-        scrollButtons={true}
+        scrollButtons="auto"
         allowScrollButtonsMobile={true}
         onChange={(_, next) => {
           setState(next);
