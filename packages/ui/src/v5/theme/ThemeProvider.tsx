@@ -27,6 +27,7 @@ import { overrideRadio } from '../radio/RadioOverrides';
 import { overrideSnackbar } from '../snackbar/SnackbarOverrides';
 import { overrideSvgIcon } from '../svg-icon/SvgIconOverrides';
 import { overrideSwitch } from '../switch/SwitchOverrides';
+import { overrideTabs } from '../tabs/TabsOverrides';
 import { overrideTextField } from '../text-field/TextFieldOverrides';
 import { overrideToolbar } from '../toolbar/ToolbarOverrides';
 import { overrideTooltip } from '../tooltip/TooltipOverrides';
@@ -97,6 +98,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   overrideList(theme);
   overrideLink(theme);
   overrideSnackbar(theme);
+  overrideTabs(theme);
 
   return theme;
 }
