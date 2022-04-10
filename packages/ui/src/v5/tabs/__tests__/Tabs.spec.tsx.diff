@@ -1,0 +1,377 @@
+Compared values have no visual difference.
+Compared values have no visual difference.
+- v4
++ v5
+
+  Object {
+-   ".MuiTab-fullWidth": Object {
+-     "flexBasis": "0",
+-     "flexGrow": 1,
+-     "flexShrink": 1,
+-     "maxWidth": "none",
+-   },
+-   ".MuiTab-labelIcon": Object {
+-     "minHeight": "72px",
+-     "paddingTop": "9px",
+-   },
+-   ".MuiTab-labelIcon .MuiTab-wrapper > *:first-child": Object {
+-     "marginBottom": "6px",
+-   },
+-   ".MuiTab-root": Object {
+-     "boxSizing": "border-box",
+-     "flexShrink": 0,
+-     "fontFamily": "'Inter', sans-serif",
+-     "fontSize": "14px",
+-     "fontWeight": 400,
+-     "lineHeight": "20px",
+-     "maxWidth": "264px",
+-     "minHeight": "48px",
+-     "minWidth": "72px",
++   ".c1": Object {
++     "WebkitOverflowScrolling": "touch",
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
++     "minHeight": Array [
++       "48px",
++       "48px",
++     ],
+      "overflow": "hidden",
+-     "padding": "6px 12px",
+-     "position": "relative",
+-     "textAlign": "center",
+-     "transition": "color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+-     "whiteSpace": "normal",
+    },
+-   ".MuiTab-textColorInherit": Object {
+-     "color": "inherit",
+-     "opacity": 0.7,
+-   },
+-   ".MuiTab-textColorInherit.Mui-disabled": Object {
+-     "opacity": 0.5,
+-   },
+-   ".MuiTab-textColorInherit.Mui-selected": Object {
++   ".c1 .MuiTabs-scrollButtons": Object {
++     "WebkitTransition": "opacity 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "color": "Color.Dark100",
+      "opacity": 1,
+-   },
+-   ".MuiTab-textColorPrimary": Object {
+-     "color": "Color.Dark500",
++     "transition": "opacity 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "width": "32px",
+    },
+-   ".MuiTab-textColorPrimary.Mui-disabled": Object {
+-     "color": "Color.Dark100",
+-   },
+-   ".MuiTab-textColorPrimary.Mui-selected": Object {
+-     "color": "Color.Blue300",
+-   },
+-   ".MuiTab-textColorPrimary:hover,
+-     .MuiTab-textColorPrimary:focus": Object {
+-     "color": "Color.Blue300",
+-   },
+-   ".MuiTab-textColorSecondary": Object {
+-     "color": "Color.Dark200",
+-   },
+-   ".MuiTab-textColorSecondary.Mui-disabled": Object {
+-     "color": "Color.Dark100",
+-   },
+-   ".MuiTab-textColorSecondary.Mui-selected": Object {
+-     "color": "#f50057",
+-   },
+-   ".MuiTab-wrapped": Object {
+-     "fontSize": "0.75rem",
+-     "lineHeight": 1.5,
++   ".c10": Object {
++     "WebkitTransition": "all 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "backgroundColor": "Color.Blue300",
++     "bottom": "0",
++     "height": "2px",
++     "position": "absolute",
++     "transition": "all 300ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "width": "100%",
+    },
+-   ".MuiTab-wrapper": Object {
++   ".c2": Object {
++     "MozAppearance": "none",
++     "MozUserSelect": "none",
++     "WebkitAlignItems": "center",
++     "WebkitAppearance": "none",
++     "WebkitBoxAlign": "center",
++     "WebkitBoxPack": "center",
++     "WebkitJustifyContent": "center",
++     "WebkitTapHighlightColor": "transparent",
++     "WebkitTextDecoration": "none",
++     "WebkitUserSelect": "none",
+      "alignItems": "center",
+-     "display": "inline-flex",
+-     "flexDirection": "column",
++     "backgroundColor": "transparent",
++     "border": "0",
++     "borderRadius": "0",
++     "boxSizing": "border-box",
++     "color": "inherit",
++     "cursor": "pointer",
++     "display": Array [
++       "-webkit-inline-box",
++       "-webkit-inline-flex",
++       "-ms-inline-flexbox",
++       "inline-flex",
++     ],
+      "justifyContent": "center",
+-     "width": "100%",
++     "margin": "0",
++     "msFlexAlign": "center",
++     "msFlexPack": "center",
++     "msUserSelect": "none",
++     "outline": "0",
++     "padding": "0",
++     "position": "relative",
++     "textDecoration": "none",
++     "userSelect": "none",
++     "verticalAlign": "middle",
+    },
+-   ".MuiTabScrollButton-root": Object {
++   ".c2.Mui-disabled": Object {
++     "cursor": "default",
++     "pointerEvents": "none",
++   },
++   ".c2::-moz-focus-inner": Object {
++     "borderStyle": "none",
++   },
++   ".c3": Object {
++     "WebkitFlexShrink": "0",
+      "flexShrink": 0,
++     "msFlexNegative": "0",
+      "opacity": 0.8,
+      "width": "40px",
+    },
+-   ".MuiTabScrollButton-root.Mui-disabled": Object {
++   ".c3.Mui-disabled": Object {
+      "opacity": 0,
+-   },
+-   ".MuiTabScrollButton-vertical": Object {
+-     "height": "40px",
+-     "width": "100%",
+-   },
+-   ".MuiTabScrollButton-vertical svg": Object {
+-     "transform": "rotate(90deg)",
+-   },
+-   ".MuiTabs-centered": Object {
+-     "justifyContent": "center",
+    },
+-   ".MuiTabs-fixed": Object {
+-     "overflowX": "hidden",
+-     "width": "100%",
+-   },
+-   ".MuiTabs-flexContainer": Object {
+-     "display": "flex",
+-   },
+-   ".MuiTabs-flexContainerVertical": Object {
+-     "flexDirection": "column",
++   ".c4": Object {
++     "MozUserSelect": "none",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "WebkitUserSelect": "none",
++     "display": Array [
++       "inline-block",
++       "inherit",
++     ],
++     "fill": "currentColor",
++     "flexShrink": 0,
++     "fontSize": Array [
++       "1.25rem",
++       "var(--mui-svg-icon-size,32px)",
++       "var(--mui-svg-icon-size,24px)",
++     ],
++     "height": "1em",
++     "msFlexNegative": "0",
++     "msUserSelect": "none",
++     "transition": "fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "userSelect": "none",
++     "width": "1em",
+    },
+-   ".MuiTabs-root": Object {
+-     "WebkitOverflowScrolling": "touch",
+-     "display": "flex",
+-     "minHeight": "48px",
++   ".c5": Object {
++     "borderRadius": "inherit",
++     "bottom": "0",
++     "left": "0",
+      "overflow": "hidden",
+-   },
+-   ".MuiTabs-scrollButtons": Object {
+-     "color": "Color.Dark100",
+-     "opacity": 1,
+-     "transition": "opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+-     "width": "32px",
++     "pointerEvents": "none",
++     "position": "absolute",
++     "right": "0",
++     "top": "0",
++     "zIndex": 0,
+    },
+-   ".MuiTabs-scrollable": Object {
+-     "overflowX": "scroll",
++   ".c6": Object {
++     "MozScrollbarWidth": "none",
++     "WebkitScrollbarWidth": "none",
++     "msScrollbarWidth": "none",
++     "overflowX": "auto",
++     "overflowY": "hidden",
+      "scrollbarWidth": "none",
+    },
+-   ".MuiTabs-scrollable::-webkit-scrollbar": Object {
++   ".c6::-webkit-scrollbar": Object {
+      "display": "none",
+    },
+-   ".MuiTabs-scroller": Object {
++   ".c7": Object {
++     "MozScrollbarWidth": "none",
++     "WebkitFlex": "1 1 auto",
++     "WebkitScrollbarWidth": "none",
+      "display": "inline-block",
+      "flex": "1 1 auto",
++     "msFlex": "1 1 auto",
++     "msScrollbarWidth": "none",
++     "overflowX": "auto",
++     "overflowY": "hidden",
+      "position": "relative",
++     "scrollbarWidth": "none",
+      "whiteSpace": "nowrap",
+    },
+-   ".MuiTabs-vertical": Object {
+-     "flexDirection": "column",
++   ".c7::-webkit-scrollbar": Object {
++     "display": "none",
+    },
+-   ".PrivateTabIndicator-colorPrimary-2": Object {
+-     "backgroundColor": "Color.Blue300",
++   ".c8": Object {
++     "display": Array [
++       "-webkit-box",
++       "-webkit-flex",
++       "-ms-flexbox",
++       "flex",
++     ],
+    },
+-   ".PrivateTabIndicator-colorSecondary-3": Object {
+-     "backgroundColor": "#f50057",
++   ".c9": Object {
++     "WebkitFlexDirection": "column",
++     "WebkitFlexShrink": "0",
++     "WebkitTransition": "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "color": Array [
++       "Color.Dark200",
++       "Color.Dark500",
++     ],
++     "flexDirection": "column",
++     "flexShrink": 0,
++     "fontFamily": Array [
++       "'Inter',sans-serif",
++       "'Inter',sans-serif",
++     ],
++     "fontSize": Array [
++       "14px",
++       "14px",
++     ],
++     "fontWeight": Array [
++       600,
++       400,
++     ],
++     "lineHeight": Array [
++       1.25,
++       "20px",
++     ],
++     "maxWidth": "360px",
++     "minHeight": Array [
++       "48px",
++       "48px",
++     ],
++     "minWidth": "90px",
++     "msFlexDirection": "column",
++     "msFlexNegative": "0",
++     "overflow": "hidden",
++     "padding": "12px 16px",
++     "position": "relative",
++     "textAlign": "center",
++     "transition": "color 250ms cubic-bezier(0.4,0,0.2,1) 0ms",
++     "whiteSpace": "normal",
+    },
+-   ".PrivateTabIndicator-root-1": Object {
+-     "bottom": "0",
+-     "height": "2px",
+-     "position": "absolute",
+-     "transition": "all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+-     "width": "100%",
++   ".c9.Mui-disabled": Object {
++     "color": "Color.Dark100",
+    },
+-   ".PrivateTabIndicator-vertical-4": Object {
+-     "height": "100%",
+-     "right": "0",
+-     "width": "2px",
++   ".c9.Mui-selected": Object {
++     "color": "Color.Blue300",
++   },
++   ".c9:hover,
++     .c9:focus": Object {
++     "color": "Color.Blue300",
+    },
+-   "@media (max-width: 599.95px)": Object {
+-     ".MuiTabs-scrollButtonsDesktop": Object {
+-       "display": "none",
++   "@media (min-width:0px) and (max-width:599.95px)": Array [
++     Object {
++       ".c9": Object {
++         "fontSize": "16px",
++         "lineHeight": "24px",
+        },
+      },
+-   "@media (min-width: 0px) and (max-width: 599.95px)": Object {
+-     ".MuiTab-root": Object {
++     Object {
++       ".c9": Object {
+          "fontSize": "16px",
+          "lineHeight": "24px",
+        },
+      },
+-   "@media (min-width: 600px)": Object {
+-     ".MuiTab-root": Object {
++     Object {},
++     Object {},
++   ],
++   "@media (min-width:600px)": Array [
++     Object {
++       ".c4": Object {
++         "fontSize": "var(--mui-svg-icon-size,24px)",
++       },
++     },
++     Object {
++       ".c4": Object {
++         "fontSize": "var(--mui-svg-icon-size,16px)",
++       },
++     },
++     Object {
++       ".c9": Object {
++         "fontSize": "unset",
++         "minWidth": "unset",
+          "padding": "6px 24px",
+        },
+      },
++   ],
++   "@media print": Array [
++     Object {
++       ".c2": Object {
++         "colorAdjust": "exact",
++       },
++     },
++     Object {},
++   ],
+  }
