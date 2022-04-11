@@ -7,6 +7,8 @@ export * from './container/Container';
 export * from './description-item/DescriptionItem';
 export * from './file-drop-zone/FileDropZone';
 export * from './file-list-item/FileListItem';
+export * from './linked-text/LinkedText';
+export * from './multiline-text/MultilineText';
 export * from './navbar/Navbar';
 export * from './navbar/NavbarAvatar';
 export * from './navbar/NavbarBottomBar';
