@@ -19,41 +19,37 @@ export const NavbarAccordionLabel = styled.span`
 
 const NavbarAccordionRoot = styled(Accordion)<{ gutter: boolean }>(
   ({ gutter }) => css`
-  width: 100%;
-  color: #c2c4c9;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
-  background-color: #1b2638;
-  margin-top: ${gutter ? '16px' : '0'}
-
-  &:hover,
-  &[aria-current] {
-    background-color: #2f394a;
-    color: ${Color.White};
-  }
-
-  &.MuiAccordion-root:before {
+    width: 100%;
+    color: #c2c4c9;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
     background-color: #1b2638;
-  }
+    margin-top: ${gutter ? '16px' : '0'};
 
-  &.MuiPaper-elevation0 {
-    border: 0px;
-  }
+    &:hover,
+    &[aria-current] {
+      background-color: #2f394a;
+      color: ${Color.White};
+    }
 
-  &&.MuiAccordionSummary-root.Mui-expanded {
-    margin: 0px;
-    max-height: 40px;
-    min-height: 40px;
-  }
+    &.MuiAccordion-root:before {
+      background-color: #1b2638;
+    }
 
-  &&.MuiAccordion-root.Mui-expanded {
-    margin: 0px;
-  }
-`,
+    &.MuiPaper-elevation0 {
+      border: 0px;
+    }
+
+    &&.MuiAccordionSummary-root.Mui-expanded {
+      margin-top: ${gutter ? '16px' : '0'};
+      max-height: 40px;
+      min-height: 40px;
+    }
+  `,
 );
 
 const NavbarAccordionSummary = styled(AccordionSummary)`
