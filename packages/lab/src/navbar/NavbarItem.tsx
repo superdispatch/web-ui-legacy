@@ -58,6 +58,10 @@ const NavbarItemRoot = styled.div`
     color: ${Color.White};
     border-left-color: ${Color.Blue300};
   }
+
+  &[data-active='true'] {
+    border-left-color: ${Color.Blue300};
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -79,6 +83,7 @@ export interface NavbarItemProps {
   ident?: number;
   gutter?: boolean;
   variant?: 'danger' | 'primary';
+  active?: boolean;
 }
 
 export function NavbarItem({
@@ -90,6 +95,7 @@ export function NavbarItem({
   onClick,
   variant,
   ident = 0,
+  active,
 }: NavbarItemProps): ReactElement {
   const uid = useUID();
 
@@ -98,6 +104,7 @@ export function NavbarItem({
       as={component}
       onClick={onClick}
       aria-labelledby={uid}
+      data-active={active}
       style={{
         marginTop: gutter ? '16px' : '0',
         paddingLeft: (ident + 1) * 20,
