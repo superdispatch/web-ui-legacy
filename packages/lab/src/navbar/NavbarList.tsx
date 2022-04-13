@@ -198,9 +198,6 @@ export function NavbarList({
                 {...item}
                 key={item.key}
                 gutter={prev && prev.groupKey !== item.groupKey}
-                onSelect={() => {
-                  setDrawerOpen(false);
-                }}
               />
             );
           }

@@ -87,7 +87,6 @@ export interface NavbarAccordionProps {
   icon?: ReactNode;
   gutter?: boolean;
   items: NavbarItemOptions[];
-  onSelect?: () => void;
 }
 
 export function NavbarAccordion({
@@ -95,10 +94,13 @@ export function NavbarAccordion({
   icon,
   gutter,
   items,
-  onSelect,
 }: NavbarAccordionProps): ReactElement {
   const uid = useUID();
-  const { isExpanded: isMenuExpanded, isDrawerOpen } = useNavbarContext();
+  const {
+    isExpanded: isMenuExpanded,
+    isDrawerOpen,
+    setDrawerOpen,
+  } = useNavbarContext();
 
   const [isExpanded, setExpanded] = useState(false);
 
@@ -152,7 +154,7 @@ export function NavbarAccordion({
               item.onClick?.(event);
 
               if (!event.isDefaultPrevented()) {
-                onSelect?.();
+                setDrawerOpen(false);
               }
             }}
           />
