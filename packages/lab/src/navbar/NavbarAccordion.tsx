@@ -1,7 +1,13 @@
 import { Accordion, AccordionSummary } from '@material-ui/core';
 import { ExpandMore } from '@material-ui/icons';
 import { Color, useUID } from '@superdispatch/ui';
-import { ReactElement, ReactNode, useEffect, useState } from 'react';
+import {
+  MouseEvent,
+  ReactElement,
+  ReactNode,
+  useEffect,
+  useState,
+} from 'react';
 import styled, { css } from 'styled-components';
 import { useNavbarContext } from './NavbarContext';
 import { NavbarItem } from './NavbarItem';
@@ -87,6 +93,7 @@ export interface NavbarAccordionProps {
   icon?: ReactNode;
   gutter?: boolean;
   items: NavbarItemOptions[];
+  onClick: (event: MouseEvent<HTMLDivElement>) => void;
 }
 
 export function NavbarAccordion({
@@ -94,6 +101,7 @@ export function NavbarAccordion({
   icon,
   gutter,
   items,
+  onClick,
 }: NavbarAccordionProps): ReactElement {
   const uid = useUID();
   const {
@@ -118,9 +126,8 @@ export function NavbarAccordion({
       onClick={(event) => {
         if (isMenuExpanded || isDrawerOpen) {
           setExpanded(!isExpanded);
-        } else if (items.length > 0 && !items.some((item) => item.active)) {
-          items[0]?.onClick?.(event);
         }
+        onClick(event);
       }}
       square={true}
     >

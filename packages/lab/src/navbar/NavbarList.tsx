@@ -128,7 +128,6 @@ export interface NavbarAccordionOptions extends NavbarAccordionProps {
   key: Key;
   groupKey?: Key;
   hide?: boolean;
-  items: NavbarItemOptions[];
 }
 export interface NavbarItemOptions extends NavbarItemProps {
   key: Key;
@@ -198,6 +197,7 @@ export function NavbarList({
                 {...item}
                 key={item.key}
                 gutter={prev && prev.groupKey !== item.groupKey}
+                onClick={item.onClick}
               />
             );
           }
