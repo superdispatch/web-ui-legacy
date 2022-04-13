@@ -13,6 +13,8 @@ test('api', () => {
       "DescriptionItem": React.forwardRef(DescriptionItem),
       "FileDropZone": React.forwardRef(FileDropZone),
       "FileListItem": React.forwardRef(FileListItem),
+      "LinkedText": [Function],
+      "MultilineText": React.forwardRef(MultilineText),
       "Navbar": [Function],
       "NavbarAvatar": [Function],
       "NavbarBadge": React.forwardRef(NavbarItem__NavbarBadge),
