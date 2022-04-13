@@ -98,7 +98,7 @@ export function NavbarAccordion({
   onSelect,
 }: NavbarAccordionProps): ReactElement {
   const uid = useUID();
-  const { isExpanded: isMenuExpanded } = useNavbarContext();
+  const { isExpanded: isMenuExpanded, isDrawerOpen } = useNavbarContext();
 
   const [isExpanded, setExpanded] = useState(false);
 
@@ -113,18 +113,25 @@ export function NavbarAccordion({
       aria-labelledby={uid}
       gutter={!!gutter}
       expanded={isExpanded}
-      onClick={() => {
-        setExpanded(!isExpanded);
+      onClick={(event) => {
+        if (isMenuExpanded || isDrawerOpen) {
+          setExpanded(!isExpanded);
+        } else if (items.length > 0 && !items.some((item) => item.active)) {
+          items[0]?.onClick?.(event);
+        }
       }}
       square={true}
     >
       <NavbarAccordionSummary
         data-active={!isExpanded && items.some((item) => item.active)}
-        data-expanded={isMenuExpanded}
+        data-expanded={isMenuExpanded || isDrawerOpen}
         expandIcon={<ExpandMore />}
       >
         <IconWrapper>{icon}</IconWrapper>
-        <NavbarAccordionLabel id={uid} data-expanded={isMenuExpanded}>
+        <NavbarAccordionLabel
+          id={uid}
+          data-expanded={isMenuExpanded || isDrawerOpen}
+        >
           {label}
         </NavbarAccordionLabel>
       </NavbarAccordionSummary>
