@@ -115,7 +115,8 @@ export function NavbarMenuItem({
 const Content = styled.div`
   height: 100%;
   min-height: 50px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   &[aria-expanded='false'] {
     ${NavbarBadge}, ${NavbarLabel} {
