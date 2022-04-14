@@ -115,7 +115,7 @@ export function NavbarMenuItem({
 const Content = styled.div`
   height: 100%;
   min-height: 50px;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 
   &[aria-expanded='false'] {
