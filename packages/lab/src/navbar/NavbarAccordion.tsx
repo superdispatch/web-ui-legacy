@@ -35,7 +35,6 @@ const NavbarAccordionRoot = styled(Accordion)<{ gutter: boolean }>(
     cursor: pointer;
     background-color: #1b2638;
     margin-top: ${gutter ? '16px' : '0'};
-    overflow-x: hidden;
 
     &:hover,
     &[aria-current] {
