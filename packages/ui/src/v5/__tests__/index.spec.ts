@@ -100,6 +100,7 @@ it('exposes public api', () => {
       "SnackbarStackConsumer": [Function],
       "SnackbarStackProvider": [Function],
       "Stack": React.forwardRef(Stack),
+      "Tag": React.forwardRef(Tag),
       "ThemeProvider": [Function],
       "isColorProp": [Function],
       "useSnackbarStack": [Function],

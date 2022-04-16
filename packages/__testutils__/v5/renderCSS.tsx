@@ -12,6 +12,7 @@ import { styleSheetSerializer } from 'jest-styled-components';
 import { identity } from 'lodash';
 import { format } from 'prettier';
 import { ReactElement } from 'react';
+import { extractCSS } from '../renderCSS';
 
 const colors = new Map<string, string>(
   Object.entries(v5.Color).flatMap(([k, v]) => [
@@ -130,6 +131,12 @@ export function renderCSS(ui: ReactElement, displayNames?: string[]) {
   renderedCSS.add(css);
 
   return css;
+}
+
+export function renderStyles(ui: ReactElement, components: string[]): string {
+  render(<v5.ThemeProvider>{ui}</v5.ThemeProvider>);
+
+  return extractCSS(components);
 }
 
 function getStyleByClass(className: string, css: string) {
