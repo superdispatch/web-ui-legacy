@@ -1,7 +1,7 @@
 - v4
 + v5
 
-@@ -80,44 +80,25 @@
+@@ -80,44 +80,26 @@
         "Column": React.forwardRef(Column),
         "Columns": React.forwardRef(Columns),
         "DescriptionList": React.forwardRef(DescriptionList),
@@ -25,7 +25,7 @@
         "SnackbarStackConsumer": [Function],
         "SnackbarStackProvider": [Function],
         "Stack": React.forwardRef(Stack),
--       "Tag": React.forwardRef(Tag),
+        "Tag": React.forwardRef(Tag),
         "ThemeProvider": [Function],
 -       "Tiles": React.forwardRef(Tiles),
 -       "VisibilityObserver": [Function],

@@ -22,6 +22,7 @@ export * from './snackbar/Snackbar';
 export * from './snackbar/SnackbarContent';
 export * from './snackbar/SnackbarStack';
 export * from './stack/Stack';
+export * from './tag/Tag';
 export * from './theme/Color';
 export * from './theme/SuperDispatchTheme';
 export * from './theme/ThemeProvider';
