@@ -1,7 +1,7 @@
 import { Inline } from '../inline/Inline';
 import { Tag } from './Tag';
 
-export default { title: 'Data Display/Tag', component: Tag };
+export default { title: 'v4/Data Display/Tag', component: Tag };
 
 export const subtle = () => (
   <Inline>

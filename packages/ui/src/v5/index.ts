@@ -26,3 +26,4 @@ export * from './tag/Tag';
 export * from './theme/Color';
 export * from './theme/SuperDispatchTheme';
 export * from './theme/ThemeProvider';
+export * from './tiles/Tiles';

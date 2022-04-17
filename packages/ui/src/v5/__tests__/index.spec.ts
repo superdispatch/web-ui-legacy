@@ -102,6 +102,7 @@ it('exposes public api', () => {
       "Stack": React.forwardRef(Stack),
       "Tag": React.forwardRef(Tag),
       "ThemeProvider": [Function],
+      "Tiles": React.forwardRef(Tiles),
       "isColorProp": [Function],
       "useSnackbarStack": [Function],
     }

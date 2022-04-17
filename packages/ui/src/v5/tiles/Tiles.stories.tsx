@@ -1,12 +1,13 @@
-import { Link } from '@material-ui/core';
+import { Link } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Placeholder } from '@superdispatch/ui-docs';
 import { Tiles } from './Tiles';
 
 export default {
-  title: 'v4/Layout/Tiles',
+  title: 'Layout/Tiles',
   component: Tiles,
   parameters: {
+    v5: true,
     componentSubtitle: (
       <>
         Heavily inspired by the{' '}
