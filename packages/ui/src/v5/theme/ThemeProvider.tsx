@@ -24,7 +24,9 @@ import { overrideMenu } from '../menu/MenuOverrides';
 import { overridePagination } from '../pagination/PaginationOverrides';
 import { overridePaper } from '../paper/PaperOverrides';
 import { overrideRadio } from '../radio/RadioOverrides';
+import { ResponsiveContextProvider } from '../responsive/ResponsiveContext';
 import { overrideSnackbar } from '../snackbar/SnackbarOverrides';
+import { SnackbarStackProvider } from '../snackbar/SnackbarStack';
 import { overrideSvgIcon } from '../svg-icon/SvgIconOverrides';
 import { overrideSwitch } from '../switch/SwitchOverrides';
 import { overrideTabs } from '../tabs/TabsOverrides';
@@ -162,7 +164,10 @@ export function ThemeProvider({
     >
       <MaterialThemeProvider theme={theme}>
         <CssBaseline />
-        {children}
+
+        <ResponsiveContextProvider>
+          <SnackbarStackProvider>{children}</SnackbarStackProvider>
+        </ResponsiveContextProvider>
       </MaterialThemeProvider>
     </StylesProvider>
   );

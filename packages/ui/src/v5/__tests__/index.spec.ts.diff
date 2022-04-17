@@ -1,7 +1,7 @@
 - v4
 + v5
 
-@@ -80,44 +80,26 @@
+@@ -80,44 +80,27 @@
         "Column": React.forwardRef(Column),
         "Columns": React.forwardRef(Columns),
         "DescriptionList": React.forwardRef(DescriptionList),
@@ -27,7 +27,7 @@
         "Stack": React.forwardRef(Stack),
         "Tag": React.forwardRef(Tag),
         "ThemeProvider": [Function],
--       "Tiles": React.forwardRef(Tiles),
+        "Tiles": React.forwardRef(Tiles),
 -       "VisibilityObserver": [Function],
 -       "assignRef": [Function],
         "isColorProp": [Function],
