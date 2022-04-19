@@ -26,6 +26,7 @@ test('api', () => {
       "NavbarMenuItem": [Function],
       "Sidebar": React.forwardRef(Sidebar),
       "SidebarContainer": React.forwardRef(SidebarContainer),
+      "SidebarContent": [Function],
       "SidebarDivider": React.forwardRef(SidebarDivider),
       "SidebarMenuItem": React.forwardRef(SidebarMenuItem),
       "SidebarMenuItemAction": React.forwardRef(SidebarMenuItemAction),
@@ -35,6 +36,7 @@ test('api', () => {
       "formatBytes": [Function],
       "toBytes": [Function],
       "useNavbarContext": [Function],
+      "useSidebarContext": [Function],
     }
   `);
 });

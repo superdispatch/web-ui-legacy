@@ -12,6 +12,7 @@ import { Placeholder } from '../../../__docs__';
 import { Box } from '../box/Box';
 import { Sidebar } from './Sidebar';
 import { SidebarContainer } from './SidebarContainer';
+import { SidebarContent } from './SidebarContent';
 import { SidebarDivider } from './SidebarDivider';
 import { SidebarMenuItem } from './SidebarMenuItem';
 import { SidebarMenuItemAction } from './SidebarMenuItemAction';
@@ -141,7 +142,9 @@ export const list = () => (
       </Sidebar>
     }
   >
-    <Placeholder height="100%" width="100%" text="Content" />
+    <SidebarContent title="List">
+      <Placeholder height="100%" width="100%" text="Content" />
+    </SidebarContent>
   </SidebarContainer>
 );
 

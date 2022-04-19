@@ -18,6 +18,7 @@ export * from './navbar/NavbarList';
 export * from './navbar/NavbarMenu';
 export * from './sidebar/Sidebar';
 export * from './sidebar/SidebarContainer';
+export * from './sidebar/SidebarContent';
 export * from './sidebar/SidebarDivider';
 export * from './sidebar/SidebarMenuItem';
 export * from './sidebar/SidebarMenuItemAction';
