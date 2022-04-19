@@ -73,6 +73,7 @@ export const list = () => (
             </Button>
 
             <TextField
+              fullWidth={true}
               placeholder="Search for drivers…"
               InputProps={{
                 startAdornment: (
