@@ -1,17 +1,23 @@
-import { AppBar, IconButton, Toolbar } from '@material-ui/core';
-import { ArrowBack } from '@material-ui/icons';
-import {
-  Column,
-  Columns,
-  Stack,
-  useCollapseBreakpoint,
-} from '@superdispatch/ui';
+import { AppBar, Toolbar } from '@material-ui/core';
+import { Column, Columns, Stack, SuperDispatchTheme } from '@superdispatch/ui';
 import { MouseEvent, ReactElement, ReactNode } from 'react';
+import styled, { css } from 'styled-components';
 import { TextBox } from '../text-box/TextBox';
-import { useSidebarContext } from './SidebarContainer';
+import { SidebarBackButton } from './SidebarBackButton';
+
+const SidebarAppBar = styled(AppBar)(
+  ({ theme }: { theme: SuperDispatchTheme }) => {
+    return css`
+      ${theme.breakpoints.up('sm')} {
+        && {
+          border-left: transparent;
+        }
+      }
+    `;
+  },
+);
 
 export interface SidebarContentProps {
-  backArrowIcon?: ReactNode;
   title: ReactNode;
   children: ReactNode;
   action?: ReactNode;
@@ -23,30 +29,15 @@ export function SidebarContent({
   title,
   children,
   onBack,
-  backArrowIcon = <ArrowBack fontSize="small" />,
 }: SidebarContentProps): ReactElement {
-  const isCollapsed = useCollapseBreakpoint('sm');
-  const { openSidebar } = useSidebarContext();
   return (
-    <Stack>
-      <AppBar>
+    <Stack space="none">
+      <SidebarAppBar>
         <Toolbar>
           <Columns align="center">
-            {isCollapsed && (
-              <Column width="content">
-                <IconButton
-                  size="small"
-                  onClick={(event) => {
-                    onBack?.(event);
-                    if (!event.isDefaultPrevented()) {
-                      openSidebar();
-                    }
-                  }}
-                >
-                  {backArrowIcon}
-                </IconButton>
-              </Column>
-            )}
+            <Column width="content">
+              <SidebarBackButton onClick={onBack} />
+            </Column>
 
             <Column>
               <TextBox variant="heading-2">{title}</TextBox>
@@ -55,7 +46,7 @@ export function SidebarContent({
             <Column width="content">{action}</Column>
           </Columns>
         </Toolbar>
-      </AppBar>
+      </SidebarAppBar>
 
       {children}
     </Stack>
