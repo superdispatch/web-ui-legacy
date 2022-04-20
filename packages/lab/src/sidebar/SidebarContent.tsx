@@ -83,7 +83,7 @@ export function SidebarContent({
     <Stack space="none">
       <SidebarAppBar>
         <Toolbar>
-          <Columns align="center">
+          <Columns align="center" space="small">
             <Column width="content">
               <SidebarBackButton onClick={onBack} />
             </Column>
