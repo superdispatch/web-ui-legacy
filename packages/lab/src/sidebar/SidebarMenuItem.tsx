@@ -11,6 +11,7 @@ import {
 } from 'react';
 import styled, { css } from 'styled-components';
 import { TextBox } from '../text-box/TextBox';
+import { useSidebarContext } from './SidebarContainer';
 import { SidebarMenuItemContextProvider } from './SidebarMenuItemContext';
 
 interface SidebarMenuItemRootProps {
@@ -97,6 +98,7 @@ export const SidebarMenuItem = forwardRef<HTMLDivElement, SidebarMenuItemProps>(
     const [hovered, setHovered] = useState(false);
     const actionsRef = useRef<HTMLDivElement>(null);
     const actionsPlaceholderRef = useRef<HTMLDivElement>(null);
+    const { openSidebarContent } = useSidebarContext();
 
     useLayoutEffect(() => {
       if (actionsRef.current && actionsPlaceholderRef.current) {
@@ -126,9 +128,14 @@ export const SidebarMenuItem = forwardRef<HTMLDivElement, SidebarMenuItemProps>(
         }}
       >
         <ButtonBase
-          onClick={onClick}
           disabled={disabled}
           aria-current={selected}
+          onClick={(event) => {
+            onClick?.(event);
+            if (!event.isDefaultPrevented()) {
+              openSidebarContent();
+            }
+          }}
         >
           <Columns align="center" space="xsmall">
             <Column>
