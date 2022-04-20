@@ -8,6 +8,7 @@ import {
   useRef,
 } from 'react';
 import styled, { css } from 'styled-components';
+import { Box } from '../box/Box';
 import { TextBox } from '../text-box/TextBox';
 import { SidebarBackButton } from './SidebarBackButton';
 import { useSidebarContext } from './SidebarContainer';
@@ -25,6 +26,7 @@ const SidebarAppBar = styled(AppBar)(
 );
 
 export interface SidebarContentProps {
+  dense?: boolean;
   title: ReactNode;
   children: ReactNode;
   action?: ReactNode;
@@ -34,6 +36,7 @@ export interface SidebarContentProps {
 }
 
 export function SidebarContent({
+  dense,
   action,
   title,
   children,
@@ -94,7 +97,7 @@ export function SidebarContent({
         </Toolbar>
       </SidebarAppBar>
 
-      {children}
+      <Box padding={dense ? 'none' : 'medium'}>{children}</Box>
     </Stack>
   );
 }
