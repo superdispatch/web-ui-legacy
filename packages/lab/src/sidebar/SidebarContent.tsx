@@ -40,7 +40,7 @@ export function SidebarContent({
   openOnMount,
 }: SidebarContentProps): ReactElement {
   const isOpenedOnMount = useRef<boolean>(false);
-  const { openSidebarContent } = useSidebarContext();
+  const { openSidebarContent, openSidebar } = useSidebarContext();
 
   useLayoutEffect(() => {
     if (openOnMount) {
@@ -55,6 +55,14 @@ export function SidebarContent({
       }
     }
   }, [openOnMount, openSidebarContent]);
+
+  useLayoutEffect(() => {
+    return () => {
+      if (isOpenedOnMount.current) {
+        openSidebar();
+      }
+    };
+  }, [openSidebar]);
 
   return (
     <Stack space="none">
