@@ -29,6 +29,7 @@ export interface SidebarContentProps {
   children: ReactNode;
   action?: ReactNode;
   openOnMount?: boolean;
+  closeOnUnmount?: boolean;
   onBack?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -38,8 +39,11 @@ export function SidebarContent({
   children,
   onBack,
   openOnMount,
+  closeOnUnmount,
 }: SidebarContentProps): ReactElement {
   const isOpenedOnMount = useRef<boolean>(false);
+  const isClosedOnMount = useRef<boolean>(false);
+
   const { openSidebarContent, openSidebar } = useSidebarContext();
 
   useLayoutEffect(() => {
@@ -58,11 +62,19 @@ export function SidebarContent({
 
   useLayoutEffect(() => {
     return () => {
-      if (isOpenedOnMount.current) {
-        openSidebar();
+      if (closeOnUnmount) {
+        if (isClosedOnMount.current) {
+          // eslint-disable-next-line no-console
+          console.warn(
+            '[SidebarContent]: "closeOnUnmount" should not change during lifecycle of the component.',
+          );
+        } else {
+          isClosedOnMount.current = true;
+          openSidebar();
+        }
       }
     };
-  }, [openSidebar]);
+  }, [openSidebar, closeOnUnmount]);
 
   return (
     <Stack space="none">
