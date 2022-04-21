@@ -77,6 +77,7 @@ export interface SidebarMenuItemProps {
   action?: ReactNode;
   avatar?: ReactNode;
   children?: ReactNode;
+  openContentOnClick?: boolean;
   secondaryActions?: ReactNode;
 }
 
@@ -92,6 +93,7 @@ export const SidebarMenuItem = forwardRef<HTMLDivElement, SidebarMenuItemProps>(
       selected,
       secondaryActions,
       badge: badgeProp,
+      openContentOnClick,
     },
     ref,
   ) => {
@@ -132,7 +134,7 @@ export const SidebarMenuItem = forwardRef<HTMLDivElement, SidebarMenuItemProps>(
           aria-current={selected}
           onClick={(event) => {
             onClick?.(event);
-            if (!event.isDefaultPrevented()) {
+            if (!event.isDefaultPrevented() && openContentOnClick) {
               openSidebarContent();
             }
           }}
