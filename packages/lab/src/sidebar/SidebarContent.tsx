@@ -97,7 +97,7 @@ export function SidebarContent({
         </Toolbar>
       </SidebarAppBar>
 
-      <Box padding={dense ? 'none' : 'medium'}>{children}</Box>
+      <Box padding={dense ? 'none' : ['small', 'medium']}>{children}</Box>
     </Stack>
   );
 }

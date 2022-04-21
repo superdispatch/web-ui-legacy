@@ -88,16 +88,19 @@ export const list = () => (
       >
         <SidebarMenuItem
           selected={true}
+          openContentOnClick={true}
           avatar={<SidebarMenuItemAvatar>Eirwen Minoo</SidebarMenuItemAvatar>}
         >
           Eirwen Minoo
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={<SidebarMenuItemAvatar>Ole Kielo</SidebarMenuItemAvatar>}
         >
           Ole Kielo
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar>Virve Vivi Wangi</SidebarMenuItemAvatar>
           }
@@ -105,6 +108,7 @@ export const list = () => (
           Virve Vivi Wangi
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar>
               Radulf Čedomir Niĉjo Aparna
@@ -114,6 +118,7 @@ export const list = () => (
           Radulf Čedomir Niĉjo Aparna
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar>Léane Audovacar</SidebarMenuItemAvatar>
           }
