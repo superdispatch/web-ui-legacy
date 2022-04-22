@@ -160,6 +160,7 @@ export const checkbox = () => (
       <Sidebar title="Drivers">
         <SidebarMenuItem
           selected={true}
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar value={false}>
               Eirwen Minoo
@@ -169,6 +170,7 @@ export const checkbox = () => (
           Eirwen Minoo
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar value={true}>
               Ole Kielo
@@ -178,6 +180,7 @@ export const checkbox = () => (
           Ole Kielo
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar value={false}>
               Virve Vivi Wangi
@@ -198,7 +201,9 @@ export const checkbox = () => (
       </Sidebar>
     }
   >
-    <Placeholder height="100%" width="100%" text="Content" />
+    <SidebarContent title="">
+      <Placeholder height="100%" width="100%" text="Content" />
+    </SidebarContent>
   </SidebarContainer>
 );
 

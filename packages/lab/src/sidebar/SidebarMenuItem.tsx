@@ -1,6 +1,6 @@
 import { ButtonBase } from '@material-ui/core';
 import { OpenInNew } from '@material-ui/icons';
-import { Color, Column, Columns, Inline } from '@superdispatch/ui';
+import { Color, Column, Columns, Inline, mergeRefs } from '@superdispatch/ui';
 import {
   forwardRef,
   MouseEvent,
@@ -98,9 +98,11 @@ export const SidebarMenuItem = forwardRef<HTMLDivElement, SidebarMenuItemProps>(
     ref,
   ) => {
     const [hovered, setHovered] = useState(false);
+    const rootRef = useRef<HTMLDivElement>(null);
     const actionsRef = useRef<HTMLDivElement>(null);
     const actionsPlaceholderRef = useRef<HTMLDivElement>(null);
     const { openSidebarContent } = useSidebarContext();
+    const { matches: isHoverSupported } = matchMedia('(hover: hover)');
 
     useLayoutEffect(() => {
       if (actionsRef.current && actionsPlaceholderRef.current) {
@@ -111,6 +113,24 @@ export const SidebarMenuItem = forwardRef<HTMLDivElement, SidebarMenuItemProps>(
       }
     });
 
+    useLayoutEffect(() => {
+      const rootNode = rootRef.current;
+
+      if (rootNode) {
+        if (isHoverSupported) {
+          rootNode.addEventListener('mouseenter', () => {
+            setHovered(true);
+          });
+
+          rootNode.addEventListener('mouseleave', () => {
+            setHovered(false);
+          });
+        } else {
+          setHovered(true);
+        }
+      }
+    }, [isHoverSupported]);
+
     const badge =
       !badgeProp || !Number.isFinite(badgeProp)
         ? null
@@ -119,16 +139,7 @@ export const SidebarMenuItem = forwardRef<HTMLDivElement, SidebarMenuItemProps>(
         : badgeProp;
 
     return (
-      <SidebarMenuItemRoot
-        ref={ref}
-        hasAvatar={!!avatar}
-        onMouseEnter={() => {
-          setHovered(true);
-        }}
-        onMouseLeave={() => {
-          setHovered(false);
-        }}
-      >
+      <SidebarMenuItemRoot ref={mergeRefs(ref, rootRef)} hasAvatar={!!avatar}>
         <ButtonBase
           disabled={disabled}
           aria-current={selected}
