@@ -148,7 +148,10 @@ export const list = () => (
       </Sidebar>
     }
   >
-    <SidebarContent title="List">
+    <SidebarContent
+      title="List"
+      action={<Button variant="contained">Create</Button>}
+    >
       <Placeholder height="100%" width="100%" text="Content" />
     </SidebarContent>
   </SidebarContainer>

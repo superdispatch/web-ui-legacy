@@ -25,6 +25,11 @@ const SidebarAppBar = styled(AppBar)(
   },
 );
 
+const ToolbarContent = styled.div`
+  flex: 1;
+  padding: 16px;
+`;
+
 export interface SidebarContentProps {
   dense?: boolean;
   title: ReactNode;
@@ -82,18 +87,29 @@ export function SidebarContent({
   return (
     <Stack space="none">
       <SidebarAppBar>
-        <Toolbar>
-          <Columns align="center" space="small">
-            <Column width="content">
-              <SidebarBackButton onClick={onBack} />
-            </Column>
+        <Toolbar disableGutters={true}>
+          <ToolbarContent>
+            <Columns align={['top', 'center']} space="small">
+              <Column width="content">
+                <SidebarBackButton onClick={onBack} />
+              </Column>
 
-            <Column>
-              <TextBox variant="heading-2">{title}</TextBox>
-            </Column>
+              <Column>
+                <Columns
+                  space="small"
+                  collapseBelow="tablet"
+                  reverse={[true, false]}
+                  align={['bottom', 'center']}
+                >
+                  <Column>
+                    <TextBox variant="heading-2">{title}</TextBox>
+                  </Column>
 
-            <Column width="content">{action}</Column>
-          </Columns>
+                  {action && <Column width="content">{action}</Column>}
+                </Columns>
+              </Column>
+            </Columns>
+          </ToolbarContent>
         </Toolbar>
       </SidebarAppBar>
 
