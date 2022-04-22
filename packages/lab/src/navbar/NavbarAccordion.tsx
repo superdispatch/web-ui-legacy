@@ -36,7 +36,6 @@ const NavbarAccordionRoot = styled(Accordion)<{ gutter: boolean }>(
     background-color: #1b2638;
     margin-top: ${gutter ? '16px' : '0'};
 
-    &:hover,
     &[aria-current] {
       background-color: #2f394a;
       color: ${Color.White};
@@ -50,10 +49,8 @@ const NavbarAccordionRoot = styled(Accordion)<{ gutter: boolean }>(
       border: 0px;
     }
 
-    &&.MuiAccordionSummary-root.Mui-expanded {
+    &.MuiAccordion-root.Mui-expanded {
       margin-top: ${gutter ? '16px' : '0'};
-      max-height: 40px;
-      min-height: 40px;
     }
   `,
 );
@@ -69,6 +66,7 @@ const NavbarAccordionSummary = styled(AccordionSummary)`
 
   &:hover,
   &[data-active='true'] {
+    background-color: #2f394a;
     border-left-color: ${Color.Blue300};
   }
 

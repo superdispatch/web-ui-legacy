@@ -60,6 +60,7 @@ const NavbarItemRoot = styled.div`
   }
 
   &[data-active='true'] {
+    background-color: #2f394a;
     border-left-color: ${Color.Blue300};
   }
 `;
