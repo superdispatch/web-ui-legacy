@@ -6,6 +6,7 @@ import { Alert } from './Alert';
 export default {
   title: 'Lab/Alert',
   component: Alert,
+  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

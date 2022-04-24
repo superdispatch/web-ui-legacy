@@ -16,7 +16,7 @@ import { TextBox } from '../text-box/TextBox';
 import { DescriptionItem } from './DescriptionItem';
 
 export default {
-  title: 'Lab/DescriptionItem',
+  title: 'v4/Lab/DescriptionItem',
   component: DescriptionItem,
 } as Meta;
 

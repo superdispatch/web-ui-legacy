@@ -19,7 +19,7 @@ import { SidebarMenuItemAvatar } from './SidebarMenuItemAvatar';
 import { SidebarSubheader } from './SidebarSubheader';
 
 export default {
-  title: 'Lab/Sidebar',
+  title: 'v4/Lab/Sidebar',
   component: Sidebar,
   subcomponents: {
     SidebarContainer,

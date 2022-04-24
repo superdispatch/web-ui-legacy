@@ -4,7 +4,7 @@ import { Column, Columns, Stack } from '@superdispatch/ui';
 import { ButtonArea } from './ButtonArea';
 
 export default {
-  title: 'Lab/ButtonArea',
+  title: 'v4/Lab/ButtonArea',
   component: ButtonArea,
 } as Meta;
 

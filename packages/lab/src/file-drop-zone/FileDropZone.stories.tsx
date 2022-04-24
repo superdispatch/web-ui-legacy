@@ -1,7 +1,10 @@
 import { Meta } from '@storybook/react';
 import { FileDropZone, toBytes } from './FileDropZone';
 
-export default { title: 'Lab/FileDropZone', component: FileDropZone } as Meta;
+export default {
+  title: 'v4/Lab/FileDropZone',
+  component: FileDropZone,
+} as Meta;
 
 export const basic = () => (
   <FileDropZone

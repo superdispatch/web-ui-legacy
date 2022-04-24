@@ -18,6 +18,7 @@ import { DescriptionItem } from './DescriptionItem';
 export default {
   title: 'Lab/DescriptionItem',
   component: DescriptionItem,
+  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

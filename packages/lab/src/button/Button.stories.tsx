@@ -6,7 +6,7 @@ import { Inline, Stack } from '@superdispatch/ui';
 import { Box } from '../box/Box';
 import { AnchorButton, Button } from './Button';
 
-export default { title: 'Lab/Button', component: Button } as Meta;
+export default { title: 'v4/Lab/Button', component: Button } as Meta;
 
 export const basic = () => (
   <Inline verticalAlign="center" horizontalAlign="center">

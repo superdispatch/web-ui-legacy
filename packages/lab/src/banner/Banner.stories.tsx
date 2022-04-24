@@ -7,7 +7,7 @@ import { TextBox } from '../text-box/TextBox';
 import { Banner } from './Banner';
 
 export default {
-  title: 'Lab/Banner',
+  title: 'v4/Lab/Banner',
   component: Banner,
 } as Meta;
 
