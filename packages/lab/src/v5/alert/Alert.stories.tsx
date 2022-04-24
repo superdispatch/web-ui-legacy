@@ -1,7 +1,9 @@
 import { Meta } from '@storybook/react';
-import { Column, Columns, Inline, Stack } from '@superdispatch/ui';
+import { v5 } from '@superdispatch/ui';
 import { Button } from '../button/Button';
 import { Alert } from './Alert';
+
+const { Column, Columns, Inline, Stack } = v5;
 
 export default {
   title: 'Lab/Alert',

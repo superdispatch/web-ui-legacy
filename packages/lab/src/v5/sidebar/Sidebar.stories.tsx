@@ -7,7 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { InputAdornment, TextField } from '@mui/material';
 import { Meta } from '@storybook/react';
-import { Button, Stack } from '@superdispatch/ui';
+import { v5 } from '@superdispatch/ui';
 import { Placeholder } from '../../../../__docs__';
 import { Box } from '../box/Box';
 import { Sidebar } from './Sidebar';
@@ -17,6 +17,8 @@ import { SidebarMenuItem } from './SidebarMenuItem';
 import { SidebarMenuItemAction } from './SidebarMenuItemAction';
 import { SidebarMenuItemAvatar } from './SidebarMenuItemAvatar';
 import { SidebarSubheader } from './SidebarSubheader';
+
+const { Button, Stack } = v5;
 
 export default {
   title: 'Lab/Sidebar',
