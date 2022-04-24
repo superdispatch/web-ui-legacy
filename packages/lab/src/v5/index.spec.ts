@@ -1,8 +1,7 @@
 import * as api from '.';
 
 test('api', () => {
-  const { v5, ...v4 } = api;
-  expect(v4).toMatchInlineSnapshot(`
+  expect(api).toMatchInlineSnapshot(`
     Object {
       "Alert": React.forwardRef(Alert),
       "AnchorButton": React.forwardRef(AnchorButton),
