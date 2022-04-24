@@ -137,7 +137,15 @@ interface TextBoxRootProps {
 }
 
 const TextBoxRoot = styled.span<TextBoxRootProps>(
-  ({ theme, $noWrap, $variant, $align, $color, $display, $wrapOverflow }) =>
+  ({
+    theme,
+    $noWrap,
+    $variant,
+    $align,
+    $color,
+    $display,
+    $wrapOverflow,
+  }: TextBoxRootProps & { theme: SuperDispatchTheme }) =>
     css`
       margin: 0;
       padding: 0;
