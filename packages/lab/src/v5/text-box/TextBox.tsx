@@ -136,7 +136,7 @@ interface TextBoxRootProps {
   $display: ResponsivePropTuple<TextDisplayProp>;
 }
 
-const TextBoxRoot = styled.span<TextBoxRootProps>(
+const TextBoxRoot = styled.span(
   ({
     theme,
     $noWrap,
