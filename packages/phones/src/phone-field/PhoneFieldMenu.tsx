@@ -25,7 +25,7 @@ export interface PhoneFieldMenuProps extends Pick<MenuProps, 'anchorEl'> {
   onChange: (country: CountryISO) => void;
 }
 
-export const PhoneFieldMenu = forwardRef<unknown, PhoneFieldMenuProps>(
+export const PhoneFieldMenu = forwardRef<HTMLDivElement, PhoneFieldMenuProps>(
   ({ anchorEl, value, onClose, onChange }, ref) => {
     const styles = useStyles();
 
