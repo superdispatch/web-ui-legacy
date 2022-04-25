@@ -1,7 +1,7 @@
 - v4
 + v5
 
-@@ -80,44 +80,27 @@
+@@ -80,21 +80,20 @@
         "Column": React.forwardRef(Column),
         "Columns": React.forwardRef(Columns),
         "DescriptionList": React.forwardRef(DescriptionList),
@@ -25,26 +25,16 @@
         "SnackbarStackConsumer": [Function],
         "SnackbarStackProvider": [Function],
         "Stack": React.forwardRef(Stack),
-        "Tag": React.forwardRef(Tag),
-        "ThemeProvider": [Function],
-        "Tiles": React.forwardRef(Tiles),
--       "VisibilityObserver": [Function],
--       "assignRef": [Function],
-        "isColorProp": [Function],
--       "isEmptyReactNode": [Function],
--       "mergeRefs": [Function],
--       "parseAlignProp": [Function],
--       "parseCollapsedBelow": [Function],
--       "parseResponsiveProp": [Function],
--       "parseSpaceProp": [Function],
--       "renderChildren": [Function],
+@@ -109,12 +108,10 @@
+        "parseAlignProp": [Function],
+        "parseCollapsedBelow": [Function],
+        "parseResponsiveProp": [Function],
+        "parseSpaceProp": [Function],
+        "renderChildren": [Function],
 -       "useCollapseBreakpoint": [Function],
 -       "useResponsiveContext": [Function],
--       "useResponsiveProp": [Function],
--       "useResponsivePropRecord": [Function],
--       "useResponsiveValue": [Function],
+        "useResponsiveProp": [Function],
+        "useResponsivePropRecord": [Function],
+        "useResponsiveValue": [Function],
         "useSnackbarStack": [Function],
--       "useUID": [Function],
--       "useVisibilityObserver": [Function],
-      }
-    
+        "useUID": [Function],

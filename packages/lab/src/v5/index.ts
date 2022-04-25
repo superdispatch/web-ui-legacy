@@ -14,4 +14,3 @@ export * from './sidebar/SidebarMenuItemAction';
 export * from './sidebar/SidebarMenuItemAvatar';
 export * from './sidebar/SidebarSubheader';
 export * from './text-box/TextBox';
-export * as v5 from './v5';

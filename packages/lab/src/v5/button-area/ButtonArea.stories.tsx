@@ -1,11 +1,14 @@
-import { ThumbDown, ThumbUp } from '@material-ui/icons';
+import { ThumbDown, ThumbUp } from '@mui/icons-material';
 import { Meta } from '@storybook/react';
-import { Column, Columns, Stack } from '@superdispatch/ui';
+import { v5 } from '@superdispatch/ui';
 import { ButtonArea } from './ButtonArea';
 
+const { Column, Columns, Stack } = v5;
+
 export default {
-  title: 'v4/Lab/ButtonArea',
+  title: 'Lab/ButtonArea',
   component: ButtonArea,
+  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

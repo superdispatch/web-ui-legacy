@@ -1,14 +1,14 @@
-import { InputAdornment, TextField } from '@material-ui/core';
-import AddIcon from '@material-ui/icons/Add';
-import DeleteIcon from '@material-ui/icons/Delete';
-import EditIcon from '@material-ui/icons/Edit';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import NotificationsOffIcon from '@material-ui/icons/NotificationsOff';
-import SearchIcon from '@material-ui/icons/Search';
-import SettingsIcon from '@material-ui/icons/Settings';
+import AddIcon from '@mui/icons-material/Add';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import NotificationsOffIcon from '@mui/icons-material/NotificationsOff';
+import SearchIcon from '@mui/icons-material/Search';
+import SettingsIcon from '@mui/icons-material/Settings';
+import { InputAdornment, TextField } from '@mui/material';
 import { Meta } from '@storybook/react';
-import { Button, Stack } from '@superdispatch/ui';
-import { Placeholder } from '../../../__docs__';
+import { v5 } from '@superdispatch/ui';
+import { Placeholder } from '../../../../__docs__';
 import { Box } from '../box/Box';
 import { Sidebar } from './Sidebar';
 import { SidebarContainer } from './SidebarContainer';
@@ -18,8 +18,10 @@ import { SidebarMenuItemAction } from './SidebarMenuItemAction';
 import { SidebarMenuItemAvatar } from './SidebarMenuItemAvatar';
 import { SidebarSubheader } from './SidebarSubheader';
 
+const { Button, Stack } = v5;
+
 export default {
-  title: 'v4/Lab/Sidebar',
+  title: 'Lab/Sidebar',
   component: Sidebar,
   subcomponents: {
     SidebarContainer,
@@ -29,6 +31,7 @@ export default {
     SidebarMenuItemAvatar,
     SidebarSubheader,
   },
+  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

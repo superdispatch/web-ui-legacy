@@ -103,8 +103,22 @@ it('exposes public api', () => {
       "Tag": React.forwardRef(Tag),
       "ThemeProvider": [Function],
       "Tiles": React.forwardRef(Tiles),
+      "VisibilityObserver": [Function],
+      "assignRef": [Function],
       "isColorProp": [Function],
+      "isEmptyReactNode": [Function],
+      "mergeRefs": [Function],
+      "parseAlignProp": [Function],
+      "parseCollapsedBelow": [Function],
+      "parseResponsiveProp": [Function],
+      "parseSpaceProp": [Function],
+      "renderChildren": [Function],
+      "useResponsiveProp": [Function],
+      "useResponsivePropRecord": [Function],
+      "useResponsiveValue": [Function],
       "useSnackbarStack": [Function],
+      "useUID": [Function],
+      "useVisibilityObserver": [Function],
     }
   `);
 });

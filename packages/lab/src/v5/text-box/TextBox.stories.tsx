@@ -1,9 +1,15 @@
 import { Meta } from '@storybook/react';
-import { Column, Columns, Inline, Stack } from '@superdispatch/ui';
+import { v5 } from '@superdispatch/ui';
 import { Box } from '../box/Box';
 import { TextBox } from './TextBox';
 
-export default { title: 'v4/Lab/TextBox', component: TextBox } as Meta;
+const { Column, Columns, Inline, Stack } = v5;
+
+export default {
+  title: 'Lab/TextBox',
+  component: TextBox,
+  parameters: { v5: true },
+} as Meta;
 
 export const basic = () => (
   <TextBox>
