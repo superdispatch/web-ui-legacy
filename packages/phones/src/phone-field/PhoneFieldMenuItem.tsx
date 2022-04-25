@@ -31,6 +31,9 @@ const useStyles = makeStyles<
     gutters: {},
     root: {},
     selected: {},
+    disabled: {},
+    divider: {},
+    focusVisible: {},
     flag: { marginRight: theme.spacing(1) },
   }),
   { name: 'SD-PhoneFieldMenuItem' },
@@ -50,7 +53,7 @@ export const PhoneFieldMenuItem: ForwardRefExoticComponent<PhoneFieldMenuItemPro
       const countryCode = useMemo(() => getCountryCode(country), [country]);
 
       return (
-        <MenuItem {...props} ref={ref} button={true} classes={styles}>
+        <MenuItem {...props} ref={ref} classes={styles}>
           <PhoneFieldFlag country={country} className={flagClassName} />
           {formatCountry(country)}
           &nbsp;
