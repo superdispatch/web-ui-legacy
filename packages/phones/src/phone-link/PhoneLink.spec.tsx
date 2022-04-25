@@ -1,6 +1,8 @@
-import { renderComponent } from '@superdispatch/ui-testutils';
+import { v5 } from '@superdispatch/ui-testutils';
 import { screen, waitFor } from '@testing-library/react';
 import { PhoneLink } from './PhoneLink';
+
+const { renderComponent } = v5;
 
 test('basic', async () => {
   renderComponent(<PhoneLink phone="+12015550123" />);

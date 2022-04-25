@@ -1,6 +1,8 @@
-import { renderComponent } from '@superdispatch/ui-testutils';
+import { v5 } from '@superdispatch/ui-testutils';
 import { screen, waitFor } from '@testing-library/react';
 import { PhoneText } from './PhoneText';
+
+const { renderComponent } = v5;
 
 test('basic', async () => {
   const view = renderComponent(<PhoneText phone="+12015550123" />);

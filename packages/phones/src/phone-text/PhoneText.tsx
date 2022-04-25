@@ -1,8 +1,10 @@
-import { renderChildren } from '@superdispatch/ui';
+import { v5 } from '@superdispatch/ui';
 import { ReactElement, ReactNode, Suspense } from 'react';
 import { CountryISO } from '../country-code-metadata/CountryCodeMetadata';
 import { useFormattedPhoneNumber } from '../formatted-phone-number/FormattedPhoneNumber';
 import { PhoneNumberFormat } from '../phone-service/PhoneService';
+
+const { renderChildren } = v5;
 
 export interface PhoneTextProps {
   phone: unknown;

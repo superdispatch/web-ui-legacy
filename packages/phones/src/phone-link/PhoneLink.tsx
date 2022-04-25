@@ -1,5 +1,5 @@
-import { Link, LinkProps } from '@material-ui/core';
-import { renderChildren } from '@superdispatch/ui';
+import { Link, LinkProps } from '@mui/material';
+import { v5 } from '@superdispatch/ui';
 import {
   forwardRef,
   ForwardRefExoticComponent,
@@ -13,6 +13,8 @@ import {
   PhoneNumberFormat,
   usePhoneService,
 } from '../phone-service/PhoneService';
+
+const { renderChildren } = v5;
 
 export interface PhoneLinkProps
   extends RefAttributes<HTMLAnchorElement>,

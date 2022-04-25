@@ -4,8 +4,8 @@ import {
   MenuItemProps,
   Theme,
   Typography,
-} from '@material-ui/core';
-import { ClassNameMap, makeStyles } from '@material-ui/styles';
+} from '@mui/material';
+import { ClassNameMap, makeStyles } from '@mui/styles';
 import {
   forwardRef,
   ForwardRefExoticComponent,
