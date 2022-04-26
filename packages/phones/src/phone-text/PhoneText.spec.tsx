@@ -10,6 +10,18 @@ test('basic', async () => {
   await screen.findByText(/201/);
 
   expect(view.container).toMatchInlineSnapshot(`
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
     <div>
       +1 201-555-0123
     </div>
@@ -24,6 +36,18 @@ test('format', async () => {
   await screen.findByText(/201/);
 
   expect(view.container).toMatchInlineSnapshot(`
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
     <div>
       (201) 555-0123
     </div>
@@ -36,6 +60,18 @@ test('country', async () => {
   await screen.findByText(/64/);
 
   expect(view.container).toMatchInlineSnapshot(`
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
     <div>
       +64 20 1555 0123
     </div>
@@ -49,7 +85,21 @@ test('invalid', async () => {
     expect(screen.queryByText('Suspended…')).toBeNull();
   });
 
-  expect(view.container).toMatchInlineSnapshot(`<div />`);
+  expect(view.container).toMatchInlineSnapshot(`
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    <div />
+  `);
 });
 
 test('fallback', async () => {
@@ -60,6 +110,18 @@ test('fallback', async () => {
   });
 
   expect(view.container).toMatchInlineSnapshot(`
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
     <div>
       Invalid.
     </div>
