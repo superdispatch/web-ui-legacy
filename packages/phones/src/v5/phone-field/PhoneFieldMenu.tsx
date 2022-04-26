@@ -1,12 +1,14 @@
-import { Divider, Menu, MenuProps } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
-import { SuperDispatchTheme } from '@superdispatch/ui';
+import { Divider, Menu, MenuProps } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { v5 } from '@superdispatch/ui';
 import { forwardRef } from 'react';
 import {
   CountryISO,
   listCountries,
 } from '../country-code-metadata/CountryCodeMetadata';
 import { PhoneFieldMenuItem } from './PhoneFieldMenuItem';
+
+type SuperDispatchTheme = v5.SuperDispatchTheme;
 
 const useStyles = makeStyles(
   (theme: SuperDispatchTheme) => ({
@@ -23,7 +25,7 @@ export interface PhoneFieldMenuProps extends Pick<MenuProps, 'anchorEl'> {
   onChange: (country: CountryISO) => void;
 }
 
-export const PhoneFieldMenu = forwardRef<unknown, PhoneFieldMenuProps>(
+export const PhoneFieldMenu = forwardRef<HTMLDivElement, PhoneFieldMenuProps>(
   ({ anchorEl, value, onClose, onChange }, ref) => {
     const styles = useStyles();
 

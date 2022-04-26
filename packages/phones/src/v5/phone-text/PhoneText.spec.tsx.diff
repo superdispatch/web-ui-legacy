@@ -1,0 +1,99 @@
+- v4
++ v5
+
+
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     @media print {
++
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
+      <div>
+        +1 201-555-0123
+      </div>
+    
+- v4
++ v5
+
+
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     @media print {
++
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
+      <div>
+        (201) 555-0123
+      </div>
+    
+- v4
++ v5
+
+
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     @media print {
++
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
+      <div>
+        +64 20 1555 0123
+      </div>
+    
+- v4
++ v5
+
+- <div />
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     @media print {
++
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     <div />
++   
+- v4
++ v5
+
+
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     @media print {
++
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
+      <div>
+        Invalid.
+      </div>
+    

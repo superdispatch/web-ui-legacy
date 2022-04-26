@@ -1,0 +1,39 @@
+- v4
++ v5
+
+- <div />
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     @media print {
++
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     <div />
++   
+- v4
++ v5
+
+
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
++     @media print {
++
++     }
++
++     @media (min-width:0px) and (max-width:599.95px) {
++
++     }
++
+      <div>
+        Phone: (585) 617-1234 (Home) | (585) 489-1234 (Cell)
+      </div>
+    
