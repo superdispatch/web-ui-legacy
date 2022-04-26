@@ -18,15 +18,17 @@ it('render null with boolean child', () => {
 });
 
 it('render child', () => {
-  let child = 'Test';
   const { rerender } = render(
-    <ExitTransitionPlaceholder in={true}>{child}</ExitTransitionPlaceholder>,
+    <ExitTransitionPlaceholder in={true}>
+      <p>Test</p>
+    </ExitTransitionPlaceholder>,
   );
-  expect(screen.getByText(child)).toBeInTheDocument();
+  expect(screen.getByText('Test')).toBeInTheDocument();
 
-  child = 'newChild';
   rerender(
-    <ExitTransitionPlaceholder in={false}>{child}</ExitTransitionPlaceholder>,
+    <ExitTransitionPlaceholder in={false}>
+      <p />
+    </ExitTransitionPlaceholder>,
   );
-  expect(screen.queryByText(child)).toBeNull();
+  expect(screen.getByText('Test')).toBeInTheDocument();
 });
