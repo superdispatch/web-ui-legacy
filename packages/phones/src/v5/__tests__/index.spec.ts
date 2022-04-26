@@ -1,9 +1,7 @@
 import * as api from '..';
 
 test('api', () => {
-  const { v5, ...v4 } = api;
-
-  expect(v4).toMatchInlineSnapshot(`
+  expect(api).toMatchInlineSnapshot(`
     Object {
       "DEFAULT_COUNTRY": "US",
       "PhoneField": React.forwardRef(PhoneField),
