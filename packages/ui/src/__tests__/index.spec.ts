@@ -118,6 +118,7 @@ it('exposes public api', () => {
       "parseSpaceProp": [Function],
       "renderChildren": [Function],
       "useCollapseBreakpoint": [Function],
+      "useMinBreakpoint": [Function],
       "useResizeObserver": [Function],
       "useResponsiveContext": [Function],
       "useResponsiveProp": [Function],
