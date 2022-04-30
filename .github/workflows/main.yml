@@ -47,9 +47,8 @@ jobs:
         with:
           cache-key: yarn-v3
       - run: yarn cypress install
-      - run: yarn percy exec -- cypress run
+      - run: yarn cypress run
         env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           CYPRESS_HOST: https://ui.superdispatch.org
 
   visual-testing:
