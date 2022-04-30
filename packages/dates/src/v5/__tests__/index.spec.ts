@@ -1,8 +1,7 @@
 import * as api from '..';
 
 it('exposes public api', () => {
-  const { v5, ...v4 } = api;
-  expect(v4).toMatchInlineSnapshot(`
+  expect(api).toMatchInlineSnapshot(`
     Object {
       "Calendar": React.forwardRef(Calendar),
       "CalendarQuickSelection": React.forwardRef(CalendarQuickSelection),
