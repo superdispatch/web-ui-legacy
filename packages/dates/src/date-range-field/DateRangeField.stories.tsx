@@ -3,7 +3,7 @@ import { Meta } from '@storybook/react';
 import { DateRangeField } from './DateRangeField.playroom';
 
 export default {
-  title: 'Dates/DateRangeField',
+  title: 'v4/Dates/DateRangeField',
   component: DateRangeField,
 } as Meta;
 

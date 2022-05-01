@@ -3,7 +3,7 @@ import { Meta } from '@storybook/react';
 import { DateField } from './DateField.playroom';
 
 export default {
-  title: 'Dates/DateField',
+  title: 'v4/Dates/DateField',
   component: DateField,
 } as Meta;
 

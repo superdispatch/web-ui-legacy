@@ -7,7 +7,7 @@ import {
 } from './CalendarQuickSelection';
 
 export default {
-  title: 'Dates/Calendar',
+  title: 'v4/Dates/Calendar',
   component: Calendar,
   subcomponents: { CalendarQuickSelection, CalendarQuickSelectionItem },
 } as Meta;
