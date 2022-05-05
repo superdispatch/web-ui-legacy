@@ -80,3 +80,17 @@ jobs:
         with:
           command: yarn test-visual-ci ${{ needs.preview.outputs.deploy-url }}
           update-command: yarn visual-update-ci ${{ needs.preview.outputs.deploy-url }}
+
+  visual-testing2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - uses: umidbekk/actions/npm/install@v2
+        with:
+          cache-key: yarn-v4
+
+      - uses: superdispatch/actions/update-snapshots@v1.5
+        with:
+          command: yarn test-visual-ci https://superdispatch-ui--369-e7jsnuqu.web.app
+          update-command: yarn visual-update-ci https://superdispatch-ui--369-e7jsnuqu.web.app
