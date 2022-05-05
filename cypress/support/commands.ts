@@ -6,8 +6,6 @@ declare global {
       storyAPI: typeof storyAPI;
       selectStory: typeof selectStory;
       visitStorybook: typeof visitStorybook;
-      takeSnapshots: typeof takeSnapshots;
-      takeStorySnapshot: typeof takeStorySnapshot;
     }
   }
 }
@@ -38,28 +36,4 @@ function selectStory(kind: string, name: string): void {
 
     cy.get(`[data-story="${story.id}"]`).should('be.visible');
   });
-}
-
-type SnapshotWidths = ReadonlyArray<'mobile' | 'tablet' | 'desktop'>;
-
-Cypress.Commands.add('takeSnapshots', takeSnapshots);
-function takeSnapshots(
-  name: string,
-  widths: SnapshotWidths = ['desktop'],
-): void {
-  cy.percySnapshot(name, {
-    widths: widths.map((width) =>
-      width === 'mobile' ? 320 : width === 'tablet' ? 768 : 1024,
-    ),
-  });
-}
-
-Cypress.Commands.add('takeStorySnapshot', takeStorySnapshot);
-function takeStorySnapshot(
-  kind: string,
-  name: string,
-  widths?: SnapshotWidths,
-): void {
-  cy.selectStory(kind, name);
-  cy.takeSnapshots(`${kind}: ${name}`, widths);
 }

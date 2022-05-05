@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v3
+          cache-key: yarn-v4
 
       - run: yarn check:types
       - run: yarn lint
@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v3
+          cache-key: yarn-v4
 
       - run: yarn docs
       - id: deploy
@@ -45,9 +45,19 @@ jobs:
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v3
+          cache-key: yarn-v4
       - run: yarn cypress install
-      - run: yarn percy exec -- cypress run
+      - run: yarn cypress run
         env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           CYPRESS_HOST: https://ui.superdispatch.org
+
+  visual-testing:
+    needs:
+      - checks
+      - docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: umidbekk/actions/prepare-node-repo@v2
+        with:
+          cache-key: yarn-v4
+      - run: yarn test-visual-ci https://ui.superdispatch.org

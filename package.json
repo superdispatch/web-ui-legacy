@@ -34,6 +34,11 @@
     "storybook:start": "start-storybook -p 5000 --ci",
     "tdd": "jest --watch",
     "test": "jest --coverage --forceExit",
+    "visual-approve": "yarn loki approve",
+    "visual-update": "yarn loki update --port 5000 --chromeRetries 2",
+    "visual-update-ci": "yarn loki update --requireReference --verboseRenderer --reactUri",
+    "test-visual": "yarn loki test --port 5000 --chromeRetries 2",
+    "test-visual-ci": "yarn loki test --requireReference --verboseRenderer --reactUri",
     "test-branch": "yarn test --changedSince origin/main",
     "test-changed": "yarn test --onlyChanged"
   },
@@ -88,6 +93,7 @@
     ]
   },
   "resolutions": {
+    "react": "^17",
     "react-docgen-typescript": "2.1.1"
   },
   "devDependencies": {
@@ -96,8 +102,6 @@
     "@material-ui/icons": "4.11.2",
     "@material-ui/lab": "4.0.0-alpha.60",
     "@mdi/js": "6.5.95",
-    "@percy/cli": "1.0.5",
-    "@percy/cypress": "3.1.1",
     "@pika/pack": "0.5.0",
     "@pika/plugin-build-node": "0.9.2",
     "@pika/plugin-build-types": "0.9.2",
@@ -153,6 +157,7 @@
     "lerna": "4.0.0",
     "lint-staged": "11.1.4",
     "lodash": "4.17.21",
+    "loki": "^0.29.0",
     "lorem-ipsum": "2.0.4",
     "mockdate": "3.0.5",
     "npm-run-all": "4.1.5",
@@ -176,7 +181,6 @@
   "engines": {
     "node": "^12 || ^14 || ^16"
   },
-  "resetMocks": true,
   "size-limit": [
     {
       "ignore": [
