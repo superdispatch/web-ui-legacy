@@ -116,7 +116,7 @@ export const basic = () => {
             <NavbarAvatar
               title="John"
               subtitle="Smith"
-              src="https://source.unsplash.com/featured/256x256/?avatar"
+              src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80&w=256&h=256"
             >
               JS
             </NavbarAvatar>
