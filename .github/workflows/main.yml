@@ -60,4 +60,11 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v4
+
       - run: yarn test-visual-ci https://ui.superdispatch.org
+
+      - if: ${{ failure() }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: visual-tests
+          path: .loki
