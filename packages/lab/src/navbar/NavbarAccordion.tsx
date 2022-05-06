@@ -71,6 +71,7 @@ const NavbarAccordionSummary = styled(AccordionSummary)`
   &:hover,
   &[aria-current],
   &[data-active='true'] {
+    color: ${Color.White};
     background-color: #2f394a;
     border-left-color: ${Color.Blue300};
   }
