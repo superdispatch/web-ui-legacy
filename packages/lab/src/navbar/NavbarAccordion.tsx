@@ -64,7 +64,12 @@ const NavbarAccordionSummary = styled(AccordionSummary)`
     min-height: 40px;
   }
 
+  &.MuiAccordionSummary-content {
+    align-items: center;
+  }
+
   &:hover,
+  &[aria-current],
   &[data-active='true'] {
     background-color: #2f394a;
     border-left-color: ${Color.Blue300};

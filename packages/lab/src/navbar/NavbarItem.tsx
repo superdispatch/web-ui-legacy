@@ -53,14 +53,10 @@ const NavbarItemRoot = styled.div`
   border-left: 4px solid transparent;
 
   &:hover,
-  &[aria-current] {
-    background-color: #2f394a;
-    color: ${Color.White};
-    border-left-color: ${Color.Blue300};
-  }
-
+  &[aria-current],
   &[data-active='true'] {
     background-color: #2f394a;
+    color: ${Color.White};
     border-left-color: ${Color.Blue300};
   }
 `;
