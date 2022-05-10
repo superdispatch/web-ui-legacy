@@ -84,17 +84,21 @@ const items = [
     key: 'Orders',
     items: [
       {
-        icon: <People />,
         label: 'Customers',
         groupKey: 2,
         key: 'Customers',
       },
       {
-        icon: <Settings />,
         label: 'Settings',
         groupKey: 2,
         key: 'Settings',
         active: true,
+      },
+      {
+        ident: 1,
+        groupKey: 2,
+        label: 'Requests',
+        key: 'Requests',
       },
     ],
   },
