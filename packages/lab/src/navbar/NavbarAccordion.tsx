@@ -96,7 +96,7 @@ export interface NavbarAccordionProps {
   label: ReactNode;
   icon?: ReactNode;
   gutter?: boolean;
-  items: NavbarItemOptions[];
+  items: Array<Omit<NavbarItemOptions, 'icon'>>;
   onClick: (event: MouseEvent<HTMLDivElement>) => void;
 }
 
@@ -158,7 +158,7 @@ export function NavbarAccordion({
           <NavbarItem
             {...item}
             key={item.key}
-            ident={ident + 1}
+            ident={ident}
             active={item.active}
             gutter={prev && prev.groupKey !== item.groupKey}
             onClick={(event) => {
