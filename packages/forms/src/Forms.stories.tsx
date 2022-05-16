@@ -11,6 +11,7 @@ import { Form, FormikProvider } from 'formik';
 import { useRef } from 'react';
 import {
   FormikDateField,
+  FormikMaxLengthTextField,
   FormikTextField,
   SuspendedFormikPhoneField,
   useFormikEnhanced,
@@ -32,6 +33,7 @@ export const SignUp = () => {
       $showPassword: boolean;
       dateOfBirth: undefined | string;
       phone: string;
+      about: string;
     },
     Record<string, unknown>
   >({
@@ -41,6 +43,7 @@ export const SignUp = () => {
       $showPassword: false,
       dateOfBirth: undefined,
       phone: '',
+      about: '',
     },
     onSubmit(values) {
       return new Promise((resolve, reject) => {
@@ -158,6 +161,13 @@ export const SignUp = () => {
               validate={(value, phoneService) =>
                 phoneService.validate(value, { required: true })
               }
+            />
+
+            <FormikMaxLengthTextField
+              fullWidth={true}
+              name="about"
+              label="About"
+              maxLength={100}
             />
 
             {status.type === 'rejected' && (
