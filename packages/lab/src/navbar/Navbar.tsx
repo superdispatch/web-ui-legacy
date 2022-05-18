@@ -9,7 +9,7 @@ import {
 } from 'react';
 import styled from 'styled-components';
 import { NavbarBottomBar, NavbarBottomBarItem } from './NavbarBottomBar';
-import { NavbarContext } from './NavbarContext';
+import { NavbarContext, NavbarContextType } from './NavbarContext';
 import { NavbarItemOptions, NavbarList } from './NavbarList';
 
 const Aside = styled.aside`
@@ -53,18 +53,19 @@ export function Navbar({
   const isMobile = platform === 'mobile';
 
   const matches = useMediaQuery(theme.breakpoints.up('md'), { noSsr: true });
-  const [isExpanded, setIsExpanded] = useState(matches);
+  const [isMenuExpanded, setMenuExpanded] = useState(matches);
 
   const hasBadge = hasExtraBadge || items.some((item) => item.badge);
 
-  const ctx = useMemo(
+  const ctx = useMemo<NavbarContextType>(
     () => ({
       isDrawerOpen,
-      isExpanded,
-      setIsExpanded,
+      isMenuExpanded,
       setDrawerOpen,
+      setMenuExpanded,
+      isNavbarExpanded: isMenuExpanded || isDrawerOpen,
     }),
-    [isDrawerOpen, isExpanded, setIsExpanded, setDrawerOpen],
+    [isDrawerOpen, isMenuExpanded, setMenuExpanded, setDrawerOpen],
   );
 
   return (

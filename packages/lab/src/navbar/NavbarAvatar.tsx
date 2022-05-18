@@ -27,25 +27,25 @@ export function NavbarAvatar({
   children,
   ...props
 }: NavbarAvatarProps): ReactElement {
-  const { isExpanded, isDrawerOpen } = useNavbarContext();
+  const { isNavbarExpanded } = useNavbarContext();
 
-  if (isExpanded || isDrawerOpen) {
-    return (
-      <Columns space="xsmall" align="center">
-        <Column width="content">
-          <Avatar {...props}>{children}</Avatar>
-        </Column>
-
-        <Column>
-          <Stack space="none">
-            <StyledTypography variant="caption">{title}</StyledTypography>
-
-            <StyledTypography variant="caption">{subtitle}</StyledTypography>
-          </Stack>
-        </Column>
-      </Columns>
-    );
+  if (!isNavbarExpanded) {
+    return <Avatar {...props}>{children}</Avatar>;
   }
 
-  return <Avatar {...props}>{children}</Avatar>;
+  return (
+    <Columns space="xsmall" align="center">
+      <Column width="content">
+        <Avatar {...props}>{children}</Avatar>
+      </Column>
+
+      <Column>
+        <Stack space="none">
+          <StyledTypography variant="caption">{title}</StyledTypography>
+
+          <StyledTypography variant="caption">{subtitle}</StyledTypography>
+        </Stack>
+      </Column>
+    </Columns>
+  );
 }

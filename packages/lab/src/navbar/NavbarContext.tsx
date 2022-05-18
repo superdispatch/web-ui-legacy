@@ -1,18 +1,20 @@
 import { noop } from 'lodash';
 import { createContext, useContext } from 'react';
 
-interface NavbarContextType {
+export interface NavbarContextType {
   isDrawerOpen: boolean;
-  isExpanded: boolean;
+  isMenuExpanded: boolean;
+  isNavbarExpanded: boolean;
 
-  setIsExpanded: (value: boolean) => void;
   setDrawerOpen: (value: boolean) => void;
+  setMenuExpanded: (value: boolean) => void;
 }
 
 export const NavbarContext = createContext<NavbarContextType>({
   isDrawerOpen: false,
-  isExpanded: false,
-  setIsExpanded: noop,
+  isMenuExpanded: false,
+  isNavbarExpanded: false,
+  setMenuExpanded: noop,
   setDrawerOpen: noop,
 });
 

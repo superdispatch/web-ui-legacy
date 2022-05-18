@@ -97,7 +97,7 @@ export interface NavbarAccordionProps {
   icon?: ReactNode;
   gutter?: boolean;
   items: Array<Omit<NavbarItemOptions, 'icon'>>;
-  onClick: (event: MouseEvent<HTMLDivElement>) => void;
+  onClick?: (event: MouseEvent<HTMLDivElement>) => void;
 }
 
 export function NavbarAccordion({
@@ -108,43 +108,36 @@ export function NavbarAccordion({
   onClick,
 }: NavbarAccordionProps): ReactElement {
   const uid = useUID();
-  const {
-    isExpanded: isMenuExpanded,
-    isDrawerOpen,
-    setDrawerOpen,
-  } = useNavbarContext();
+  const { setDrawerOpen, isNavbarExpanded } = useNavbarContext();
 
-  const [isExpanded, setExpanded] = useState(false);
+  const [isExpanded, setExpanded] = useState(true);
 
+  // sync accordion state with Desktop menu state
   useEffect(() => {
-    if (!isMenuExpanded) {
-      setExpanded(false);
-    }
-  }, [isMenuExpanded]);
+    setExpanded(isNavbarExpanded);
+  }, [isNavbarExpanded]);
 
   return (
     <NavbarAccordionRoot
-      aria-labelledby={uid}
+      square={true}
       gutter={!!gutter}
+      aria-labelledby={uid}
       expanded={isExpanded}
       onClick={(event) => {
-        if (isMenuExpanded || isDrawerOpen) {
+        onClick?.(event);
+
+        if (isNavbarExpanded) {
           setExpanded(!isExpanded);
         }
-        onClick(event);
       }}
-      square={true}
     >
       <NavbarAccordionSummary
         data-active={!isExpanded && items.some((item) => item.active)}
-        data-expanded={isMenuExpanded || isDrawerOpen}
+        data-expanded={isNavbarExpanded}
         expandIcon={<ExpandMore />}
       >
         <IconWrapper>{icon}</IconWrapper>
-        <NavbarAccordionLabel
-          id={uid}
-          data-expanded={isMenuExpanded || isDrawerOpen}
-        >
+        <NavbarAccordionLabel id={uid} data-expanded={isNavbarExpanded}>
           {label}
         </NavbarAccordionLabel>
       </NavbarAccordionSummary>

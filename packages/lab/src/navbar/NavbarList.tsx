@@ -150,10 +150,10 @@ export function NavbarList({
   const platform = useResponsiveValue('mobile', 'tablet', 'desktop');
   const isMobile = platform === 'mobile';
 
-  const { isExpanded, isDrawerOpen, setDrawerOpen, setIsExpanded } =
+  const { isMenuExpanded, isDrawerOpen, setDrawerOpen, setMenuExpanded } =
     useNavbarContext();
 
-  const isSidebarOpened = isMobile ? isDrawerOpen : isExpanded;
+  const isSidebarOpened = isMobile ? isDrawerOpen : isMenuExpanded;
 
   const filteredItems: Array<NavbarItemOptions | NavbarAccordionOptions> =
     useMemo(
@@ -177,12 +177,12 @@ export function NavbarList({
         {!isMobile && (
           <ExpandIconButton
             disableRipple={true}
-            style={isExpanded ? { paddingRight: 0 } : {}}
+            style={isMenuExpanded ? { paddingRight: 0 } : {}}
             onClick={() => {
-              setIsExpanded(!isExpanded);
+              setMenuExpanded(!isMenuExpanded);
             }}
           >
-            {isExpanded ? <MenuOpen /> : <MenuIcon />}
+            {isMenuExpanded ? <MenuOpen /> : <MenuIcon />}
           </ExpandIconButton>
         )}
       </Header>
