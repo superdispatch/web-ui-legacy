@@ -5688,10 +5688,10 @@ babel-plugin-named-asset-import@^0.3.1:
   resolved "https://registry.yarnpkg.com/babel-plugin-named-asset-import/-/babel-plugin-named-asset-import-0.3.7.tgz#156cd55d3f1228a5765774340937afc8398067dd"
   integrity sha512-squySRkf+6JGnvjoUtDEjSREJEBirnXi9NqP6rjSYsylxQxqBTz+pkmf395i9E2zsvmYUaI40BHo6SqZUdydlw==
 
-babel-plugin-object-to-json-parse@0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/babel-plugin-object-to-json-parse/-/babel-plugin-object-to-json-parse-0.2.2.tgz#0582af59ce3df4babc2a75f0b512b2861f4d871b"
-  integrity sha512-QASTW0qQ22h3Uij8tA75XGM2PX8mnsEh47Cps0z+H32db+0CHfaDEeYadY8Knw2Kbk3yS2lIX+7kZV4zJSuSTw==
+babel-plugin-object-to-json-parse@0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-object-to-json-parse/-/babel-plugin-object-to-json-parse-0.2.3.tgz#11841775bc00fa53be609db07c014cefd99bfa31"
+  integrity sha512-f3oelsVh3NnBjwq1R6pNVV3ESRMmPtxwr7c2U0Gzv5sle266ISnaJkuf8MYDN6ORwSR9FNVP8QZ54nX+nhmLnA==
   dependencies:
     "@babel/core" "^7.16.0"
     "@babel/types" "^7.16.0"
