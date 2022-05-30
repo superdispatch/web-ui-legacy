@@ -169,7 +169,7 @@
     "react-element-to-jsx-string": "14.3.4",
     "react-test-renderer": "17.0.2",
     "rimraf": "3.0.2",
-    "semver": "7.3.5",
+    "semver": "7.3.7",
     "size-limit": "5.0.5",
     "snapshot-diff": "0.9.0",
     "storybook-addon-playroom": "2.1.4",
