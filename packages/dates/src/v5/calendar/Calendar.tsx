@@ -67,12 +67,12 @@ const useStyles = makeStyles<
 
     navBar: {},
     navButtonPrev: {
-      position: 'absolute',
+      position: 'absolute !important' as 'absolute',
       top: theme.spacing(1.5),
       left: theme.spacing(1.5),
     },
     navButtonNext: {
-      position: 'absolute',
+      position: 'absolute !important' as 'absolute',
       top: theme.spacing(1.5),
       right: theme.spacing(1.5),
     },
