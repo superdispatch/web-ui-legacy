@@ -1,0 +1,89 @@
+Compared values have no visual difference.
+Compared values have no visual difference.
+Compared values have no visual difference.
+- v4
++ v5
+
+@@ -19,11 +19,11 @@
+      "height": "40px",
+      "justifyContent": "center",
+      "margin": "1px",
+      "position": "relative",
+      "transition": "color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+-     background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
++         background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+      "width": "40px",
+      "zIndex": 1,
+    },
+    ".SD-Calendar-day.SD-Calendar-disabled": Object {
+      "color": "Color.Dark100",
+@@ -53,31 +53,31 @@
+      "top": "0",
+      "transition": "background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+      "zIndex": -1,
+    },
+    ".SD-Calendar-day:first-child:before,
+- .SD-Calendar-day.SD-Calendar-firstDayOfMonth:before": Object {
++     .SD-Calendar-day.SD-Calendar-firstDayOfMonth:before": Object {
+      "borderRadius": "4px 0px 0px 4px",
+    },
+    ".SD-Calendar-day:hover,
+- .SD-Calendar-day:focus": Object {
++     .SD-Calendar-day:focus": Object {
+      "outline": "none",
+    },
+    ".SD-Calendar-day:last-child:before,
+- .SD-Calendar-day.SD-Calendar-lastDayOfMonth:before": Object {
++     .SD-Calendar-day.SD-Calendar-lastDayOfMonth:before": Object {
+      "borderRadius": "0px 4px 4px 0px",
+    },
+    ".SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled)": Object {
+      "color": "Color.Dark500",
+      "cursor": "pointer",
+    },
+    ".SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active,
+- .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected": Object {
++     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected": Object {
+      "color": "Color.White",
+    },
+    ".SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active:after,
+- .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected:after": Object {
++     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected:after": Object {
+      "backgroundColor": "Color.Blue300",
+    },
+    ".SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-blue": Object {
+      "backgroundColor": "Color.Blue50",
+      "color": "Color.Blue500",
+@@ -104,11 +104,11 @@
+    ".SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-yellow": Object {
+      "backgroundColor": "Color.Yellow50",
+      "color": "Color.Yellow500",
+    },
+    ".SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):hover,
+- .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):focus": Object {
++     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):focus": Object {
+      "backgroundColor": "Color.Silver100",
+    },
+    ".SD-Calendar-footer": Object {
+      "padding": "16px",
+    },
+@@ -120,17 +120,17 @@
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "center",
+    },
+    ".SD-Calendar-navButtonNext": Object {
+-     "position": "absolute",
++     "position": "absolute !important",
+      "right": "12px",
+      "top": "12px",
+    },
+    ".SD-Calendar-navButtonPrev": Object {
+      "left": "12px",
+-     "position": "absolute",
++     "position": "absolute !important",
+      "top": "12px",
+    },
+    ".SD-Calendar-week": Object {
+      "display": "flex",
+    },
