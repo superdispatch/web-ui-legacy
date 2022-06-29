@@ -78,5 +78,6 @@ jobs:
 
       - uses: superdispatch/actions/update-snapshots@v1.5
         with:
+          token: ${{ secrets.GHP_TOKEN }}
           command: yarn test-visual-ci ${{ needs.preview.outputs.deploy-url }}
           update-command: yarn visual-update-ci ${{ needs.preview.outputs.deploy-url }}
