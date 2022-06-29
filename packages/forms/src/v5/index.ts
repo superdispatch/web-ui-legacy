@@ -1,5 +1,3 @@
-import * as v5 from './v5';
-
 export * from './checkbox/FormikCheckboxField';
 export * from './date/FormikDateField';
 export * from './enhanced/FormikEnhanced';
@@ -8,4 +6,3 @@ export * from './enhanced/useFormikEnhanced';
 export * from './phone/FormikPhoneField';
 export * from './radio/FormikRadioGroupField';
 export * from './text/FormikTextField';
-export { v5 };
