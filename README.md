@@ -10,6 +10,7 @@
 - [@superdispatch/forms](https://github.com/superdispatch/ui/tree/master/packages/forms) - UI, Date, Time and Phone Number component adapters to work with forms
 
 ## Publishing to NPM
+
 1.  Open an [NPM](https://www.npmjs.com/) account if you don't have one
 2.  Ask frontend chapter lead to give access to Superdispatch organization in NPM
 3.  Enable 2FA for your NPM account
@@ -28,5 +29,3 @@ If error points at `@superdispatch/...` package, open respective package directo
 
 - Run logged `tsc` command.
 - Try solution of error described above (_tsc error: Output file ..._).
-
-
