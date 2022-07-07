@@ -9,6 +9,16 @@
 - [@superdispatch/phones](https://github.com/superdispatch/ui/tree/master/packages/phones) - Phone Number components
 - [@superdispatch/forms](https://github.com/superdispatch/ui/tree/master/packages/forms) - UI, Date, Time and Phone Number component adapters to work with forms
 
+## Publishing to NPM
+
+1.  Open an [NPM](https://www.npmjs.com/) account if you don't have one
+2.  Ask frontend chapter lead to give access to Superdispatch organization in NPM
+3.  Enable 2FA for your NPM account
+4.  Run `npm login` from your terminal and login into your account
+5.  Run `yarn release`
+6.  Make sure the tag is created on Github and packages published into NPM
+7.  Update all usages of packages in product repositories.
+
 ## Troubleshooting
 
 #### `tsc` error: Output file '...' has not been built from source file '...'
