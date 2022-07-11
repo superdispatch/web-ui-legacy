@@ -157,7 +157,7 @@
     "lerna": "4.0.0",
     "lint-staged": "11.1.4",
     "lodash": "4.17.21",
-    "loki": "0.29.0",
+    "loki": "0.30.3",
     "lorem-ipsum": "2.0.8",
     "mockdate": "3.0.5",
     "npm-run-all": "4.1.5",
