@@ -51,10 +51,11 @@ function parseMargin(input: unknown): string {
 // Borders
 //
 
-export type BorderRadiusProp = 'none' | 'small';
+export type BorderRadiusProp = 'none' | 'small' | 'medium';
 const normalizeBorderRadius = createRuleNormalizer<BorderRadiusProp>({
   none: 0,
   small: 4,
+  medium: 8,
 });
 
 export type BorderWidthProp = 'none' | 'small' | 'medium' | 'large';
