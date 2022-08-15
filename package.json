@@ -136,7 +136,7 @@
     "@types/react-is": "17.0.3",
     "@types/react-window": "1.8.5",
     "@types/semver": "7.3.9",
-    "@types/styled-components": "5.1.25",
+    "@types/styled-components": "5.1.26",
     "babel-jest": "27.4.5",
     "babel-loader": "8.2.5",
     "babel-plugin-direct-import": "0.9.2",
