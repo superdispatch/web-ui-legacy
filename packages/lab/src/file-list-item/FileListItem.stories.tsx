@@ -19,6 +19,7 @@ export const basic = () => (
   <Stack>
     <FileListItem name="Read this document.txt" />
     <FileListItem name="TST1208 Dispatcher Info.pdf" />
+    <FileListItem name="TST1208 Dispatcher Info.pdf" canDelete={false} />
     <FileListItem
       name="attachment.jpg"
       url="https://picsum.photos/seed/picsum/1024/768"
