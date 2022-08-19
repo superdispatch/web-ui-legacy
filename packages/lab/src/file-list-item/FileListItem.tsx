@@ -79,6 +79,7 @@ export const FileListItem = forwardRef<HTMLDivElement, FileListItemProps>(
         onMouseLeave={() => {
           setIsHovered(false);
         }}
+        aria-label="file-list-item"
       >
         <Columns align="center" space="xsmall">
           <Column width="content">
