@@ -6,11 +6,11 @@ import { Form, FormikProvider } from 'formik';
 import {
   FormikDateField,
   FormikMaxLengthTextField,
+  FormikPasswordField,
   FormikTextField,
   SuspendedFormikPhoneField,
   useFormikEnhanced,
 } from '.';
-import { FormikPasswordField } from './text/FormikPasswordField';
 
 export default {
   title: 'Recipes/Forms',
