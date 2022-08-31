@@ -35,3 +35,5 @@ export const FormikPasswordField: ForwardRefExoticComponent<FormikTextFieldProps
       />
     );
   });
+
+FormikPasswordField.displayName = 'FormikPasswordField';
