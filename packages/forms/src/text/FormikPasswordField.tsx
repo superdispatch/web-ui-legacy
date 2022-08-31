@@ -1,11 +1,6 @@
 import { IconButton, InputAdornment } from '@material-ui/core';
 import { Visibility, VisibilityOff } from '@material-ui/icons';
-import React, {
-  forwardRef,
-  ForwardRefExoticComponent,
-  useRef,
-  useState,
-} from 'react';
+import { forwardRef, ForwardRefExoticComponent, useRef, useState } from 'react';
 import { FormikTextField, FormikTextFieldProps } from './FormikTextField';
 
 export const FormikPasswordField: ForwardRefExoticComponent<FormikTextFieldProps> =
