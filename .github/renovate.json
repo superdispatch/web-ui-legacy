@@ -1,3 +1,3 @@
 {
-  "extends": ["github>superdispatch/js-tools:renovate-config", "config:js-lib"]
+  "extends": ["@superdispatch", "config:js-lib"]
 }

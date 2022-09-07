@@ -9,7 +9,6 @@ const SidebarRoot = styled.aside`
   overflow-y: auto;
   overflow-x: hidden;
 
-  width: 240px;
   height: 100vh;
   background-color: ${Color.White};
   border-right: 1px solid ${Color.Silver400};

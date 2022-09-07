@@ -1,5 +1,5 @@
-import { ResizeObserver } from '@juggle/resize-observer';
 import {
+  Divider,
   Grid,
   Menu,
   MenuItem,
@@ -9,7 +9,6 @@ import {
 } from '@material-ui/core';
 import { MoreHoriz } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/styles';
-import { useEventHandler } from '@superdispatch/hooks';
 import {
   forwardRef,
   ForwardRefExoticComponent,
@@ -17,45 +16,29 @@ import {
   MouseEvent,
   ReactNode,
   RefAttributes,
-  useLayoutEffect,
   useRef,
   useState,
 } from 'react';
 import { Button, ButtonProps } from '../button/Button';
-
-function useResizeObserver<T extends HTMLElement>(
-  node: null | undefined | T,
-  observer: (node: T) => void,
-): void {
-  const handler = useEventHandler(observer);
-
-  useLayoutEffect(() => {
-    if (!node) {
-      return;
-    }
-
-    const resizeObserver = new ResizeObserver(() => {
-      handler(node);
-    });
-
-    resizeObserver.observe(node);
-
-    handler(node);
-
-    return () => {
-      resizeObserver.disconnect();
-    };
-  }, [node, handler]);
-}
+import { DropdownButton } from '../dropdown-button/DropdownButton';
+import { useResizeObserver } from '../utils/ResizeObserver';
 
 const useStyles = makeStyles(
   { actions: { overflow: 'hidden' } },
   { name: 'SD-AdaptiveToolbar' },
 );
 
-export interface AdaptiveToolbarItem {
+export interface AdaptiveToolbarDropdownItem {
   key: Key;
   label: ReactNode;
+  onClick?: (event: MouseEvent<HTMLElement>) => void;
+}
+
+export interface AdaptiveToolbarItem {
+  key: Key;
+  groupKey?: Key;
+  label: ReactNode;
+  dropdown?: AdaptiveToolbarDropdownItem[];
   onClick?: (event: MouseEvent<HTMLElement>) => void;
   ButtonProps?: Omit<ButtonProps, 'type' | 'onClick'>;
 }
@@ -116,7 +99,7 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
 
     return (
       <Toolbar {...props} ref={ref}>
-        <Grid container={true} spacing={1} wrap="nowrap" ref={setRootNode}>
+        <Grid container={true} spacing={1} ref={setRootNode}>
           <Grid item={true} className={styles.actions}>
             <Grid container={true} spacing={1} wrap="nowrap" component="div">
               {items.map((item, idx) => (
@@ -127,15 +110,33 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
                     itemNodes.current[idx] = node;
                   }}
                 >
-                  <Button
-                    type="button"
-                    onClick={item.onClick}
-                    {...item.ButtonProps}
-                  >
-                    <Typography noWrap={true} variant="inherit">
-                      {item.label}
-                    </Typography>
-                  </Button>
+                  {item.dropdown ? (
+                    <DropdownButton
+                      type="button"
+                      onClick={item.onClick}
+                      label={item.label}
+                      {...item.ButtonProps}
+                    >
+                      {item.dropdown.map((dropdownItem) => (
+                        <MenuItem
+                          key={dropdownItem.key}
+                          onClick={dropdownItem.onClick}
+                        >
+                          {dropdownItem.label}
+                        </MenuItem>
+                      ))}
+                    </DropdownButton>
+                  ) : (
+                    <Button
+                      type="button"
+                      onClick={item.onClick}
+                      {...item.ButtonProps}
+                    >
+                      <Typography noWrap={true} variant="inherit">
+                        {item.label}
+                      </Typography>
+                    </Button>
+                  )}
                 </Grid>
               ))}
             </Grid>
@@ -159,17 +160,36 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
                   setMenuButtonRef(undefined);
                 }}
               >
-                {menuItems.map((item) => (
-                  <MenuItem
-                    key={item.key}
-                    onClick={(event) => {
-                      item.onClick?.(event);
-                      setMenuButtonRef(undefined);
-                    }}
-                  >
-                    {item.label}
-                  </MenuItem>
-                ))}
+                {menuItems.map((item, index, arr) => {
+                  const next = arr[index + 1];
+                  return (
+                    <>
+                      <MenuItem
+                        key={item.key}
+                        onClick={(event) => {
+                          item.onClick?.(event);
+                          setMenuButtonRef(undefined);
+                        }}
+                      >
+                        {item.label}
+                      </MenuItem>
+
+                      {item.dropdown?.map((dropdownItem) => (
+                        <MenuItem
+                          key={dropdownItem.key}
+                          onClick={(event) => {
+                            dropdownItem.onClick?.(event);
+                            setMenuButtonRef(undefined);
+                          }}
+                        >
+                          {dropdownItem.label}
+                        </MenuItem>
+                      ))}
+
+                      {next && item.groupKey !== next.groupKey && <Divider />}
+                    </>
+                  );
+                })}
               </Menu>
             </Grid>
           )}

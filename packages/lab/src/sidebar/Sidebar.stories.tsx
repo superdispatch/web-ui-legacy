@@ -12,6 +12,7 @@ import { Placeholder } from '../../../__docs__';
 import { Box } from '../box/Box';
 import { Sidebar } from './Sidebar';
 import { SidebarContainer } from './SidebarContainer';
+import { SidebarContent } from './SidebarContent';
 import { SidebarDivider } from './SidebarDivider';
 import { SidebarMenuItem } from './SidebarMenuItem';
 import { SidebarMenuItemAction } from './SidebarMenuItemAction';
@@ -72,6 +73,7 @@ export const list = () => (
             </Button>
 
             <TextField
+              fullWidth={true}
               placeholder="Search for drivers…"
               InputProps={{
                 startAdornment: (
@@ -86,16 +88,19 @@ export const list = () => (
       >
         <SidebarMenuItem
           selected={true}
+          openContentOnClick={true}
           avatar={<SidebarMenuItemAvatar>Eirwen Minoo</SidebarMenuItemAvatar>}
         >
           Eirwen Minoo
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={<SidebarMenuItemAvatar>Ole Kielo</SidebarMenuItemAvatar>}
         >
           Ole Kielo
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar>Virve Vivi Wangi</SidebarMenuItemAvatar>
           }
@@ -103,6 +108,7 @@ export const list = () => (
           Virve Vivi Wangi
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar>
               Radulf Čedomir Niĉjo Aparna
@@ -112,6 +118,7 @@ export const list = () => (
           Radulf Čedomir Niĉjo Aparna
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar>Léane Audovacar</SidebarMenuItemAvatar>
           }
@@ -141,7 +148,12 @@ export const list = () => (
       </Sidebar>
     }
   >
-    <Placeholder height="100%" width="100%" text="Content" />
+    <SidebarContent
+      title="List"
+      action={<Button variant="contained">Create</Button>}
+    >
+      <Placeholder height="100%" width="100%" text="Content" />
+    </SidebarContent>
   </SidebarContainer>
 );
 
@@ -151,6 +163,7 @@ export const checkbox = () => (
       <Sidebar title="Drivers">
         <SidebarMenuItem
           selected={true}
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar value={false}>
               Eirwen Minoo
@@ -160,6 +173,7 @@ export const checkbox = () => (
           Eirwen Minoo
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar value={true}>
               Ole Kielo
@@ -169,6 +183,7 @@ export const checkbox = () => (
           Ole Kielo
         </SidebarMenuItem>
         <SidebarMenuItem
+          openContentOnClick={true}
           avatar={
             <SidebarMenuItemAvatar value={false}>
               Virve Vivi Wangi
@@ -189,7 +204,9 @@ export const checkbox = () => (
       </Sidebar>
     }
   >
-    <Placeholder height="100%" width="100%" text="Content" />
+    <SidebarContent title="">
+      <Placeholder height="100%" width="100%" text="Content" />
+    </SidebarContent>
   </SidebarContainer>
 );
 

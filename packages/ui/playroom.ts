@@ -1,5 +1,6 @@
 export {
   AdaptiveToolbar,
+  AdaptiveVerticalToolbar,
   AvatarButton,
   CardButton,
   CheckboxField,
