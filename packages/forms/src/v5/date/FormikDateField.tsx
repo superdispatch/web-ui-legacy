@@ -1,11 +1,14 @@
-import { v5 } from '@superdispatch/dates';
+import {
+  DateField,
+  DateFieldProps,
+  DatePayload,
+  NullableDateInput,
+  parseDate,
+  stringifyDate,
+  useDateConfig,
+} from '@superdispatch/dates';
 import { useField, useFormikContext } from 'formik';
 import { forwardRef, ReactElement } from 'react';
-
-const { DateField, parseDate, stringifyDate, useDateConfig } = v5;
-type DateFieldProps = v5.DateFieldProps;
-type DatePayload = v5.DatePayload;
-type NullableDateInput = v5.NullableDateInput;
 
 export interface FormikDateFieldProps extends Omit<DateFieldProps, 'error'> {
   name: string;

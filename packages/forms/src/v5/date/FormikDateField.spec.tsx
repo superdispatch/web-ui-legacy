@@ -1,4 +1,4 @@
-import { v5 } from '@superdispatch/dates';
+import { DateConfigProvider, defaultDateConfig } from '@superdispatch/dates';
 import { screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { DateTime } from 'luxon';
@@ -7,8 +7,6 @@ import { ReactElement } from 'react';
 import { FormikEnhancedConfig } from '../enhanced/useFormikEnhanced';
 import { renderFormField } from '../__testutils__/renderFormField';
 import { FormikDateField } from './FormikDateField';
-
-const { DateConfigProvider, defaultDateConfig } = v5;
 
 function renderDateField<T, R>(
   element: ReactElement,
