@@ -1,5 +1,5 @@
 import { BaseTextFieldProps, TextField } from '@mui/material';
-import { v5 } from '@superdispatch/ui';
+import { mergeRefs } from '@superdispatch/ui';
 import {
   ChangeEvent,
   forwardRef,
@@ -15,8 +15,6 @@ import { CountryISO } from '../country-code-metadata/CountryCodeMetadata';
 import { usePhoneService } from '../phone-service/PhoneService';
 import { PhoneFieldMenu } from './PhoneFieldMenu';
 import { PhoneFieldStartAdornment } from './PhoneFieldStartAdornment';
-
-const { mergeRefs } = v5;
 
 function normalizeValue(value: unknown): string {
   return typeof value === 'string' ? value : '';

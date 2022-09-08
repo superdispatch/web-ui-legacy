@@ -1,16 +1,17 @@
-import { v5 } from '@superdispatch/ui';
+import {
+  Color,
+  ColorProp,
+  isColorProp,
+  NegativeSpaceProp,
+  parseResponsiveProp,
+  parseSpaceProp,
+  ResponsiveProp,
+  SpaceProp,
+} from '@superdispatch/ui';
 import { Property } from 'csstype';
 import { ForwardRefExoticComponent, ReactNode, Ref } from 'react';
 import styled, { CSSObject } from 'styled-components';
 import { createRuleNormalizer, RuleNormalizer } from '../utils/RuleNormalizer';
-
-const { Color, isColorProp, parseResponsiveProp, parseSpaceProp } = v5;
-
-type ColorProp = v5.ColorProp;
-type NegativeSpaceProp = v5.NegativeSpaceProp;
-type ResponsiveProp<T extends v5.ResponsivePropPrimitive> =
-  v5.ResponsiveProp<T>;
-type SpaceProp = v5.SpaceProp;
 
 //
 // Colors

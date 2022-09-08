@@ -1,4 +1,4 @@
-import { Dialog as MuiDialog, DialogProps } from '@material-ui/core';
+import { Dialog as MuiDialog, DialogProps } from '@mui/material';
 import { forwardRef } from 'react';
 
 export const Dialog = forwardRef<HTMLDivElement, DialogProps>(

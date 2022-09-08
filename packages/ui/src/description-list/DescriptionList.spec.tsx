@@ -1,6 +1,8 @@
-import { renderComponent, renderCSS } from '@superdispatch/ui-testutils';
+import { v5 } from '@superdispatch/ui-testutils';
 import { screen } from '@testing-library/react';
 import { DescriptionList, DescriptionListItem } from './DescriptionList';
+
+const { renderComponent, renderCSS } = v5;
 
 test('label id', () => {
   renderComponent(
@@ -12,16 +14,88 @@ test('label id', () => {
   );
 
   expect(screen.getByLabelText('Label')).toMatchInlineSnapshot(`
+    .c1 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #192334;
+    }
+
+    .c3 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      color: #6A707C;
+    }
+
+    .c2 {
+      margin-bottom: -1px;
+      border-bottom: 1px dashed transparent;
+      -webkit-transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+    }
+
+    .c4 {
+      width: 1px;
+      height: 100%;
+      display: inline-block;
+    }
+
+    .c0 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c1 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c3 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
     <div
       aria-labelledby="label-id"
-      class="SD-DescriptionList-item"
+      class="c0"
     >
       <span
-        class="MuiTypography-root SD-OverflowText-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-noWrap"
-        title="Text"
+        aria-label="Text"
+        class="c1 MuiTypography-root MuiTypography-body2 MuiTypography-noWrap c2"
+        data-mui-internal-clone-element="true"
       >
         <span
-          class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+          class="c3 MuiTypography-root MuiTypography-body2"
           id="label-id"
         >
           Label
@@ -29,7 +103,7 @@ test('label id', () => {
          
         Text
         <span
-          class="SD-OverflowText-sentinel"
+          class="c4"
         />
       </span>
     </div>
@@ -40,16 +114,88 @@ test('dynamic label id', () => {
   renderComponent(<DescriptionListItem label="Label" content="Text" />);
 
   expect(screen.getByLabelText('Label')).toMatchInlineSnapshot(`
+    .c1 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #192334;
+    }
+
+    .c3 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      color: #6A707C;
+    }
+
+    .c2 {
+      margin-bottom: -1px;
+      border-bottom: 1px dashed transparent;
+      -webkit-transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+    }
+
+    .c4 {
+      width: 1px;
+      height: 100%;
+      display: inline-block;
+    }
+
+    .c0 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c1 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c3 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
     <div
       aria-labelledby="uid_2"
-      class="SD-DescriptionList-item"
+      class="c0"
     >
       <span
-        class="MuiTypography-root SD-OverflowText-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-noWrap"
-        title="Text"
+        aria-label="Text"
+        class="c1 MuiTypography-root MuiTypography-body2 MuiTypography-noWrap c2"
+        data-mui-internal-clone-element="true"
       >
         <span
-          class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+          class="c3 MuiTypography-root MuiTypography-body2"
           id="uid_2"
         >
           Label
@@ -57,7 +203,7 @@ test('dynamic label id', () => {
          
         Text
         <span
-          class="SD-OverflowText-sentinel"
+          class="c4"
         />
       </span>
     </div>
@@ -74,64 +220,151 @@ test('css', () => {
         <DescriptionListItem content={<div />} />
         <DescriptionListItem label={<div />} content={<div />} />
       </DescriptionList>,
-      ['SD-DescriptionList'],
     ),
   ).toMatchInlineSnapshot(`
-    .SD-DescriptionList-list > .SD-DescriptionList-list:not(:last-child),
-    .SD-DescriptionList-list > .SD-DescriptionList-item:not(:last-child) {
-      padding-bottom: 16px;
+    .c5 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: Color.Dark200;
     }
 
-    @media (min-width: 600px) {
-      .SD-DescriptionList-list > .SD-DescriptionList-list:not(:last-child),
-      .SD-DescriptionList-list > .SD-DescriptionList-item:not(:last-child) {
-        padding-bottom: 8px;
-      }
+    .c9 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: Color.Dark500;
     }
 
-    .SD-DescriptionList-listSmall > .SD-DescriptionList-list:not(:last-child),
-    .SD-DescriptionList-listSmall > .SD-DescriptionList-item:not(:last-child) {
-      padding-bottom: 8px;
+    .c10 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      color: Color.Dark200;
     }
 
-    @media (min-width: 600px) {
-      .SD-DescriptionList-listSmall > .SD-DescriptionList-list:not(:last-child),
-      .SD-DescriptionList-listSmall > .SD-DescriptionList-item:not(:last-child) {
-        padding-bottom: 4px;
-      }
+    .c6 {
+      margin-bottom: -1px;
+      border-bottom: 1px dashed transparent;
+      -webkit-transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: border 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
     }
 
-    .SD-DescriptionList-listLarge > .SD-DescriptionList-list:not(:last-child),
-    .SD-DescriptionList-listLarge > .SD-DescriptionList-item:not(:last-child) {
-      padding-bottom: 24px;
+    .c7 {
+      width: 1px;
+      height: 100%;
+      display: inline-block;
     }
 
-    @media (min-width: 600px) {
-      .SD-DescriptionList-listLarge > .SD-DescriptionList-list:not(:last-child),
-      .SD-DescriptionList-listLarge > .SD-DescriptionList-item:not(:last-child) {
-        padding-bottom: 16px;
-      }
-    }
-
-    .SD-DescriptionList-item {
+    .c4 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
     }
 
-    .SD-DescriptionList-icon {
+    .c8 {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
       display: inline-flex;
       margin-right: 8px;
     }
 
-    .SD-DescriptionList-icon > .MuiSvgIcon-root {
+    .c8 > .MuiSvgIcon-root {
       color: Color.Dark100;
       font-size: 24px;
     }
 
-    @media (min-width: 600px) {
-      .SD-DescriptionList-icon > .MuiSvgIcon-root {
+    .c2 > .c1:not(:last-child),
+    .c2 > .c3:not(:last-child) {
+      padding-bottom: 16px;
+    }
+
+    .c2[data-size="small"] > .c1:not(:last-child),
+    .c2[data-size="small"] > .c3:not(:last-child) {
+      padding-bottom: 8px;
+    }
+
+    .c2[data-size="large"] > .c1:not(:last-child),
+    .c2[data-size="large"] > .c3:not(:last-child) {
+      padding-bottom: 24px;
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c5 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c9 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c10 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .c8 > .MuiSvgIcon-root {
         font-size: 16px;
       }
+    }
+
+    @media (min-width:600px) {
+      .c2 > .c1:not(:last-child),
+      .c2 > .c3:not(:last-child) {
+        padding-bottom: 8px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .c2[data-size="small"] > .c1:not(:last-child),
+      .c2[data-size="small"] > .c3:not(:last-child) {
+        padding-bottom: 4px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .c2[data-size="large"] > .c1:not(:last-child),
+      .c2[data-size="large"] > .c3:not(:last-child) {
+        padding-bottom: 16px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
     }
   `);
 });

@@ -6,17 +6,29 @@ import {
   ListItemSecondaryAction,
   ListItemText,
 } from '@material-ui/core';
-import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
+import { v5 } from '@superdispatch/ui-testutils';
+
+const { renderCSS, renderTheme } = v5;
 
 it('checks default props', () => {
-  const { props } = renderTheme();
+  const { components } = renderTheme();
 
-  expect(props.MuiList).toMatchInlineSnapshot(`undefined`);
-  expect(props.MuiListItem).toMatchInlineSnapshot(`undefined`);
-  expect(props.MuiListItemAvatar).toMatchInlineSnapshot(`undefined`);
-  expect(props.MuiListItemIcon).toMatchInlineSnapshot(`undefined`);
-  expect(props.MuiListItemSecondaryAction).toMatchInlineSnapshot(`undefined`);
-  expect(props.MuiListItemText).toMatchInlineSnapshot(`undefined`);
+  expect(components.MuiList?.defaultProps).toMatchInlineSnapshot(`undefined`);
+  expect(components.MuiListItem?.defaultProps).toMatchInlineSnapshot(
+    `undefined`,
+  );
+  expect(components.MuiListItemAvatar?.defaultProps).toMatchInlineSnapshot(
+    `undefined`,
+  );
+  expect(components.MuiListItemIcon?.defaultProps).toMatchInlineSnapshot(
+    `undefined`,
+  );
+  expect(
+    components.MuiListItemSecondaryAction?.defaultProps,
+  ).toMatchInlineSnapshot(`undefined`);
+  expect(components.MuiListItemText?.defaultProps).toMatchInlineSnapshot(
+    `undefined`,
+  );
 });
 
 it('checks component css', () => {
@@ -38,145 +50,18 @@ it('checks component css', () => {
 
         <ListItem button={true} />
       </List>,
-      [
-        'MuiList',
-        'MuiListItem',
-        'MuiListItemAvatar',
-        'MuiListItemIcon',
-        'MuiListItemSecondaryAction',
-        'MuiListItemText',
-      ],
     ),
   ).toMatchInlineSnapshot(`
-    .MuiList-root {
-      margin: 0;
-      padding: 0;
-      position: relative;
-      list-style: none;
+    @media (min-width:0px) and (max-width:599.95px) {
+
     }
 
-    .MuiList-padding {
-      padding-top: 8px;
-      padding-bottom: 8px;
+    @media print {
+
     }
 
-    .MuiList-subheader {
-      padding-top: 0;
-    }
+    @media (min-width:0px) and (max-width:599.95px) {
 
-    .MuiListItem-root {
-      width: 100%;
-      display: flex;
-      position: relative;
-      box-sizing: border-box;
-      text-align: left;
-      align-items: center;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      justify-content: flex-start;
-      text-decoration: none;
-    }
-
-    .MuiListItem-root.Mui-focusVisible {
-      background-color: Color.Silver300;
-    }
-
-    .MuiListItem-root.Mui-selected,
-    .MuiListItem-root.Mui-selected:hover {
-      background-color: Color.Blue50;
-    }
-
-    .MuiListItem-root.Mui-disabled {
-      opacity: 0.5;
-    }
-
-    .MuiListItem-root .MuiTouchRipple-root {
-      color: Color.Blue100;
-    }
-
-    .MuiListItem-container {
-      position: relative;
-    }
-
-    .MuiListItem-dense {
-      padding-top: 4px;
-      padding-bottom: 4px;
-    }
-
-    .MuiListItem-alignItemsFlexStart {
-      align-items: flex-start;
-    }
-
-    .MuiListItem-divider {
-      border-bottom: 1px solid Color.Silver400;
-      background-clip: padding-box;
-    }
-
-    .MuiListItem-gutters {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-
-    .MuiListItem-button {
-      transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    }
-
-    .MuiListItem-button:hover {
-      text-decoration: none;
-      background-color: Color.Silver100;
-    }
-
-    @media (hover: none) {
-      .MuiListItem-button:hover {
-        background-color: transparent;
-      }
-    }
-
-    .MuiListItem-secondaryAction {
-      padding-right: 48px;
-    }
-
-    .MuiListItemAvatar-root {
-      min-width: 56px;
-      flex-shrink: 0;
-    }
-
-    .MuiListItemAvatar-alignItemsFlexStart {
-      margin-top: 8px;
-    }
-
-    .MuiListItemIcon-root {
-      color: rgba(0, 0, 0, 0.54);
-      display: inline-flex;
-      min-width: 56px;
-      flex-shrink: 0;
-    }
-
-    .MuiListItemIcon-alignItemsFlexStart {
-      margin-top: 8px;
-    }
-
-    .MuiListItemSecondaryAction-root {
-      top: 50%;
-      right: 16px;
-      position: absolute;
-      transform: translateY(-50%);
-    }
-
-    .MuiListItemText-root {
-      flex: 1 1 auto;
-      min-width: 0;
-      margin-top: 4px;
-      margin-bottom: 4px;
-    }
-
-    .MuiListItemText-multiline {
-      margin-top: 6px;
-      margin-bottom: 6px;
-    }
-
-    .MuiListItemText-inset {
-      padding-left: 56px;
     }
   `);
 });

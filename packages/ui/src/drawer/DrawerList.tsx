@@ -1,13 +1,8 @@
-import { List, ListProps } from '@material-ui/core';
-import { CSSProperties, makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
-import { forwardRef } from 'react';
+import { List, styled } from '@mui/material';
+import { CSSObject } from '@mui/styled-engine';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
-function listItemMixins(
-  theme: SuperDispatchTheme,
-  space: number,
-): CSSProperties {
+function listItemMixins(theme: SuperDispatchTheme, space: number): CSSObject {
   return {
     '& .MuiListItem-gutters': {
       paddingLeft: theme.spacing(space),
@@ -28,33 +23,15 @@ function listItemMixins(
   };
 }
 
-const useStyles = makeStyles(
-  (theme: SuperDispatchTheme) => ({
-    root: {
+export const DrawerList = styled(List)(
+  ({ theme }: { theme: SuperDispatchTheme }) => {
+    return {
       maxWidth: '100%',
       ...listItemMixins(theme, 3),
 
       [theme.breakpoints.up('md')]: {
         ...listItemMixins(theme, 4),
       },
-    },
-  }),
-  { name: 'SD-DrawerList' },
-);
-
-export type DrawerListProps = Omit<ListProps<'div'>, 'component'>;
-
-export const DrawerList = forwardRef<HTMLDivElement, DrawerListProps>(
-  ({ className, ...props }, ref) => {
-    const styles = useStyles();
-
-    return (
-      <List
-        {...props}
-        ref={ref}
-        component="div"
-        className={clsx(className, styles.root)}
-      />
-    );
+    };
   },
 );

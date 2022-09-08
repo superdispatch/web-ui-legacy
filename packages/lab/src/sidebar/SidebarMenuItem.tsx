@@ -1,6 +1,6 @@
 import { OpenInNew } from '@mui/icons-material';
 import { ButtonBase } from '@mui/material';
-import { v5 } from '@superdispatch/ui';
+import { Color, Column, Columns, Inline } from '@superdispatch/ui';
 import {
   forwardRef,
   MouseEvent,
@@ -12,8 +12,6 @@ import {
 import styled, { css } from 'styled-components';
 import { TextBox } from '../text-box/TextBox';
 import { SidebarMenuItemContextProvider } from './SidebarMenuItemContext';
-
-const { Color, Column, Columns, Inline } = v5;
 
 interface SidebarMenuItemRootProps {
   hasAvatar: boolean;

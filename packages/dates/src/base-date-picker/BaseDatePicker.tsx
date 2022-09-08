@@ -10,10 +10,8 @@ import {
   TextField,
 } from '@mui/material';
 import { useValueObserver } from '@superdispatch/hooks';
-import { v5 } from '@superdispatch/ui';
+import { mergeRefs, useUID } from '@superdispatch/ui';
 import { forwardRef, Ref, useImperativeHandle, useRef, useState } from 'react';
-
-const { mergeRefs, useUID } = v5;
 
 export interface InternalBaseDateFieldAPI {
   close: () => void;

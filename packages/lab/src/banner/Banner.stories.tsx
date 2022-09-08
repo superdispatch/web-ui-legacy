@@ -1,12 +1,10 @@
 import { Link } from '@mui/material';
 import { Meta } from '@storybook/react';
-import { v5 } from '@superdispatch/ui';
+import { Inline, Stack } from '@superdispatch/ui';
 import { UseState } from '@superdispatch/ui-docs';
 import { Button } from '../button/Button';
 import { TextBox } from '../text-box/TextBox';
 import { Banner } from './Banner';
-
-const { Inline, Stack } = v5;
 
 export default {
   title: 'Lab/Banner',

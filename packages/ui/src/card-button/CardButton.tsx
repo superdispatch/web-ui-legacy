@@ -1,11 +1,4 @@
-import {
-  ButtonBase,
-  ButtonBaseProps,
-  Theme,
-  Typography,
-} from '@material-ui/core';
-import { ClassNameMap, makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
+import { ButtonBase, ButtonBaseProps, styled, Typography } from '@mui/material';
 import {
   forwardRef,
   ForwardRefExoticComponent,
@@ -14,61 +7,35 @@ import {
 } from 'react';
 import { Color } from '../theme/Color';
 
-export type CardButtonClassKey =
-  | 'root'
-  | 'label'
-  | 'hint'
-  | 'error'
-  | 'primary'
-  | 'disabled'
-  | 'sizeSmall'
-  | 'sizeLarge'
-  | 'icon'
-  | 'startIcon'
-  | 'endIcon';
+const StyledButton = styled(ButtonBase)(({ theme }) => {
+  return {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundColor: Color.White,
 
-const useStyles = makeStyles<
-  Theme,
-  { classes?: Partial<ClassNameMap<CardButtonClassKey>> },
-  CardButtonClassKey
->(
-  (theme) => ({
-    root: {
-      width: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      backgroundColor: Color.White,
+    border: '1px dashed',
+    borderRadius: theme.spacing(0.5),
 
-      border: '1px dashed',
-      borderRadius: theme.spacing(0.5),
+    padding: theme.spacing(1.5),
+    minHeight: theme.spacing(13),
 
-      padding: theme.spacing(1.5),
-      minHeight: theme.spacing(13),
+    transition: theme.transitions.create([
+      'color',
+      'box-shadow',
+      'border-color',
+      'background-color',
+    ]),
 
-      transition: theme.transitions.create([
-        'color',
-        'box-shadow',
-        'border-color',
-        'background-color',
-      ]),
-    },
-
-    disabled: {
+    '&[data-disabled="true"]': {
       color: Color.Dark200,
       borderColor: Color.Silver500,
       backgroundColor: Color.Silver100,
     },
 
-    error: {
-      color: Color.Red300,
-      borderColor: Color.Red300,
-      backgroundColor: Color.Red50,
-      '&:focus': { backgroundColor: Color.Red75 },
-    },
-
-    primary: {
+    '&[data-primary="true"]': {
       color: Color.Blue300,
       borderColor: Color.Silver500,
       '&:focus': { backgroundColor: Color.Blue50 },
@@ -78,43 +45,49 @@ const useStyles = makeStyles<
       },
     },
 
-    sizeSmall: {
+    '&[data-error="true"]': {
+      color: Color.Red300,
+      borderColor: Color.Red300,
+      backgroundColor: Color.Red50,
+      '&:focus': { backgroundColor: Color.Red75 },
+    },
+
+    '&[data-size="small"]': {
       minHeight: theme.spacing(6),
     },
 
-    sizeLarge: {
+    '&[data-size="large"]': {
       minHeight: theme.spacing(17.5),
     },
+  };
+});
 
-    label: {
-      display: 'flex',
-      alignItems: 'center',
-    },
+const Label = styled(Typography)({
+  display: 'flex',
+  alignItems: 'center',
+});
 
-    icon: {
-      display: 'flex',
-      '& svg': {
-        fontSize: theme.spacing(3),
-        [theme.breakpoints.up('sm')]: { fontSize: theme.spacing(2.5) },
-      },
-    },
+const Hint = styled(Typography)(({ theme }) => ({
+  marginTop: theme.spacing(0.5),
+}));
 
-    startIcon: {
-      marginRight: theme.spacing(1),
-      marginLeft: theme.spacing(-0.5),
-    },
+const Icon = styled('span')(({ theme }) => ({
+  display: 'flex',
+  '& svg': {
+    fontSize: theme.spacing(3),
+    [theme.breakpoints.up('sm')]: { fontSize: theme.spacing(2.5) },
+  },
 
-    endIcon: {
-      marginLeft: theme.spacing(1),
-      marginRight: theme.spacing(-0.5),
-    },
+  '&[data-placement="start"]': {
+    marginRight: theme.spacing(1),
+    marginLeft: theme.spacing(-0.5),
+  },
 
-    hint: {
-      marginTop: theme.spacing(0.5),
-    },
-  }),
-  { name: 'SD-CardButton' },
-);
+  '&[data-placement="end"]': {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(-0.5),
+  },
+}));
 
 export interface CardButtonProps
   extends RefAttributes<HTMLButtonElement>,
@@ -128,7 +101,6 @@ export interface CardButtonProps
   size?: 'small' | 'medium' | 'large';
 
   className?: string;
-  classes?: Partial<ClassNameMap<CardButtonClassKey>>;
 }
 
 export const CardButton: ForwardRefExoticComponent<CardButtonProps> =
@@ -148,55 +120,34 @@ export const CardButton: ForwardRefExoticComponent<CardButtonProps> =
       },
       ref,
     ) => {
-      const styles = useStyles({ classes });
-
       return (
-        <ButtonBase
+        <StyledButton
           {...props}
           ref={ref}
           disabled={disabled}
-          className={clsx(
-            styles.root,
-            {
-              [styles.disabled]: disabled,
-              [styles.error]: !disabled && error,
-              [styles.primary]: !disabled && !error,
-              [styles.sizeSmall]: size === 'small',
-              [styles.sizeLarge]: size === 'large',
-            },
-            className,
-          )}
+          data-size={size}
+          data-disabled={!!disabled}
+          data-error={!disabled && !!error}
+          data-primary={!disabled && !error}
         >
           {error ? (
-            <Typography variant="h4" color="inherit" className={styles.label}>
+            <Label variant="h4" color="inherit">
               {error}
-            </Typography>
+            </Label>
           ) : (
             <>
-              <Typography variant="h4" color="inherit" className={styles.label}>
-                {!!startIcon && (
-                  <span className={clsx(styles.icon, styles.startIcon)}>
-                    {startIcon}
-                  </span>
-                )}
+              <Label variant="h4" color="inherit">
+                {!!startIcon && <Icon data-placement="start">{startIcon}</Icon>}
 
                 {children}
 
-                {!!endIcon && (
-                  <span className={clsx(styles.icon, styles.endIcon)}>
-                    {endIcon}
-                  </span>
-                )}
-              </Typography>
+                {!!endIcon && <Icon data-placement="end">{endIcon}</Icon>}
+              </Label>
 
-              {!!hint && (
-                <Typography color="textSecondary" className={styles.hint}>
-                  {hint}
-                </Typography>
-              )}
+              {!!hint && <Hint color="textSecondary">{hint}</Hint>}
             </>
           )}
-        </ButtonBase>
+        </StyledButton>
       );
     },
   );

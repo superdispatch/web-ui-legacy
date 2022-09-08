@@ -1,226 +1,278 @@
-import { Tab, Tabs } from '@material-ui/core';
-import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
+import { Tab, Tabs } from '@mui/material';
+import { v5 } from '@superdispatch/ui-testutils';
+
+const { renderCSS, renderTheme } = v5;
 
 it('checks default props', () => {
-  const { props } = renderTheme();
+  const { components } = renderTheme();
 
-  expect(props.MuiTabs).toMatchInlineSnapshot(`
+  expect(components.MuiTabs?.defaultProps).toMatchInlineSnapshot(`
     Object {
       "indicatorColor": "primary",
       "textColor": "primary",
       "variant": "scrollable",
     }
   `);
-  expect(props.MuiTab).toMatchInlineSnapshot(`undefined`);
+  expect(components.MuiTab?.defaultProps).toMatchInlineSnapshot(`undefined`);
 });
 
 it('checks component css', () => {
   expect(
     renderCSS(
-      <Tabs value="tab" scrollButtons="on">
+      <Tabs value="tab" scrollButtons={true} allowScrollButtonsMobile={true}>
         <Tab value="tab" label="Text" />
       </Tabs>,
-      ['MuiTab', 'MuiTabs', 'MuiTabScrollButton', 'PrivateTabIndicator'],
     ),
   ).toMatchInlineSnapshot(`
-    .MuiTab-root {
-      padding: 6px 12px;
-      overflow: hidden;
-      position: relative;
-      font-size: 14px;
-      max-width: 264px;
-      min-width: 72px;
-      box-sizing: border-box;
-      min-height: 48px;
-      text-align: center;
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    .c4 {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      fill: currentColor;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
       flex-shrink: 0;
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      line-height: 20px;
-      white-space: normal;
+      -webkit-transition: fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      font-size: 1.25rem;
+      display: inherit;
+      font-size: var(--mui-svg-icon-size,32px);
+      font-size: var(--mui-svg-icon-size,24px);
     }
 
-    @media (min-width: 0px) and (max-width: 599.95px) {
-      .MuiTab-root {
+    .c5 {
+      overflow: hidden;
+      pointer-events: none;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: inherit;
+    }
+
+    .c2 {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      background-color: transparent;
+      outline: 0;
+      border: 0;
+      margin: 0;
+      border-radius: 0;
+      padding: 0;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      vertical-align: middle;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .c2::-moz-focus-inner {
+      border-style: none;
+    }
+
+    .c2.Mui-disabled {
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .c9 {
+      font-size: 14px;
+      line-height: 1.25;
+      font-weight: 600;
+      font-family: "Inter",sans-serif;
+      max-width: 360px;
+      min-width: 90px;
+      position: relative;
+      min-height: 48px;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      padding: 12px 16px;
+      overflow: hidden;
+      white-space: normal;
+      text-align: center;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      color: Color.Dark200;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      min-height: 48px;
+      -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      color: Color.Dark500;
+    }
+
+    .c9.Mui-selected {
+      color: Color.Blue300;
+    }
+
+    .c9.Mui-disabled {
+      color: Color.Dark100;
+    }
+
+    .c9:hover,
+    .c9:focus {
+      color: Color.Blue300;
+    }
+
+    .c3 {
+      width: 40px;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+
+    .c3.Mui-disabled {
+      opacity: 0;
+    }
+
+    .c1 {
+      overflow: hidden;
+      min-height: 48px;
+      -webkit-overflow-scrolling: touch;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      min-height: 48px;
+    }
+
+    .c1 .MuiTabs-scrollButtons {
+      opacity: 1;
+      color: Color.Dark100;
+      width: 32px;
+      -webkit-transition: opacity 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: opacity 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+    }
+
+    .c7 {
+      position: relative;
+      display: inline-block;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      white-space: nowrap;
+      -webkit-scrollbar-width: none;
+      -moz-scrollbar-width: none;
+      -ms-scrollbar-width: none;
+      scrollbar-width: none;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    .c7::-webkit-scrollbar {
+      display: none;
+    }
+
+    .c8 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .c10 {
+      position: absolute;
+      height: 2px;
+      bottom: 0;
+      width: 100%;
+      -webkit-transition: all 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: all 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      background-color: Color.Blue300;
+    }
+
+    .c6 {
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-scrollbar-width: none;
+      -moz-scrollbar-width: none;
+      -ms-scrollbar-width: none;
+      scrollbar-width: none;
+    }
+
+    .c6::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (min-width:600px) {
+      .c4 {
+        font-size: var(--mui-svg-icon-size,24px);
+      }
+    }
+
+    @media (min-width:600px) {
+      .c4 {
+        font-size: var(--mui-svg-icon-size,16px);
+      }
+    }
+
+    @media print {
+      .c2 {
+        color-adjust: exact;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c9 {
         font-size: 16px;
         line-height: 24px;
       }
     }
 
-    @media (min-width: 600px) {
-      .MuiTab-root {
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c9 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .c9 {
+        min-width: unset;
+        font-size: unset;
         padding: 6px 24px;
       }
     }
 
-    .MuiTab-labelIcon {
-      min-height: 72px;
-      padding-top: 9px;
+    @media (min-width:0px) and (max-width:599.95px) {
+
     }
 
-    .MuiTab-labelIcon .MuiTab-wrapper > *:first-child {
-      margin-bottom: 6px;
+    @media print {
+
     }
 
-    .MuiTab-textColorInherit {
-      color: inherit;
-      opacity: 0.7;
-    }
+    @media (min-width:0px) and (max-width:599.95px) {
 
-    .MuiTab-textColorInherit.Mui-selected {
-      opacity: 1;
-    }
-
-    .MuiTab-textColorInherit.Mui-disabled {
-      opacity: 0.5;
-    }
-
-    .MuiTab-textColorPrimary {
-      color: Color.Dark500;
-    }
-
-    .MuiTab-textColorPrimary.Mui-selected {
-      color: Color.Blue300;
-    }
-
-    .MuiTab-textColorPrimary.Mui-disabled {
-      color: Color.Dark100;
-    }
-
-    .MuiTab-textColorPrimary:hover,
-    .MuiTab-textColorPrimary:focus {
-      color: Color.Blue300;
-    }
-
-    .MuiTab-textColorSecondary {
-      color: Color.Dark200;
-    }
-
-    .MuiTab-textColorSecondary.Mui-selected {
-      color: #f50057;
-    }
-
-    .MuiTab-textColorSecondary.Mui-disabled {
-      color: Color.Dark100;
-    }
-
-    .MuiTab-fullWidth {
-      flex-grow: 1;
-      max-width: none;
-      flex-basis: 0;
-      flex-shrink: 1;
-    }
-
-    .MuiTab-wrapped {
-      font-size: 0.75rem;
-      line-height: 1.5;
-    }
-
-    .MuiTab-wrapper {
-      width: 100%;
-      display: inline-flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .MuiTabs-root {
-      display: flex;
-      overflow: hidden;
-      min-height: 48px;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .MuiTabs-vertical {
-      flex-direction: column;
-    }
-
-    .MuiTabs-flexContainer {
-      display: flex;
-    }
-
-    .MuiTabs-flexContainerVertical {
-      flex-direction: column;
-    }
-
-    .MuiTabs-centered {
-      justify-content: center;
-    }
-
-    .MuiTabs-scroller {
-      flex: 1 1 auto;
-      display: inline-block;
-      position: relative;
-      white-space: nowrap;
-    }
-
-    .MuiTabs-fixed {
-      width: 100%;
-      overflow-x: hidden;
-    }
-
-    .MuiTabs-scrollable {
-      overflow-x: scroll;
-      scrollbar-width: none;
-    }
-
-    .MuiTabs-scrollable::-webkit-scrollbar {
-      display: none;
-    }
-
-    .MuiTabs-scrollButtons {
-      color: Color.Dark100;
-      width: 32px;
-      opacity: 1;
-      transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    }
-
-    @media (max-width: 599.95px) {
-      .MuiTabs-scrollButtonsDesktop {
-        display: none;
-      }
-    }
-
-    .MuiTabScrollButton-root {
-      width: 40px;
-      opacity: 0.8;
-      flex-shrink: 0;
-    }
-
-    .MuiTabScrollButton-root.Mui-disabled {
-      opacity: 0;
-    }
-
-    .MuiTabScrollButton-vertical {
-      width: 100%;
-      height: 40px;
-    }
-
-    .MuiTabScrollButton-vertical svg {
-      transform: rotate(90deg);
-    }
-
-    .PrivateTabIndicator-root-1 {
-      width: 100%;
-      bottom: 0;
-      height: 2px;
-      position: absolute;
-      transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    }
-
-    .PrivateTabIndicator-colorPrimary-2 {
-      background-color: Color.Blue300;
-    }
-
-    .PrivateTabIndicator-colorSecondary-3 {
-      background-color: #f50057;
-    }
-
-    .PrivateTabIndicator-vertical-4 {
-      right: 0;
-      width: 2px;
-      height: 100%;
     }
   `);
 });

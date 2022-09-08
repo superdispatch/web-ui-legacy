@@ -1,4 +1,4 @@
-import { v5 } from '@superdispatch/ui';
+import { Color, ThemeProvider } from '@superdispatch/ui';
 import { render } from '@testing-library/react';
 import {
   AtRule,
@@ -15,7 +15,7 @@ import { ReactElement } from 'react';
 import { extractCSS } from '../renderCSS';
 
 const colors = new Map<string, string>(
-  Object.entries(v5.Color).flatMap(([k, v]) => [
+  Object.entries(Color).flatMap(([k, v]) => [
     [v, `Color.${k}`],
     [v.replace(/\s/g, ''), `Color.${k}`], // rgba(255, 255, 255, 0.08) -> rgba(255,255,255,0.08)
   ]),
@@ -66,7 +66,7 @@ export function extractGlobalCSS(): string {
 }
 
 export function renderGlobalCSS() {
-  render(<v5.ThemeProvider />);
+  render(<ThemeProvider />);
 
   const css = extractGlobalCSS();
   renderedCSS.add(css);
@@ -78,7 +78,7 @@ export function renderCSS(ui: ReactElement, displayNames?: string[]) {
   let firstUnmatchedClass: string | undefined;
   let classNameMaxIndex = 0;
 
-  render(<v5.ThemeProvider>{ui}</v5.ThemeProvider>);
+  render(<ThemeProvider>{ui}</ThemeProvider>);
 
   styleSheetSerializer.setStyleSheetSerializerOptions({
     addStyles: true,
@@ -134,7 +134,7 @@ export function renderCSS(ui: ReactElement, displayNames?: string[]) {
 }
 
 export function renderStyles(ui: ReactElement, components: string[]): string {
-  render(<v5.ThemeProvider>{ui}</v5.ThemeProvider>);
+  render(<ThemeProvider>{ui}</ThemeProvider>);
 
   return extractCSS(components);
 }

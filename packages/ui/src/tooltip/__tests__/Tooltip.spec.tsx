@@ -1,10 +1,12 @@
-import { Tooltip } from '@material-ui/core';
-import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
+import { Tooltip } from '@mui/material';
+import { v5 } from '@superdispatch/ui-testutils';
+
+const { renderCSS, renderTheme } = v5;
 
 it('checks default props', () => {
-  const { props } = renderTheme();
+  const { components } = renderTheme();
 
-  expect(props.MuiTooltip).toMatchInlineSnapshot(`
+  expect(components.MuiTooltip?.defaultProps).toMatchInlineSnapshot(`
     Object {
       "arrow": true,
     }
@@ -14,169 +16,316 @@ it('checks default props', () => {
 it('checks component css', () => {
   expect(
     renderCSS(
-      <Tooltip title="text">
-        <div />
-      </Tooltip>,
-      ['MuiTooltip'],
+      <div>
+        <Tooltip open={true} title="text">
+          <div />
+        </Tooltip>
+
+        <Tooltip open={true} title="text" disableInteractive={true}>
+          <div />
+        </Tooltip>
+
+        <Tooltip open={true} title="text" arrow={false}>
+          <div />
+        </Tooltip>
+      </div>,
+      [
+        'MuiTooltip-popper',
+        'MuiTooltip-arrow',
+        'MuiTooltip-tooltipArrow',
+        'MuiTooltip-arrow',
+        'MuiTooltip-popperArrow',
+        'MuiTooltip-popperInteractive',
+        'MuiTooltip-tooltip',
+      ],
     ),
   ).toMatchInlineSnapshot(`
-    .MuiTooltip-popper {
+    .MuiTooltip-popperArrow {
       z-index: 1500;
       pointer-events: none;
     }
 
-    .MuiTooltip-popperInteractive {
-      pointer-events: auto;
-    }
-
-    .MuiTooltip-popperArrow[x-placement*='bottom'] .MuiTooltip-arrow {
+    .MuiTooltip-popperArrow[data-popper-placement*="bottom"] .MuiTooltip-arrow {
       top: 0;
-      left: 0;
       margin-top: -0.71em;
-      margin-left: 4px;
-      margin-right: 4px;
     }
 
-    .MuiTooltip-popperArrow[x-placement*='top'] .MuiTooltip-arrow {
-      left: 0;
+    .MuiTooltip-popperArrow[data-popper-placement*="bottom"] .MuiTooltip-arrow::before {
+      -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+      transform-origin: 0 100%;
+    }
+
+    .MuiTooltip-popperArrow[data-popper-placement*="top"] .MuiTooltip-arrow {
       bottom: 0;
-      margin-left: 4px;
-      margin-right: 4px;
       margin-bottom: -0.71em;
     }
 
-    .MuiTooltip-popperArrow[x-placement*='right'] .MuiTooltip-arrow {
-      left: 0;
-      width: 0.71em;
-      height: 1em;
-      margin-top: 4px;
-      margin-left: -0.71em;
-      margin-bottom: 4px;
-    }
-
-    .MuiTooltip-popperArrow[x-placement*='left'] .MuiTooltip-arrow {
-      right: 0;
-      width: 0.71em;
-      height: 1em;
-      margin-top: 4px;
-      margin-right: -0.71em;
-      margin-bottom: 4px;
-    }
-
-    .MuiTooltip-popperArrow[x-placement*='left'] .MuiTooltip-arrow::before {
-      transform-origin: 0 0;
-      border-top-right-radius: 2px;
-    }
-
-    .MuiTooltip-popperArrow[x-placement*='right'] .MuiTooltip-arrow::before {
-      transform-origin: 100% 100%;
-      border-bottom-left-radius: 2px;
-    }
-
-    .MuiTooltip-popperArrow[x-placement*='top'] .MuiTooltip-arrow::before {
+    .MuiTooltip-popperArrow[data-popper-placement*="top"] .MuiTooltip-arrow::before {
+      -webkit-transform-origin: 100% 0;
+      -ms-transform-origin: 100% 0;
       transform-origin: 100% 0;
+    }
+
+    .MuiTooltip-popperArrow[data-popper-placement*="right"] .MuiTooltip-arrow {
+      left: 0;
+      margin-left: -0.71em;
+      height: 1em;
+      width: 0.71em;
+    }
+
+    .MuiTooltip-popperArrow[data-popper-placement*="right"] .MuiTooltip-arrow::before {
+      -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+    }
+
+    .MuiTooltip-popperArrow[data-popper-placement*="left"] .MuiTooltip-arrow {
+      right: 0;
+      margin-right: -0.71em;
+      height: 1em;
+      width: 0.71em;
+    }
+
+    .MuiTooltip-popperArrow[data-popper-placement*="left"] .MuiTooltip-arrow::before {
+      -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      transform-origin: 0 0;
+    }
+
+    .MuiTooltip-popperArrow[data-popper-placement*="top"] .MuiTooltip-arrow::before {
       border-bottom-right-radius: 2px;
     }
 
-    .MuiTooltip-popperArrow[x-placement*='bottom'] .MuiTooltip-arrow::before {
-      transform-origin: 0 100%;
+    .MuiTooltip-popperArrow[data-popper-placement*="left"] .MuiTooltip-arrow::before {
+      border-top-right-radius: 2px;
+    }
+
+    .MuiTooltip-popperArrow[data-popper-placement*="right"] .MuiTooltip-arrow::before {
+      border-bottom-left-radius: 2px;
+    }
+
+    .MuiTooltip-popperArrow[data-popper-placement*="bottom"] .MuiTooltip-arrow::before {
       border-top-left-radius: 2px;
     }
 
-    .MuiTooltip-tooltip {
-      color: Color.White;
-      padding: 8px 12px;
-      font-size: 14px;
-      max-width: 300px;
-      word-wrap: break-word;
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      line-height: 20px;
+    .MuiTooltip-popper {
+      z-index: 1500;
+      pointer-events: auto;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="bottom"] .MuiTooltip-arrow {
+      top: 0;
+      margin-top: -0.71em;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="bottom"] .MuiTooltip-arrow::before {
+      -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+      transform-origin: 0 100%;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="top"] .MuiTooltip-arrow {
+      bottom: 0;
+      margin-bottom: -0.71em;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="top"] .MuiTooltip-arrow::before {
+      -webkit-transform-origin: 100% 0;
+      -ms-transform-origin: 100% 0;
+      transform-origin: 100% 0;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="right"] .MuiTooltip-arrow {
+      left: 0;
+      margin-left: -0.71em;
+      height: 1em;
+      width: 0.71em;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="right"] .MuiTooltip-arrow::before {
+      -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="left"] .MuiTooltip-arrow {
+      right: 0;
+      margin-right: -0.71em;
+      height: 1em;
+      width: 0.71em;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="left"] .MuiTooltip-arrow::before {
+      -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      transform-origin: 0 0;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="top"] .MuiTooltip-arrow::before {
+      border-bottom-right-radius: 2px;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="left"] .MuiTooltip-arrow::before {
+      border-top-right-radius: 2px;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="right"] .MuiTooltip-arrow::before {
+      border-bottom-left-radius: 2px;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="bottom"] .MuiTooltip-arrow::before {
+      border-top-left-radius: 2px;
+    }
+
+    .MuiTooltip-popperInteractive {
+      z-index: 1500;
+      pointer-events: auto;
+    }
+
+    .MuiTooltip-tooltipArrow {
+      background-color: rgba(97,97,97,0.92);
       border-radius: 4px;
+      color: Color.White;
+      font-family: "Inter",sans-serif;
+      padding: 4px 8px;
+      font-size: 0.6875rem;
+      max-width: 300px;
+      margin: 0;
+      word-wrap: break-word;
+      font-weight: 500;
+      position: relative;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      padding: 8px 12px;
       background-color: Color.Dark400;
     }
 
-    @media (min-width: 0px) and (max-width: 599.95px) {
+    .MuiTooltip-popper[data-popper-placement*="left"] .MuiTooltip-arrow {
+      -webkit-transform-origin: right center;
+      -ms-transform-origin: right center;
+      transform-origin: right center;
+      margin-right: 14px;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="right"] .MuiTooltip-arrow {
+      -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+      transform-origin: left center;
+      margin-left: 14px;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="top"] .MuiTooltip-arrow {
+      -webkit-transform-origin: center bottom;
+      -ms-transform-origin: center bottom;
+      transform-origin: center bottom;
+      margin-bottom: 14px;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="bottom"] .MuiTooltip-arrow {
+      -webkit-transform-origin: center top;
+      -ms-transform-origin: center top;
+      transform-origin: center top;
+      margin-top: 14px;
+    }
+
+    .MuiTooltip-tooltip {
+      background-color: rgba(97,97,97,0.92);
+      border-radius: 4px;
+      color: Color.White;
+      font-family: "Inter",sans-serif;
+      padding: 4px 8px;
+      font-size: 0.6875rem;
+      max-width: 300px;
+      margin: 2px;
+      word-wrap: break-word;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      padding: 8px 12px;
+      background-color: Color.Dark400;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="left"] .MuiTooltip-arrow {
+      -webkit-transform-origin: right center;
+      -ms-transform-origin: right center;
+      transform-origin: right center;
+      margin-right: 14px;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="right"] .MuiTooltip-arrow {
+      -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+      transform-origin: left center;
+      margin-left: 14px;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="top"] .MuiTooltip-arrow {
+      -webkit-transform-origin: center bottom;
+      -ms-transform-origin: center bottom;
+      transform-origin: center bottom;
+      margin-bottom: 14px;
+    }
+
+    .MuiTooltip-popper[data-popper-placement*="bottom"] .MuiTooltip-arrow {
+      -webkit-transform-origin: center top;
+      -ms-transform-origin: center top;
+      transform-origin: center top;
+      margin-top: 14px;
+    }
+
+    .MuiTooltip-arrow {
+      overflow: hidden;
+      position: absolute;
+      width: 1em;
+      height: 0.71em;
+      box-sizing: border-box;
+      color: rgba(97,97,97,0.9);
+      color: Color.Dark400;
+      font-size: 8px;
+    }
+
+    .MuiTooltip-arrow::before {
+      content: "";
+      margin: auto;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: currentColor;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .MuiTooltip-tooltipArrow {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
       .MuiTooltip-tooltip {
         font-size: 16px;
         line-height: 24px;
       }
     }
 
-    .MuiTooltip-tooltipArrow {
-      margin: 0;
-      position: relative;
+    @media (min-width:0px) and (max-width:599.95px) {
+
     }
 
-    .MuiTooltip-arrow {
-      color: Color.Dark400;
-      width: 1em;
-      height: 0.71em;
-      overflow: hidden;
-      position: absolute;
-      font-size: 8px;
-      box-sizing: border-box;
+    @media print {
+
     }
 
-    .MuiTooltip-arrow::before {
-      width: 100%;
-      height: 100%;
-      margin: auto;
-      content: '';
-      display: block;
-      transform: rotate(45deg);
-      background-color: currentColor;
-    }
+    @media (min-width:0px) and (max-width:599.95px) {
 
-    .MuiTooltip-touch {
-      padding: 8px 16px;
-      font-size: 0.875rem;
-      font-weight: 400;
-      line-height: 1.14286em;
-    }
-
-    .MuiTooltip-tooltipPlacementLeft {
-      margin: 0 24px;
-      transform-origin: right center;
-    }
-
-    @media (min-width: 600px) {
-      .MuiTooltip-tooltipPlacementLeft {
-        margin: 0 14px;
-      }
-    }
-
-    .MuiTooltip-tooltipPlacementRight {
-      margin: 0 24px;
-      transform-origin: left center;
-    }
-
-    @media (min-width: 600px) {
-      .MuiTooltip-tooltipPlacementRight {
-        margin: 0 14px;
-      }
-    }
-
-    .MuiTooltip-tooltipPlacementTop {
-      margin: 24px 0;
-      transform-origin: center bottom;
-    }
-
-    @media (min-width: 600px) {
-      .MuiTooltip-tooltipPlacementTop {
-        margin: 14px 0;
-      }
-    }
-
-    .MuiTooltip-tooltipPlacementBottom {
-      margin: 24px 0;
-      transform-origin: center top;
-    }
-
-    @media (min-width: 600px) {
-      .MuiTooltip-tooltipPlacementBottom {
-        margin: 14px 0;
-      }
     }
   `);
+  // console.log(document.documentElement.outerHTML);
 });

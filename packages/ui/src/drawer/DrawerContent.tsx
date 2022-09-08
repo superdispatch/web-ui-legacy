@@ -1,30 +1,17 @@
-import { makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
-import { forwardRef, HTMLAttributes } from 'react';
-import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
-
-const useStyles = makeStyles(
-  (theme: SuperDispatchTheme) => ({
-    root: {
-      maxWidth: '100%',
-      padding: theme.spacing(2, 3),
-
-      [theme.breakpoints.up('md')]: {
-        padding: theme.spacing(2, 4),
-      },
-    },
-  }),
-  { name: 'SD-DrawerContent' },
-);
+import { styled } from '@mui/material';
+import { HTMLAttributes } from 'react';
 
 export type DrawerContentProps = HTMLAttributes<HTMLDivElement>;
 
-export const DrawerContent = forwardRef<HTMLDivElement, DrawerContentProps>(
-  ({ className, ...props }, ref) => {
-    const styles = useStyles();
+export const DrawerContent = styled('div', {
+  name: 'SD-DrawerContent',
+})(({ theme }) => {
+  return {
+    maxWidth: '100%',
+    padding: theme.spacing(2, 3),
 
-    return (
-      <div {...props} ref={ref} className={clsx(styles.root, className)} />
-    );
-  },
-);
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(2, 4),
+    },
+  };
+});

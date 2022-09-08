@@ -1,5 +1,5 @@
-import { Theme, Typography, TypographyProps } from '@material-ui/core';
-import { ClassNameMap, makeStyles } from '@material-ui/styles';
+import { Theme, Typography, TypographyProps } from '@mui/material';
+import { ClassNameMap, makeStyles } from '@mui/styles';
 import cx from 'clsx';
 import {
   ElementType,

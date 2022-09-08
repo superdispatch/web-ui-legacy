@@ -1,4 +1,4 @@
-import { renderTheme } from '@superdispatch/ui-testutils';
+import { v5 } from '@superdispatch/ui-testutils';
 import { Color } from '../Color';
 
 const colors = new Map<string, string>(
@@ -15,25 +15,20 @@ expect.addSnapshotSerializer({
   test: (value) =>
     !!value && typeof value === 'string' && colorRegExp.test(value),
   print: (value) =>
-    JSON.stringify(
-      String(value).replace(
-        colorRegExp,
-        (color) => colors.get(color) as string,
-      ),
-    ),
+    String(value).replace(colorRegExp, (color) => colors.get(color) as string),
 });
 
 it('exposes overridden theme', () => {
-  const { props, overrides, typography, ...theme } = renderTheme();
+  const { components, typography, ...theme5 } = v5.renderTheme();
 
-  Object.entries(theme).forEach(([key, value]) => {
+  Object.entries(theme5).forEach(([key, value]) => {
     expect(value).toMatchSnapshot(key);
   });
 });
 
 it('allows to modify overridden theme', () => {
   const modifier = jest.fn((x) => x);
-  const view = renderTheme(modifier);
+  const view = v5.renderTheme(modifier);
 
   expect(modifier).toHaveBeenCalledTimes(1);
   expect(modifier).toHaveBeenCalledWith(view);

@@ -1,7 +1,7 @@
 import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material';
 import { ButtonBase, InputAdornment, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { v5 } from '@superdispatch/ui';
+import { Color, SuperDispatchTheme } from '@superdispatch/ui';
 import { forwardRef, useMemo } from 'react';
 import {
   CountryISO,
@@ -9,9 +9,6 @@ import {
   getCountryCode,
 } from '../country-code-metadata/CountryCodeMetadata';
 import { PhoneFieldFlag } from './PhoneFieldFlag';
-
-type SuperDispatchTheme = v5.SuperDispatchTheme;
-const { Color } = v5;
 
 const useStyles = makeStyles(
   (theme: SuperDispatchTheme) => ({

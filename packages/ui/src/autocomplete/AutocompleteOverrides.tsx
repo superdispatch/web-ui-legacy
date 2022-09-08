@@ -1,22 +1,19 @@
-import { SvgIcon } from '@material-ui/core';
+import { autocompleteClasses, SvgIcon } from '@mui/material';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideAutocomplete(theme: SuperDispatchTheme): void {
   const sm = theme.breakpoints.up('sm');
 
-  // Remove `Object.assign` after official release of `Autocomplete`.
-  Object.assign(theme.props, {
-    MuiAutocomplete: {
+  theme.components.MuiAutocomplete = {
+    defaultProps: {
       popupIcon: (
         <SvgIcon>
           <path d="M12 16.5L6 9h12l-6 7.5z" fill="currentColor" />
         </SvgIcon>
       ),
     },
-  });
 
-  Object.assign(theme.overrides, {
-    MuiAutocomplete: {
+    styleOverrides: {
       paper: { ...theme.typography.body2 },
       tag: {
         margin: '4px',
@@ -38,21 +35,23 @@ export function overrideAutocomplete(theme: SuperDispatchTheme): void {
         '&[class*="MuiOutlinedInput-root"]': {
           padding: '6px 8px',
 
-          '& $input': {
+          [`& .${autocompleteClasses.input}`]: {
             width: '144px',
             padding: '4px',
           },
 
-          '& $input:first-child': { paddingLeft: undefined },
-          '& $endAdornment': { right: '12px' },
+          [`& .${autocompleteClasses.input}:first-child`]: {
+            paddingLeft: 'unset',
+          },
+          [`& .${autocompleteClasses.endAdornment}`]: { right: '12px' },
 
           [sm]: {
             padding: theme.spacing(0.5, 0.75),
-            '& $input': { padding: '2px' },
-            '& $endAdornment': { right: '8px' },
+            [`& .${autocompleteClasses.input}`]: { padding: '2px' },
+            [`& .${autocompleteClasses.endAdornment}`]: { right: '8px' },
           },
         },
       },
     },
-  });
+  };
 }

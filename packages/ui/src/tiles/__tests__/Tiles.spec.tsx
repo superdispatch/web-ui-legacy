@@ -1,9 +1,9 @@
-import { renderCSS } from '@superdispatch/ui-testutils';
+import { v5 } from '@superdispatch/ui-testutils';
 import { Tiles } from '../Tiles';
 
 it('checks component css', () => {
   expect(
-    renderCSS(
+    v5.renderStyles(
       <Tiles space={1}>
         <div />
         <div />

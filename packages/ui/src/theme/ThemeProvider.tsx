@@ -1,17 +1,13 @@
 import {
-  createGenerateClassName,
   createTheme,
   CssBaseline,
-} from '@material-ui/core';
-import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-import {
-  StylesProvider,
   ThemeProvider as MaterialThemeProvider,
-} from '@material-ui/styles';
+} from '@mui/material';
+import { createGenerateClassName, StylesProvider } from '@mui/styles';
+import { createBreakpoints } from '@mui/system';
 import { useConstant } from '@superdispatch/hooks';
 import { Rule, StyleSheet } from 'jss';
 import { ReactElement, ReactNode } from 'react';
-import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import { overrideAppBar } from '../app-bar/AppBarOverrides';
 import { overrideAutocomplete } from '../autocomplete/AutocompleteOverrides';
 import { overrideAvatar } from '../avatar/AvatarOverrides';
@@ -42,6 +38,7 @@ import {
   overrideTypography,
 } from '../typography/TypographyOverrides';
 import { Color } from './Color';
+import { overrideCssBaseline } from './CssBaselineOverrides';
 import { SuperDispatchTheme } from './SuperDispatchTheme';
 
 function createSuperDispatchTheme(): SuperDispatchTheme {
@@ -67,7 +64,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
       text: {
         primary: Color.Dark500,
         secondary: Color.Dark200,
-        hint: Color.Dark100,
+        // hint: Color.Dark100, todo
         disabled: Color.Dark100,
       },
 
@@ -76,34 +73,34 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
 
     typography: createTypographyOptions(breakpoints),
 
-    props: {},
-    overrides: {},
+    components: {},
   }) as SuperDispatchTheme;
 
-  overrideAppBar(theme);
-  overrideAutocomplete(theme);
-  overrideAvatar(theme);
-  overrideButton(theme);
   overrideCard(theme);
+  overrideButton(theme);
+  overrideAppBar(theme);
+  overridePaper(theme);
+  overrideTooltip(theme);
+  overrideSvgIcon(theme);
+  overrideToolbar(theme);
+  overrideIconButton(theme);
+  overrideTypography(theme);
+  overrideMenu(theme);
+  overrideAvatar(theme);
+  overrideTextField(theme);
+  overrideAutocomplete(theme);
+  overrideCssBaseline(theme);
   overrideCheckbox(theme);
+  overrideRadio(theme);
+  overrideSwitch(theme);
   overrideChip(theme);
   overrideDialog(theme);
   overrideDrawer(theme);
-  overrideIconButton(theme);
-  overrideLink(theme);
-  overrideList(theme);
-  overrideMenu(theme);
-  overridePaper(theme);
-  overrideRadio(theme);
-  overrideSnackbar(theme);
-  overrideSvgIcon(theme);
-  overrideSwitch(theme);
-  overrideTabs(theme);
-  overrideTextField(theme);
-  overrideToolbar(theme);
-  overrideTooltip(theme);
-  overrideTypography(theme);
   overridePagination(theme);
+  overrideList(theme);
+  overrideLink(theme);
+  overrideSnackbar(theme);
+  overrideTabs(theme);
 
   return theme;
 }
@@ -168,11 +165,9 @@ export function ThemeProvider({
       <MaterialThemeProvider theme={theme}>
         <CssBaseline />
 
-        <StyledThemeProvider theme={theme}>
-          <ResponsiveContextProvider>
-            <SnackbarStackProvider>{children}</SnackbarStackProvider>
-          </ResponsiveContextProvider>
-        </StyledThemeProvider>
+        <ResponsiveContextProvider>
+          <SnackbarStackProvider>{children}</SnackbarStackProvider>
+        </ResponsiveContextProvider>
       </MaterialThemeProvider>
     </StylesProvider>
   );

@@ -1,11 +1,11 @@
-import { v5 } from '@superdispatch/ui';
+import { ThemeProvider, ThemeProviderProps } from '@superdispatch/ui';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { ReactElement, Suspense } from 'react';
 
-function Wrapper({ children }: v5.ThemeProviderProps): ReactElement {
+function Wrapper({ children }: ThemeProviderProps): ReactElement {
   return (
     <Suspense fallback="Suspended…">
-      <v5.ThemeProvider>{children}</v5.ThemeProvider>
+      <ThemeProvider>{children}</ThemeProvider>
     </Suspense>
   );
 }

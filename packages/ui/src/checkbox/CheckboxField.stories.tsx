@@ -1,14 +1,16 @@
-import {
-  FormControlLabel,
-  FormGroup,
-  Switch,
-  TextField,
-} from '@material-ui/core';
-import { RadioField } from '..';
+import { FormControlLabel, FormGroup, Switch, TextField } from '@mui/material';
+import { Meta } from '@storybook/react';
+import { RadioField } from '../index';
 import { CheckboxField } from './CheckboxField';
 import { CheckboxGroupField } from './CheckboxGroudField';
 
-export default { title: 'v4/Inputs/CheckboxField', component: CheckboxField };
+export default {
+  title: 'Inputs/CheckboxField',
+  component: CheckboxField,
+  parameters: {
+    v5: true,
+  },
+} as Meta;
 
 export const basic = () => (
   <CheckboxField label="Label" helperText="Helper Text" />

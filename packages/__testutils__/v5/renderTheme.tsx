@@ -1,15 +1,19 @@
 import { useTheme } from '@mui/material';
-import { v5 } from '@superdispatch/ui';
+import {
+  SuperDispatchTheme,
+  ThemeProvider,
+  ThemeProviderProps,
+} from '@superdispatch/ui';
 import { renderHook } from '@testing-library/react-hooks';
 
 export function renderTheme(
-  modifier?: v5.ThemeProviderProps['modifier'],
-): v5.SuperDispatchTheme {
+  modifier?: ThemeProviderProps['modifier'],
+): SuperDispatchTheme {
   const {
     result: { current: theme },
-  } = renderHook(() => useTheme<v5.SuperDispatchTheme>(), {
+  } = renderHook(() => useTheme<SuperDispatchTheme>(), {
     wrapper: ({ children }) => (
-      <v5.ThemeProvider modifier={modifier}>{children}</v5.ThemeProvider>
+      <ThemeProvider modifier={modifier}>{children}</ThemeProvider>
     ),
   });
 

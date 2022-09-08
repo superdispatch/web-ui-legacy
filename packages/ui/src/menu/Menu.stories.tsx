@@ -1,10 +1,15 @@
 import isLokiRunning from '@loki/is-loki-running';
-import { Button, Menu, MenuItem } from '@material-ui/core';
+import { Button, Menu, MenuItem } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { UseState } from '@superdispatch/ui-docs';
 import { Box } from '@superdispatch/ui-lab';
 
-export default { title: 'v4/Navigation/Menu' } as Meta;
+export default {
+  title: 'Navigation/Menu',
+  parameters: {
+    v5: true,
+  },
+} as Meta;
 
 const initialState = isLokiRunning();
 

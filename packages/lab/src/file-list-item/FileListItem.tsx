@@ -14,11 +14,15 @@ import {
   SvgIconProps,
   Tooltip,
 } from '@mui/material';
-import { v5 } from '@superdispatch/ui';
+import {
+  Color,
+  Column,
+  Columns,
+  useResponsiveValue,
+  useUID,
+} from '@superdispatch/ui';
 import { forwardRef, memo, ReactNode, useState } from 'react';
 import styled from 'styled-components';
-
-const { Color, Column, Columns, useResponsiveValue, useUID } = v5;
 
 const FileListItemName = styled.div`
   overflow: hidden;

@@ -1,9 +1,7 @@
 import { ThumbDown, ThumbUp } from '@mui/icons-material';
 import { Meta } from '@storybook/react';
-import { v5 } from '@superdispatch/ui';
+import { Column, Columns, Stack } from '@superdispatch/ui';
 import { ButtonArea } from './ButtonArea';
-
-const { Column, Columns, Stack } = v5;
 
 export default {
   title: 'Lab/ButtonArea',

@@ -10,12 +10,10 @@ import RoomIcon from '@mui/icons-material/Room';
 import { Link } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { PhoneLink } from '@superdispatch/phones';
-import { v5 } from '@superdispatch/ui';
+import { Column, Columns, Inline, Stack } from '@superdispatch/ui';
 import { Box } from '../box/Box';
 import { TextBox } from '../text-box/TextBox';
 import { DescriptionItem } from './DescriptionItem';
-
-const { Column, Columns, Inline, Stack } = v5;
 
 export default {
   title: 'Lab/DescriptionItem',

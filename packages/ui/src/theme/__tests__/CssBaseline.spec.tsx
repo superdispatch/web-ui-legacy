@@ -1,49 +1,64 @@
-import { renderCSS } from '@superdispatch/ui-testutils';
+import { v5 } from '@superdispatch/ui-testutils';
 
 it('checks component css', () => {
-  expect(renderCSS(<div />, ['MuiCssBaseline'])).toMatchInlineSnapshot(`
-html {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  expect(v5.renderGlobalCSS()).toMatchInlineSnapshot(`
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      box-sizing: border-box;
+      -webkit-text-size-adjust: 100%;
+    }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
 
-strong,
-b {
-  font-weight: 600;
-}
+    strong,
+    b {
+      font-weight: 600;
+    }
 
-body {
-  color: Color.Dark500;
-  margin: 0;
-  font-size: 14px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  line-height: 20px;
-  background-color: #fafafa;
-}
+    body {
+      margin: 0;
+      color: Color.Dark500;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      background-color: Color.White;
+    }
 
-@media (min-width: 0px) and (max-width: 599.95px) {
-  body {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
+    @media (min-width: 0px) and (max-width: 599.95px) {
+      body {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
 
-@media print {
-  body {
-    background-color: Color.White;
-  }
-}
+    @media print {
+      body {
+        background-color: Color.White;
+      }
+    }
 
-body::backdrop {
-  background-color: #fafafa;
-}
-`);
+    body::backdrop {
+      background-color: Color.White;
+    }
+
+    body {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: 'Inter', sans-serif;
+    }
+
+    @media (min-width: 0px) and (max-width: 599.95px) {
+      body {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  `);
 });

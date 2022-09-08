@@ -1,9 +1,6 @@
-import { v5 } from '@superdispatch/ui';
+import { RadioGroupField, RadioGroupFieldProps } from '@superdispatch/ui';
 import { FieldValidator, useField, useFormikContext } from 'formik';
 import { forwardRef, ForwardRefExoticComponent } from 'react';
-
-const { RadioGroupField } = v5;
-type RadioGroupFieldProps = v5.RadioGroupFieldProps;
 
 export interface FormikRadioGroupFieldProps
   extends Omit<RadioGroupFieldProps, 'error' | 'value'> {

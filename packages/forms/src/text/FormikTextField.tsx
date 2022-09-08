@@ -1,5 +1,5 @@
 import { StandardTextFieldProps, TextField } from '@mui/material';
-import { v5 } from '@superdispatch/ui';
+import { useUID } from '@superdispatch/ui';
 import { FieldValidator, useField, useFormikContext } from 'formik';
 import {
   ChangeEvent,
@@ -7,8 +7,6 @@ import {
   ForwardRefExoticComponent,
   ReactNode,
 } from 'react';
-
-const { useUID } = v5;
 
 function parseInputValue(
   event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,

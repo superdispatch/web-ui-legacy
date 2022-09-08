@@ -1,4 +1,4 @@
-import { v5 } from '@superdispatch/ui';
+import { ThemeProvider, ThemeProviderProps } from '@superdispatch/ui';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Form, FormikProvider } from 'formik';
@@ -8,9 +8,6 @@ import {
   FormikEnhancedConfig,
   useFormikEnhanced,
 } from '../enhanced/useFormikEnhanced';
-
-const { ThemeProvider } = v5;
-type ThemeProviderProps = v5.ThemeProviderProps;
 
 export function renderFormField<TValues, TResponse>(
   element: ReactElement,

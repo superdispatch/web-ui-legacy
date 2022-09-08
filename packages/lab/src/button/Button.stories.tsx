@@ -2,11 +2,9 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import SaveIcon from '@mui/icons-material/Save';
 import { Meta } from '@storybook/react';
-import { v5 } from '@superdispatch/ui';
+import { Inline, Stack } from '@superdispatch/ui';
 import { Box } from '../box/Box';
 import { AnchorButton, Button } from './Button';
-
-const { Inline, Stack } = v5;
 
 export default {
   title: 'Lab/Button',

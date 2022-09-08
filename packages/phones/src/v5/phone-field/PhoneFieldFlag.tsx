@@ -1,11 +1,9 @@
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { v5 } from '@superdispatch/ui';
+import { SuperDispatchTheme } from '@superdispatch/ui';
 import clsx from 'clsx';
 import { forwardRef, ImgHTMLAttributes, Ref } from 'react';
 import { CountryISO } from '../country-code-metadata/CountryCodeMetadata';
-
-type SuperDispatchTheme = v5.SuperDispatchTheme;
 
 const useStyles = makeStyles(
   (theme: SuperDispatchTheme) => ({

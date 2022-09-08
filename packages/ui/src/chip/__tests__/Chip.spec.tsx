@@ -1,20 +1,22 @@
-import { Chip } from '@material-ui/core';
-import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
+import { Chip } from '@mui/material';
+import { v5 } from '@superdispatch/ui-testutils';
+
+const { renderCSS, renderTheme } = v5;
 
 it('checks default props', () => {
-  const { props } = renderTheme();
+  const { components } = renderTheme();
 
-  expect(props.MuiChip).toMatchInlineSnapshot(`
+  expect(components.MuiChip?.defaultProps).toMatchInlineSnapshot(`
     Object {
       "deleteIcon": <div>
-        <WithStyles(ForwardRef(SvgIcon))>
+        <ForwardRef(SvgIcon)>
           <path
             clipRule="evenodd"
             d="M13.239 12L17 8.239 15.761 7 12 10.761 8.239 7 7 8.239 10.761 12 7 15.761 8.239 17 12 13.239 15.761 17 17 15.761 13.239 12z"
             fill="currentColor"
             fillRule="evenodd"
           />
-        </WithStyles(ForwardRef(SvgIcon))>
+        </ForwardRef(SvgIcon)>
       </div>,
       "size": "small",
     }
@@ -22,287 +24,198 @@ it('checks default props', () => {
 });
 
 it('checks component css', () => {
-  expect(renderCSS(<Chip />, ['MuiChip'])).toMatchInlineSnapshot(`
-.MuiChip-root {
-  border: none;
-  cursor: default;
-  display: inline-flex;
-  outline: 0;
-  padding: 0;
-  font-size: 14px;
-  box-sizing: border-box;
-  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  align-items: center;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  line-height: 20px;
-  white-space: nowrap;
-  border-radius: 4px;
-  vertical-align: middle;
-  justify-content: center;
-  text-decoration: none;
-  background-color: Color.Silver200;
-}
+  expect(renderCSS(<Chip />, ['MuiChip-root', 'MuiChip-label']))
+    .toMatchInlineSnapshot(`
+    .MuiChip-root {
+      font-family: "Inter",sans-serif;
+      font-size: 0.8125rem;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 24px;
+      color: Color.Dark500;
+      background-color: Color.Silver300;
+      border-radius: 16px;
+      white-space: nowrap;
+      -webkit-transition: background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      cursor: default;
+      outline: 0;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      border: 0;
+      padding: 0;
+      vertical-align: middle;
+      box-sizing: border-box;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      color: unset;
+      height: unset;
+      border-radius: 4px;
+      background-color: Color.Silver200;
+      height: unset;
+    }
 
-.MuiChip-root.Mui-disabled {
-  color: Color.Dark100;
-  pointer-events: none;
-}
+    .MuiChip-root.Mui-disabled {
+      opacity: 0.38;
+      pointer-events: none;
+    }
 
-.MuiChip-root .MuiChip-avatar {
-  color: #616161;
-  width: 24px;
-  height: 24px;
-  font-size: 0.75rem;
-  margin-left: 5px;
-  margin-right: -6px;
-}
+    .MuiChip-root .MuiChip-avatar {
+      margin-left: 5px;
+      margin-right: -6px;
+      width: 24px;
+      height: 24px;
+      color: #616161;
+      font-size: 0.75rem;
+    }
 
-.MuiChip-root .MuiChip-avatarColorPrimary {
-  color: Color.White;
-  background-color: rgb(0, 81, 178);
-}
+    .MuiChip-root .MuiChip-avatarColorPrimary {
+      color: Color.White;
+      background-color: rgb(0,81,178);
+    }
 
-.MuiChip-root .MuiChip-avatarColorSecondary {
-  color: Color.White;
-  background-color: #c51162;
-}
+    .MuiChip-root .MuiChip-avatarColorSecondary {
+      color: Color.White;
+      background-color: #7b1fa2;
+    }
 
-.MuiChip-root .MuiChip-avatarSmall {
-  width: 18px;
-  height: 18px;
-  font-size: 0.625rem;
-  margin-left: 4px;
-  margin-right: -4px;
-}
+    .MuiChip-root .MuiChip-avatarSmall {
+      margin-left: 4px;
+      margin-right: -4px;
+      width: 18px;
+      height: 18px;
+      font-size: 0.625rem;
+    }
 
-@media (min-width: 0px) and (max-width: 599.95px) {
-  .MuiChip-root {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
+    .MuiChip-root .MuiChip-icon {
+      color: #616161;
+      margin-left: 4px;
+      margin-right: -4px;
+      font-size: 18px;
+    }
 
-.MuiChip-colorPrimary {
-  color: Color.White;
-  background-color: Color.Blue300;
-}
+    .MuiChip-root .MuiChip-deleteIcon {
+      -webkit-tap-highlight-color: transparent;
+      color: rgba(25,35,52,0.26);
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 5px 0 -6px;
+      margin-right: 4px;
+      margin-left: -4px;
+    }
 
-.MuiChip-colorSecondary {
-  color: Color.White;
-  background-color: #f50057;
-}
+    .MuiChip-root .MuiChip-deleteIcon:hover {
+      color: rgba(25,35,52,0.4);
+    }
 
-.MuiChip-clickable {
-  cursor: pointer;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
+    .MuiChip-root .MuiChip-icon {
+      color: Color.Dark100;
+      font-size: 1em;
+      margin-right: unset;
+    }
 
-.MuiChip-clickable:focus {
-  box-shadow: 0 0 0 2px Color.Silver300;
-}
+    .MuiChip-root .MuiChip-icon {
+      width: unset;
+      height: unset;
+      margin-left: 8px;
+      margin-right: unset;
+    }
 
-.MuiChip-clickable:active,
-.MuiChip-clickable:hover {
-  background-color: Color.Silver300;
-}
+    .MuiChip-root .MuiChip-deleteIcon {
+      width: unset;
+      height: unset;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 14px;
+      -webkit-transition: background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+    }
 
-.MuiChip-clickableColorPrimary:hover,
-.MuiChip-clickableColorPrimary:focus {
-  background-color: rgb(20, 128, 255);
-}
+    .MuiChip-root .MuiChip-deleteIcon:active > svg,
+    .MuiChip-root .MuiChip-deleteIcon:hover > svg,
+    .MuiChip-root .MuiChip-deleteIcon:focus > svg {
+      background-color: Color.Silver400;
+    }
 
-.MuiChip-clickableColorSecondary:hover,
-.MuiChip-clickableColorSecondary:focus {
-  background-color: rgb(245, 20, 100);
-}
+    .MuiChip-root .MuiChip-deleteIcon > svg {
+      border-radius: 50%;
+      color: Color.Dark200;
+      font-size: 1em;
+    }
 
-.MuiChip-deletable:focus {
-  box-shadow: 0 0 0 2px Color.Silver300;
-}
+    .MuiChip-root .MuiChip-deleteIcon {
+      width: unset;
+      height: unset;
+      padding: 4px;
+      margin-left: -4px;
+      margin-right: 2px;
+    }
 
-.MuiChip-deletableColorPrimary:focus {
-  background-color: rgb(51, 144, 255);
-}
+    .MuiChip-root.Mui-disabled {
+      opacity: 1;
+      color: Color.Dark100;
+    }
 
-.MuiChip-deletableColorSecondary:focus {
-  background-color: rgb(247, 51, 120);
-}
+    .MuiChip-label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-left: 8px;
+      padding-right: 8px;
+      white-space: nowrap;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
 
-.MuiChip-outlined {
-  border: 1px solid rgba(0, 0, 0, 0.23);
-  background-color: transparent;
-}
+    @media (min-width:600px) {
+      .MuiChip-root .MuiChip-icon {
+        margin-left: 4px;
+      }
+    }
 
-.MuiChip-clickable.MuiChip-outlined:hover,
-.MuiChip-clickable.MuiChip-outlined:focus,
-.MuiChip-deletable.MuiChip-outlined:focus {
-  background-color: rgba(25, 35, 52, 0.04);
-}
+    @media (min-width:600px) {
+      .MuiChip-root .MuiChip-deleteIcon {
+        margin-right: 0;
+      }
+    }
 
-.MuiChip-outlined .MuiChip-avatar {
-  margin-left: 4px;
-}
+    @media (min-width:0px) and (max-width:599.95px) {
+      .MuiChip-root {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
 
-.MuiChip-outlined .MuiChip-avatarSmall {
-  margin-left: 2px;
-}
+    @media (min-width:600px) {
+      .MuiChip-label {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+    }
 
-.MuiChip-outlined .MuiChip-icon {
-  margin-left: 4px;
-}
+    @media (min-width:0px) and (max-width:599.95px) {
 
-.MuiChip-outlined .MuiChip-iconSmall {
-  margin-left: 2px;
-}
+    }
 
-.MuiChip-outlined .MuiChip-deleteIcon {
-  margin-right: 5px;
-}
+    @media print {
 
-.MuiChip-outlined .MuiChip-deleteIconSmall {
-  margin-right: 3px;
-}
+    }
 
-.MuiChip-outlinedPrimary {
-  color: Color.Blue300;
-  border: 1px solid Color.Blue300;
-}
+    @media (min-width:0px) and (max-width:599.95px) {
 
-.MuiChip-clickable.MuiChip-outlinedPrimary:hover,
-.MuiChip-clickable.MuiChip-outlinedPrimary:focus,
-.MuiChip-deletable.MuiChip-outlinedPrimary:focus {
-  background-color: rgba(0, 117, 255, 0.04);
-}
-
-.MuiChip-outlinedSecondary {
-  color: #f50057;
-  border: 1px solid #f50057;
-}
-
-.MuiChip-clickable.MuiChip-outlinedSecondary:hover,
-.MuiChip-clickable.MuiChip-outlinedSecondary:focus,
-.MuiChip-deletable.MuiChip-outlinedSecondary:focus {
-  background-color: rgba(245, 0, 87, 0.04);
-}
-
-.MuiChip-icon {
-  color: Color.Dark100;
-  font-size: 1em;
-  margin-left: 5px;
-}
-
-.MuiChip-iconSmall {
-  margin-left: 8px;
-}
-
-@media (min-width: 600px) {
-  .MuiChip-iconSmall {
-    margin-left: 4px;
-  }
-}
-
-.MuiChip-iconColorPrimary {
-  color: inherit;
-}
-
-.MuiChip-iconColorSecondary {
-  color: inherit;
-}
-
-.MuiChip-label {
-  overflow: hidden;
-  white-space: nowrap;
-  padding-left: 12px;
-  padding-right: 12px;
-  text-overflow: ellipsis;
-}
-
-.MuiChip-labelSmall {
-  padding-left: 6px;
-  padding-right: 6px;
-}
-
-@media (min-width: 600px) {
-  .MuiChip-labelSmall {
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-}
-
-.MuiChip-deleteIcon {
-  color: rgba(25, 35, 52, 0.26);
-  cursor: pointer;
-  margin: 0 5px 0 -6px;
-  display: flex;
-  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.MuiChip-deleteIcon:hover {
-  color: rgba(25, 35, 52, 0.4);
-}
-
-.MuiChip-deleteIcon > svg {
-  color: Color.Dark200;
-  font-size: 1em;
-  border-radius: 50%;
-}
-
-.MuiChip-deleteIcon:active > svg,
-.MuiChip-deleteIcon:hover > svg,
-.MuiChip-deleteIcon:focus > svg {
-  background-color: Color.Silver400;
-}
-
-.MuiChip-deleteIconSmall {
-  padding: 4px;
-  margin-left: -4px;
-  margin-right: 2px;
-}
-
-@media (min-width: 600px) {
-  .MuiChip-deleteIconSmall {
-    margin-right: 0;
-  }
-}
-
-.MuiChip-deleteIconColorPrimary {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.MuiChip-deleteIconColorPrimary:hover,
-.MuiChip-deleteIconColorPrimary:active {
-  color: Color.White;
-}
-
-.MuiChip-deleteIconColorSecondary {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.MuiChip-deleteIconColorSecondary:hover,
-.MuiChip-deleteIconColorSecondary:active {
-  color: Color.White;
-}
-
-.MuiChip-deleteIconOutlinedColorPrimary {
-  color: rgba(0, 117, 255, 0.7);
-}
-
-.MuiChip-deleteIconOutlinedColorPrimary:hover,
-.MuiChip-deleteIconOutlinedColorPrimary:active {
-  color: Color.Blue300;
-}
-
-.MuiChip-deleteIconOutlinedColorSecondary {
-  color: rgba(245, 0, 87, 0.7);
-}
-
-.MuiChip-deleteIconOutlinedColorSecondary:hover,
-.MuiChip-deleteIconOutlinedColorSecondary:active {
-  color: #f50057;
-}
-`);
+    }
+  `);
 });

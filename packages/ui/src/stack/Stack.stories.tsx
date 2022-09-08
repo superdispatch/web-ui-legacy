@@ -1,11 +1,11 @@
-import { Link } from '@material-ui/core';
+import { Link } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Empty, Placeholder } from '@superdispatch/ui-docs';
 import { Box } from '@superdispatch/ui-lab';
 import { Stack } from './Stack';
 
 export default {
-  title: 'v4/Layout/Stack',
+  title: 'Layout/Stack',
   component: Stack,
   decorators: [
     (Story) => (
@@ -15,6 +15,7 @@ export default {
     ),
   ],
   parameters: {
+    v5: true,
     componentSubtitle: (
       <>
         Heavily inspired by the{' '}
