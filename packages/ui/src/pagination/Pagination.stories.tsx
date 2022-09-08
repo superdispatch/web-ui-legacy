@@ -15,7 +15,6 @@ export default {
     ),
   ],
   parameters: {
-    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/pagination/#props" />
     ),

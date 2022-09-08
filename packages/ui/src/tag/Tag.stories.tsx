@@ -5,7 +5,6 @@ import { Tag } from './Tag';
 export default {
   title: 'Data Display/Tag',
   component: Tag,
-  parameters: { v5: true },
 } as Meta;
 
 export const subtle = () => (

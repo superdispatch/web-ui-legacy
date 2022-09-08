@@ -7,7 +7,6 @@ export default {
   title: 'Layout/Tiles',
   component: Tiles,
   parameters: {
-    v5: true,
     componentSubtitle: (
       <>
         Heavily inspired by the{' '}

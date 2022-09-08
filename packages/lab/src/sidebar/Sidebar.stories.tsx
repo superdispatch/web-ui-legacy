@@ -29,7 +29,6 @@ export default {
     SidebarMenuItemAvatar,
     SidebarSubheader,
   },
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

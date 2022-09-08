@@ -5,7 +5,6 @@ import { CheckboxField, RadioField, RadioGroupField } from '../index';
 export default {
   title: 'Inputs/Switch',
   parameters: {
-    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/switch/#props" />
     ),

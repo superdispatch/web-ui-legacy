@@ -9,7 +9,6 @@ import { AnchorButton, Button } from './Button';
 export default {
   title: 'Lab/Button',
   component: Button,
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

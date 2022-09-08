@@ -6,9 +6,6 @@ import { Box } from '@superdispatch/ui-lab';
 
 export default {
   title: 'Navigation/Menu',
-  parameters: {
-    v5: true,
-  },
 } as Meta;
 
 const initialState = isLokiRunning();

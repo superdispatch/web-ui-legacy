@@ -4,7 +4,6 @@ import { PhoneText } from './PhoneText';
 export default {
   title: 'Phones/PhoneText',
   component: PhoneText,
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => <PhoneText phone="+12015550123" />;

@@ -5,9 +5,6 @@ import { Stack } from '../stack/Stack';
 
 export default {
   title: 'Navigation/Link',
-  parameters: {
-    v5: true,
-  },
 } as Meta;
 
 export const basic = () => (

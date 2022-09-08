@@ -3,7 +3,6 @@ import { PhoneField } from './PhoneField.playroom';
 export default {
   title: 'Phones/PhoneField',
   component: PhoneField,
-  parameters: { v5: true },
 };
 
 export const basic = () => <PhoneField />;

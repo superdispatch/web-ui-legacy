@@ -7,7 +7,6 @@ import { Dialog } from './Dialog.playroom';
 export default {
   title: 'Feedback/Dialog',
   parameters: {
-    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/dialog/#props" />
     ),

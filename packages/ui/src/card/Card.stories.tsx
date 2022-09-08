@@ -6,7 +6,6 @@ import { Box } from '@superdispatch/ui-lab';
 export default {
   title: 'Surfaces/Card',
   parameters: {
-    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/card/#props" />
     ),

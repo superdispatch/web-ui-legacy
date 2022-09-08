@@ -4,9 +4,6 @@ import { AdaptiveToolbar } from './AdaptiveToolbar';
 export default {
   title: 'Surfaces/AdaptiveToolbar',
   component: AdaptiveToolbar,
-  parameters: {
-    v5: true,
-  },
 } as Meta;
 
 export const basic = () => (

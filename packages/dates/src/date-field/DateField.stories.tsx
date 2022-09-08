@@ -5,7 +5,6 @@ import { DateField } from './DateField.playroom';
 export default {
   title: 'Dates/DateField',
   component: DateField,
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => <DateField />;

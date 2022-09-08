@@ -1,6 +1,6 @@
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import { addDecorator, addParameters } from '@storybook/react';
-import { ThemeProvider, v5 } from '@superdispatch/ui';
+import { ThemeProvider } from '@superdispatch/ui';
 import 'fontsource-inter/400.css';
 import 'fontsource-inter/500.css';
 import 'fontsource-inter/600.css';
@@ -28,9 +28,9 @@ function injectDisplayNames(module, { suffix = '' } = {}) {
   }
 }
 
-function ThemeProviderV5({ children }) {
+function ThemeProviderContainer({ children }) {
   return (
-    <v5.ThemeProvider
+    <ThemeProvider
       injectFirst={false}
       modifier={(theme) => {
         merge(theme.components.MuiCssBaseline, {
@@ -45,17 +45,18 @@ function ThemeProviderV5({ children }) {
       }}
     >
       {children}
-    </v5.ThemeProvider>
+    </ThemeProvider>
   );
 }
 
 addDecorator(withPlayroom);
-addDecorator((story, { id, parameters }) => {
-  const Provider = parameters.v5 ? ThemeProviderV5 : ThemeProvider;
+addDecorator((story, { id }) => {
   return (
     <Suspense fallback="Loading story…">
       <div data-story={id}>
-        <Provider injectFirst={false}>{story()}</Provider>
+        <ThemeProviderContainer injectFirst={false}>
+          {story()}
+        </ThemeProviderContainer>
       </div>
     </Suspense>
   );
@@ -63,11 +64,11 @@ addDecorator((story, { id, parameters }) => {
 
 function SuperDispatchDocsContainer(props) {
   return (
-    <v5.ThemeProvider injectFirst={false}>
+    <ThemeProvider injectFirst={false}>
       <ThemeProvider injectFirst={false}>
         <DocsContainer {...props} />
       </ThemeProvider>
-    </v5.ThemeProvider>
+    </ThemeProvider>
   );
 }
 

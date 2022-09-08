@@ -4,7 +4,6 @@ import { Box } from './Box';
 export default {
   title: 'Lab/Box',
   component: Box,
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

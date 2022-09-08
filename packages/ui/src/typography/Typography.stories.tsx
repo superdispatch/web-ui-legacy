@@ -5,7 +5,6 @@ import { Stack } from '../stack/Stack';
 export default {
   title: 'Data Display/Typography',
   parameters: {
-    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/typography/#props" />
     ),

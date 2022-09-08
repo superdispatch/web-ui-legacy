@@ -14,9 +14,6 @@ export default {
   title: 'Data Display/DescriptionList',
   component: DescriptionList,
   subcomponents: { DescriptionListItem },
-  parameters: {
-    v5: true,
-  },
   decorators: [
     (Story) => (
       <Box maxWidth="200px">

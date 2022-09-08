@@ -4,7 +4,6 @@ import { FileDropZone, toBytes } from './FileDropZone';
 export default {
   title: 'Lab/FileDropZone',
   component: FileDropZone,
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

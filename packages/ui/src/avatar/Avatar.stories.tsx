@@ -4,7 +4,6 @@ import { PropsLink } from '@superdispatch/ui-docs';
 export default {
   title: 'Data Display/Avatar',
   parameters: {
-    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/avatar/#props" />
     ),

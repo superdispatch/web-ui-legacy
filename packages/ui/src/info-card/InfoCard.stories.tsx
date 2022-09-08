@@ -7,9 +7,6 @@ import { InfoCard } from './InfoCard';
 export default {
   title: 'Surfaces/InfoCard',
   component: InfoCard,
-  parameters: {
-    v5: true,
-  },
 } as Meta;
 
 export const basic = () => (

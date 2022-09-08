@@ -7,9 +7,6 @@ import { AvatarButton } from './AvatarButton';
 export default {
   title: 'Inputs/Avatar Button',
   component: AvatarButton,
-  parameters: {
-    v5: true,
-  },
 } as Meta;
 
 export const basic = () => (

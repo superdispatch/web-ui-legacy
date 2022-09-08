@@ -13,7 +13,6 @@ export default {
   title: 'Feedback/Snackbar',
   component: Snackbar,
   subcomponents: { SnackbarContent },
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

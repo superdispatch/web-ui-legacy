@@ -13,7 +13,6 @@ export default {
       </Box>
     ),
   ],
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

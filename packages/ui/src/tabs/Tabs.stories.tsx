@@ -2,7 +2,7 @@ import { Tab, Tabs } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { UseState } from '@superdispatch/ui-docs';
 
-export default { title: 'Navigation/Tabs', parameters: { v5: true } } as Meta;
+export default { title: 'Navigation/Tabs' } as Meta;
 
 export const basic = () => (
   <UseState initialState={1}>

@@ -9,7 +9,6 @@ import { Banner } from './Banner';
 export default {
   title: 'Lab/Banner',
   component: Banner,
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

@@ -7,7 +7,6 @@ import { Inline } from '../inline/Inline';
 export default {
   title: 'Data Display/Tooltip',
   parameters: {
-    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/tooltip/#props" />
     ),

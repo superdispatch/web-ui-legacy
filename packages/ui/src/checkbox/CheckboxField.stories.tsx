@@ -7,9 +7,6 @@ import { CheckboxGroupField } from './CheckboxGroudField';
 export default {
   title: 'Inputs/CheckboxField',
   component: CheckboxField,
-  parameters: {
-    v5: true,
-  },
 } as Meta;
 
 export const basic = () => (

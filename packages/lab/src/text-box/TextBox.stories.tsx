@@ -6,7 +6,6 @@ import { TextBox } from './TextBox';
 export default {
   title: 'Lab/TextBox',
   component: TextBox,
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

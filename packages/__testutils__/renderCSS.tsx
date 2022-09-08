@@ -1,4 +1,4 @@
-import { Color, ThemeProvider } from '@superdispatch/ui/pkg/dist-types';
+import { Color, ThemeProvider } from '@superdispatch/ui';
 import { render } from '@testing-library/react';
 import {
   AtRule,
@@ -12,7 +12,6 @@ import { styleSheetSerializer } from 'jest-styled-components';
 import { identity } from 'lodash';
 import { format } from 'prettier';
 import { ReactElement } from 'react';
-import { extractCSS } from '../renderCSS';
 
 const colors = new Map<string, string>(
   Object.entries(Color).flatMap(([k, v]) => [
@@ -131,12 +130,6 @@ export function renderCSS(ui: ReactElement, displayNames?: string[]) {
   renderedCSS.add(css);
 
   return css;
-}
-
-export function renderStyles(ui: ReactElement, components: string[]): string {
-  render(<ThemeProvider>{ui}</ThemeProvider>);
-
-  return extractCSS(components);
 }
 
 function getStyleByClass(className: string, css: string) {

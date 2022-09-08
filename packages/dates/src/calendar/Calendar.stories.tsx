@@ -9,7 +9,7 @@ import {
 export default {
   title: 'Dates/Calendar',
   component: Calendar,
-  parameters: { v5: true },
+
   subcomponents: { CalendarQuickSelection, CalendarQuickSelectionItem },
 } as Meta;
 

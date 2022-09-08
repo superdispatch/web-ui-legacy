@@ -8,9 +8,6 @@ import { CardButton } from './CardButton';
 export default {
   title: 'Inputs/CardButton',
   component: CardButton,
-  parameters: {
-    v5: true,
-  },
 } as Meta;
 
 export const basic = () => (

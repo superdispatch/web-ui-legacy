@@ -6,7 +6,6 @@ import { Inline } from '../index';
 export default {
   title: 'Inputs/IconButton',
   parameters: {
-    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/icon-button/#props" />
     ),

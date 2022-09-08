@@ -5,7 +5,6 @@ import { DateRangeField } from './DateRangeField.playroom';
 export default {
   title: 'Dates/DateRangeField',
   component: DateRangeField,
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => <DateRangeField />;

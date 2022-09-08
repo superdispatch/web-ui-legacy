@@ -6,7 +6,6 @@ import { ButtonArea } from './ButtonArea';
 export default {
   title: 'Lab/ButtonArea',
   component: ButtonArea,
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

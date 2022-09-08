@@ -7,7 +7,6 @@ import { Column, Columns } from '../index';
 export default {
   title: 'Surfaces/AppBar',
   parameters: {
-    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/app-bar/#props" />
     ),

@@ -4,7 +4,6 @@ import { PhoneLink } from './PhoneLink';
 export default {
   title: 'Phones/PhoneLink',
   component: PhoneLink,
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => <PhoneLink phone="+12015550123" />;

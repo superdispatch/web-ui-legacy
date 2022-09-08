@@ -18,7 +18,7 @@ import {
 
 export default {
   title: 'Recipes/Forms',
-  parameters: { v5: true, playroom: { disable: true } },
+  parameters: { playroom: { disable: true } },
 } as Meta;
 
 export const SignUp = () => {

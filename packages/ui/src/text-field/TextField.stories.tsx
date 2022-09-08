@@ -5,7 +5,6 @@ import { PropsLink } from '@superdispatch/ui-docs';
 export default {
   title: 'Inputs/TextField',
   parameters: {
-    v5: true,
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/avatar/#props" />
     ),

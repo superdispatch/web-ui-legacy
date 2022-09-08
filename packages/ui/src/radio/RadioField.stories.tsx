@@ -5,7 +5,6 @@ import { CheckboxField, RadioField, RadioGroupField } from '../index';
 export default {
   title: 'Inputs/RadioField',
   component: RadioField,
-  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (
