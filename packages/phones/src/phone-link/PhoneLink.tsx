@@ -1,5 +1,5 @@
-import { Link, LinkProps } from '@material-ui/core';
-import { renderChildren } from '@superdispatch/ui';
+import { Link, LinkProps } from '@mui/material';
+import { renderChildren } from '@superdispatch/ui/pkg/dist-types';
 import {
   forwardRef,
   ForwardRefExoticComponent,

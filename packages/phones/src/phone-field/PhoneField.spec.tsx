@@ -1,8 +1,10 @@
-import { extractCSS, renderComponent } from '@superdispatch/ui-testutils';
+import { extractCSS, v5 } from '@superdispatch/ui-testutils';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useEffect, useState } from 'react';
 import { PhoneField, PhoneFieldProps } from './PhoneField';
+
+const { renderComponent } = v5;
 
 function UncontrolledPhoneField({ value, ...props }: PhoneFieldProps) {
   const [phone, setPhone] = useState(value);
