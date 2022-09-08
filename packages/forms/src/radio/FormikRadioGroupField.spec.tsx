@@ -1,8 +1,10 @@
-import { RadioField } from '@superdispatch/ui';
+import { v5 } from '@superdispatch/ui';
 import { fireEvent, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderFormField } from '../__testutils__/renderFormField';
 import { FormikRadioGroupField } from './FormikRadioGroupField';
+
+const { RadioField } = v5;
 
 test('changes', async () => {
   const onSubmit = jest.fn();

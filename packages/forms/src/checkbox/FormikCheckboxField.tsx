@@ -1,6 +1,9 @@
-import { CheckboxField, CheckboxFieldProps, useUID } from '@superdispatch/ui';
+import { v5 } from '@superdispatch/ui';
 import { FieldValidator, useField, useFormikContext } from 'formik';
 import { ChangeEvent, forwardRef, ForwardRefExoticComponent } from 'react';
+
+const { CheckboxField, useUID } = v5;
+type CheckboxFieldProps = v5.CheckboxFieldProps;
 
 export interface FormikCheckboxFieldProps extends CheckboxFieldProps {
   name: string;

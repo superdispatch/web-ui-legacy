@@ -1,4 +1,4 @@
-import { MenuItem } from '@material-ui/core';
+import { MenuItem } from '@mui/material';
 import { Deferred } from '@superdispatch/ui-testutils';
 import { fireEvent, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -64,8 +64,82 @@ test('errors', async () => {
   const errorID = screen.getByRole('textbox').getAttribute('aria-describedby');
 
   expect(document.getElementById(errorID!)).toMatchInlineSnapshot(`
+    .c0 {
+      color: #6A707C;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      text-align: left;
+      margin-top: 3px;
+      margin-right: 14px;
+      margin-bottom: 0;
+      margin-left: 14px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      margin-top: 4px;
+      margin-left: unset;
+      margin-right: unset;
+    }
+
+    .c0.Mui-disabled {
+      color: #8F949E;
+    }
+
+    .c0.Mui-error {
+      color: #EE3017;
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media (min-width:600px) {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c0 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c0 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (hover:none) {
+
+    }
+
+    @media (min-width:600px) {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
     <p
-      class="MuiFormHelperText-root MuiFormHelperText-contained Mui-error MuiFormHelperText-filled"
+      class="c0 MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled"
       id="name-helper-text"
     >
       Invalid Name
@@ -95,8 +169,82 @@ test('formatErrors', async () => {
   const errorID = screen.getByRole('textbox').getAttribute('aria-describedby');
 
   expect(document.getElementById(errorID!)).toMatchInlineSnapshot(`
+    .c0 {
+      color: #6A707C;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      text-align: left;
+      margin-top: 3px;
+      margin-right: 14px;
+      margin-bottom: 0;
+      margin-left: 14px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      margin-top: 4px;
+      margin-left: unset;
+      margin-right: unset;
+    }
+
+    .c0.Mui-disabled {
+      color: #8F949E;
+    }
+
+    .c0.Mui-error {
+      color: #EE3017;
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media (min-width:600px) {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c0 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c0 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (hover:none) {
+
+    }
+
+    @media (min-width:600px) {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
     <p
-      class="MuiFormHelperText-root MuiFormHelperText-contained Mui-error"
+      class="c0 MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained"
       id="name-helper-text"
     >
       <strong>

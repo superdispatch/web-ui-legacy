@@ -1,13 +1,14 @@
-import { TextField } from '@material-ui/core';
-import {
-  PhoneField,
-  PhoneFieldProps,
-  PhoneService,
-  usePhoneService,
-} from '@superdispatch/phones';
-import { useUID } from '@superdispatch/ui';
+import { TextField } from '@mui/material';
+import { v5 } from '@superdispatch/phones';
+import { v5 as v5UI } from '@superdispatch/ui';
 import { useField, useFormikContext } from 'formik';
 import { forwardRef, ReactNode, Suspense } from 'react';
+
+const { useUID } = v5UI;
+
+const { PhoneField, usePhoneService } = v5;
+type PhoneFieldProps = v5.PhoneFieldProps;
+type PhoneService = v5.PhoneService;
 
 interface FormikPhoneFieldProps
   extends Omit<PhoneFieldProps, 'error' | 'value'> {
