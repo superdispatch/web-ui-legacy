@@ -1,9 +1,10 @@
 import {
+  Autocomplete,
   BaseTextFieldProps,
+  FilterOptionsState,
   InputBaseProps,
   TextField,
-} from '@material-ui/core';
-import { Autocomplete, FilterOptionsState } from '@material-ui/lab';
+} from '@mui/material';
 import { DateTime } from 'luxon';
 import { forwardRef, useEffect, useMemo, useState } from 'react';
 import {

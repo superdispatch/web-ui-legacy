@@ -1,8 +1,4 @@
-import {
-  mockDate,
-  renderComponent,
-  renderCSS,
-} from '@superdispatch/ui-testutils';
+import { mockDate, v5 } from '@superdispatch/ui-testutils';
 import { fireEvent, Matcher, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { DateTime } from 'luxon';
@@ -13,6 +9,8 @@ import {
   DateTimeRange,
 } from '../date-time-utils/DateTimeUtils';
 import { DateRangeField, DateRangeFieldProps } from './DateRangeField';
+
+const { renderComponent, renderStyles } = v5;
 
 function queryByClassName(classNames: string): Element[] {
   return Array.from(document.getElementsByClassName(classNames));
@@ -289,7 +287,7 @@ test('time normalization', () => {
 });
 
 test('css', () => {
-  expect(renderCSS(<DateRangeField />, ['SD-DateRangeField']))
+  expect(renderStyles(<DateRangeField />, ['SD-DateRangeField']))
     .toMatchInlineSnapshot(`
     .SD-DateRangeField-day.SD-DateRangeField-selected:not(.SD-DateRangeField-outside).SD-DateRangeField-rangeStart:before {
       left: 4px;

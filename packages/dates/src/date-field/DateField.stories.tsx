@@ -1,10 +1,11 @@
-import { InputAdornment } from '@material-ui/core';
+import { InputAdornment } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { DateField } from './DateField.playroom';
 
 export default {
-  title: 'v4/Dates/DateField',
+  title: 'Dates/DateField',
   component: DateField,
+  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => <DateField />;

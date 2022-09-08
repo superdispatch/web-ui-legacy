@@ -1,4 +1,4 @@
-import { renderChildren } from '@superdispatch/ui';
+import { renderChildren } from '@superdispatch/ui/pkg/dist-types';
 import { ReactElement, ReactNode, useMemo } from 'react';
 import { DateConfig, useDateConfig } from '../date-config/DateConfig';
 import {

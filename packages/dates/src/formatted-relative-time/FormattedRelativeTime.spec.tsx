@@ -1,7 +1,9 @@
-import { Typography } from '@material-ui/core';
-import { mockDate, renderComponent } from '@superdispatch/ui-testutils';
+import { Typography } from '@mui/material';
+import { mockDate, v5 } from '@superdispatch/ui-testutils';
 import { DateTime } from 'luxon';
-import { FormattedRelativeTime } from '../formatted-relative-time/FormattedRelativeTime';
+import { FormattedRelativeTime } from './FormattedRelativeTime';
+
+const { renderComponent } = v5;
 
 beforeEach(() => {
   mockDate();
@@ -30,6 +32,18 @@ describe('FormattedRelativeTime', () => {
     );
 
     expect(container).toMatchInlineSnapshot(`
+      @media (min-width:0px) and (max-width:599.95px) {
+
+      }
+
+      @media print {
+
+      }
+
+      @media (min-width:0px) and (max-width:599.95px) {
+
+      }
+
       <div>
         in 0s
         14s ago
@@ -59,6 +73,18 @@ describe('FormattedRelativeTime', () => {
     );
 
     expect(container).toMatchInlineSnapshot(`
+      @media (min-width:0px) and (max-width:599.95px) {
+
+      }
+
+      @media print {
+
+      }
+
+      @media (min-width:0px) and (max-width:599.95px) {
+
+      }
+
       <div>
         in 20d
       </div>
@@ -79,11 +105,39 @@ describe('FormattedRelativeTime', () => {
     );
 
     expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        font-family: "Inter",sans-serif;
+        color: #6A707C;
+      }
+
+      @media (min-width:0px) and (max-width:599.95px) {
+        .c0 {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      @media (min-width:0px) and (max-width:599.95px) {
+
+      }
+
+      @media print {
+
+      }
+
+      @media (min-width:0px) and (max-width:599.95px) {
+
+      }
+
       <div>
         Invalid Date
         Invalid Date
         <p
-          class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+          class="c0 MuiTypography-root MuiTypography-body2"
         >
           N/A
         </p>

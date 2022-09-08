@@ -1,5 +1,5 @@
-import { IconButton, Typography } from '@material-ui/core';
-import { ChevronLeft, ChevronRight } from '@material-ui/icons';
+import { ChevronLeft, ChevronRight } from '@mui/icons-material';
+import { IconButton, Typography } from '@mui/material';
 import { ReactElement } from 'react';
 import {
   CaptionElementProps,
