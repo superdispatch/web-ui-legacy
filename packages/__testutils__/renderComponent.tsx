@@ -1,4 +1,7 @@
-import { ThemeProvider, ThemeProviderProps } from '@superdispatch/ui';
+import {
+  ThemeProvider,
+  ThemeProviderProps,
+} from '@superdispatch/ui/pkg/dist-types';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { ReactElement, Suspense } from 'react';
 

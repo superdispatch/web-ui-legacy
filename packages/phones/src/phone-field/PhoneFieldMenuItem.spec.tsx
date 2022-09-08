@@ -1,7 +1,5 @@
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderStyles } from '@superdispatch/ui-testutils';
 import { PhoneFieldMenuItem } from './PhoneFieldMenuItem';
-
-const { renderStyles } = v5;
 
 test('css', () => {
   expect(

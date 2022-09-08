@@ -1,10 +1,10 @@
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderTheme } from '@superdispatch/ui-testutils';
 import { Button } from '../../index';
 
 it('checks default props', () => {
   const {
     components: { MuiButton },
-  } = v5.renderTheme();
+  } = renderTheme();
 
   expect(MuiButton?.defaultProps).toMatchInlineSnapshot(`
     Object {

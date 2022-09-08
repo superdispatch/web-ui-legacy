@@ -1,8 +1,8 @@
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderCSS } from '@superdispatch/ui-testutils';
 import { CardButton } from '../../index';
 
 it('checks component css', () => {
-  expect(v5.renderCSS(<CardButton />)).toMatchInlineSnapshot(`
+  expect(renderCSS(<CardButton />)).toMatchInlineSnapshot(`
     .c5 {
       overflow: hidden;
       pointer-events: none;

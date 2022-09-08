@@ -1,4 +1,8 @@
-import { mockDate, v5 } from '@superdispatch/ui-testutils';
+import {
+  mockDate,
+  renderComponent,
+  renderStyles,
+} from '@superdispatch/ui-testutils';
 import { fireEvent, Matcher, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { DateTime } from 'luxon';
@@ -9,8 +13,6 @@ import {
   DateTimeRange,
 } from '../date-time-utils/DateTimeUtils';
 import { DateRangeField, DateRangeFieldProps } from './DateRangeField';
-
-const { renderComponent, renderStyles } = v5;
 
 function queryByClassName(classNames: string): Element[] {
   return Array.from(document.getElementsByClassName(classNames));

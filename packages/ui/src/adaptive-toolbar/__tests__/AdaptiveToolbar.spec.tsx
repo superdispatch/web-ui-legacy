@@ -1,9 +1,9 @@
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderCSS } from '@superdispatch/ui-testutils';
 import { AdaptiveToolbar } from '../AdaptiveToolbar';
 
 it('checks component css', () => {
   expect(
-    v5.renderCSS(<AdaptiveToolbar items={[]} />, [
+    renderCSS(<AdaptiveToolbar items={[]} />, [
       'MuiToolbar-root',
       'MuiGrid-root',
       'MuiGrid-item',

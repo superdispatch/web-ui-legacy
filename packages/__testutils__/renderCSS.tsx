@@ -1,11 +1,24 @@
-import { Color, ThemeProvider } from '@superdispatch/ui';
+import { Color, ThemeProvider } from '@superdispatch/ui/pkg/dist-types';
 import { render } from '@testing-library/react';
-import { parse as parseCSS, stringify as stringifyCSS, Stylesheet } from 'css';
+import {
+  AtRule,
+  Comment,
+  parse as parseCSS,
+  Rule,
+  stringify as stringifyCSS,
+  Stylesheet,
+} from 'css';
+import { styleSheetSerializer } from 'jest-styled-components';
+import { identity } from 'lodash';
 import { format } from 'prettier';
 import { ReactElement } from 'react';
+import { extractCSS } from '../renderCSS';
 
 const colors = new Map<string, string>(
-  Object.entries(Color).map(([k, v]) => [v, `Color.${k}`]),
+  Object.entries(Color).flatMap(([k, v]) => [
+    [v, `Color.${k}`],
+    [v.replace(/\s/g, ''), `Color.${k}`], // rgba(255, 255, 255, 0.08) -> rgba(255,255,255,0.08)
+  ]),
 );
 
 const colorRegExp = new RegExp(
@@ -15,68 +28,31 @@ const colorRegExp = new RegExp(
   'g',
 );
 
+function replaceThemeColors(style: string) {
+  return style.replace(colorRegExp, (color) => colors.get(color) as string);
+}
+
 const renderedCSS = new Set<string>();
 
-function getAllSheets(): Map<string, Element> {
-  return new Map<string, Element>(
-    Array.from(document.querySelectorAll('[data-jss]'), (node) => [
-      node.getAttribute('data-meta') as string,
-      node,
-    ]),
-  );
-}
+function getSCSheet(): Element {
+  const sheet = document.querySelector('[data-styled]');
 
-function getSheets(components: string[]): Element[] {
-  const sheets = getAllSheets();
-
-  if (sheets.size === 0) {
-    throw new Error('There are no mounted JSS components.');
+  if (!sheet) {
+    throw new Error('There are no mounted SC components.');
   }
 
-  if (components.length === 0) {
-    throw new Error(
-      `No component names provided. Pick any of: ${Array.from(
-        sheets.keys(),
-        (key) => `  ${key}`,
-      ).join('\n')}`,
-    );
-  }
-
-  return components
-    .slice()
-    .sort((a, b) => a.localeCompare(b))
-    .map((name) => {
-      const sheet = sheets.get(name);
-
-      if (!sheet) {
-        throw new Error(
-          `Sheet for component "${name}" not found. You can select one of: ${Array.from(
-            sheets.keys(),
-            (key) => `  ${key}`,
-          ).join('\n')}`,
-        );
-      }
-
-      return sheet;
-    });
+  return sheet;
 }
 
-function parseStyleSheet(names: string[]): Stylesheet {
-  return parseCSS(
-    getSheets(names)
-      .map((node) => node.textContent)
-      .join('\n'),
-  );
+function parseStyleSheet(): Stylesheet {
+  return parseCSS(getSCSheet().textContent || '');
 }
 
 function formatAST(sheet: Stylesheet): string {
-  return format(
-    stringifyCSS(sheet).replace(
-      colorRegExp,
-      (color) => colors.get(color) as string,
-    ),
-    { parser: 'css', singleQuote: true },
-  ).trim();
+  return format(replaceThemeColors(stringifyCSS(sheet)), {
+    parser: 'css',
+    singleQuote: true,
+  }).trim();
 }
 
 expect.addSnapshotSerializer({
@@ -84,17 +60,114 @@ expect.addSnapshotSerializer({
   print: (value) => String(value),
 });
 
-export function extractCSS(components: string[]): string {
-  const targetSheet = parseStyleSheet(components);
-  const formatted = formatAST(targetSheet);
-
-  renderedCSS.add(formatted);
-
-  return formatted;
+export function extractGlobalCSS(): string {
+  const targetSheet = parseStyleSheet();
+  return formatAST(targetSheet);
 }
 
-export function renderCSS(ui: ReactElement, components: string[]): string {
+export function renderGlobalCSS() {
+  render(<ThemeProvider />);
+
+  const css = extractGlobalCSS();
+  renderedCSS.add(css);
+
+  return css;
+}
+
+export function renderCSS(ui: ReactElement, displayNames?: string[]) {
+  let firstUnmatchedClass: string | undefined;
+  let classNameMaxIndex = 0;
+
+  render(<ThemeProvider>{ui}</ThemeProvider>);
+
+  styleSheetSerializer.setStyleSheetSerializerOptions({
+    addStyles: true,
+    classNameFormatter(index, className) {
+      if (!displayNames) {
+        return `c${index + 1}`;
+      }
+
+      const formattedClass = displayNames[index];
+      classNameMaxIndex = Math.max(classNameMaxIndex, index);
+
+      if (!formattedClass) {
+        firstUnmatchedClass ||= className;
+        return className;
+      }
+
+      return formattedClass;
+    },
+  });
+
+  let css = styleSheetSerializer.print(
+    document.body,
+    () => '', // do not print code
+    identity,
+    {} as any,
+    {} as any,
+  );
+
+  if (firstUnmatchedClass) {
+    const associatedStyles = getStyleByClass(firstUnmatchedClass, css);
+    const associatedClasses = Array.from(
+      document.getElementsByClassName(firstUnmatchedClass),
+      (el) => Array.from(el.classList).join(','),
+    ).join('\n');
+
+    throw Error(
+      `renderCSS: Unmatched class "${firstUnmatchedClass}" \n\n Associated classes: ${associatedClasses} \n\n Associated styles: \n\n "${associatedStyles}"`,
+    );
+  }
+
+  if (displayNames && displayNames.length !== classNameMaxIndex + 1) {
+    throw RangeError(
+      `renderCSS: displayNames out of range. Expected ${
+        classNameMaxIndex + 1
+      } but got ${displayNames.length}`,
+    );
+  }
+
+  css = replaceThemeColors(css).trim();
+  renderedCSS.add(css);
+
+  return css;
+}
+
+export function renderStyles(ui: ReactElement, components: string[]): string {
   render(<ThemeProvider>{ui}</ThemeProvider>);
 
   return extractCSS(components);
+}
+
+function getStyleByClass(className: string, css: string) {
+  const targetSheet = parseCSS(css);
+
+  if (!targetSheet.stylesheet) {
+    throw new Error('There are no stylesheet.');
+  }
+
+  function filterRules(rules: Array<Rule | Comment | AtRule>) {
+    return rules.filter((rule) => {
+      if ('selectors' in rule) {
+        return rule.selectors?.some((selector) => {
+          return (
+            selector === `.${className}` ||
+            new RegExp(`\\.${className}\\W`).test(selector)
+          );
+        });
+      }
+      if ('rules' in rule && rule.rules) {
+        rule.rules = filterRules(rule.rules);
+
+        if (rule.rules.length > 0) {
+          return true;
+        }
+      }
+      return false;
+    });
+  }
+
+  targetSheet.stylesheet.rules = filterRules(targetSheet.stylesheet.rules);
+
+  return formatAST(targetSheet);
 }

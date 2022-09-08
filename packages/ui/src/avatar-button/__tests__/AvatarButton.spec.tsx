@@ -1,9 +1,9 @@
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderCSS } from '@superdispatch/ui-testutils';
 import { AvatarButton } from '../AvatarButton';
 
 it('checks component css', () => {
   expect(
-    v5.renderCSS(<AvatarButton />, [
+    renderCSS(<AvatarButton />, [
       'MuiButtonBase-root',
       'SD-AvatarButton',
       'MuiAvatar-root',

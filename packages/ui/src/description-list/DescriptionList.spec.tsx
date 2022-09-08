@@ -1,8 +1,6 @@
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderComponent, renderCSS } from '@superdispatch/ui-testutils';
 import { screen } from '@testing-library/react';
 import { DescriptionList, DescriptionListItem } from './DescriptionList';
-
-const { renderComponent, renderCSS } = v5;
 
 test('label id', () => {
   renderComponent(

@@ -1,8 +1,8 @@
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderStyles } from '@superdispatch/ui-testutils';
 import { Tag } from '../../index';
 
 it('checks component css', () => {
-  expect(v5.renderStyles(<Tag color="blue" variant="bold" />, ['SD-Tag']))
+  expect(renderStyles(<Tag color="blue" variant="bold" />, ['SD-Tag']))
     .toMatchInlineSnapshot(`
     .SD-Tag-root {
       display: inline-flex;

@@ -1,5 +1,9 @@
 import { Typography } from '@mui/material';
-import { mockDate, v5 } from '@superdispatch/ui-testutils';
+import {
+  mockDate,
+  renderComponent,
+  renderStyles,
+} from '@superdispatch/ui-testutils';
 import { EventType, fireEvent, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { DateObjectUnits, DateTime } from 'luxon';
@@ -18,8 +22,6 @@ import {
   CalendarQuickSelection,
   CalendarQuickSelectionItem,
 } from './CalendarQuickSelection';
-
-const { renderComponent, renderStyles } = v5;
 
 type MockCalendarDayEventHandler = jest.Mock<void, [CalendarDateEvent]>;
 

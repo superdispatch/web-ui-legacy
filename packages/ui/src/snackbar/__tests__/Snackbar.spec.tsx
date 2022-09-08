@@ -1,7 +1,5 @@
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
 import { Snackbar } from '../../index';
-
-const { renderCSS, renderTheme } = v5;
 
 it('checks default props', () => {
   const { components } = renderTheme();

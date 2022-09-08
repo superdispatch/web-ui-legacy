@@ -1,10 +1,10 @@
 import { Typography } from '@mui/material';
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
 
 it('checks default props', () => {
   const {
     components: { MuiTypography },
-  } = v5.renderTheme();
+  } = renderTheme();
 
   expect(MuiTypography?.defaultProps).toMatchInlineSnapshot(`
     Object {
@@ -15,7 +15,7 @@ it('checks default props', () => {
 
 it('checks component css', () => {
   expect(
-    v5.renderCSS(
+    renderCSS(
       <div>
         <Typography />
         <Typography variant="body1" />

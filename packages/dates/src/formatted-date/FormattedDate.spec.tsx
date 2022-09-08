@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material';
-import { mockDate, v5 } from '@superdispatch/ui-testutils';
+import { mockDate, renderComponent } from '@superdispatch/ui-testutils';
 import { renderHook } from '@testing-library/react-hooks';
 import { NullableDateInput } from '../date-time-utils/DateTimeUtils';
 import {
@@ -7,8 +7,6 @@ import {
   FormattedDateConfig,
   useFormattedDate,
 } from './FormattedDate';
-
-const { renderComponent } = v5;
 
 beforeEach(() => {
   mockDate();

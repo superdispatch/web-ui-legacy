@@ -1,7 +1,7 @@
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderGlobalCSS } from '@superdispatch/ui-testutils';
 
 it('checks component css', () => {
-  expect(v5.renderGlobalCSS()).toMatchInlineSnapshot(`
+  expect(renderGlobalCSS()).toMatchInlineSnapshot(`
     html {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;

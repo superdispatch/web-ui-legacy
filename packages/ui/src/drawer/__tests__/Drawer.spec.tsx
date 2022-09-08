@@ -1,11 +1,9 @@
 import { Drawer } from '@mui/material';
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
 import { DrawerActions } from '../DrawerActions';
 import { DrawerContent } from '../DrawerContent';
 import { DrawerList } from '../DrawerList';
 import { DrawerTitle } from '../DrawerTitle';
-
-const { renderCSS, renderTheme } = v5;
 
 it('checks default props', () => {
   const { components } = renderTheme();

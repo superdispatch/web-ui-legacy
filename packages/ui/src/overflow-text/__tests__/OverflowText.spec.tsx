@@ -1,7 +1,5 @@
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderCSS } from '@superdispatch/ui-testutils';
 import { OverflowText } from '../OverflowText';
-
-const { renderCSS } = v5;
 
 it('checks component css', () => {
   expect(

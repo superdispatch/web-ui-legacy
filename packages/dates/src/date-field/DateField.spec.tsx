@@ -1,5 +1,5 @@
 import { InputAdornment } from '@mui/material';
-import { mockDate, v5 } from '@superdispatch/ui-testutils';
+import { mockDate, renderComponent } from '@superdispatch/ui-testutils';
 import { fireEvent, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { DateTime } from 'luxon';
@@ -15,8 +15,6 @@ import {
   NullableDateString,
 } from '../date-time-utils/DateTimeUtils';
 import { DateField, DateFieldProps } from './DateField';
-
-const { renderComponent } = v5;
 
 beforeEach(() => {
   mockDate();

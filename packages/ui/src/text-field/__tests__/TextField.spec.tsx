@@ -1,7 +1,5 @@
 import { InputAdornment, MenuItem, TextField } from '@mui/material';
-import { v5 } from '@superdispatch/ui-testutils';
-
-const { renderCSS, renderTheme } = v5;
+import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
 
 it('checks default props', () => {
   const { components } = renderTheme();

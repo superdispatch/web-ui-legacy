@@ -1,8 +1,8 @@
-import { v5 } from '@superdispatch/ui-testutils';
+import { renderCSS } from '@superdispatch/ui-testutils';
 import { InfoCard } from '../../index';
 
 it('checks component css', () => {
-  expect(v5.renderCSS(<InfoCard />)).toMatchInlineSnapshot(`
+  expect(renderCSS(<InfoCard />)).toMatchInlineSnapshot(`
     .c1 {
       background-color: Color.White;
       color: Color.Dark500;

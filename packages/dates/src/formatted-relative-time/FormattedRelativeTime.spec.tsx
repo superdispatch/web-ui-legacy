@@ -1,9 +1,7 @@
 import { Typography } from '@mui/material';
-import { mockDate, v5 } from '@superdispatch/ui-testutils';
+import { mockDate, renderComponent } from '@superdispatch/ui-testutils';
 import { DateTime } from 'luxon';
 import { FormattedRelativeTime } from './FormattedRelativeTime';
-
-const { renderComponent } = v5;
 
 beforeEach(() => {
   mockDate();
