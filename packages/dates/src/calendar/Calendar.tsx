@@ -1,6 +1,6 @@
 import { Divider, Grid, GridDirection, Hidden, Theme } from '@mui/material';
 import { ClassNameMap, makeStyles } from '@mui/styles';
-import { Color, ColorVariant } from '@superdispatch/ui/pkg/dist-types';
+import { Color, ColorVariant } from '@superdispatch/ui';
 import { DateTime } from 'luxon';
 import { forwardRef, ReactNode, useMemo } from 'react';
 import DayPicker, {

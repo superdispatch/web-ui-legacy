@@ -1,6 +1,6 @@
 import { BaseTextFieldProps, InputBaseProps } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { Color, SuperDispatchTheme } from '@superdispatch/ui/pkg/dist-types';
+import { Color, SuperDispatchTheme } from '@superdispatch/ui';
 import { forwardRef, ReactNode, useMemo, useRef, useState } from 'react';
 import {
   BaseDatePicker,

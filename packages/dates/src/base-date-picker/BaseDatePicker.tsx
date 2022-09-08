@@ -9,8 +9,8 @@ import {
   SvgIcon,
   TextField,
 } from '@mui/material';
-import { useValueObserver } from '@superdispatch/hooks/pkg/dist-types';
-import { v5 } from '@superdispatch/ui/pkg/dist-types';
+import { useValueObserver } from '@superdispatch/hooks';
+import { v5 } from '@superdispatch/ui';
 import { forwardRef, Ref, useImperativeHandle, useRef, useState } from 'react';
 
 const { mergeRefs, useUID } = v5;
