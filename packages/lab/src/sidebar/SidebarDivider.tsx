@@ -1,4 +1,4 @@
-import { Divider } from '@material-ui/core';
+import { Divider } from '@mui/material';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
 

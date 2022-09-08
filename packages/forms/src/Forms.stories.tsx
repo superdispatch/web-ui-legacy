@@ -6,7 +6,7 @@ import { Alert } from '@mui/lab';
 import { IconButton, InputAdornment } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { v5 } from '@superdispatch/ui';
-import { v5 as LabV5 } from '@superdispatch/ui-lab';
+import { Box } from '@superdispatch/ui-lab';
 import { Form, FormikProvider } from 'formik';
 import { useRef } from 'react';
 import {
@@ -16,7 +16,6 @@ import {
   useFormikEnhanced,
 } from './index';
 
-const { Box } = LabV5;
 const { Button, Inline, Stack, useSnackbarStack } = v5;
 
 export default {

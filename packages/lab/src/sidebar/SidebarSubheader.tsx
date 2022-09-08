@@ -1,7 +1,9 @@
-import { Column, Columns } from '@superdispatch/ui';
+import { v5 } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
 import { TextBox } from '../text-box/TextBox';
+
+const { Column, Columns } = v5;
 
 const SidebarSubheaderRoot = styled.div`
   display: flex;

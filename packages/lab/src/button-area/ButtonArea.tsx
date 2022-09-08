@@ -1,7 +1,9 @@
-import { ButtonBase, ButtonBaseProps, Typography } from '@material-ui/core';
-import { Color, Stack } from '@superdispatch/ui';
+import { ButtonBase, ButtonBaseProps, Typography } from '@mui/material';
+import { v5 } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
+
+const { Color, Stack } = v5;
 
 const ButtonRoot = styled(ButtonBase)`
   padding: 12px 32px;

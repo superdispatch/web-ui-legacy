@@ -1,4 +1,4 @@
-import { IconButton, Tooltip, TooltipProps } from '@material-ui/core';
+import { IconButton, Tooltip, TooltipProps } from '@mui/material';
 import { forwardRef, ReactElement } from 'react';
 import styled from 'styled-components';
 

@@ -2,8 +2,9 @@ import { Meta } from '@storybook/react';
 import { FileDropZone, toBytes } from './FileDropZone';
 
 export default {
-  title: 'v4/Lab/FileDropZone',
+  title: 'Lab/FileDropZone',
   component: FileDropZone,
+  parameters: { v5: true },
 } as Meta;
 
 export const basic = () => (

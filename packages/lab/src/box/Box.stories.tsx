@@ -1,7 +1,11 @@
 import { Meta } from '@storybook/react';
 import { Box } from './Box';
 
-export default { title: 'v4/Lab/Box', component: Box } as Meta;
+export default {
+  title: 'Lab/Box',
+  component: Box,
+  parameters: { v5: true },
+} as Meta;
 
 export const basic = () => (
   <Box

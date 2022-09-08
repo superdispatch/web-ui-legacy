@@ -1,14 +1,9 @@
-import {
-  Color,
-  Column,
-  Columns,
-  Inline,
-  isEmptyReactNode,
-  useUID,
-} from '@superdispatch/ui';
+import { v5 } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled, { css, SimpleInterpolation } from 'styled-components';
 import { TextBox } from '../text-box/TextBox';
+
+const { Color, Column, Columns, Inline, isEmptyReactNode, useUID } = v5;
 
 function descriptionItemIconMixin(
   size: 16 | 20,

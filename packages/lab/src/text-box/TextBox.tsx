@@ -1,14 +1,16 @@
-import {
-  Color,
-  parseResponsiveProp,
-  ResponsiveProp,
-  ResponsivePropTuple,
-  SuperDispatchTheme,
-} from '@superdispatch/ui';
+import { v5 } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled, { css, CSSObject, SimpleInterpolation } from 'styled-components';
 import { mergeStyles } from '../utils/mergeStyles';
 import { createRuleNormalizer } from '../utils/RuleNormalizer';
+
+const { Color, parseResponsiveProp } = v5;
+
+type ResponsiveProp<T extends v5.ResponsivePropPrimitive> =
+  v5.ResponsiveProp<T>;
+type ResponsivePropTuple<T extends v5.ResponsivePropPrimitive> =
+  v5.ResponsivePropTuple<T>;
+type SuperDispatchTheme = v5.SuperDispatchTheme;
 
 export type TextAlignProp = 'left' | 'right' | 'center';
 export type TextColorProp =
@@ -134,8 +136,16 @@ interface TextBoxRootProps {
   $display: ResponsivePropTuple<TextDisplayProp>;
 }
 
-const TextBoxRoot = styled.span<TextBoxRootProps>(
-  ({ theme, $noWrap, $variant, $align, $color, $display, $wrapOverflow }) =>
+const TextBoxRoot = styled.span(
+  ({
+    theme,
+    $noWrap,
+    $variant,
+    $align,
+    $color,
+    $display,
+    $wrapOverflow,
+  }: TextBoxRootProps & { theme: SuperDispatchTheme }) =>
     css`
       margin: 0;
       padding: 0;

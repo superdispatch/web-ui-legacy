@@ -1,10 +1,12 @@
-import { CircularProgress, SvgIcon } from '@material-ui/core';
-import { Error } from '@material-ui/icons';
 import { mdiUpload } from '@mdi/js';
-import { CardButton, Color, Column, Columns } from '@superdispatch/ui';
+import { Error } from '@mui/icons-material';
+import { CircularProgress, SvgIcon } from '@mui/material';
+import { v5 } from '@superdispatch/ui';
 import { forwardRef, ReactElement, ReactNode, Suspense } from 'react';
 import Dropzone, { FileRejection } from 'react-dropzone';
 import styled from 'styled-components';
+
+const { CardButton, Color, Column, Columns } = v5;
 
 export function toBytes(input: number, unit: 'kb' | 'mb' | 'gb'): number {
   if (unit === 'gb') return input * (1 << 30);

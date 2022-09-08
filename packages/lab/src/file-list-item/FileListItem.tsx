@@ -1,3 +1,11 @@
+import { mdiFilePdfBox, mdiTextBox } from '@mdi/js';
+import {
+  CheckCircle,
+  Delete,
+  Error,
+  Image,
+  Refresh,
+} from '@mui/icons-material';
 import {
   CircularProgress,
   IconButton,
@@ -5,18 +13,12 @@ import {
   SvgIcon,
   SvgIconProps,
   Tooltip,
-} from '@material-ui/core';
-import { CheckCircle, Delete, Error, Image, Refresh } from '@material-ui/icons';
-import { mdiFilePdfBox, mdiTextBox } from '@mdi/js';
-import {
-  Color,
-  Column,
-  Columns,
-  useResponsiveValue,
-  useUID,
-} from '@superdispatch/ui';
+} from '@mui/material';
+import { v5 } from '@superdispatch/ui';
 import { forwardRef, memo, ReactNode, useState } from 'react';
 import styled from 'styled-components';
+
+const { Color, Column, Columns, useResponsiveValue, useUID } = v5;
 
 const FileListItemName = styled.div`
   overflow: hidden;
