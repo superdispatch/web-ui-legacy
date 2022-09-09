@@ -16,7 +16,7 @@ const SidebarRoot = styled.aside`
 
 const SidebarHeader = styled.div`
   top: 0;
-  z-index: 1;
+  z-index: 2;
   position: sticky;
   padding-left: 24px;
   padding-right: 24px;

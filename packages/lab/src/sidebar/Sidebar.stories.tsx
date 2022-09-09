@@ -210,6 +210,32 @@ export const checkbox = () => (
   </SidebarContainer>
 );
 
+export const checkboxMany = () => {
+  const items = Array(25)
+    .fill(null)
+    .map((_, index) => (
+      <SidebarMenuItem
+        key={index}
+        openContentOnClick={true}
+        avatar={
+          <SidebarMenuItemAvatar value={false}>
+            {`Eirwen Minoo (${index})`}
+          </SidebarMenuItemAvatar>
+        }
+      >
+        {`Eirwen Minoo (${index})`}
+      </SidebarMenuItem>
+    ));
+
+  return (
+    <SidebarContainer sidebar={<Sidebar title="Drivers List">{items}</Sidebar>}>
+      <SidebarContent title="">
+        <Placeholder height="100%" width="100%" text="Content" />
+      </SidebarContent>
+    </SidebarContainer>
+  );
+};
+
 export const complex = () => (
   <SidebarContainer
     sidebar={
