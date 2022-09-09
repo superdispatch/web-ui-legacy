@@ -59,9 +59,8 @@ jobs:
         with:
           cache-key: yarn-v7
       - run: yarn cypress install
-      - run: yarn percy exec -- cypress run
+      - run: yarn cypress run
         env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           CYPRESS_HOST: ${{ needs.preview.outputs.deploy-url }}
 
   visual-testing:

@@ -5,4 +5,6 @@ export * from './enhanced/FormsProvider';
 export * from './enhanced/useFormikEnhanced';
 export * from './phone/FormikPhoneField';
 export * from './radio/FormikRadioGroupField';
+export * from './text/FormikMaxLengthTextField';
+export * from './text/FormikPasswordField';
 export * from './text/FormikTextField';

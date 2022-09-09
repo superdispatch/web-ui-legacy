@@ -1,6 +1,6 @@
 {
   "name": "@superdispatch/ui",
-  "version": "0.16.0-alpha.1",
+  "version": "0.21.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/superdispatch/ui.git"
@@ -13,14 +13,9 @@
   "scripts": {
     "version": "pika build"
   },
-  "resolutions": {
-    "@mui/styled-engine": "npm:@mui/styled-engine-sc@^5.1.0"
-  },
   "dependencies": {
     "@juggle/resize-observer": "^3.3.1",
-    "@mui/styled-engine": "npm:@mui/styled-engine-sc@^5.1.0",
-    "@mui/system": "^5.2.6",
-    "@superdispatch/hooks": "^0.15.0",
+    "@superdispatch/hooks": "^0.21.0",
     "clsx": "^1.1.1",
     "react-keyed-flatten-children": "^1.2.0"
   },
@@ -30,10 +25,6 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/styles": "^4.11.4",
     "@mdi/js": "^6.0.0",
-    "@mui/icons-material": "^5.2.5",
-    "@mui/lab": "^5.0.0-alpha.62",
-    "@mui/material": "^5.2.6",
-    "@mui/styles": "^5.2.3",
     "react": "^17.0.2",
     "styled-components": "^5.2.1"
   },

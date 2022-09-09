@@ -65,11 +65,12 @@ export interface FileListItemProps {
   name: string;
   onRetry?: () => void;
   onDelete?: () => void;
+  canDelete?: boolean;
   helperText?: ReactNode;
   status?: 'idle' | 'loading' | 'error' | 'success';
 }
 export const FileListItem = forwardRef<HTMLDivElement, FileListItemProps>(
-  ({ url, name, status, onRetry, onDelete }, ref) => {
+  ({ url, name, status, canDelete = true, onRetry, onDelete }, ref) => {
     const uid = useUID();
     const fileType = getFileType(name);
     const [isHoveredState, setIsHovered] = useState(false);
@@ -84,6 +85,7 @@ export const FileListItem = forwardRef<HTMLDivElement, FileListItemProps>(
         onMouseLeave={() => {
           setIsHovered(false);
         }}
+        aria-label="file-list-item"
       >
         <Columns align="center" space="xsmall">
           <Column width="content">
@@ -130,17 +132,17 @@ export const FileListItem = forwardRef<HTMLDivElement, FileListItemProps>(
               <IconButton size="small" disabled={true}>
                 <FileListItemProgress size="1em" />
               </IconButton>
-            ) : (
+            ) : !isHovered && status === 'success' ? (
+              <IconButton size="small">
+                <CheckCircle fontSize="small" htmlColor={Color.Green300} />
+              </IconButton>
+            ) : canDelete ? (
               <Tooltip title="Delete">
                 <IconButton size="small" onClick={onDelete}>
-                  {!isHovered && status === 'success' ? (
-                    <CheckCircle fontSize="small" htmlColor={Color.Green300} />
-                  ) : (
-                    <Delete fontSize="small" />
-                  )}
+                  <Delete fontSize="small" />
                 </IconButton>
               </Tooltip>
-            )}
+            ) : null}
           </Column>
         </Columns>
       </div>

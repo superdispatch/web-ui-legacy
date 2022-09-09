@@ -1,16 +1,12 @@
-import {
-  Visibility as VisibilityIcon,
-  VisibilityOff as VisibilityOffIcon,
-} from '@mui/icons-material';
 import { Alert } from '@mui/lab';
-import { IconButton, InputAdornment } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Button, Inline, Stack, useSnackbarStack } from '@superdispatch/ui';
 import { Box } from '@superdispatch/ui-lab';
 import { Form, FormikProvider } from 'formik';
-import { useRef } from 'react';
 import {
   FormikDateField,
+  FormikMaxLengthTextField,
+  FormikPasswordField,
   FormikTextField,
   SuspendedFormikPhoneField,
   useFormikEnhanced,
@@ -23,24 +19,23 @@ export default {
 
 export const SignUp = () => {
   const { addSnackbar } = useSnackbarStack();
-  const passwordRef = useRef<HTMLInputElement>(null);
 
   const formik = useFormikEnhanced<
     {
       username: string;
       password: string;
-      $showPassword: boolean;
       dateOfBirth: undefined | string;
       phone: string;
+      about: string;
     },
     Record<string, unknown>
   >({
     initialValues: {
       username: '',
       password: '',
-      $showPassword: false,
       dateOfBirth: undefined,
       phone: '',
+      about: '',
     },
     onSubmit(values) {
       return new Promise((resolve, reject) => {
@@ -63,13 +58,7 @@ export const SignUp = () => {
     },
   });
 
-  const {
-    status,
-    resetForm,
-    isSubmitting,
-    setFieldValue,
-    values: { $showPassword },
-  } = formik;
+  const { status, resetForm, isSubmitting } = formik;
 
   if (status.type === 'submitted') {
     return (
@@ -104,38 +93,10 @@ export const SignUp = () => {
               }
             />
 
-            <FormikTextField
+            <FormikPasswordField
               name="password"
               fullWidth={true}
               label="Password"
-              validate={(value) =>
-                value ? undefined : 'Please enter password'
-              }
-              type={$showPassword ? 'text' : 'password'}
-              onBlur={() => {
-                if ($showPassword) {
-                  setFieldValue('$showPassword', false);
-                }
-              }}
-              inputRef={passwordRef}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      onClick={() => {
-                        passwordRef.current?.focus();
-                        setFieldValue('$showPassword', !$showPassword);
-                      }}
-                    >
-                      {$showPassword ? (
-                        <VisibilityOffIcon />
-                      ) : (
-                        <VisibilityIcon />
-                      )}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
             />
 
             <FormikDateField
@@ -158,6 +119,13 @@ export const SignUp = () => {
               validate={(value, phoneService) =>
                 phoneService.validate(value, { required: true })
               }
+            />
+
+            <FormikMaxLengthTextField
+              fullWidth={true}
+              name="about"
+              label="About"
+              maxLength={100}
             />
 
             {status.type === 'rejected' && (

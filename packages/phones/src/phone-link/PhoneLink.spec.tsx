@@ -15,7 +15,7 @@ test('format', async () => {
 
   const link = await screen.findByRole('link');
 
-  expect(link).toHaveTextContent('(201) 555-0123');
+  expect(link).toHaveTextContent('201-555-0123');
   expect(link).toHaveAttribute('href', 'tel:+1-201-555-0123');
 });
 

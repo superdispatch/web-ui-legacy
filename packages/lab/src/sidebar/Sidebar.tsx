@@ -9,7 +9,6 @@ const SidebarRoot = styled.aside`
   overflow-y: auto;
   overflow-x: hidden;
 
-  width: 240px;
   height: 100vh;
   background-color: ${Color.White};
   border-right: 1px solid ${Color.Silver400};
@@ -17,7 +16,7 @@ const SidebarRoot = styled.aside`
 
 const SidebarHeader = styled.div`
   top: 0;
-  z-index: 1;
+  z-index: 2;
   position: sticky;
   padding-left: 24px;
   padding-right: 24px;

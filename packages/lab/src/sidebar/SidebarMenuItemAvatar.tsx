@@ -40,6 +40,7 @@ export const SidebarMenuItemAvatar = forwardRef<
           color="primary"
           checked={value}
           disabled={disabled}
+          onClick={stopPropagation}
           onMouseDown={stopPropagation}
           onTouchStart={stopPropagation}
           onChange={(_, checked) => {

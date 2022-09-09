@@ -47,9 +47,8 @@ jobs:
         with:
           cache-key: yarn-v7
       - run: yarn cypress install
-      - run: yarn percy exec -- cypress run
+      - run: yarn cypress run
         env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           CYPRESS_HOST: https://ui.superdispatch.org
 
   visual-testing:
@@ -61,4 +60,11 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v7
+
       - run: yarn test-visual-ci https://ui.superdispatch.org
+
+      - if: ${{ failure() }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: visual-tests
+          path: .loki

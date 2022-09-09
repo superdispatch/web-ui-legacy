@@ -63,7 +63,7 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
     );
 
     const placeholder = useMemo(
-      () => phoneService.APN.getExample(country).getNumber('national'),
+      () => phoneService.APN.getExample(country).getNumber('international'),
       [country, phoneService.APN],
     );
 
@@ -128,7 +128,7 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
           variant="outlined"
           autoComplete="off"
           value={nationalNumber}
-          placeholder={placeholder}
+          placeholder={phoneService.deletePrefix(placeholder, country)}
           ref={mergeRefs(ref, rootRef)}
           inputRef={inputRef}
           onBlur={(event) => {
