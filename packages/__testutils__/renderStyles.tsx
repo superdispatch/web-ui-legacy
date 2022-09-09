@@ -93,3 +93,8 @@ export function renderStyles(ui: ReactElement, components: string[]): string {
 
   return extractCSS(components);
 }
+
+expect.addSnapshotSerializer({
+  test: (value) => typeof value === 'string' && renderedCSS.has(value),
+  print: (value) => String(value),
+});
