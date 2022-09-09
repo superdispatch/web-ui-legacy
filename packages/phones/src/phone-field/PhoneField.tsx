@@ -1,5 +1,5 @@
 import { BaseTextFieldProps, TextField } from '@mui/material';
-import { mergeRefs } from '@superdispatch/ui/pkg/dist-types';
+import { mergeRefs } from '@superdispatch/ui';
 import {
   ChangeEvent,
   forwardRef,

@@ -1,6 +1,6 @@
 import { Divider, Menu, MenuProps } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { SuperDispatchTheme } from '@superdispatch/ui/pkg/dist-types';
+import { SuperDispatchTheme } from '@superdispatch/ui';
 import { forwardRef } from 'react';
 import {
   CountryISO,

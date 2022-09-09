@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { SuperDispatchTheme } from '@superdispatch/ui/pkg/dist-types';
+import { SuperDispatchTheme } from '@superdispatch/ui';
 import clsx from 'clsx';
 import { forwardRef, ImgHTMLAttributes, Ref } from 'react';
 import { CountryISO } from '../country-code-metadata/CountryCodeMetadata';
