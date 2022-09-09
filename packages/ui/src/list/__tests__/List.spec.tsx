@@ -5,7 +5,7 @@ import {
   ListItemIcon,
   ListItemSecondaryAction,
   ListItemText,
-} from '@material-ui/core';
+} from '@mui/material';
 import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
 
 it('checks default props', () => {

@@ -1,4 +1,4 @@
-import { Pagination } from '@material-ui/lab';
+import { Pagination } from '@mui/lab';
 import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
 
 it('checks default props', () => {

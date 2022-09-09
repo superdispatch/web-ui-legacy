@@ -1,4 +1,3 @@
-import { TransitionProps } from '@material-ui/core/transitions';
 import {
   Portal,
   Slide,
@@ -6,6 +5,7 @@ import {
   SnackbarCloseReason as MaterialSnackbarCloseReason,
   SnackbarProps as MaterialSnackbarProps,
 } from '@mui/material';
+import { TransitionProps } from '@mui/material/transitions';
 import {
   forwardRef,
   ForwardRefExoticComponent,

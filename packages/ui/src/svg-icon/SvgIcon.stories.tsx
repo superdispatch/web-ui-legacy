@@ -1,4 +1,4 @@
-import { Home as HomeIcon } from '@material-ui/icons';
+import { Home as HomeIcon } from '@mui/icons-material';
 import { PropsLink } from '@superdispatch/ui-docs';
 import { Inline } from '../inline/Inline';
 

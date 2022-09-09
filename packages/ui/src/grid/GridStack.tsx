@@ -1,4 +1,4 @@
-import { Grid, GridProps } from '@material-ui/core';
+import { Grid, GridProps } from '@mui/material';
 import {
   Children,
   forwardRef,

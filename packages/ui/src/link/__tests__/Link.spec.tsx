@@ -1,4 +1,4 @@
-import { Link } from '@material-ui/core';
+import { Link } from '@mui/material';
 import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
 
 it('checks default props', () => {
