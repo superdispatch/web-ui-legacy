@@ -1,9 +1,9 @@
-import { IconButton, InputAdornment } from '@material-ui/core';
 import {
   Visibility as VisibilityIcon,
   VisibilityOff as VisibilityOffIcon,
-} from '@material-ui/icons';
-import { Alert } from '@material-ui/lab';
+} from '@mui/icons-material';
+import { Alert } from '@mui/lab';
+import { IconButton, InputAdornment } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Button, Inline, Stack, useSnackbarStack } from '@superdispatch/ui';
 import { Box } from '@superdispatch/ui-lab';
@@ -14,10 +14,10 @@ import {
   FormikTextField,
   SuspendedFormikPhoneField,
   useFormikEnhanced,
-} from '.';
+} from './index';
 
 export default {
-  title: 'v4/Recipes/Forms',
+  title: 'Recipes/Forms',
   parameters: { playroom: { disable: true } },
 } as Meta;
 

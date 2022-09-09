@@ -1,323 +1,544 @@
-import { Autocomplete } from '@material-ui/lab';
+import { Autocomplete } from '@mui/material';
 import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
 
 it('checks default props', () => {
-  const { props } = renderTheme();
+  const { components } = renderTheme();
 
-  // Remove `any` after official release.
-  expect((props as any).MuiAutocomplete).toMatchInlineSnapshot(`
+  expect(components.MuiAutocomplete?.defaultProps).toMatchInlineSnapshot(`
     Object {
-      "popupIcon": <WithStyles(ForwardRef(SvgIcon))>
+      "popupIcon": <ForwardRef(SvgIcon)>
         <path
           d="M12 16.5L6 9h12l-6 7.5z"
           fill="currentColor"
         />
-      </WithStyles(ForwardRef(SvgIcon))>,
+      </ForwardRef(SvgIcon)>,
     }
   `);
 });
 
 it('checks component css', () => {
   expect(
-    renderCSS(<Autocomplete options={[]} renderInput={() => <div />} />, [
-      'MuiAutocomplete',
-    ]),
+    renderCSS(
+      <div>
+        <Autocomplete
+          options={[]}
+          renderInput={({ inputProps }) => <input {...inputProps} />}
+        />
+
+        <Autocomplete
+          options={[]}
+          fullWidth={true}
+          renderInput={({ inputProps }) => <input {...inputProps} />}
+        />
+
+        <Autocomplete
+          size="small"
+          options={[]}
+          renderInput={({ inputProps }) => <input {...inputProps} />}
+        />
+      </div>,
+      [
+        'MuiAutocomplete-root',
+        'MuiAutocomplete-root',
+        'MuiAutocomplete-fullWidth',
+        'MuiAutocomplete-sizeSmall',
+      ],
+    ),
   ).toMatchInlineSnapshot(`
-    .MuiAutocomplete-root.Mui-focused .MuiAutocomplete-clearIndicatorDirty {
+    .MuiAutocomplete-root.Mui-focused .MuiAutocomplete-clearIndicator {
       visibility: visible;
     }
 
-    @media (pointer: fine) {
-      .MuiAutocomplete-root:hover .MuiAutocomplete-clearIndicatorDirty {
-        visibility: visible;
-      }
+    .MuiAutocomplete-root .MuiAutocomplete-tag {
+      margin: 3px;
+      max-width: calc(100% - 6px);
+    }
+
+    .MuiAutocomplete-root .MuiAutocomplete-inputRoot {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot,
+    .MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot {
+      padding-right: 30px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot {
+      padding-right: 56px;
+    }
+
+    .MuiAutocomplete-root .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+      width: 0;
+      min-width: 30px;
+    }
+
+    .MuiAutocomplete-root .MuiInput-root {
+      padding-bottom: 1px;
+    }
+
+    .MuiAutocomplete-root .MuiInput-root .MuiInput-input {
+      padding: 4px 4px 4px 0px;
+    }
+
+    .MuiAutocomplete-root .MuiInput-root.MuiInputBase-sizeSmall .MuiInput-input {
+      padding: 2px 4px 3px 0;
+    }
+
+    .MuiAutocomplete-root .MuiOutlinedInput-root {
+      padding: 9px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiOutlinedInput-root,
+    .MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiOutlinedInput-root {
+      padding-right: 39px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiOutlinedInput-root {
+      padding-right: 65px;
+    }
+
+    .MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {
+      padding: 7.5px 4px 7.5px 6px;
+    }
+
+    .MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-endAdornment {
+      right: 9px;
+    }
+
+    .MuiAutocomplete-root .MuiOutlinedInput-root.MuiInputBase-sizeSmall {
+      padding: 6px;
+    }
+
+    .MuiAutocomplete-root .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input {
+      padding: 2.5px 4px 2.5px 6px;
+    }
+
+    .MuiAutocomplete-root .MuiFilledInput-root {
+      padding-top: 19px;
+      padding-left: 8px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiFilledInput-root,
+    .MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiFilledInput-root {
+      padding-right: 39px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiFilledInput-root {
+      padding-right: 65px;
+    }
+
+    .MuiAutocomplete-root .MuiFilledInput-root .MuiFilledInput-input {
+      padding: 7px 4px;
+    }
+
+    .MuiAutocomplete-root .MuiFilledInput-root .MuiAutocomplete-endAdornment {
+      right: 9px;
+    }
+
+    .MuiAutocomplete-root .MuiFilledInput-root.MuiInputBase-sizeSmall {
+      padding-bottom: 1px;
+    }
+
+    .MuiAutocomplete-root .MuiFilledInput-root.MuiInputBase-sizeSmall .MuiFilledInput-input {
+      padding: 2.5px 4px;
+    }
+
+    .MuiAutocomplete-root .MuiInputBase-hiddenLabel {
+      padding-top: 8px;
+    }
+
+    .MuiAutocomplete-root .MuiAutocomplete-input {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      text-overflow: ellipsis;
+      opacity: 1;
+    }
+
+    .MuiAutocomplete-root .MuiAutocomplete-tag {
+      margin: 4px;
+    }
+
+    .MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+      padding: 6px 8px;
+    }
+
+    .MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input {
+      width: 144px;
+      padding: 4px;
+    }
+
+    .MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-child {
+      padding-left: unset;
+    }
+
+    .MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-endAdornment {
+      right: 12px;
     }
 
     .MuiAutocomplete-fullWidth {
       width: 100%;
     }
 
-    .MuiAutocomplete-tag {
-      margin: 4px;
+    .MuiAutocomplete-fullWidth.Mui-focused .MuiAutocomplete-clearIndicator {
+      visibility: visible;
+    }
+
+    .MuiAutocomplete-fullWidth .MuiAutocomplete-tag {
+      margin: 3px;
       max-width: calc(100% - 6px);
     }
 
-    @media (min-width: 600px) {
-      .MuiAutocomplete-tag {
-        margin: 2px;
-      }
-    }
-
-    .MuiAutocomplete-tagSizeSmall {
-      margin: 2px;
-      max-width: calc(100% - 4px);
-    }
-
-    .MuiAutocomplete-inputRoot {
+    .MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
     }
 
-    .MuiAutocomplete-hasPopupIcon .MuiAutocomplete-inputRoot,
-    .MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot {
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot,
+    .MuiAutocomplete-hasClearIcon.MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot {
       padding-right: 30px;
     }
 
-    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon
-      .MuiAutocomplete-inputRoot {
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot {
       padding-right: 56px;
     }
 
-    .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+    .MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
       width: 0;
       min-width: 30px;
     }
 
-    .MuiAutocomplete-inputRoot[class*='MuiInput-root'] {
+    .MuiAutocomplete-fullWidth .MuiInput-root {
       padding-bottom: 1px;
     }
 
-    .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] {
-      padding: 6px 8px;
+    .MuiAutocomplete-fullWidth .MuiInput-root .MuiInput-input {
+      padding: 4px 4px 4px 0px;
     }
 
-    .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'][class*='MuiOutlinedInput-marginDense'] {
+    .MuiAutocomplete-fullWidth .MuiInput-root.MuiInputBase-sizeSmall .MuiInput-input {
+      padding: 2px 4px 3px 0;
+    }
+
+    .MuiAutocomplete-fullWidth .MuiOutlinedInput-root {
+      padding: 9px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiOutlinedInput-root,
+    .MuiAutocomplete-hasClearIcon.MuiAutocomplete-fullWidth .MuiOutlinedInput-root {
+      padding-right: 39px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiOutlinedInput-root {
+      padding-right: 65px;
+    }
+
+    .MuiAutocomplete-fullWidth .MuiOutlinedInput-root .MuiAutocomplete-input {
+      padding: 7.5px 4px 7.5px 6px;
+    }
+
+    .MuiAutocomplete-fullWidth .MuiOutlinedInput-root .MuiAutocomplete-endAdornment {
+      right: 9px;
+    }
+
+    .MuiAutocomplete-fullWidth .MuiOutlinedInput-root.MuiInputBase-sizeSmall {
       padding: 6px;
     }
 
-    .MuiAutocomplete-inputRoot[class*='MuiFilledInput-root'] {
+    .MuiAutocomplete-fullWidth .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input {
+      padding: 2.5px 4px 2.5px 6px;
+    }
+
+    .MuiAutocomplete-fullWidth .MuiFilledInput-root {
       padding-top: 19px;
       padding-left: 8px;
     }
 
-    .MuiAutocomplete-inputRoot[class*='MuiFilledInput-root'][class*='MuiFilledInput-marginDense'] {
-      padding-bottom: 1px;
-    }
-
-    .MuiAutocomplete-inputRoot[class*='MuiFilledInput-root'][class*='MuiFilledInput-marginDense']
-      .MuiAutocomplete-input {
-      padding: 4.5px 4px;
-    }
-
-    .MuiAutocomplete-hasPopupIcon
-      .MuiAutocomplete-inputRoot[class*='MuiFilledInput-root'],
-    .MuiAutocomplete-hasClearIcon
-      .MuiAutocomplete-inputRoot[class*='MuiFilledInput-root'] {
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiFilledInput-root,
+    .MuiAutocomplete-hasClearIcon.MuiAutocomplete-fullWidth .MuiFilledInput-root {
       padding-right: 39px;
     }
 
-    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon
-      .MuiAutocomplete-inputRoot[class*='MuiFilledInput-root'] {
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiFilledInput-root {
       padding-right: 65px;
     }
 
-    .MuiAutocomplete-inputRoot[class*='MuiFilledInput-root']
-      .MuiAutocomplete-input {
-      padding: 9px 4px;
+    .MuiAutocomplete-fullWidth .MuiFilledInput-root .MuiFilledInput-input {
+      padding: 7px 4px;
     }
 
-    .MuiAutocomplete-inputRoot[class*='MuiFilledInput-root']
-      .MuiAutocomplete-endAdornment {
+    .MuiAutocomplete-fullWidth .MuiFilledInput-root .MuiAutocomplete-endAdornment {
       right: 9px;
     }
 
-    .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'][class*='MuiOutlinedInput-marginDense']
-      .MuiAutocomplete-input {
-      padding: 4.5px 4px;
+    .MuiAutocomplete-fullWidth .MuiFilledInput-root.MuiInputBase-sizeSmall {
+      padding-bottom: 1px;
     }
 
-    .MuiAutocomplete-hasPopupIcon
-      .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'],
-    .MuiAutocomplete-hasClearIcon
-      .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] {
-      padding-right: 39px;
+    .MuiAutocomplete-fullWidth .MuiFilledInput-root.MuiInputBase-sizeSmall .MuiFilledInput-input {
+      padding: 2.5px 4px;
     }
 
-    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon
-      .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] {
-      padding-right: 65px;
+    .MuiAutocomplete-fullWidth .MuiInputBase-hiddenLabel {
+      padding-top: 8px;
     }
 
-    .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']
-      .MuiAutocomplete-input {
+    .MuiAutocomplete-fullWidth .MuiAutocomplete-input {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      text-overflow: ellipsis;
+      opacity: 1;
+    }
+
+    .MuiAutocomplete-fullWidth .MuiAutocomplete-tag {
+      margin: 4px;
+    }
+
+    .MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+      padding: 6px 8px;
+    }
+
+    .MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input {
       width: 144px;
       padding: 4px;
     }
 
-    .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']
-      .MuiAutocomplete-endAdornment {
+    .MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-child {
+      padding-left: unset;
+    }
+
+    .MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-endAdornment {
       right: 12px;
     }
 
-    @media (min-width: 600px) {
-      .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root'] {
+    .MuiAutocomplete-sizeSmall.Mui-focused .MuiAutocomplete-clearIndicator {
+      visibility: visible;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiAutocomplete-tag {
+      margin: 2px;
+      max-width: calc(100% - 4px);
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot,
+    .MuiAutocomplete-hasClearIcon.MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot {
+      padding-right: 30px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiAutocomplete-inputRoot {
+      padding-right: 56px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+      width: 0;
+      min-width: 30px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiInput-root {
+      padding-bottom: 1px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiInput-root .MuiInput-input {
+      padding: 4px 4px 4px 0px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiInput-root.MuiInputBase-sizeSmall .MuiInput-input {
+      padding: 2px 4px 3px 0;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiOutlinedInput-root {
+      padding: 9px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiOutlinedInput-root,
+    .MuiAutocomplete-hasClearIcon.MuiAutocomplete-sizeSmall .MuiOutlinedInput-root {
+      padding-right: 39px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiOutlinedInput-root {
+      padding-right: 65px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiOutlinedInput-root .MuiAutocomplete-input {
+      padding: 7.5px 4px 7.5px 6px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiOutlinedInput-root .MuiAutocomplete-endAdornment {
+      right: 9px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiOutlinedInput-root.MuiInputBase-sizeSmall {
+      padding: 6px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiOutlinedInput-root.MuiInputBase-sizeSmall .MuiAutocomplete-input {
+      padding: 2.5px 4px 2.5px 6px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiFilledInput-root {
+      padding-top: 19px;
+      padding-left: 8px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-root .MuiFilledInput-root,
+    .MuiAutocomplete-hasClearIcon.MuiAutocomplete-sizeSmall .MuiFilledInput-root {
+      padding-right: 39px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.MuiAutocomplete-root .MuiFilledInput-root {
+      padding-right: 65px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiFilledInput-root .MuiFilledInput-input {
+      padding: 7px 4px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiFilledInput-root .MuiAutocomplete-endAdornment {
+      right: 9px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiFilledInput-root.MuiInputBase-sizeSmall {
+      padding-bottom: 1px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiFilledInput-root.MuiInputBase-sizeSmall .MuiFilledInput-input {
+      padding: 2.5px 4px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiInputBase-hiddenLabel {
+      padding-top: 8px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiAutocomplete-input {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      text-overflow: ellipsis;
+      opacity: 1;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiAutocomplete-tag {
+      margin: 4px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+      padding: 6px 8px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input {
+      width: 144px;
+      padding: 4px;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-child {
+      padding-left: unset;
+    }
+
+    .MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-endAdornment {
+      right: 12px;
+    }
+
+    @media (pointer:fine) {
+      .MuiAutocomplete-root:hover .MuiAutocomplete-clearIndicator {
+        visibility: visible;
+      }
+    }
+
+    @media (min-width:600px) {
+      .MuiAutocomplete-root .MuiAutocomplete-tag {
+        margin: 2px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
         padding: 4px 6px;
       }
 
-      .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']
-        .MuiAutocomplete-input {
+      .MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input {
         padding: 2px;
       }
 
-      .MuiAutocomplete-inputRoot[class*='MuiOutlinedInput-root']
-        .MuiAutocomplete-endAdornment {
+      .MuiAutocomplete-root .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-endAdornment {
         right: 8px;
       }
     }
 
-    .MuiAutocomplete-inputRoot[class*='MuiInput-root'][class*='MuiInput-marginDense']
-      .MuiAutocomplete-input {
-      padding: 4px 4px 5px;
-    }
-
-    .MuiAutocomplete-inputRoot[class*='MuiInput-root'][class*='MuiInput-marginDense']
-      .MuiAutocomplete-input:first-child {
-      padding: 3px 0 6px;
-    }
-
-    .MuiAutocomplete-inputRoot[class*='MuiInput-root'] .MuiAutocomplete-input {
-      padding: 4px;
-    }
-
-    .MuiAutocomplete-inputRoot[class*='MuiInput-root']
-      .MuiAutocomplete-input:first-child {
-      padding: 6px 0;
-    }
-
-    .MuiAutocomplete-input {
-      opacity: 0;
-      flex-grow: 1;
-      text-overflow: ellipsis;
-    }
-
-    .MuiAutocomplete-inputFocused {
-      opacity: 1;
-    }
-
-    .MuiAutocomplete-endAdornment {
-      top: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      position: absolute;
-      align-items: center;
-    }
-
-    .MuiAutocomplete-clearIndicator {
-      padding: 4px;
-      visibility: hidden;
-      margin-right: -2px;
-    }
-
-    .MuiAutocomplete-popupIndicator {
-      padding: 2px;
-      margin-right: -2px;
-    }
-
-    .MuiAutocomplete-popupIndicator .MuiSvgIcon-root {
-      font-size: 24px;
-    }
-
-    @media (min-width: 600px) {
-      .MuiAutocomplete-popupIndicator .MuiSvgIcon-root {
-        font-size: 16px;
+    @media (pointer:fine) {
+      .MuiAutocomplete-fullWidth:hover .MuiAutocomplete-clearIndicator {
+        visibility: visible;
       }
     }
 
-    .MuiAutocomplete-popupIndicatorOpen {
-      transform: rotate(180deg);
-    }
-
-    .MuiAutocomplete-popper {
-      z-index: 1300;
-    }
-
-    .MuiAutocomplete-popperDisablePortal {
-      position: absolute;
-    }
-
-    .MuiAutocomplete-paper {
-      margin: 4px 0;
-      overflow: hidden;
-      font-size: 14px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      line-height: 20px;
-    }
-
-    @media (min-width: 0px) and (max-width: 599.95px) {
-      .MuiAutocomplete-paper {
-        font-size: 16px;
-        line-height: 24px;
+    @media (min-width:600px) {
+      .MuiAutocomplete-fullWidth .MuiAutocomplete-tag {
+        margin: 2px;
       }
     }
 
-    .MuiAutocomplete-listbox {
-      margin: 0;
-      padding: 8px 0;
-      overflow: auto;
-      list-style: none;
-      max-height: 40vh;
-    }
+    @media (min-width:600px) {
+      .MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+        padding: 4px 6px;
+      }
 
-    .MuiAutocomplete-loading {
-      color: Color.Dark200;
-      padding: 14px 16px;
-    }
+      .MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input {
+        padding: 2px;
+      }
 
-    .MuiAutocomplete-noOptions {
-      color: Color.Dark200;
-      padding: 14px 16px;
-    }
-
-    .MuiAutocomplete-option {
-      cursor: pointer;
-      display: flex;
-      outline: 0;
-      box-sizing: border-box;
-      min-height: 48px;
-      align-items: center;
-      padding-top: 6px;
-      padding-left: 16px;
-      padding-right: 16px;
-      padding-bottom: 6px;
-      justify-content: flex-start;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    @media (min-width: 600px) {
-      .MuiAutocomplete-option {
-        min-height: auto;
+      .MuiAutocomplete-fullWidth .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-endAdornment {
+        right: 8px;
       }
     }
 
-    .MuiAutocomplete-option[aria-selected='true'] {
-      background-color: Color.Silver300;
+    @media (pointer:fine) {
+      .MuiAutocomplete-sizeSmall:hover .MuiAutocomplete-clearIndicator {
+        visibility: visible;
+      }
     }
 
-    .MuiAutocomplete-option[data-focus='true'] {
-      background-color: Color.Silver100;
+    @media (min-width:600px) {
+      .MuiAutocomplete-sizeSmall .MuiAutocomplete-tag {
+        margin: 2px;
+      }
     }
 
-    .MuiAutocomplete-option:active {
-      background-color: Color.Silver300;
+    @media (min-width:600px) {
+      .MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+        padding: 4px 6px;
+      }
+
+      .MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input {
+        padding: 2px;
+      }
+
+      .MuiAutocomplete-sizeSmall .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-endAdornment {
+        right: 8px;
+      }
     }
 
-    .MuiAutocomplete-option[aria-disabled='true'] {
-      opacity: 0.38;
-      pointer-events: none;
+    @media (min-width:0px) and (max-width:599.95px) {
+
     }
 
-    .MuiAutocomplete-groupLabel {
-      top: -8px;
-      background-color: Color.White;
+    @media print {
+
     }
 
-    .MuiAutocomplete-groupUl {
-      padding: 0;
-    }
+    @media (min-width:0px) and (max-width:599.95px) {
 
-    .MuiAutocomplete-groupUl .MuiAutocomplete-option {
-      padding-left: 24px;
     }
   `);
 });

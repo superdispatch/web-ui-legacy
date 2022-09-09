@@ -1,17 +1,17 @@
-import { Link } from '@material-ui/core';
-import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
-import ChatIcon from '@material-ui/icons/Chat';
-import NotesIcon from '@material-ui/icons/Notes';
-import PersonIcon from '@material-ui/icons/Person';
-import PhoneIcon from '@material-ui/icons/Phone';
-import RoomIcon from '@material-ui/icons/Room';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import ChatIcon from '@mui/icons-material/Chat';
+import NotesIcon from '@mui/icons-material/Notes';
+import PersonIcon from '@mui/icons-material/Person';
+import PhoneIcon from '@mui/icons-material/Phone';
+import RoomIcon from '@mui/icons-material/Room';
+import { Link } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { PhoneLink, PhoneText } from '@superdispatch/phones';
 import { Box } from '@superdispatch/ui-lab';
 import { DescriptionList, DescriptionListItem } from './DescriptionList';
 
 export default {
-  title: 'v4/Data Display/DescriptionList',
+  title: 'Data Display/DescriptionList',
   component: DescriptionList,
   subcomponents: { DescriptionListItem },
   decorators: [
@@ -111,7 +111,6 @@ export const inset = () => (
       contentTypographyProps={{
         disableUnderline: true,
         TooltipProps: {
-          interactive: true,
           title: 'dustin.russel@example.com',
         },
       }}

@@ -1,5 +1,5 @@
-import { Divider, Grid, GridDirection, Hidden, Theme } from '@material-ui/core';
-import { ClassNameMap, makeStyles } from '@material-ui/styles';
+import { Divider, Grid, GridDirection, Hidden, Theme } from '@mui/material';
+import { ClassNameMap, makeStyles } from '@mui/styles';
 import { Color, ColorVariant } from '@superdispatch/ui';
 import { DateTime } from 'luxon';
 import { forwardRef, ReactNode, useMemo } from 'react';
@@ -67,12 +67,12 @@ const useStyles = makeStyles<
 
     navBar: {},
     navButtonPrev: {
-      position: 'absolute',
+      position: 'absolute !important' as 'absolute',
       top: theme.spacing(1.5),
       left: theme.spacing(1.5),
     },
     navButtonNext: {
-      position: 'absolute',
+      position: 'absolute !important' as 'absolute',
       top: theme.spacing(1.5),
       right: theme.spacing(1.5),
     },

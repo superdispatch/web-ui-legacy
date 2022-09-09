@@ -62,9 +62,7 @@ module.exports = {
             allow: [
               '**/packages/*/src/**',
               'react-dom/test-utils',
-              '@material-ui/core/transitions',
-              '@material-ui/core/styles/createTypography',
-              '@material-ui/core/styles/createBreakpoints',
+              '@mui/material/transitions',
               '@mui/material/styles/createTypography',
               '@mui/lab/themeAugmentation',
             ],

@@ -3,7 +3,7 @@ import { Box } from '@superdispatch/ui-lab';
 import { OverflowText } from './OverflowText';
 
 export default {
-  title: 'v4/Data Display/OverflowText',
+  title: 'Data Display/OverflowText',
   component: OverflowText,
   decorators: [
     (Story) => (

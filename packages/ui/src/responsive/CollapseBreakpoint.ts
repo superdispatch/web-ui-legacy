@@ -1,4 +1,4 @@
-import type { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
+import { Breakpoint } from '@mui/material';
 import { useResponsiveContext } from './ResponsiveContext';
 
 export type CollapseBreakpoint = 'sm' | 'md' | 'lg' | 'xl';

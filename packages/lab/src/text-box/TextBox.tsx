@@ -134,8 +134,16 @@ interface TextBoxRootProps {
   $display: ResponsivePropTuple<TextDisplayProp>;
 }
 
-const TextBoxRoot = styled.span<TextBoxRootProps>(
-  ({ theme, $noWrap, $variant, $align, $color, $display, $wrapOverflow }) =>
+const TextBoxRoot = styled.span(
+  ({
+    theme,
+    $noWrap,
+    $variant,
+    $align,
+    $color,
+    $display,
+    $wrapOverflow,
+  }: TextBoxRootProps & { theme: SuperDispatchTheme }) =>
     css`
       margin: 0;
       padding: 0;

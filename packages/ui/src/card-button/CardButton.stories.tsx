@@ -1,11 +1,14 @@
 import {
   Add as AddIcon,
   AttachFile as AttachFileIcon,
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 import { Meta } from '@storybook/react';
 import { CardButton } from './CardButton';
 
-export default { title: 'v4/Inputs/CardButton', component: CardButton } as Meta;
+export default {
+  title: 'Inputs/CardButton',
+  component: CardButton,
+} as Meta;
 
 export const basic = () => (
   <CardButton hint="or Drag & Drop files here" startIcon={<AddIcon />}>

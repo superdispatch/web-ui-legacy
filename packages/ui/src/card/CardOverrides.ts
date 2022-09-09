@@ -1,9 +1,13 @@
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideCard(theme: SuperDispatchTheme): void {
-  theme.props.MuiCard = { variant: 'outlined' };
+  theme.components.MuiCard = {
+    defaultProps: { variant: 'outlined' },
+  };
 
-  theme.overrides.MuiCardContent = {
-    root: { '&:last-child': { paddingBottom: undefined } },
+  theme.components.MuiCardContent = {
+    styleOverrides: {
+      root: { '&:last-child': { paddingBottom: '16px' } },
+    },
   };
 }

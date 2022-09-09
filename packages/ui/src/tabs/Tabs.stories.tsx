@@ -1,8 +1,8 @@
-import { Tab, Tabs } from '@material-ui/core';
+import { Tab, Tabs } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { UseState } from '@superdispatch/ui-docs';
 
-export default { title: 'v4/Navigation/Tabs' } as Meta;
+export default { title: 'Navigation/Tabs' } as Meta;
 
 export const basic = () => (
   <UseState initialState={1}>
@@ -26,7 +26,8 @@ export const scrollButtons = () => (
     {(state, setState) => (
       <Tabs
         value={state}
-        scrollButtons="on"
+        scrollButtons="auto"
+        allowScrollButtonsMobile={true}
         onChange={(_, next) => {
           setState(next);
         }}

@@ -1,5 +1,3 @@
-import * as v5 from './v5';
-
 export * from './adaptive-toolbar/AdaptiveToolbar';
 export * from './avatar-button/AvatarButton';
 export * from './button/Button';
@@ -24,8 +22,6 @@ export * from './props/ResponsiveProp';
 export * from './props/SpaceProp';
 export * from './radio/RadioField';
 export * from './radio/RadioGroupField';
-export * from './responsive/CollapseBreakpoint';
-export * from './responsive/ResponsiveContext';
 export * from './snackbar/Snackbar';
 export * from './snackbar/SnackbarContent';
 export * from './snackbar/SnackbarStack';
@@ -40,4 +36,3 @@ export * from './utils/mergeRefs';
 export * from './utils/renderChildren';
 export * from './utils/useUID';
 export * from './utils/VisibilityObserver';
-export { v5 };

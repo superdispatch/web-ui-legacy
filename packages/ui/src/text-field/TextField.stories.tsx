@@ -1,9 +1,9 @@
-import { InputAdornment, MenuItem, TextField } from '@material-ui/core';
-import { AccountCircle as AccountCircleIcon } from '@material-ui/icons';
+import { AccountCircle as AccountCircleIcon } from '@mui/icons-material';
+import { InputAdornment, MenuItem, TextField } from '@mui/material';
 import { PropsLink } from '@superdispatch/ui-docs';
 
 export default {
-  title: 'v4/Inputs/TextField',
+  title: 'Inputs/TextField',
   parameters: {
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/avatar/#props" />

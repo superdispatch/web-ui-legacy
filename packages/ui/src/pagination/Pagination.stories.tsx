@@ -1,11 +1,11 @@
-import { Pagination } from '@material-ui/lab';
+import { Pagination } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Stack } from '@superdispatch/ui';
 import { PropsLink } from '@superdispatch/ui-docs';
 import { Box } from '@superdispatch/ui-lab';
 
 export default {
-  title: 'v4/Inputs/Pagination',
+  title: 'Inputs/Pagination',
   component: Pagination,
   decorators: [
     (Story) => (

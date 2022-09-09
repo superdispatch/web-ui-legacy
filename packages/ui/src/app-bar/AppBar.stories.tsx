@@ -1,11 +1,11 @@
-import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core';
-import { ArrowBack, Close } from '@material-ui/icons';
+import { ArrowBack, Close } from '@mui/icons-material';
+import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { PropsLink } from '@superdispatch/ui-docs';
-import { Column, Columns } from '..';
+import { Column, Columns } from '../index';
 
 export default {
-  title: 'v4/Surfaces/AppBar',
+  title: 'Surfaces/AppBar',
   parameters: {
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/app-bar/#props" />

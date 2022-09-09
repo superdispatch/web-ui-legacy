@@ -4,7 +4,7 @@ import { Box } from '../box/Box';
 import { FileListItem } from './FileListItem';
 
 export default {
-  title: 'v4/Lab/FileListItem',
+  title: 'Lab/FileListItem',
   component: FileListItem,
   decorators: [
     (Story) => (

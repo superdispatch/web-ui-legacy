@@ -1,14 +1,16 @@
-import { Link, Typography } from '@material-ui/core';
+import { Link, Typography } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Box } from '@superdispatch/ui-lab';
 import { Stack } from '../stack/Stack';
 
-export default { title: 'v4/Navigation/Link' } as Meta;
+export default {
+  title: 'Navigation/Link',
+} as Meta;
 
 export const basic = () => (
   <Typography>
     This is a{' '}
-    <Link href="#" target="_blank">
+    <Link href="packages/ui/src/link/Link.stories#" target="_blank">
       link
     </Link>{' '}
     in text with a <Link component="button">button link</Link>.
@@ -17,7 +19,7 @@ export const basic = () => (
 
 export const multiline = () => (
   <Box maxWidth="64px">
-    <Link href="#" target="_blank">
+    <Link href="packages/ui/src/link/Link.stories#" target="_blank">
       This is multi-line link
     </Link>
   </Box>
@@ -31,10 +33,18 @@ export const multilineButton = () => (
 
 export const colors = () => (
   <Stack>
-    <Link href="#" target="_blank" color="primary">
+    <Link
+      href="packages/ui/src/link/Link.stories#"
+      target="_blank"
+      color="primary"
+    >
       Primary
     </Link>
-    <Link href="#" target="_blank" color="textPrimary">
+    <Link
+      href="packages/ui/src/link/Link.stories#"
+      target="_blank"
+      color="textPrimary"
+    >
       Text Primary
     </Link>
   </Stack>

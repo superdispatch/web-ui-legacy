@@ -1,4 +1,4 @@
-import { BaseTextFieldProps, InputBaseProps } from '@material-ui/core';
+import { BaseTextFieldProps, InputBaseProps } from '@mui/material';
 import { forwardRef, ReactNode, useMemo, useRef } from 'react';
 import {
   BaseDatePicker,

@@ -4,7 +4,7 @@ import { Button } from '../button/Button';
 import { Alert } from './Alert';
 
 export default {
-  title: 'v4/Lab/Alert',
+  title: 'Lab/Alert',
   component: Alert,
 } as Meta;
 

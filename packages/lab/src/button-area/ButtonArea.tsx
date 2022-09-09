@@ -1,4 +1,4 @@
-import { ButtonBase, ButtonBaseProps, Typography } from '@material-ui/core';
+import { ButtonBase, ButtonBaseProps, Typography } from '@mui/material';
 import { Color, Stack } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';

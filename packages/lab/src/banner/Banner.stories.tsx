@@ -1,4 +1,4 @@
-import { Link } from '@material-ui/core';
+import { Link } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Inline, Stack } from '@superdispatch/ui';
 import { UseState } from '@superdispatch/ui-docs';
@@ -7,7 +7,7 @@ import { TextBox } from '../text-box/TextBox';
 import { Banner } from './Banner';
 
 export default {
-  title: 'v4/Lab/Banner',
+  title: 'Lab/Banner',
   component: Banner,
 } as Meta;
 

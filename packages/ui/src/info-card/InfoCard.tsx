@@ -1,45 +1,34 @@
 import {
   Card,
-  CardClassKey,
   CardContent,
   CardContentProps,
   CardProps,
-} from '@material-ui/core';
-import { CSSProperties, makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
+  styled,
+} from '@mui/material';
 import { forwardRef, ForwardRefExoticComponent, useState } from 'react';
-import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 import { assignRef } from '../utils/mergeRefs';
 
-export type InfoCardClassKey =
-  | 'sizeLarge'
-  | 'content'
-  | 'fullWidth'
-  | CardClassKey;
+const StyledCardContent = styled(CardContent)(({ theme }) => {
+  return {
+    padding: theme.spacing(2),
+  };
+});
 
-const useStyles = makeStyles(
-  (theme: SuperDispatchTheme): Record<InfoCardClassKey, CSSProperties> => ({
-    root: {
-      '&$fullWidth': {
-        borderRadius: 0,
-        borderLeftWidth: 0,
-        borderRightWidth: 0,
+const StyledCard = styled(Card)(({ theme }) => {
+  return {
+    '&[data-full-width="true"]': {
+      borderRadius: 0,
+      borderLeftWidth: 0,
+      borderRightWidth: 0,
+    },
+
+    [`&[data-size="large"] > ${StyledCardContent}`]: {
+      [theme.breakpoints.up('sm')]: {
+        padding: theme.spacing(3),
       },
     },
-    fullWidth: {},
-    sizeLarge: {},
-    content: {
-      padding: theme.spacing(2),
-
-      '$sizeLarge > &': {
-        [theme.breakpoints.up('sm')]: {
-          padding: theme.spacing(3),
-        },
-      },
-    },
-  }),
-  { name: 'SD-InfoCard' },
-);
+  };
+});
 
 export interface InfoCardProps extends CardProps {
   size?: 'medium' | 'large';
@@ -59,37 +48,23 @@ export const InfoCard: ForwardRefExoticComponent<InfoCardProps> = forwardRef(
     },
     ref,
   ) => {
-    const {
-      content: contentClassName,
-      sizeLarge: sizeLargeClassName,
-      fullWidth: fullWidthClassName,
-      ...styles
-    } = useStyles({ classes });
     const [rootNode, setRootNode] = useState<HTMLElement | null>(null);
 
     const clientRect = rootNode?.getBoundingClientRect();
     const isFullWidth = clientRect?.width === window.innerWidth;
 
     return (
-      <Card
+      <StyledCard
         {...props}
         ref={(node) => {
           assignRef(ref, node);
           setRootNode(node as HTMLElement);
         }}
-        classes={styles}
-        className={clsx(className, {
-          [sizeLargeClassName]: size === 'large',
-          [fullWidthClassName]: isFullWidth,
-        })}
+        data-size={size}
+        data-full-width={isFullWidth}
       >
-        <CardContent
-          {...cardContentProps}
-          className={clsx(cardContentProps.className, contentClassName)}
-        >
-          {children}
-        </CardContent>
-      </Card>
+        <StyledCardContent {...cardContentProps}>{children}</StyledCardContent>
+      </StyledCard>
     );
   },
 );

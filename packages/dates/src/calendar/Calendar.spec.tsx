@@ -1,8 +1,8 @@
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 import {
   mockDate,
   renderComponent,
-  renderCSS,
+  renderStyles,
 } from '@superdispatch/ui-testutils';
 import { EventType, fireEvent, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -315,217 +315,217 @@ test('quickSelection', () => {
 });
 
 test('css', () => {
-  expect(renderCSS(<Calendar />, ['SD-Calendar'])).toMatchInlineSnapshot(`
-.SD-Calendar-container {
-  display: inline-block;
-}
+  expect(renderStyles(<Calendar />, ['SD-Calendar'])).toMatchInlineSnapshot(`
+    .SD-Calendar-container {
+      display: inline-block;
+    }
 
-.SD-Calendar-wrapper {
-  position: relative;
-  user-select: none;
-  flex-direction: row;
-  padding-bottom: 16px;
-}
+    .SD-Calendar-wrapper {
+      position: relative;
+      user-select: none;
+      flex-direction: row;
+      padding-bottom: 16px;
+    }
 
-.SD-Calendar-wrapper:focus {
-  outline: none;
-}
+    .SD-Calendar-wrapper:focus {
+      outline: none;
+    }
 
-.SD-Calendar-navButtonPrev {
-  top: 12px;
-  left: 12px;
-  position: absolute;
-}
+    .SD-Calendar-navButtonPrev {
+      top: 12px;
+      left: 12px;
+      position: absolute !important;
+    }
 
-.SD-Calendar-navButtonNext {
-  top: 12px;
-  right: 12px;
-  position: absolute;
-}
+    .SD-Calendar-navButtonNext {
+      top: 12px;
+      right: 12px;
+      position: absolute !important;
+    }
 
-.SD-Calendar-months {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    .SD-Calendar-months {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-.SD-Calendar-month {
-  margin: 16px 16px 0px 16px;
-  user-select: none;
-}
+    .SD-Calendar-month {
+      margin: 16px 16px 0px 16px;
+      user-select: none;
+    }
 
-.SD-Calendar-caption {
-  display: table-caption;
-  padding: 0px 8px;
-  text-align: center;
-  margin-bottom: 8px;
-}
+    .SD-Calendar-caption {
+      display: table-caption;
+      padding: 0px 8px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
 
-.SD-Calendar-weekdays {
-  display: table-header-group;
-}
+    .SD-Calendar-weekdays {
+      display: table-header-group;
+    }
 
-.SD-Calendar-weekdaysRow {
-  margin: 8px 0px;
-  display: flex;
-}
+    .SD-Calendar-weekdaysRow {
+      margin: 8px 0px;
+      display: flex;
+    }
 
-.SD-Calendar-weekday {
-  color: Color.Dark300;
-  width: 40px;
-  height: 40px;
-  margin: 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
+    .SD-Calendar-weekday {
+      color: Color.Dark300;
+      width: 40px;
+      height: 40px;
+      margin: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
 
-.SD-Calendar-body {
-  display: flex;
-  flex-direction: column;
-}
+    .SD-Calendar-body {
+      display: flex;
+      flex-direction: column;
+    }
 
-.SD-Calendar-week {
-  display: flex;
-}
+    .SD-Calendar-week {
+      display: flex;
+    }
 
-.SD-Calendar-day {
-  width: 40px;
-  height: 40px;
-  margin: 1px;
-  display: flex;
-  z-index: 1;
-  position: relative;
-  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  align-items: center;
-  border-radius: 4px;
-  justify-content: center;
-}
+    .SD-Calendar-day {
+      width: 40px;
+      height: 40px;
+      margin: 1px;
+      display: flex;
+      z-index: 1;
+      position: relative;
+      transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      align-items: center;
+      border-radius: 4px;
+      justify-content: center;
+    }
 
-.SD-Calendar-day:before {
-  top: 0;
-  left: -1px;
-  right: -1px;
-  bottom: 0;
-  content: '';
-  z-index: -1;
-  position: absolute;
-  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  background-color: Color.Transparent;
-}
+    .SD-Calendar-day:before {
+      top: 0;
+      left: -1px;
+      right: -1px;
+      bottom: 0;
+      content: '';
+      z-index: -1;
+      position: absolute;
+      transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      background-color: Color.Transparent;
+    }
 
-.SD-Calendar-day:after {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: '';
-  z-index: -1;
-  position: absolute;
-  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  border-radius: 4px;
-  background-color: Color.Transparent;
-}
+    .SD-Calendar-day:after {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      z-index: -1;
+      position: absolute;
+      transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 4px;
+      background-color: Color.Transparent;
+    }
 
-.SD-Calendar-day:hover,
-.SD-Calendar-day:focus {
-  outline: none;
-}
+    .SD-Calendar-day:hover,
+    .SD-Calendar-day:focus {
+      outline: none;
+    }
 
-.SD-Calendar-day.SD-Calendar-disabled {
-  color: Color.Dark100;
-}
+    .SD-Calendar-day.SD-Calendar-disabled {
+      color: Color.Dark100;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled) {
-  color: Color.Dark500;
-  cursor: pointer;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled) {
+      color: Color.Dark500;
+      cursor: pointer;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active,
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected {
-  color: Color.White;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active,
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected {
+      color: Color.White;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active:after,
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected:after {
-  background-color: Color.Blue300;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active:after,
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected:after {
+      background-color: Color.Blue300;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-today {
-  color: Color.Blue300;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-today {
+      color: Color.Blue300;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):hover,
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):focus {
-  background-color: Color.Silver100;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):hover,
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):focus {
+      background-color: Color.Silver100;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-blue {
-  color: Color.Blue500;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-blue {
+      color: Color.Blue500;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-green {
-  color: Color.Green500;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-green {
+      color: Color.Green500;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-purple {
-  color: Color.Purple500;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-purple {
+      color: Color.Purple500;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-red {
-  color: Color.Red500;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-red {
+      color: Color.Red500;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-teal {
-  color: Color.Teal500;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-teal {
+      color: Color.Teal500;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-yellow {
-  color: Color.Yellow500;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-yellow {
+      color: Color.Yellow500;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-yellow {
-  background-color: Color.Yellow50;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-yellow {
+      background-color: Color.Yellow50;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-teal {
-  background-color: Color.Teal50;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-teal {
+      background-color: Color.Teal50;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-red {
-  background-color: Color.Red50;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-red {
+      background-color: Color.Red50;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-purple {
-  background-color: Color.Purple50;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-purple {
+      background-color: Color.Purple50;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-green {
-  background-color: Color.Green50;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-green {
+      background-color: Color.Green50;
+    }
 
-.SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-blue {
-  background-color: Color.Blue50;
-}
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-blue {
+      background-color: Color.Blue50;
+    }
 
-.SD-Calendar-day.SD-Calendar-disabled.SD-Calendar-selected:not(.SD-Calendar-outside):after {
-  background-color: Color.Silver300;
-}
+    .SD-Calendar-day.SD-Calendar-disabled.SD-Calendar-selected:not(.SD-Calendar-outside):after {
+      background-color: Color.Silver300;
+    }
 
-.SD-Calendar-day:last-child:before,
-.SD-Calendar-day.SD-Calendar-lastDayOfMonth:before {
-  border-radius: 0px 4px 4px 0px;
-}
+    .SD-Calendar-day:last-child:before,
+    .SD-Calendar-day.SD-Calendar-lastDayOfMonth:before {
+      border-radius: 0px 4px 4px 0px;
+    }
 
-.SD-Calendar-day:first-child:before,
-.SD-Calendar-day.SD-Calendar-firstDayOfMonth:before {
-  border-radius: 4px 0px 0px 4px;
-}
+    .SD-Calendar-day:first-child:before,
+    .SD-Calendar-day.SD-Calendar-firstDayOfMonth:before {
+      border-radius: 4px 0px 0px 4px;
+    }
 
-.SD-Calendar-footer {
-  padding: 16px;
-}
-`);
+    .SD-Calendar-footer {
+      padding: 16px;
+    }
+  `);
 });

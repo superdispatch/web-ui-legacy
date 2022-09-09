@@ -1,228 +1,309 @@
-import { Pagination } from '@material-ui/lab';
+import { Pagination } from '@mui/material';
 import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
 
 it('checks default props', () => {
-  const { props } = renderTheme();
+  const { components } = renderTheme();
 
-  // Remove `any` after official release.
-  expect((props as any).MuiPagination).toMatchInlineSnapshot(`undefined`);
-  expect((props as any).MuiPaginationItem).toMatchInlineSnapshot(`Object {}`);
+  expect(components.MuiPagination?.defaultProps).toMatchInlineSnapshot(
+    `undefined`,
+  );
+  expect(components.MuiPaginationItem?.defaultProps).toMatchInlineSnapshot(
+    `undefined`,
+  );
 });
 
 it('checks component css', () => {
-  expect(renderCSS(<Pagination />, ['MuiPagination', 'MuiPaginationItem']))
-    .toMatchInlineSnapshot(`
-    .MuiPagination-ul {
-      margin: 0;
-      display: flex;
-      padding: 0;
-      flex-wrap: wrap;
-      list-style: none;
+  expect(renderCSS(<Pagination />)).toMatchInlineSnapshot(`
+    .c4 {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      fill: currentColor;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      -webkit-transition: fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      font-size: 1.5rem;
+      display: inherit;
+      font-size: var(--mui-svg-icon-size,32px);
+    }
+
+    .c7 {
+      overflow: hidden;
+      pointer-events: none;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: inherit;
+    }
+
+    .c2 {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
-    }
-
-    .MuiPaginationItem-root {
-      color: Color.Dark400;
-      height: 32px;
-      margin: 0 3px;
-      padding: 0 6px;
-      font-size: 14px;
-      min-width: 32px;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      position: relative;
       box-sizing: border-box;
-      text-align: center;
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      line-height: 20px;
-      border-radius: 16px;
+      -webkit-tap-highlight-color: transparent;
+      background-color: transparent;
+      outline: 0;
+      border: 0;
+      margin: 0;
+      border-radius: 0;
+      padding: 0;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      vertical-align: middle;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      color: inherit;
     }
 
-    @media (min-width: 0px) and (max-width: 599.95px) {
-      .MuiPaginationItem-root {
+    .c2::-moz-focus-inner {
+      border-style: none;
+    }
+
+    .c2.Mui-disabled {
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .c3 {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      border-radius: 16px;
+      text-align: center;
+      box-sizing: border-box;
+      min-width: 32px;
+      height: 32px;
+      padding: 0 6px;
+      margin: 0 3px;
+      color: Color.Dark500;
+      -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      color: Color.Dark400;
+    }
+
+    .c3.Mui-focusVisible {
+      background-color: rgba(0,0,0,0.12);
+    }
+
+    .c3.Mui-disabled {
+      opacity: 0.38;
+    }
+
+    .c3:hover {
+      background-color: Color.Silver100;
+    }
+
+    .c3.Mui-selected {
+      background-color: Color.Silver300;
+    }
+
+    .c3.Mui-selected:hover {
+      background-color: rgba(232,236,240,0.12);
+    }
+
+    .c3.Mui-selected.Mui-focusVisible {
+      background-color: rgba(232,236,240,0.2);
+    }
+
+    .c3.Mui-selected.Mui-disabled {
+      opacity: 1;
+      color: Color.Silver400;
+      background-color: Color.Silver300;
+    }
+
+    .c3.Mui-selected.Mui-disabled {
+      color: Color.Silver400;
+    }
+
+    .c6 {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      font-family: "Inter",sans-serif;
+      border-radius: 16px;
+      text-align: center;
+      box-sizing: border-box;
+      min-width: 32px;
+      height: 32px;
+      padding: 0 6px;
+      margin: 0 3px;
+      color: Color.Dark500;
+      -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      color: Color.Dark400;
+    }
+
+    .c6.Mui-focusVisible {
+      background-color: rgba(0,0,0,0.12);
+    }
+
+    .c6.Mui-disabled {
+      opacity: 0.38;
+    }
+
+    .c6:hover {
+      background-color: Color.Silver100;
+    }
+
+    .c6.Mui-selected {
+      background-color: Color.Silver300;
+    }
+
+    .c6.Mui-selected:hover {
+      background-color: rgba(232,236,240,0.12);
+    }
+
+    .c6.Mui-selected.Mui-focusVisible {
+      background-color: rgba(232,236,240,0.2);
+    }
+
+    .c6.Mui-selected.Mui-disabled {
+      opacity: 1;
+      color: Color.Silver400;
+      background-color: Color.Silver300;
+    }
+
+    .c6.Mui-selected.Mui-disabled {
+      color: Color.Silver400;
+    }
+
+    .c6:hover {
+      background-color: Color.Silver200;
+    }
+
+    .c6.Mui-focusVisible {
+      border-radius: 4px;
+      background-color: Color.White;
+      border: 1px solid Color.Blue100;
+    }
+
+    .c6.Mui-selected {
+      background-color: Color.Silver400;
+    }
+
+    .c6.Mui-selected:hover,
+    .c6.Mui-selected.Mui-focusVisible {
+      background-color: Color.Silver400;
+    }
+
+    .c6.Mui-selected.Mui-disabled {
+      color: Color.Dark100;
+      background-color: Color.Silver400;
+    }
+
+    .c6.Mui-disabled {
+      opacity: 1;
+      color: Color.Dark100;
+    }
+
+    .c5 {
+      font-size: 1.25rem;
+      margin: 0 -8px;
+    }
+
+    .c1 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    @media (min-width:600px) {
+      .c4 {
+        font-size: var(--mui-svg-icon-size,24px);
+      }
+    }
+
+    @media print {
+      .c2 {
+        color-adjust: exact;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c3 {
         font-size: 16px;
         line-height: 24px;
       }
     }
 
-    .MuiPaginationItem-page {
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    @media (hover:none) {
+      .c3:hover {
+        background-color: transparent;
+      }
     }
 
-    .MuiPaginationItem-page:hover {
-      background-color: Color.Silver200;
-    }
-
-    .MuiPaginationItem-page.Mui-focusVisible {
-      border: 1px solid Color.Blue100;
-      border-radius: 4px;
-      background-color: Color.White;
-    }
-
-    .MuiPaginationItem-page.Mui-selected {
-      background-color: Color.Silver400;
-    }
-
-    .MuiPaginationItem-page.Mui-disabled {
-      color: Color.Dark100;
-    }
-
-    .MuiPaginationItem-page.Mui-selected:hover,
-    .MuiPaginationItem-page.Mui-selected.Mui-focusVisible {
-      background-color: Color.Silver400;
-    }
-
-    .MuiPaginationItem-page.Mui-selected.Mui-disabled {
-      color: Color.Dark100;
-      opacity: 1;
-      background-color: Color.Silver400;
-    }
-
-    @media (hover: none) {
-      .MuiPaginationItem-page.Mui-selected:hover,
-      .MuiPaginationItem-page.Mui-selected.Mui-focusVisible {
+    @media (hover:none) {
+      .c3.Mui-selected:hover {
         background-color: Color.Silver300;
       }
     }
 
-    @media (hover: none) {
-      .MuiPaginationItem-page:hover {
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c6 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    @media (hover:none) {
+      .c6:hover {
         background-color: transparent;
       }
     }
 
-    .MuiPaginationItem-sizeSmall {
-      height: 26px;
-      margin: 0 1px;
-      padding: 0 4px;
-      min-width: 26px;
-      border-radius: 13px;
-    }
-
-    .MuiPaginationItem-sizeSmall .MuiPaginationItem-icon {
-      font-size: 1.125rem;
-    }
-
-    .MuiPaginationItem-sizeLarge {
-      height: 40px;
-      padding: 0 10px;
-      font-size: 0.9375rem;
-      min-width: 40px;
-      border-radius: 20px;
-    }
-
-    .MuiPaginationItem-sizeLarge .MuiPaginationItem-icon {
-      font-size: 1.375rem;
-    }
-
-    .MuiPaginationItem-textPrimary.Mui-selected {
-      color: Color.White;
-      background-color: Color.Blue300;
-    }
-
-    .MuiPaginationItem-textPrimary.Mui-selected:hover,
-    .MuiPaginationItem-textPrimary.Mui-selected.Mui-focusVisible {
-      background-color: rgb(0, 81, 178);
-    }
-
-    .MuiPaginationItem-textPrimary.Mui-selected.Mui-disabled {
-      color: Color.Silver400;
-    }
-
-    @media (hover: none) {
-      .MuiPaginationItem-textPrimary.Mui-selected:hover,
-      .MuiPaginationItem-textPrimary.Mui-selected.Mui-focusVisible {
-        background-color: Color.Blue300;
+    @media (hover:none) {
+      .c6.Mui-selected:hover {
+        background-color: Color.Silver300;
       }
     }
 
-    .MuiPaginationItem-textSecondary.Mui-selected {
-      color: Color.White;
-      background-color: #f50057;
+    @media (min-width:0px) and (max-width:599.95px) {
+
     }
 
-    .MuiPaginationItem-textSecondary.Mui-selected:hover,
-    .MuiPaginationItem-textSecondary.Mui-selected.Mui-focusVisible {
-      background-color: #c51162;
+    @media print {
+
     }
 
-    .MuiPaginationItem-textSecondary.Mui-selected.Mui-disabled {
-      color: Color.Silver400;
-    }
+    @media (min-width:0px) and (max-width:599.95px) {
 
-    @media (hover: none) {
-      .MuiPaginationItem-textSecondary.Mui-selected:hover,
-      .MuiPaginationItem-textSecondary.Mui-selected.Mui-focusVisible {
-        background-color: #f50057;
-      }
-    }
-
-    .MuiPaginationItem-outlined {
-      border: 1px solid rgba(0, 0, 0, 0.23);
-    }
-
-    .MuiPaginationItem-outlined.Mui-selected.Mui-disabled {
-      border: 1px solid rgba(0, 0, 0, 0.12);
-    }
-
-    .MuiPaginationItem-outlinedPrimary.Mui-selected {
-      color: Color.Blue300;
-      border: 1px solid rgba(0, 117, 255, 0.5);
-      background-color: rgba(0, 117, 255, 0.12);
-    }
-
-    .MuiPaginationItem-outlinedPrimary.Mui-selected:hover,
-    .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-focusVisible {
-      background-color: rgba(0, 117, 255, 0.16);
-    }
-
-    .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-disabled {
-      color: Color.Silver400;
-    }
-
-    @media (hover: none) {
-      .MuiPaginationItem-outlinedPrimary.Mui-selected:hover,
-      .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-focusVisible {
-        background-color: transparent;
-      }
-    }
-
-    .MuiPaginationItem-outlinedSecondary.Mui-selected {
-      color: #f50057;
-      border: 1px solid rgba(245, 0, 87, 0.5);
-      background-color: rgba(245, 0, 87, 0.12);
-    }
-
-    .MuiPaginationItem-outlinedSecondary.Mui-selected:hover,
-    .MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-focusVisible {
-      background-color: rgba(245, 0, 87, 0.16);
-    }
-
-    .MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-disabled {
-      color: Color.Silver400;
-    }
-
-    @media (hover: none) {
-      .MuiPaginationItem-outlinedSecondary.Mui-selected:hover,
-      .MuiPaginationItem-outlinedSecondary.Mui-selected.Mui-focusVisible {
-        background-color: transparent;
-      }
-    }
-
-    .MuiPaginationItem-rounded {
-      border-radius: 4px;
-    }
-
-    .MuiPaginationItem-ellipsis {
-      height: auto;
-    }
-
-    .MuiPaginationItem-ellipsis.Mui-disabled {
-      opacity: 0.38;
-    }
-
-    .MuiPaginationItem-icon {
-      margin: 0 -8px;
-      font-size: 1.25rem;
     }
   `);
 });

@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Calendar } from './Calendar.playroom';
 import {
@@ -7,8 +7,9 @@ import {
 } from './CalendarQuickSelection';
 
 export default {
-  title: 'v4/Dates/Calendar',
+  title: 'Dates/Calendar',
   component: Calendar,
+
   subcomponents: { CalendarQuickSelection, CalendarQuickSelectionItem },
 } as Meta;
 

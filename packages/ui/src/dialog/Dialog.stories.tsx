@@ -1,11 +1,11 @@
 import isLokiRunning from '@loki/is-loki-running';
-import { DialogActions, DialogContent, DialogTitle } from '@material-ui/core';
+import { DialogActions, DialogContent, DialogTitle } from '@mui/material';
 import { PropsLink, UseState } from '@superdispatch/ui-docs';
-import { Button } from '..';
+import { Button } from '../index';
 import { Dialog } from './Dialog.playroom';
 
 export default {
-  title: 'v4/Feedback/Dialog',
+  title: 'Feedback/Dialog',
   parameters: {
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/dialog/#props" />
@@ -48,10 +48,10 @@ export const basic = () => (
               Disagree
             </Button>
             <Button
+              variant="contained"
               onClick={() => {
                 setOpen(false);
               }}
-              variant="contained"
             >
               Agree
             </Button>

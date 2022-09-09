@@ -1,3 +1,5 @@
+import { mdiCalendarMonth } from '@mdi/js';
+import { Clear } from '@mui/icons-material';
 import {
   BaseTextFieldProps,
   IconButton,
@@ -6,9 +8,7 @@ import {
   Popover,
   SvgIcon,
   TextField,
-} from '@material-ui/core';
-import { Clear } from '@material-ui/icons';
-import { mdiCalendarMonth } from '@mdi/js';
+} from '@mui/material';
 import { useValueObserver } from '@superdispatch/hooks';
 import { mergeRefs, useUID } from '@superdispatch/ui';
 import { forwardRef, Ref, useImperativeHandle, useRef, useState } from 'react';

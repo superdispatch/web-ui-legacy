@@ -15,16 +15,11 @@ expect.addSnapshotSerializer({
   test: (value) =>
     !!value && typeof value === 'string' && colorRegExp.test(value),
   print: (value) =>
-    JSON.stringify(
-      String(value).replace(
-        colorRegExp,
-        (color) => colors.get(color) as string,
-      ),
-    ),
+    String(value).replace(colorRegExp, (color) => colors.get(color) as string),
 });
 
 it('exposes overridden theme', () => {
-  const { props, overrides, typography, ...theme } = renderTheme();
+  const { components, typography, ...theme } = renderTheme();
 
   Object.entries(theme).forEach(([key, value]) => {
     expect(value).toMatchSnapshot(key);

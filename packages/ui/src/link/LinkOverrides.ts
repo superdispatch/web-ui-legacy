@@ -6,19 +6,22 @@ function line(color: string): string {
 }
 
 export function overrideLink(theme: SuperDispatchTheme): void {
-  theme.props.MuiLink = { underline: 'none', color: 'textPrimary' };
+  theme.components.MuiLink = {
+    defaultProps: { underline: 'none', color: 'textPrimary' },
 
-  theme.overrides.MuiLink = {
-    root: {
-      backgroundSize: '100% 1px',
-      backgroundRepeat: 'repeat-x',
-      backgroundPosition: '0 100%',
-      backgroundColor: Color.Transparent,
+    styleOverrides: {
+      root: {
+        backgroundSize: '100% 1px',
+        backgroundRepeat: 'repeat-x',
+        backgroundPosition: '0 100%',
+        backgroundColor: Color.Transparent,
 
-      '&:focus': { outline: 'none' },
-      '&:hover, &:active': { backgroundImage: line('currentColor') },
+        '&:focus': { outline: 'none' },
+        '&:hover, &:active': { backgroundImage: line('currentColor') },
+      },
 
-      '&.MuiTypography-colorTextPrimary': {
+      // @ts-expect-error type def need in patch-package
+      colorTextPrimary: {
         backgroundImage: line(Color.Silver500),
 
         '&:focus, &:hover, &:active': {
@@ -26,18 +29,18 @@ export function overrideLink(theme: SuperDispatchTheme): void {
           backgroundImage: line(Color.Blue300),
         },
       },
-    },
 
-    button: {
-      // Reset button styles.
-      backgroundColor: undefined,
+      button: {
+        // Reset button styles.
+        backgroundColor: 'unset',
 
-      // Override browser defaults.
-      fontSize: 'inherit',
-      textAlign: 'inherit',
-      lineHeight: 'inherit',
-      userSelect: 'inherit',
-      verticalAlign: 'inherit',
+        // Override browser defaults.
+        fontSize: 'inherit',
+        textAlign: 'inherit',
+        lineHeight: 'inherit',
+        userSelect: 'inherit',
+        verticalAlign: 'inherit',
+      },
     },
   };
 }

@@ -1,27 +1,28 @@
 import isLokiRunning from '@loki/is-loki-running';
 import {
+  ArrowBack as ArrowBackIcon,
+  Close as CloseIcon,
+  Delete as DeleteIcon,
+} from '@mui/icons-material';
+import {
   Drawer,
   IconButton,
   ListItem,
   ListItemSecondaryAction,
   ListItemText,
   TextField,
-} from '@material-ui/core';
-import {
-  ArrowBack as ArrowBackIcon,
-  Delete as DeleteIcon,
-} from '@material-ui/icons';
+} from '@mui/material';
 import { Meta } from '@storybook/react';
 import { PropsLink, UseState } from '@superdispatch/ui-docs';
 import { Box } from '@superdispatch/ui-lab';
-import { Button, Inline, Stack } from '..';
+import { Button, Inline, Stack } from '../index';
 import { DrawerActions } from './DrawerActions';
 import { DrawerContent } from './DrawerContent';
 import { DrawerList } from './DrawerList';
 import { DrawerTitle } from './DrawerTitle';
 
 export default {
-  title: 'v4/Navigation/Drawer',
+  title: 'Navigation/Drawer',
   component: DrawerTitle,
   subcomponents: { DrawerList },
   parameters: {
@@ -138,9 +139,9 @@ export const titleEndAction = () => (
         >
           <DrawerTitle
             title="Title"
-            startAction={
-              <IconButton edge="start">
-                <ArrowBackIcon />
+            endAction={
+              <IconButton edge="end">
+                <CloseIcon />
               </IconButton>
             }
           />

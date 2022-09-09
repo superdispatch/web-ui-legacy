@@ -1,10 +1,10 @@
-import { Link } from '@material-ui/core';
+import { Link } from '@mui/material';
 import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
 
 it('checks default props', () => {
-  const { props } = renderTheme();
+  const { components } = renderTheme();
 
-  expect(props.MuiLink).toMatchInlineSnapshot(`
+  expect(components.MuiLink?.defaultProps).toMatchInlineSnapshot(`
     Object {
       "color": "textPrimary",
       "underline": "none",
@@ -13,86 +13,40 @@ it('checks default props', () => {
 });
 
 it('checks component css', () => {
-  expect(renderCSS(<Link>Text</Link>, ['MuiLink'])).toMatchInlineSnapshot(`
-    .MuiLink-root {
-      background-size: 100% 1px;
-      background-color: Color.Transparent;
-      background-repeat: repeat-x;
-      background-position: 0 100%;
+  expect(renderCSS(<Link>Text</Link>)).toMatchInlineSnapshot(`
+    .c1 {
+      margin: 0;
+      color: Color.Dark500;
     }
 
-    .MuiLink-root:focus {
+    .c2 {
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      background-size: 100% 1px;
+      background-repeat: repeat-x;
+      background-position: 0 100%;
+      background-color: Color.Transparent;
+    }
+
+    .c2:focus {
       outline: none;
     }
 
-    .MuiLink-root:hover,
-    .MuiLink-root:active {
-      background-image: linear-gradient(
-        to right,
-        currentColor 0%,
-        currentColor 100%
-      );
+    .c2:hover,
+    .c2:active {
+      background-image: linear-gradient(to right,currentColor 0%,currentColor 100%);
     }
 
-    .MuiLink-root.MuiTypography-colorTextPrimary {
-      background-image: linear-gradient(
-        to right,
-        Color.Silver500 0%,
-        Color.Silver500 100%
-      );
+    @media (min-width:0px) and (max-width:599.95px) {
+
     }
 
-    .MuiLink-root.MuiTypography-colorTextPrimary:focus,
-    .MuiLink-root.MuiTypography-colorTextPrimary:hover,
-    .MuiLink-root.MuiTypography-colorTextPrimary:active {
-      color: Color.Blue300;
-      background-image: linear-gradient(
-        to right,
-        Color.Blue300 0%,
-        Color.Blue300 100%
-      );
+    @media print {
+
     }
 
-    .MuiLink-underlineNone {
-      text-decoration: none;
-    }
+    @media (min-width:0px) and (max-width:599.95px) {
 
-    .MuiLink-underlineHover {
-      text-decoration: none;
-    }
-
-    .MuiLink-underlineHover:hover {
-      text-decoration: underline;
-    }
-
-    .MuiLink-underlineAlways {
-      text-decoration: underline;
-    }
-
-    .MuiLink-button {
-      border: 0;
-      cursor: pointer;
-      margin: 0;
-      outline: 0;
-      padding: 0;
-      position: relative;
-      font-size: inherit;
-      text-align: inherit;
-      line-height: inherit;
-      user-select: inherit;
-      border-radius: 0;
-      vertical-align: inherit;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .MuiLink-button::-moz-focus-inner {
-      border-style: none;
-    }
-
-    .MuiLink-button.Mui-focusVisible {
-      outline: auto;
     }
   `);
 });

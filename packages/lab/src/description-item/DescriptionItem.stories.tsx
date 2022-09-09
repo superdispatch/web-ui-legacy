@@ -1,13 +1,13 @@
-import { Link } from '@material-ui/core';
-import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
-import DomainIcon from '@material-ui/icons/Domain';
-import FingerprintIcon from '@material-ui/icons/Fingerprint';
-import FlightLandIcon from '@material-ui/icons/FlightLand';
-import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
-import NotesIcon from '@material-ui/icons/Notes';
-import PaymentIcon from '@material-ui/icons/Payment';
-import PersonIcon from '@material-ui/icons/Person';
-import RoomIcon from '@material-ui/icons/Room';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import DomainIcon from '@mui/icons-material/Domain';
+import FingerprintIcon from '@mui/icons-material/Fingerprint';
+import FlightLandIcon from '@mui/icons-material/FlightLand';
+import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import NotesIcon from '@mui/icons-material/Notes';
+import PaymentIcon from '@mui/icons-material/Payment';
+import PersonIcon from '@mui/icons-material/Person';
+import RoomIcon from '@mui/icons-material/Room';
+import { Link } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { PhoneLink } from '@superdispatch/phones';
 import { Column, Columns, Inline, Stack } from '@superdispatch/ui';
@@ -16,7 +16,7 @@ import { TextBox } from '../text-box/TextBox';
 import { DescriptionItem } from './DescriptionItem';
 
 export default {
-  title: 'v4/Lab/DescriptionItem',
+  title: 'Lab/DescriptionItem',
   component: DescriptionItem,
 } as Meta;
 

@@ -1,9 +1,9 @@
-import { Chip } from '@material-ui/core';
+import { Chip } from '@mui/material';
 import { PropsLink } from '@superdispatch/ui-docs';
-import { Inline } from '..';
+import { Inline } from '../index';
 
 export default {
-  title: 'v4/Data Display/Chip',
+  title: 'Data Display/Chip',
   parameters: {
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/chip/#props" />

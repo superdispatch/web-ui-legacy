@@ -1,14 +1,9 @@
-import {
-  FormControlLabel,
-  FormGroup,
-  Switch,
-  TextField,
-} from '@material-ui/core';
+import { FormControlLabel, FormGroup, Switch, TextField } from '@mui/material';
 import { PropsLink } from '@superdispatch/ui-docs';
-import { CheckboxField, RadioField, RadioGroupField } from '..';
+import { CheckboxField, RadioField, RadioGroupField } from '../index';
 
 export default {
-  title: 'v4/Inputs/Switch',
+  title: 'Inputs/Switch',
   parameters: {
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/switch/#props" />

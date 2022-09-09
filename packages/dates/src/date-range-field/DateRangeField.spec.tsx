@@ -1,7 +1,7 @@
 import {
   mockDate,
   renderComponent,
-  renderCSS,
+  renderStyles,
 } from '@superdispatch/ui-testutils';
 import { fireEvent, Matcher, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -289,7 +289,7 @@ test('time normalization', () => {
 });
 
 test('css', () => {
-  expect(renderCSS(<DateRangeField />, ['SD-DateRangeField']))
+  expect(renderStyles(<DateRangeField />, ['SD-DateRangeField']))
     .toMatchInlineSnapshot(`
     .SD-DateRangeField-day.SD-DateRangeField-selected:not(.SD-DateRangeField-outside).SD-DateRangeField-rangeStart:before {
       left: 4px;

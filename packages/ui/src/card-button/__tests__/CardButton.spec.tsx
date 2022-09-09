@@ -1,95 +1,172 @@
 import { renderCSS } from '@superdispatch/ui-testutils';
-import { CardButton } from '../..';
+import { CardButton } from '../../index';
 
 it('checks component css', () => {
-  expect(renderCSS(<CardButton />, ['SD-CardButton'])).toMatchInlineSnapshot(`
-.SD-CardButton-root {
-  width: 100%;
-  border: 1px dashed;
-  display: flex;
-  padding: 12px;
-  min-height: 104px;
-  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    border-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  align-items: center;
-  border-radius: 4px;
-  flex-direction: column;
-  justify-content: center;
-  background-color: Color.White;
-}
+  expect(renderCSS(<CardButton />)).toMatchInlineSnapshot(`
+    .c5 {
+      overflow: hidden;
+      pointer-events: none;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: inherit;
+    }
 
-.SD-CardButton-disabled {
-  color: Color.Dark200;
-  border-color: Color.Silver500;
-  background-color: Color.Silver100;
-}
+    .c1 {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      background-color: transparent;
+      outline: 0;
+      border: 0;
+      margin: 0;
+      border-radius: 0;
+      padding: 0;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      vertical-align: middle;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      color: inherit;
+    }
 
-.SD-CardButton-error {
-  color: Color.Red300;
-  border-color: Color.Red300;
-  background-color: Color.Red50;
-}
+    .c1::-moz-focus-inner {
+      border-style: none;
+    }
 
-.SD-CardButton-error:focus {
-  background-color: Color.Red75;
-}
+    .c1.Mui-disabled {
+      pointer-events: none;
+      cursor: default;
+    }
 
-.SD-CardButton-primary {
-  color: Color.Blue300;
-  border-color: Color.Silver500;
-}
+    .c3 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      font-family: "Inter",sans-serif;
+      color: inherit;
+    }
 
-.SD-CardButton-primary:focus {
-  background-color: Color.Blue50;
-}
+    .c2 {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      background-color: Color.White;
+      border: 1px dashed;
+      border-radius: 4px;
+      padding: 12px;
+      min-height: 104px;
+      -webkit-transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,box-shadow 300ms cubic-bezier(0.4,0,0.2,1) 0ms,border-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 300ms cubic-bezier(0.4,0,0.2,1) 0ms;
+    }
 
-.SD-CardButton-primary:hover,
-.SD-CardButton-primary:active {
-  border-color: Color.Blue300;
-  background-color: Color.Blue50;
-}
+    .c2[data-disabled="true"] {
+      color: Color.Dark200;
+      border-color: Color.Silver500;
+      background-color: Color.Silver100;
+    }
 
-.SD-CardButton-sizeSmall {
-  min-height: 48px;
-}
+    .c2[data-primary="true"] {
+      color: Color.Blue300;
+      border-color: Color.Silver500;
+    }
 
-.SD-CardButton-sizeLarge {
-  min-height: 140px;
-}
+    .c2[data-primary="true"]:focus {
+      background-color: Color.Blue50;
+    }
 
-.SD-CardButton-label {
-  display: flex;
-  align-items: center;
-}
+    .c2[data-primary="true"]:hover,
+    .c2[data-primary="true"]:active {
+      border-color: Color.Blue300;
+      background-color: Color.Blue50;
+    }
 
-.SD-CardButton-icon {
-  display: flex;
-}
+    .c2[data-error="true"] {
+      color: Color.Red300;
+      border-color: Color.Red300;
+      background-color: Color.Red50;
+    }
 
-.SD-CardButton-icon svg {
-  font-size: 24px;
-}
+    .c2[data-error="true"]:focus {
+      background-color: Color.Red75;
+    }
 
-@media (min-width: 600px) {
-  .SD-CardButton-icon svg {
-    font-size: 20px;
-  }
-}
+    .c2[data-size="small"] {
+      min-height: 48px;
+    }
 
-.SD-CardButton-startIcon {
-  margin-left: -4px;
-  margin-right: 8px;
-}
+    .c2[data-size="large"] {
+      min-height: 140px;
+    }
 
-.SD-CardButton-endIcon {
-  margin-left: 8px;
-  margin-right: -4px;
-}
+    .c4 {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
 
-.SD-CardButton-hint {
-  margin-top: 4px;
-}
-`);
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+      .c1 {
+        color-adjust: exact;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+      .c3 {
+        font-size: 17px;
+        line-height: 26px;
+      }
+    }
+  `);
 });

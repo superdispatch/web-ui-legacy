@@ -1,11 +1,11 @@
-import { Link } from '@material-ui/core';
+import { Link } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Empty, Placeholder } from '@superdispatch/ui-docs';
 import { Box } from '@superdispatch/ui-lab';
 import { Inline } from './Inline';
 
 export default {
-  title: 'v4/Layout/Inline',
+  title: 'Layout/Inline',
   component: Inline,
   decorators: [
     (Story) => (

@@ -1,4 +1,4 @@
-import { BaseTextFieldProps, TextField } from '@material-ui/core';
+import { BaseTextFieldProps, TextField } from '@mui/material';
 import { mergeRefs } from '@superdispatch/ui';
 import {
   ChangeEvent,

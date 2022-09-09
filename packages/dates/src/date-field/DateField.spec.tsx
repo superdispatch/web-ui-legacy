@@ -1,4 +1,4 @@
-import { InputAdornment } from '@material-ui/core';
+import { InputAdornment } from '@mui/material';
 import { mockDate, renderComponent } from '@superdispatch/ui-testutils';
 import { fireEvent, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';

@@ -37,7 +37,21 @@ test('invalid', async () => {
     expect(screen.queryByText('Suspended…')).toBeNull();
   });
 
-  expect(view.container).toMatchInlineSnapshot(`<div />`);
+  expect(view.container).toMatchInlineSnapshot(`
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    <div />
+  `);
 });
 
 test('fallback', async () => {
@@ -53,6 +67,18 @@ test('fallback', async () => {
   });
 
   expect(view.container).toMatchInlineSnapshot(`
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
     <div>
       Phone: (585) 617-1234 (Home) | (585) 489-1234 (Cell)
     </div>

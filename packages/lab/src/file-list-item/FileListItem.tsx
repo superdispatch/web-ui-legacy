@@ -1,3 +1,11 @@
+import { mdiFilePdfBox, mdiTextBox } from '@mdi/js';
+import {
+  CheckCircle,
+  Delete,
+  Error,
+  Image,
+  Refresh,
+} from '@mui/icons-material';
 import {
   CircularProgress,
   IconButton,
@@ -5,9 +13,7 @@ import {
   SvgIcon,
   SvgIconProps,
   Tooltip,
-} from '@material-ui/core';
-import { CheckCircle, Delete, Error, Image, Refresh } from '@material-ui/icons';
-import { mdiFilePdfBox, mdiTextBox } from '@mdi/js';
+} from '@mui/material';
 import {
   Color,
   Column,

@@ -1,8 +1,7 @@
-import * as api from '..';
+import * as api from '../index';
 
 it('exposes public api', () => {
-  const { v5, ...v4 } = api;
-  expect(v4).toMatchInlineSnapshot(`
+  expect(api).toMatchInlineSnapshot(`
     Object {
       "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
       "AvatarButton": React.forwardRef(AvatarButton),
@@ -86,8 +85,8 @@ it('exposes public api', () => {
       "DescriptionList": React.forwardRef(DescriptionList),
       "DescriptionListItem": React.forwardRef(DescriptionListItem),
       "DrawerActions": React.forwardRef(DrawerActions),
-      "DrawerContent": React.forwardRef(DrawerContent),
-      "DrawerList": React.forwardRef(DrawerList),
+      "DrawerContent": React.forwardRef(SD-DrawerContent),
+      "DrawerList": React.forwardRef(Styled(ForwardRef(List))),
       "DrawerTitle": React.forwardRef(DrawerTitle),
       "GridStack": React.forwardRef(GridStack),
       "InfoCard": React.forwardRef(InfoCard),
@@ -96,7 +95,6 @@ it('exposes public api', () => {
       "OverflowText": React.forwardRef(OverflowText),
       "RadioField": React.forwardRef(RadioField),
       "RadioGroupField": React.forwardRef(RadioGroupField),
-      "ResponsiveContextProvider": [Function],
       "Snackbar": React.forwardRef(Snackbar),
       "SnackbarContent": React.forwardRef(SnackbarContent),
       "SnackbarStackConsumer": [Function],
@@ -115,8 +113,6 @@ it('exposes public api', () => {
       "parseResponsiveProp": [Function],
       "parseSpaceProp": [Function],
       "renderChildren": [Function],
-      "useCollapseBreakpoint": [Function],
-      "useResponsiveContext": [Function],
       "useResponsiveProp": [Function],
       "useResponsivePropRecord": [Function],
       "useResponsiveValue": [Function],

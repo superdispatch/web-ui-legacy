@@ -1,60 +1,61 @@
 import {
   AppBar,
   Grid,
+  styled,
   Toolbar,
   Typography,
   TypographyProps,
-} from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
+} from '@mui/material';
 import { forwardRef, HTMLAttributes, ReactNode } from 'react';
 import { Color } from '../theme/Color';
-import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 import { VisibilityObserver } from '../utils/VisibilityObserver';
 
-const useStyles = makeStyles(
-  (theme: SuperDispatchTheme) => ({
-    appBar: {
-      '&&': {
-        borderTop: 'none',
-        borderLeft: 'none',
-        borderRight: 'none',
-        transition: theme.transitions.create(['border-color']),
+const StyledAppBar = styled(AppBar)(({ theme }) => {
+  return {
+    borderTop: 'none',
+    borderLeft: 'none',
+    borderRight: 'none',
+    transition: theme.transitions.create(['border-color']),
 
-        '&:not($appBarSticky)': {
-          borderBottomColor: Color.Transparent,
-        },
+    '&[data-sticky="false"]': {
+      borderBottomColor: Color.Transparent,
+    },
+  };
+});
+
+const StyledToolbar = styled(Toolbar)(({ theme }) => {
+  return {
+    '&.MuiToolbar-gutters': {
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
+
+      [theme.breakpoints.up('md')]: {
+        paddingLeft: theme.spacing(4),
+        paddingRight: theme.spacing(4),
       },
     },
-    appBarSticky: {},
-    toolbar: {
-      '&.MuiToolbar-gutters': {
-        paddingLeft: theme.spacing(3),
-        paddingRight: theme.spacing(3),
+  };
+});
 
-        [theme.breakpoints.up('md')]: {
-          paddingLeft: theme.spacing(4),
-          paddingRight: theme.spacing(4),
-        },
-      },
-    },
-    startAction: {
-      marginRight: theme.spacing(0.5),
+const StartAction = styled(Grid)(({ theme }) => {
+  return {
+    marginRight: theme.spacing(0.5),
 
-      '& .MuiIconButton-edgeStart': {
-        marginLeft: theme.spacing(-2),
-      },
+    '& .MuiIconButton-edgeStart': {
+      marginLeft: theme.spacing(-2),
     },
-    endAction: {
-      marginLeft: theme.spacing(0.5),
+  };
+});
 
-      '& .MuiIconButton-edgeEnd': {
-        marginRight: theme.spacing(-2),
-      },
+const EndAction = styled(Grid)(({ theme }) => {
+  return {
+    marginLeft: theme.spacing(0.5),
+
+    '& .MuiIconButton-edgeEnd': {
+      marginRight: theme.spacing(-2),
     },
-  }),
-  { name: 'SD-DrawerTitle' },
-);
+  };
+});
 
 export interface DrawerTitleProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'color' | 'title'> {
@@ -78,33 +79,26 @@ export const DrawerTitle = forwardRef<HTMLDivElement, DrawerTitleProps>(
       subtitleTypographyProps,
       startAction,
       endAction,
-      className,
       ...props
     },
     appBarRef,
   ) => {
-    const styles = useStyles();
-
     return (
       <VisibilityObserver
         render={({ ref, visibility }) => (
           <>
             <div ref={ref} />
 
-            <AppBar
+            <StyledAppBar
               {...props}
               ref={appBarRef}
               position="sticky"
-              className={clsx(styles.appBar, className, {
-                [styles.appBarSticky]: visibility === 'invisible',
-              })}
+              data-sticky={visibility === 'invisible'}
             >
-              <Toolbar className={styles.toolbar}>
+              <StyledToolbar>
                 <Grid container={true} alignItems="center">
                   {!!startAction && (
-                    <Grid item={true} className={styles.startAction}>
-                      {startAction}
-                    </Grid>
+                    <StartAction item={true}>{startAction}</StartAction>
                   )}
 
                   <Grid item={true} xs={true} zeroMinWidth={true}>
@@ -128,13 +122,11 @@ export const DrawerTitle = forwardRef<HTMLDivElement, DrawerTitleProps>(
                   </Grid>
 
                   {!!endAction && (
-                    <Grid item={true} className={styles.endAction}>
-                      {endAction}
-                    </Grid>
+                    <EndAction item={true}>{endAction}</EndAction>
                   )}
                 </Grid>
-              </Toolbar>
-            </AppBar>
+              </StyledToolbar>
+            </StyledAppBar>
           </>
         )}
       />

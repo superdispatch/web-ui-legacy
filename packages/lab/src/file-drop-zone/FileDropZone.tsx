@@ -1,6 +1,6 @@
-import { CircularProgress, SvgIcon } from '@material-ui/core';
-import { Error } from '@material-ui/icons';
 import { mdiUpload } from '@mdi/js';
+import { Error } from '@mui/icons-material';
+import { CircularProgress, SvgIcon } from '@mui/material';
 import { CardButton, Color, Column, Columns } from '@superdispatch/ui';
 import { forwardRef, ReactElement, ReactNode, Suspense } from 'react';
 import Dropzone, { FileRejection } from 'react-dropzone';

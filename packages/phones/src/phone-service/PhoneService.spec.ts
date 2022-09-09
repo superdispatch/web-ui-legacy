@@ -4,7 +4,7 @@ import {
   PhoneNumberFormat,
   PhoneService,
   PhoneValidationRules,
-} from '../phone-service/PhoneService';
+} from './PhoneService';
 
 test.each([
   ['', 'US', ''],

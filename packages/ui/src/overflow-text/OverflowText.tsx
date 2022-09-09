@@ -1,11 +1,10 @@
 import {
+  styled,
   Tooltip,
   TooltipProps,
   Typography,
   TypographyProps,
-} from '@material-ui/core';
-import { CSSProperties, makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
+} from '@mui/material';
 import {
   ElementType,
   forwardRef,
@@ -13,32 +12,30 @@ import {
   useState,
 } from 'react';
 import { Color } from '../theme/Color';
-import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 import { VisibilityObserver } from '../utils/VisibilityObserver';
 
-const useStyles = makeStyles(
-  (
-    theme: SuperDispatchTheme,
-  ): Record<'root' | 'truncated' | 'sentinel', CSSProperties> => ({
-    root: {
-      marginBottom: -1,
-      borderBottom: '1px dashed transparent',
-      transition: theme.transitions.create('border'),
+const Root = styled(Typography, {
+  name: 'SD-OverflowText',
+  shouldForwardProp: (prop) => prop !== 'truncated',
+})<TypographyProps & { truncated?: boolean }>(({ truncated, theme }) => ({
+  marginBottom: -1,
+  borderBottom: '1px dashed transparent',
+  transition: theme.transitions.create('border'),
 
-      '&$truncated': {
-        cursor: 'pointer',
-        borderBottomColor: Color.Silver500,
-      },
-    },
-    truncated: {},
-    sentinel: {
-      width: 1,
-      height: '100%',
-      display: 'inline-block',
-    },
+  ...(truncated && {
+    cursor: 'pointer',
+    borderBottomColor: Color.Silver500,
   }),
-  { name: 'SD-OverflowText' },
-);
+}));
+
+const Sential = styled('span', {
+  name: 'SD-OverflowText',
+  slot: 'Sential',
+})({
+  width: 1,
+  height: '100%',
+  display: 'inline-block',
+});
 
 export interface OverflowTextProps extends Omit<TypographyProps, 'noWrap'> {
   component?: ElementType;
@@ -52,7 +49,6 @@ export const OverflowText: ForwardRefExoticComponent<OverflowTextProps> =
       {
         onClick,
         children,
-        className,
         disableUnderline,
         TooltipProps: {
           title = children,
@@ -64,7 +60,6 @@ export const OverflowText: ForwardRefExoticComponent<OverflowTextProps> =
       rootRef,
     ) => {
       const [isOpen, setIsOpen] = useState(false);
-      const styles = useStyles();
       return (
         <VisibilityObserver
           render={({ ref, visibility }) => {
@@ -84,27 +79,20 @@ export const OverflowText: ForwardRefExoticComponent<OverflowTextProps> =
                   setIsOpen(false);
                 }}
               >
-                <Typography
+                <Root
                   {...props}
                   ref={rootRef}
                   noWrap={true}
+                  truncated={!disableUnderline && visibility === 'invisible'}
                   onClick={(event) => {
                     setIsOpen(true);
                     onClick?.(event);
                   }}
-                  className={clsx(
-                    styles.root,
-                    {
-                      [styles.truncated]:
-                        !disableUnderline && visibility === 'invisible',
-                    },
-                    className,
-                  )}
                 >
                   {children}
 
-                  {!!children && <span ref={ref} className={styles.sentinel} />}
-                </Typography>
+                  {!!children && <Sential ref={ref} />}
+                </Root>
               </Tooltip>
             );
           }}

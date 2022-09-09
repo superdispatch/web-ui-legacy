@@ -1,9 +1,9 @@
-import { Home as HomeIcon } from '@material-ui/icons';
+import { Home as HomeIcon } from '@mui/icons-material';
 import { PropsLink } from '@superdispatch/ui-docs';
 import { Inline } from '../inline/Inline';
 
 export default {
-  title: 'v4/Data Display/SvgIcon',
+  title: 'Data Display/SvgIcon',
   parameters: {
     componentSubtitle: (
       <PropsLink url="https://material-ui.com/api/svg-icon/#props" />

@@ -4,8 +4,8 @@ import {
   Snackbar as MaterialSnackbar,
   SnackbarCloseReason as MaterialSnackbarCloseReason,
   SnackbarProps as MaterialSnackbarProps,
-} from '@material-ui/core';
-import { TransitionProps } from '@material-ui/core/transitions';
+} from '@mui/material';
+import { TransitionProps } from '@mui/material/transitions';
 import {
   forwardRef,
   ForwardRefExoticComponent,
@@ -14,7 +14,9 @@ import {
 } from 'react';
 import { SnackbarContent, SnackbarVariant } from './SnackbarContent';
 
-function SlideTransition(props: TransitionProps): ReactElement {
+function SlideTransition(
+  props: TransitionProps & { children: ReactElement },
+): ReactElement {
   return <Slide {...props} direction="up" />;
 }
 

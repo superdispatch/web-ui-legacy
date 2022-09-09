@@ -1,4 +1,4 @@
-import { Avatar, Checkbox } from '@material-ui/core';
+import { Avatar, Checkbox } from '@mui/material';
 import { forwardRef, SyntheticEvent, useMemo } from 'react';
 import styled from 'styled-components';
 import { useSidebarMenuItemContext } from './SidebarMenuItemContext';

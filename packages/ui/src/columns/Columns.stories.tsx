@@ -1,6 +1,6 @@
-import { IconButton, Link } from '@material-ui/core';
-import EditIcon from '@material-ui/icons/Edit';
-import RoomIcon from '@material-ui/icons/Room';
+import EditIcon from '@mui/icons-material/Edit';
+import RoomIcon from '@mui/icons-material/Room';
+import { IconButton, Link } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { Placeholder } from '@superdispatch/ui-docs';
 import { Box } from '@superdispatch/ui-lab';
@@ -10,7 +10,7 @@ import { Column } from './Column';
 import { Columns } from './Columns';
 
 export default {
-  title: 'v4/Layout/Columns',
+  title: 'Layout/Columns',
   component: Columns,
   subcomponents: { Column },
   decorators: [

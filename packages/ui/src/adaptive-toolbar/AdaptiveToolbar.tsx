@@ -1,14 +1,14 @@
 import { ResizeObserver } from '@juggle/resize-observer';
+import { MoreHoriz } from '@mui/icons-material';
 import {
   Grid,
   Menu,
   MenuItem,
+  styled,
   Toolbar,
   ToolbarProps,
   Typography,
-} from '@material-ui/core';
-import { MoreHoriz } from '@material-ui/icons';
-import { makeStyles } from '@material-ui/styles';
+} from '@mui/material';
 import { useEventHandler } from '@superdispatch/hooks';
 import {
   forwardRef,
@@ -48,10 +48,11 @@ function useResizeObserver<T extends HTMLElement>(
   }, [node, handler]);
 }
 
-const useStyles = makeStyles(
-  { actions: { overflow: 'hidden' } },
-  { name: 'SD-AdaptiveToolbar' },
-);
+const GridActionsItem = styled(Grid, {
+  name: 'SD-AdaptiveToolbar',
+})`
+  overflow: hidden;
+`;
 
 export interface AdaptiveToolbarItem {
   key: Key;
@@ -68,8 +69,6 @@ export interface AdaptiveToolbarProps
 
 export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
   forwardRef(({ items, ...props }, ref) => {
-    const styles = useStyles();
-
     const itemNodes = useRef<Array<null | HTMLElement>>([]);
     const optionsButtonRef = useRef<HTMLDivElement>(null);
     const [firstHiddenIdx, setFirstHiddenIdx] = useState(-1);
@@ -117,7 +116,7 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
     return (
       <Toolbar {...props} ref={ref}>
         <Grid container={true} spacing={1} wrap="nowrap" ref={setRootNode}>
-          <Grid item={true} className={styles.actions}>
+          <GridActionsItem item={true}>
             <Grid container={true} spacing={1} wrap="nowrap" component="div">
               {items.map((item, idx) => (
                 <Grid
@@ -129,6 +128,8 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
                 >
                   <Button
                     type="button"
+                    color="primary"
+                    variant="outlined"
                     onClick={item.onClick}
                     {...item.ButtonProps}
                   >
@@ -139,12 +140,13 @@ export const AdaptiveToolbar: ForwardRefExoticComponent<AdaptiveToolbarProps> =
                 </Grid>
               ))}
             </Grid>
-          </Grid>
+          </GridActionsItem>
 
           {menuItems.length > 0 && (
             <Grid item={true} ref={optionsButtonRef} component="div">
               <Button
                 type="button"
+                variant="outlined"
                 onClick={({ currentTarget }) => {
                   setMenuButtonRef(currentTarget);
                 }}

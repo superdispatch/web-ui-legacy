@@ -1,8 +1,7 @@
-import * as api from '..';
+import * as api from '../index';
 
 it('exposes public api', () => {
-  const { v5, ...v4 } = api;
-  expect(v4).toMatchInlineSnapshot(`
+  expect(api).toMatchInlineSnapshot(`
     Object {
       "FormikCheckboxField": React.forwardRef(FormikCheckboxField),
       "FormikDateField": React.forwardRef(FormikDateField),

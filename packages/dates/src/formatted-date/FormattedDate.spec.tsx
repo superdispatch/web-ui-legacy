@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 import { mockDate, renderComponent } from '@superdispatch/ui-testutils';
 import { renderHook } from '@testing-library/react-hooks';
 import { NullableDateInput } from '../date-time-utils/DateTimeUtils';
@@ -68,6 +68,18 @@ describe('FormattedDate', () => {
     );
 
     expect(container).toMatchInlineSnapshot(`
+      @media (min-width:0px) and (max-width:599.95px) {
+
+      }
+
+      @media print {
+
+      }
+
+      @media (min-width:0px) and (max-width:599.95px) {
+
+      }
+
       <div>
         May 24, 2019, 7:13 AM
         May 24, 2019
@@ -90,10 +102,38 @@ describe('FormattedDate', () => {
     );
 
     expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        font-family: "Inter",sans-serif;
+        color: #6A707C;
+      }
+
+      @media (min-width:0px) and (max-width:599.95px) {
+        .c0 {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      @media (min-width:0px) and (max-width:599.95px) {
+
+      }
+
+      @media print {
+
+      }
+
+      @media (min-width:0px) and (max-width:599.95px) {
+
+      }
+
       <div>
         Invalid Date
         <p
-          class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+          class="c0 MuiTypography-root MuiTypography-body2"
         >
           N/A
         </p>

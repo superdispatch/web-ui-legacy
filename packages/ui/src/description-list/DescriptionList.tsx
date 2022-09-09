@@ -1,6 +1,5 @@
-import { SvgIcon, Typography, TypographyProps } from '@material-ui/core';
-import { CSSProperties, makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
+import { styled, SvgIcon, Typography, TypographyProps } from '@mui/material';
+import { CSSProperties } from '@mui/styles';
 import { forwardRef, ReactNode } from 'react';
 import { OverflowText, OverflowTextProps } from '../overflow-text/OverflowText';
 import { Color } from '../theme/Color';
@@ -8,78 +7,29 @@ import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 import { isEmptyReactNode } from '../utils/isEmptyReactNode';
 import { useUID } from '../utils/useUID';
 
-function sizeVariant(
-  theme: SuperDispatchTheme,
-  mobileSpacing: number,
-  desktopSpacing: number,
-): CSSProperties {
-  return {
-    '& > $list, & > $item': {
-      '&:not(:last-child)': {
-        paddingBottom: theme.spacing(mobileSpacing),
+const DescriptionListItemRoot = styled('div', {
+  name: 'SD-DescriptionListItem',
+  slot: 'Root',
+})({
+  display: 'flex',
+  alignItems: 'center',
+});
 
-        [theme.breakpoints.up('sm')]: {
-          paddingBottom: theme.spacing(desktopSpacing),
-        },
+const DescriptionListItemIcon = styled('div')(({ theme }) => {
+  return {
+    display: 'inline-flex',
+    marginRight: theme.spacing(1),
+
+    '& > .MuiSvgIcon-root': {
+      color: Color.Dark100,
+      fontSize: theme.spacing(3),
+
+      [theme.breakpoints.up('sm')]: {
+        fontSize: theme.spacing(2),
       },
     },
   };
-}
-
-const useStyles = makeStyles(
-  (theme: SuperDispatchTheme) => ({
-    list: sizeVariant(theme, 2, 1),
-    listSmall: sizeVariant(theme, 1, 0.5),
-    listLarge: sizeVariant(theme, 3, 2),
-
-    item: {
-      display: 'flex',
-      alignItems: 'center',
-    },
-
-    icon: {
-      display: 'inline-flex',
-      marginRight: theme.spacing(1),
-
-      '& > .MuiSvgIcon-root': {
-        color: Color.Dark100,
-        fontSize: theme.spacing(3),
-
-        [theme.breakpoints.up('sm')]: {
-          fontSize: theme.spacing(2),
-        },
-      },
-    },
-  }),
-  { name: 'SD-DescriptionList' },
-);
-
-//
-// DescriptionList
-//
-
-export interface DescriptionListProps {
-  children?: ReactNode;
-  size?: 'small' | 'medium' | 'large';
-}
-
-export const DescriptionList = forwardRef<HTMLDivElement, DescriptionListProps>(
-  ({ size, ...props }, ref) => {
-    const styles = useStyles();
-
-    return (
-      <div
-        {...props}
-        ref={ref}
-        data-size={size}
-        className={clsx(styles.list, {
-          [styles.listSmall]: size === 'small',
-          [styles.listLarge]: size === 'large',
-        })}
-      />
-    );
-  },
-);
+});
 
 //
 // DescriptionListItem
@@ -120,18 +70,16 @@ export const DescriptionListItem = forwardRef<
     },
     ref,
   ) => {
-    const styles = useStyles();
     const labelID = useUID(labelTypographyProps?.id);
 
     const shouldRenderFallback = isEmptyReactNode(content);
 
     return (
-      <div
+      <DescriptionListItemRoot
         ref={ref}
-        className={styles.item}
         aria-labelledby={label != null ? labelID : undefined}
       >
-        {!!icon && <div className={styles.icon}>{icon}</div>}
+        {!!icon && <DescriptionListItemIcon>{icon}</DescriptionListItemIcon>}
 
         <OverflowText
           {...contentTypographyProps}
@@ -164,7 +112,52 @@ export const DescriptionListItem = forwardRef<
           {label != null && ' '}
           {!shouldRenderFallback ? content : fallback}
         </OverflowText>
-      </div>
+      </DescriptionListItemRoot>
     );
+  },
+);
+
+//
+// DescriptionList
+//
+
+const DescriptionListRoot = styled('div', {
+  name: 'SD-DescriptionList',
+  slot: 'Root',
+})(({ theme }: { theme: SuperDispatchTheme }) => {
+  return {
+    ...sizeVariant(theme, 2, 1),
+
+    '&[data-size="small"]': sizeVariant(theme, 1, 0.5),
+    '&[data-size="large"]': sizeVariant(theme, 3, 2),
+  };
+});
+
+function sizeVariant(
+  theme: SuperDispatchTheme,
+  mobileSpacing: number,
+  desktopSpacing: number,
+): CSSProperties {
+  return {
+    [`& > ${DescriptionListRoot}, & > ${DescriptionListItemRoot}`]: {
+      '&:not(:last-child)': {
+        paddingBottom: theme.spacing(mobileSpacing),
+
+        [theme.breakpoints.up('sm')]: {
+          paddingBottom: theme.spacing(desktopSpacing),
+        },
+      },
+    },
+  };
+}
+
+export interface DescriptionListProps {
+  children?: ReactNode;
+  size?: 'small' | 'medium' | 'large';
+}
+
+export const DescriptionList = forwardRef<HTMLDivElement, DescriptionListProps>(
+  ({ size, ...props }, ref) => {
+    return <DescriptionListRoot {...props} ref={ref} data-size={size} />;
   },
 );

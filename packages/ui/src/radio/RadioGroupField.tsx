@@ -7,7 +7,7 @@ import {
   FormLabelProps,
   RadioGroup,
   RadioGroupProps,
-} from '@material-ui/core';
+} from '@mui/material';
 import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
 
 export interface RadioGroupFieldProps

@@ -1,4 +1,4 @@
-import { ClassNameMap, CSSProperties, makeStyles } from '@material-ui/styles';
+import { ClassNameMap, CSSProperties, makeStyles } from '@mui/styles';
 import clsx from 'clsx';
 import { forwardRef, ReactNode } from 'react';
 import flattenChildren from 'react-keyed-flatten-children';
@@ -39,14 +39,15 @@ function spaceVariant(
   space: TilesSpace,
 ): CSSProperties {
   const gap = theme.spacing(space);
+  const parsedGap = parseInt(gap);
 
   return {
     '&:before': {
-      marginTop: -gap - PREVENT_COLLAPSE,
+      marginTop: -parsedGap - PREVENT_COLLAPSE,
     },
 
     '& > $container': {
-      marginLeft: -gap,
+      marginLeft: -parsedGap,
 
       '& > $child > $childContainer': {
         marginTop: gap,
