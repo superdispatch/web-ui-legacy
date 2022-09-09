@@ -70,8 +70,7 @@
       ".+/pkg/.+"
     ],
     "reporters": [
-      "default",
-      "<rootDir>/DiffReporter.js"
+      "default"
     ],
     "resetMocks": true,
     "resolver": "./jest-resolver.js",

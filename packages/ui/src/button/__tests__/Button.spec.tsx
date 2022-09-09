@@ -1,4 +1,4 @@
-import { renderTheme } from '@superdispatch/ui-testutils';
+import { renderCSS, renderTheme } from '@superdispatch/ui-testutils';
 import { Button } from '../../index';
 
 it('checks default props', () => {
@@ -17,7 +17,7 @@ it('checks default props', () => {
 
 it('checks component css', () => {
   expect(
-    v5.renderCSS(
+    renderCSS(
       <div>
         <Button />
 
