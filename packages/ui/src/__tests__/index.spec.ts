@@ -98,6 +98,7 @@ it('exposes public api', () => {
       "OverflowText": React.forwardRef(OverflowText),
       "RadioField": React.forwardRef(RadioField),
       "RadioGroupField": React.forwardRef(RadioGroupField),
+      "ResponsiveContextProvider": [Function],
       "Snackbar": React.forwardRef(Snackbar),
       "SnackbarContent": React.forwardRef(SnackbarContent),
       "SnackbarStackConsumer": [Function],

@@ -3,10 +3,11 @@ import { renderComponent } from '@superdispatch/ui-testutils';
 import { screen } from '@testing-library/react';
 import { FileListItem } from '../FileListItem';
 
-it('checks if delete button appears', () => {
+it('checks if delete button appears', async () => {
   renderComponent(<FileListItem name="TST1208 Dispatcher Info.pdf" />);
 
-  expect(screen.getAllByTitle('Delete')).toHaveLength(1);
+  const deleteButton = await screen.findByRole('button', { name: 'Delete' });
+  expect(deleteButton).toBeTruthy();
 });
 
 it('checks if delete button dont appear', () => {
@@ -14,7 +15,9 @@ it('checks if delete button dont appear', () => {
     <FileListItem name="TST1208 Dispatcher Info.pdf" canDelete={false} />,
   );
 
-  expect(screen.queryByTitle('Delete')).toBeNull();
+  return expect(
+    screen.findByRole('button', { name: 'Delete' }),
+  ).rejects.toBeTruthy();
 });
 
 it('checks if FileListItem renders properly', () => {
@@ -23,19 +26,242 @@ it('checks if FileListItem renders properly', () => {
   );
 
   expect(screen.getByLabelText('file-list-item')).toMatchInlineSnapshot(`
+    .c2 {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      fill: currentColor;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      -webkit-transition: fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      font-size: 1.25rem;
+      color: rgba(0,0,0,0.54);
+      display: inherit;
+      font-size: var(--mui-svg-icon-size,32px);
+      color: #8F949E;
+      font-size: var(--mui-svg-icon-size,24px);
+    }
+
+    .c1 {
+      min-width: 0;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+      width: auto;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+    }
+
+    .c1 > div {
+      padding-top: var(--column-space-top);
+      padding-left: var(--column-space-left);
+      padding-bottom: var(--column-space-bottom);
+    }
+
+    .c1:last-child > div {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .c3 {
+      min-width: 0;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+      width: 100%;
+      -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+      flex-shrink: 1;
+    }
+
+    .c3 > div {
+      padding-top: var(--column-space-top);
+      padding-left: var(--column-space-left);
+      padding-bottom: var(--column-space-bottom);
+    }
+
+    .c3:last-child > div {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .c0 {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      --column-space-left: 8px;
+      --column-space-top: 0px;
+      --column-space-bottom: 0px;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-left: -8px;
+      width: calc(100% + 8px);
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+
+    .c4 {
+      overflow: hidden;
+      line-height: 22px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    @media (min-width:600px) {
+      .c2 {
+        font-size: var(--mui-svg-icon-size,24px);
+      }
+    }
+
+    @media (min-width:600px) {
+      .c2 {
+        font-size: var(--mui-svg-icon-size,16px);
+      }
+    }
+
+    @media (min-width:600px) {
+      .c1 {
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        width: auto;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+    }
+
+    @media (min-width:900px) {
+      .c1 {
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        width: auto;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+    }
+
+    @media (min-width:600px) {
+      .c3 {
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        width: 100%;
+        -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+      }
+    }
+
+    @media (min-width:900px) {
+      .c3 {
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        width: 100%;
+        -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+      }
+    }
+
+    @media (min-width:600px) {
+      .c0 {
+        --column-space-left: 8px;
+        --column-space-top: 0px;
+        --column-space-bottom: 0px;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-left: -8px;
+        width: calc(100% + 8px);
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width:900px) {
+      .c0 {
+        --column-space-left: 8px;
+        --column-space-top: 0px;
+        --column-space-bottom: 0px;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-left: -8px;
+        width: calc(100% + 8px);
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
     <div
       aria-label="file-list-item"
     >
       <div
-        class="Columns-SD__sc-1a73118-0 iVMHMK"
+        class="c0"
       >
         <div
-          class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
+          class="c1"
         >
           <div>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall"
+              class="c2 MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall"
               focusable="false"
               viewBox="0 0 24 24"
             >
@@ -46,11 +272,11 @@ it('checks if FileListItem renders properly', () => {
           </div>
         </div>
         <div
-          class="Column__ColumnRoot-SD__sc-m9n6o6-0 hbBUFf"
+          class="c3"
         >
           <div>
             <div
-              class="FileListItem__FileListItemName-SD__sc-hxbsiy-0 gMzDXg"
+              class="c4"
               id="uid_3"
             >
               TST1208 Dispatcher Info.pdf
@@ -58,7 +284,7 @@ it('checks if FileListItem renders properly', () => {
           </div>
         </div>
         <div
-          class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
+          class="c1"
         >
           <div />
         </div>
@@ -81,24 +307,492 @@ it('checks if FileListItem renders', () => {
   );
 
   expect(screen.getByLabelText('file-list-items-stack')).toMatchInlineSnapshot(`
+    .c3 {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      fill: currentColor;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      -webkit-transition: fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      font-size: 1.25rem;
+      color: rgba(0,0,0,0.54);
+      display: inherit;
+      font-size: var(--mui-svg-icon-size,32px);
+      color: #8F949E;
+      font-size: var(--mui-svg-icon-size,24px);
+    }
+
+    .c8 {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      fill: currentColor;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      -webkit-transition: fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: fill 200ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      font-size: 1.25rem;
+      display: inherit;
+      font-size: var(--mui-svg-icon-size,32px);
+      font-size: var(--mui-svg-icon-size,24px);
+    }
+
+    .c9 {
+      overflow: hidden;
+      pointer-events: none;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: inherit;
+    }
+
+    .c6 {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      background-color: transparent;
+      outline: 0;
+      border: 0;
+      margin: 0;
+      border-radius: 0;
+      padding: 0;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      vertical-align: middle;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .c6::-moz-focus-inner {
+      border-style: none;
+    }
+
+    .c6.Mui-disabled {
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .c7 {
+      text-align: center;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      font-size: 1.5rem;
+      padding: 8px;
+      border-radius: 50%;
+      overflow: visible;
+      color: rgba(0,0,0,0.54);
+      -webkit-transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: background-color 150ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      padding: 5px;
+      font-size: 1.125rem;
+      background-color: rgba(0,0,0,0);
+      -webkit-transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      transition: color 250ms cubic-bezier(0.4,0,0.2,1) 0ms,background-color 250ms cubic-bezier(0.4,0,0.2,1) 0ms;
+      padding: 3px;
+      font-size: 1.125rem;
+    }
+
+    .c7:hover {
+      background-color: rgba(0,0,0,0.04);
+    }
+
+    .c7.Mui-disabled {
+      background-color: transparent;
+      color: #E1E5EA;
+    }
+
+    .c7:not(.MuiIconButton-colorInherit):not(.MuiIconButton-colorPrimary):not(.MuiIconButton-colorSecondary):not(.Mui-disabled) {
+      color: #8F949E;
+    }
+
+    .c7:hover {
+      background-color: rgba(0,0,0,0);
+    }
+
+    .c7:active {
+      color: #192334;
+    }
+
+    .c7:hover {
+      color: #5B6371;
+    }
+
+    .c7:focus {
+      background-color: #E1E5EA;
+    }
+
+    .c7.Mui-disabled {
+      color: #C4CDD5;
+    }
+
+    .c10 {
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #192334;
+    }
+
+    .c11 {
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      background-size: 100% 1px;
+      background-repeat: repeat-x;
+      background-position: 0 100%;
+      background-color: rgba(0,0,0,0);
+    }
+
+    .c11:focus {
+      outline: none;
+    }
+
+    .c11:hover,
+    .c11:active {
+      background-image: linear-gradient(to right,currentColor 0%,currentColor 100%);
+    }
+
+    .c2 {
+      min-width: 0;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+      width: auto;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+    }
+
+    .c2 > div {
+      padding-top: var(--column-space-top);
+      padding-left: var(--column-space-left);
+      padding-bottom: var(--column-space-bottom);
+    }
+
+    .c2:last-child > div {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .c4 {
+      min-width: 0;
+      -webkit-box-flex: 0;
+      -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+      width: 100%;
+      -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+      flex-shrink: 1;
+    }
+
+    .c4 > div {
+      padding-top: var(--column-space-top);
+      padding-left: var(--column-space-left);
+      padding-bottom: var(--column-space-bottom);
+    }
+
+    .c4:last-child > div {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .c1 {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      --column-space-left: 8px;
+      --column-space-top: 0px;
+      --column-space-bottom: 0px;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-left: -8px;
+      width: calc(100% + 8px);
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+
+    .c0 {
+      width: 100%;
+    }
+
+    .c0 > div {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-align-items: initial;
+      -webkit-box-align: initial;
+      -ms-flex-align: initial;
+      align-items: initial;
+      display: block;
+    }
+
+    .c0 > div:empty {
+      display: none;
+    }
+
+    .c0 > div:not(:empty) ~ div {
+      padding-top: 8px;
+    }
+
+    .c5 {
+      overflow: hidden;
+      line-height: 22px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    @media (min-width:600px) {
+      .c3 {
+        font-size: var(--mui-svg-icon-size,24px);
+      }
+    }
+
+    @media (min-width:600px) {
+      .c3 {
+        font-size: var(--mui-svg-icon-size,16px);
+      }
+    }
+
+    @media (min-width:600px) {
+      .c8 {
+        font-size: var(--mui-svg-icon-size,24px);
+      }
+    }
+
+    @media (min-width:600px) {
+      .c8 {
+        font-size: var(--mui-svg-icon-size,16px);
+      }
+    }
+
+    @media print {
+      .c6 {
+        color-adjust: exact;
+      }
+    }
+
+    @media (hover:none) {
+      .c7:hover {
+        background-color: transparent;
+      }
+    }
+
+    @media (min-width:600px) {
+      .c2 {
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        width: auto;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+    }
+
+    @media (min-width:900px) {
+      .c2 {
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        width: auto;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+    }
+
+    @media (min-width:600px) {
+      .c4 {
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        width: 100%;
+        -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+      }
+    }
+
+    @media (min-width:900px) {
+      .c4 {
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        width: 100%;
+        -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+      }
+    }
+
+    @media (min-width:600px) {
+      .c1 {
+        --column-space-left: 8px;
+        --column-space-top: 0px;
+        --column-space-bottom: 0px;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-left: -8px;
+        width: calc(100% + 8px);
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width:900px) {
+      .c1 {
+        --column-space-left: 8px;
+        --column-space-top: 0px;
+        --column-space-bottom: 0px;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-left: -8px;
+        width: calc(100% + 8px);
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width:600px) {
+      .c0 > div {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-align-items: initial;
+        -webkit-box-align: initial;
+        -ms-flex-align: initial;
+        align-items: initial;
+        display: block;
+      }
+
+      .c0 > div:empty {
+        display: none;
+      }
+
+      .c0 > div:not(:empty) ~ div {
+        padding-top: 8px;
+      }
+    }
+
+    @media (min-width:900px) {
+      .c0 > div {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-align-items: initial;
+        -webkit-box-align: initial;
+        -ms-flex-align: initial;
+        align-items: initial;
+        display: block;
+      }
+
+      .c0 > div:empty {
+        display: none;
+      }
+
+      .c0 > div:not(:empty) ~ div {
+        padding-top: 8px;
+      }
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
+    @media print {
+
+    }
+
+    @media (min-width:0px) and (max-width:599.95px) {
+
+    }
+
     <div
       aria-label="file-list-items-stack"
-      class="Stack__StackRoot-SD__sc-qkml7c-0 cNqlNY"
+      class="c0"
     >
       <div>
         <div
           aria-label="file-list-item"
         >
           <div
-            class="Columns-SD__sc-1a73118-0 iVMHMK"
+            class="c1"
           >
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
+              class="c2"
             >
               <div>
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall"
+                  class="c3 MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
@@ -109,11 +803,11 @@ it('checks if FileListItem renders', () => {
               </div>
             </div>
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 hbBUFf"
+              class="c4"
             >
               <div>
                 <div
-                  class="FileListItem__FileListItemName-SD__sc-hxbsiy-0 gMzDXg"
+                  class="c5"
                   id="uid_4"
                 >
                   Read this document.txt
@@ -121,31 +815,29 @@ it('checks if FileListItem renders', () => {
               </div>
             </div>
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
+              class="c2"
             >
               <div>
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+                  aria-label="Delete"
+                  class="c6 MuiButtonBase-root c7 MuiIconButton-root MuiIconButton-sizeSmall"
+                  data-mui-internal-clone-element="true"
                   tabindex="0"
-                  title="Delete"
                   type="button"
                 >
-                  <span
-                    class="MuiIconButton-label"
+                  <svg
+                    aria-hidden="true"
+                    class="c8 MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    data-testid="DeleteIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                      />
-                    </svg>
-                  </span>
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
                   <span
-                    class="MuiTouchRipple-root"
+                    class="c9 MuiTouchRipple-root"
                   />
                 </button>
               </div>
@@ -158,15 +850,15 @@ it('checks if FileListItem renders', () => {
           aria-label="file-list-item"
         >
           <div
-            class="Columns-SD__sc-1a73118-0 iVMHMK"
+            class="c1"
           >
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
+              class="c2"
             >
               <div>
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall"
+                  class="c3 MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
@@ -177,11 +869,11 @@ it('checks if FileListItem renders', () => {
               </div>
             </div>
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 hbBUFf"
+              class="c4"
             >
               <div>
                 <div
-                  class="FileListItem__FileListItemName-SD__sc-hxbsiy-0 gMzDXg"
+                  class="c5"
                   id="uid_5"
                 >
                   TST1208 Dispatcher Info.pdf
@@ -189,31 +881,29 @@ it('checks if FileListItem renders', () => {
               </div>
             </div>
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
+              class="c2"
             >
               <div>
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+                  aria-label="Delete"
+                  class="c6 MuiButtonBase-root c7 MuiIconButton-root MuiIconButton-sizeSmall"
+                  data-mui-internal-clone-element="true"
                   tabindex="0"
-                  title="Delete"
                   type="button"
                 >
-                  <span
-                    class="MuiIconButton-label"
+                  <svg
+                    aria-hidden="true"
+                    class="c8 MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    data-testid="DeleteIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                      />
-                    </svg>
-                  </span>
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
                   <span
-                    class="MuiTouchRipple-root"
+                    class="c9 MuiTouchRipple-root"
                   />
                 </button>
               </div>
@@ -226,15 +916,15 @@ it('checks if FileListItem renders', () => {
           aria-label="file-list-item"
         >
           <div
-            class="Columns-SD__sc-1a73118-0 iVMHMK"
+            class="c1"
           >
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
+              class="c2"
             >
               <div>
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall"
+                  class="c3 MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
@@ -245,11 +935,11 @@ it('checks if FileListItem renders', () => {
               </div>
             </div>
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 hbBUFf"
+              class="c4"
             >
               <div>
                 <div
-                  class="FileListItem__FileListItemName-SD__sc-hxbsiy-0 gMzDXg"
+                  class="c5"
                   id="uid_6"
                 >
                   TST1208 Dispatcher Info.pdf
@@ -257,7 +947,7 @@ it('checks if FileListItem renders', () => {
               </div>
             </div>
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
+              class="c2"
             >
               <div />
             </div>
@@ -269,15 +959,16 @@ it('checks if FileListItem renders', () => {
           aria-label="file-list-item"
         >
           <div
-            class="Columns-SD__sc-1a73118-0 iVMHMK"
+            class="c1"
           >
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
+              class="c2"
             >
               <div>
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall"
+                  class="c3 MuiSvgIcon-root MuiSvgIcon-colorAction MuiSvgIcon-fontSizeSmall"
+                  data-testid="ImageIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
@@ -288,11 +979,11 @@ it('checks if FileListItem renders', () => {
               </div>
             </div>
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 hbBUFf"
+              class="c4"
             >
               <div>
                 <div
-                  class="FileListItem__FileListItemName-SD__sc-hxbsiy-0 gMzDXg"
+                  class="c5"
                   id="uid_7"
                 >
                   Object {
@@ -302,31 +993,29 @@ it('checks if FileListItem renders', () => {
               </div>
             </div>
             <div
-              class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
+              class="c2"
             >
               <div>
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+                  aria-label="Delete"
+                  class="c6 MuiButtonBase-root c7 MuiIconButton-root MuiIconButton-sizeSmall"
+                  data-mui-internal-clone-element="true"
                   tabindex="0"
-                  title="Delete"
                   type="button"
                 >
-                  <span
-                    class="MuiIconButton-label"
+                  <svg
+                    aria-hidden="true"
+                    class="c8 MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    data-testid="DeleteIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                      />
-                    </svg>
-                  </span>
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
                   <span
-                    class="MuiTouchRipple-root"
+                    class="c9 MuiTouchRipple-root"
                   />
                 </button>
               </div>

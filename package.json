@@ -97,6 +97,7 @@
     ]
   },
   "resolutions": {
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@^5.1.0",
     "react": "^17",
     "react-docgen-typescript": "2.2.2"
   },
