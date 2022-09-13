@@ -6,15 +6,18 @@ import {
   styled,
 } from '@mui/material';
 import { forwardRef, ForwardRefExoticComponent, useState } from 'react';
+import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 import { assignRef } from '../utils/mergeRefs';
 
-const StyledCardContent = styled(CardContent)(({ theme }) => {
-  return {
-    padding: theme.spacing(2),
-  };
-});
+const StyledCardContent = styled(CardContent)(
+  ({ theme }: { theme: SuperDispatchTheme }) => {
+    return {
+      padding: theme.spacing(2),
+    };
+  },
+);
 
-const StyledCard = styled(Card)(({ theme }) => {
+const StyledCard = styled(Card)(({ theme }: { theme: SuperDispatchTheme }) => {
   return {
     '&[data-full-width="true"]': {
       borderRadius: 0,
@@ -22,7 +25,7 @@ const StyledCard = styled(Card)(({ theme }) => {
       borderRightWidth: 0,
     },
 
-    [`&[data-size="large"] > ${StyledCardContent}`]: {
+    [`&[data-size="large"] > ${StyledCardContent.toString()}`]: {
       [theme.breakpoints.up('sm')]: {
         padding: theme.spacing(3),
       },
@@ -56,9 +59,9 @@ export const InfoCard: ForwardRefExoticComponent<InfoCardProps> = forwardRef(
     return (
       <StyledCard
         {...props}
-        ref={(node) => {
+        ref={(node: HTMLElement) => {
           assignRef(ref, node);
-          setRootNode(node as HTMLElement);
+          setRootNode(node);
         }}
         data-size={size}
         data-full-width={isFullWidth}

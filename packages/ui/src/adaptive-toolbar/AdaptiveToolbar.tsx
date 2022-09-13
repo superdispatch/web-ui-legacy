@@ -2,6 +2,7 @@ import { MoreHoriz } from '@mui/icons-material';
 import {
   Divider,
   Grid,
+  GridProps,
   Menu,
   MenuItem,
   styled,
@@ -10,6 +11,7 @@ import {
   Typography,
 } from '@mui/material';
 import {
+  ComponentType,
   forwardRef,
   ForwardRefExoticComponent,
   Key,
@@ -23,11 +25,13 @@ import { Button, ButtonProps } from '../button/Button';
 import { DropdownButton } from '../dropdown-button/DropdownButton';
 import { useResizeObserver } from '../utils/ResizeObserver';
 
-const GridActionsItem = styled(Grid, {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+const GridActionsItem: ComponentType<GridProps> = styled(Grid, {
   name: 'SD-AdaptiveToolbar',
-})`
-  overflow: hidden;
-`;
+})(() => {
+  return { overflow: 'hidden' };
+});
 
 export interface AdaptiveToolbarDropdownItem {
   key: Key;

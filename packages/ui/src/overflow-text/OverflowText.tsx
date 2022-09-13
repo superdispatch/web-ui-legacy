@@ -6,27 +6,40 @@ import {
   TypographyProps,
 } from '@mui/material';
 import {
+  ComponentType,
   ElementType,
   forwardRef,
   ForwardRefExoticComponent,
   useState,
 } from 'react';
 import { Color } from '../theme/Color';
+import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 import { VisibilityObserver } from '../utils/VisibilityObserver';
 
-const Root = styled(Typography, {
-  name: 'SD-OverflowText',
-  shouldForwardProp: (prop) => prop !== 'truncated',
-})<TypographyProps & { truncated?: boolean }>(({ truncated, theme }) => ({
-  marginBottom: -1,
-  borderBottom: '1px dashed transparent',
-  transition: theme.transitions.create('border'),
+const Root: ComponentType<TypographyProps & { truncated?: boolean }> = styled(
+  Typography,
+  {
+    name: 'SD-OverflowText',
+    shouldForwardProp: (prop) => prop !== 'truncated',
+  },
+)<TypographyProps & { truncated?: boolean }>(
+  ({
+    truncated,
+    theme,
+  }: {
+    truncated?: boolean;
+    theme: SuperDispatchTheme;
+  }) => ({
+    marginBottom: -1,
+    borderBottom: '1px dashed transparent',
+    transition: theme.transitions.create('border'),
 
-  ...(truncated && {
-    cursor: 'pointer',
-    borderBottomColor: Color.Silver500,
+    ...(truncated && {
+      cursor: 'pointer',
+      borderBottomColor: Color.Silver500,
+    }),
   }),
-}));
+);
 
 const Sential = styled('span', {
   name: 'SD-OverflowText',

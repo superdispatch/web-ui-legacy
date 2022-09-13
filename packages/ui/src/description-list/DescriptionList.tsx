@@ -124,12 +124,12 @@ export const DescriptionListItem = forwardRef<
 const DescriptionListRoot = styled('div', {
   name: 'SD-DescriptionList',
   slot: 'Root',
-})(({ theme }: { theme: SuperDispatchTheme }) => {
+})(({ theme }) => {
   return {
-    ...sizeVariant(theme, 2, 1),
+    ...sizeVariant(theme as SuperDispatchTheme, 2, 1),
 
-    '&[data-size="small"]': sizeVariant(theme, 1, 0.5),
-    '&[data-size="large"]': sizeVariant(theme, 3, 2),
+    '&[data-size="small"]': sizeVariant(theme as SuperDispatchTheme, 1, 0.5),
+    '&[data-size="large"]': sizeVariant(theme as SuperDispatchTheme, 3, 2),
   };
 });
 
@@ -139,15 +139,16 @@ function sizeVariant(
   desktopSpacing: number,
 ): CSSProperties {
   return {
-    [`& > ${DescriptionListRoot}, & > ${DescriptionListItemRoot}`]: {
-      '&:not(:last-child)': {
-        paddingBottom: theme.spacing(mobileSpacing),
+    [`& > ${DescriptionListRoot.toString()}, & > ${DescriptionListItemRoot.toString()}`]:
+      {
+        '&:not(:last-child)': {
+          paddingBottom: theme.spacing(mobileSpacing),
 
-        [theme.breakpoints.up('sm')]: {
-          paddingBottom: theme.spacing(desktopSpacing),
+          [theme.breakpoints.up('sm')]: {
+            paddingBottom: theme.spacing(desktopSpacing),
+          },
         },
       },
-    },
   };
 }
 

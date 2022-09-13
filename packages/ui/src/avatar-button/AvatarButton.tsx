@@ -2,11 +2,13 @@ import {
   Avatar,
   AvatarTypeMap,
   ButtonBase,
+  ButtonBaseProps,
   CircularProgress,
   styled,
 } from '@mui/material';
 import {
   ButtonHTMLAttributes,
+  ComponentType,
   forwardRef,
   ForwardRefExoticComponent,
   ReactNode,
@@ -14,6 +16,7 @@ import {
   RefAttributes,
 } from 'react';
 import { Color } from '../theme/Color';
+import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 const Overlay = styled('div')(({ theme }) => {
   const sm = theme.breakpoints.up('sm');
@@ -43,19 +46,23 @@ const Overlay = styled('div')(({ theme }) => {
   };
 });
 
-const StyledProgress = styled(CircularProgress)(({ theme }) => {
-  const sm = theme.breakpoints.up('sm');
-  return {
-    top: 0,
-    left: 0,
-    position: 'absolute',
+const StyledProgress = styled(CircularProgress)(
+  ({ theme }: { theme: SuperDispatchTheme }) => {
+    const sm = theme.breakpoints.up('sm');
+    return {
+      top: 0,
+      left: 0,
+      position: 'absolute',
 
-    fontSize: theme.spacing(5),
-    [sm]: { fontSize: theme.spacing(4) },
-  };
-});
+      fontSize: theme.spacing(5),
+      [sm]: { fontSize: theme.spacing(4) },
+    };
+  },
+);
 
-const StyledButton = styled(ButtonBase, {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+const StyledButton: ComponentType<ButtonBaseProps> = styled(ButtonBase, {
   name: 'SD-AvatarButton',
 })(({ theme }) => {
   const sm = theme.breakpoints.up('sm');
@@ -63,20 +70,20 @@ const StyledButton = styled(ButtonBase, {
     borderRadius: '50%',
 
     '&[disabled], &[aria-busy="true"]': {
-      [`& > ${Overlay}`]: {
+      [`& > ${Overlay.toString()}`]: {
         backgroundColor: Color.White50,
       },
     },
 
     '&:not([disabled])[aria-busy="false"]': {
       '&:hover, &:focus': {
-        [`&[data-with-icon="true"] > ${Overlay}`]: {
+        [`&[data-with-icon="true"] > ${Overlay.toString()}`]: {
           backgroundColor: Color.Black50,
 
           '& > svg': { opacity: 1 },
         },
 
-        [`&:not([data-with-icon="true"]) > ${Overlay}`]: {
+        [`&:not([data-with-icon="true"]) > ${Overlay.toString()}`]: {
           backgroundColor: Color.Black20,
         },
       },
@@ -95,8 +102,8 @@ const StyledButton = styled(ButtonBase, {
         },
       },
 
-      [`& > ${Overlay}`]: {
-        [`& > ${StyledProgress}`]: {
+      [`& > ${Overlay.toString()}`]: {
+        [`& > ${StyledProgress.toString()}`]: {
           fontSize: theme.spacing(7),
           [sm]: { fontSize: theme.spacing(8) },
         },
