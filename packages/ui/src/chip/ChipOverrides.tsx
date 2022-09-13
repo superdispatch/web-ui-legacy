@@ -1,4 +1,5 @@
 import { chipClasses, SvgIcon } from '@mui/material';
+import { CSSObject } from '@mui/styled-engine';
 import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
@@ -33,7 +34,7 @@ export function overrideChip(theme: SuperDispatchTheme): void {
           opacity: 1,
           color: Color.Dark100,
         },
-      },
+      } as CSSObject,
 
       sizeSmall: {
         height: 'unset',

@@ -14,7 +14,7 @@ export function overrideAutocomplete(theme: SuperDispatchTheme): void {
     },
 
     styleOverrides: {
-      paper: { ...theme.typography.body2 },
+      // paper: { ...theme.typography.body2 },
       tag: {
         margin: '4px',
         [sm]: { margin: '2px' },

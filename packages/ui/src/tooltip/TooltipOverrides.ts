@@ -1,4 +1,5 @@
 import { tooltipClasses } from '@mui/material';
+import { CSSObject } from '@mui/styled-engine';
 import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
@@ -13,7 +14,7 @@ export function overrideTooltip(theme: SuperDispatchTheme): void {
         ...theme.typography.body2,
         padding: theme.spacing(1, 1.5),
         backgroundColor: Color.Dark400,
-      },
+      } as CSSObject,
 
       popperArrow: {
         [`&[data-popper-placement*="top"] .${tooltipClasses.arrow}`]: {

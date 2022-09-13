@@ -1,3 +1,4 @@
+import { CSSObject } from '@mui/styled-engine';
 import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
@@ -38,7 +39,7 @@ export function overrideTabs(theme: SuperDispatchTheme): void {
           fontSize: 'unset',
           padding: theme.spacing(0.75, 3),
         },
-      },
+      } as CSSObject,
 
       textColorPrimary: {
         color: Color.Dark500,

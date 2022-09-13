@@ -8,62 +8,60 @@ import {
 import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
-const StyledButton = styled(ButtonBase)(
-  ({ theme }: { theme: SuperDispatchTheme }) => {
-    return {
-      width: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      backgroundColor: Color.White,
+const StyledButton = styled(ButtonBase)(({ theme }) => {
+  return {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundColor: Color.White,
 
-      border: '1px dashed',
-      borderRadius: theme.spacing(0.5),
+    border: '1px dashed',
+    borderRadius: theme.spacing(0.5),
 
-      padding: theme.spacing(1.5),
-      minHeight: theme.spacing(13),
+    padding: theme.spacing(1.5),
+    minHeight: theme.spacing(13),
 
-      transition: theme.transitions.create([
-        'color',
-        'box-shadow',
-        'border-color',
-        'background-color',
-      ]),
+    transition: theme.transitions.create([
+      'color',
+      'box-shadow',
+      'border-color',
+      'background-color',
+    ]),
 
-      '&[data-disabled="true"]': {
-        color: Color.Dark200,
-        borderColor: Color.Silver500,
-        backgroundColor: Color.Silver100,
+    '&[data-disabled="true"]': {
+      color: Color.Dark200,
+      borderColor: Color.Silver500,
+      backgroundColor: Color.Silver100,
+    },
+
+    '&[data-primary="true"]': {
+      color: Color.Blue300,
+      borderColor: Color.Silver500,
+      '&:focus': { backgroundColor: Color.Blue50 },
+      '&:hover, &:active': {
+        borderColor: Color.Blue300,
+        backgroundColor: Color.Blue50,
       },
+    },
 
-      '&[data-primary="true"]': {
-        color: Color.Blue300,
-        borderColor: Color.Silver500,
-        '&:focus': { backgroundColor: Color.Blue50 },
-        '&:hover, &:active': {
-          borderColor: Color.Blue300,
-          backgroundColor: Color.Blue50,
-        },
-      },
+    '&[data-error="true"]': {
+      color: Color.Red300,
+      borderColor: Color.Red300,
+      backgroundColor: Color.Red50,
+      '&:focus': { backgroundColor: Color.Red75 },
+    },
 
-      '&[data-error="true"]': {
-        color: Color.Red300,
-        borderColor: Color.Red300,
-        backgroundColor: Color.Red50,
-        '&:focus': { backgroundColor: Color.Red75 },
-      },
+    '&[data-size="small"]': {
+      minHeight: theme.spacing(6),
+    },
 
-      '&[data-size="small"]': {
-        minHeight: theme.spacing(6),
-      },
-
-      '&[data-size="large"]': {
-        minHeight: theme.spacing(17.5),
-      },
-    };
-  },
-);
+    '&[data-size="large"]': {
+      minHeight: theme.spacing(17.5),
+    },
+  };
+});
 
 const Label = styled(Typography)({
   display: 'flex',

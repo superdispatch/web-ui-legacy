@@ -1,3 +1,4 @@
+import { CSSObject } from '@mui/styled-engine';
 import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
@@ -15,7 +16,7 @@ export function overrideAvatar(theme: SuperDispatchTheme): void {
           width: theme.spacing(4),
           height: theme.spacing(4),
         },
-      },
+      } as CSSObject,
 
       colorDefault: {
         color: Color.Dark300,

@@ -46,19 +46,18 @@ const Overlay = styled('div')(({ theme }) => {
   };
 });
 
-const StyledProgress = styled(CircularProgress)(
-  ({ theme }: { theme: SuperDispatchTheme }) => {
-    const sm = theme.breakpoints.up('sm');
-    return {
-      top: 0,
-      left: 0,
-      position: 'absolute',
+const StyledProgress = styled(CircularProgress)((props) => {
+  const { theme } = props as { theme: SuperDispatchTheme };
+  const sm = theme.breakpoints.up('sm');
+  return {
+    top: 0,
+    left: 0,
+    position: 'absolute',
 
-      fontSize: theme.spacing(5),
-      [sm]: { fontSize: theme.spacing(4) },
-    };
-  },
-);
+    fontSize: theme.spacing(5),
+    [sm]: { fontSize: theme.spacing(4) },
+  };
+});
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore

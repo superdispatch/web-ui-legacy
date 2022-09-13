@@ -59,7 +59,7 @@ export const InfoCard: ForwardRefExoticComponent<InfoCardProps> = forwardRef(
     return (
       <StyledCard
         {...props}
-        ref={(node: HTMLElement) => {
+        ref={(node: HTMLElement | null) => {
           assignRef(ref, node);
           setRootNode(node);
         }}

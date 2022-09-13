@@ -5,6 +5,7 @@ import {
   SvgIcon,
   SvgIconProps,
 } from '@mui/material';
+import { CSSObject } from '@mui/styled-engine';
 import { forwardRef } from 'react';
 import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
@@ -32,7 +33,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
         [`&.${formLabelClasses.error}`]: { color: Color.Dark400 },
         [`&.${formLabelClasses.focused}`]: { color: Color.Dark400 },
         [`&.${formLabelClasses.disabled}`]: { color: Color.Dark400 },
-      },
+      } as CSSObject,
     },
   };
 
@@ -43,7 +44,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
         [`&.${inputBaseClasses.disabled}`]: {
           backgroundColor: Color.Silver100,
         },
-      },
+      } as CSSObject,
       input: {
         textOverflow: 'ellipsis',
         height: theme.spacing(3),
@@ -176,7 +177,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
       root: {
         ...theme.typography.body2,
         marginTop: theme.spacing(0.5),
-      },
+      } as CSSObject,
 
       contained: { marginLeft: 'unset', marginRight: 'unset' },
     },

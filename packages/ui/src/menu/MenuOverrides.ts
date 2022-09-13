@@ -1,4 +1,5 @@
 import { menuItemClasses } from '@mui/material';
+import { CSSObject } from '@mui/styled-engine';
 import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
@@ -27,7 +28,7 @@ export function overrideMenu(theme: SuperDispatchTheme): void {
               backgroundColor: Color.Blue50,
             },
           },
-      },
+      } as CSSObject,
     },
   };
 }

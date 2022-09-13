@@ -144,7 +144,7 @@ function sizeSmall(theme: SuperDispatchTheme): CSSInterpolation {
 
     padding: theme.spacing(0.5, 3),
     [sm]: { padding: theme.spacing(0.25, 2) },
-  };
+  } as CSSInterpolation;
 }
 
 function sizeLarge(theme: SuperDispatchTheme): CSSInterpolation {
@@ -161,7 +161,7 @@ function sizeLarge(theme: SuperDispatchTheme): CSSInterpolation {
       lineHeight: '24px',
       padding: theme.spacing(1, 4),
     },
-  };
+  } as CSSInterpolation;
 }
 
 export function overrideButton(theme: SuperDispatchTheme): void {

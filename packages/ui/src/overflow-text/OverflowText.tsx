@@ -5,6 +5,7 @@ import {
   Typography,
   TypographyProps,
 } from '@mui/material';
+import { CSSObject } from '@mui/styled-engine';
 import {
   ComponentType,
   ElementType,
@@ -23,22 +24,17 @@ const Root: ComponentType<TypographyProps & { truncated?: boolean }> = styled(
     shouldForwardProp: (prop) => prop !== 'truncated',
   },
 )<TypographyProps & { truncated?: boolean }>(
-  ({
-    truncated,
-    theme,
-  }: {
-    truncated?: boolean;
-    theme: SuperDispatchTheme;
-  }) => ({
-    marginBottom: -1,
-    borderBottom: '1px dashed transparent',
-    transition: theme.transitions.create('border'),
+  ({ truncated, theme }) =>
+    ({
+      marginBottom: -1,
+      borderBottom: '1px dashed transparent',
+      transition: (theme as SuperDispatchTheme).transitions.create('border'),
 
-    ...(truncated && {
-      cursor: 'pointer',
-      borderBottomColor: Color.Silver500,
-    }),
-  }),
+      ...(truncated && {
+        cursor: 'pointer',
+        borderBottomColor: Color.Silver500,
+      }),
+    } as CSSObject),
 );
 
 const Sential = styled('span', {

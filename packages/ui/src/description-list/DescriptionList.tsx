@@ -1,4 +1,5 @@
 import { styled, SvgIcon, Typography, TypographyProps } from '@mui/material';
+import { CSSObject } from '@mui/styled-engine';
 import { CSSProperties } from '@mui/styles';
 import { forwardRef, ReactNode } from 'react';
 import { OverflowText, OverflowTextProps } from '../overflow-text/OverflowText';
@@ -130,7 +131,7 @@ const DescriptionListRoot = styled('div', {
 
     '&[data-size="small"]': sizeVariant(theme as SuperDispatchTheme, 1, 0.5),
     '&[data-size="large"]': sizeVariant(theme as SuperDispatchTheme, 3, 2),
-  };
+  } as CSSObject;
 });
 
 function sizeVariant(
