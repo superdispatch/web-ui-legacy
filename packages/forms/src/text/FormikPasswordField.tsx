@@ -1,9 +1,5 @@
-import {
-  IconButton,
-  InputAdornment,
-  Visibility,
-  VisibilityOff,
-} from '@mui/icons-material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { IconButton, InputAdornment } from '@mui/material';
 import { forwardRef, ForwardRefExoticComponent, useRef, useState } from 'react';
 import { FormikTextField, FormikTextFieldProps } from './FormikTextField';
 
