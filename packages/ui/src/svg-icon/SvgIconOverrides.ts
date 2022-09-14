@@ -30,7 +30,9 @@ export function overrideSvgIcon(theme: SuperDispatchTheme): void {
       },
 
       fontSizeLarge: {
-        fontSize: 'var(--mui-svg-icon-size, 32px)',
+        '&': {
+          fontSize: 'var(--mui-svg-icon-size, 32px)',
+        },
       },
 
       colorAction: {
