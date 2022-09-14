@@ -29,5 +29,3 @@ If error points at `@superdispatch/...` package, open respective package directo
 
 - Run logged `tsc` command.
 - Try solution of error described above (_tsc error: Output file ..._).
-
-test
