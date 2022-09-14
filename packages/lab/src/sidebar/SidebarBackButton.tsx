@@ -1,5 +1,5 @@
-import { IconButton, IconButtonProps } from '@material-ui/core';
-import { ArrowBack } from '@material-ui/icons';
+import { ArrowBack } from '@mui/icons-material';
+import { IconButton, IconButtonProps } from '@mui/material';
 import { useCollapseBreakpoint } from '@superdispatch/ui';
 import { ReactElement } from 'react';
 import { useSidebarContext } from './SidebarContainer';

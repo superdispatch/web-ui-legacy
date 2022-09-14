@@ -1,5 +1,5 @@
-import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
-import { Menu } from '@material-ui/icons';
+import { Menu } from '@mui/icons-material';
+import { BottomNavigation, BottomNavigationAction } from '@mui/material';
 import { Color } from '@superdispatch/ui';
 import {
   ComponentType,

@@ -9,10 +9,6 @@ import { merge } from 'lodash';
 import React, { Suspense } from 'react';
 import { withPlayroom } from 'storybook-addon-playroom';
 
-injectDisplayNames(require('@material-ui/lab'));
-injectDisplayNames(require('@material-ui/core'));
-injectDisplayNames(require('@material-ui/icons'), { suffix: 'Icon' });
-
 injectDisplayNames(require('@mui/lab'));
 injectDisplayNames(require('@mui/material'));
 injectDisplayNames(require('@mui/icons-material'), { suffix: 'Icon' });
@@ -65,9 +61,7 @@ addDecorator((story, { id }) => {
 function SuperDispatchDocsContainer(props) {
   return (
     <ThemeProvider injectFirst={false}>
-      <ThemeProvider injectFirst={false}>
-        <DocsContainer {...props} />
-      </ThemeProvider>
+      <DocsContainer {...props} />
     </ThemeProvider>
   );
 }

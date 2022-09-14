@@ -23,7 +23,7 @@ export const basic = () => (
 export const customSize = () => (
   <Inline verticalAlign="bottom">
     <HomeIcon fontSize="small" />
-    <HomeIcon />
+    <HomeIcon fontSize="medium" />
     <HomeIcon fontSize="large" />
   </Inline>
 );

@@ -1,4 +1,3 @@
-import {} from '@mui/material';
 import { TypographyOptions } from '@mui/material/styles/createTypography';
 import { Breakpoints } from '@mui/system';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';

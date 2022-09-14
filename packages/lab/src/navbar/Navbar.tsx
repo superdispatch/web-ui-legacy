@@ -1,4 +1,4 @@
-import { Drawer, useMediaQuery, useTheme } from '@material-ui/core';
+import { Drawer, useMediaQuery, useTheme } from '@mui/material';
 import { useResponsiveValue } from '@superdispatch/ui';
 import {
   CSSProperties,

@@ -6,7 +6,7 @@ import {
   Notifications,
   People,
   Settings,
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 import { Meta } from '@storybook/react';
 import { noop } from 'lodash';
 import { Box, Navbar, NavbarAvatar, NavbarMenu, TextBox } from '../..';
