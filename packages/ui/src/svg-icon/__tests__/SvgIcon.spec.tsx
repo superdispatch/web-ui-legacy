@@ -217,6 +217,9 @@ it('checks component css', () => {
       font-size: 2.1875rem;
       display: inherit;
       font-size: var(--mui-svg-icon-size,32px);
+    }
+
+    .MuiSvgIcon-fontSizeLarge {
       font-size: var(--mui-svg-icon-size,32px);
     }
 
