@@ -1,5 +1,5 @@
 import { Accordion, AccordionSummary } from '@material-ui/core';
-import { ExpandMore } from '@material-ui/icons';
+import { ExpandMore } from '@mui/icons-material';
 import { Color, useUID } from '@superdispatch/ui';
 import {
   MouseEvent,

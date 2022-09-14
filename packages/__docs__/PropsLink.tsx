@@ -1,5 +1,5 @@
-import { Link } from '@material-ui/core';
-import { Launch } from '@material-ui/icons';
+import { Launch } from '@mui/icons-material';
+import { Link } from '@mui/material';
 import { Inline } from '@superdispatch/ui';
 import { ReactElement } from 'react';
 

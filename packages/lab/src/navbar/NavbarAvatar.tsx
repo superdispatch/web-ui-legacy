@@ -1,4 +1,4 @@
-import { Avatar, AvatarProps, Typography } from '@material-ui/core';
+import { Avatar, AvatarProps, Typography } from '@mui/material';
 import { Color, Column, Columns, Stack } from '@superdispatch/ui';
 import { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';

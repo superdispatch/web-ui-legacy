@@ -1,4 +1,4 @@
-import { Menu, MenuItem, Typography } from '@material-ui/core';
+import { Menu, MenuItem, Typography } from '@mui/material';
 import { Color, Inline } from '@superdispatch/ui';
 import { Key, MouseEvent, ReactElement, ReactNode, useState } from 'react';
 import styled from 'styled-components';

@@ -1,5 +1,5 @@
-import { IconButton } from '@material-ui/core';
-import { Menu as MenuIcon, MenuOpen } from '@material-ui/icons';
+import { Menu as MenuIcon, MenuOpen } from '@mui/icons-material';
+import { IconButton } from '@mui/material';
 import { Color, Inline, useResponsiveValue } from '@superdispatch/ui';
 import {
   ComponentType,

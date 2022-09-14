@@ -1,6 +1,6 @@
-import { Divider, Grid, Menu, MenuItem } from '@material-ui/core';
-import { MoreHoriz } from '@material-ui/icons';
-import { makeStyles } from '@material-ui/styles';
+import { MoreHoriz } from '@mui/icons-material';
+import { Divider, Grid, Menu, MenuItem } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import {
   cloneElement,
   EventHandler,

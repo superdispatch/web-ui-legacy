@@ -1,4 +1,4 @@
-import { Card, CardContent } from '@material-ui/core';
+import { Card, CardContent } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { AdaptiveVerticalToolbar } from './AdaptiveVerticalToolbar';
 
