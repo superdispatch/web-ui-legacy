@@ -103,6 +103,7 @@
   },
   "devDependencies": {
     "@codemod/cli": "2.3.2",
+    "@loki/is-loki-running": "^0.30.0",
     "@material-ui/core": "4.12.3",
     "@material-ui/icons": "4.11.2",
     "@material-ui/lab": "4.0.0-alpha.60",
