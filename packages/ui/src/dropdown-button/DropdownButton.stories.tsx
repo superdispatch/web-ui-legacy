@@ -1,4 +1,4 @@
-import { MenuItem } from '@material-ui/core';
+import { MenuItem } from '@mui/material';
 import { Meta } from '@storybook/react';
 import { DropdownButton } from './DropdownButton';
 

@@ -4,7 +4,7 @@ import {
   MenuList,
   MenuListProps as MuiMenuListProps,
   Popover,
-} from '@material-ui/core';
+} from '@mui/material';
 import * as React from 'react';
 import { forwardRef, MouseEvent, ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
