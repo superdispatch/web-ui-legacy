@@ -95,6 +95,7 @@ it('exposes public api', () => {
       "InfoCard": React.forwardRef(InfoCard),
       "Inline": React.forwardRef(Inline),
       "InlineGrid": React.forwardRef(InlineGrid),
+      "NumberField": React.forwardRef(NumberField),
       "OverflowText": React.forwardRef(OverflowText),
       "RadioField": React.forwardRef(RadioField),
       "RadioGroupField": React.forwardRef(RadioGroupField),
