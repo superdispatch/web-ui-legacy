@@ -4,7 +4,7 @@ import { NumberField } from '..';
 export default { title: 'Inputs/NumberField', component: NumberField };
 
 export const basic = () => (
-  <UseState initialState={false}>
+  <UseState initialState={0}>
     {(value, setValue) => (
       <NumberField
         value={value}
@@ -19,7 +19,7 @@ export const basic = () => (
 );
 
 export const decimalSeparator = () => (
-  <UseState initialState={false}>
+  <UseState initialState={0}>
     {(value, setValue) => (
       <NumberField
         value={value}
@@ -37,7 +37,7 @@ export const decimalSeparator = () => (
 );
 
 export const decimalScale = () => (
-  <UseState initialState={false}>
+  <UseState initialState={0}>
     {(value, setValue) => (
       <NumberField
         value={value}
@@ -55,7 +55,7 @@ export const decimalScale = () => (
 );
 
 export const prefix = () => (
-  <UseState initialState={false}>
+  <UseState initialState={0}>
     {(value, setValue) => (
       <NumberField
         value={value}
@@ -73,7 +73,7 @@ export const prefix = () => (
 );
 
 export const withoutSeparator = () => (
-  <UseState initialState={false}>
+  <UseState initialState={0}>
     {(value, setValue) => (
       <NumberField
         value={value}
@@ -91,7 +91,7 @@ export const withoutSeparator = () => (
 );
 
 export const error = () => (
-  <UseState initialState={false}>
+  <UseState initialState={0}>
     {(value, setValue) => (
       <NumberField
         value={value}
@@ -107,7 +107,7 @@ export const error = () => (
 );
 
 export const format = () => (
-  <UseState initialState={false}>
+  <UseState initialState={0}>
     {(value, setValue) => (
       <NumberField
         value={value}
