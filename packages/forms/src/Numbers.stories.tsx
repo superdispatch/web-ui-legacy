@@ -76,9 +76,19 @@ export const NumberFields = () => {
               inputProps={{
                 thousandSeparator: '',
               }}
+              validate={(value) =>
+                value ? undefined : 'Please enter the quantity'
+              }
             />
 
-            <FormikCurrencyField name="price" label="Price" fullWidth={true} />
+            <FormikCurrencyField
+              name="price"
+              label="Price"
+              fullWidth={true}
+              validate={(value) =>
+                value ? undefined : 'Please enter the price'
+              }
+            />
 
             {status.type === 'rejected' && (
               <Alert severity="error">{status.payload.message}</Alert>
