@@ -1,6 +1,6 @@
 import { NumberField, NumberFieldProps } from '@superdispatch/ui';
 import { FieldValidator, useField, useFormikContext } from 'formik';
-import React, { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
+import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
 
 function formatInputError(error: string): ReactNode {
   return error || undefined;
