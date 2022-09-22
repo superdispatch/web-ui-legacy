@@ -1,6 +1,6 @@
 {
   "name": "@superdispatch/ui-lab",
-  "version": "0.21.5-alpha.2",
+  "version": "0.21.5-alpha.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/superdispatch/ui.git"
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@superdispatch/hooks": "^0.21.5-alpha.0",
-    "@superdispatch/ui": "^0.21.5-alpha.2",
+    "@superdispatch/ui": "^0.21.5-alpha.4",
     "react-anchorme": "^2.2.1",
     "react-dropzone": "^11.3.4"
   },
