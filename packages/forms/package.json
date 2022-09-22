@@ -17,8 +17,7 @@
     "@superdispatch/dates": "^0.21.5-alpha.2",
     "@superdispatch/hooks": "^0.21.5-alpha.0",
     "@superdispatch/phones": "^0.21.5-alpha.2",
-    "@superdispatch/ui": "^0.21.5-alpha.2",
-    "react-number-format": "4.9.4"
+    "@superdispatch/ui": "^0.21.5-alpha.2"
   },
   "peerDependencies": {
     "@mui/material": "5.2.3",
