@@ -16,6 +16,7 @@ export {
   DrawerTitle,
   InfoCard,
   Inline,
+  NumberField,
   OverflowText,
   RadioField,
   RadioGroupField,

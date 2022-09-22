@@ -4,9 +4,11 @@ it('exposes public api', () => {
   expect(api).toMatchInlineSnapshot(`
     Object {
       "FormikCheckboxField": React.forwardRef(FormikCheckboxField),
+      "FormikCurrencyField": React.forwardRef(FormikCurrencyField),
       "FormikDateField": React.forwardRef(FormikDateField),
       "FormikEnhanced": [Function],
       "FormikMaxLengthTextField": React.forwardRef(FormikMaxLengthTextField),
+      "FormikNumberField": React.forwardRef(FormikNumberField),
       "FormikPasswordField": React.forwardRef(FormikPasswordField),
       "FormikPhoneField": React.forwardRef(FormikPhoneField),
       "FormikRadioGroupField": React.forwardRef(FormikRadioGroupField),

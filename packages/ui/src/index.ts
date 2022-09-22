@@ -17,6 +17,7 @@ export * from './grid/GridStack';
 export * from './grid/InlineGrid';
 export * from './info-card/InfoCard';
 export * from './inline/Inline';
+export * from './number-field/NumberField';
 export * from './overflow-text/OverflowText';
 export * from './props/AlignProps';
 export * from './props/CollapseProp';
