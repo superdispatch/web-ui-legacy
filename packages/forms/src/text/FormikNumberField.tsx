@@ -39,7 +39,7 @@ export const FormikNumberField: ForwardRefExoticComponent<FormikNumberFieldProps
           id={id}
           disabled={disabled || isSubmitting}
           error={!!errorText}
-          helperText={helperText || errorText}
+          helperText={errorText || helperText}
           onBlur={(event) => {
             onBlur?.(event);
             setTouched(true);
