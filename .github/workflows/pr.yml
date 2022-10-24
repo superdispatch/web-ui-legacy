@@ -55,7 +55,7 @@ jobs:
       - preview
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: umidbekk/actions/npm/install@v2
         with:
           cache-key: yarn-v4
@@ -70,7 +70,7 @@ jobs:
       - preview
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
       - uses: umidbekk/actions/npm/install@v2
         with:
