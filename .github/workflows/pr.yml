@@ -6,13 +6,11 @@ on:
 jobs:
   checks:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
     steps:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v4
+          node-version: 16
       - run: yarn check:types
       - run: yarn lint
       - run: yarn test
