@@ -19,23 +19,26 @@ export interface FormikCurrencyFieldProps extends NumberFieldProps {
 
 export const FormikCurrencyField: ForwardRefExoticComponent<FormikCurrencyFieldProps> =
   forwardRef(
-    ({
-      name,
-      validate,
-      parse = (x: NumberValue) => x,
-      format = (x: NumberValue) => x,
-      error: errorProp,
-      formatError = formatInputError,
-      onBlur,
-      onChange,
-      disabled,
-      helperText,
-      InputProps: {
-        startAdornment = <InputAdornment position="start">$</InputAdornment>,
-        ...InputProps
-      } = {},
-      ...rest
-    }) => {
+    (
+      {
+        name,
+        validate,
+        parse = (x: NumberValue) => x,
+        format = (x: NumberValue) => x,
+        error: errorProp,
+        formatError = formatInputError,
+        onBlur,
+        onChange,
+        disabled,
+        helperText,
+        InputProps: {
+          startAdornment = <InputAdornment position="start">$</InputAdornment>,
+          ...InputProps
+        } = {},
+        ...rest
+      },
+      ref,
+    ) => {
       const { isSubmitting } = useFormikContext();
       const [field, { error, touched }, { setValue }] = useField<
         number | undefined
@@ -48,6 +51,7 @@ export const FormikCurrencyField: ForwardRefExoticComponent<FormikCurrencyFieldP
       return (
         <NumberField
           {...rest}
+          ref={ref}
           name={name}
           value={format(field.value)}
           error={!!errorText || errorProp}
