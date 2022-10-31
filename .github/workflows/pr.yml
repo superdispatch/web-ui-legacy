@@ -10,6 +10,7 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v4
+          node-version: 16
       - run: yarn check:types
       - run: yarn lint
       - run: yarn test
@@ -23,6 +24,7 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v4
+          node-version: 16
       - uses: superdispatch/actions/build-size/limit@v1
         with:
           install_command: 'yarn install'
@@ -38,6 +40,7 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v4
+          node-version: 16
       - run: yarn storybook:build
       - run: yarn playroom:build
       - id: deploy
@@ -59,6 +62,7 @@ jobs:
       - uses: umidbekk/actions/npm/install@v2
         with:
           cache-key: yarn-v4
+          node-version: 16
       - run: yarn cypress install
       - run: yarn cypress run
         env:
@@ -75,7 +79,7 @@ jobs:
       - uses: umidbekk/actions/npm/install@v2
         with:
           cache-key: yarn-v4
-
+          node-version: 16
       - uses: superdispatch/actions/update-snapshots@v1.5
         with:
           command: yarn test-visual-ci ${{ needs.preview.outputs.deploy-url }}

@@ -79,12 +79,13 @@ function NumberInputComponent({
 }
 
 export const NumberField: ForwardRefExoticComponent<NumberFieldProps> =
-  forwardRef(({ id, InputProps, ...props }) => {
+  forwardRef(({ id, InputProps, ...props }, ref) => {
     const uid = useUID(id);
 
     return (
       <TextField
         {...props}
+        ref={ref}
         id={uid}
         InputProps={{
           ...InputProps,
