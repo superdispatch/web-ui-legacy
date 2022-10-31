@@ -11,7 +11,6 @@ cypress/screenshots
 node_modules/
 
 # distributive
-.turbo
 *.tgz
 docs/
 packages/*/pkg/
