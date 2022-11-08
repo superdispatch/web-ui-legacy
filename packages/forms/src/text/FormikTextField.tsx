@@ -26,8 +26,7 @@ function formatInputError(error: string): ReactNode {
   return error || undefined;
 }
 
-export interface FormikTextFieldProps
-  extends Omit<StandardTextFieldProps, 'error'> {
+export interface FormikTextFieldProps extends StandardTextFieldProps {
   name: string;
   validate?: FieldValidator;
   formatError?: (error: string) => ReactNode;
@@ -52,6 +51,7 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
         onChange,
         disabled,
         helperText,
+        error: errorProp,
 
         parse = parseInputValue,
         format = formatInputValue,
@@ -73,7 +73,7 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
           id={uid}
           ref={ref}
           name={name}
-          error={!!errorText}
+          error={!!errorText || errorProp}
           helperText={errorText || helperText}
           disabled={disabled ?? isSubmitting}
           value={format(field.value)}
