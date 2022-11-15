@@ -7,7 +7,7 @@ function formatInputError(error: string): ReactNode {
   return error || undefined;
 }
 
-const EMPTY_ERROR_MESSAGE = 'EMPTY_ERROR_MESSAGE';
+export const EMPTY_ERROR_MESSAGE = 'EMPTY_ERROR_MESSAGE';
 
 type NumberValue = number | undefined;
 
