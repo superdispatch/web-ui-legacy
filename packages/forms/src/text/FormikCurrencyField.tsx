@@ -39,7 +39,7 @@ export const FormikCurrencyField: ForwardRefExoticComponent<FormikCurrencyFieldP
         } = {},
         ...rest
       },
-      ref
+      ref,
     ) => {
       const { isSubmitting } = useFormikContext();
       const [field, { error, touched }, { setValue }] = useField<
@@ -76,7 +76,7 @@ export const FormikCurrencyField: ForwardRefExoticComponent<FormikCurrencyFieldP
           }}
         />
       );
-    }
+    },
   );
 
-FormikCurrencyField.displayName = "FormikCurrencyField";
+FormikCurrencyField.displayName = 'FormikCurrencyField';
