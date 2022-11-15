@@ -1,13 +1,13 @@
-import { InputAdornment } from '@material-ui/core';
-import { NumberField, NumberFieldProps } from '@superdispatch/ui';
-import { FieldValidator, useField, useFormikContext } from 'formik';
-import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
+import { InputAdornment } from "@material-ui/core";
+import { NumberField, NumberFieldProps } from "@superdispatch/ui";
+import { FieldValidator, useField, useFormikContext } from "formik";
+import { forwardRef, ForwardRefExoticComponent, ReactNode } from "react";
 
 function formatInputError(error: string): ReactNode {
   return error || undefined;
 }
 
-export const EMPTY_ERROR_MESSAGE = 'EMPTY_ERROR_MESSAGE';
+export const EMPTY_ERROR_MESSAGE = "EMPTY_ERROR_MESSAGE";
 
 type NumberValue = number | undefined;
 
@@ -39,7 +39,7 @@ export const FormikCurrencyField: ForwardRefExoticComponent<FormikCurrencyFieldP
         } = {},
         ...rest
       },
-      ref,
+      ref
     ) => {
       const { isSubmitting } = useFormikContext();
       const [field, { error, touched }, { setValue }] = useField<
@@ -49,7 +49,8 @@ export const FormikCurrencyField: ForwardRefExoticComponent<FormikCurrencyFieldP
         validate,
       });
       const hasError = touched && !!error;
-      const errorText = touched && error !== EMPTY_ERROR_MESSAGE && error && formatError(error);
+      const errorText =
+        touched && error !== EMPTY_ERROR_MESSAGE && error && formatError(error);
 
       return (
         <NumberField
@@ -75,7 +76,7 @@ export const FormikCurrencyField: ForwardRefExoticComponent<FormikCurrencyFieldP
           }}
         />
       );
-    },
+    }
   );
 
-FormikCurrencyField.displayName = 'FormikCurrencyField';
+FormikCurrencyField.displayName = "FormikCurrencyField";
