@@ -1,13 +1,13 @@
-import { InputAdornment } from "@material-ui/core";
-import { NumberField, NumberFieldProps } from "@superdispatch/ui";
-import { FieldValidator, useField, useFormikContext } from "formik";
-import { forwardRef, ForwardRefExoticComponent, ReactNode } from "react";
+import { InputAdornment } from '@material-ui/core';
+import { NumberField, NumberFieldProps } from '@superdispatch/ui';
+import { FieldValidator, useField, useFormikContext } from 'formik';
+import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
 
 function formatInputError(error: string): ReactNode {
   return error || undefined;
 }
 
-export const EMPTY_ERROR_MESSAGE = "EMPTY_ERROR_MESSAGE";
+export const EMPTY_ERROR_MESSAGE = 'EMPTY_ERROR_MESSAGE';
 
 type NumberValue = number | undefined;
 
