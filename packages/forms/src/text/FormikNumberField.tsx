@@ -14,17 +14,20 @@ export interface FormikNumberFieldProps extends NumberFieldProps {
 
 export const FormikNumberField: ForwardRefExoticComponent<FormikNumberFieldProps> =
   forwardRef(
-    ({
-      id,
-      name,
-      validate,
-      formatError = formatInputError,
-      disabled,
-      helperText,
-      onBlur,
-      onChange,
-      ...props
-    }) => {
+    (
+      {
+        id,
+        name,
+        validate,
+        formatError = formatInputError,
+        disabled,
+        helperText,
+        onBlur,
+        onChange,
+        ...props
+      },
+      ref,
+    ) => {
       const { isSubmitting } = useFormikContext();
       const [field, { error, touched }, { setValue, setTouched }] = useField({
         name,
@@ -36,10 +39,11 @@ export const FormikNumberField: ForwardRefExoticComponent<FormikNumberFieldProps
         <NumberField
           {...field}
           {...props}
+          ref={ref}
           id={id}
           disabled={disabled || isSubmitting}
           error={!!errorText}
-          helperText={helperText || errorText}
+          helperText={errorText || helperText}
           onBlur={(event) => {
             onBlur?.(event);
             setTouched(true);

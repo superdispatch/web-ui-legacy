@@ -7,6 +7,8 @@ function formatInputError(error: string): ReactNode {
   return error || undefined;
 }
 
+export const EMPTY_ERROR_MESSAGE = 'EMPTY_ERROR_MESSAGE';
+
 type NumberValue = number | undefined;
 
 export interface FormikCurrencyFieldProps extends NumberFieldProps {
@@ -19,23 +21,26 @@ export interface FormikCurrencyFieldProps extends NumberFieldProps {
 
 export const FormikCurrencyField: ForwardRefExoticComponent<FormikCurrencyFieldProps> =
   forwardRef(
-    ({
-      name,
-      validate,
-      parse = (x: NumberValue) => x,
-      format = (x: NumberValue) => x,
-      error: errorProp,
-      formatError = formatInputError,
-      onBlur,
-      onChange,
-      disabled,
-      helperText,
-      InputProps: {
-        startAdornment = <InputAdornment position="start">$</InputAdornment>,
-        ...InputProps
-      } = {},
-      ...rest
-    }) => {
+    (
+      {
+        name,
+        validate,
+        parse = (x: NumberValue) => x,
+        format = (x: NumberValue) => x,
+        error: errorProp,
+        formatError = formatInputError,
+        onBlur,
+        onChange,
+        disabled,
+        helperText,
+        InputProps: {
+          startAdornment = <InputAdornment position="start">$</InputAdornment>,
+          ...InputProps
+        } = {},
+        ...rest
+      },
+      ref,
+    ) => {
       const { isSubmitting } = useFormikContext();
       const [field, { error, touched }, { setValue }] = useField<
         number | undefined
@@ -43,14 +48,17 @@ export const FormikCurrencyField: ForwardRefExoticComponent<FormikCurrencyFieldP
         name,
         validate,
       });
-      const errorText = touched && error && formatError(error);
+      const hasError = touched && !!error;
+      const errorText =
+        touched && error !== EMPTY_ERROR_MESSAGE && error && formatError(error);
 
       return (
         <NumberField
           {...rest}
+          ref={ref}
           name={name}
           value={format(field.value)}
-          error={!!errorText || errorProp}
+          error={hasError || errorProp}
           disabled={disabled || isSubmitting}
           helperText={errorText || helperText}
           inputProps={{
