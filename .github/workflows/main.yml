@@ -14,6 +14,7 @@ jobs:
         with:
           cache-key: yarn-v4
           node-version: 16
+
       - run: yarn check:types
       - run: yarn lint
       - run: yarn test
@@ -28,6 +29,7 @@ jobs:
         with:
           cache-key: yarn-v4
           node-version: 16
+
       - run: yarn docs
       - id: deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
