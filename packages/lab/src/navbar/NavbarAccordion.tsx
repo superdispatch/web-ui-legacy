@@ -8,7 +8,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { useNavbarContext } from './NavbarContext';
 import { NavbarItem } from './NavbarItem';
 import { NavbarItemOptions } from './NavbarList';
@@ -23,37 +23,38 @@ export const NavbarAccordionLabel = styled.span`
   }
 `;
 
-const NavbarAccordionRoot = styled(Accordion)<{ gutter: boolean }>(
-  ({ gutter }) => css`
-    width: 100%;
-    color: #c2c4c9;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    text-decoration: none;
-    outline: none;
-    cursor: pointer;
+const NavbarAccordionRoot = styled(Accordion)`
+  width: 100%;
+  color: #c2c4c9;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #1b2638;
+
+  &[aria-current] {
+    background-color: #2f394a;
+    color: ${Color.White};
+  }
+
+  &.MuiAccordion-root:before {
     background-color: #1b2638;
-    margin-top: ${gutter ? '16px' : '0'};
+  }
 
-    &[aria-current] {
-      background-color: #2f394a;
-      color: ${Color.White};
-    }
+  &.MuiPaper-elevation0 {
+    border: 0px;
+  }
 
-    &.MuiAccordion-root:before {
-      background-color: #1b2638;
-    }
+  &[data-gutter] {
+    margin-top: 16px;
+  }
 
-    &.MuiPaper-elevation0 {
-      border: 0px;
-    }
-
-    &.MuiAccordion-root.Mui-expanded {
-      margin-top: ${gutter ? '16px' : '0'};
-    }
-  `,
-);
+  &[data-gutter].MuiAccordion-root.Mui-expanded {
+    margin-top: 16px;
+  }
+`;
 
 const NavbarAccordionSummary = styled(AccordionSummary)`
   border-left: 4px solid transparent;
@@ -120,7 +121,7 @@ export function NavbarAccordion({
   return (
     <NavbarAccordionRoot
       square={true}
-      gutter={!!gutter}
+      data-gutter={!gutter}
       aria-labelledby={uid}
       expanded={isExpanded}
       onClick={(event) => {

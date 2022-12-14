@@ -24,6 +24,7 @@ const bottomItems = [
     value: '/orders',
     label: 'All Orders',
     icon: <AllInbox fontSize="small" />,
+    active: true,
   },
   {
     label: 'Customers',
@@ -80,7 +81,7 @@ const items = [
   {
     icon: <AllInbox />,
     label: 'Orders',
-    groupKey: 2,
+    groupKey: 3,
     key: 'Orders',
     items: [
       {

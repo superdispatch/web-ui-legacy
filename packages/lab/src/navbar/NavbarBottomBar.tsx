@@ -99,7 +99,7 @@ export function NavbarBottomBar({
         }
       }}
     >
-      {items.map((item) => (
+      {items.map(({ active, ...item }) => (
         <StyledBottomNavigationAction
           {...item}
           key={item.value}
