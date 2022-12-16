@@ -64,8 +64,8 @@ const IconLabel = styled.div`
 
 export interface NavbarBottomBarItem {
   active?: boolean;
-  value: string;
   hasBadge?: boolean;
+  value: string;
   label: ReactNode;
   icon: ReactNode;
   onClick?: () => void;
@@ -99,12 +99,12 @@ export function NavbarBottomBar({
         }
       }}
     >
-      {items.map((item) => (
+      {items.map(({ active, hasBadge, ...item }) => (
         <StyledBottomNavigationAction
           {...item}
           key={item.value}
           icon={
-            item.hasBadge ? (
+            hasBadge ? (
               <IconWrapper>
                 <IconLabel />
                 {item.icon}
