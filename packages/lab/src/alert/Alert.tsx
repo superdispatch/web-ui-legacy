@@ -100,9 +100,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
       variant="outlined"
       iconMapping={iconMapping}
       severity={toMaterialSeverity(severity)}
-      onClose={() => {
-        onClose?.();
-      }}
+      onClose={onClose}
     >
       {children}
     </StyledAlert>
