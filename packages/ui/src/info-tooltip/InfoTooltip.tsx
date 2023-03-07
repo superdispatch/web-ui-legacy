@@ -5,7 +5,7 @@ import {
   TooltipProps,
 } from '@material-ui/core';
 import { Info } from '@material-ui/icons';
-import React, { forwardRef, ForwardRefExoticComponent, useState } from 'react';
+import { forwardRef, ForwardRefExoticComponent, useState } from 'react';
 
 interface InfoTooltipProps extends Omit<TooltipProps, 'title' | 'children'> {
   children:
@@ -22,7 +22,6 @@ export const InfoTooltip: ForwardRefExoticComponent<InfoTooltipProps> =
     return (
       <Tooltip
         open={isTooltipOpen}
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         title={children}
         placement="top"
         onClose={() => {
