@@ -2,14 +2,8 @@ import { renderCSS } from '@superdispatch/ui-testutils';
 import { InfoTooltip } from '../..';
 
 it('checks component css InfoTooltip', () => {
-  expect(
-    renderCSS(
-      <InfoTooltip>
-        <span />
-      </InfoTooltip>,
-      ['MuiTooltip'],
-    ),
-  ).toMatchInlineSnapshot(`
+  expect(renderCSS(<InfoTooltip title={<span />} />, ['MuiTooltip']))
+    .toMatchInlineSnapshot(`
     .MuiTooltip-popper {
       z-index: 1500;
       pointer-events: none;
