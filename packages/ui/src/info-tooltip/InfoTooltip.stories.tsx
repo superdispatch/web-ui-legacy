@@ -14,22 +14,64 @@ export const basic = () => (
     iconButtonProps={{
       'aria-label': 'aria label info',
     }}
-  >
-    <Typography variant="h3">Title</Typography>
-    <Typography>Content</Typography>
-    <Button>Button</Button>
-  </InfoTooltip>
+    title={
+      <>
+        <Typography variant="h3">Title</Typography>
+        <Typography>Content</Typography>
+        <Button>Button</Button>
+      </>
+    }
+  />
 );
 
-export const noninteractive = () => (
+export const withLabel = () => (
   <InfoTooltip
-    interactive={false}
+    interactive={true}
     iconButtonProps={{
       'aria-label': 'aria label info',
     }}
+    title={
+      <>
+        <Typography variant="h3">Title</Typography>
+        <Typography>Content</Typography>
+        <Button>Button</Button>
+      </>
+    }
   >
-    <Typography variant="h3">Title</Typography>
-    <Typography>Non-Interactive Content</Typography>
-    <Button>Button</Button>
+    <Typography>Label</Typography>
   </InfoTooltip>
+);
+
+export const medium = () => (
+  <InfoTooltip
+    interactive={false}
+    fontSize="medium"
+    iconButtonProps={{
+      'aria-label': 'aria label info',
+    }}
+    title={
+      <>
+        <Typography variant="h3">Title</Typography>
+        <Typography>Non-Interactive Content</Typography>
+        <Button>Button</Button>
+      </>
+    }
+  />
+);
+
+export const large = () => (
+  <InfoTooltip
+    interactive={false}
+    fontSize="large"
+    iconButtonProps={{
+      'aria-label': 'aria label info',
+    }}
+    title={
+      <>
+        <Typography variant="h3">Title</Typography>
+        <Typography>Non-Interactive Content</Typography>
+        <Button>Button</Button>
+      </>
+    }
+  />
 );

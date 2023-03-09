@@ -3,47 +3,81 @@ import {
   IconButtonProps,
   Tooltip,
   TooltipProps,
+  Typography,
+  TypographyProps,
 } from '@material-ui/core';
 import { Info } from '@material-ui/icons';
-import { forwardRef, ForwardRefExoticComponent, useState } from 'react';
+import {
+  forwardRef,
+  ForwardRefExoticComponent,
+  ReactNode,
+  useState,
+} from 'react';
+import styled from 'styled-components';
 
 interface InfoTooltipProps extends Omit<TooltipProps, 'title' | 'children'> {
-  children:
-    | boolean
-    | React.ReactChild
-    | React.ReactFragment
-    | React.ReactPortal;
+  title: NonNullable<ReactNode>;
+  children?: ReactNode;
   iconButtonProps?: IconButtonProps;
+  fontSize?: 'inherit' | 'default' | 'small' | 'medium' | 'large' | undefined;
+  TextProps?: TypographyProps;
 }
-export const InfoTooltip: ForwardRefExoticComponent<InfoTooltipProps> =
-  forwardRef(({ children, iconButtonProps, ...props }, ref) => {
-    const [isTooltipOpen, setIsTooltipOpen] = useState(false);
 
-    return (
-      <Tooltip
-        open={isTooltipOpen}
-        title={children}
-        placement="top"
-        onClose={() => {
-          setIsTooltipOpen(false);
-        }}
-        disableFocusListener={true}
-        disableTouchListener={true}
-        onClick={() => {
-          setIsTooltipOpen(true);
-        }}
-        ref={ref}
-        {...props}
-      >
-        <IconButton
-          {...iconButtonProps}
-          size="small"
-          onMouseOver={() => {
+const Root = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const InfoTooltip: ForwardRefExoticComponent<InfoTooltipProps> =
+  forwardRef(
+    (
+      {
+        children,
+        iconButtonProps,
+        fontSize = 'small',
+        TextProps,
+        title,
+        ...props
+      },
+      ref,
+    ) => {
+      const [isTooltipOpen, setIsTooltipOpen] = useState(false);
+
+      const tooltip = (
+        <Tooltip
+          open={isTooltipOpen}
+          title={title}
+          placement="top"
+          onClose={() => {
+            setIsTooltipOpen(false);
+          }}
+          disableFocusListener={true}
+          disableTouchListener={true}
+          onClick={() => {
             setIsTooltipOpen(true);
           }}
+          ref={ref}
+          {...props}
         >
-          <Info color="action" fontSize="small" />
-        </IconButton>
-      </Tooltip>
-    );
-  });
+          <IconButton
+            {...iconButtonProps}
+            size="small"
+            onMouseOver={() => {
+              setIsTooltipOpen(true);
+            }}
+          >
+            <Info color="action" fontSize={fontSize} />
+          </IconButton>
+        </Tooltip>
+      );
+
+      if (!children) return tooltip;
+
+      return (
+        <Root>
+          <Typography {...TextProps}>{children}</Typography>
+          {tooltip}
+        </Root>
+      );
+    },
+  );
