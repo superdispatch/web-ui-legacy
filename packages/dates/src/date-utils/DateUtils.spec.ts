@@ -131,10 +131,10 @@ test.each([
 );
 
 test.each`
-  tz      | date              | shortDate   | time         | dateTime
-  ${0}    | ${'May 24, 2019'} | ${'May 24'} | ${'1:02 AM'} | ${'May 24, 2019, 1:02 AM'}
-  ${+300} | ${'May 24, 2019'} | ${'May 24'} | ${'6:02 AM'} | ${'May 24, 2019, 6:02 AM'}
-  ${-300} | ${'May 23, 2019'} | ${'May 23'} | ${'8:02 PM'} | ${'May 23, 2019, 8:02 PM'}
+  tz      | date              | shortDate   | time              | dateTime
+  ${0}    | ${'May 24, 2019'} | ${'May 24'} | ${'1:02\u202fAM'} | ${'May 24, 2019, 1:02\u202fAM'}
+  ${+300} | ${'May 24, 2019'} | ${'May 24'} | ${'6:02\u202fAM'} | ${'May 24, 2019, 6:02\u202fAM'}
+  ${-300} | ${'May 23, 2019'} | ${'May 23'} | ${'8:02\u202fPM'} | ${'May 23, 2019, 8:02\u202fPM'}
 `(
   'DateUtils({ zone: $tz })#format()',
   ({ tz, date, shortDate, time, dateTime }) => {

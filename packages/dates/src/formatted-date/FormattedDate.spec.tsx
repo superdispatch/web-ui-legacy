@@ -23,7 +23,7 @@ describe('useFormattedDate', () => {
       { initialProps: { input: Date.now(), variant: 'DateTime' } },
     );
 
-    expect(result.current).toBe('May 24, 2019, 7:13 AM');
+    expect(result.current).toBe('May 24, 2019, 7:13\u202fAM');
 
     rerender({ input: Date.now(), variant: 'Date' });
 
@@ -35,7 +35,7 @@ describe('useFormattedDate', () => {
 
     rerender({ input: Date.now(), variant: 'Time' });
 
-    expect(result.current).toBe('7:13 AM');
+    expect(result.current).toBe('7:13\u202fAM');
   });
 
   test('invalid', () => {
@@ -69,9 +69,9 @@ describe('FormattedDate', () => {
 
     expect(container).toMatchInlineSnapshot(`
       <div>
-        May 24, 2019, 7:13 AM
+        May 24, 2019, 7:13\u202fAM
         May 24, 2019
-        7:13 AM
+        7:13\u202fAM
         May 24
       </div>
     `);
