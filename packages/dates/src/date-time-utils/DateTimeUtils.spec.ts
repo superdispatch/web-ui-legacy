@@ -335,8 +335,8 @@ test.each<
     {
       ShortDate: 'May 24',
       Date: 'May 24, 2019',
-      Time: '12:13 PM',
-      DateTime: 'May 24, 2019, 12:13 PM',
+      Time: '12:13\u202fPM',
+      DateTime: 'May 24, 2019, 12:13\u202fPM',
     },
   ],
 
@@ -347,8 +347,8 @@ test.each<
     {
       ShortDate: 'May 24',
       Date: 'May 24, 2019',
-      Time: '8:06 AM',
-      DateTime: 'May 24, 2019, 8:06 AM',
+      Time: '8:06\u202fAM',
+      DateTime: 'May 24, 2019, 8:06\u202fAM',
     },
   ],
 
@@ -359,8 +359,8 @@ test.each<
     {
       ShortDate: 'May 24',
       Date: 'May 24, 2019',
-      Time: '2:06 AM',
-      DateTime: 'May 24, 2019, 2:06 AM',
+      Time: '2:06\u202fAM',
+      DateTime: 'May 24, 2019, 2:06\u202fAM',
     },
   ],
 
@@ -371,8 +371,8 @@ test.each<
     {
       ShortDate: 'May 24',
       Date: 'May 24, 2019',
-      Time: '12:06 PM',
-      DateTime: 'May 24, 2019, 12:06 PM',
+      Time: '12:06\u202fPM',
+      DateTime: 'May 24, 2019, 12:06\u202fPM',
     },
   ],
 
@@ -383,8 +383,8 @@ test.each<
     {
       ShortDate: 'May 23',
       Date: 'May 23, 2019',
-      Time: '10:06 PM',
-      DateTime: 'May 23, 2019, 10:06 PM',
+      Time: '10:06\u202fPM',
+      DateTime: 'May 23, 2019, 10:06\u202fPM',
     },
   ],
 ])(
