@@ -93,7 +93,6 @@ it('exposes public api', () => {
       "ExitTransitionPlaceholder": [Function],
       "GridStack": React.forwardRef(GridStack),
       "InfoCard": React.forwardRef(InfoCard),
-      "InfoTooltip": React.forwardRef(InfoTooltip),
       "Inline": React.forwardRef(Inline),
       "InlineGrid": React.forwardRef(InlineGrid),
       "NumberField": React.forwardRef(NumberField),

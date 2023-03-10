@@ -16,7 +16,6 @@ export * from './dropdown-button/DropdownButton';
 export * from './grid/GridStack';
 export * from './grid/InlineGrid';
 export * from './info-card/InfoCard';
-export * from './info-tooltip/InfoTooltip';
 export * from './inline/Inline';
 export * from './number-field/NumberField';
 export * from './overflow-text/OverflowText';
