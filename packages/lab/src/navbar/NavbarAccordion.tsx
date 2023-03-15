@@ -6,6 +6,7 @@ import {
   ReactElement,
   ReactNode,
   useEffect,
+  useMemo,
   useState,
 } from 'react';
 import styled from 'styled-components';
@@ -118,6 +119,18 @@ export function NavbarAccordion({
     setExpanded(isNavbarExpanded);
   }, [isNavbarExpanded]);
 
+  const filteredItems: NavbarItemOptions[] = useMemo(
+    () =>
+      items
+        .filter((item) => {
+          return !item.hide;
+        })
+        .map((item) => ({
+          ...item,
+        })),
+    [items],
+  );
+
   return (
     <NavbarAccordionRoot
       square={true}
@@ -143,9 +156,9 @@ export function NavbarAccordion({
         </NavbarAccordionLabel>
       </NavbarAccordionSummary>
 
-      {items.map((item) => {
-        const index = items.indexOf(item);
-        const prev = items[index - 1];
+      {filteredItems.map((item) => {
+        const index = filteredItems.indexOf(item);
+        const prev = filteredItems[index - 1];
         const { ident = 0 } = item;
 
         return (
