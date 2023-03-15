@@ -20,12 +20,12 @@ const DATE_DISPLAY_VARIANTS: Readonly<
   Record<DateDisplayVariant, Intl.DateTimeFormatOptions>
 > = {
   Date: {
-    day: '2-digit',
+    day: 'numeric',
     month: 'short',
     year: 'numeric',
   },
   ShortDate: {
-    day: '2-digit',
+    day: 'numeric',
     month: 'short',
   },
   Time: {
