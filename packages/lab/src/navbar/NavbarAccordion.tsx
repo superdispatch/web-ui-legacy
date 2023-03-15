@@ -119,15 +119,8 @@ export function NavbarAccordion({
     setExpanded(isNavbarExpanded);
   }, [isNavbarExpanded]);
 
-  const filteredItems: NavbarItemOptions[] = useMemo(
-    () =>
-      items
-        .filter((item) => {
-          return !item.hide;
-        })
-        .map((item) => ({
-          ...item,
-        })),
+  const filteredItems: Array<Omit<NavbarItemOptions, 'icon'>> = useMemo(
+    () => items.filter((item) => !item.hide),
     [items],
   );
 
