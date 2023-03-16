@@ -33,7 +33,7 @@ const DATE_DISPLAY_VARIANTS: Readonly<
     minute: 'numeric',
   },
   DateTime: {
-    day: '2-digit',
+    day: 'numeric',
     month: 'short',
     year: 'numeric',
     hour: 'numeric',
