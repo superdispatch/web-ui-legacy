@@ -7,6 +7,7 @@ import {
   ForwardRefExoticComponent,
   ReactNode,
 } from 'react';
+import { EMPTY_ERROR_MESSAGE } from './FormikCurrencyField';
 
 function parseInputValue(
   event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
@@ -30,7 +31,6 @@ export interface FormikTextFieldProps extends StandardTextFieldProps {
   name: string;
   validate?: FieldValidator;
   formatError?: (error: string) => ReactNode;
-  emptyErrorMessage?: boolean;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   format?: (value: any) => string;
@@ -53,8 +53,6 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
         disabled,
         helperText,
         error: errorProp,
-
-        emptyErrorMessage = false,
         parse = parseInputValue,
         format = formatInputValue,
         formatError = formatInputError,
@@ -66,7 +64,8 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
       const { isSubmitting } = useFormikContext();
       const [field, { error, touched }, { setValue, setTouched }] =
         useField<unknown>({ name, validate });
-      const errorText: ReactNode = touched && error && formatError(error);
+      const errorText: ReactNode =
+        touched && error && error !== EMPTY_ERROR_MESSAGE && formatError(error);
 
       return (
         <TextField
@@ -76,7 +75,7 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
           ref={ref}
           name={name}
           error={!!errorText || errorProp}
-          helperText={!emptyErrorMessage && (errorText || helperText)}
+          helperText={errorText || helperText}
           disabled={disabled ?? isSubmitting}
           value={format(field.value)}
           onBlur={(event) => {
