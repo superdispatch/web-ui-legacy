@@ -30,6 +30,7 @@ export interface FormikTextFieldProps extends StandardTextFieldProps {
   name: string;
   validate?: FieldValidator;
   formatError?: (error: string) => ReactNode;
+  emptyErrorMessage?: boolean;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   format?: (value: any) => string;
@@ -53,6 +54,7 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
         helperText,
         error: errorProp,
 
+        emptyErrorMessage = false,
         parse = parseInputValue,
         format = formatInputValue,
         formatError = formatInputError,
@@ -74,7 +76,7 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
           ref={ref}
           name={name}
           error={!!errorText || errorProp}
-          helperText={errorText || helperText}
+          helperText={!emptyErrorMessage && (errorText || helperText)}
           disabled={disabled ?? isSubmitting}
           value={format(field.value)}
           onBlur={(event) => {
