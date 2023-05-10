@@ -7,7 +7,7 @@ import {
   ForwardRefExoticComponent,
   ReactNode,
 } from 'react';
-import { EMPTY_ERROR_MESSAGE } from './FormikCurrencyField';
+import { EMPTY_ERROR_MESSAGE } from './constants';
 
 function parseInputValue(
   event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
