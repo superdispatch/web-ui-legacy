@@ -7,6 +7,7 @@ import {
   ForwardRefExoticComponent,
   ReactNode,
 } from 'react';
+import { EMPTY_ERROR_MESSAGE } from './constants';
 
 function parseInputValue(
   event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
@@ -52,7 +53,6 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
         disabled,
         helperText,
         error: errorProp,
-
         parse = parseInputValue,
         format = formatInputValue,
         formatError = formatInputError,
@@ -64,7 +64,8 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
       const { isSubmitting } = useFormikContext();
       const [field, { error, touched }, { setValue, setTouched }] =
         useField<unknown>({ name, validate });
-      const errorText: ReactNode = touched && error && formatError(error);
+      const errorText: ReactNode =
+        touched && error && error !== EMPTY_ERROR_MESSAGE && formatError(error);
 
       return (
         <TextField
