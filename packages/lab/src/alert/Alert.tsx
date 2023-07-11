@@ -72,6 +72,7 @@ export type AlertSeverityProp = 'positive' | 'info' | 'caution' | 'critical';
 export interface AlertProps {
   onClose?: () => void;
   children?: ReactNode;
+  icon?: ReactNode;
   severity?: AlertSeverityProp;
 }
 
@@ -94,10 +95,11 @@ const iconMapping: MaterialAlertProps['iconMapping'] = {
 };
 
 export const Alert = forwardRef<HTMLDivElement, AlertProps>(
-  ({ children, onClose, severity = 'positive' }, ref) => (
+  ({ children, onClose, severity = 'positive', icon }, ref) => (
     <StyledAlert
       ref={ref}
       variant="outlined"
+      icon={icon}
       iconMapping={iconMapping}
       severity={toMaterialSeverity(severity)}
       onClose={onClose}
