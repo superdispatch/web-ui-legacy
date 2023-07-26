@@ -1,0 +1,20 @@
+import { Meta } from '@storybook/react';
+import { PropsLink } from '@superdispatch/ui-docs';
+import { {{pascalCase name}} } from '@material-ui/core';
+
+export default {
+  title: '{{title}}/{{pascalCase name}}',
+  parameters: {
+    componentSubtitle: (
+      <PropsLink url="{{propsLink}}" />
+    ),
+  },
+} as Meta;
+
+export const basic = () => (
+  <{{pascalCase name}}>
+    {
+      // TODO: Add your component details here
+    }
+  </{{pascalCase name}}>
+);

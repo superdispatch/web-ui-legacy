@@ -40,7 +40,8 @@
     "test-visual": "yarn loki test --port 5000 --chromeRetries 2",
     "test-visual-ci": "yarn loki test --requireReference --verboseRenderer --reactUri",
     "test-branch": "yarn test --changedSince origin/main",
-    "test-changed": "yarn test --onlyChanged"
+    "test-changed": "yarn test --onlyChanged",
+    "generate": "plop"
   },
   "lint-staged": {
     "*": [
@@ -162,6 +163,7 @@
     "mockdate": "3.0.5",
     "npm-run-all": "4.1.5",
     "playroom": "0.27.9",
+    "plop": "^3.1.2",
     "prettier": "2.4.1",
     "react": "17.0.2",
     "react-docgen-typescript-loader": "3.7.2",
