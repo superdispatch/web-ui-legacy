@@ -30,27 +30,27 @@ module.exports = (plop) => {
           {
             type: 'add',
             path: `packages/${data.folder}/src/{{kebabCase name}}/{{pascalCase name}}.tsx`,
-            templateFile: 'plop-templates/overrides/component.hbs',
+            templateFile: 'scripts/plop-templates/overrides/component.hbs',
           },
           {
             type: 'add',
             path: `packages/${data.folder}/src/{{kebabCase name}}/{{pascalCase name}}.stories.tsx`,
-            templateFile: 'plop-templates/overrides/story.hbs',
+            templateFile: 'scripts/plop-templates/overrides/story.hbs',
           },
           {
             type: 'add',
             path: `packages/${data.folder}/src/{{kebabCase name}}/__tests__/{{pascalCase name}}.spec.tsx`,
-            templateFile: 'plop-templates/overrides/test.hbs',
+            templateFile: 'scripts/plop-templates/overrides/test.hbs',
           },
           {
             type: 'add',
             path: `packages/${data.folder}/src/{{kebabCase name}}/{{pascalCase name}}.playroom.tsx`,
-            templateFile: 'plop-templates/overrides/playroom.hbs',
+            templateFile: 'scripts/plop-templates/overrides/playroom.hbs',
           },
           {
             type: 'add',
             path: `packages/${data.folder}/src/{{kebabCase name}}/README.MD`,
-            templateFile: 'plop-templates/README.hbs',
+            templateFile: 'scripts/plop-templates/README.hbs',
           },
         );
       } else if (data.type === 'LAB Component') {
@@ -59,22 +59,22 @@ module.exports = (plop) => {
           {
             type: 'add',
             path: `packages/${data.folder}/src/{{kebabCase name}}/{{pascalCase name}}.tsx`,
-            templateFile: 'plop-templates/lab-component/component.hbs',
+            templateFile: 'scripts/plop-templates/lab-component/component.hbs',
           },
           {
             type: 'add',
             path: `packages/${data.folder}/src/{{kebabCase name}}/{{pascalCase name}}.stories.tsx`,
-            templateFile: 'plop-templates/lab-component/story.hbs',
+            templateFile: 'scripts/plop-templates/lab-component/story.hbs',
           },
           {
             type: 'add',
             path: `packages/${data.folder}/src/{{kebabCase name}}/__tests__/{{pascalCase name}}.spec.tsx`,
-            templateFile: 'plop-templates/lab-component/test.hbs',
+            templateFile: 'scripts/plop-templates/lab-component/test.hbs',
           },
           {
             type: 'add',
             path: `packages/${data.folder}/src/{{kebabCase name}}/README.MD`,
-            templateFile: 'plop-templates/README.hbs',
+            templateFile: 'scripts/plop-templates/README.hbs',
           },
         );
       }
