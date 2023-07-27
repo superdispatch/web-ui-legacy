@@ -7,7 +7,7 @@ module.exports = (plop) => {
         type: 'list',
         name: 'type',
         message: 'What type of component do you want to generate?',
-        choices: ['Overrides MUI', 'New Component'],
+        choices: ['Overrides MUI', 'LAB Component'],
       },
       {
         type: 'list',
@@ -26,7 +26,6 @@ module.exports = (plop) => {
 
       if (data.type === 'Overrides MUI') {
         // Here you can define the actions for the 'Overrides' type
-        // The path should be adjusted based on your project structure
         actions.push(
           {
             type: 'add',
@@ -54,14 +53,30 @@ module.exports = (plop) => {
             templateFile: 'plop-templates/README.hbs',
           },
         );
-      } else if (data.type === 'New Component') {
-        // Here you can define the actions for the 'New Component' type
-        // The path should be adjusted based on your project structure
-        actions.push({
-          type: 'add',
-          path: `packages/${data.folder}/src/{{pascalCase name}}/{{pascalCase name}}.js`,
-          templateFile: 'plop-templates/component.hbs',
-        });
+      } else if (data.type === 'LAB Component') {
+        // Here you can define the actions for the 'Lab Component' type
+        actions.push(
+          {
+            type: 'add',
+            path: `packages/${data.folder}/src/{{kebabCase name}}/{{pascalCase name}}.tsx`,
+            templateFile: 'plop-templates/lab-component/component.hbs',
+          },
+          {
+            type: 'add',
+            path: `packages/${data.folder}/src/{{kebabCase name}}/{{pascalCase name}}.stories.tsx`,
+            templateFile: 'plop-templates/lab-component/story.hbs',
+          },
+          {
+            type: 'add',
+            path: `packages/${data.folder}/src/{{kebabCase name}}/__tests__/{{pascalCase name}}.spec.tsx`,
+            templateFile: 'plop-templates/lab-component/test.hbs',
+          },
+          {
+            type: 'add',
+            path: `packages/${data.folder}/src/{{kebabCase name}}/README.MD`,
+            templateFile: 'plop-templates/README.hbs',
+          },
+        );
       }
 
       return actions;
