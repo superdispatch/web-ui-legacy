@@ -1,0 +1,30 @@
+import { forwardRef } from 'react';
+import styled from 'styled-components';
+
+// Import your necessary UI elements and other libraries here
+
+// Define your CSS mixins, animations, and other styled-components here
+
+const Styled{{pascalCase name}} = styled(`div`)`
+  /* Some CSS styles here */
+`;
+
+export interface {{pascalCase name}}Props {
+  /* Some component props here */
+}
+
+export const {{pascalCase name}} = forwardRef< /* Your Component's reference type here */ , {{pascalCase name}}Props>(
+  (props, ref) => {
+    // Use useEffect, useState and other hooks as per your need
+
+    // Implement your component's functionality here
+
+    return (
+      <Styled{{pascalCase name}} ref={ref} data-testid="{{camelCase name}}" {...props}>
+        {/* Render your component's children or other UI elements here */}
+      </Styled{{pascalCase name}}>
+    );
+  },
+);
+
+{{pascalCase name}}.displayName = '{{pascalCase name}}';

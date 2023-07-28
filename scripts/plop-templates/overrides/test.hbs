@@ -1,0 +1,11 @@
+import React from 'react';
+import { renderCSS } from '@superdispatch/ui-testutils';
+import { {{name}} } from '@material-ui/core';
+
+it('checks component css', () => {
+  expect(renderCSS(<{{name}} />, ['SD-{{name}}'])).toMatchInlineSnapshot(`
+    //TODO: Write component's CSS Snapshot
+  `);
+});
+
+//TODO: Add more tests

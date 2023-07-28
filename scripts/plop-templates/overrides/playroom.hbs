@@ -1,0 +1,12 @@
+import React from 'react';
+import { {{name}} as Mui{{name}}, {{name}}Props } from '@material-ui/core';
+import { forwardRef } from 'react';
+
+export const {{name}} = forwardRef<HTMLDivElement, {{name}}Props>(
+  ({ ...props }, ref) => (
+    <Mui{{name}}
+      {...props}
+      ref={ref}
+    />
+  ),
+);
