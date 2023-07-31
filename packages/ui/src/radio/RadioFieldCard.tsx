@@ -1,5 +1,6 @@
 import {
   ButtonBase,
+  ButtonBaseProps,
   Card,
   FormControlLabel,
   Radio,
@@ -24,26 +25,19 @@ interface RoleProps {
   icon: React.ReactNode;
 }
 
-interface RadioCardProps {
+interface RadioCardProps extends ButtonBaseProps {
   radioItem: RoleProps;
   value?: string;
-  setValue?: (type: string) => void;
 }
 
 export function RadioCard({
   radioItem,
   value,
-  setValue,
+  ...props
 }: RadioCardProps): ReactElement {
   return (
     <Card key={radioItem.value}>
-      <ClickableCard
-        onClick={() => {
-          if (setValue) {
-            setValue(radioItem.value);
-          }
-        }}
-      >
+      <ClickableCard {...props}>
         <Box
           borderRadius="small"
           borderWidth="small"

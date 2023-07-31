@@ -56,7 +56,13 @@ export const radioCard = () => {
     <UseState initialState="">
       {(value, setValue) => (
         <RadioGroupField fullWidth={true}>
-          <RadioCard radioItem={item} value={value} setValue={setValue} />
+          <RadioCard
+            radioItem={item}
+            value={value}
+            onClick={() => {
+              setValue(item.value);
+            }}
+          />
         </RadioGroupField>
       )}
     </UseState>
@@ -89,7 +95,9 @@ export const radioGroupCard = () => {
                 key={index}
                 radioItem={item}
                 value={value}
-                setValue={setValue}
+                onClick={() => {
+                  setValue(item.value);
+                }}
               />
             ))}
           </Stack>
