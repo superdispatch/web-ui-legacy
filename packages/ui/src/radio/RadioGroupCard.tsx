@@ -6,7 +6,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import { Box, TextBox } from '@superdispatch/ui-lab';
-import React from 'react';
+import { ReactElement } from 'react';
 import styled from 'styled-components';
 import { Column } from '../columns/Column';
 import { Columns } from '../columns/Columns';
@@ -33,7 +33,7 @@ export function RadioCard({
   roles,
   type,
   setType,
-}: RadioCardProps): React.ReactElement {
+}: RadioCardProps): ReactElement {
   return (
     <Stack space="small">
       {roles.map((roleType) => (
