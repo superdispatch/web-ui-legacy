@@ -4,7 +4,11 @@ import {
   Switch,
   TextField,
 } from '@material-ui/core';
+import { UseState } from '@superdispatch/ui-docs';
 import { CheckboxField, RadioField, RadioGroupField } from '..';
+import DispatcherIcon from './assets/dispatcher-icon.svg';
+import DriverIcon from './assets/driver-icon.svg';
+import { RadioCard } from './RadioGroupCard';
 
 export default { title: 'Inputs/RadioField', component: RadioField };
 
@@ -39,4 +43,29 @@ export const inlineForm = () => (
       <TextField placeholder="Text Field" />
     </FormGroup>
   </RadioGroupField>
+);
+
+const ROLES = [
+  {
+    value: 'dispatcher',
+    label: 'I Only Dispatch',
+    caption: 'I use Carrier TMS and do not use Driver App.',
+    icon: <img src={DispatcherIcon} />,
+  },
+  {
+    value: 'driver_dispatcher',
+    label: 'I Drive And Dispatch',
+    caption: 'I use both Carrier TMS and Driver App.',
+    icon: <img src={DriverIcon} />,
+  },
+];
+
+export const radioCard = () => (
+  <UseState initialState="">
+    {(type, setType) => (
+      <RadioGroupField fullWidth={true}>
+        <RadioCard roles={ROLES} type={type} setType={setType} />
+      </RadioGroupField>
+    )}
+  </UseState>
 );
