@@ -45,7 +45,7 @@ export const inlineForm = () => (
 );
 
 export const radioCard = () => {
-  const roleType = {
+  const item = {
     value: 'dispatcher',
     label: 'I Only Dispatch',
     caption: 'I use Carrier TMS and do not use Driver App.',
@@ -54,9 +54,9 @@ export const radioCard = () => {
 
   return (
     <UseState initialState="">
-      {(type, setType) => (
+      {(value, setValue) => (
         <RadioGroupField fullWidth={true}>
-          <RadioCard roleType={roleType} type={type} setType={setType} />
+          <RadioCard radioItem={item} value={value} setValue={setValue} />
         </RadioGroupField>
       )}
     </UseState>
@@ -64,7 +64,7 @@ export const radioCard = () => {
 };
 
 export const radioGroupCard = () => {
-  const ROLES = [
+  const values = [
     {
       value: 'dispatcher',
       label: 'I Only Dispatch',
@@ -81,15 +81,15 @@ export const radioGroupCard = () => {
 
   return (
     <UseState initialState="">
-      {(type, setType) => (
+      {(value, setValue) => (
         <RadioGroupField fullWidth={true}>
           <Stack space="small">
-            {ROLES.map((roleType, index) => (
+            {values.map((item, index) => (
               <RadioCard
                 key={index}
-                roleType={roleType}
-                type={type}
-                setType={setType}
+                radioItem={item}
+                value={value}
+                setValue={setValue}
               />
             ))}
           </Stack>

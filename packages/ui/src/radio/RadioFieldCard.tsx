@@ -25,47 +25,47 @@ interface RoleProps {
 }
 
 interface RadioCardProps {
-  roleType: RoleProps;
-  type?: string;
-  setType?: (type: string) => void;
+  radioItem: RoleProps;
+  value?: string;
+  setValue?: (type: string) => void;
 }
 
 export function RadioCard({
-  roleType,
-  type,
-  setType,
+  radioItem,
+  value,
+  setValue,
 }: RadioCardProps): ReactElement {
   return (
-    <Card key={roleType.value}>
+    <Card key={radioItem.value}>
       <ClickableCard
         onClick={() => {
-          if (setType) {
-            setType(roleType.value);
+          if (setValue) {
+            setValue(radioItem.value);
           }
         }}
       >
         <Box
           borderRadius="small"
           borderWidth="small"
-          borderColor={roleType.value === type ? 'Blue300' : 'Silver500'}
+          borderColor={radioItem.value === value ? 'Blue300' : 'Silver500'}
           padding={['small']}
           width="100%"
         >
           <Columns space="small">
             <Column>
               <FormControlLabel
-                value={roleType.value}
+                value={radioItem.value}
                 control={<Radio />}
-                checked={roleType.value === type}
-                label={<Typography variant="h4">{roleType.label}</Typography>}
+                checked={radioItem.value === value}
+                label={<Typography variant="h4">{radioItem.label}</Typography>}
               />
               <Box paddingLeft="large">
                 <TextBox color="secondary" variant="caption">
-                  {roleType.caption}
+                  {radioItem.caption}
                 </TextBox>
               </Box>
             </Column>
-            <Column width="content">{roleType.icon}</Column>
+            <Column width="content">{radioItem.icon}</Column>
           </Columns>
         </Box>
       </ClickableCard>
