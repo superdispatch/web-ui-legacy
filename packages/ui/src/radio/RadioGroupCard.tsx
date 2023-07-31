@@ -29,43 +29,51 @@ interface RadioCardProps {
   setType?: (type: string) => void;
 }
 
-export function RadioCard({ roles, type, setType }: RadioCardProps): void {
-  <Stack space="small">
-    {roles.map((roleType) => (
-      <Card key={roleType.value}>
-        <ClickableCard
-          onClick={() => {
-            if (setType) {
-              setType(roleType.value);
-            }
-          }}
-        >
-          <Box
-            borderRadius="small"
-            borderWidth="small"
-            borderColor={roleType.value === type ? 'Blue300' : 'Silver500'}
-            padding={['small']}
-            width="100%"
+export function RadioCard({
+  roles,
+  type,
+  setType,
+}: RadioCardProps): React.ReactElement {
+  return (
+    <Stack space="small">
+      {roles.map((roleType) => (
+        <Card key={roleType.value}>
+          <ClickableCard
+            onClick={() => {
+              if (setType) {
+                setType(roleType.value);
+              }
+            }}
           >
-            <Columns space="small">
-              <Column>
-                <FormControlLabel
-                  value={roleType.value}
-                  control={<Radio />}
-                  checked={roleType.value === type}
-                  label={<Typography variant="h4">{roleType.label}</Typography>}
-                />
-                <Box paddingLeft="large">
-                  <TextBox color="secondary" variant="caption">
-                    {roleType.caption}
-                  </TextBox>
-                </Box>
-              </Column>
-              <Column width="content">{roleType.icon}</Column>
-            </Columns>
-          </Box>
-        </ClickableCard>
-      </Card>
-    ))}
-  </Stack>;
+            <Box
+              borderRadius="small"
+              borderWidth="small"
+              borderColor={roleType.value === type ? 'Blue300' : 'Silver500'}
+              padding={['small']}
+              width="100%"
+            >
+              <Columns space="small">
+                <Column>
+                  <FormControlLabel
+                    value={roleType.value}
+                    control={<Radio />}
+                    checked={roleType.value === type}
+                    label={
+                      <Typography variant="h4">{roleType.label}</Typography>
+                    }
+                  />
+                  <Box paddingLeft="large">
+                    <TextBox color="secondary" variant="caption">
+                      {roleType.caption}
+                    </TextBox>
+                  </Box>
+                </Column>
+                <Column width="content">{roleType.icon}</Column>
+              </Columns>
+            </Box>
+          </ClickableCard>
+        </Card>
+      ))}
+    </Stack>
+  );
 }
