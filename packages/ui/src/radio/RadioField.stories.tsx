@@ -6,8 +6,8 @@ import {
 } from '@material-ui/core';
 import { AccountBoxOutlined, VerifiedUser } from '@material-ui/icons';
 import { UseState } from '@superdispatch/ui-docs';
-import { CheckboxField, RadioField, RadioGroupField } from '..';
-import { RadioCard, RadioGroupCard } from './RadioGroupCard';
+import { CheckboxField, RadioField, RadioGroupField, Stack } from '..';
+import { RadioCard } from './RadioFieldCard';
 
 export default { title: 'Inputs/RadioField', component: RadioField };
 
@@ -83,7 +83,16 @@ export const radioGroupCard = () => {
     <UseState initialState="">
       {(type, setType) => (
         <RadioGroupField fullWidth={true}>
-          <RadioGroupCard roles={ROLES} type={type} setType={setType} />
+          <Stack space="small">
+            {ROLES.map((roleType, index) => (
+              <RadioCard
+                key={index}
+                roleType={roleType}
+                type={type}
+                setType={setType}
+              />
+            ))}
+          </Stack>
         </RadioGroupField>
       )}
     </UseState>

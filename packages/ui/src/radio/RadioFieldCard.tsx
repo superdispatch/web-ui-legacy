@@ -10,7 +10,6 @@ import { ReactElement } from 'react';
 import styled from 'styled-components';
 import { Column } from '../columns/Column';
 import { Columns } from '../columns/Columns';
-import { Stack } from '../stack/Stack';
 
 const ClickableCard = styled(ButtonBase)`
   display: block;
@@ -71,30 +70,5 @@ export function RadioCard({
         </Box>
       </ClickableCard>
     </Card>
-  );
-}
-
-interface RadioGroupCardProps {
-  roles: RoleProps[];
-  type?: string;
-  setType?: (type: string) => void;
-}
-
-export function RadioGroupCard({
-  roles,
-  type,
-  setType,
-}: RadioGroupCardProps): ReactElement {
-  return (
-    <Stack space="small">
-      {roles.map((roleType, index) => (
-        <RadioCard
-          key={index}
-          roleType={roleType}
-          type={type}
-          setType={setType}
-        />
-      ))}
-    </Stack>
   );
 }
