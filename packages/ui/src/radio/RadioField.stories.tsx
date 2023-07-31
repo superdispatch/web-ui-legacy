@@ -7,7 +7,7 @@ import {
 import { AccountBoxOutlined, VerifiedUser } from '@material-ui/icons';
 import { UseState } from '@superdispatch/ui-docs';
 import { CheckboxField, RadioField, RadioGroupField } from '..';
-import { RadioCard } from './RadioGroupCard';
+import { RadioCard, RadioGroupCard } from './RadioGroupCard';
 
 export default { title: 'Inputs/RadioField', component: RadioField };
 
@@ -45,6 +45,25 @@ export const inlineForm = () => (
 );
 
 export const radioCard = () => {
+  const roleType = {
+    value: 'dispatcher',
+    label: 'I Only Dispatch',
+    caption: 'I use Carrier TMS and do not use Driver App.',
+    icon: <AccountBoxOutlined />,
+  };
+
+  return (
+    <UseState initialState="">
+      {(type, setType) => (
+        <RadioGroupField fullWidth={true}>
+          <RadioCard roleType={roleType} type={type} setType={setType} />
+        </RadioGroupField>
+      )}
+    </UseState>
+  );
+};
+
+export const radioGroupCard = () => {
   const ROLES = [
     {
       value: 'dispatcher',
@@ -64,7 +83,7 @@ export const radioCard = () => {
     <UseState initialState="">
       {(type, setType) => (
         <RadioGroupField fullWidth={true}>
-          <RadioCard roles={ROLES} type={type} setType={setType} />
+          <RadioGroupCard roles={ROLES} type={type} setType={setType} />
         </RadioGroupField>
       )}
     </UseState>
