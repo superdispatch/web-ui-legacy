@@ -1,0 +1,16 @@
+import { Color } from '../theme/Color';
+import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
+
+export function override{{pascalCase name}}(theme: SuperDispatchTheme): void {
+  theme.props.Mui{{pascalCase name}} = {
+    // props configuration here
+  };
+
+  theme.overrides.Mui{{pascalCase name}} = {
+    root: {
+      // root configuration here
+    },
+    
+    // add other necessary classes configurations here
+  };
+}
