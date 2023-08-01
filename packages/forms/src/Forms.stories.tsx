@@ -54,7 +54,7 @@ export const SignUp = () => {
       dateOfBirth: undefined,
       phone: '',
       about: '',
-      user_type: '',
+      user_type: 'dispatcher',
     },
     onSubmit(values) {
       return new Promise((resolve, reject) => {
