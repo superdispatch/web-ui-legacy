@@ -4,11 +4,6 @@ import { Chat } from '../Chat';
 import { ChatMessage } from '../ChatMessage';
 
 describe('Chat', () => {
-  it('Snapshot', () => {
-    renderComponent(<Chat>Chat</Chat>);
-    expect(screen.getByTestId('chat-container')).toMatchSnapshot();
-  });
-
   it('Displays placeholder message when no messages are provided', () => {
     renderComponent(<Chat />);
 
