@@ -52,6 +52,7 @@ export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFiel
             {radioItems.map((radioItem) => {
               return (
                 <RadioFieldCard
+                  {...field}
                   key={radioItem.value}
                   radioItem={radioItem}
                   onClick={() => {
