@@ -25,6 +25,7 @@ export * from './props/CollapseProp';
 export * from './props/ResponsiveProp';
 export * from './props/SpaceProp';
 export * from './radio/RadioField';
+export * from './radio/RadioFieldCard';
 export * from './radio/RadioGroupField';
 export * from './responsive/CollapseBreakpoint';
 export * from './responsive/MinBreakpoint';

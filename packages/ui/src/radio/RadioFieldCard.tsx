@@ -9,8 +9,7 @@ import {
 import { Box, TextBox } from '@superdispatch/ui-lab';
 import { forwardRef, ForwardRefExoticComponent } from 'react';
 import styled from 'styled-components';
-import { Column } from '../columns/Column';
-import { Columns } from '../columns/Columns';
+import { Column, Columns } from '..';
 
 const ClickableCard = styled(ButtonBase)`
   display: block;
@@ -35,8 +34,8 @@ interface RadioCardProps extends ButtonBaseProps {
   disabled?: boolean;
 }
 
-export const RadioCard: ForwardRefExoticComponent<RadioCardProps> = forwardRef(
-  ({ radioItem, value, disabled, ...props }) => {
+export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
+  forwardRef(({ radioItem, value, disabled, ...props }) => {
     return (
       <Card disabled={disabled} key={radioItem.value}>
         <ClickableCard disabled={disabled} {...props}>
@@ -69,5 +68,4 @@ export const RadioCard: ForwardRefExoticComponent<RadioCardProps> = forwardRef(
         </ClickableCard>
       </Card>
     );
-  },
-);
+  });
