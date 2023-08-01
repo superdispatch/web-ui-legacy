@@ -21,7 +21,7 @@ const Card = styled(MuiCard)`
   opacity: ${(props: { disabled?: boolean }) => (props.disabled ? 0.5 : 1)};
 `;
 
-interface RoleProps {
+export interface RadioCardItemProps {
   value: string;
   label: string;
   caption: string;
@@ -29,7 +29,7 @@ interface RoleProps {
 }
 
 interface RadioCardProps extends ButtonBaseProps {
-  radioItem: RoleProps;
+  radioItem: RadioCardItemProps;
   value?: string;
   disabled?: boolean;
 }

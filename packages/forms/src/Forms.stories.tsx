@@ -1,3 +1,4 @@
+import { AccountBoxOutlined, VerifiedUser } from '@material-ui/icons';
 import { Alert } from '@material-ui/lab';
 import { Meta } from '@storybook/react';
 import { Button, Inline, Stack, useSnackbarStack } from '@superdispatch/ui';
@@ -7,6 +8,7 @@ import {
   FormikDateField,
   FormikMaxLengthTextField,
   FormikPasswordField,
+  FormikRadioCardField,
   FormikTextField,
   SuspendedFormikPhoneField,
   useFormikEnhanced,
@@ -16,6 +18,21 @@ export default {
   title: 'Recipes/Forms',
   parameters: { playroom: { disable: true } },
 } as Meta;
+
+const radioItems = [
+  {
+    value: 'dispatcher',
+    label: 'I Only Dispatch',
+    caption: 'I use Carrier TMS and do not use Driver App.',
+    icon: <AccountBoxOutlined />,
+  },
+  {
+    value: 'driver_dispatcher',
+    label: 'I Drive And Dispatch',
+    caption: 'I use both Carrier TMS and Driver App.',
+    icon: <VerifiedUser />,
+  },
+];
 
 export const SignUp = () => {
   const { addSnackbar } = useSnackbarStack();
@@ -27,6 +44,7 @@ export const SignUp = () => {
       dateOfBirth: undefined | string;
       phone: string;
       about: string;
+      user_type: string;
     },
     Record<string, unknown>
   >({
@@ -36,6 +54,7 @@ export const SignUp = () => {
       dateOfBirth: undefined,
       phone: '',
       about: '',
+      user_type: '',
     },
     onSubmit(values) {
       return new Promise((resolve, reject) => {
@@ -126,6 +145,12 @@ export const SignUp = () => {
               name="about"
               label="About"
               maxLength={100}
+            />
+
+            <FormikRadioCardField
+              label="User Type"
+              radioItems={radioItems}
+              name="user_type"
             />
 
             {status.type === 'rejected' && (
