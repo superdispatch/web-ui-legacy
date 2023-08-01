@@ -1,8 +1,8 @@
-import React from 'react';
+import { renderComponent } from '@superdispatch/ui-testutils';
 import { {{pascalCase name}} } from '../{{pascalCase name}}';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 
 test('{{pascalCase name}} renders', () => {
-  render(<{{pascalCase name}}>{{pascalCase name}}</{{pascalCase name}}>);
+  renderComponent(<{{pascalCase name}}>{{pascalCase name}}</{{pascalCase name}}>);
   expect(screen.getByTestId('{{camelCase name}}')).toMatchSnapshot();
 });
