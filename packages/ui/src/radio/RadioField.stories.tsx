@@ -69,6 +69,32 @@ export const radioCard = () => {
   );
 };
 
+export const radioCardDisabled = () => {
+  const item = {
+    value: 'dispatcher',
+    label: 'I Only Dispatch',
+    caption: 'I use Carrier TMS and do not use Driver App.',
+    icon: <AccountBoxOutlined />,
+  };
+
+  return (
+    <UseState initialState="">
+      {(value, setValue) => (
+        <RadioGroupField fullWidth={true}>
+          <RadioCard
+            radioItem={item}
+            value={value}
+            disabled={true}
+            onClick={() => {
+              setValue(item.value);
+            }}
+          />
+        </RadioGroupField>
+      )}
+    </UseState>
+  );
+};
+
 export const radioGroupCard = () => {
   const values = [
     {
