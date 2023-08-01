@@ -13,9 +13,9 @@ const ChatContainer = styled('div')<{
 }>(
   ({ isEmpty }) => `
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   overflow: auto;
-  justify-content: ${isEmpty ? 'center' : 'flex-end'};
+  justify-content: ${isEmpty ? 'center' : 'end'};
   width: 100%;
   height: 100%;
   min-height: 368px;

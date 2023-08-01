@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat Snapshot 1`] = `
+<div
+  class="Chat__ChatContainer-SD__sc-qksih8-0 gouKLC"
+  data-testid="chat-container"
+>
+  <div
+    class="Stack__StackRoot-SD__sc-qkml7c-0 fPCNur"
+  >
+    <div>
+      Chat
+    </div>
+  </div>
+</div>
+`;
