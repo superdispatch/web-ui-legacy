@@ -1,7 +1,7 @@
 // Chat.tsx
 import { Typography } from '@material-ui/core';
 import { Stack } from '@superdispatch/ui';
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import styled from 'styled-components';
 
 interface ChatProps {

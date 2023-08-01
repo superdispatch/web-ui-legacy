@@ -2,11 +2,10 @@
 // It displays the author, role, and date/time of the message.
 // It also displays the text of the message.
 // It displays the author's message on the right and the receiver's message on the left.
-
 import { Typography } from '@material-ui/core';
 import { Inline, Stack } from '@superdispatch/ui';
 import { Box } from '@superdispatch/ui-lab';
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 
 interface ChatMessageProps {
   author: string;
