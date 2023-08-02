@@ -69,8 +69,8 @@ Object {
   "divider": "Color.Silver400",
   "error": Object {
     "contrastText": "Color.White",
-    "dark": "rgb(166, 33, 16)",
-    "light": "rgb(241, 89, 69)",
+    "dark": "rgb(160, 24, 9)",
+    "light": "rgb(234, 79, 61)",
     "main": "Color.Red300",
   },
   "getContrastText": [Function],
@@ -98,8 +98,8 @@ Object {
   },
   "primary": Object {
     "contrastText": "Color.White",
-    "dark": "rgb(0, 81, 178)",
-    "light": "rgb(51, 144, 255)",
+    "dark": "rgb(0, 78, 171)",
+    "light": "rgb(51, 140, 247)",
     "main": "Color.Blue300",
   },
   "secondary": Object {

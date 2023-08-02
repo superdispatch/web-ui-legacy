@@ -121,7 +121,7 @@ it('checks component css', () => {
 
     .MuiPaginationItem-textPrimary.Mui-selected:hover,
     .MuiPaginationItem-textPrimary.Mui-selected.Mui-focusVisible {
-      background-color: rgb(0, 81, 178);
+      background-color: rgb(0, 78, 171);
     }
 
     .MuiPaginationItem-textPrimary.Mui-selected.Mui-disabled {
@@ -166,13 +166,13 @@ it('checks component css', () => {
 
     .MuiPaginationItem-outlinedPrimary.Mui-selected {
       color: Color.Blue300;
-      border: 1px solid rgba(0, 117, 255, 0.5);
-      background-color: rgba(0, 117, 255, 0.12);
+      border: 1px solid rgba(0, 112, 245, 0.5);
+      background-color: rgba(0, 112, 245, 0.12);
     }
 
     .MuiPaginationItem-outlinedPrimary.Mui-selected:hover,
     .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-focusVisible {
-      background-color: rgba(0, 117, 255, 0.16);
+      background-color: rgba(0, 112, 245, 0.16);
     }
 
     .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-disabled {

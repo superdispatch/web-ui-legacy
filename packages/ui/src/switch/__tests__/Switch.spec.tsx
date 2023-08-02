@@ -116,7 +116,7 @@ it('checks component css', () => {
 }
 
 .MuiSwitch-colorPrimary.Mui-checked:hover + .MuiSwitch-track {
-  background-color: Color.Blue400;
+  background-color: Color.Blue500;
 }
 
 .MuiSwitch-colorSecondary.Mui-checked {
