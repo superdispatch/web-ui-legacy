@@ -1,6 +1,6 @@
 import { Typography } from '@material-ui/core';
 import { Stack } from '@superdispatch/ui';
-import { forwardRef } from 'react';
+import { Children, forwardRef } from 'react';
 import styled from 'styled-components';
 
 interface ChatProps {
@@ -40,10 +40,10 @@ function emptyPlaceholder(text: string): React.ReactNode {
 }
 
 export const Chat = forwardRef<HTMLDivElement, ChatProps>(
-  ({ children, emptyText = 'No new messages' }) => {
-    const isEmpty = React.Children.toArray(children).length === 0;
+  ({ children, emptyText = 'No new messages' }, ref) => {
+    const isEmpty = Children.toArray(children).length === 0;
     return (
-      <ChatContainer data-testid="chat-container" isEmpty={isEmpty}>
+      <ChatContainer data-testid="chat-container" isEmpty={isEmpty} ref={ref}>
         <Stack space="small">
           {isEmpty ? emptyPlaceholder(emptyText) : children}
         </Stack>
