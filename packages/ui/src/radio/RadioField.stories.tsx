@@ -52,6 +52,7 @@ export const inlineForm = () => (
 export const radioCard = () => {
   const item = {
     value: 'dispatcher',
+    name: 'dispatcher',
     label: 'I Only Dispatch',
     caption: 'I use Carrier TMS and do not use Driver App.',
     icon: <AccountBoxOutlined />,
@@ -62,7 +63,7 @@ export const radioCard = () => {
       {(value, setValue) => (
         <RadioGroupField fullWidth={true}>
           <RadioFieldCard
-            radioItem={item}
+            {...item}
             value={value}
             onClick={() => {
               setValue(item.value);
@@ -77,6 +78,7 @@ export const radioCard = () => {
 export const radioCardDisabled = () => {
   const item = {
     value: 'dispatcher',
+    name: 'dispatcher',
     label: 'I Only Dispatch',
     caption: 'I use Carrier TMS and do not use Driver App.',
     icon: <AccountBoxOutlined />,
@@ -87,7 +89,7 @@ export const radioCardDisabled = () => {
       {(value, setValue) => (
         <RadioGroupField fullWidth={true}>
           <RadioFieldCard
-            radioItem={item}
+            {...item}
             value={value}
             disabled={true}
             onClick={() => {
@@ -104,12 +106,14 @@ export const radioGroupCard = () => {
   const values = [
     {
       value: 'dispatcher',
+      name: 'dispatcher',
       label: 'I Only Dispatch',
       caption: 'I use Carrier TMS and do not use Driver App.',
       icon: <AccountBoxOutlined />,
     },
     {
       value: 'driver_dispatcher',
+      name: 'driver_dispatcher',
       label: 'I Drive And Dispatch',
       caption: 'I use both Carrier TMS and Driver App.',
       icon: <VerifiedUser />,
@@ -123,8 +127,8 @@ export const radioGroupCard = () => {
           <Stack space="small">
             {values.map((item, index) => (
               <RadioFieldCard
+                {...item}
                 key={index}
-                radioItem={item}
                 value={value}
                 onClick={() => {
                   setValue(item.value);

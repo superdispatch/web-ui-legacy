@@ -22,12 +22,14 @@ export default {
 const radioItems = [
   {
     value: 'dispatcher',
+    name: 'dispatcher',
     label: 'I Only Dispatch',
     caption: 'I use Carrier TMS and do not use Driver App.',
     icon: <AccountBoxOutlined />,
   },
   {
     value: 'driver_dispatcher',
+    name: 'driver_dispatcher',
     label: 'I Drive And Dispatch',
     caption: 'I use both Carrier TMS and Driver App.',
     icon: <VerifiedUser />,

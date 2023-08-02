@@ -42,19 +42,18 @@ export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFiel
           {...props}
           {...field}
           ref={ref}
-          onChange={(event, value) => {
-            onChange?.(event, value);
+          disabled={disabled || isSubmitting}
+          onChange={(event) => {
             field.onChange(event);
           }}
-          disabled={disabled || isSubmitting}
         >
           <Stack>
             {radioItems.map((radioItem) => {
               return (
                 <RadioFieldCard
-                  {...field}
+                  {...radioItem}
+                  value={field.value as string}
                   key={radioItem.value}
-                  radioItem={radioItem}
                   onClick={() => {
                     field.onChange(radioItem.value);
                   }}
