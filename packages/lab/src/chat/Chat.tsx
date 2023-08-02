@@ -1,6 +1,6 @@
 import { Typography } from '@material-ui/core';
 import { Stack } from '@superdispatch/ui';
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import styled from 'styled-components';
 
 interface ChatProps {
@@ -41,7 +41,6 @@ function emptyPlaceholder(text: string): React.ReactNode {
 
 export const Chat = forwardRef<HTMLDivElement, ChatProps>(
   ({ children, emptyText = 'No new messages' }) => {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     const isEmpty = React.Children.toArray(children).length === 0;
     return (
       <ChatContainer data-testid="chat-container" isEmpty={isEmpty}>
