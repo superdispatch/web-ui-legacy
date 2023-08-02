@@ -1,10 +1,11 @@
 import { Typography } from '@material-ui/core';
 import { Stack } from '@superdispatch/ui';
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 
 interface ChatProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode | React.ReactNode[];
+  emptyText?: string;
 }
 
 const ChatContainer = styled('div')<{
@@ -30,19 +31,26 @@ const ChatContainer = styled('div')<{
 `,
 );
 
-const emptyPlaceholder = (
-  <Typography color="textSecondary" align="center">
-    No new messages from Super Shipper. <br />
-    We will let you know when they send you a message.
-  </Typography>
-);
-
-export const Chat = forwardRef<HTMLDivElement, ChatProps>(({ children }) => {
+function emptyPlaceholder(text: string): React.ReactNode {
   return (
-    <ChatContainer data-testid="chat-container" isEmpty={!children}>
-      <Stack space="small">{!children ? emptyPlaceholder : children}</Stack>
-    </ChatContainer>
+    <Typography color="textSecondary" align="center">
+      {text}
+    </Typography>
   );
-});
+}
+
+export const Chat = forwardRef<HTMLDivElement, ChatProps>(
+  ({ children, emptyText = 'No new messages' }) => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+    const isEmpty = React.Children.toArray(children).length === 0;
+    return (
+      <ChatContainer data-testid="chat-container" isEmpty={isEmpty}>
+        <Stack space="small">
+          {isEmpty ? emptyPlaceholder(emptyText) : children}
+        </Stack>
+      </ChatContainer>
+    );
+  },
+);
 
 Chat.displayName = 'Chat';

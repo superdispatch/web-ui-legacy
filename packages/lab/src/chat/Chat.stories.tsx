@@ -23,10 +23,18 @@ export const SingleMessage = () => (
   </Box>
 );
 
-export const EmptyChat = () => (
+export const EmptyArrayChat = () => (
   <Box>
     <Card>
-      <Chat />
+      <Chat emptyText="Array is empty">{[]}</Chat>
+    </Card>
+  </Box>
+);
+
+export const EmptyNullableChat = () => (
+  <Box>
+    <Card>
+      <Chat>{null}</Chat>
     </Card>
   </Box>
 );
