@@ -11,10 +11,6 @@ interface ChatMessageProps {
   variant: 'incoming' | 'outgoing';
 }
 
-// This component renders a chat message.
-// It displays the author, role, and date/time of the message.
-// It also displays the text of the message.
-// It displays the author's message on the right and the receiver's message on the left.
 export const ChatMessage = forwardRef<HTMLDivElement, ChatMessageProps>(
   ({ author, role, dateTime, text, variant }) => {
     return (
