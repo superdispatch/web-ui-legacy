@@ -22,14 +22,14 @@ export default {
 const radioItems = [
   {
     value: 'dispatcher',
-    name: 'dispatcher',
+    name: 'user_type',
     label: 'I Only Dispatch',
     caption: 'I use Carrier TMS and do not use Driver App.',
     icon: <AccountBoxOutlined />,
   },
   {
     value: 'driver_dispatcher',
-    name: 'driver_dispatcher',
+    name: 'user_type',
     label: 'I Drive And Dispatch',
     caption: 'I use both Carrier TMS and Driver App.',
     icon: <VerifiedUser />,
@@ -79,7 +79,7 @@ export const SignUp = () => {
     },
   });
 
-  const { status, resetForm, isSubmitting } = formik;
+  const { status, resetForm, isSubmitting, setFieldValue } = formik;
 
   if (status.type === 'submitted') {
     return (
@@ -153,6 +153,9 @@ export const SignUp = () => {
               label="User Type"
               radioItems={radioItems}
               name="user_type"
+              onClick={(value) => {
+                setFieldValue('user_type', value);
+              }}
             />
 
             {status.type === 'rejected' && (

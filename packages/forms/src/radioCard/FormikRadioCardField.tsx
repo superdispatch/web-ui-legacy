@@ -1,18 +1,19 @@
 import {
   RadioCardItemProps,
   RadioFieldCard,
-  RadioGroupField,
   RadioGroupFieldProps,
   Stack,
 } from '@superdispatch/ui';
 import { FieldValidator, useField, useFormikContext } from 'formik';
 import { forwardRef, ForwardRefExoticComponent } from 'react';
+import { FormikRadioGroupField } from '../radio/FormikRadioGroupField';
 
 export interface FormikRadioCardFieldProps
-  extends Omit<RadioGroupFieldProps, 'error' | 'value'> {
+  extends Omit<RadioGroupFieldProps, 'error' | 'value' | 'onClick'> {
   name: string;
   validate?: FieldValidator;
   radioItems: RadioCardItemProps[];
+  onClick?: (value: string) => void;
 }
 
 export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFieldProps> =
@@ -22,6 +23,7 @@ export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFiel
         name,
         validate,
         radioItems,
+        onClick,
 
         disabled,
         ...props
@@ -35,7 +37,7 @@ export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFiel
       });
 
       return (
-        <RadioGroupField
+        <FormikRadioGroupField
           {...props}
           {...field}
           ref={ref}
@@ -49,16 +51,18 @@ export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFiel
               return (
                 <RadioFieldCard
                   {...radioItem}
-                  value={field.value as string}
                   key={radioItem.value}
+                  checked={field.value === radioItem.value}
                   onClick={() => {
-                    field.onChange(radioItem.value);
+                    if (onClick) {
+                      onClick(radioItem.value);
+                    }
                   }}
                 />
               );
             })}
           </Stack>
-        </RadioGroupField>
+        </FormikRadioGroupField>
       );
     },
   );

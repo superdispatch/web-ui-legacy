@@ -65,6 +65,7 @@ export const radioCard = () => {
           <RadioFieldCard
             {...item}
             value={value}
+            checked={value === item.value}
             onClick={() => {
               setValue(item.value);
             }}
@@ -130,6 +131,7 @@ export const radioGroupCard = () => {
                 {...item}
                 key={index}
                 value={value}
+                checked={value === item.value}
                 onClick={() => {
                   setValue(item.value);
                 }}
