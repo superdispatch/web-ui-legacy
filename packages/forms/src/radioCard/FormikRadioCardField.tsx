@@ -23,10 +23,7 @@ export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFiel
         validate,
         radioItems,
 
-        onBlur,
-        onChange,
         disabled,
-        helperText,
         ...props
       },
       ref,
