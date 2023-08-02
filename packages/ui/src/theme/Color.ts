@@ -45,12 +45,16 @@ export enum Color {
   Dark100 = '#8F949E',
   Dark200 = '#6A707C',
   Dark300 = '#5B6371',
+  /**@deprecated */
   Dark400 = '#323C4E',
+  /**@deprecated */
   Dark450 = '#222F44',
   Dark500 = '#192334',
 
+  /**@deprecated */
   Silver100 = '#F6F7F8',
   Silver200 = '#F3F5F8',
+  /**@deprecated */
   Silver300 = '#E8ECF0',
   Silver400 = '#E1E5EA',
   Silver500 = '#C4CDD5',
@@ -60,52 +64,76 @@ export enum Color {
   //
 
   Blue50 = '#EBF4FF',
+  /** @deprecated */
   Blue75 = '#CCE5FF',
+  /** @deprecated */
   Blue100 = '#A8D1FF',
+  /** @deprecated */
   Blue200 = '#66ADFF',
-  Blue300 = '#0075FF',
+  Blue300 = '#0070F5',
+  /** @deprecated */
   Blue400 = '#0063DB',
-  Blue500 = '#0050B2',
+  Blue500 = '#0063DB',
 
   Green50 = '#ECF9EF',
+  /** @deprecated */
   Green75 = '#C8F4D1',
+  /** @deprecated */
   Green100 = '#90EAAE',
+  /** @deprecated */
   Green200 = '#5DDA87',
-  Green300 = '#1FA84D',
+  Green300 = '#03872F',
+  /** @deprecated */
   Green400 = '#1E8F46',
-  Green500 = '#19803D',
+  Green500 = '#007A29',
 
   Purple50 = '#EFEEFC',
+  /** @deprecated */
   Purple75 = '#DCDBF5',
+  /** @deprecated */
   Purple100 = '#CBC8EE',
+  /** @deprecated */
   Purple200 = '#A7A1E8',
   Purple300 = '#6559CF',
+  /** @deprecated */
   Purple400 = '#473ABB',
-  Purple500 = '#3A2F9D',
+  Purple500 = '#473ABB',
 
   Red50 = '#FFEDEB',
+  /** @deprecated */
   Red75 = '#FDD9D3',
+  /** @deprecated */
   Red100 = '#FDC2BA',
+  /** @deprecated */
   Red200 = '#FE988B',
-  Red300 = '#EE3017',
+  Red300 = '#E5230D',
+  /** @deprecated */
   Red400 = '#D9210D',
   Red500 = '#C31909',
 
   Teal50 = '#E3F6FC',
+  /** @deprecated */
   Teal75 = '#BEEDF9',
+  /** @deprecated */
   Teal100 = '#91E3F8',
+  /** @deprecated */
   Teal200 = '#61D3EF',
-  Teal300 = '#00A0CC',
+  Teal300 = '#007EAB',
+  /** @deprecated */
   Teal400 = '#008DB8',
-  Teal500 = '#007DA3',
+  Teal500 = '#00678A',
 
-  Yellow50 = '#FFF9E5',
+  Yellow50 = '#FFF7DC',
+  /** @deprecated */
   Yellow75 = '#FFF1C2',
+  /** @deprecated */
   Yellow100 = '#FFE494',
+  /** @deprecated */
   Yellow200 = '#FFDC6B',
-  Yellow300 = '#FFCB47',
+  Yellow300 = '#C94F08',
+  /** @deprecated */
   Yellow400 = '#FFA91F',
-  Yellow500 = '#DB7500',
+  Yellow500 = '#B84807',
 }
 
 export type ColorProp = keyof typeof Color;
