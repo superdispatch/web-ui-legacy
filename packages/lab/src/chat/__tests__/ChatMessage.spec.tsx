@@ -1,4 +1,3 @@
-// ChatMessage.test.tsx
 import { renderComponent } from '@superdispatch/ui-testutils';
 import { screen } from '@testing-library/react';
 import { ChatMessage } from '../ChatMessage';

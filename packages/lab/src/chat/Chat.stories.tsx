@@ -1,4 +1,3 @@
-// Chat.stories.tsx
 import { Card } from '@material-ui/core';
 import { Meta } from '@storybook/react';
 import { Box } from '@superdispatch/ui-lab';

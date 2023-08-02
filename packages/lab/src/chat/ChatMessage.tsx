@@ -12,9 +12,14 @@ interface ChatMessageProps {
 }
 
 export const ChatMessage = forwardRef<HTMLDivElement, ChatMessageProps>(
-  ({ author, role, dateTime, text, variant }) => {
+  ({ author, role, dateTime, text, variant }, ref) => {
     return (
-      <Stack space="xxsmall" align={variant === 'outgoing' ? 'right' : 'left'}>
+      <Stack
+        space="xxsmall"
+        align={variant === 'outgoing' ? 'right' : 'left'}
+        ref={ref}
+        data-testid="chat-message"
+      >
         <Inline verticalAlign="center">
           <Typography color="textPrimary">{author}</Typography>
           <Typography color="textSecondary">{role}</Typography>
