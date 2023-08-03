@@ -1,7 +1,18 @@
-import { AccountBoxOutlined, VerifiedUser } from '@material-ui/icons';
+import {
+  AccountBoxOutlined,
+  MessageOutlined,
+  VerifiedUser,
+} from '@material-ui/icons';
 import { Alert } from '@material-ui/lab';
 import { Meta } from '@storybook/react';
-import { Button, Inline, Stack, useSnackbarStack } from '@superdispatch/ui';
+import {
+  Button,
+  Inline,
+  RadioFieldCard,
+  Stack,
+  useSnackbarStack,
+} from '@superdispatch/ui';
+import { PostAddIcon } from '@superdispatch/ui-docs/generated/components';
 import { Box } from '@superdispatch/ui-lab';
 import { Form, FormikProvider } from 'formik';
 import {
@@ -9,6 +20,7 @@ import {
   FormikMaxLengthTextField,
   FormikPasswordField,
   FormikRadioCardField,
+  FormikRadioGroupField,
   FormikTextField,
   SuspendedFormikPhoneField,
   useFormikEnhanced,
@@ -78,7 +90,7 @@ export const SignUp = () => {
     },
   });
 
-  const { status, resetForm, isSubmitting } = formik;
+  const { status, resetForm, isSubmitting, setFieldValue } = formik;
 
   if (status.type === 'submitted') {
     return (
@@ -148,11 +160,34 @@ export const SignUp = () => {
               maxLength={100}
             />
 
-            <FormikRadioCardField
-              label="User Type"
-              name="user_type"
-              radioItems={radioItems}
-            />
+            <FormikRadioGroupField fullWidth={true} label="Posts" name="post">
+              <Stack>
+                <RadioFieldCard
+                  label="Message"
+                  name="post"
+                  value="message"
+                  caption="Message description"
+                  icon={<MessageOutlined />}
+                  onClick={() => {
+                    setFieldValue('post', 'message');
+                  }}
+                />
+                <RadioFieldCard
+                  label="Poster"
+                  name="post"
+                  value="poster"
+                  caption="Poster description"
+                  icon={<PostAddIcon />}
+                  onClick={() => {
+                    setFieldValue('post', 'poster');
+                  }}
+                />
+              </Stack>
+            </FormikRadioGroupField>
+
+            <FormikRadioCardField label="User Type" name="user_type">
+              {radioItems}
+            </FormikRadioCardField>
 
             {status.type === 'rejected' && (
               <Alert severity="error">{status.payload.message}</Alert>

@@ -12,7 +12,7 @@ export interface FormikRadioCardFieldProps
   extends Omit<RadioGroupFieldProps, 'error' | 'value' | 'onClick'> {
   name: string;
   validate?: FieldValidator;
-  radioItems: RadioCardItemProps[];
+  children: RadioCardItemProps[];
 }
 
 export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFieldProps> =
@@ -21,7 +21,7 @@ export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFiel
       {
         name,
         validate,
-        radioItems,
+        children,
 
         disabled,
         ...props
@@ -45,7 +45,7 @@ export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFiel
           }}
         >
           <Stack>
-            {radioItems.map((radioItem) => {
+            {children.map((radioItem) => {
               return (
                 <RadioFieldCard
                   {...radioItem}
