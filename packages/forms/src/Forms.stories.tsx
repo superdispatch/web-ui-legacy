@@ -1,6 +1,7 @@
 import {
   AccountBoxOutlined,
   MessageOutlined,
+  PostAdd as PostAddIcon,
   VerifiedUser,
 } from '@material-ui/icons';
 import { Alert } from '@material-ui/lab';
@@ -12,7 +13,6 @@ import {
   Stack,
   useSnackbarStack,
 } from '@superdispatch/ui';
-import { PostAddIcon } from '@superdispatch/ui-docs/generated/components';
 import { Box } from '@superdispatch/ui-lab';
 import { Form, FormikProvider } from 'formik';
 import {
