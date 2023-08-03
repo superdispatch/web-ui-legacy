@@ -19,25 +19,24 @@ export default {
   parameters: { playroom: { disable: true } },
 } as Meta;
 
-const radioItems = [
-  {
-    value: 'dispatcher',
-    name: 'user_type',
-    label: 'I Only Dispatch',
-    caption: 'I use Carrier TMS and do not use Driver App.',
-    icon: <AccountBoxOutlined />,
-  },
-  {
-    value: 'driver_dispatcher',
-    name: 'user_type',
-    label: 'I Drive And Dispatch',
-    caption: 'I use both Carrier TMS and Driver App.',
-    icon: <VerifiedUser />,
-  },
-];
-
 export const SignUp = () => {
   const { addSnackbar } = useSnackbarStack();
+  const radioItems = [
+    {
+      value: 'dispatcher',
+      name: 'user_type',
+      label: 'I Only Dispatch',
+      caption: 'I use Carrier TMS and do not use Driver App.',
+      icon: <AccountBoxOutlined />,
+    },
+    {
+      value: 'driver_dispatcher',
+      name: 'user_type',
+      label: 'I Drive And Dispatch',
+      caption: 'I use both Carrier TMS and Driver App.',
+      icon: <VerifiedUser />,
+    },
+  ];
 
   const formik = useFormikEnhanced<
     {
