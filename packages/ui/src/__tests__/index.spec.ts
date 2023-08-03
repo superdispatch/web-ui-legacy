@@ -75,7 +75,7 @@ it('exposes public api', () => {
         "White50": "rgba(255, 255, 255, 0.5)",
         "Yellow100": "#FFE494",
         "Yellow200": "#FFDC6B",
-        "Yellow300": "#C94F08",
+        "Yellow300": "#E8671C",
         "Yellow400": "#FFA91F",
         "Yellow50": "#FFF7DC",
         "Yellow500": "#B84807",

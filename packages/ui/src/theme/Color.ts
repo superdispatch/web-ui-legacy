@@ -130,7 +130,7 @@ export enum Color {
   Yellow100 = '#FFE494',
   /** @deprecated */
   Yellow200 = '#FFDC6B',
-  Yellow300 = '#C94F08',
+  Yellow300 = '#E8671C',
   /** @deprecated */
   Yellow400 = '#FFA91F',
   Yellow500 = '#B84807',
