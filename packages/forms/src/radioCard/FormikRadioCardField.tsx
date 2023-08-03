@@ -13,7 +13,6 @@ export interface FormikRadioCardFieldProps
   name: string;
   validate?: FieldValidator;
   radioItems: RadioCardItemProps[];
-  onClick?: (value: string) => void;
 }
 
 export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFieldProps> =
@@ -23,7 +22,6 @@ export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFiel
         name,
         validate,
         radioItems,
-        onClick,
 
         disabled,
         ...props
@@ -31,7 +29,7 @@ export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFiel
       ref,
     ) => {
       const { isSubmitting } = useFormikContext();
-      const [field] = useField({
+      const [field, _, { setValue }] = useField({
         name,
         validate,
       });
@@ -54,9 +52,7 @@ export const FormikRadioCardField: ForwardRefExoticComponent<FormikRadioCardFiel
                   key={radioItem.value}
                   checked={field.value === radioItem.value}
                   onClick={() => {
-                    if (onClick) {
-                      onClick(radioItem.value);
-                    }
+                    setValue(radioItem.value);
                   }}
                 />
               );

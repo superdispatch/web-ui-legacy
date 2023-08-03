@@ -79,7 +79,7 @@ export const SignUp = () => {
     },
   });
 
-  const { status, resetForm, isSubmitting, setFieldValue } = formik;
+  const { status, resetForm, isSubmitting } = formik;
 
   if (status.type === 'submitted') {
     return (
@@ -151,11 +151,8 @@ export const SignUp = () => {
 
             <FormikRadioCardField
               label="User Type"
-              radioItems={radioItems}
               name="user_type"
-              onClick={(value) => {
-                setFieldValue('user_type', value);
-              }}
+              radioItems={radioItems}
             />
 
             {status.type === 'rejected' && (
