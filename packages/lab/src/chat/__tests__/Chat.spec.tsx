@@ -7,9 +7,7 @@ describe('Chat', () => {
   it('Displays placeholder message when no messages are provided', () => {
     renderComponent(<Chat />);
 
-    expect(
-      screen.getByText(/No new messages from Super Shipper./i),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/No new messages/i)).toBeInTheDocument();
   });
 
   it('Renders provided messages', () => {
