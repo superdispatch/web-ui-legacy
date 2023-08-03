@@ -43,17 +43,20 @@ interface RadioCardProps
 
 export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
   forwardRef(
-    ({
-      name,
-      value,
-      label,
-      caption,
-      disabled,
-      icon,
-      checked,
-      onChange,
-      ...props
-    }) => {
+    (
+      {
+        name,
+        value,
+        label,
+        caption,
+        disabled,
+        icon,
+        checked,
+        onChange,
+        ...props
+      },
+      ref,
+    ) => {
       return (
         <Card disabled={disabled} key={value}>
           <ClickableCard name={name} disabled={disabled} {...props}>
@@ -69,7 +72,7 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
                   <FormControlLabel
                     value={value}
                     name={name}
-                    control={<Radio checked={checked} />}
+                    control={<Radio ref={ref} checked={checked} />}
                     label={<TextBox variant="heading-4">{label}</TextBox>}
                   />
                   <Box paddingLeft="large">
