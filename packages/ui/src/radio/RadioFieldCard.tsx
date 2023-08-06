@@ -69,7 +69,7 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
             <CardContent
               borderRadius="small"
               borderWidth="small"
-              checked={checked}
+              checked={checked as boolean}
               padding={['small']}
               width="100%"
             >
