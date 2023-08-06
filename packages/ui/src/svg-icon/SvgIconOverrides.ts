@@ -1,4 +1,4 @@
-import { Color } from '../color/Color';
+import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideSvgIcon(theme: SuperDispatchTheme): void {
