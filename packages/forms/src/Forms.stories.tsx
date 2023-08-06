@@ -63,7 +63,7 @@ export const SignUp = () => {
     },
   });
 
-  const { status, resetForm, isSubmitting, setFieldValue } = formik;
+  const { status, resetForm, isSubmitting } = formik;
 
   if (status.type === 'submitted') {
     return (
