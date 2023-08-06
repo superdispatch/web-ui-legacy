@@ -25,7 +25,7 @@ export * from './props/CollapseProp';
 export * from './props/ResponsiveProp';
 export * from './props/SpaceProp';
 export * from './radio/RadioField';
-//prettier-ignore
+/* prettier-ignore eslint-disable */
 export * from './radio/RadioFieldCard';
 export * from './radio/RadioGroupField';
 export * from './responsive/CollapseBreakpoint';
