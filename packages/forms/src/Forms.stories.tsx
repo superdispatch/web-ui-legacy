@@ -36,14 +36,12 @@ export const SignUp = () => {
   const radioItems = [
     {
       value: 'dispatcher',
-      name: 'user_type',
       label: 'I Only Dispatch',
       caption: 'I use Carrier TMS and do not use Driver App.',
       icon: <AccountBoxOutlined />,
     },
     {
       value: 'driver_dispatcher',
-      name: 'user_type',
       label: 'I Drive And Dispatch',
       caption: 'I use both Carrier TMS and Driver App.',
       icon: <VerifiedUser />,
@@ -164,7 +162,6 @@ export const SignUp = () => {
               <Stack>
                 <RadioFieldCard
                   label="Message"
-                  name="post"
                   value="message"
                   caption="Message description"
                   icon={<MessageOutlined />}
@@ -174,7 +171,6 @@ export const SignUp = () => {
                 />
                 <RadioFieldCard
                   label="Poster"
-                  name="post"
                   value="poster"
                   caption="Poster description"
                   icon={<PostAddIcon />}

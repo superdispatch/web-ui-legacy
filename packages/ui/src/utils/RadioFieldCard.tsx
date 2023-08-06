@@ -29,7 +29,7 @@ const FormControlLabel = styled(MuiFormControlLabel)`
 export interface RadioCardItemProps {
   value: string;
   label: string;
-  name: string;
+  name?: string;
   caption: string;
   icon: React.ReactNode;
 }
