@@ -10,17 +10,10 @@ import { forwardRef, ForwardRefExoticComponent } from 'react';
 import styled from 'styled-components';
 import { Column } from '../columns/Column';
 import { Columns } from '../columns/Columns';
-import { Color } from '../theme/Color';
-
 const ClickableCard = styled(ButtonBase)`
   display: block;
   text-align: initial;
   width: 100%;
-`;
-
-const CardContent = styled(Box)`
-  border-color: ${({ checked }: { checked: boolean }) =>
-    checked ? `${Color.Blue300}` : `${Color.Silver500}`};
 `;
 
 const Card = styled(MuiCard)`
@@ -66,12 +59,12 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
       return (
         <Card disabled={disabled} key={value}>
           <ClickableCard name={name} disabled={disabled} {...props}>
-            <CardContent
+            <Box
               borderRadius="small"
               borderWidth="small"
-              checked={checked as boolean}
               padding={['small']}
               width="100%"
+              borderColor={checked ? 'Blue300' : 'Silver500'}
             >
               <Columns space="small">
                 <Column>
@@ -90,7 +83,7 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
 
                 <Column width="content">{icon}</Column>
               </Columns>
-            </CardContent>
+            </Box>
           </ClickableCard>
         </Card>
       );
