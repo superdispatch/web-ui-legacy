@@ -1,4 +1,4 @@
-import { Color } from '../theme/Color';
+import { Color } from '../color/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideSwitch(theme: SuperDispatchTheme): void {

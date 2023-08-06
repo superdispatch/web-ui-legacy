@@ -7,7 +7,7 @@ import {
   ForwardRefExoticComponent,
   RefAttributes,
 } from 'react';
-import { Color } from '../theme/Color';
+import { Color } from '../color/Color';
 
 export type TagClassKey =
   | 'root'

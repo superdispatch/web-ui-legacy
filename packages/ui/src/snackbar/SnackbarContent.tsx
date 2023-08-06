@@ -15,7 +15,7 @@ import {
   ReactNode,
   RefAttributes,
 } from 'react';
-import { Color } from '../theme/Color';
+import { Color } from '../color/Color';
 
 type SnackbarContentClassKey =
   | MuiSnackbarContentClassKey
