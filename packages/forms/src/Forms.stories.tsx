@@ -1,18 +1,7 @@
-import {
-  AccountBoxOutlined,
-  MessageOutlined,
-  PostAdd as PostAddIcon,
-  VerifiedUser,
-} from '@material-ui/icons';
+import { MessageOutlined, PostAdd as PostAddIcon } from '@material-ui/icons';
 import { Alert } from '@material-ui/lab';
 import { Meta } from '@storybook/react';
-import {
-  Button,
-  Inline,
-  RadioFieldCard,
-  Stack,
-  useSnackbarStack,
-} from '@superdispatch/ui';
+import { Button, Inline, Stack, useSnackbarStack } from '@superdispatch/ui';
 import { Box } from '@superdispatch/ui-lab';
 import { Form, FormikProvider } from 'formik';
 import {
@@ -33,20 +22,6 @@ export default {
 
 export const SignUp = () => {
   const { addSnackbar } = useSnackbarStack();
-  const radioItems = [
-    {
-      value: 'dispatcher',
-      label: 'I Only Dispatch',
-      caption: 'I use Carrier TMS and do not use Driver App.',
-      icon: <AccountBoxOutlined />,
-    },
-    {
-      value: 'driver_dispatcher',
-      label: 'I Drive And Dispatch',
-      caption: 'I use both Carrier TMS and Driver App.',
-      icon: <VerifiedUser />,
-    },
-  ];
 
   const formik = useFormikEnhanced<
     {
@@ -160,30 +135,22 @@ export const SignUp = () => {
 
             <FormikRadioGroupField fullWidth={true} label="Posts" name="post">
               <Stack>
-                <RadioFieldCard
+                <FormikRadioCardField
                   label="Message"
                   value="message"
                   caption="Message description"
                   icon={<MessageOutlined />}
-                  onClick={() => {
-                    setFieldValue('post', 'message');
-                  }}
+                  name="post"
                 />
-                <RadioFieldCard
+                <FormikRadioCardField
                   label="Poster"
                   value="poster"
                   caption="Poster description"
                   icon={<PostAddIcon />}
-                  onClick={() => {
-                    setFieldValue('post', 'poster');
-                  }}
+                  name="post"
                 />
               </Stack>
             </FormikRadioGroupField>
-
-            <FormikRadioCardField label="User Type" name="user_type">
-              {radioItems}
-            </FormikRadioCardField>
 
             {status.type === 'rejected' && (
               <Alert severity="error">{status.payload.message}</Alert>

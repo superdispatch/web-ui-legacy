@@ -30,8 +30,8 @@ export interface RadioCardItemProps {
   value: string;
   label: string;
   name?: string;
-  caption: string;
-  icon: React.ReactNode;
+  caption?: string;
+  icon?: React.ReactNode;
 }
 
 interface RadioCardProps
