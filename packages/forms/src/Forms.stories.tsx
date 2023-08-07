@@ -1,3 +1,4 @@
+import { MessageOutlined, PostAdd as PostAddIcon } from '@material-ui/icons';
 import { Alert } from '@material-ui/lab';
 import { Meta } from '@storybook/react';
 import { Button, Inline, Stack, useSnackbarStack } from '@superdispatch/ui';
@@ -7,6 +8,8 @@ import {
   FormikDateField,
   FormikMaxLengthTextField,
   FormikPasswordField,
+  FormikRadioCardField,
+  FormikRadioGroupField,
   FormikTextField,
   SuspendedFormikPhoneField,
   useFormikEnhanced,
@@ -27,6 +30,7 @@ export const SignUp = () => {
       dateOfBirth: undefined | string;
       phone: string;
       about: string;
+      user_type: string;
     },
     Record<string, unknown>
   >({
@@ -36,6 +40,7 @@ export const SignUp = () => {
       dateOfBirth: undefined,
       phone: '',
       about: '',
+      user_type: 'dispatcher',
     },
     onSubmit(values) {
       return new Promise((resolve, reject) => {
@@ -127,6 +132,25 @@ export const SignUp = () => {
               label="About"
               maxLength={100}
             />
+
+            <FormikRadioGroupField fullWidth={true} label="Posts" name="post">
+              <Stack>
+                <FormikRadioCardField
+                  label="Message"
+                  value="message"
+                  caption="Message description"
+                  icon={<MessageOutlined />}
+                  name="post"
+                />
+                <FormikRadioCardField
+                  label="Poster"
+                  value="poster"
+                  caption="Poster description"
+                  icon={<PostAddIcon />}
+                  name="post"
+                />
+              </Stack>
+            </FormikRadioGroupField>
 
             {status.type === 'rejected' && (
               <Alert severity="error">{status.payload.message}</Alert>

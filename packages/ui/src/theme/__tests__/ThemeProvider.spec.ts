@@ -1,5 +1,5 @@
 import { renderTheme } from '@superdispatch/ui-testutils';
-import { Color } from '../Color';
+import { Color } from '../../color/Color';
 
 const colors = new Map<string, string>(
   Object.entries(Color).map(([k, v]) => [v, `Color.${k}`]),

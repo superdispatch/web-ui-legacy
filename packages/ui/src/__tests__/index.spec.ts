@@ -99,6 +99,7 @@ it('exposes public api', () => {
       "NumberField": React.forwardRef(NumberField),
       "OverflowText": React.forwardRef(OverflowText),
       "RadioField": React.forwardRef(RadioField),
+      "RadioFieldCard": React.forwardRef(RadioFieldCard),
       "RadioGroupField": React.forwardRef(RadioGroupField),
       "ResponsiveContextProvider": [Function],
       "Snackbar": React.forwardRef(Snackbar),

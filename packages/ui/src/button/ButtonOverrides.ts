@@ -1,5 +1,5 @@
 import { CSSProperties } from '@material-ui/styles';
-import { Color } from '../theme/Color';
+import { Color } from '../color/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 function outlineShadow(size = 0, color: Color = Color.Transparent): string {
