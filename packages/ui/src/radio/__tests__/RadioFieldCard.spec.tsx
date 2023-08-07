@@ -1,4 +1,3 @@
-import React from 'react';
 import { RadioFieldCard } from '../RadioFieldCard';
 import { RadioGroupField } from '../RadioGroupField';
 
