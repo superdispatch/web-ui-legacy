@@ -134,14 +134,9 @@ const Content = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    // Color.Dark400
-    background-color: rgba(50, 60, 78, 0.2);
+    background-color: ${Color.Dark300};
     border-radius: 100vw;
     margin-bottom: 100px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(50, 60, 78, 0.8);
   }
 `;
 
