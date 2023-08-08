@@ -123,6 +123,21 @@ const Content = styled.div`
       display: none;
     }
   }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${Color.Dark300};
+    border-radius: 100vw;
+    margin-bottom: 100px;
+  }
 `;
 
 export interface NavbarAccordionOptions extends NavbarAccordionProps {
