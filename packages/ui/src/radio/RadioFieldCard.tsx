@@ -4,12 +4,14 @@ import {
   Card as MuiCard,
   FormControlLabel as MuiFormControlLabel,
   Radio,
+  Typography,
 } from '@material-ui/core';
-import { Box, TextBox } from '@superdispatch/ui-lab';
 import { forwardRef, ForwardRefExoticComponent } from 'react';
 import styled from 'styled-components';
 import { Column } from '../columns/Column';
 import { Columns } from '../columns/Columns';
+import { Color } from '../theme/Color';
+
 const ClickableCard = styled(ButtonBase)`
   display: block;
   text-align: initial;
@@ -23,6 +25,18 @@ const Card = styled(MuiCard)`
 
 const FormControlLabel = styled(MuiFormControlLabel)`
   width: 100%;
+`;
+
+const Content = styled.div<{ active?: boolean }>`
+  padding: 16px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid
+    ${({ active }) => (active ? Color.Blue300 : Color.Silver500)};
+`;
+
+const Caption = styled.div`
+  padding-left: 32px;
 `;
 
 export interface RadioCardItemProps {
@@ -59,31 +73,25 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
       return (
         <Card disabled={disabled} key={value}>
           <ClickableCard name={name} disabled={disabled} {...props}>
-            <Box
-              borderRadius="small"
-              borderWidth="small"
-              padding={['small']}
-              width="100%"
-              borderColor={checked ? 'Blue300' : 'Silver500'}
-            >
+            <Content active={checked}>
               <Columns space="small">
                 <Column>
                   <FormControlLabel
                     value={value}
                     name={name}
                     control={<Radio ref={ref} checked={checked} />}
-                    label={<TextBox variant="heading-4">{label}</TextBox>}
+                    label={<Typography variant="h4">{label}</Typography>}
                   />
-                  <Box paddingLeft="large">
-                    <TextBox color="secondary" variant="caption">
+                  <Caption>
+                    <Typography color="textSecondary" variant="caption">
                       {caption}
-                    </TextBox>
-                  </Box>
+                    </Typography>
+                  </Caption>
                 </Column>
 
                 <Column width="content">{icon}</Column>
               </Columns>
-            </Box>
+            </Content>
           </ClickableCard>
         </Card>
       );

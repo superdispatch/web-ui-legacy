@@ -12,7 +12,7 @@ import {
   ReactNode,
   RefAttributes,
 } from 'react';
-import { Color } from '../color/Color';
+import { Color } from '../theme/Color';
 
 export type CardButtonClassKey =
   | 'root'
