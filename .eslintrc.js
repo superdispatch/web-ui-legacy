@@ -112,6 +112,38 @@ module.exports = {
     },
 
     {
+      files: ['packages/ui/**/*.{ts,tsx}'],
+      excludedFiles: ['**/*.stories.{ts,tsx}'],
+      rules: {
+        'no-restricted-imports': [
+          'error',
+          {
+            paths: [
+              {
+                name: '@material-ui/core',
+                importNames: ['makeStyles'],
+                message: 'Import from "@material-ui/styles" instead.',
+              },
+
+              {
+                name: '@material-ui/core',
+                importNames: ['Box'],
+                message:
+                  'Use alternative from the "@superdispatch/ui-lab" instead.',
+              },
+
+              {
+                name: '@superdispatch/ui-lab',
+                message:
+                  'Imporing @superdispatch/ui-lab creates circular dependency.',
+              },
+            ],
+          },
+        ],
+      },
+    },
+
+    {
       files: [
         'setupTests.ts',
         'globalSetup.ts',
