@@ -27,7 +27,7 @@ const FormControlLabel = styled(MuiFormControlLabel)`
   width: 100%;
 `;
 
-const Content = styled.div<{ active: boolean }>`
+const Content = styled.div<{ active?: boolean }>`
   padding: 16px;
   width: 100%;
   border-radius: 4px;
