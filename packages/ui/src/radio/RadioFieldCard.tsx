@@ -8,9 +8,9 @@ import {
 } from '@material-ui/core';
 import { forwardRef, ForwardRefExoticComponent } from 'react';
 import styled from 'styled-components';
-import { Color } from '../color/Color';
 import { Column } from '../columns/Column';
 import { Columns } from '../columns/Columns';
+import { Color } from '../theme/Color';
 
 const ClickableCard = styled(ButtonBase)`
   display: block;

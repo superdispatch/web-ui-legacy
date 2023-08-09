@@ -1,5 +1,5 @@
 import { SvgIcon } from '@material-ui/core';
-import { Color } from '../color/Color';
+import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideChip(theme: SuperDispatchTheme): void {

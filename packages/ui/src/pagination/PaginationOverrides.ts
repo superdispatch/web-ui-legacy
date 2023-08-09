@@ -1,7 +1,7 @@
 import { StyleRules } from '@material-ui/core';
 import { PaginationItemClassKey, PaginationItemProps } from '@material-ui/lab';
 import { CSSProperties } from '@material-ui/styles';
-import { Color } from '../color/Color';
+import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 type Overrides<T extends string> = Partial<StyleRules<T>> & {

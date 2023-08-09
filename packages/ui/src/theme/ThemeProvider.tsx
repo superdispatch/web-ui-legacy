@@ -19,7 +19,6 @@ import { overrideButton } from '../button/ButtonOverrides';
 import { overrideCard } from '../card/CardOverrides';
 import { overrideCheckbox } from '../checkbox/CheckboxOverrides';
 import { overrideChip } from '../chip/ChipOverrides';
-import { Color } from '../color/Color';
 import { overrideDialog } from '../dialog/DialogOverrides';
 import { overrideDrawer } from '../drawer/DrawerOverrides';
 import { overrideIconButton } from '../icon-button/IconButtonOverrides';
@@ -42,6 +41,7 @@ import {
   createTypographyOptions,
   overrideTypography,
 } from '../typography/TypographyOverrides';
+import { Color } from './Color';
 import { SuperDispatchTheme } from './SuperDispatchTheme';
 
 function createSuperDispatchTheme(): SuperDispatchTheme {
