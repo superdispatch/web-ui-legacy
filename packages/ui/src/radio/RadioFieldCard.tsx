@@ -27,13 +27,12 @@ const FormControlLabel = styled(MuiFormControlLabel)`
   width: 100%;
 `;
 
-const Content = styled.div`
+const Content = styled.div<{ active: boolean }>`
   padding: 16px;
   width: 100%;
   border-radius: 4px;
   border-width: 1px;
-  border-color: ${({ active }: { active: boolean }) =>
-    active ? Color.Blue300 : Color.Silver500};
+  border-color: ${({ active }) => (active ? Color.Blue300 : Color.Silver500)};
 `;
 
 const Caption = styled.div`
