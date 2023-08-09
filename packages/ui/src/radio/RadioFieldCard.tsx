@@ -31,8 +31,8 @@ const Content = styled.div<{ active?: boolean }>`
   padding: 16px;
   width: 100%;
   border-radius: 4px;
-  border-width: 1px;
-  border-color: ${({ active }) => (active ? Color.Blue300 : Color.Silver500)};
+  border: 1px solid
+    ${({ active }) => (active ? Color.Blue300 : Color.Silver500)};
 `;
 
 const Caption = styled.div`
