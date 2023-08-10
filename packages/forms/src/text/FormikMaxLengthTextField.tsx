@@ -14,11 +14,11 @@ export const FormikMaxLengthTextField: ForwardRefExoticComponent<Props> =
     const text = useMemo(() => {
       const value = getIn(values, name) as unknown;
 
-      if (!value) {
+      if (!value || typeof value !== 'string') {
         return '';
       }
 
-      return String(value);
+      return value;
     }, [values, name]);
 
     return (
