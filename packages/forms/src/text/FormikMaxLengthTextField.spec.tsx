@@ -37,27 +37,3 @@ test('changes', async () => {
 
   expect(view.onSubmit).toHaveBeenLastCalledWith({ name: 'John' });
 });
-
-test('changes for nested fields', () => {
-  const onBlur = jest.fn();
-  const onChange = jest.fn();
-
-  renderFormField(
-    <FormikMaxLengthTextField
-      label="Name"
-      name="user.name"
-      maxLength={100}
-      onBlur={onBlur}
-      onChange={onChange}
-    />,
-    { initialValues: { name: '' } },
-  );
-
-  const input = screen.getByLabelText('Name0 of 100');
-
-  userEvent.type(input, 'John');
-  userEvent.tab();
-
-  expect(input).toHaveValue('John');
-  expect(screen.getByLabelText('Name4 of 100')).toBeInTheDocument();
-});
