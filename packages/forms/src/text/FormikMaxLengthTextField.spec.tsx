@@ -42,7 +42,7 @@ test('changes for nested fields', () => {
   const onBlur = jest.fn();
   const onChange = jest.fn();
 
-  const view = renderFormField(
+  renderFormField(
     <FormikMaxLengthTextField
       label="Name"
       name="user.name"
