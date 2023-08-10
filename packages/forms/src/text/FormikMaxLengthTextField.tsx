@@ -1,7 +1,7 @@
 import { Column, Columns } from '@superdispatch/ui';
 import { TextBox } from '@superdispatch/ui-lab';
-import { useFormikContext } from 'formik';
-import { forwardRef, ForwardRefExoticComponent } from 'react';
+import { getIn, useFormikContext } from 'formik';
+import { forwardRef, ForwardRefExoticComponent, useMemo } from 'react';
 import { FormikTextField, FormikTextFieldProps } from './FormikTextField';
 
 interface Props extends FormikTextFieldProps {
@@ -10,7 +10,16 @@ interface Props extends FormikTextFieldProps {
 
 export const FormikMaxLengthTextField: ForwardRefExoticComponent<Props> =
   forwardRef(({ name, label, maxLength, inputProps, ...props }, ref) => {
-    const { values } = useFormikContext<Record<string, string>>();
+    const { values } = useFormikContext<unknown>();
+    const text = useMemo(() => {
+      const value = getIn(values, name) as unknown;
+
+      if (!value || typeof value !== 'string') {
+        return '';
+      }
+
+      return value;
+    }, [values, name]);
 
     return (
       <FormikTextField
@@ -25,7 +34,7 @@ export const FormikMaxLengthTextField: ForwardRefExoticComponent<Props> =
             {maxLength != null && (
               <Column width="content">
                 <TextBox color="secondary">
-                  {values[name]?.length || 0} of {maxLength}
+                  {text.length} of {maxLength}
                 </TextBox>
               </Column>
             )}
