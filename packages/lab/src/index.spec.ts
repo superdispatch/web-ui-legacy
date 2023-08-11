@@ -9,6 +9,8 @@ test('api', () => {
       "Box": React.forwardRef(Box),
       "Button": React.forwardRef(Button),
       "ButtonArea": React.forwardRef(ButtonArea),
+      "Chat": React.forwardRef(Chat),
+      "ChatMessage": React.forwardRef(ChatMessage),
       "Container": React.forwardRef(Container),
       "DescriptionItem": React.forwardRef(DescriptionItem),
       "FileDropZone": React.forwardRef(FileDropZone),
