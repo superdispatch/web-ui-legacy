@@ -3,6 +3,8 @@ export * from './banner/Banner';
 export * from './box/Box';
 export * from './button-area/ButtonArea';
 export * from './button/Button';
+export * from './chat/Chat';
+export * from './chat/ChatMessage';
 export * from './container/Container';
 export * from './description-item/DescriptionItem';
 export * from './file-drop-zone/FileDropZone';
