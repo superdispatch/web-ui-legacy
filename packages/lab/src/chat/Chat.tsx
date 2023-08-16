@@ -6,6 +6,10 @@ import styled from 'styled-components';
 interface ChatProps {
   children?: React.ReactNode | React.ReactNode[];
   emptyText?: string;
+  minWidth?: number;
+  maxWidth?: number;
+  minHeight?: number;
+  maxHeight?: number;
 }
 
 const ChatContainer = styled('div')<{
@@ -22,7 +26,7 @@ const ChatContainer = styled('div')<{
   justify-content: ${isEmpty ? 'center' : 'end'};
   width: 100%;
   height: 100%;
-  min-width: ${minWidth || 432}px;
+  min-width: ${minWidth || 300}px;
   max-width: ${maxWidth || 560}px;
   min-height: ${minHeight || 368}px;
   max-height: ${maxHeight || 696}px;
@@ -40,10 +44,28 @@ function emptyPlaceholder(text: string): React.ReactNode {
 }
 
 export const Chat = forwardRef<HTMLDivElement, ChatProps>(
-  ({ children, emptyText = 'No new messages' }, ref) => {
+  (
+    {
+      children,
+      minWidth,
+      maxWidth,
+      minHeight,
+      maxHeight,
+      emptyText = 'No new messages',
+    },
+    ref,
+  ) => {
     const isEmpty = Children.toArray(children).length === 0;
     return (
-      <ChatContainer data-testid="chat-container" isEmpty={isEmpty} ref={ref}>
+      <ChatContainer
+        data-testid="chat-container"
+        isEmpty={isEmpty}
+        ref={ref}
+        minWidth={minWidth}
+        maxWidth={maxWidth}
+        minHeight={minHeight}
+        maxHeight={maxHeight}
+      >
         <Stack space="small">
           {isEmpty ? emptyPlaceholder(emptyText) : children}
         </Stack>
