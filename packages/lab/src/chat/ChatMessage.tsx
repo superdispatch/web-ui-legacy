@@ -1,18 +1,21 @@
 import { Typography } from '@material-ui/core';
+import { formatDate, PrimitiveDateInput } from '@superdispatch/dates';
 import { Inline, Stack } from '@superdispatch/ui';
 import { Box } from '@superdispatch/ui-lab';
+import { DateTime } from 'luxon';
 import { forwardRef } from 'react';
 
 interface ChatMessageProps {
   author: string;
   role: string;
-  dateTime: string;
+  dateTime: Date | DateTime | PrimitiveDateInput;
   text: string;
   variant: 'incoming' | 'outgoing';
 }
 
 export const ChatMessage = forwardRef<HTMLDivElement, ChatMessageProps>(
   ({ author, role, dateTime, text, variant }, ref) => {
+    const time = formatDate(dateTime, { variant: 'Time' });
     return (
       <Stack
         space="xxsmall"
@@ -23,7 +26,7 @@ export const ChatMessage = forwardRef<HTMLDivElement, ChatMessageProps>(
         <Inline verticalAlign="center">
           <Typography color="textPrimary">{author}</Typography>
           <Typography color="textSecondary">{role}</Typography>
-          <Typography color="textSecondary">{dateTime}</Typography>
+          <Typography color="textSecondary">{time}</Typography>
         </Inline>
         <Box
           display="inline-block"

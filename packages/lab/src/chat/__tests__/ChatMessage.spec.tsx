@@ -9,14 +9,14 @@ describe('ChatMessage', () => {
         variant="incoming"
         author="Steve Trabajo"
         role="dispatcher"
-        dateTime="2023-06-12 6:43PM"
+        dateTime="2023-06-16T09:48:43.291212+00:00"
         text="Hello, Vin! ..."
       />,
     );
 
     expect(screen.getByText('Steve Trabajo')).toBeInTheDocument();
     expect(screen.getByText('dispatcher')).toBeInTheDocument();
-    expect(screen.getByText('2023-06-12 6:43PM')).toBeInTheDocument();
+    expect(screen.getByText('4:48 AM')).toBeInTheDocument();
     expect(screen.getByText('Hello, Vin! ...')).toBeInTheDocument();
   });
 
@@ -26,14 +26,14 @@ describe('ChatMessage', () => {
         variant="outgoing"
         author="Daisy Lord"
         role="admin"
-        dateTime="2023-06-13 4:33PM"
+        dateTime="2023-06-16T09:48:43.291212+00:00"
         text="Hey Steve ..."
       />,
     );
 
     expect(screen.getByText('Daisy Lord')).toBeInTheDocument();
     expect(screen.getByText('admin')).toBeInTheDocument();
-    expect(screen.getByText('2023-06-13 4:33PM')).toBeInTheDocument();
+    expect(screen.getByText('4:48 AM')).toBeInTheDocument();
     expect(screen.getByText('Hey Steve ...')).toBeInTheDocument();
   });
 });
