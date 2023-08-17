@@ -1,13 +1,14 @@
 import { Typography } from '@material-ui/core';
-import { formatDate } from '@superdispatch/dates';
+import { formatDate, PrimitiveDateInput } from '@superdispatch/dates';
 import { Inline, Stack } from '@superdispatch/ui';
 import { Box } from '@superdispatch/ui-lab';
+import { DateTime } from 'luxon';
 import { forwardRef } from 'react';
 
 interface ChatMessageProps {
   author: string;
   role: string;
-  dateTime: string;
+  dateTime: Date | DateTime | PrimitiveDateInput;
   text: string;
   variant: 'incoming' | 'outgoing';
 }
