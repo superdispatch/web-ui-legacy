@@ -4,32 +4,25 @@ import { Children, forwardRef } from 'react';
 import styled from 'styled-components';
 
 interface ChatProps {
+  className?: string;
   children?: React.ReactNode | React.ReactNode[];
   emptyText?: string;
-  minWidth?: number;
-  maxWidth?: number;
-  minHeight?: number;
-  maxHeight?: number;
 }
 
 const ChatContainer = styled('div')<{
   isEmpty: boolean;
-  minWidth?: number;
-  maxWidth?: number;
-  minHeight?: number;
-  maxHeight?: number;
 }>(
-  ({ isEmpty, minWidth, maxWidth, minHeight, maxHeight }) => `
+  ({ isEmpty }) => `
   display: flex;
   flex-direction: column-reverse;
   overflow: auto;
   justify-content: ${isEmpty ? 'center' : 'end'};
   width: 100%;
   height: 100%;
-  min-width: ${minWidth || 300}px;
-  max-width: ${maxWidth || 560}px;
-  min-height: ${minHeight || 368}px;
-  max-height: ${maxHeight || 696}px;
+  min-width: 300px;
+  max-width: 560px;
+  min-height: 368px;
+  max-height: 696px;
   padding: 16px;
   box-sizing: border-box;
 `,
@@ -44,27 +37,14 @@ function emptyPlaceholder(text: string): React.ReactNode {
 }
 
 export const Chat = forwardRef<HTMLDivElement, ChatProps>(
-  (
-    {
-      children,
-      minWidth,
-      maxWidth,
-      minHeight,
-      maxHeight,
-      emptyText = 'No new messages',
-    },
-    ref,
-  ) => {
+  ({ children, className, emptyText = 'No new messages' }, ref) => {
     const isEmpty = Children.toArray(children).length === 0;
     return (
       <ChatContainer
         data-testid="chat-container"
         isEmpty={isEmpty}
         ref={ref}
-        minWidth={minWidth}
-        maxWidth={maxWidth}
-        minHeight={minHeight}
-        maxHeight={maxHeight}
+        className={className}
       >
         <Stack space="small">
           {isEmpty ? emptyPlaceholder(emptyText) : children}

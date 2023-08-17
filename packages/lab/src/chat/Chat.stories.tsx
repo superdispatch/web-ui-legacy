@@ -1,6 +1,7 @@
 import { Card } from '@material-ui/core';
 import { Meta } from '@storybook/react';
 import { Box } from '@superdispatch/ui-lab';
+import styled from 'styled-components';
 import { Chat } from './Chat';
 import { ChatMessage } from './ChatMessage';
 
@@ -109,6 +110,21 @@ export const LoremIpsum = () => (
           text="Dolor sit amet consectetur adipiscing. Diam sit amet nisl suscipit. Egestas sed sed risus pretium quam. Non consectetur a erat nam at lectus urna. Odio eu feugiat pretium nibh ipsum consequat. Volutpat odio facilisis mauris sit. Consectetur a erat nam at lectus urna duis convallis. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Sed turpis tincidunt id aliquet risus feugiat in. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Venenatis cras sed felis eget velit aliquet sagittis id consectetur. Arcu felis bibendum ut tristique et egestas. Cursus eget nunc scelerisque viverra mauris. Luctus accumsan tortor posuere ac ut consequat. Justo nec ultrices dui sapien eget mi proin sed. Egestas erat imperdiet sed euismod nisi porta. Amet venenatis urna cursus eget nunc scelerisque."
         />
       </Chat>
+    </Card>
+  </Box>
+);
+
+const StyledChat = styled(Chat)`
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 200px;
+  max-height: 200px;
+`;
+
+export const StylingTheChat = () => (
+  <Box>
+    <Card>
+      <StyledChat emptyText="200x200" />
     </Card>
   </Box>
 );
