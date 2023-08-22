@@ -55,12 +55,12 @@ const useStyles = makeStyles<
       color: Color.White,
 
       '&$colorGrey': { backgroundColor: Color.Dark300 },
-      '&$colorBlue': { backgroundColor: Color.Blue500 },
-      '&$colorGreen': { backgroundColor: Color.Green500 },
-      '&$colorPurple': { backgroundColor: Color.Purple500 },
-      '&$colorRed': { backgroundColor: Color.Red500 },
-      '&$colorTeal': { backgroundColor: Color.Teal500 },
-      '&$colorYellow': { backgroundColor: Color.Yellow500 },
+      '&$colorBlue': { backgroundColor: Color.Blue300 },
+      '&$colorGreen': { backgroundColor: Color.Green300 },
+      '&$colorPurple': { backgroundColor: Color.Purple300 },
+      '&$colorRed': { backgroundColor: Color.Red300 },
+      '&$colorTeal': { backgroundColor: Color.Teal300 },
+      '&$colorYellow': { backgroundColor: Color.Yellow300 },
     },
 
     colorGrey: {},
