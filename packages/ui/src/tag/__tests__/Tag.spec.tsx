@@ -56,27 +56,27 @@ it('checks component css', () => {
     }
 
     .SD-Tag-variantBold.SD-Tag-colorBlue {
-      background-color: Color.Blue500;
+      background-color: Color.Blue300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorGreen {
-      background-color: Color.Green500;
+      background-color: Color.Green300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorPurple {
-      background-color: Color.Purple500;
+      background-color: Color.Purple300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorRed {
-      background-color: Color.Red500;
+      background-color: Color.Red300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorTeal {
-      background-color: Color.Teal500;
+      background-color: Color.Teal300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorYellow {
-      background-color: Color.Yellow500;
+      background-color: Color.Yellow300;
     }
   `);
 });
