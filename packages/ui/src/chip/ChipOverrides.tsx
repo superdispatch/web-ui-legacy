@@ -51,17 +51,17 @@ export function overrideChip(theme: SuperDispatchTheme): void {
         boxShadow: undefined,
       },
       '&:focus': {
-        boxShadow: `0 0 0 2px ${Color.Silver300}`,
+        boxShadow: `0 0 0 2px ${Color.Dark100}`,
       },
       '&:active, &:hover': {
-        backgroundColor: Color.Silver300,
+        backgroundColor: Color.Silver400,
       },
     },
 
     deletable: {
       '&:focus': {
         backgroundColor: undefined,
-        boxShadow: `0 0 0 2px ${Color.Silver300}`,
+        boxShadow: `0 0 0 2px ${Color.Silver400}`,
       },
     },
 
@@ -79,7 +79,7 @@ export function overrideChip(theme: SuperDispatchTheme): void {
 
       '& > svg': {
         borderRadius: '50%',
-        color: Color.Dark200,
+        color: Color.Dark100,
         fontSize: '1em',
       },
     },
