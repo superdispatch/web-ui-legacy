@@ -8,7 +8,7 @@ export function overrideTooltip(theme: SuperDispatchTheme): void {
     tooltip: {
       ...theme.typography.body2,
       padding: theme.spacing(1, 1.5),
-      backgroundColor: Color.Dark400,
+      backgroundColor: Color.Dark500,
     },
 
     popperArrow: {
@@ -27,7 +27,7 @@ export function overrideTooltip(theme: SuperDispatchTheme): void {
     },
 
     arrow: {
-      color: Color.Dark400,
+      color: Color.Dark500,
       fontSize: theme.spacing(1),
     },
   };
