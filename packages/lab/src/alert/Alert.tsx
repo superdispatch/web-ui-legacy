@@ -24,9 +24,7 @@ function colorMixin(
 
     & .MuiAlert-action {
       color: ${iconColor};
-    }
 
-    & .MuiAlert-action {
       & .MuiIconButton-root {
         &:hover,
         &:active {
