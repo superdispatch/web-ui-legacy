@@ -20,7 +20,7 @@ export const basic = () => (
       <Stack>
         <Alert severity="positive">
           <Inline verticalAlign="center">
-            <span>This is an error alert — check it out!</span>
+            <span>This is a success alert — check it out!</span>
             <Button variant="neutral" size="small">
               Button
             </Button>
@@ -29,7 +29,7 @@ export const basic = () => (
 
         <Alert severity="info">
           <Inline verticalAlign="center">
-            <span>This is an error alert — check it out!</span>
+            <span>This is an info alert — check it out!</span>
             <Button variant="neutral" size="small">
               Button
             </Button>
@@ -38,7 +38,7 @@ export const basic = () => (
 
         <Alert severity="caution">
           <Inline verticalAlign="center">
-            <span>This is an error alert — check it out!</span>
+            <span>This is a warning alert — check it out!</span>
             <Button variant="neutral" size="small">
               Button
             </Button>
@@ -112,7 +112,7 @@ export const basic = () => (
       <Stack>
         <Alert icon={<OutlinedFlag />} severity="positive">
           <Inline verticalAlign="center">
-            <span>This is an error alert — check it out!</span>
+            <span>This is a success alert — check it out!</span>
             <Button variant="neutral" size="small">
               Button
             </Button>
@@ -121,7 +121,7 @@ export const basic = () => (
 
         <Alert icon={<SecurityRounded />} severity="info">
           <Inline verticalAlign="center">
-            <span>This is an error alert — check it out!</span>
+            <span>This is an info alert — check it out!</span>
             <Button variant="neutral" size="small">
               Button
             </Button>
@@ -130,7 +130,7 @@ export const basic = () => (
 
         <Alert icon={<WarningRounded />} severity="caution">
           <Inline verticalAlign="center">
-            <span>This is an error alert — check it out!</span>
+            <span>This is a warning alert — check it out!</span>
             <Button variant="neutral" size="small">
               Button
             </Button>
@@ -143,6 +143,17 @@ export const basic = () => (
             <Button variant="neutral" size="small">
               Button
             </Button>
+          </Inline>
+        </Alert>
+
+        <Alert
+          severity="info"
+          onClose={() => {
+            return null;
+          }}
+        >
+          <Inline verticalAlign="center">
+            <span>This is an alert with close icon — check it out!</span>
           </Inline>
         </Alert>
       </Stack>
