@@ -51,7 +51,7 @@ export function overrideChip(theme: SuperDispatchTheme): void {
         boxShadow: undefined,
       },
       '&:focus': {
-        boxShadow: `0 0 0 2px ${Color.Dark100}`,
+        boxShadow: `0 0 0 2px ${Color.Dark30}`,
       },
       '&:active, &:hover': {
         backgroundColor: Color.Silver400,
@@ -73,7 +73,7 @@ export function overrideChip(theme: SuperDispatchTheme): void {
 
       '&:active, &:hover, &:focus': {
         '& > svg': {
-          backgroundColor: Color.Silver400,
+          backgroundColor: Color.Silver35,
         },
       },
 

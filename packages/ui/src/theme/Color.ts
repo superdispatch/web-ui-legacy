@@ -25,6 +25,11 @@ export enum Color {
   Black50 = 'rgba(0, 0, 0, 0.5)',
   Black20 = 'rgba(0, 0, 0, 0.2)',
 
+  //Dark100 with 30% opacity
+  Dark30 = 'rgba(143, 148, 158, 0.3)',
+  //Silver500 with 35% opacity
+  Silver35 = 'rgba(196, 205, 213, 0.35)',
+
   //
   // Neutral Colors
   //
