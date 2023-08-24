@@ -1,4 +1,4 @@
-import { CheckCircle, Error, Info } from '@material-ui/icons';
+import { CheckCircle, Error, Info, Warning } from '@material-ui/icons';
 import {
   Alert as MaterialAlert,
   AlertProps as MaterialAlertProps,
@@ -9,18 +9,22 @@ import styled, { css, SimpleInterpolation } from 'styled-components';
 
 function colorMixin(
   textColor: Color,
+  iconColor: Color,
   backgroundColor: Color,
   buttonHoverColor: Color,
 ): readonly SimpleInterpolation[] {
   return css`
     color: ${textColor};
+    border-color: ${textColor};
     background-color: ${backgroundColor};
 
     & .MuiAlert-icon {
-      color: ${textColor};
+      color: ${iconColor};
     }
 
     & .MuiAlert-action {
+      color: ${iconColor};
+
       & .MuiIconButton-root {
         &:hover,
         &:active {
@@ -33,19 +37,29 @@ function colorMixin(
 
 const StyledAlert = styled(MaterialAlert)`
   &.MuiAlert-outlinedSuccess {
-    ${colorMixin(Color.Green500, Color.Green50, Color.Green400)};
+    ${colorMixin(
+      Color.Green500,
+      Color.Green300,
+      Color.Green50,
+      Color.Green400,
+    )};
   }
 
   &.MuiAlert-outlinedInfo {
-    ${colorMixin(Color.Blue500, Color.Blue50, Color.Blue400)};
+    ${colorMixin(Color.Blue500, Color.Blue300, Color.Blue50, Color.Blue400)};
   }
 
   &.MuiAlert-outlinedWarning {
-    ${colorMixin(Color.Yellow500, Color.Yellow50, Color.Yellow400)};
+    ${colorMixin(
+      Color.Yellow500,
+      Color.Yellow300,
+      Color.Yellow50,
+      Color.Yellow400,
+    )};
   }
 
   &.MuiAlert-outlinedError {
-    ${colorMixin(Color.Red500, Color.Red50, Color.Red400)};
+    ${colorMixin(Color.Red500, Color.Red300, Color.Red50, Color.Red400)};
   }
 
   & .MuiAlert-icon {
@@ -92,6 +106,7 @@ const iconMapping: MaterialAlertProps['iconMapping'] = {
   success: <CheckCircle />,
   info: <Info />,
   error: <Error />,
+  warning: <Warning />,
 };
 
 export const Alert = forwardRef<HTMLDivElement, AlertProps>(
