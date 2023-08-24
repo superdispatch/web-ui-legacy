@@ -254,7 +254,7 @@ it('checks component css', () => {
     .MuiChip-deleteIcon:active > svg,
     .MuiChip-deleteIcon:hover > svg,
     .MuiChip-deleteIcon:focus > svg {
-      background-color: Color.Silver35;
+      background-color: Color.Silver400;
     }
 
     .MuiChip-deleteIconSmall {

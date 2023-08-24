@@ -58,7 +58,6 @@ it('exposes public api', () => {
         "Silver100": "#F6F7F8",
         "Silver200": "#F3F5F8",
         "Silver300": "#E8ECF0",
-        "Silver35": "rgba(196, 205, 213, 0.35)",
         "Silver400": "#E1E5EA",
         "Silver500": "#C4CDD5",
         "Teal100": "#91E3F8",

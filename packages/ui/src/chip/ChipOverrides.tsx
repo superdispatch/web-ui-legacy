@@ -73,7 +73,7 @@ export function overrideChip(theme: SuperDispatchTheme): void {
 
       '&:active, &:hover, &:focus': {
         '& > svg': {
-          backgroundColor: Color.Silver35,
+          backgroundColor: Color.Silver400,
         },
       },
 
