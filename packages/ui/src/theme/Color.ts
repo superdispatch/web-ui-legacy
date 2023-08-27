@@ -30,6 +30,7 @@ export enum Color {
   Blue30 = 'rgba(0, 112, 245, 0.3)',
   Green30 = 'rgba(3, 135, 47, 0.3)',
   Red30 = 'rgba(229, 35, 13, 0.3)',
+  Silver30 = 'rgba(225, 229, 234, 0.3)',
 
   //
   // Neutral Colors

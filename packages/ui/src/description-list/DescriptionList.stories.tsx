@@ -9,7 +9,6 @@ import RoomIcon from '@material-ui/icons/Room';
 import { Meta } from '@storybook/react';
 import { PhoneLink, PhoneText } from '@superdispatch/phones';
 import { Box } from '@superdispatch/ui-lab';
-import React from 'react';
 import { DescriptionList, DescriptionListItem } from './DescriptionList';
 import { DescriptionRawItem } from './DescriptionRawItem';
 
