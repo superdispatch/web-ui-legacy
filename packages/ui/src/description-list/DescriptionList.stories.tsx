@@ -1,4 +1,5 @@
 import { Link } from '@material-ui/core';
+import { CreditCard } from '@material-ui/icons';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import ChatIcon from '@material-ui/icons/Chat';
 import NotesIcon from '@material-ui/icons/Notes';
@@ -8,7 +9,9 @@ import RoomIcon from '@material-ui/icons/Room';
 import { Meta } from '@storybook/react';
 import { PhoneLink, PhoneText } from '@superdispatch/phones';
 import { Box } from '@superdispatch/ui-lab';
+import React from 'react';
 import { DescriptionList, DescriptionListItem } from './DescriptionList';
+import { DescriptionRawItem } from './DescriptionRawItem';
 
 export default {
   title: 'Data Display/DescriptionList',
@@ -144,5 +147,23 @@ export const nested = () => (
       content=""
       fallback="No pickup notes"
     />
+  </DescriptionList>
+);
+
+export const payment = () => (
+  <DescriptionList>
+    <DescriptionListItem
+      icon={<CreditCard />}
+      price="$1200"
+      label="COD"
+      fallback="$0.5/mi"
+    />
+  </DescriptionList>
+);
+
+export const descriptionRaw = () => (
+  <DescriptionList>
+    <DescriptionRawItem title="Payment" value="$1200" boldValue={true} />
+    <DescriptionRawItem title="Method" value="Comcheck" />
   </DescriptionList>
 );

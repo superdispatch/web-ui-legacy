@@ -2,11 +2,16 @@ import { SvgIcon, Typography, TypographyProps } from '@material-ui/core';
 import { CSSProperties, makeStyles } from '@material-ui/styles';
 import clsx from 'clsx';
 import { forwardRef, ReactNode } from 'react';
+import styled from 'styled-components';
 import { OverflowText, OverflowTextProps } from '../overflow-text/OverflowText';
 import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 import { isEmptyReactNode } from '../utils/isEmptyReactNode';
 import { useUID } from '../utils/useUID';
+
+const PriceText = styled.span`
+  color: ${Color.Purple500};
+`;
 
 function sizeVariant(
   theme: SuperDispatchTheme,
@@ -28,8 +33,8 @@ function sizeVariant(
 
 const useStyles = makeStyles(
   (theme: SuperDispatchTheme) => ({
-    list: sizeVariant(theme, 2, 1),
-    listSmall: sizeVariant(theme, 1, 0.5),
+    list: sizeVariant(theme, 2, 1.5),
+    listSmall: sizeVariant(theme, 1, 1),
     listLarge: sizeVariant(theme, 3, 2),
 
     item: {
@@ -98,6 +103,7 @@ export interface DescriptionListItemProps {
   content?: ReactNode;
   contentTypographyProps?: Omit<OverflowTextProps, 'component' | 'color'>;
 
+  price?: ReactNode;
   fallback?: ReactNode;
 }
 
@@ -116,6 +122,7 @@ export const DescriptionListItem = forwardRef<
       content,
       contentTypographyProps,
 
+      price,
       fallback,
     },
     ref,
@@ -137,7 +144,7 @@ export const DescriptionListItem = forwardRef<
           {...contentTypographyProps}
           component="span"
           color={
-            shouldRenderFallback && label == null
+            (shouldRenderFallback && label == null) || price
               ? 'textSecondary'
               : 'textPrimary'
           }
@@ -149,13 +156,15 @@ export const DescriptionListItem = forwardRef<
               undefined,
           }}
         >
+          {price !== null && <PriceText>{price}</PriceText>}
+          {price != null && ' '}
           {label != null && (
             <Typography
               {...labelTypographyProps}
               id={labelID}
               variant="body2"
               component="span"
-              color="textSecondary"
+              color={price == null ? 'textSecondary' : 'textPrimary'}
             >
               {label}
             </Typography>

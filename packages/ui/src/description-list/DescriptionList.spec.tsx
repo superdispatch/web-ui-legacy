@@ -21,6 +21,9 @@ test('label id', () => {
         title="Text"
       >
         <span
+          class="DescriptionList__PriceText-SD__sc-117p3cv-0 hwLMrW"
+        />
+        <span
           class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
           id="label-id"
         >
@@ -48,6 +51,9 @@ test('dynamic label id', () => {
         class="MuiTypography-root SD-OverflowText-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-noWrap"
         title="Text"
       >
+        <span
+          class="DescriptionList__PriceText-SD__sc-117p3cv-0 hwLMrW"
+        />
         <span
           class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
           id="uid_2"
@@ -85,7 +91,7 @@ test('css', () => {
     @media (min-width: 600px) {
       .SD-DescriptionList-list > .SD-DescriptionList-list:not(:last-child),
       .SD-DescriptionList-list > .SD-DescriptionList-item:not(:last-child) {
-        padding-bottom: 8px;
+        padding-bottom: 12px;
       }
     }
 
@@ -97,7 +103,7 @@ test('css', () => {
     @media (min-width: 600px) {
       .SD-DescriptionList-listSmall > .SD-DescriptionList-list:not(:last-child),
       .SD-DescriptionList-listSmall > .SD-DescriptionList-item:not(:last-child) {
-        padding-bottom: 4px;
+        padding-bottom: 8px;
       }
     }
 
