@@ -7,7 +7,7 @@ export default {
   component: DescriptionDottedLineItem,
 } as Meta;
 
-export const descriptionRaw = () => (
+export const description = () => (
   <>
     <DescriptionDottedLineItem title="Payment">
       <TextBox align="right" color="primary" variant="heading-4">
