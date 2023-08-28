@@ -22,8 +22,28 @@ export function overrideLink(theme: SuperDispatchTheme): void {
         backgroundImage: line(Color.Silver500),
 
         '&:focus, &:hover, &:active': {
-          color: Color.Blue300,
-          backgroundImage: line(Color.Blue300),
+          color: Color.Blue500,
+          backgroundImage: line(Color.Blue500),
+        },
+      },
+
+      '&.MuiTypography-colorError': {
+        color: Color.Red500,
+        backgroundImage: line(Color.Silver500),
+
+        '&:focus, &:hover, &:active': {
+          color: Color.Red500,
+          backgroundImage: line(Color.Red500),
+        },
+      },
+
+      '&.MuiTypography-colorTextSecondary': {
+        color: Color.Dark100,
+        backgroundImage: line(Color.Silver500),
+
+        '&:focus, &:hover, &:active': {
+          color: Color.Dark100,
+          backgroundImage: line(Color.Silver500),
         },
       },
     },
