@@ -11,7 +11,6 @@ export const DottedLine = styled.div`
 
 interface DescriptionRawItemProps {
   title: string;
-  e2eValue?: string;
   value: string | number | JSX.Element;
   boldValue?: boolean;
 }
@@ -19,7 +18,7 @@ interface DescriptionRawItemProps {
 export const DescriptionRawItem = forwardRef<
   HTMLDivElement,
   DescriptionRawItemProps
->(({ title, e2eValue, value, boldValue }, ref) => (
+>(({ title, value, boldValue }, ref) => (
   <Columns ref={ref} align="center">
     <Column width="content">
       <Typography color="textSecondary" gutterBottom={true}>
@@ -34,7 +33,6 @@ export const DescriptionRawItem = forwardRef<
         align="right"
         color="textPrimary"
         variant={boldValue ? 'h4' : 'body2'}
-        data-e2e={e2eValue}
       >
         {value}
       </Typography>
