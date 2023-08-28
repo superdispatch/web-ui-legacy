@@ -33,7 +33,7 @@ const normalizeTextColor = createRuleNormalizer<TextColorProp>({
   inherit: 'inherit',
 
   primary: Color.Dark500,
-  secondary: Color.Dark200,
+  secondary: Color.Dark300,
 
   white: Color.White,
   blue: Color.Blue300,

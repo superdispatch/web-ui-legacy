@@ -1,7 +1,7 @@
-import { Typography } from '@material-ui/core';
 import { Color, Column, Columns } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
+import { TextBox } from '../text-box/TextBox';
 
 export const DottedLine = styled.div`
   border-bottom: 1px dotted ${Color.Silver400};
@@ -20,7 +20,7 @@ export const DescriptionDottedLineItem = forwardRef<
 >(({ title, children }, ref) => (
   <Columns ref={ref} align="center">
     <Column width="content">
-      <Typography color="textSecondary">{title}</Typography>
+      <TextBox color="secondary">{title}</TextBox>
     </Column>
     <Column width="fluid">
       <DottedLine />
