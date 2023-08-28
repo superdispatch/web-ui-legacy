@@ -20,9 +20,7 @@ export const DescriptionDottedLineItem = forwardRef<
 >(({ title, children }, ref) => (
   <Columns ref={ref} align="center">
     <Column width="content">
-      <Typography color="textSecondary" gutterBottom={true}>
-        {title}
-      </Typography>
+      <Typography color="textSecondary">{title}</Typography>
     </Column>
     <Column width="fluid">
       <DottedLine />
