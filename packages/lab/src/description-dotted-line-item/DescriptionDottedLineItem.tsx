@@ -4,7 +4,7 @@ import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
 
 export const DottedLine = styled.div`
-  border-bottom: 1px dashed ${Color.Silver400};
+  border-bottom: 1px dotted ${Color.Silver400};
   margin: 0px 8px;
   height: 7px;
 `;
