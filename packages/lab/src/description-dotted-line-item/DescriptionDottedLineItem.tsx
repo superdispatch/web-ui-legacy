@@ -1,6 +1,6 @@
 import { Typography } from '@material-ui/core';
 import { Color, Column, Columns } from '@superdispatch/ui';
-import { forwardRef } from 'react';
+import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
 
 export const DottedLine = styled.div`
@@ -9,16 +9,15 @@ export const DottedLine = styled.div`
   height: 7px;
 `;
 
-interface DescriptionRawItemProps {
+interface DescriptionDottedLineItemProps {
   title: string;
-  value: string | number | JSX.Element;
-  boldValue?: boolean;
+  children: ReactNode;
 }
 
-export const DescriptionRawItem = forwardRef<
+export const DescriptionDottedLineItem = forwardRef<
   HTMLDivElement,
-  DescriptionRawItemProps
->(({ title, value, boldValue }, ref) => (
+  DescriptionDottedLineItemProps
+>(({ title, children }, ref) => (
   <Columns ref={ref} align="center">
     <Column width="content">
       <Typography color="textSecondary" gutterBottom={true}>
@@ -28,14 +27,6 @@ export const DescriptionRawItem = forwardRef<
     <Column width="fluid">
       <DottedLine />
     </Column>
-    <Column width="content">
-      <Typography
-        align="right"
-        color="textPrimary"
-        variant={boldValue ? 'h4' : 'body2'}
-      >
-        {value}
-      </Typography>
-    </Column>
+    <Column width="content">{children}</Column>
   </Columns>
 ));
