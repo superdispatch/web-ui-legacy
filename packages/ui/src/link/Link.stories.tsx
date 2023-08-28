@@ -37,5 +37,17 @@ export const colors = () => (
     <Link href="#" target="_blank" color="textPrimary">
       Text Primary
     </Link>
+    <Link href="#" target="_blank" color="error">
+      Critical
+    </Link>
+    <Link
+      href="#"
+      target="_blank"
+      component="button"
+      disabled={true}
+      color="textSecondary"
+    >
+      Disabled
+    </Link>
   </Stack>
 );
