@@ -13,6 +13,8 @@ test('api', () => {
       "ChatMessage": React.forwardRef(ChatMessage),
       "Container": React.forwardRef(Container),
       "DescriptionItem": React.forwardRef(DescriptionItem),
+      "DescriptionRawItem": React.forwardRef(DescriptionRawItem),
+      "DottedLine": React.forwardRef(DescriptionRawItem__DottedLine),
       "FileDropZone": React.forwardRef(FileDropZone),
       "FileListItem": React.forwardRef(FileListItem),
       "LinkedText": [Function],

@@ -90,8 +90,6 @@ it('exposes public api', () => {
       "Columns": React.forwardRef(Columns),
       "DescriptionList": React.forwardRef(DescriptionList),
       "DescriptionListItem": React.forwardRef(DescriptionListItem),
-      "DescriptionRawItem": React.forwardRef(DescriptionRawItem),
-      "DottedLine": React.forwardRef(DescriptionRawItem__DottedLine),
       "DrawerActions": React.forwardRef(DrawerActions),
       "DrawerContent": React.forwardRef(DrawerContent),
       "DrawerList": React.forwardRef(DrawerList),

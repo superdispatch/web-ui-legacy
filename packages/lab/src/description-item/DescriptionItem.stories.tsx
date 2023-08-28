@@ -14,6 +14,7 @@ import { Column, Columns, Inline, Stack } from '@superdispatch/ui';
 import { Box } from '../box/Box';
 import { TextBox } from '../text-box/TextBox';
 import { DescriptionItem } from './DescriptionItem';
+import { DescriptionRawItem } from './DescriptionRawItem';
 
 export default {
   title: 'Lab/DescriptionItem',
@@ -160,4 +161,11 @@ export const complex = () => (
       </DescriptionItem>
     </Stack>
   </Box>
+);
+
+export const descriptionRaw = () => (
+  <>
+    <DescriptionRawItem title="Payment" value="$1200" boldValue={true} />
+    <DescriptionRawItem title="Method" value="Comcheck" />
+  </>
 );

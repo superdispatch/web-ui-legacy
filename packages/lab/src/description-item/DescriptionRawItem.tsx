@@ -1,9 +1,7 @@
 import { Typography } from '@material-ui/core';
+import { Color, Column, Columns } from '@superdispatch/ui';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
-import { Column } from '../columns/Column';
-import { Columns } from '../columns/Columns';
-import { Color } from '../theme/Color';
 
 export const DottedLine = styled.div`
   border-bottom: 1px dashed ${Color.Silver400};
