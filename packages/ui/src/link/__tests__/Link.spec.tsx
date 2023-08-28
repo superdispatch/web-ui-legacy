@@ -42,14 +42,54 @@ it('checks component css', () => {
       );
     }
 
+    .MuiLink-root.MuiTypography-colorError {
+      color: Color.Red500;
+      background-image: linear-gradient(
+        to right,
+        Color.Silver500 0%,
+        Color.Silver500 100%
+      );
+    }
+
+    .MuiLink-root.MuiTypography-colorTextSecondary {
+      color: Color.Dark100;
+      background-image: linear-gradient(
+        to right,
+        Color.Silver500 0%,
+        Color.Silver500 100%
+      );
+    }
+
+    .MuiLink-root.MuiTypography-colorTextSecondary:focus,
+    .MuiLink-root.MuiTypography-colorTextSecondary:hover,
+    .MuiLink-root.MuiTypography-colorTextSecondary:active {
+      color: Color.Dark100;
+      background-image: linear-gradient(
+        to right,
+        Color.Silver500 0%,
+        Color.Silver500 100%
+      );
+    }
+
+    .MuiLink-root.MuiTypography-colorError:focus,
+    .MuiLink-root.MuiTypography-colorError:hover,
+    .MuiLink-root.MuiTypography-colorError:active {
+      color: Color.Red500;
+      background-image: linear-gradient(
+        to right,
+        Color.Red500 0%,
+        Color.Red500 100%
+      );
+    }
+
     .MuiLink-root.MuiTypography-colorTextPrimary:focus,
     .MuiLink-root.MuiTypography-colorTextPrimary:hover,
     .MuiLink-root.MuiTypography-colorTextPrimary:active {
-      color: Color.Blue300;
+      color: Color.Blue500;
       background-image: linear-gradient(
         to right,
-        Color.Blue300 0%,
-        Color.Blue300 100%
+        Color.Blue500 0%,
+        Color.Blue500 100%
       );
     }
 
