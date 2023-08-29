@@ -1,6 +1,7 @@
 import { Meta } from '@storybook/react';
 import { TextBox } from '../text-box/TextBox';
 import { DescriptionLineItem } from './DescriptionLineItem';
+
 export default {
   title: 'Lab/DescriptionLineItem',
   component: DescriptionLineItem,
