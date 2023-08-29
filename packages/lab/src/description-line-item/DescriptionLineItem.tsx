@@ -8,14 +8,14 @@ export const DottedLine = styled.div`
   height: 7px;
 `;
 
-interface DescriptionDottedLineItemProps {
+interface DescriptionLineItemProps {
   title: ReactNode;
   children: ReactNode;
 }
 
-export const DescriptionDottedLineItem = forwardRef<
+export const DescriptionLineItem = forwardRef<
   HTMLDivElement,
-  DescriptionDottedLineItemProps
+  DescriptionLineItemProps
 >(({ title, children }, ref) => (
   <Columns ref={ref} align="center">
     <Column width="content">{title}</Column>
@@ -26,4 +26,4 @@ export const DescriptionDottedLineItem = forwardRef<
   </Columns>
 ));
 
-DescriptionDottedLineItem.displayName = 'DescriptionDottedLineItem';
+DescriptionLineItem.displayName = 'DescriptionLineItem';
