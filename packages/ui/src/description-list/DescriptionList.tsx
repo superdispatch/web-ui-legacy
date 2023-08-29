@@ -30,7 +30,7 @@ const useStyles = makeStyles(
   (theme: SuperDispatchTheme) => ({
     list: sizeVariant(theme, 2, 1),
     listSmall: sizeVariant(theme, 1, 0.5),
-    listLarge: sizeVariant(theme, 3, 1.5),
+    listLarge: sizeVariant(theme, 3, 2),
 
     item: {
       display: 'flex',

@@ -85,7 +85,7 @@ test('css', () => {
     @media (min-width: 600px) {
       .SD-DescriptionList-list > .SD-DescriptionList-list:not(:last-child),
       .SD-DescriptionList-list > .SD-DescriptionList-item:not(:last-child) {
-        padding-bottom: 12px;
+        padding-bottom: 8px;
       }
     }
 
@@ -97,7 +97,7 @@ test('css', () => {
     @media (min-width: 600px) {
       .SD-DescriptionList-listSmall > .SD-DescriptionList-list:not(:last-child),
       .SD-DescriptionList-listSmall > .SD-DescriptionList-item:not(:last-child) {
-        padding-bottom: 8px;
+        padding-bottom: 4px;
       }
     }
 
