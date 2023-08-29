@@ -53,6 +53,7 @@ it('checks component css', () => {
 
     .MuiLink-root.MuiTypography-colorTextSecondary {
       color: Color.Dark100;
+      cursor: not-allowed;
       background-image: linear-gradient(
         to right,
         Color.Silver500 0%,

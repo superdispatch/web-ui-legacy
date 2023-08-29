@@ -38,6 +38,7 @@ export function overrideLink(theme: SuperDispatchTheme): void {
       },
 
       '&.MuiTypography-colorTextSecondary': {
+        cursor: 'not-allowed',
         color: Color.Dark100,
         backgroundImage: line(Color.Silver500),
 
