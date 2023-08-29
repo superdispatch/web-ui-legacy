@@ -1,7 +1,6 @@
 import { Color, Column, Columns } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
-import { TextBox } from '../text-box/TextBox';
 
 export const DottedLine = styled.div`
   border-bottom: 1px dotted ${Color.Silver400};
@@ -10,7 +9,7 @@ export const DottedLine = styled.div`
 `;
 
 interface DescriptionDottedLineItemProps {
-  title: string;
+  title: ReactNode;
   children: ReactNode;
 }
 
@@ -19,12 +18,12 @@ export const DescriptionDottedLineItem = forwardRef<
   DescriptionDottedLineItemProps
 >(({ title, children }, ref) => (
   <Columns ref={ref} align="center">
-    <Column width="content">
-      <TextBox color="secondary">{title}</TextBox>
-    </Column>
+    <Column width="content">{title}</Column>
     <Column width="fluid">
       <DottedLine />
     </Column>
     <Column width="content">{children}</Column>
   </Columns>
 ));
+
+DescriptionDottedLineItem.displayName = 'DescriptionDottedLineItem';
