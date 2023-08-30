@@ -4,10 +4,11 @@ import {
   Switch,
   TextField,
 } from '@material-ui/core';
-import { AccountBoxOutlined, VerifiedUser } from '@material-ui/icons';
+import { AccountBoxOutlined, Error, VerifiedUser } from '@material-ui/icons';
 import { UseState } from '@superdispatch/ui-docs';
 import {
   CheckboxField,
+  Inline,
   RadioField,
   RadioFieldCard,
   RadioGroupField,
@@ -32,7 +33,12 @@ export const error = () => (
             setValue(e.target.value);
           }}
           error={true}
-          helperText="Be careful while assigning"
+          helperText={
+            <Inline verticalAlign="center">
+              <Error fontSize="small" />
+              Be careful while assigning
+            </Inline>
+          }
         >
           <Stack>
             <RadioField

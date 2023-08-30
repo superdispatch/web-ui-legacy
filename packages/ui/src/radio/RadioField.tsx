@@ -17,6 +17,10 @@ const FormHelperText = styled(FormHelperTextMui)`
   font-weight: 400;
   margin-left: 30px;
   margin-top: 2px;
+
+  &.Mui-error {
+    color: ${Color.Red500};
+  }
 `;
 
 export interface RadioFieldProps
