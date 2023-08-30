@@ -36,7 +36,7 @@ const Content = styled.div<{ active?: boolean }>`
 `;
 
 const Caption = styled.div`
-  padding-left: 32px;
+  padding-left: 30px;
 `;
 
 export interface RadioCardItemProps {

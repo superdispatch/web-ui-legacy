@@ -2,11 +2,21 @@ import {
   FormControl,
   FormControlLabel,
   FormControlLabelProps,
-  FormHelperText,
+  FormHelperText as FormHelperTextMui,
   Radio,
   RadioProps,
 } from '@material-ui/core';
 import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
+import styled from 'styled-components';
+import { Color } from '../theme/Color';
+
+const FormHelperText = styled(FormHelperTextMui)`
+  color: ${Color.Dark300};
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  margin-left: 30px;
+`;
 
 export interface RadioFieldProps
   extends Omit<RadioProps, 'onBlur' | 'onChange'>,
