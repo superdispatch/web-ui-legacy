@@ -36,6 +36,46 @@ export enum Color {
   // Neutral Colors
   //
 
+  Dark100 = '#8F949E',
+  Dark300 = '#5B6371',
+  Dark500 = '#192334',
+
+  Silver200 = '#F3F5F8',
+  Silver400 = '#E1E5EA',
+  Silver500 = '#C4CDD5',
+
+  //
+  // Extended Palette
+  //
+
+  Blue50 = '#EBF4FF',
+  Blue300 = '#0070F5',
+  Blue500 = '#0063DB',
+
+  Green50 = '#ECF9EF',
+  Green300 = '#03872F',
+  Green500 = '#007A29',
+
+  Purple50 = '#EFEEFC',
+  Purple300 = '#6559CF',
+  Purple500 = '#473ABB',
+
+  Red50 = '#FFEDEB',
+  Red300 = '#E5230D',
+  Red500 = '#C31909',
+
+  Teal50 = '#E3F6FC',
+  Teal300 = '#007EAB',
+  Teal500 = '#00678A',
+
+  Yellow50 = '#FFF7DC',
+  Yellow300 = '#E8671C',
+  Yellow500 = '#B84807',
+
+  //
+  // Legacy Neutral Colors
+  //
+
   /**@deprecated Use Dark100 */
   Grey100 = '#8F949E',
   /**@deprecated Use Dark200 */
@@ -49,98 +89,75 @@ export enum Color {
   /**@deprecated Use Dark500 */
   Grey500 = '#192334',
 
-  Dark100 = '#8F949E',
+  /**@deprecated */
   Dark200 = '#6A707C',
-  Dark300 = '#5B6371',
   /**@deprecated */
   Dark400 = '#323C4E',
   /**@deprecated */
   Dark450 = '#222F44',
-  Dark500 = '#192334',
 
   /**@deprecated */
   Silver100 = '#F6F7F8',
-  Silver200 = '#F3F5F8',
   /**@deprecated */
   Silver300 = '#E8ECF0',
-  Silver400 = '#E1E5EA',
-  Silver500 = '#C4CDD5',
 
   //
-  // Extended Palette
+  // Legacy Extended Palette
   //
 
-  Blue50 = '#EBF4FF',
   /** @deprecated */
   Blue75 = '#CCE5FF',
   /** @deprecated */
   Blue100 = '#A8D1FF',
   /** @deprecated */
   Blue200 = '#66ADFF',
-  Blue300 = '#0070F5',
   /** @deprecated */
   Blue400 = '#0063DB',
-  Blue500 = '#0063DB',
 
-  Green50 = '#ECF9EF',
   /** @deprecated */
   Green75 = '#C8F4D1',
   /** @deprecated */
   Green100 = '#90EAAE',
   /** @deprecated */
   Green200 = '#5DDA87',
-  Green300 = '#03872F',
   /** @deprecated */
   Green400 = '#1E8F46',
-  Green500 = '#007A29',
 
-  Purple50 = '#EFEEFC',
   /** @deprecated */
   Purple75 = '#DCDBF5',
   /** @deprecated */
   Purple100 = '#CBC8EE',
   /** @deprecated */
   Purple200 = '#A7A1E8',
-  Purple300 = '#6559CF',
   /** @deprecated */
   Purple400 = '#473ABB',
-  Purple500 = '#473ABB',
 
-  Red50 = '#FFEDEB',
   /** @deprecated */
   Red75 = '#FDD9D3',
   /** @deprecated */
   Red100 = '#FDC2BA',
   /** @deprecated */
   Red200 = '#FE988B',
-  Red300 = '#E5230D',
   /** @deprecated */
   Red400 = '#D9210D',
-  Red500 = '#C31909',
 
-  Teal50 = '#E3F6FC',
   /** @deprecated */
   Teal75 = '#BEEDF9',
   /** @deprecated */
   Teal100 = '#91E3F8',
   /** @deprecated */
   Teal200 = '#61D3EF',
-  Teal300 = '#007EAB',
   /** @deprecated */
   Teal400 = '#008DB8',
-  Teal500 = '#00678A',
 
-  Yellow50 = '#FFF7DC',
   /** @deprecated */
   Yellow75 = '#FFF1C2',
   /** @deprecated */
   Yellow100 = '#FFE494',
   /** @deprecated */
   Yellow200 = '#FFDC6B',
-  Yellow300 = '#E8671C',
   /** @deprecated */
   Yellow400 = '#FFA91F',
-  Yellow500 = '#B84807',
 }
 
 export type ColorProp = keyof typeof Color;
