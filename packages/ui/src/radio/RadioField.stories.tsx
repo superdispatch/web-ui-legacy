@@ -34,21 +34,23 @@ export const error = () => (
           error={true}
           helperText="Be careful while assigning"
         >
-          <RadioField
-            label="Kristin Watson"
-            value="kristin"
-            helperText="Loves playing foosball"
-          />
-          <RadioField
-            label="Jane Cooper"
-            value="jane"
-            helperText="Love singing"
-          />
-          <RadioField
-            label="Jerome Bell"
-            value="jerome"
-            helperText="Asked to be assigned to something"
-          />
+          <Stack>
+            <RadioField
+              label="Kristin Watson"
+              value="kristin"
+              helperText="Loves playing foosball"
+            />
+            <RadioField
+              label="Jane Cooper"
+              value="jane"
+              helperText="Love singing"
+            />
+            <RadioField
+              label="Jerome Bell"
+              value="jerome"
+              helperText="Asked to be assigned to something"
+            />
+          </Stack>
         </RadioGroupField>
       )}
     </UseState>
@@ -66,21 +68,23 @@ export const group = () => (
         }}
         helperText="Be careful while assigning"
       >
-        <RadioField
-          label="Kristin Watson"
-          value="kristin"
-          helperText="Loves playing foosball"
-        />
-        <RadioField
-          label="Jane Cooper"
-          value="jane"
-          helperText="Love singing"
-        />
-        <RadioField
-          label="Jerome Bell"
-          value="jerome"
-          helperText="Asked to be assigned to something"
-        />
+        <Stack>
+          <RadioField
+            label="Kristin Watson"
+            value="kristin"
+            helperText="Loves playing foosball"
+          />
+          <RadioField
+            label="Jane Cooper"
+            value="jane"
+            helperText="Love singing"
+          />
+          <RadioField
+            label="Jerome Bell"
+            value="jerome"
+            helperText="Asked to be assigned to something"
+          />
+        </Stack>
       </RadioGroupField>
     )}
   </UseState>
@@ -88,8 +92,10 @@ export const group = () => (
 
 export const disabled = () => (
   <RadioGroupField label="Disabled">
-    <RadioField label="Checked" checked={true} disabled={true} />
-    <RadioField label="Unchecked" checked={false} disabled={true} />
+    <Stack>
+      <RadioField label="Checked" checked={true} disabled={true} />
+      <RadioField label="Unchecked" checked={false} disabled={true} />
+    </Stack>
   </RadioGroupField>
 );
 

@@ -10,7 +10,6 @@ import {
 } from '@material-ui/core';
 import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
 import styled from 'styled-components';
-import { Stack } from '../stack/Stack';
 import { Color } from '../theme/Color';
 
 const FormLabel = styled(FormLabelMui)`
@@ -71,7 +70,7 @@ export const RadioGroupField: ForwardRefExoticComponent<RadioGroupFieldProps> =
           value={value as unknown}
           onChange={onChange}
         >
-          <Stack>{children}</Stack>
+          {children}
         </RadioGroup>
 
         {!!helperText && (
