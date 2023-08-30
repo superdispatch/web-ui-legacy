@@ -1,14 +1,32 @@
 import {
   FormControl,
   FormControlProps,
-  FormHelperText,
+  FormHelperText as FormHelperTextMui,
   FormHelperTextProps,
-  FormLabel,
+  FormLabel as FormLabelMui,
   FormLabelProps,
   RadioGroup,
   RadioGroupProps,
 } from '@material-ui/core';
 import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
+import styled from 'styled-components';
+import { Stack } from '../stack/Stack';
+import { Color } from '../theme/Color';
+
+const FormLabel = styled(FormLabelMui)`
+  margin-bottom: 8px;
+  color: ${Color.Dark300};
+  font-weight: 600;
+`;
+
+const FormHelperText = styled(FormHelperTextMui)`
+  margin-top: 8px;
+  color: ${Color.Dark300};
+
+  &.Mui-error {
+    color: ${Color.Red500};
+  }
+`;
 
 export interface RadioGroupFieldProps
   extends Omit<FormControlProps, 'hiddenLabel' | 'onChange'>,
@@ -53,7 +71,7 @@ export const RadioGroupField: ForwardRefExoticComponent<RadioGroupFieldProps> =
           value={value as unknown}
           onChange={onChange}
         >
-          {children}
+          <Stack>{children}</Stack>
         </RadioGroup>
 
         {!!helperText && (

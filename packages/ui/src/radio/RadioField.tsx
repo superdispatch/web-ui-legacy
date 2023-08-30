@@ -16,6 +16,7 @@ const FormHelperText = styled(FormHelperTextMui)`
   line-height: 16px;
   font-weight: 400;
   margin-left: 30px;
+  margin-top: 2px;
 `;
 
 export interface RadioFieldProps

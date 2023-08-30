@@ -21,7 +21,69 @@ export const basic = () => (
 );
 
 export const error = () => (
-  <RadioField label="Label" helperText="Error Text" error={true} />
+  <Stack space="medium">
+    <RadioField label="Label" helperText="Error Text" error={true} />
+    <UseState initialState="">
+      {(value, setValue) => (
+        <RadioGroupField
+          label="Assign responsibility"
+          value={value}
+          onChange={(e) => {
+            setValue(e.target.value);
+          }}
+          error={true}
+          helperText="Be careful while assigning"
+        >
+          <RadioField
+            label="Kristin Watson"
+            value="kristin"
+            helperText="Loves playing foosball"
+          />
+          <RadioField
+            label="Jane Cooper"
+            value="jane"
+            helperText="Love singing"
+          />
+          <RadioField
+            label="Jerome Bell"
+            value="jerome"
+            helperText="Asked to be assigned to something"
+          />
+        </RadioGroupField>
+      )}
+    </UseState>
+  </Stack>
+);
+
+export const group = () => (
+  <UseState initialState="">
+    {(value, setValue) => (
+      <RadioGroupField
+        label="Assign responsibility"
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+        helperText="Be careful while assigning"
+      >
+        <RadioField
+          label="Kristin Watson"
+          value="kristin"
+          helperText="Loves playing foosball"
+        />
+        <RadioField
+          label="Jane Cooper"
+          value="jane"
+          helperText="Love singing"
+        />
+        <RadioField
+          label="Jerome Bell"
+          value="jerome"
+          helperText="Asked to be assigned to something"
+        />
+      </RadioGroupField>
+    )}
+  </UseState>
 );
 
 export const disabled = () => (
