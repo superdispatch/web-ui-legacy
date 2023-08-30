@@ -33,46 +33,6 @@ export enum Color {
   Silver30 = 'rgba(225, 229, 234, 0.3)',
 
   //
-  // Neutral Colors
-  //
-
-  Dark100 = '#8F949E',
-  Dark300 = '#5B6371',
-  Dark500 = '#192334',
-
-  Silver200 = '#F3F5F8',
-  Silver400 = '#E1E5EA',
-  Silver500 = '#C4CDD5',
-
-  //
-  // Extended Palette
-  //
-
-  Blue50 = '#EBF4FF',
-  Blue300 = '#0070F5',
-  Blue500 = '#0063DB',
-
-  Green50 = '#ECF9EF',
-  Green300 = '#03872F',
-  Green500 = '#007A29',
-
-  Purple50 = '#EFEEFC',
-  Purple300 = '#6559CF',
-  Purple500 = '#473ABB',
-
-  Red50 = '#FFEDEB',
-  Red300 = '#E5230D',
-  Red500 = '#C31909',
-
-  Teal50 = '#E3F6FC',
-  Teal300 = '#007EAB',
-  Teal500 = '#00678A',
-
-  Yellow50 = '#FFF7DC',
-  Yellow300 = '#E8671C',
-  Yellow500 = '#B84807',
-
-  //
   // Legacy Neutral Colors
   //
 
@@ -89,16 +49,16 @@ export enum Color {
   /**@deprecated Use Dark500 */
   Grey500 = '#192334',
 
-  /**@deprecated */
+  /** @deprecated */
   Dark200 = '#6A707C',
-  /**@deprecated */
+  /** @deprecated */
   Dark400 = '#323C4E',
-  /**@deprecated */
+  /** @deprecated */
   Dark450 = '#222F44',
 
-  /**@deprecated */
+  /** @deprecated */
   Silver100 = '#F6F7F8',
-  /**@deprecated */
+  /** @deprecated */
   Silver300 = '#E8ECF0',
 
   //
@@ -158,6 +118,46 @@ export enum Color {
   Yellow200 = '#FFDC6B',
   /** @deprecated */
   Yellow400 = '#FFA91F',
+
+  //
+  // Neutral Colors
+  //
+
+  Dark100 = '#8F949E',
+  Dark300 = '#5B6371',
+  Dark500 = '#192334',
+
+  Silver200 = '#F3F5F8',
+  Silver400 = '#E1E5EA',
+  Silver500 = '#C4CDD5',
+
+  //
+  // Extended Palette
+  //
+
+  Blue50 = '#EBF4FF',
+  Blue300 = '#0070F5',
+  Blue500 = '#0063DB',
+
+  Green50 = '#ECF9EF',
+  Green300 = '#03872F',
+  Green500 = '#007A29',
+
+  Purple50 = '#EFEEFC',
+  Purple300 = '#6559CF',
+  Purple500 = '#473ABB',
+
+  Red50 = '#FFEDEB',
+  Red300 = '#E5230D',
+  Red500 = '#C31909',
+
+  Teal50 = '#E3F6FC',
+  Teal300 = '#007EAB',
+  Teal500 = '#00678A',
+
+  Yellow50 = '#FFF7DC',
+  Yellow300 = '#E8671C',
+  Yellow500 = '#B84807',
 }
 
 export type ColorProp = keyof typeof Color;
