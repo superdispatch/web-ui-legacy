@@ -1,5 +1,5 @@
 import {
-  FormControl,
+  FormControl as FormControlMui,
   FormControlLabel,
   FormControlLabelProps,
   FormHelperText as FormHelperTextMui,
@@ -9,6 +9,10 @@ import {
 import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
 import styled from 'styled-components';
 import { Color } from '../theme/Color';
+
+const FormControl = styled(FormControlMui)`
+  justify-content: center;
+`;
 
 const FormHelperText = styled(FormHelperTextMui)`
   color: ${Color.Dark300};
