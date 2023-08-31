@@ -38,8 +38,17 @@ export function overrideCheckbox(theme: SuperDispatchTheme): void {
   theme.overrides.MuiCheckbox = {
     root: {
       color: Color.Dark100,
-      marginTop: theme.spacing(-0.625),
-      marginBottom: theme.spacing(-0.625),
+      marginRight: theme.spacing(1),
+      marginLeft: theme.spacing(1),
+      padding: 0,
+      width: theme.spacing(3),
+      height: theme.spacing(3),
+      '&:hover': {
+        backgroundColor: Color.Blue10,
+      },
+      '&.MuiButtonBase-root': {
+        borderRadius: theme.spacing(0.5),
+      },
     },
 
     colorPrimary: {
@@ -49,6 +58,7 @@ export function overrideCheckbox(theme: SuperDispatchTheme): void {
 
       '&:hover:not($checked)': {
         color: Color.Dark100,
+        backgroundColor: Color.Blue10,
       },
     },
   };
