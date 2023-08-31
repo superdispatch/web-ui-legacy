@@ -48,7 +48,7 @@ export const disabled = () => (
 
 export const group = () => (
   <UseState initialState="">
-    {(value, setValue) => (
+    {() => (
       <CheckboxGroupField
         error={true}
         helperText={
