@@ -57,7 +57,7 @@ export const group = () => (
             Select at least one option
           </Inline>
         }
-        label="Disabled"
+        label="Assign responsibility"
       >
         <Stack>
           <CheckboxField
