@@ -4,7 +4,9 @@ import {
   Switch,
   TextField,
 } from '@material-ui/core';
-import { RadioField } from '..';
+import { Error } from '@material-ui/icons';
+import { UseState } from '@superdispatch/ui-docs';
+import { Inline, RadioField, Stack } from '..';
 import { CheckboxField } from './CheckboxField';
 import { CheckboxGroupField } from './CheckboxGroudField';
 
@@ -24,22 +26,60 @@ export const indeterminate = () => (
 
 export const disabled = () => (
   <CheckboxGroupField label="Disabled">
-    <CheckboxField label="Checked" checked={true} disabled={true} />
-    <CheckboxField label="Unchecked" checked={false} disabled={true} />
-    <CheckboxField
-      checked={true}
-      disabled={true}
-      indeterminate={true}
-      label="Checked and Indeterminate"
-    />
+    <Stack>
+      <CheckboxField label="Checked" checked={true} disabled={true} />
+      <CheckboxField label="Unchecked" checked={false} disabled={true} />
+      <CheckboxField
+        checked={true}
+        disabled={true}
+        indeterminate={true}
+        label="Checked and Indeterminate"
+      />
 
-    <CheckboxField
-      checked={false}
-      disabled={true}
-      indeterminate={true}
-      label="Unchecked and Indeterminate"
-    />
+      <CheckboxField
+        checked={false}
+        disabled={true}
+        indeterminate={true}
+        label="Unchecked and Indeterminate"
+      />
+    </Stack>
   </CheckboxGroupField>
+);
+
+export const group = () => (
+  <UseState initialState="">
+    {(value, setValue) => (
+      <CheckboxGroupField
+        error={true}
+        helperText={
+          <Inline verticalAlign="center">
+            <Error fontSize="small" />
+            Select at least one option
+          </Inline>
+        }
+        label="Disabled"
+      >
+        <Stack>
+          <CheckboxField
+            label="Kristin Watson"
+            value="kristin"
+            helperText="Loves playing foosball"
+          />
+          <CheckboxField
+            label="Jane Cooper"
+            value="jane"
+            helperText="Love singing"
+          />
+          <CheckboxField
+            label="Jerome Bell"
+            value="bell"
+            helperText="Asked to be assigned to something"
+            indeterminate={true}
+          />
+        </Stack>
+      </CheckboxGroupField>
+    )}
+  </UseState>
 );
 
 export const labelPlacement = () => (
