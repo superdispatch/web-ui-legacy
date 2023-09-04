@@ -57,8 +57,10 @@ it('checks component css', () => {
       width: 24px;
       height: 24px;
       padding: 0;
+      margin-top: 4px;
       margin-left: 8px;
       margin-right: 8px;
+      margin-bottom: 4px;
     }
 
     .MuiCheckbox-root:hover {
