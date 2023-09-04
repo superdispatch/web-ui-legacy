@@ -5,6 +5,7 @@ import { Button, Inline, Stack, useSnackbarStack } from '@superdispatch/ui';
 import { Box } from '@superdispatch/ui-lab';
 import { Form, FormikProvider } from 'formik';
 import {
+  FormikCheckboxField,
   FormikDateField,
   FormikMaxLengthTextField,
   FormikPasswordField,
@@ -31,6 +32,8 @@ export const SignUp = () => {
       phone: string;
       about: string;
       user_type: string;
+      address: boolean;
+      street: boolean;
     },
     Record<string, unknown>
   >({
@@ -41,6 +44,8 @@ export const SignUp = () => {
       phone: '',
       about: '',
       user_type: 'dispatcher',
+      address: false,
+      street: true,
     },
     onSubmit(values) {
       return new Promise((resolve, reject) => {
@@ -124,6 +129,14 @@ export const SignUp = () => {
               validate={(value, phoneService) =>
                 phoneService.validate(value, { required: true })
               }
+            />
+
+            <FormikCheckboxField name="address" label="Washington" />
+
+            <FormikCheckboxField
+              name="street"
+              label="Liberal street"
+              helperText="Street Detail"
             />
 
             <FormikMaxLengthTextField
