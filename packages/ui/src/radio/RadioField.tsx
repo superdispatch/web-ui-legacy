@@ -12,8 +12,8 @@ import { Color } from '../theme/Color';
 
 const FormControl = styled(FormControlMui)`
   justify-content: center;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 `;
 
 const FormHelperText = styled(FormHelperTextMui)`
