@@ -12,8 +12,6 @@ import { Color } from '../theme/Color';
 
 const FormControl = styled(FormControlMui)`
   justify-content: center;
-  margin-top: 8px;
-  margin-bottom: 8px;
 `;
 
 const FormHelperText = styled(FormHelperTextMui)`
@@ -22,7 +20,8 @@ const FormHelperText = styled(FormHelperTextMui)`
   line-height: 16px;
   font-weight: 400;
   margin-left: 30px;
-  margin-top: 2px;
+  margin-top: 0;
+  margin-bottom: 4px;
 
   &.Mui-error {
     color: ${Color.Red500};

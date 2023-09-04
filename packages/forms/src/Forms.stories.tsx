@@ -1,3 +1,4 @@
+import { FormControlLabel, Radio } from '@material-ui/core';
 import { MessageOutlined, PostAdd as PostAddIcon } from '@material-ui/icons';
 import { Alert } from '@material-ui/lab';
 import { Meta } from '@storybook/react';
@@ -31,6 +32,7 @@ export const SignUp = () => {
       phone: string;
       about: string;
       user_type: string;
+      bol_template: string;
     },
     Record<string, unknown>
   >({
@@ -41,6 +43,7 @@ export const SignUp = () => {
       phone: '',
       about: '',
       user_type: 'dispatcher',
+      bol_template: '',
     },
     onSubmit(values) {
       return new Promise((resolve, reject) => {
@@ -132,6 +135,21 @@ export const SignUp = () => {
               label="About"
               maxLength={100}
             />
+
+            <FormikRadioGroupField label="BOL Template" name="bol_template">
+              <FormControlLabel
+                key="multiple"
+                value="multiple"
+                control={<Radio />}
+                label="Multiple"
+              />
+              <FormControlLabel
+                key="single"
+                value="single"
+                control={<Radio />}
+                label="Single"
+              />
+            </FormikRadioGroupField>
 
             <FormikRadioGroupField fullWidth={true} label="Posts" name="post">
               <Stack>

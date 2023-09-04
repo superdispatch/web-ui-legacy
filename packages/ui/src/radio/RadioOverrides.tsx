@@ -34,11 +34,13 @@ export function overrideRadio(theme: SuperDispatchTheme): void {
   theme.overrides.MuiRadio = {
     root: {
       color: Color.Dark100,
-      marginRight: theme.spacing(1),
-      marginLeft: theme.spacing(1),
-      padding: 0,
       width: theme.spacing(3),
       height: theme.spacing(3),
+      marginRight: theme.spacing(1),
+      marginLeft: theme.spacing(1),
+      marginTop: theme.spacing(0.5),
+      marginBottom: theme.spacing(0.5),
+      padding: 0,
     },
 
     colorPrimary: {
