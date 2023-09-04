@@ -8,6 +8,8 @@ import { AccountBoxOutlined, Error, VerifiedUser } from '@material-ui/icons';
 import { UseState } from '@superdispatch/ui-docs';
 import {
   CheckboxField,
+  Column,
+  Columns,
   Inline,
   RadioField,
   RadioFieldCard,
@@ -115,10 +117,20 @@ export const labelPlacement = () => (
 export const inlineForm = () => (
   <RadioGroupField RadioGroupProps={{ row: true }}>
     <FormGroup row={true}>
-      <RadioField label="Radio" />
-      <CheckboxField label="Checkbox" />
-      <FormControlLabel label="Switch" control={<Switch />} />
-      <TextField placeholder="Text Field" />
+      <Columns align="center" space="small">
+        <Column width="content">
+          <RadioField label="Radio" />
+        </Column>
+        <Column width="content">
+          <CheckboxField label="Checkbox" />
+        </Column>
+        <Column width="content">
+          <FormControlLabel label="Switch" control={<Switch />} />
+        </Column>
+        <Column width="content">
+          <TextField placeholder="Text Field" />
+        </Column>
+      </Columns>
     </FormGroup>
   </RadioGroupField>
 );
