@@ -5,7 +5,13 @@ import {
   TextField,
 } from '@material-ui/core';
 import { PropsLink } from '@superdispatch/ui-docs';
-import { CheckboxField, RadioField, RadioGroupField } from '..';
+import {
+  CheckboxField,
+  Column,
+  Columns,
+  RadioField,
+  RadioGroupField,
+} from '..';
 
 export default {
   title: 'Inputs/Switch',
@@ -50,11 +56,19 @@ export const disabled = () => (
 
 export const inlineForm = () => (
   <RadioGroupField RadioGroupProps={{ row: true }}>
-    <FormGroup row={true}>
-      <RadioField label="Radio" />
-      <CheckboxField label="Checkbox" />
-      <FormControlLabel label="Switch" control={<Switch />} />
-      <TextField placeholder="Text Field" />
-    </FormGroup>
+    <Columns align="center" space="small">
+      <Column width="content">
+        <RadioField label="Radio" />
+      </Column>
+      <Column width="content">
+        <CheckboxField label="Checkbox" />
+      </Column>
+      <Column width="content">
+        <FormControlLabel label="Switch" control={<Switch />} />
+      </Column>
+      <Column width="content">
+        <TextField placeholder="Text Field" />
+      </Column>
+    </Columns>
   </RadioGroupField>
 );
