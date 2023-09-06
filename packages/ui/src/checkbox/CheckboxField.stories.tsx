@@ -4,7 +4,7 @@ import {
   Switch,
   TextField,
 } from '@material-ui/core';
-import { RadioField } from '..';
+import { Column, Columns, RadioField } from '..';
 import { CheckboxField } from './CheckboxField';
 import { CheckboxGroupField } from './CheckboxGroudField';
 
@@ -52,10 +52,20 @@ export const labelPlacement = () => (
 export const inlineForm = () => (
   <CheckboxGroupField FormGroupProps={{ row: true }}>
     <FormGroup row={true}>
-      <RadioField label="Radio" />
-      <CheckboxField label="Checkbox" />
-      <FormControlLabel label="Switch" control={<Switch />} />
-      <TextField placeholder="Text Field" />
+      <Columns align="center" space="small">
+        <Column width="content">
+          <RadioField label="Radio" />
+        </Column>
+        <Column width="content">
+          <CheckboxField label="Checkbox" />
+        </Column>
+        <Column width="content">
+          <FormControlLabel label="Switch" control={<Switch />} />
+        </Column>
+        <Column width="content">
+          <TextField placeholder="Text Field" />
+        </Column>
+      </Columns>
     </FormGroup>
   </CheckboxGroupField>
 );
