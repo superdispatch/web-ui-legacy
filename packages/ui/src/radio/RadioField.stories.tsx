@@ -111,7 +111,7 @@ export const labelPlacement = () => (
 export const inlineForm = () => (
   <RadioGroupField RadioGroupProps={{ row: true }}>
     <FormGroup row={true}>
-      <Columns align="center" space="small">
+      <Columns space="small" align="center">
         <Column width="content">
           <RadioField label="Radio" />
         </Column>

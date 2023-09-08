@@ -4,7 +4,9 @@ import {
   Switch,
   TextField,
 } from '@material-ui/core';
-import { Column, Columns, RadioField } from '..';
+import { Error } from '@material-ui/icons';
+import { UseState } from '@superdispatch/ui-docs';
+import { Column, Columns, Inline, RadioField } from '..';
 import { CheckboxField } from './CheckboxField';
 import { CheckboxGroupField } from './CheckboxGroudField';
 
@@ -42,6 +44,40 @@ export const disabled = () => (
   </CheckboxGroupField>
 );
 
+export const group = () => (
+  <UseState initialState="">
+    {() => (
+      <CheckboxGroupField
+        error={true}
+        helperText={
+          <Inline verticalAlign="center">
+            <Error fontSize="small" />
+            Select at least one option
+          </Inline>
+        }
+        label="Assign responsibility"
+      >
+        <CheckboxField
+          label="Kristin Watson"
+          value="kristin"
+          helperText="Loves playing foosball"
+        />
+        <CheckboxField
+          label="Jane Cooper"
+          value="jane"
+          helperText="Love singing"
+        />
+        <CheckboxField
+          label="Jerome Bell"
+          value="bell"
+          helperText="Asked to be assigned to something"
+          indeterminate={true}
+        />
+      </CheckboxGroupField>
+    )}
+  </UseState>
+);
+
 export const labelPlacement = () => (
   <CheckboxField
     label="Label"
@@ -52,7 +88,7 @@ export const labelPlacement = () => (
 export const inlineForm = () => (
   <CheckboxGroupField FormGroupProps={{ row: true }}>
     <FormGroup row={true}>
-      <Columns align="center" space="small">
+      <Columns space="small" align="center">
         <Column width="content">
           <RadioField label="Radio" />
         </Column>
