@@ -331,10 +331,6 @@ test('css', () => {
       outline: none;
     }
 
-    .SD-Calendar-navBar.react-datepicker__navigation--previous {
-      color: Color.Red30;
-    }
-
     .SD-Calendar-navButtonPrev {
       top: 12px;
       left: 20px;

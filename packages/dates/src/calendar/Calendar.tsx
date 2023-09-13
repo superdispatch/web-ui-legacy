@@ -65,11 +65,7 @@ const useStyles = makeStyles<
 
     interactionDisabled: {},
 
-    navBar: {
-      '&.react-datepicker__navigation--previous': {
-        color: Color.Red30,
-      },
-    },
+    navBar: {},
     navButtonPrev: {
       position: 'absolute',
       top: theme.spacing(1.5),
