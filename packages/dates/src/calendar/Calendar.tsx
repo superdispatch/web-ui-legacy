@@ -69,12 +69,12 @@ const useStyles = makeStyles<
     navButtonPrev: {
       position: 'absolute',
       top: theme.spacing(1.5),
-      left: theme.spacing(1.5),
+      left: theme.spacing(2.5),
     },
     navButtonNext: {
       position: 'absolute',
       top: theme.spacing(1.5),
-      right: theme.spacing(1.5),
+      right: theme.spacing(2.5),
     },
     navButtonInteractionDisabled: {},
 
@@ -91,6 +91,11 @@ const useStyles = makeStyles<
 
     caption: {
       textAlign: 'center',
+      color: Color.Dark500,
+      fontSize: 12,
+      fontWeight: 700,
+      textTransform: 'uppercase',
+      letterSpacing: '1.2px',
       display: 'table-caption',
       marginBottom: theme.spacing(1),
       padding: theme.spacing(0, 1),
@@ -147,6 +152,7 @@ const useStyles = makeStyles<
       width: theme.spacing(5),
       height: theme.spacing(5),
       borderRadius: theme.spacing(0.5),
+      fontSize: 12,
 
       position: 'relative',
 
