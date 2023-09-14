@@ -152,7 +152,7 @@ const useStyles = makeStyles<
       width: theme.spacing(5),
       height: theme.spacing(5),
       borderRadius: theme.spacing(0.5),
-      fontSize: '12px',
+      fontSize: 12,
 
       position: 'relative',
 
