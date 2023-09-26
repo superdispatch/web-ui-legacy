@@ -38,7 +38,6 @@ export function overrideLink(theme: SuperDispatchTheme): void {
       },
 
       '&.MuiTypography-colorTextSecondary': {
-        cursor: 'not-allowed',
         color: Color.Dark100,
         backgroundImage: line(Color.Silver500),
 
@@ -59,6 +58,9 @@ export function overrideLink(theme: SuperDispatchTheme): void {
       lineHeight: 'inherit',
       userSelect: 'inherit',
       verticalAlign: 'inherit',
+      '&:disabled': {
+        cursor: 'not-allowed',
+      },
     },
   };
 }
