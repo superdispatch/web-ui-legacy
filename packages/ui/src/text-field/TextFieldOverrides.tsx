@@ -17,8 +17,11 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
   theme.overrides.MuiFormLabel = {
     root: {
       ...theme.typography.body2,
+      color: Color.Dark500,
 
-      color: Color.Dark400,
+      '&.MuiFormLabel-root': {
+        fontSize: theme.spacing(1.75),
+      },
 
       '&$error': { color: undefined },
       '&$focused': { color: undefined },
@@ -29,11 +32,37 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
   theme.overrides.MuiInputBase = {
     root: {
       ...theme.typography.body2,
-      '&$disabled': { backgroundColor: Color.Silver100 },
+      '&$disabled': {
+        backgroundColor: Color.Silver30,
+      },
+      '&$error': { borderColor: Color.Red500 },
+      '&.MuiOutlinedInput-root': {
+        '& fieldset': {
+          borderColor: Color.Silver500,
+        },
+        '&:hover fieldset': {
+          borderColor: Color.Dark100,
+        },
+        '&.Mui-focused fieldset': {
+          borderColor: Color.Blue500,
+        },
+        '&.Mui-error fieldset': {
+          borderColor: Color.Red500,
+        },
+        '&.Mui-error:hover fieldset': {
+          borderColor: Color.Red500,
+        },
+      },
     },
     input: {
       textOverflow: 'ellipsis',
-      height: theme.spacing(3),
+
+      '&.MuiInputBase-input': {
+        fontSize: theme.spacing(1.75),
+        padding: theme.spacing(0.75, 1),
+      },
+
+      height: theme.spacing(2.5),
       [sm]: { height: theme.spacing(2.5) },
     },
     inputMultiline: { resize: 'vertical' },
@@ -141,7 +170,15 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
   theme.overrides.MuiFormHelperText = {
     root: {
       ...theme.typography.body2,
+      color: Color.Dark300,
       marginTop: theme.spacing(0.5),
+
+      '&.Mui-error': {
+        color: Color.Red500,
+      },
+      '&.MuiFormHelperText-root': {
+        fontSize: theme.spacing(1.75),
+      },
     },
 
     contained: { marginLeft: undefined, marginRight: undefined },
