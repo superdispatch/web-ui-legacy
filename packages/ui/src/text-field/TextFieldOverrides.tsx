@@ -53,7 +53,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
           borderColor: Color.Red500,
         },
         '&.Mui-disabled fieldset': {
-          borderWidth: theme.spacing(0),
+          borderColor: Color.Silver400,
         },
       },
     },

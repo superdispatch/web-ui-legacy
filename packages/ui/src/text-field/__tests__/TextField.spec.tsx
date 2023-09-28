@@ -271,7 +271,7 @@ it('checks component css', () => {
     }
 
     .MuiInputBase-root.MuiOutlinedInput-root.Mui-disabled fieldset {
-      border-width: 0;
+      border-color: Color.Silver400;
     }
 
     .MuiInputBase-multiline {
