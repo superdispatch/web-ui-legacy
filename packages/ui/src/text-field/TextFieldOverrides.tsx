@@ -52,6 +52,9 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
         '&.Mui-error:hover fieldset': {
           borderColor: Color.Red500,
         },
+        '&.Mui-disabled fieldset': {
+          borderWidth: theme.spacing(0),
+        },
       },
     },
     input: {
