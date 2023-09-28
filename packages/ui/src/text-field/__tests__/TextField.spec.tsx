@@ -270,6 +270,10 @@ it('checks component css', () => {
       border-color: Color.Red500;
     }
 
+    .MuiInputBase-root.MuiOutlinedInput-root.Mui-disabled fieldset {
+      border-width: 0;
+    }
+
     .MuiInputBase-multiline {
       padding: 6px 0 7px;
     }
