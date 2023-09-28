@@ -91,7 +91,7 @@ it('checks component css', () => {
     }
 
     .MuiFormHelperText-root {
-      color: Color.Dark200;
+      color: Color.Dark300;
       margin: 0;
       font-size: 14px;
       margin-top: 4px;
@@ -116,12 +116,20 @@ it('checks component css', () => {
       color: Color.Red300;
     }
 
+    .MuiFormHelperText-root.Mui-error {
+      color: Color.Red500;
+    }
+
+    .MuiFormHelperText-root.MuiFormHelperText-root {
+      font-size: 14px;
+    }
+
     .MuiFormHelperText-marginDense {
       margin-top: 4px;
     }
 
     .MuiFormLabel-root {
-      color: Color.Dark400;
+      color: Color.Dark500;
       padding: 0;
       font-size: 14px;
       font-family: 'Inter', sans-serif;
@@ -134,6 +142,10 @@ it('checks component css', () => {
         font-size: 16px;
         line-height: 24px;
       }
+    }
+
+    .MuiFormLabel-root.MuiFormLabel-root {
+      font-size: 14px;
     }
 
     .MuiFormLabel-colorSecondary.Mui-focused {
@@ -231,7 +243,35 @@ it('checks component css', () => {
     .MuiInputBase-root.Mui-disabled {
       color: Color.Dark100;
       cursor: default;
-      background-color: Color.Silver100;
+      background-color: Color.Silver30;
+    }
+
+    .MuiInputBase-root.Mui-error {
+      border-color: Color.Red500;
+    }
+
+    .MuiInputBase-root.MuiOutlinedInput-root fieldset {
+      border-color: Color.Silver500;
+    }
+
+    .MuiInputBase-root.MuiOutlinedInput-root:hover fieldset {
+      border-color: Color.Dark100;
+    }
+
+    .MuiInputBase-root.MuiOutlinedInput-root.Mui-focused fieldset {
+      border-color: Color.Blue500;
+    }
+
+    .MuiInputBase-root.MuiOutlinedInput-root.Mui-error fieldset {
+      border-color: Color.Red500;
+    }
+
+    .MuiInputBase-root.MuiOutlinedInput-root.Mui-error:hover fieldset {
+      border-color: Color.Red500;
+    }
+
+    .MuiInputBase-root.MuiOutlinedInput-root.Mui-disabled fieldset {
+      border-color: Color.Silver400;
     }
 
     .MuiInputBase-multiline {
@@ -251,7 +291,7 @@ it('checks component css', () => {
       color: currentColor;
       width: 100%;
       border: 0;
-      height: 24px;
+      height: 20px;
       margin: 0;
       display: block;
       padding: 6px 0 7px;
@@ -308,6 +348,11 @@ it('checks component css', () => {
     .MuiInputBase-input:-webkit-autofill {
       animation-name: mui-auto-fill;
       animation-duration: 5000s;
+    }
+
+    .MuiInputBase-input.MuiInputBase-input {
+      padding: 6px 8px;
+      font-size: 14px;
     }
 
     @media (min-width: 600px) {
