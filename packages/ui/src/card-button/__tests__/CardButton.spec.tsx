@@ -88,19 +88,6 @@ it('checks component css', () => {
       margin-right: -4px;
     }
 
-    .SD-CardButton-errorIcon {
-      margin-left: -4px;
-      margin-right: 8px;
-    }
-
-    .SD-CardButton-errorIcon svg {
-      fill: Color.Red300;
-    }
-
-    .SD-CardButton-primaryIcon svg {
-      fill: Color.Blue300;
-    }
-
     .SD-CardButton-hint {
       margin-top: 4px;
     }
