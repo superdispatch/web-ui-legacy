@@ -1,6 +1,7 @@
 import {
   Add as AddIcon,
   AttachFile as AttachFileIcon,
+  WarningRounded,
 } from '@material-ui/icons';
 import { Meta } from '@storybook/react';
 import { CardButton } from './CardButton';
@@ -20,7 +21,9 @@ export const endIcon = () => (
 );
 
 export const error = () => (
-  <CardButton error="Invalid file extension">Add Attachments</CardButton>
+  <CardButton errorIcon={<WarningRounded />} error="Invalid file extension">
+    Add Attachments
+  </CardButton>
 );
 
 export const small = () => (
@@ -31,6 +34,12 @@ export const small = () => (
 
 export const large = () => (
   <CardButton size="large" hint="or Drag & Drop files here">
+    Add Attachments
+  </CardButton>
+);
+
+export const disabled = () => (
+  <CardButton disabled={true} hint="or Drag & Drop files here">
     Add Attachments
   </CardButton>
 );

@@ -25,7 +25,9 @@ export type CardButtonClassKey =
   | 'sizeLarge'
   | 'icon'
   | 'startIcon'
-  | 'endIcon';
+  | 'endIcon'
+  | 'primaryIcon'
+  | 'errorIcon';
 
 const useStyles = makeStyles<
   Theme,
@@ -62,14 +64,14 @@ const useStyles = makeStyles<
     },
 
     error: {
-      color: Color.Red300,
-      borderColor: Color.Red300,
+      color: Color.Red500,
+      borderColor: Color.Red500,
       backgroundColor: Color.Red50,
       '&:focus': { backgroundColor: Color.Red75 },
     },
 
     primary: {
-      color: Color.Blue300,
+      color: Color.Blue500,
       borderColor: Color.Silver500,
       '&:focus': { backgroundColor: Color.Blue50 },
       '&:hover, &:active': {
@@ -109,6 +111,20 @@ const useStyles = makeStyles<
       marginRight: theme.spacing(-0.5),
     },
 
+    errorIcon: {
+      marginRight: theme.spacing(1),
+      marginLeft: theme.spacing(-0.5),
+      '& svg': {
+        fill: Color.Red300,
+      },
+    },
+
+    primaryIcon: {
+      '& svg': {
+        fill: Color.Blue300,
+      },
+    },
+
     hint: {
       marginTop: theme.spacing(0.5),
     },
@@ -124,6 +140,7 @@ export interface CardButtonProps
   hint?: ReactNode;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
+  errorIcon?: ReactNode;
 
   size?: 'small' | 'medium' | 'large';
 
@@ -143,6 +160,7 @@ export const CardButton: ForwardRefExoticComponent<CardButtonProps> =
         children,
         endIcon,
         startIcon,
+        errorIcon,
         disabled,
         ...props
       },
@@ -169,13 +187,24 @@ export const CardButton: ForwardRefExoticComponent<CardButtonProps> =
         >
           {error ? (
             <Typography variant="h4" color="inherit" className={styles.label}>
+              {!!errorIcon && (
+                <span className={clsx(styles.icon, styles.errorIcon)}>
+                  {errorIcon}
+                </span>
+              )}
               {error}
             </Typography>
           ) : (
             <>
               <Typography variant="h4" color="inherit" className={styles.label}>
                 {!!startIcon && (
-                  <span className={clsx(styles.icon, styles.startIcon)}>
+                  <span
+                    className={clsx(
+                      styles.icon,
+                      styles.startIcon,
+                      styles.primaryIcon,
+                    )}
+                  >
                     {startIcon}
                   </span>
                 )}
@@ -183,14 +212,24 @@ export const CardButton: ForwardRefExoticComponent<CardButtonProps> =
                 {children}
 
                 {!!endIcon && (
-                  <span className={clsx(styles.icon, styles.endIcon)}>
+                  <span
+                    className={clsx(
+                      styles.icon,
+                      styles.endIcon,
+                      styles.primaryIcon,
+                    )}
+                  >
                     {endIcon}
                   </span>
                 )}
               </Typography>
 
               {!!hint && (
-                <Typography color="textSecondary" className={styles.hint}>
+                <Typography
+                  color="textSecondary"
+                  variant="caption"
+                  className={styles.hint}
+                >
                   {hint}
                 </Typography>
               )}
