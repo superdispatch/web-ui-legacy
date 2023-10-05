@@ -62,14 +62,14 @@ const useStyles = makeStyles<
     },
 
     error: {
-      color: Color.Red300,
-      borderColor: Color.Red300,
+      color: Color.Red500,
+      borderColor: Color.Red500,
       backgroundColor: Color.Red50,
       '&:focus': { backgroundColor: Color.Red75 },
     },
 
     primary: {
-      color: Color.Blue300,
+      color: Color.Blue500,
       borderColor: Color.Silver500,
       '&:focus': { backgroundColor: Color.Blue50 },
       '&:hover, &:active': {
@@ -169,6 +169,11 @@ export const CardButton: ForwardRefExoticComponent<CardButtonProps> =
         >
           {error ? (
             <Typography variant="h4" color="inherit" className={styles.label}>
+              {!!startIcon && (
+                <span className={clsx(styles.icon, styles.startIcon)}>
+                  {startIcon}
+                </span>
+              )}
               {error}
             </Typography>
           ) : (
@@ -190,7 +195,11 @@ export const CardButton: ForwardRefExoticComponent<CardButtonProps> =
               </Typography>
 
               {!!hint && (
-                <Typography color="textSecondary" className={styles.hint}>
+                <Typography
+                  color="textSecondary"
+                  variant="caption"
+                  className={styles.hint}
+                >
                   {hint}
                 </Typography>
               )}
