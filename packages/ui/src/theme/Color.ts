@@ -126,6 +126,7 @@ export enum Color {
   // Neutral Colors
   //
 
+  Dark50 = 'rgba(25, 35, 52, 0.5)',
   Dark100 = '#8F949E',
   Dark300 = '#5B6371',
   Dark500 = '#192334',

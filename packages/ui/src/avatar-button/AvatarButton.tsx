@@ -43,7 +43,7 @@ const useStyles = makeStyles(
         '&:not([disabled])[aria-busy="false"]': {
           '&:hover, &:focus': {
             '&$withIcon > $overlay': {
-              backgroundColor: Color.Black50,
+              backgroundColor: Color.Dark50,
 
               '& > svg': { opacity: 1 },
             },
@@ -84,6 +84,7 @@ const useStyles = makeStyles(
         top: 0,
         left: 0,
         position: 'absolute',
+        color: Color.Blue500,
 
         fontSize: theme.spacing(5),
         [sm]: { fontSize: theme.spacing(4) },

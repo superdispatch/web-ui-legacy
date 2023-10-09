@@ -12,7 +12,7 @@ it('checks component css', () => {
       > .SD-AvatarButton-overlay,
     .SD-AvatarButton-button:not([disabled])[aria-busy='false']:focus.SD-AvatarButton-withIcon
       > .SD-AvatarButton-overlay {
-      background-color: Color.Black50;
+      background-color: Color.Dark50;
     }
 
     .SD-AvatarButton-button:not([disabled])[aria-busy='false']:hover:not(.SD-AvatarButton-withIcon)
@@ -66,6 +66,7 @@ it('checks component css', () => {
     .SD-AvatarButton-progress {
       top: 0;
       left: 0;
+      color: Color.Blue500;
       position: absolute;
       font-size: 40px;
     }
