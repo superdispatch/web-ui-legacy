@@ -1,3 +1,4 @@
+import { Edit } from '@material-ui/icons';
 import { Meta } from '@storybook/react';
 import { UseState } from '@superdispatch/ui-docs';
 import { Inline } from '../inline/Inline';
@@ -106,10 +107,19 @@ export const interactive = () => (
       return (
         <Stack space="small">
           <Inline space="small" verticalAlign="center">
-            <AvatarButton disabled={state} onClick={handleClick}>
+            <AvatarButton
+              icon={<Edit />}
+              disabled={state}
+              onClick={handleClick}
+            >
               SM
             </AvatarButton>
-            <AvatarButton size="large" disabled={state} onClick={handleClick}>
+            <AvatarButton
+              icon={<Edit />}
+              size="large"
+              disabled={state}
+              onClick={handleClick}
+            >
               SM
             </AvatarButton>
 
@@ -124,12 +134,14 @@ export const interactive = () => (
           <Inline space="small" verticalAlign="center">
             <AvatarButton
               disabled={state}
+              icon={<Edit />}
               onClick={handleClick}
               src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80"
             />
             <AvatarButton
               size="large"
               disabled={state}
+              icon={<Edit />}
               onClick={handleClick}
               src="https://images.unsplash.com/photo-1571816119607-57e48af1caa9?q=80"
             />
