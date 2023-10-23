@@ -62,10 +62,9 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
 
       '&.MuiInputBase-input': {
         fontSize: theme.spacing(1.75),
-        padding: theme.spacing(0.75, 1),
       },
 
-      height: theme.spacing(2.5),
+      height: theme.spacing(3),
       [sm]: { height: theme.spacing(2.5) },
     },
     inputMultiline: { resize: 'vertical' },
@@ -99,7 +98,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
 
     input: {
       padding: theme.spacing(1.25, 1.5),
-      [sm]: { padding: theme.spacing(0.75, 1) },
+      [sm]: { padding: theme.spacing(1.25, 1.5) },
     },
 
     multiline: { padding: theme.spacing(0.75, 1) },

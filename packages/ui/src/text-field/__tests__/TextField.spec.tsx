@@ -291,7 +291,7 @@ it('checks component css', () => {
       color: currentColor;
       width: 100%;
       border: 0;
-      height: 20px;
+      height: 24px;
       margin: 0;
       display: block;
       padding: 6px 0 7px;
@@ -351,7 +351,6 @@ it('checks component css', () => {
     }
 
     .MuiInputBase-input.MuiInputBase-input {
-      padding: 6px 8px;
       font-size: 14px;
     }
 
@@ -524,7 +523,7 @@ it('checks component css', () => {
 
     @media (min-width: 600px) {
       .MuiOutlinedInput-input {
-        padding: 6px 8px;
+        padding: 10px 12px;
       }
     }
 
