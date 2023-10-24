@@ -523,7 +523,7 @@ it('checks component css', () => {
 
     @media (min-width: 600px) {
       .MuiOutlinedInput-input {
-        padding: 10px 12px;
+        padding: 6px 8px;
       }
     }
 
