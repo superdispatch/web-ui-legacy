@@ -98,7 +98,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
 
     input: {
       padding: theme.spacing(1.25, 1.5),
-      [sm]: { padding: theme.spacing(1.25, 1.5) },
+      [sm]: { padding: theme.spacing(0.75, 1) },
     },
 
     multiline: { padding: theme.spacing(0.75, 1) },
