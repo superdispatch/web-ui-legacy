@@ -30,7 +30,12 @@ export function overrideDialog(theme: SuperDispatchTheme): void {
   };
 
   theme.overrides.MuiDialogActions = {
-    root: { padding: theme.spacing(3) },
+    root: {
+      paddingBottom: theme.spacing(2),
+      paddingTop: theme.spacing(4),
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3),
+    },
 
     spacing: {
       '& > :not(:first-child)': { marginLeft: theme.spacing(2) },
