@@ -173,12 +173,8 @@ it('checks component css', () => {
     .MuiDialogActions-root {
       flex: 0 0 auto;
       display: flex;
-      padding: 8px;
+      padding: 24px;
       align-items: center;
-      padding-top: 32px;
-      padding-left: 24px;
-      padding-right: 24px;
-      padding-bottom: 16px;
       justify-content: flex-end;
     }
 
