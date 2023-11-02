@@ -51,11 +51,11 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
 
     palette: {
       primary: {
-        main: Color.Blue300,
+        main: Color.Blue500,
       },
 
       error: {
-        main: Color.Red300,
+        main: Color.Red500,
       },
 
       action: {
@@ -66,7 +66,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
 
       text: {
         primary: Color.Dark500,
-        secondary: Color.Dark200,
+        secondary: Color.Dark300,
         hint: Color.Dark100,
         disabled: Color.Dark100,
       },

@@ -6,7 +6,7 @@ function line(color: string): string {
 }
 
 export function overrideLink(theme: SuperDispatchTheme): void {
-  theme.props.MuiLink = { underline: 'none', color: 'textPrimary' };
+  theme.props.MuiLink = { underline: 'always', color: 'textPrimary' };
 
   theme.overrides.MuiLink = {
     root: {
@@ -16,34 +16,42 @@ export function overrideLink(theme: SuperDispatchTheme): void {
       backgroundColor: Color.Transparent,
 
       '&:focus': { outline: 'none' },
-      '&:hover, &:active': { backgroundImage: line('currentColor') },
 
-      '&.MuiTypography-colorTextPrimary': {
-        backgroundImage: line(Color.Silver500),
-
-        '&:focus, &:hover, &:active': {
-          color: Color.Blue500,
-          backgroundImage: line(Color.Blue500),
-        },
-      },
-
-      '&.MuiTypography-colorError': {
-        color: Color.Red500,
-        backgroundImage: line(Color.Silver500),
-
-        '&:focus, &:hover, &:active': {
-          color: Color.Red500,
-          backgroundImage: line(Color.Red500),
-        },
-      },
-
-      '&.MuiTypography-colorTextSecondary': {
+      '&:disabled': {
         color: Color.Dark100,
         backgroundImage: line(Color.Silver500),
 
         '&:focus, &:hover, &:active': {
           color: Color.Dark100,
           backgroundImage: line(Color.Silver500),
+        },
+      },
+
+      '&.MuiLink-underlineAlways': {
+        textDecoration: 'none',
+        backgroundImage: line(Color.Silver500),
+        '&:hover, &:active': { backgroundImage: line('currentColor') },
+      },
+
+      '&.MuiLink-underlineHover': {
+        backgroundImage: 'none',
+        '&:hover, &:active': {
+          textDecoration: 'none',
+          backgroundImage: line('currentColor'),
+        },
+      },
+
+      '&.MuiLink-underlineNone': {
+        backgroundImage: 'none',
+        '&:focus, &:hover, &:active': {
+          backgroundImage: 'none',
+        },
+      },
+
+      '&.MuiTypography-colorTextPrimary, &.MuiTypography-colorTextSecondary': {
+        '&:focus, &:hover, &:active': {
+          color: Color.Blue500,
+          backgroundImage: line(Color.Blue500),
         },
       },
     },
