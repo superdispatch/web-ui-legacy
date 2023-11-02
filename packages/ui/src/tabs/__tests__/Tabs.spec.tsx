@@ -94,7 +94,7 @@ it('checks component css', () => {
     }
 
     .MuiTab-textColorSecondary {
-      color: Color.Dark200;
+      color: Color.Dark300;
     }
 
     .MuiTab-textColorSecondary.Mui-selected {
