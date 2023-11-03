@@ -55,7 +55,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
       },
 
       error: {
-        main: Color.Red500,
+        main: Color.Red300,
       },
 
       action: {
