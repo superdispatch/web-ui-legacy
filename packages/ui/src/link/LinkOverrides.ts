@@ -48,6 +48,14 @@ export function overrideLink(theme: SuperDispatchTheme): void {
         },
       },
 
+      '&.MuiTypography-colorPrimary': {
+        backgroundImage: 'none',
+        '&:hover, &:active': {
+          textDecoration: 'none',
+          backgroundImage: line('currentColor'),
+        },
+      },
+
       '&.MuiTypography-colorTextPrimary, &.MuiTypography-colorTextSecondary': {
         '&:focus, &:hover, &:active': {
           color: Color.Blue500,

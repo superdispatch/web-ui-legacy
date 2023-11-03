@@ -31,7 +31,7 @@ export const multilineButton = () => (
 
 export const colors = () => (
   <Stack>
-    <Link href="#" target="_blank" color="primary" underline="hover">
+    <Link href="#" target="_blank" color="primary">
       Primary
     </Link>
     <Link href="#" target="_blank" color="textPrimary">
