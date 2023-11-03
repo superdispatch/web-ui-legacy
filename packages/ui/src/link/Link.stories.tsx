@@ -37,6 +37,9 @@ export const colors = () => (
     <Link href="#" target="_blank" color="textPrimary">
       Text Primary
     </Link>
+    <Link href="#" target="_blank" color="textSecondary">
+      Text Secondary
+    </Link>
     <Link href="#" target="_blank" color="error">
       Critical
     </Link>
@@ -48,6 +51,23 @@ export const colors = () => (
       color="textSecondary"
     >
       Disabled
+    </Link>
+    <Box color="Red500">
+      <Link href="#" target="_blank" color="inherit">
+        Inherited
+      </Link>
+    </Box>
+    <Link
+      href="#"
+      target="_blank"
+      variant="h5"
+      color="textPrimary"
+      underline="always"
+    >
+      Always Underlined
+    </Link>
+    <Link href="#" target="_blank" color="textPrimary" underline="none">
+      Never Underlined
     </Link>
   </Stack>
 );

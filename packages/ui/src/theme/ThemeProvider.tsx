@@ -66,7 +66,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
 
       text: {
         primary: Color.Dark500,
-        secondary: Color.Dark200,
+        secondary: Color.Dark300,
         hint: Color.Dark100,
         disabled: Color.Dark100,
       },

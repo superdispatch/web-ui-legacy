@@ -7,7 +7,7 @@ it('checks default props', () => {
   expect(props.MuiLink).toMatchInlineSnapshot(`
     Object {
       "color": "textPrimary",
-      "underline": "none",
+      "underline": "always",
     }
   `);
 });
@@ -25,8 +25,53 @@ it('checks component css', () => {
       outline: none;
     }
 
-    .MuiLink-root:hover,
-    .MuiLink-root:active {
+    .MuiLink-root:disabled {
+      color: Color.Dark100;
+      background-image: linear-gradient(
+        to right,
+        Color.Silver500 0%,
+        Color.Silver500 100%
+      );
+    }
+
+    .MuiLink-root.MuiLink-underlineAlways {
+      text-decoration: none;
+      background-image: linear-gradient(
+        to right,
+        Color.Silver500 0%,
+        Color.Silver500 100%
+      );
+    }
+
+    .MuiLink-root.MuiLink-underlineHover {
+      background-image: none;
+    }
+
+    .MuiLink-root.MuiLink-underlineNone {
+      background-image: none;
+    }
+
+    .MuiLink-root.MuiTypography-colorPrimary {
+      background-image: none;
+    }
+
+    .MuiLink-root.MuiTypography-colorTextPrimary:focus,
+    .MuiLink-root.MuiTypography-colorTextPrimary:hover,
+    .MuiLink-root.MuiTypography-colorTextPrimary:active,
+    .MuiLink-root.MuiTypography-colorTextSecondary:focus,
+    .MuiLink-root.MuiTypography-colorTextSecondary:hover,
+    .MuiLink-root.MuiTypography-colorTextSecondary:active {
+      color: Color.Blue500;
+      background-image: linear-gradient(
+        to right,
+        Color.Blue500 0%,
+        Color.Blue500 100%
+      );
+    }
+
+    .MuiLink-root.MuiTypography-colorPrimary:hover,
+    .MuiLink-root.MuiTypography-colorPrimary:active {
+      text-decoration: none;
       background-image: linear-gradient(
         to right,
         currentColor 0%,
@@ -34,62 +79,39 @@ it('checks component css', () => {
       );
     }
 
-    .MuiLink-root.MuiTypography-colorTextPrimary {
+    .MuiLink-root.MuiLink-underlineNone:focus,
+    .MuiLink-root.MuiLink-underlineNone:hover,
+    .MuiLink-root.MuiLink-underlineNone:active {
+      background-image: none;
+    }
+
+    .MuiLink-root.MuiLink-underlineHover:hover,
+    .MuiLink-root.MuiLink-underlineHover:active {
+      text-decoration: none;
       background-image: linear-gradient(
         to right,
-        Color.Silver500 0%,
-        Color.Silver500 100%
+        currentColor 0%,
+        currentColor 100%
       );
     }
 
-    .MuiLink-root.MuiTypography-colorError {
-      color: Color.Red500;
+    .MuiLink-root.MuiLink-underlineAlways:hover,
+    .MuiLink-root.MuiLink-underlineAlways:active {
       background-image: linear-gradient(
         to right,
-        Color.Silver500 0%,
-        Color.Silver500 100%
+        currentColor 0%,
+        currentColor 100%
       );
     }
 
-    .MuiLink-root.MuiTypography-colorTextSecondary {
+    .MuiLink-root:disabled:focus,
+    .MuiLink-root:disabled:hover,
+    .MuiLink-root:disabled:active {
       color: Color.Dark100;
       background-image: linear-gradient(
         to right,
         Color.Silver500 0%,
         Color.Silver500 100%
-      );
-    }
-
-    .MuiLink-root.MuiTypography-colorTextSecondary:focus,
-    .MuiLink-root.MuiTypography-colorTextSecondary:hover,
-    .MuiLink-root.MuiTypography-colorTextSecondary:active {
-      color: Color.Dark100;
-      background-image: linear-gradient(
-        to right,
-        Color.Silver500 0%,
-        Color.Silver500 100%
-      );
-    }
-
-    .MuiLink-root.MuiTypography-colorError:focus,
-    .MuiLink-root.MuiTypography-colorError:hover,
-    .MuiLink-root.MuiTypography-colorError:active {
-      color: Color.Red500;
-      background-image: linear-gradient(
-        to right,
-        Color.Red500 0%,
-        Color.Red500 100%
-      );
-    }
-
-    .MuiLink-root.MuiTypography-colorTextPrimary:focus,
-    .MuiLink-root.MuiTypography-colorTextPrimary:hover,
-    .MuiLink-root.MuiTypography-colorTextPrimary:active {
-      color: Color.Blue500;
-      background-image: linear-gradient(
-        to right,
-        Color.Blue500 0%,
-        Color.Blue500 100%
       );
     }
 

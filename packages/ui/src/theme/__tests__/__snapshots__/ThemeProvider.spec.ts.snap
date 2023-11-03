@@ -118,7 +118,7 @@ Object {
     "disabled": "Color.Dark100",
     "hint": "Color.Dark100",
     "primary": "Color.Dark500",
-    "secondary": "Color.Dark200",
+    "secondary": "Color.Dark300",
   },
   "tonalOffset": 0.2,
   "type": "light",
