@@ -39,7 +39,7 @@ it('checks component css', () => {
     }
 
     .MuiSvgIcon-colorError {
-      color: Color.Red500;
+      color: Color.Red300;
     }
 
     .MuiSvgIcon-colorDisabled {

@@ -239,7 +239,7 @@ it('checks component css', () => {
     }
 
     .MuiTypography-colorError {
-      color: Color.Red500;
+      color: Color.Red300;
     }
 
     .MuiTypography-displayInline {

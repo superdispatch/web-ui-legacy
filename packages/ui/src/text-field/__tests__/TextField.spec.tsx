@@ -113,7 +113,7 @@ it('checks component css', () => {
     }
 
     .MuiFormHelperText-root.Mui-error {
-      color: Color.Red500;
+      color: Color.Red300;
     }
 
     .MuiFormHelperText-root.Mui-error {
@@ -153,7 +153,7 @@ it('checks component css', () => {
     }
 
     .MuiFormLabel-asterisk.Mui-error {
-      color: Color.Red500;
+      color: Color.Red300;
     }
 
     .MuiInputAdornment-root {
@@ -476,7 +476,7 @@ it('checks component css', () => {
     }
 
     .MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
-      border-color: Color.Red500;
+      border-color: Color.Red300;
     }
 
     .MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {

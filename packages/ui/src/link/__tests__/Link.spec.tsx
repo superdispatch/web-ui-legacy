@@ -51,6 +51,10 @@ it('checks component css', () => {
       background-image: none;
     }
 
+    .MuiLink-root.MuiTypography-colorPrimary {
+      background-image: none;
+    }
+
     .MuiLink-root.MuiTypography-colorTextPrimary:focus,
     .MuiLink-root.MuiTypography-colorTextPrimary:hover,
     .MuiLink-root.MuiTypography-colorTextPrimary:active,
@@ -62,6 +66,16 @@ it('checks component css', () => {
         to right,
         Color.Blue500 0%,
         Color.Blue500 100%
+      );
+    }
+
+    .MuiLink-root.MuiTypography-colorPrimary:hover,
+    .MuiLink-root.MuiTypography-colorPrimary:active {
+      text-decoration: none;
+      background-image: linear-gradient(
+        to right,
+        currentColor 0%,
+        currentColor 100%
       );
     }
 
