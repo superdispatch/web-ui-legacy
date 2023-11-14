@@ -121,7 +121,13 @@ it('checks component css', () => {
     }
 
     .MuiFormHelperText-root.MuiFormHelperText-root {
-      font-size: 14px;
+      font-size: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .MuiFormHelperText-root.MuiFormHelperText-root {
+        font-size: 14px;
+      }
     }
 
     .MuiFormHelperText-marginDense {
@@ -145,7 +151,13 @@ it('checks component css', () => {
     }
 
     .MuiFormLabel-root.MuiFormLabel-root {
-      font-size: 14px;
+      font-size: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .MuiFormLabel-root.MuiFormLabel-root {
+        font-size: 14px;
+      }
     }
 
     .MuiFormLabel-colorSecondary.Mui-focused {
@@ -351,12 +363,18 @@ it('checks component css', () => {
     }
 
     .MuiInputBase-input.MuiInputBase-input {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     @media (min-width: 600px) {
       .MuiInputBase-input {
         height: 20px;
+      }
+    }
+
+    @media (min-width: 600px) {
+      .MuiInputBase-input.MuiInputBase-input {
+        font-size: 14px;
       }
     }
 

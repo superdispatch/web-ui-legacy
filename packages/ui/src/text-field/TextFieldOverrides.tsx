@@ -20,7 +20,8 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
       color: Color.Dark500,
 
       '&.MuiFormLabel-root': {
-        fontSize: theme.spacing(1.75),
+        fontSize: theme.spacing(2),
+        [sm]: { fontSize: theme.spacing(1.75) },
       },
 
       '&$error': { color: undefined },
@@ -61,7 +62,8 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
       textOverflow: 'ellipsis',
 
       '&.MuiInputBase-input': {
-        fontSize: theme.spacing(1.75),
+        fontSize: theme.spacing(2),
+        [sm]: { fontSize: theme.spacing(1.75) },
       },
 
       height: theme.spacing(3),
@@ -179,7 +181,8 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
         color: Color.Red500,
       },
       '&.MuiFormHelperText-root': {
-        fontSize: theme.spacing(1.75),
+        fontSize: theme.spacing(2),
+        [sm]: { fontSize: theme.spacing(1.75) },
       },
     },
 
