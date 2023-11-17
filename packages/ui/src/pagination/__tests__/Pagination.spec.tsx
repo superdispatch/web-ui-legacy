@@ -22,7 +22,7 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-root {
-      color: Color.Dark400;
+      color: Color.Dark500;
       height: 32px;
       margin: 0 3px;
       padding: 0 6px;
@@ -53,13 +53,13 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-page.Mui-focusVisible {
-      border: 1px solid Color.Blue100;
+      border: 1px solid Color.Blue30;
       border-radius: 4px;
       background-color: Color.White;
     }
 
     .MuiPaginationItem-page.Mui-selected {
-      background-color: Color.Silver400;
+      background-color: Color.Silver500;
     }
 
     .MuiPaginationItem-page.Mui-disabled {
@@ -68,7 +68,7 @@ it('checks component css', () => {
 
     .MuiPaginationItem-page.Mui-selected:hover,
     .MuiPaginationItem-page.Mui-selected.Mui-focusVisible {
-      background-color: Color.Silver400;
+      background-color: Color.Silver500;
     }
 
     .MuiPaginationItem-page.Mui-selected.Mui-disabled {
