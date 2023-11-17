@@ -12,7 +12,7 @@ export function overridePagination(theme: SuperDispatchTheme): void {
   const props: Partial<PaginationItemProps> = {};
   const overrides: Overrides<PaginationItemClassKey> = {
     root: {
-      color: Color.Dark400,
+      color: Color.Dark500,
     },
     page: {
       '&:hover': {
@@ -21,12 +21,12 @@ export function overridePagination(theme: SuperDispatchTheme): void {
       '&$focusVisible': {
         borderRadius: 4,
         backgroundColor: Color.White,
-        border: `1px solid ${Color.Blue100}`,
+        border: `1px solid ${Color.Blue30}`,
       },
       '&$selected': {
-        backgroundColor: Color.Silver400,
+        backgroundColor: Color.Silver500,
         '&:hover, &$focusVisible': {
-          backgroundColor: Color.Silver400,
+          backgroundColor: Color.Silver500,
         },
         '&$disabled': {
           color: Color.Dark100,
