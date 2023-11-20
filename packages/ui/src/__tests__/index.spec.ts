@@ -31,6 +31,7 @@ it('exposes public api', () => {
         "Dark450": "#222F44",
         "Dark50": "rgba(25, 35, 52, 0.5)",
         "Dark500": "#192334",
+        "Green10": "rgba(3, 135, 47, 0.1)",
         "Green100": "#90EAAE",
         "Green200": "#5DDA87",
         "Green30": "rgba(3, 135, 47, 0.3)",
