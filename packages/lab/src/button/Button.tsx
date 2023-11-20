@@ -17,7 +17,8 @@ export type ButtonVariantProp =
   | 'inverted'
   | 'neutral'
   | 'primary'
-  | 'text';
+  | 'text'
+  | 'success';
 
 interface ButtonStyleProps {
   disabled: boolean;
@@ -194,6 +195,21 @@ function getInvertedVariables(size: ButtonSizeProp): ButtonVariables {
   });
 }
 
+function getSuccessVariables(size: ButtonSizeProp): ButtonVariables {
+  return createButtonVariables(size, {
+    textColor: Color.White,
+    outlineColor: Color.Green30,
+    backgroundColor: Color.Green300,
+
+    backgroundColorHovered: Color.Green500,
+
+    backgroundColorActive: Color.Green500,
+
+    textColorDisabled: Color.White,
+    backgroundColorDisabled: Color.Green30,
+  });
+}
+
 const ButtonRoot = styled.button<ButtonStyleProps>(
   ({ size, theme, variant, fullWidth }) => {
     const variables =
@@ -207,6 +223,8 @@ const ButtonRoot = styled.button<ButtonStyleProps>(
         ? getTextVariables(size)
         : variant === 'inverted'
         ? getInvertedVariables(size)
+        : variant === 'success'
+        ? getSuccessVariables(size)
         : getDefaultVariables(size);
 
     return css`

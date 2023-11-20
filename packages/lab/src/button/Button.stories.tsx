@@ -24,6 +24,19 @@ export const basic = () => (
     </Stack>
 
     <Stack align="center">
+      <Button variant="success">Success</Button>
+      <Button variant="success" active={true}>
+        Hover
+      </Button>
+      <Button variant="success" pending={true}>
+        Pending
+      </Button>
+      <Button variant="success" disabled={true}>
+        Disabled
+      </Button>
+    </Stack>
+
+    <Stack align="center">
       <Button variant="default">Default</Button>
       <Button variant="default" active={true}>
         Hover
