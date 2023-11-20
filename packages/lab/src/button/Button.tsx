@@ -113,7 +113,7 @@ function createButtonVariables(
 function getDefaultVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
     textColor: Color.White,
-    outlineColor: Color.Blue100,
+    outlineColor: Color.Blue30,
     backgroundColor: Color.Blue300,
 
     textColorHovered: Color.White,
@@ -121,7 +121,7 @@ function getDefaultVariables(size: ButtonSizeProp): ButtonVariables {
 
     backgroundColorActive: Color.Blue400,
 
-    backgroundColorDisabled: Color.Blue100,
+    backgroundColorDisabled: Color.Blue30,
   });
 }
 
@@ -133,11 +133,11 @@ function getNeutralVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
     textColor: Color.Dark500,
     borderColor: Color.Silver500,
-    outlineColor: Color.Blue100,
+    outlineColor: Color.Blue30,
     backgroundColor: Color.White,
 
-    textColorHovered: Color.Blue300,
-    borderColorHovered: Color.Blue300,
+    textColorHovered: Color.Blue500,
+    borderColorHovered: Color.Blue500,
     backgroundColorHovered: Color.Blue50,
 
     backgroundColorActive: Color.Blue75,
@@ -148,33 +148,33 @@ function getNeutralVariables(size: ButtonSizeProp): ButtonVariables {
 
 function getCriticalVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: Color.Red300,
-    borderColor: Color.Red300,
-    outlineColor: Color.Red75,
+    textColor: Color.Red500,
+    borderColor: Color.Red500,
+    outlineColor: Color.Red30,
     backgroundColor: Color.Red50,
 
     backgroundColorHovered: Color.Red75,
 
-    backgroundColorActive: Color.Red100,
+    backgroundColorActive: Color.Red10,
 
-    textColorDisabled: Color.Red100,
-    borderColorDisabled: Color.Red100,
+    textColorDisabled: Color.Red30,
+    borderColorDisabled: Color.Red30,
     backgroundColorDisabled: Color.Red50,
   });
 }
 
 function getTextVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: Color.Blue400,
+    textColor: Color.Blue500,
 
-    outlineColor: Color.Blue100,
+    outlineColor: Color.Blue30,
 
     textColorHovered: Color.Blue500,
     backgroundColorHovered: Color.Blue50,
 
     backgroundColorActive: Color.Blue75,
 
-    textColorDisabled: Color.Blue100,
+    textColorDisabled: Color.Blue30,
   });
 }
 
