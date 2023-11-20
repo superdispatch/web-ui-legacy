@@ -52,6 +52,7 @@ it('exposes public api', () => {
         "Purple50": "#EFEEFC",
         "Purple500": "#473ABB",
         "Purple75": "#DCDBF5",
+        "Red10": "rgba(195, 25, 9, 0.1)",
         "Red100": "#FDC2BA",
         "Red200": "#FE988B",
         "Red30": "rgba(229, 35, 13, 0.3)",
