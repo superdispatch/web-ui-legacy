@@ -24,7 +24,7 @@ export function overridePagination(theme: SuperDispatchTheme): void {
         border: `1px solid ${Color.Blue30}`,
       },
       '&$selected': {
-        backgroundColor: Color.Silver500,
+        backgroundColor: Color.Silver400,
         '&:hover, &$focusVisible': {
           backgroundColor: Color.Silver500,
         },

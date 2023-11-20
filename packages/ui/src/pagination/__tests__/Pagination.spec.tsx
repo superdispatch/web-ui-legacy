@@ -59,7 +59,7 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-page.Mui-selected {
-      background-color: Color.Silver500;
+      background-color: Color.Silver400;
     }
 
     .MuiPaginationItem-page.Mui-disabled {
