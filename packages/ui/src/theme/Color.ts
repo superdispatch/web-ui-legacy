@@ -35,7 +35,6 @@ export enum Color {
   //Colors with 10% opacity
   Blue10 = 'rgba(0, 112, 245, 0.1)',
   Red10 = 'rgba(195, 25, 9, 0.1)',
-  Green10 = 'rgba(3, 135, 47, 0.1)',
 
   //
   // Legacy Neutral Colors
