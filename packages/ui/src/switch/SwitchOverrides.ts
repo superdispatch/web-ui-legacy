@@ -68,20 +68,20 @@ export function overrideSwitch(theme: SuperDispatchTheme): void {
         '&:hover': {
           backgroundColor: undefined,
 
-          '& + $track': { backgroundColor: Color.Blue400 },
+          '& + $track': { backgroundColor: Color.Blue500 },
         },
       },
 
       '& + $track': { backgroundColor: Color.Silver500 },
 
-      '&$disabled + $track': { backgroundColor: Color.Silver300 },
+      '&$disabled + $track': { backgroundColor: Color.Dark30 },
 
-      '&$checked$disabled + $track': { backgroundColor: Color.Blue100 },
+      '&$checked$disabled + $track': { backgroundColor: Color.Blue30 },
 
       '&:hover + $track': { backgroundColor: Color.Dark100 },
 
       '&.Mui-focusVisible + $track': {
-        boxShadow: `0 0 0 3px ${Color.Blue100}`,
+        boxShadow: `0 0 0 3px ${Color.Blue30}`,
       },
     },
   };
