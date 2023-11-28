@@ -192,5 +192,14 @@ it('checks component css', () => {
       color: Color.White40;
       background-color: Color.White08;
     }
+
+    .SD-SnackbarContent-variantErrorOutline {
+      color: Color.Red500;
+      border: 1px solid var(--R-500, Color.Red500);
+      background: var(--R-50, Color.Red50);
+      box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2),
+        0px 3px 14px 0px rgba(0, 0, 0, 0.12), 0px 8px 10px 0px rgba(0, 0, 0, 0.14);
+      border-radius: 4px;
+    }
   `);
 });
