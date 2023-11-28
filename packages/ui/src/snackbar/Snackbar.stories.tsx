@@ -100,6 +100,19 @@ export const variants = () => (
               });
             }}
           />
+
+          <FormControlLabel
+            label="Error Outline"
+            control={<Switch />}
+            checked={props.variant === 'error-outline'}
+            onChange={(_, checked) => {
+              setProps({
+                ...props,
+                open: checked,
+                variant: checked ? 'error-outline' : undefined,
+              });
+            }}
+          />
         </FormGroup>
 
         <Snackbar {...props}>This is snackbar content</Snackbar>
