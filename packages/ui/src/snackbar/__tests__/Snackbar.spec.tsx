@@ -10,7 +10,7 @@ it('checks default props', () => {
 
 it('checks component css', () => {
   expect(
-    renderCSS(<Snackbar open={true} />, [
+    renderCSS(<Snackbar open={true} variant="error-outline" />, [
       'MuiSnackbar',
       'MuiSnackbarContent',
       'SD-SnackbarContent',
@@ -159,11 +159,6 @@ it('checks component css', () => {
       background-color: Color.Dark500;
     }
 
-    .SD-SnackbarContent-root.SD-SnackbarContent-variantError {
-      color: Color.White;
-      background-color: Color.Red500;
-    }
-
     .SD-SnackbarContent-action {
       padding-left: 8px;
     }
@@ -193,13 +188,14 @@ it('checks component css', () => {
       background-color: Color.White08;
     }
 
-    .SD-SnackbarContent-variantErrorOutline {
+    .SD-SnackbarContent-variantError {
       color: Color.Red500;
-      border: 1px solid var(--R-500, Color.Red500);
       background: var(--R-50, Color.Red50);
-      box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2),
-        0px 3px 14px 0px rgba(0, 0, 0, 0.12), 0px 8px 10px 0px rgba(0, 0, 0, 0.14);
       border-radius: 4px;
+    }
+
+    .SD-SnackbarContent-variantError .SD-SnackbarContent-closeButton {
+      color: Color.Red500;
     }
   `);
 });

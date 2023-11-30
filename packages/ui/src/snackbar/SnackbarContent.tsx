@@ -6,7 +6,7 @@ import {
   SnackbarContentProps as MuiSnackbarContentProps,
   Theme,
 } from '@material-ui/core';
-import { CheckCircle, Close, Error, Warning } from '@material-ui/icons';
+import { CheckCircle, Close, Error } from '@material-ui/icons';
 import { ClassNameMap, makeStyles } from '@material-ui/styles';
 import clsx from 'clsx';
 import {
@@ -22,8 +22,7 @@ type SnackbarContentClassKey =
   | 'icon'
   | 'closeButton'
   | 'variantError'
-  | 'variantSuccess'
-  | 'variantErrorOutline';
+  | 'variantSuccess';
 
 const useStyles = makeStyles<
   Theme,
@@ -34,10 +33,6 @@ const useStyles = makeStyles<
     root: {
       color: Color.White,
       backgroundColor: Color.Dark500,
-      '&$variantError': {
-        color: Color.White,
-        backgroundColor: Color.Red500,
-      },
     },
 
     action: {
@@ -63,21 +58,19 @@ const useStyles = makeStyles<
         color: Color.White40,
       },
     },
-
-    variantError: {},
-    variantSuccess: {},
-    variantErrorOutline: {
+    variantError: {
       color: Color.Red500,
       borderRadius: '4px',
-      border: '1px solid var(--R-500, #C31909)',
-      background: 'var(--R-50, #FFEDEB)',
-      boxShadow:
-        '0px 4px 5px 0px rgba(0, 0, 0, 0.20), 0px 3px 14px 0px rgba(0, 0, 0, 0.12), 0px 8px 10px 0px rgba(0, 0, 0, 0.14)',
+      background: `var(--R-50, ${Color.Red50})`,
+      '& $closeButton': {
+        color: Color.Red500, // This ensures the style applies when variant is error
+      },
     },
+    variantSuccess: {},
   }),
   { name: 'SD-SnackbarContent' },
 );
-export type SnackbarVariant = 'default' | 'error' | 'success' | 'error-outline';
+export type SnackbarVariant = 'default' | 'error' | 'success';
 
 export interface SnackbarContentProps
   extends RefAttributes<unknown>,
@@ -102,21 +95,13 @@ export const SnackbarContent: ForwardRefExoticComponent<SnackbarContentProps> =
       },
       ref,
     ) => {
-      const {
-        icon,
-        closeButton,
-        variantError,
-        variantSuccess,
-        variantErrorOutline,
-        ...styles
-      } = useStyles({ classes });
+      const { icon, closeButton, variantError, variantSuccess, ...styles } =
+        useStyles({ classes });
       const Icon =
         variant === 'error'
-          ? Warning
+          ? Error
           : variant === 'success'
           ? CheckCircle
-          : variant === 'error-outline'
-          ? Error
           : undefined;
 
       return (
@@ -127,7 +112,6 @@ export const SnackbarContent: ForwardRefExoticComponent<SnackbarContentProps> =
           className={clsx(className, {
             [variantError]: variant === 'error',
             [variantSuccess]: variant === 'success',
-            [variantErrorOutline]: variant === 'error-outline',
           })}
           message={
             <>
