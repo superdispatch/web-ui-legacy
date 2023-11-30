@@ -10,7 +10,7 @@ it('checks default props', () => {
 
 it('checks component css', () => {
   expect(
-    renderCSS(<Snackbar open={true} variant="error-outline" />, [
+    renderCSS(<Snackbar open={true} />, [
       'MuiSnackbar',
       'MuiSnackbarContent',
       'SD-SnackbarContent',
