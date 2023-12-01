@@ -159,11 +159,6 @@ it('checks component css', () => {
       background-color: Color.Dark500;
     }
 
-    .SD-SnackbarContent-root.SD-SnackbarContent-variantError {
-      color: Color.White;
-      background-color: Color.Red500;
-    }
-
     .SD-SnackbarContent-action {
       padding-left: 8px;
     }
@@ -191,6 +186,15 @@ it('checks component css', () => {
     .SD-SnackbarContent-closeButton:focus {
       color: Color.White40;
       background-color: Color.White08;
+    }
+
+    .SD-SnackbarContent-variantError {
+      color: Color.Red500;
+      background: Color.Red50;
+    }
+
+    .SD-SnackbarContent-variantError .SD-SnackbarContent-closeButton {
+      color: Color.Red500;
     }
   `);
 });
