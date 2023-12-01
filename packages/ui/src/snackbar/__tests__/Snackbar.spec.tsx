@@ -190,8 +190,7 @@ it('checks component css', () => {
 
     .SD-SnackbarContent-variantError {
       color: Color.Red500;
-      background: var(--R-50, Color.Red50);
-      border-radius: 4px;
+      background: Color.Red50;
     }
 
     .SD-SnackbarContent-variantError .SD-SnackbarContent-closeButton {
