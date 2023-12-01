@@ -60,10 +60,9 @@ const useStyles = makeStyles<
     },
     variantError: {
       color: Color.Red500,
-      borderRadius: '4px',
-      background: `var(--R-50, ${Color.Red50})`,
+      background: Color.Red50,
       '& $closeButton': {
-        color: Color.Red500, // This ensures the style applies when variant is error
+        color: Color.Red500,
       },
     },
     variantSuccess: {},
