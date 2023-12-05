@@ -156,7 +156,17 @@ it('checks component css', () => {
 
     .SD-SnackbarContent-root {
       color: Color.White;
+      padding: 10px 16px;
+      align-items: flex-start;
       background-color: Color.Dark500;
+    }
+
+    @media (min-width: 960px) {
+      .SD-SnackbarContent-root {
+        width: auto;
+        max-width: 512px;
+        min-width: 432px;
+      }
     }
 
     .SD-SnackbarContent-action {
@@ -164,7 +174,7 @@ it('checks component css', () => {
     }
 
     .SD-SnackbarContent-message {
-      align-items: center;
+      align-items: flex-start;
     }
 
     @media (max-width: 599.95px) {

@@ -7,6 +7,7 @@ import {
   SnackbarContent,
   SnackbarStackConsumer,
 } from '..';
+import { Stack } from '../stack/Stack';
 
 export default {
   title: 'Feedback/Snackbar',
@@ -96,6 +97,7 @@ export const variants = () => (
               setProps({
                 ...props,
                 open: checked,
+                hasCloseButton: true,
                 variant: checked ? 'error' : undefined,
               });
             }}
@@ -190,6 +192,49 @@ export const undoable = () => (
         }}
       >
         Confirm transaction
+      </Button>
+    )}
+  </SnackbarStackConsumer>
+);
+
+export const lotOfText = () => (
+  <SnackbarStackConsumer>
+    {({ addSnackbar, clearStack }) => (
+      <Button
+        onClick={() => {
+          clearStack();
+
+          const closeSnackbar = addSnackbar(
+            <Stack>
+              <span>
+                The following information is missing. Edit the order and provide
+                this information:
+              </span>
+              <ul style={{ padding: '0 0 0 1rem', margin: 0 }}>
+                <li>Delivery information: City, State and ZIP code</li>
+                <li>Pickup information: City, State and ZIP code</li>
+                <li>Vehicles: Make and Model</li>
+                <li>Price: Total Carrier Price can not be empty</li>
+              </ul>
+              <Button
+                size="small"
+                variant="outlined"
+                onClick={() => {
+                  closeSnackbar();
+                }}
+              >
+                Edit Order
+              </Button>
+            </Stack>,
+            {
+              variant: 'error',
+              hasCloseButton: true,
+              autoHideDuration: 99999,
+            },
+          );
+        }}
+      >
+        Snackbar with a lot of text
       </Button>
     )}
   </SnackbarStackConsumer>
