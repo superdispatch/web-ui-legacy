@@ -7,6 +7,8 @@ import {
   useMemo,
 } from 'react';
 
+Settings.defaultLocale = 'en-US';
+
 export function setDefaultTimeZone(offset: number | 'local'): string {
   if (offset === 'local') {
     Settings.defaultZoneName = offset;
