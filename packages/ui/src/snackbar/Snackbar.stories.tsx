@@ -216,7 +216,13 @@ export const lotOfText = () => (
                 <li>Vehicles: Make and Model</li>
                 <li>Price: Total Carrier Price can not be empty</li>
               </ul>
-              <Button size="small" variant="outlined">
+              <Button
+                size="small"
+                variant="outlined"
+                onClick={() => {
+                  closeSnackbar();
+                }}
+              >
                 Edit Order
               </Button>
             </Stack>,
