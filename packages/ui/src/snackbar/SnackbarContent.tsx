@@ -15,7 +15,12 @@ import {
   ReactNode,
   RefAttributes,
 } from 'react';
+import styled from 'styled-components';
 import { Color } from '../theme/Color';
+
+const PaddedContent = styled.span`
+  padding: 2px 0 0;
+`;
 
 type SnackbarContentClassKey =
   | MuiSnackbarContentClassKey
@@ -33,6 +38,13 @@ const useStyles = makeStyles<
     root: {
       color: Color.White,
       backgroundColor: Color.Dark500,
+      alignItems: 'flex-start',
+      padding: '10px 16px',
+      [theme.breakpoints.up('md')]: {
+        width: 'auto',
+        maxWidth: '512px',
+        minWidth: '432px',
+      },
     },
 
     action: {
@@ -40,7 +52,7 @@ const useStyles = makeStyles<
     },
 
     message: {
-      alignItems: 'center',
+      alignItems: 'flex-start',
       [theme.breakpoints.down('xs')]: {
         fontSize: theme.spacing(2),
       },
@@ -115,7 +127,7 @@ export const SnackbarContent: ForwardRefExoticComponent<SnackbarContentProps> =
           message={
             <>
               {Icon && <Icon className={icon} />}
-              {children}
+              <PaddedContent>{children}</PaddedContent>
             </>
           }
           action={
