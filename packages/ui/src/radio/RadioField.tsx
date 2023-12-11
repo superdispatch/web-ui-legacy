@@ -16,9 +16,6 @@ const FormControl = styled(FormControlMui)`
 
 const FormHelperText = styled(FormHelperTextMui)`
   color: ${Color.Dark300};
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
   margin-left: 30px;
   margin-top: 0;
   margin-bottom: 4px;
