@@ -38,6 +38,7 @@ jobs:
           target: superdispatch-ui
           projectId: ${{ secrets.FIREBASE_PROJECT }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_HOSTING_SERVICE_ACCOUNT_JSON }}
+          firebaseToolsVersion: '12.9.1'
 
   e2e:
     needs:
