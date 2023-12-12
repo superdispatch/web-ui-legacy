@@ -35,6 +35,7 @@ it('checks component css', () => {
     ),
   ).toMatchInlineSnapshot(`
     .MuiMenu-paper {
+      border: 1px solid Color.Silver400;
       max-height: calc(100% - 96px);
       -webkit-overflow-scrolling: touch;
     }
