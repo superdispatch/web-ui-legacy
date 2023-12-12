@@ -1,3 +1,4 @@
+import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideMenu(theme: SuperDispatchTheme): void {
@@ -5,6 +6,12 @@ export function overrideMenu(theme: SuperDispatchTheme): void {
     getContentAnchorEl: null,
     anchorOrigin: { vertical: 'bottom', horizontal: 'left' },
     transformOrigin: { vertical: 'top', horizontal: 'left' },
+  };
+
+  theme.overrides.MuiMenu = {
+    paper: {
+      border: `1px solid ${Color.Silver400}`,
+    },
   };
 
   theme.overrides.MuiMenuItem = {
