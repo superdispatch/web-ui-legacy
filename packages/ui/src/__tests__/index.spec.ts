@@ -110,6 +110,7 @@ it('exposes public api', () => {
       "RadioFieldCard": React.forwardRef(RadioFieldCard),
       "RadioGroupField": React.forwardRef(RadioGroupField),
       "ResponsiveContextProvider": [Function],
+      "Skeleton": [Function],
       "Snackbar": React.forwardRef(Snackbar),
       "SnackbarContent": React.forwardRef(SnackbarContent),
       "SnackbarStackConsumer": [Function],
