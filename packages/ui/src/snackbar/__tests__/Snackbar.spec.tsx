@@ -156,12 +156,17 @@ it('checks component css', () => {
 
     .SD-SnackbarContent-root {
       color: Color.White;
+      padding: 10px 16px;
+      align-items: flex-start;
       background-color: Color.Dark500;
     }
 
-    .SD-SnackbarContent-root.SD-SnackbarContent-variantError {
-      color: Color.White;
-      background-color: Color.Red500;
+    @media (min-width: 960px) {
+      .SD-SnackbarContent-root {
+        width: auto;
+        max-width: 512px;
+        min-width: 432px;
+      }
     }
 
     .SD-SnackbarContent-action {
@@ -169,7 +174,7 @@ it('checks component css', () => {
     }
 
     .SD-SnackbarContent-message {
-      align-items: center;
+      align-items: flex-start;
     }
 
     @media (max-width: 599.95px) {
@@ -191,6 +196,15 @@ it('checks component css', () => {
     .SD-SnackbarContent-closeButton:focus {
       color: Color.White40;
       background-color: Color.White08;
+    }
+
+    .SD-SnackbarContent-variantError {
+      color: Color.Red500;
+      background: Color.Red50;
+    }
+
+    .SD-SnackbarContent-variantError .SD-SnackbarContent-closeButton {
+      color: Color.Red500;
     }
   `);
 });

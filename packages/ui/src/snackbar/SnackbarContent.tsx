@@ -6,7 +6,7 @@ import {
   SnackbarContentProps as MuiSnackbarContentProps,
   Theme,
 } from '@material-ui/core';
-import { CheckCircle, Close, Warning } from '@material-ui/icons';
+import { CheckCircle, Close, Error } from '@material-ui/icons';
 import { ClassNameMap, makeStyles } from '@material-ui/styles';
 import clsx from 'clsx';
 import {
@@ -15,7 +15,12 @@ import {
   ReactNode,
   RefAttributes,
 } from 'react';
+import styled from 'styled-components';
 import { Color } from '../theme/Color';
+
+const PaddedContent = styled.span`
+  padding: 2px 0 0;
+`;
 
 type SnackbarContentClassKey =
   | MuiSnackbarContentClassKey
@@ -33,9 +38,12 @@ const useStyles = makeStyles<
     root: {
       color: Color.White,
       backgroundColor: Color.Dark500,
-      '&$variantError': {
-        color: Color.White,
-        backgroundColor: Color.Red500,
+      alignItems: 'flex-start',
+      padding: '10px 16px',
+      [theme.breakpoints.up('md')]: {
+        width: 'auto',
+        maxWidth: '512px',
+        minWidth: '432px',
       },
     },
 
@@ -44,7 +52,7 @@ const useStyles = makeStyles<
     },
 
     message: {
-      alignItems: 'center',
+      alignItems: 'flex-start',
       [theme.breakpoints.down('xs')]: {
         fontSize: theme.spacing(2),
       },
@@ -62,8 +70,13 @@ const useStyles = makeStyles<
         color: Color.White40,
       },
     },
-
-    variantError: {},
+    variantError: {
+      color: Color.Red500,
+      background: Color.Red50,
+      '& $closeButton': {
+        color: Color.Red500,
+      },
+    },
     variantSuccess: {},
   }),
   { name: 'SD-SnackbarContent' },
@@ -97,7 +110,7 @@ export const SnackbarContent: ForwardRefExoticComponent<SnackbarContentProps> =
         useStyles({ classes });
       const Icon =
         variant === 'error'
-          ? Warning
+          ? Error
           : variant === 'success'
           ? CheckCircle
           : undefined;
@@ -114,7 +127,7 @@ export const SnackbarContent: ForwardRefExoticComponent<SnackbarContentProps> =
           message={
             <>
               {Icon && <Icon className={icon} />}
-              {children}
+              <PaddedContent>{children}</PaddedContent>
             </>
           }
           action={
