@@ -11,7 +11,7 @@ it('checks component css', () => {
 
     .MuiSkeleton-text {
       height: auto;
-      transform: scale(1, 1);
+      transform: scale(1, 0.6);
       margin-top: 0;
       border-radius: 3px;
       margin-bottom: 0;
