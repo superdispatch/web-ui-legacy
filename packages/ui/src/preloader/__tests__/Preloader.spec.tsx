@@ -1,5 +1,5 @@
+import { Skeleton } from '@material-ui/lab';
 import { renderCSS } from '@superdispatch/ui-testutils';
-import { Skeleton } from '../Preloader';
 
 it('checks component css', () => {
   expect(renderCSS(<Skeleton />, ['MuiSkeleton'])).toMatchInlineSnapshot(`
@@ -11,9 +11,9 @@ it('checks component css', () => {
 
     .MuiSkeleton-text {
       height: auto;
-      transform: scale(1, 0.6);
+      transform: scale(1, 1);
       margin-top: 0;
-      border-radius: 4px;
+      border-radius: 3px;
       margin-bottom: 0;
       transform-origin: 0 60%;
     }

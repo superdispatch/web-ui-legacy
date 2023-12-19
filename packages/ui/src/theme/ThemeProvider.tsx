@@ -27,6 +27,7 @@ import { overrideList } from '../list/ListOverrides';
 import { overrideMenu } from '../menu/MenuOverrides';
 import { overridePagination } from '../pagination/PaginationOverrides';
 import { overridePaper } from '../paper/PaperOverrides';
+import { overridePreloader } from '../preloader/PreLoaderOverrides';
 import { overrideRadio } from '../radio/RadioOverrides';
 import { ResponsiveContextProvider } from '../responsive/ResponsiveContext';
 import { overrideSnackbar } from '../snackbar/SnackbarOverrides';
@@ -104,6 +105,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   overrideTooltip(theme);
   overrideTypography(theme);
   overridePagination(theme);
+  overridePreloader(theme);
 
   return theme;
 }

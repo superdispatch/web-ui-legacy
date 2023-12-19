@@ -1,9 +1,9 @@
 import { LinearProgress } from '@material-ui/core';
+import { Skeleton } from '@material-ui/lab';
 import { Meta } from '@storybook/react';
 import { Column } from '../columns/Column';
 import { Columns } from '../columns/Columns';
 import { Stack } from '../stack/Stack';
-import { Skeleton } from './Preloader';
 
 export default {
   title: 'Layout/Preloader',

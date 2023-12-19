@@ -20,7 +20,6 @@ export * from './info-tooltip/InfoTooltip';
 export * from './inline/Inline';
 export * from './number-field/NumberField';
 export * from './overflow-text/OverflowText';
-export * from './preloader/Preloader';
 export * from './props/AlignProps';
 export * from './props/CollapseProp';
 export * from './props/ResponsiveProp';
