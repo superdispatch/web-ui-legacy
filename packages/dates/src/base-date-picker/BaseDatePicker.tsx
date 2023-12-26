@@ -3,19 +3,28 @@ import {
   IconButton,
   InputAdornment,
   InputProps,
-  Popover,
+  Popover as MuiPopover,
   SvgIcon,
   TextField,
 } from '@material-ui/core';
 import { Clear } from '@material-ui/icons';
 import { mdiCalendarMonth } from '@mdi/js';
 import { useValueObserver } from '@superdispatch/hooks';
-import { mergeRefs, useUID } from '@superdispatch/ui';
+import { Color, mergeRefs, useUID } from '@superdispatch/ui';
 import { forwardRef, Ref, useImperativeHandle, useRef, useState } from 'react';
+import styled from 'styled-components';
 
 export interface InternalBaseDateFieldAPI {
   close: () => void;
 }
+
+const Popover = styled(MuiPopover)`
+  .MuiPaper-rounded {
+    border: 1px solid ${Color.Silver400};
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05),
+      0px 4px 8px 0px rgba(0, 0, 0, 0.12);
+  }
+`;
 
 export interface BaseDatePickerProps
   extends Omit<BaseTextFieldProps, 'variant'> {
