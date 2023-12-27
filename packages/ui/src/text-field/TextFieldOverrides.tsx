@@ -61,6 +61,11 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
     input: {
       textOverflow: 'ellipsis',
 
+      '&::placeholder': {
+        color: Color.Dark300,
+        opacity: 1,
+      },
+
       '&.MuiInputBase-input': {
         fontSize: theme.spacing(2),
         [sm]: { fontSize: theme.spacing(1.75) },

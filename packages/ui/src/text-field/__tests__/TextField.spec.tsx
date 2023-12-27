@@ -362,6 +362,11 @@ it('checks component css', () => {
       animation-duration: 5000s;
     }
 
+    .MuiInputBase-input::placeholder {
+      color: Color.Dark300;
+      opacity: 1;
+    }
+
     .MuiInputBase-input.MuiInputBase-input {
       font-size: 16px;
     }

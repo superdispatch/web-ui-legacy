@@ -11,12 +11,21 @@ export default {
   },
 };
 
-export const basic = () => <TextField label="Label" helperText="Helper Text" />;
+export const basic = () => (
+  <TextField placeholder="Basic" label="Label" helperText="Helper Text" />
+);
 export const error = () => (
-  <TextField label="Label" helperText="Error Text" error={true} />
+  <TextField
+    placeholder="Error Text"
+    label="Label"
+    helperText="Error Text"
+    error={true}
+  />
 );
 
-export const multiline = () => <TextField multiline={true} />;
+export const multiline = () => (
+  <TextField placeholder="Multiline" multiline={true} />
+);
 export const fullWidth = () => <TextField fullWidth={true} />;
 export const disabled = () => <TextField disabled={true} />;
 export const startAdornment = () => (
