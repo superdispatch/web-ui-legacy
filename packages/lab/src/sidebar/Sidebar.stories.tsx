@@ -351,7 +351,10 @@ export const complex = () => (
           paddingLeft="medium"
           paddingRight="medium"
         >
-          <Button fullWidth={true} startIcon={<NotificationsOffIcon />}>
+          <Button
+            fullWidth={true}
+            startIcon={<NotificationsOffIcon color="action" />}
+          >
             Create Load Alert
           </Button>
         </Box>
