@@ -2,7 +2,7 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import SaveIcon from '@material-ui/icons/Save';
 import { Meta } from '@storybook/react';
-import { Inline, Stack } from '@superdispatch/ui';
+import { Color, Inline, Stack } from '@superdispatch/ui';
 import { Box } from '../box/Box';
 import { AnchorButton, Button } from './Button';
 
@@ -142,7 +142,12 @@ export const anchor = () => {
         <AnchorButton href="/" variant="neutral">
           Neutral
         </AnchorButton>
-        <AnchorButton href="/" variant="neutral" active={true}>
+        <AnchorButton
+          startIcon={<CloudUploadIcon htmlColor={Color.Black} />}
+          href="/"
+          variant="neutral"
+          active={true}
+        >
           Hover
         </AnchorButton>
         <AnchorButton href="/" variant="neutral" pending={true}>
@@ -447,7 +452,11 @@ export const sizes = () => (
           Submit
         </Button>
 
-        <Button variant="neutral" size="small" startIcon={<CloudUploadIcon />}>
+        <Button
+          variant="neutral"
+          size="small"
+          startIcon={<CloudUploadIcon htmlColor={Color.Black} />}
+        >
           Import
         </Button>
 

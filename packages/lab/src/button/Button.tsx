@@ -309,6 +309,12 @@ const ButtonRoot = styled.button<ButtonStyleProps>(
               --button-text-color: ${variables.textColorHovered};
               --button-border-color: ${variables.borderColorHovered};
               --button-background-color: ${variables.backgroundColorHovered};
+
+              span {
+                svg {
+                  fill: ${variables.textColorHovered};
+                }
+              }
             }
           }
 
