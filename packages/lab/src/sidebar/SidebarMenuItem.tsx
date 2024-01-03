@@ -46,17 +46,18 @@ const SidebarMenuItemRoot = styled.div<SidebarMenuItemRootProps>(
 
 const SidebarMenuItemBadge = styled.div`
   font-size: 12px;
+  font-weight: 500;
   line-height: 16px;
   padding-left: 4px;
   padding-right: 4px;
   border-radius: 100px;
 
   color: ${Color.Dark500};
-  background-color: ${Color.Silver300};
+  background-color: ${Color.Silver400};
 
   .MuiButtonBase-root[aria-current='true'] & {
     color: ${Color.White};
-    background-color: ${Color.Dark450};
+    background-color: ${Color.Blue300};
   }
 `;
 
