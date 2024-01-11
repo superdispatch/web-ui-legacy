@@ -110,7 +110,9 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   return theme;
 }
 
-const generateMaterialClassName = createGenerateClassName();
+const generateMaterialClassName = createGenerateClassName({
+  productionPrefix: 'SDMui',
+});
 
 function generateClassName(rule: Rule, sheet?: StyleSheet): string {
   const { meta, link } = sheet?.options || {};
