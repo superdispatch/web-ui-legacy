@@ -3,6 +3,9 @@ import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 export function overrideSnackbar(theme: SuperDispatchTheme): void {
   theme.overrides.MuiSnackbar = {
     anchorOriginBottomCenter: {
+      left: 0,
+      right: 0,
+      bottom: 0,
       padding: theme.spacing(0),
       background: 'transparent',
     },
@@ -18,6 +21,7 @@ export function overrideSnackbar(theme: SuperDispatchTheme): void {
         left: 0,
         right: 0,
         bottom: 0,
+        borderRadius: theme.spacing(0),
 
         [theme.breakpoints.up('sm')]: {
           borderRadius: theme.spacing(0.5),
