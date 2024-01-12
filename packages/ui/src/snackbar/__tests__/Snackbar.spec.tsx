@@ -40,7 +40,9 @@ it('checks component css', () => {
     }
 
     .SDSnackbar-anchorOriginBottomCenter {
-      bottom: 8px;
+      left: 0;
+      right: 0;
+      bottom: 0;
       padding: 0;
       background: transparent;
     }
@@ -142,6 +144,7 @@ it('checks component css', () => {
       width: 100%;
       bottom: 0;
       position: relative;
+      border-radius: 0;
     }
 
     @media (min-width: 600px) {
