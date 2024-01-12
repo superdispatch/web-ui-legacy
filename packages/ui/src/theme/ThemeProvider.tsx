@@ -110,14 +110,15 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
   return theme;
 }
 
-const generateMaterialClassName = createGenerateClassName({
-  productionPrefix: 'SDMui',
-});
+const generateMaterialClassName = createGenerateClassName();
 
 function generateClassName(rule: Rule, sheet?: StyleSheet): string {
   const { meta, link } = sheet?.options || {};
 
   if (meta && rule.type === 'style') {
+    if (meta.startsWith('MuiSnackbar') && sheet) {
+      return `SDSnackbar-${rule.key}`;
+    }
     if (meta.startsWith('SD-')) {
       return `${meta}-${rule.key}`;
     }
