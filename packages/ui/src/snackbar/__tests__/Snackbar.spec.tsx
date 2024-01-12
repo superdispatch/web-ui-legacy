@@ -16,7 +16,7 @@ it('checks component css', () => {
       'SD-SnackbarContent',
     ]),
   ).toMatchInlineSnapshot(`
-    .MuiSnackbar-root {
+    .SDSnackbar-root {
       left: 8px;
       right: 8px;
       display: flex;
@@ -26,12 +26,12 @@ it('checks component css', () => {
       justify-content: center;
     }
 
-    .MuiSnackbar-anchorOriginTopCenter {
+    .SDSnackbar-anchorOriginTopCenter {
       top: 8px;
     }
 
     @media (min-width: 600px) {
-      .MuiSnackbar-anchorOriginTopCenter {
+      .SDSnackbar-anchorOriginTopCenter {
         top: 24px;
         left: 50%;
         right: auto;
@@ -39,14 +39,14 @@ it('checks component css', () => {
       }
     }
 
-    .MuiSnackbar-anchorOriginBottomCenter {
-      left: 0;
-      right: 0;
-      bottom: 0;
+    .SDSnackbar-anchorOriginBottomCenter {
+      bottom: 8px;
+      padding: 0;
+      background: transparent;
     }
 
     @media (min-width: 600px) {
-      .MuiSnackbar-anchorOriginBottomCenter {
+      .SDSnackbar-anchorOriginBottomCenter {
         left: 50%;
         right: auto;
         bottom: 24px;
@@ -54,61 +54,60 @@ it('checks component css', () => {
       }
     }
 
-    .MuiSnackbar-anchorOriginTopRight {
+    .SDSnackbar-anchorOriginTopRight {
       top: 8px;
       justify-content: flex-end;
     }
 
     @media (min-width: 600px) {
-      .MuiSnackbar-anchorOriginTopRight {
+      .SDSnackbar-anchorOriginTopRight {
         top: 24px;
         left: auto;
         right: 24px;
       }
     }
 
-    .MuiSnackbar-anchorOriginBottomRight {
+    .SDSnackbar-anchorOriginBottomRight {
       bottom: 8px;
       justify-content: flex-end;
     }
 
     @media (min-width: 600px) {
-      .MuiSnackbar-anchorOriginBottomRight {
+      .SDSnackbar-anchorOriginBottomRight {
         left: auto;
         right: 24px;
         bottom: 24px;
       }
     }
 
-    .MuiSnackbar-anchorOriginTopLeft {
+    .SDSnackbar-anchorOriginTopLeft {
       top: 8px;
       justify-content: flex-start;
     }
 
     @media (min-width: 600px) {
-      .MuiSnackbar-anchorOriginTopLeft {
+      .SDSnackbar-anchorOriginTopLeft {
         top: 24px;
         left: 24px;
         right: auto;
       }
     }
 
-    .MuiSnackbar-anchorOriginBottomLeft {
+    .SDSnackbar-anchorOriginBottomLeft {
       bottom: 8px;
       justify-content: flex-start;
     }
 
     @media (min-width: 600px) {
-      .MuiSnackbar-anchorOriginBottomLeft {
+      .SDSnackbar-anchorOriginBottomLeft {
         left: 24px;
         right: auto;
         bottom: 24px;
       }
     }
 
-    .MuiSnackbarContent-root {
+    .SDSnackbar-root {
       color: Color.White;
-      width: 100%;
       display: flex;
       padding: 6px 16px;
       flex-grow: 1;
@@ -119,34 +118,45 @@ it('checks component css', () => {
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       line-height: 20px;
-      border-radius: 0;
+      border-radius: 4px;
       background-color: rgb(49, 49, 49);
     }
 
     @media (min-width: 0px) and (max-width: 599.95px) {
-      .MuiSnackbarContent-root {
+      .SDSnackbar-root {
         font-size: 16px;
         line-height: 24px;
       }
     }
 
     @media (min-width: 600px) {
-      .MuiSnackbarContent-root {
-        width: 432px;
+      .SDSnackbar-root {
         flex-grow: initial;
-        max-width: 432px;
         min-width: 288px;
+      }
+    }
+
+    .SDSnackbar-root.SD-SnackbarContent-root {
+      left: 0;
+      right: 0;
+      width: 100%;
+      bottom: 0;
+      position: relative;
+    }
+
+    @media (min-width: 600px) {
+      .SDSnackbar-root.SD-SnackbarContent-root {
         border-radius: 4px;
       }
     }
 
-    .MuiSnackbarContent-message {
+    .SDSnackbar-message {
       flex: 1;
       display: flex;
       padding: 8px 0;
     }
 
-    .MuiSnackbarContent-action {
+    .SDSnackbar-action {
       display: flex;
       align-items: center;
       margin-left: auto;
