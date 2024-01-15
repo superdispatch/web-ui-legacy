@@ -363,8 +363,8 @@ it('checks component css', () => {
     }
 
     .MuiInputBase-input::placeholder {
-      color: Color.Dark500;
-      opacity: 0.3;
+      color: Color.Dark100;
+      opacity: 1;
     }
 
     .MuiInputBase-input.MuiInputBase-input {
