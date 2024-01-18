@@ -165,38 +165,3 @@ export const primary = () => (
     </Typography>
   </Stack>
 );
-
-export const secondary = () => (
-  <Stack>
-    <Typography variant="h1" color="secondary">
-      h1
-    </Typography>
-    <Typography variant="h2" color="secondary">
-      h2
-    </Typography>
-    <Typography variant="h3" color="secondary">
-      h3
-    </Typography>
-    <Typography variant="h4" color="secondary">
-      h4
-    </Typography>
-    <Typography variant="h5" color="secondary">
-      h5
-    </Typography>
-    <Typography variant="h6" color="secondary">
-      h6
-    </Typography>
-    <Typography variant="subtitle1" color="secondary">
-      subtitle1
-    </Typography>
-    <Typography variant="subtitle2" color="secondary">
-      subtitle2
-    </Typography>
-    <Typography variant="body1" color="secondary">
-      body1
-    </Typography>
-    <Typography variant="body2" color="secondary">
-      body2
-    </Typography>
-  </Stack>
-);
