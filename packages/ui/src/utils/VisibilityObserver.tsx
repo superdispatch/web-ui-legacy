@@ -40,8 +40,22 @@ export function useVisibilityObserver<T extends Element>(
 
     observer.observe(node);
 
+    function handleVisibilityChange(): void {
+      if (document.visibilityState === 'hidden') {
+        observer.disconnect();
+      } else if (
+        node &&
+        // Check if the observer is not already observing the node
+        !observer.takeRecords().some((record) => record.target === node)
+      ) {
+        observer.observe(node);
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => {
       observer.disconnect();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, [node, threshold, rootMargin]);
 
