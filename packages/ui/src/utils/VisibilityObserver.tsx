@@ -33,29 +33,19 @@ export function useVisibilityObserver<T extends Element>(
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setState(entry?.isIntersecting ? 'visible' : 'invisible');
+        setState(
+          entry?.isIntersecting && document.visibilityState === 'visible'
+            ? 'visible'
+            : 'invisible',
+        );
       },
       { rootMargin, threshold },
     );
 
     observer.observe(node);
 
-    function handleVisibilityChange(): void {
-      if (document.visibilityState === 'hidden') {
-        observer.disconnect();
-      } else if (
-        node &&
-        // Check if the observer is not already observing the node
-        !observer.takeRecords().some((record) => record.target === node)
-      ) {
-        observer.observe(node);
-      }
-    }
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => {
       observer.disconnect();
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, [node, threshold, rootMargin]);
 
