@@ -33,7 +33,11 @@ export function useVisibilityObserver<T extends Element>(
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setState(entry?.isIntersecting ? 'visible' : 'invisible');
+        setState(
+          entry?.isIntersecting && document.visibilityState === 'visible'
+            ? 'visible'
+            : 'invisible',
+        );
       },
       { rootMargin, threshold },
     );
