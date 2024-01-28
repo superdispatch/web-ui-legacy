@@ -52,7 +52,7 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
 
     palette: {
       primary: {
-        main: Color.Blue300,
+        main: Color.Blue500,
       },
 
       error: {
