@@ -131,6 +131,14 @@ it('checks component css', () => {
       }
     }
 
+    .SDSnackbar-root.MuiTypography-colorError {
+      color: Color.Red500;
+    }
+
+    .SDSnackbar-root.MuiTypography-colorPrimary {
+      color: Color.Blue500;
+    }
+
     @media (min-width: 600px) {
       .SDSnackbar-root {
         flex-grow: initial;

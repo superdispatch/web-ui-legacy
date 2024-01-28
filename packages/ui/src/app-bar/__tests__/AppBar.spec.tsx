@@ -66,7 +66,7 @@ it('checks component css', () => {
 
     .MuiAppBar-colorPrimary {
       color: Color.White;
-      background-color: Color.Blue500;
+      background-color: Color.Blue300;
     }
 
     .MuiAppBar-colorSecondary {

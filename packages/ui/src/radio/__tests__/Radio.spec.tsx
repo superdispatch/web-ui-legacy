@@ -49,7 +49,7 @@ it('checks component css', () => {
     }
 
     .MuiRadio-colorPrimary.Mui-checked {
-      color: Color.Blue500;
+      color: Color.Blue300;
     }
 
     .MuiRadio-colorPrimary.Mui-disabled {
@@ -65,7 +65,7 @@ it('checks component css', () => {
     }
 
     .MuiRadio-colorPrimary.Mui-checked:hover {
-      background-color: rgba(0, 99, 219, 0.04);
+      background-color: rgba(0, 112, 245, 0.04);
     }
 
     @media (hover: none) {

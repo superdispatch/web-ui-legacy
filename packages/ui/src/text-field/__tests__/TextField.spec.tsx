@@ -108,12 +108,20 @@ it('checks component css', () => {
       }
     }
 
+    .MuiFormHelperText-root.MuiTypography-colorError {
+      color: Color.Red500;
+    }
+
+    .MuiFormHelperText-root.MuiTypography-colorPrimary {
+      color: Color.Blue500;
+    }
+
     .MuiFormHelperText-root.Mui-disabled {
       color: Color.Dark100;
     }
 
     .MuiFormHelperText-root.Mui-error {
-      color: Color.Red500;
+      color: Color.Red300;
     }
 
     .MuiFormHelperText-root.Mui-error {
@@ -150,6 +158,14 @@ it('checks component css', () => {
       }
     }
 
+    .MuiFormLabel-root.MuiTypography-colorError {
+      color: Color.Red500;
+    }
+
+    .MuiFormLabel-root.MuiTypography-colorPrimary {
+      color: Color.Blue500;
+    }
+
     .MuiFormLabel-root.MuiFormLabel-root {
       font-size: 16px;
     }
@@ -165,7 +181,7 @@ it('checks component css', () => {
     }
 
     .MuiFormLabel-asterisk.Mui-error {
-      color: Color.Red500;
+      color: Color.Red300;
     }
 
     .MuiInputAdornment-root {
@@ -250,6 +266,14 @@ it('checks component css', () => {
         font-size: 16px;
         line-height: 24px;
       }
+    }
+
+    .MuiInputBase-root.MuiTypography-colorError {
+      color: Color.Red500;
+    }
+
+    .MuiInputBase-root.MuiTypography-colorPrimary {
+      color: Color.Blue500;
     }
 
     .MuiInputBase-root.Mui-disabled {
@@ -494,12 +518,12 @@ it('checks component css', () => {
     }
 
     .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-      border-color: Color.Blue500;
+      border-color: Color.Blue300;
       border-width: 2px;
     }
 
     .MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
-      border-color: Color.Red500;
+      border-color: Color.Red300;
     }
 
     .MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {

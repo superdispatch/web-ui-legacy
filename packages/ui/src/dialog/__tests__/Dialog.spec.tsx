@@ -215,5 +215,13 @@ it('checks component css', () => {
         line-height: 26px;
       }
     }
+
+    .MuiDialogTitle-root.MuiTypography-colorError {
+      color: Color.Red500;
+    }
+
+    .MuiDialogTitle-root.MuiTypography-colorPrimary {
+      color: Color.Blue500;
+    }
   `);
 });

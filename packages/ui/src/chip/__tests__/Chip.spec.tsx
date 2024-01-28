@@ -61,7 +61,7 @@ it('checks component css', () => {
 
     .MuiChip-root .MuiChip-avatarColorPrimary {
       color: Color.White;
-      background-color: rgb(0, 69, 153);
+      background-color: rgb(0, 78, 171);
     }
 
     .MuiChip-root .MuiChip-avatarColorSecondary {
@@ -84,9 +84,17 @@ it('checks component css', () => {
       }
     }
 
+    .MuiChip-root.MuiTypography-colorError {
+      color: Color.Red500;
+    }
+
+    .MuiChip-root.MuiTypography-colorPrimary {
+      color: Color.Blue500;
+    }
+
     .MuiChip-colorPrimary {
       color: Color.White;
-      background-color: Color.Blue500;
+      background-color: Color.Blue300;
     }
 
     .MuiChip-colorSecondary {
@@ -111,7 +119,7 @@ it('checks component css', () => {
 
     .MuiChip-clickableColorPrimary:hover,
     .MuiChip-clickableColorPrimary:focus {
-      background-color: rgb(20, 111, 221);
+      background-color: rgb(20, 123, 245);
     }
 
     .MuiChip-clickableColorSecondary:hover,
@@ -124,7 +132,7 @@ it('checks component css', () => {
     }
 
     .MuiChip-deletableColorPrimary:focus {
-      background-color: rgb(51, 130, 226);
+      background-color: rgb(51, 140, 247);
     }
 
     .MuiChip-deletableColorSecondary:focus {
@@ -167,14 +175,14 @@ it('checks component css', () => {
     }
 
     .MuiChip-outlinedPrimary {
-      color: Color.Blue500;
-      border: 1px solid Color.Blue500;
+      color: Color.Blue300;
+      border: 1px solid Color.Blue300;
     }
 
     .MuiChip-clickable.MuiChip-outlinedPrimary:hover,
     .MuiChip-clickable.MuiChip-outlinedPrimary:focus,
     .MuiChip-deletable.MuiChip-outlinedPrimary:focus {
-      background-color: rgba(0, 99, 219, 0.04);
+      background-color: rgba(0, 112, 245, 0.04);
     }
 
     .MuiChip-outlinedSecondary {
@@ -288,12 +296,12 @@ it('checks component css', () => {
     }
 
     .MuiChip-deleteIconOutlinedColorPrimary {
-      color: rgba(0, 99, 219, 0.7);
+      color: rgba(0, 112, 245, 0.7);
     }
 
     .MuiChip-deleteIconOutlinedColorPrimary:hover,
     .MuiChip-deleteIconOutlinedColorPrimary:active {
-      color: Color.Blue500;
+      color: Color.Blue300;
     }
 
     .MuiChip-deleteIconOutlinedColorSecondary {

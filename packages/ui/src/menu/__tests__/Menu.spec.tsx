@@ -65,6 +65,14 @@ it('checks component css', () => {
       }
     }
 
+    .MuiMenuItem-root.MuiTypography-colorError {
+      color: Color.Red500;
+    }
+
+    .MuiMenuItem-root.MuiTypography-colorPrimary {
+      color: Color.Blue500;
+    }
+
     @media (min-width: 600px) {
       .MuiMenuItem-root {
         min-height: auto;
@@ -84,6 +92,14 @@ it('checks component css', () => {
         font-size: 16px;
         line-height: 24px;
       }
+    }
+
+    .MuiMenuItem-dense.MuiTypography-colorError {
+      color: Color.Red500;
+    }
+
+    .MuiMenuItem-dense.MuiTypography-colorPrimary {
+      color: Color.Blue500;
     }
 
     .MuiPopover-paper {

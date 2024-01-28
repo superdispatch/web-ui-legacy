@@ -86,7 +86,7 @@ it('checks component css', () => {
     }
 
     .MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track {
-      background-color: Color.Blue500;
+      background-color: Color.Blue300;
     }
 
     .MuiSwitch-colorPrimary.Mui-disabled + .MuiSwitch-track {

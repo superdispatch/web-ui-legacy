@@ -48,6 +48,14 @@ it('checks component css', () => {
       }
     }
 
+    .MuiTab-root.MuiTypography-colorError {
+      color: Color.Red500;
+    }
+
+    .MuiTab-root.MuiTypography-colorPrimary {
+      color: Color.Blue500;
+    }
+
     @media (min-width: 600px) {
       .MuiTab-root {
         padding: 6px 24px;
@@ -81,7 +89,7 @@ it('checks component css', () => {
     }
 
     .MuiTab-textColorPrimary.Mui-selected {
-      color: Color.Blue500;
+      color: Color.Blue300;
     }
 
     .MuiTab-textColorPrimary.Mui-disabled {
@@ -210,7 +218,7 @@ it('checks component css', () => {
     }
 
     .PrivateTabIndicator-colorPrimary-2 {
-      background-color: Color.Blue500;
+      background-color: Color.Blue300;
     }
 
     .PrivateTabIndicator-colorSecondary-3 {
