@@ -116,12 +116,12 @@ it('checks component css', () => {
 
     .MuiPaginationItem-textPrimary.Mui-selected {
       color: Color.White;
-      background-color: Color.Blue300;
+      background-color: Color.Blue500;
     }
 
     .MuiPaginationItem-textPrimary.Mui-selected:hover,
     .MuiPaginationItem-textPrimary.Mui-selected.Mui-focusVisible {
-      background-color: rgb(0, 78, 171);
+      background-color: rgb(0, 69, 153);
     }
 
     .MuiPaginationItem-textPrimary.Mui-selected.Mui-disabled {
@@ -131,7 +131,7 @@ it('checks component css', () => {
     @media (hover: none) {
       .MuiPaginationItem-textPrimary.Mui-selected:hover,
       .MuiPaginationItem-textPrimary.Mui-selected.Mui-focusVisible {
-        background-color: Color.Blue300;
+        background-color: Color.Blue500;
       }
     }
 
@@ -165,14 +165,14 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-outlinedPrimary.Mui-selected {
-      color: Color.Blue300;
-      border: 1px solid rgba(0, 112, 245, 0.5);
-      background-color: rgba(0, 112, 245, 0.12);
+      color: Color.Blue500;
+      border: 1px solid rgba(0, 99, 219, 0.5);
+      background-color: rgba(0, 99, 219, 0.12);
     }
 
     .MuiPaginationItem-outlinedPrimary.Mui-selected:hover,
     .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-focusVisible {
-      background-color: rgba(0, 112, 245, 0.16);
+      background-color: rgba(0, 99, 219, 0.16);
     }
 
     .MuiPaginationItem-outlinedPrimary.Mui-selected.Mui-disabled {

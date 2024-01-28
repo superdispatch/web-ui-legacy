@@ -27,7 +27,7 @@ it('checks component css', () => {
     }
 
     .MuiSvgIcon-colorPrimary {
-      color: Color.Blue300;
+      color: Color.Blue500;
     }
 
     .MuiSvgIcon-colorSecondary {
@@ -39,7 +39,7 @@ it('checks component css', () => {
     }
 
     .MuiSvgIcon-colorError {
-      color: Color.Red300;
+      color: Color.Red500;
     }
 
     .MuiSvgIcon-colorDisabled {

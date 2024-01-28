@@ -492,7 +492,7 @@ it('checks component css', () => {
 
     @media (hover: none) {
       .MuiButton-containedPrimary:hover {
-        background-color: Color.Blue300;
+        background-color: Color.Blue500;
       }
     }
 
