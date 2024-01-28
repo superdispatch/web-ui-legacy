@@ -52,11 +52,11 @@ function createSuperDispatchTheme(): SuperDispatchTheme {
 
     palette: {
       primary: {
-        main: Color.Blue500,
+        main: Color.Blue300,
       },
 
       error: {
-        main: Color.Red500,
+        main: Color.Red300,
       },
 
       action: {
