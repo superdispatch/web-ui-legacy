@@ -87,14 +87,6 @@ it('checks component css InfoTooltip', () => {
       }
     }
 
-    .MuiTooltip-tooltip.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTooltip-tooltip.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiTooltip-tooltipArrow {
       margin: 0;
       position: relative;

@@ -17,6 +17,14 @@ it('checks component css', () => {
       margin: 0;
     }
 
+    .MuiTypography-root.MuiTypography-colorError {
+      color: Color.Red500;
+    }
+
+    .MuiTypography-root.MuiTypography-colorPrimary {
+      color: Color.Blue500;
+    }
+
     .MuiTypography-body2 {
       font-size: 14px;
       font-family: 'Inter', sans-serif;
@@ -29,14 +37,6 @@ it('checks component css', () => {
         font-size: 16px;
         line-height: 24px;
       }
-    }
-
-    .MuiTypography-body2.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-body2.MuiTypography-colorPrimary {
-      color: Color.Blue500;
     }
 
     .MuiTypography-body1 {
@@ -53,14 +53,6 @@ it('checks component css', () => {
       }
     }
 
-    .MuiTypography-body1.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-body1.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiTypography-caption {
       font-size: 12px;
       font-family: 'Inter', sans-serif;
@@ -73,14 +65,6 @@ it('checks component css', () => {
         font-size: 14px;
         line-height: 20px;
       }
-    }
-
-    .MuiTypography-caption.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-caption.MuiTypography-colorPrimary {
-      color: Color.Blue500;
     }
 
     .MuiTypography-button {
@@ -97,14 +81,6 @@ it('checks component css', () => {
       }
     }
 
-    .MuiTypography-button.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-button.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiTypography-h1 {
       font-size: 32px;
       font-family: 'Inter', sans-serif;
@@ -117,14 +93,6 @@ it('checks component css', () => {
         font-size: 28px;
         line-height: 36px;
       }
-    }
-
-    .MuiTypography-h1.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-h1.MuiTypography-colorPrimary {
-      color: Color.Blue500;
     }
 
     .MuiTypography-h2 {
@@ -141,14 +109,6 @@ it('checks component css', () => {
       }
     }
 
-    .MuiTypography-h2.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-h2.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiTypography-h3 {
       font-size: 20px;
       font-family: 'Inter', sans-serif;
@@ -161,14 +121,6 @@ it('checks component css', () => {
         font-size: 20px;
         line-height: 26px;
       }
-    }
-
-    .MuiTypography-h3.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-h3.MuiTypography-colorPrimary {
-      color: Color.Blue500;
     }
 
     .MuiTypography-h4 {
@@ -185,14 +137,6 @@ it('checks component css', () => {
       }
     }
 
-    .MuiTypography-h4.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-h4.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiTypography-h5 {
       font-size: 14px;
       font-family: 'Inter', sans-serif;
@@ -205,14 +149,6 @@ it('checks component css', () => {
         font-size: 16px;
         line-height: 24px;
       }
-    }
-
-    .MuiTypography-h5.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-h5.MuiTypography-colorPrimary {
-      color: Color.Blue500;
     }
 
     .MuiTypography-h6 {
@@ -231,27 +167,11 @@ it('checks component css', () => {
       }
     }
 
-    .MuiTypography-h6.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-h6.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiTypography-subtitle1 {
       font-size: 1rem;
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       line-height: 1.75;
-    }
-
-    .MuiTypography-subtitle1.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-subtitle1.MuiTypography-colorPrimary {
-      color: Color.Blue500;
     }
 
     .MuiTypography-subtitle2 {
@@ -261,28 +181,12 @@ it('checks component css', () => {
       line-height: 1.57;
     }
 
-    .MuiTypography-subtitle2.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-subtitle2.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiTypography-overline {
       font-size: 0.75rem;
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       line-height: 2.66;
       text-transform: uppercase;
-    }
-
-    .MuiTypography-overline.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTypography-overline.MuiTypography-colorPrimary {
-      color: Color.Blue500;
     }
 
     .MuiTypography-srOnly {

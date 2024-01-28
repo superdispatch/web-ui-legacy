@@ -48,14 +48,6 @@ it('checks component css', () => {
       }
     }
 
-    .MuiTab-root.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiTab-root.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     @media (min-width: 600px) {
       .MuiTab-root {
         padding: 6px 24px;

@@ -36,14 +36,6 @@ it('checks component css', () => {
       }
     }
 
-    body.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    body.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     @media print {
       body {
         background-color: Color.White;

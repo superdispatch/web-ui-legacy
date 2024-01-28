@@ -84,14 +84,6 @@ it('checks component css', () => {
       }
     }
 
-    .MuiChip-root.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiChip-root.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiChip-colorPrimary {
       color: Color.White;
       background-color: Color.Blue300;

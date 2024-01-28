@@ -108,14 +108,6 @@ it('checks component css', () => {
       }
     }
 
-    .MuiFormHelperText-root.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiFormHelperText-root.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiFormHelperText-root.Mui-disabled {
       color: Color.Dark100;
     }
@@ -156,14 +148,6 @@ it('checks component css', () => {
         font-size: 16px;
         line-height: 24px;
       }
-    }
-
-    .MuiFormLabel-root.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiFormLabel-root.MuiTypography-colorPrimary {
-      color: Color.Blue500;
     }
 
     .MuiFormLabel-root.MuiFormLabel-root {
@@ -266,14 +250,6 @@ it('checks component css', () => {
         font-size: 16px;
         line-height: 24px;
       }
-    }
-
-    .MuiInputBase-root.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiInputBase-root.MuiTypography-colorPrimary {
-      color: Color.Blue500;
     }
 
     .MuiInputBase-root.Mui-disabled {

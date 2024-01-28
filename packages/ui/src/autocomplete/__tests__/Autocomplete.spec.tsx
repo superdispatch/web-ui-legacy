@@ -251,14 +251,6 @@ it('checks component css', () => {
       }
     }
 
-    .MuiAutocomplete-paper.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiAutocomplete-paper.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiAutocomplete-listbox {
       margin: 0;
       padding: 8px 0;

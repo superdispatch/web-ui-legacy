@@ -34,14 +34,6 @@ it('checks component css', () => {
       }
     }
 
-    .MuiAvatar-root.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiAvatar-root.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     @media (min-width: 600px) {
       .MuiAvatar-root {
         width: 32px;

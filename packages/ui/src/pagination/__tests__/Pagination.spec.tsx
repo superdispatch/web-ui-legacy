@@ -43,14 +43,6 @@ it('checks component css', () => {
       }
     }
 
-    .MuiPaginationItem-root.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiPaginationItem-root.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiPaginationItem-page {
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;

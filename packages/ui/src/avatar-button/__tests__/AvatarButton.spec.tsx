@@ -117,14 +117,6 @@ it('checks component css', () => {
       }
     }
 
-    .SD-AvatarButton-sizeLarge > .SD-AvatarButton-root.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .SD-AvatarButton-sizeLarge > .SD-AvatarButton-root.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     @media (min-width: 600px) {
       .SD-AvatarButton-sizeLarge > .SD-AvatarButton-root {
         width: 64px;

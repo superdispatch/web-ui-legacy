@@ -44,14 +44,6 @@ it('checks component css', () => {
       }
     }
 
-    .MuiButton-root.MuiTypography-colorError {
-      color: Color.Red500;
-    }
-
-    .MuiButton-root.MuiTypography-colorPrimary {
-      color: Color.Blue500;
-    }
-
     .MuiButton-root:hover {
       text-decoration: none;
     }
