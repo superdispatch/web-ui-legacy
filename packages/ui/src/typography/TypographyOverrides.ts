@@ -125,13 +125,11 @@ export function overrideTypography(theme: SuperDispatchTheme): void {
   theme.props.MuiTypography = { variant: 'body2' };
 
   theme.overrides.MuiTypography = {
-    root: {
-      '&.MuiTypography-colorError': {
-        color: Color.Red500,
-      },
-      '&.MuiTypography-colorPrimary': {
-        color: Color.Blue500,
-      },
+    colorError: {
+      color: Color.Red500,
+    },
+    colorPrimary: {
+      color: Color.Blue500,
     },
   };
 }
