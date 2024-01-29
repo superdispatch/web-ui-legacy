@@ -36,12 +36,12 @@ const normalizeTextColor = createRuleNormalizer<TextColorProp>({
   secondary: Color.Dark300,
 
   white: Color.White,
-  blue: Color.Blue300,
-  green: Color.Green300,
+  blue: Color.Blue500,
+  green: Color.Green500,
   purple: Color.Purple500,
-  red: Color.Red300,
-  teal: Color.Teal300,
-  yellow: Color.Yellow300,
+  red: Color.Red500,
+  teal: Color.Teal500,
+  yellow: Color.Yellow500,
 });
 
 export type TextVariantProp =

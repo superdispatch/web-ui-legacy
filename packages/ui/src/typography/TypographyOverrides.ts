@@ -1,5 +1,6 @@
 import { Breakpoints } from '@material-ui/core/styles/createBreakpoints';
 import { TypographyOptions } from '@material-ui/core/styles/createTypography';
+import { Color } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function createTypographyOptions(
@@ -122,4 +123,13 @@ export function createTypographyOptions(
 
 export function overrideTypography(theme: SuperDispatchTheme): void {
   theme.props.MuiTypography = { variant: 'body2' };
+
+  theme.overrides.MuiTypography = {
+    colorError: {
+      color: Color.Red500,
+    },
+    colorPrimary: {
+      color: Color.Blue500,
+    },
+  };
 }

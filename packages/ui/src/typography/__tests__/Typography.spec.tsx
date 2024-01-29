@@ -223,7 +223,7 @@ it('checks component css', () => {
     }
 
     .MuiTypography-colorPrimary {
-      color: Color.Blue300;
+      color: Color.Blue500;
     }
 
     .MuiTypography-colorSecondary {
@@ -239,7 +239,7 @@ it('checks component css', () => {
     }
 
     .MuiTypography-colorError {
-      color: Color.Red300;
+      color: Color.Red500;
     }
 
     .MuiTypography-displayInline {
