@@ -9,17 +9,17 @@ import {
   ForwardRefExoticComponent,
   InputHTMLAttributes,
 } from 'react';
-import NumberFormat, { NumberFormatProps } from 'react-number-format';
+import { NumericFormat, NumericFormatProps } from 'react-number-format';
 import { useUID } from '../utils/useUID';
 
 type SafeNumberFormatProps = Pick<
-  NumberFormatProps,
+  NumericFormatProps,
   | 'value'
   | 'onChange'
   | 'getInputRef'
   | 'decimalScale'
   | 'onValueChange'
-  | 'isNumericString'
+  | 'valueIsNumericString'
   | 'decimalSeparator'
   | 'thousandSeparator'
   | 'fixedDecimalScale'
@@ -33,7 +33,6 @@ interface NumberFormatCustomProps
       'ref' | keyof InputHTMLAttributes<HTMLInputElement>
     > {
   disableValueParsing?: boolean;
-  format?: NumberFormatProps['format'];
 }
 
 export interface NumberFieldProps
@@ -47,18 +46,18 @@ function NumberInputComponent({
   value,
   inputRef,
   onChange,
-  isNumericString = true,
+  valueIsNumericString = true,
   thousandSeparator = true,
   disableValueParsing,
   ...props
 }: NumberFormatCustomProps): JSX.Element {
   return (
-    <NumberFormat
+    <NumericFormat
       {...props}
       value={value ?? ''}
       inputMode="decimal"
       getInputRef={inputRef}
-      isNumericString={isNumericString}
+      valueIsNumericString={valueIsNumericString}
       thousandSeparator={thousandSeparator}
       allowedDecimalSeparators={['.', ',']}
       onValueChange={(values) => {
@@ -72,6 +71,7 @@ function NumberInputComponent({
           },
         } as ChangeEvent<HTMLInputElement>;
 
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         onChange?.(event);
       }}
     />

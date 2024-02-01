@@ -18,6 +18,7 @@ export {
   Inline,
   NumberField,
   OverflowText,
+  PatternField,
   RadioField,
   RadioGroupField,
   Snackbar,
