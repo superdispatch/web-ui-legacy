@@ -1,5 +1,5 @@
 import { StandardTextFieldProps, TextField } from '@material-ui/core';
-import { forwardRef, ForwardRefExoticComponent } from 'react';
+import { ChangeEvent, forwardRef, ForwardRefExoticComponent } from 'react';
 import { PatternFormat, PatternFormatProps } from 'react-number-format';
 import { useUID } from '../utils/useUID';
 
@@ -7,7 +7,6 @@ type SafePatternFormatProps = Pick<
   PatternFormatProps,
   | 'value'
   | 'defaultValue'
-  | 'onChange'
   | 'onValueChange'
   | 'format'
   | 'mask'
@@ -32,6 +31,7 @@ export const PatternField: ForwardRefExoticComponent<PatternFieldProps> =
       {
         id,
         value,
+        onChange,
         inputMode = 'decimal',
         valueIsNumericString = true,
         ...props
@@ -49,6 +49,16 @@ export const PatternField: ForwardRefExoticComponent<PatternFieldProps> =
           getInputRef={ref}
           valueIsNumericString={valueIsNumericString}
           customInput={TextField}
+          onValueChange={(values) => {
+            const event = {
+              target: {
+                name: props.name,
+                value: values.value,
+              },
+            } as ChangeEvent<HTMLInputElement>;
+
+            onChange?.(event);
+          }}
         />
       );
     },
