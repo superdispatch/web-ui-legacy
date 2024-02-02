@@ -440,6 +440,10 @@ test('css', () => {
       outline: none;
     }
 
+    .SD-Calendar-day.SD-Calendar-today {
+      border: 1px solid Color.Silver500;
+    }
+
     .SD-Calendar-day.SD-Calendar-disabled {
       color: Color.Dark100;
     }
@@ -459,8 +463,15 @@ test('css', () => {
       background-color: Color.Blue300;
     }
 
-    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-today {
-      color: Color.Blue300;
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active.SD-Calendar-today,
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected.SD-Calendar-today {
+      border: none;
+    }
+
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active.SD-Calendar-today:before,
+    .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected.SD-Calendar-today:before {
+      border: 1px solid Color.Blue300;
+      border-radius: 4px;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):hover,
