@@ -11,4 +11,5 @@ export * from './text/FormikCurrencyField';
 export * from './text/FormikMaxLengthTextField';
 export * from './text/FormikNumberField';
 export * from './text/FormikPasswordField';
+export * from './text/FormikPatternField';
 export * from './text/FormikTextField';
