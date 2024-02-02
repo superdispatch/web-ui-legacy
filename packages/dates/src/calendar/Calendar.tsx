@@ -204,6 +204,10 @@ const useStyles = makeStyles<
         outline: 'none',
       },
 
+      '&$today': {
+        border: `1px solid ${Color.Silver500}`,
+      },
+
       '&$disabled': {
         color: Color.Dark100,
         '&$selected:not($outside):after': {
@@ -216,10 +220,6 @@ const useStyles = makeStyles<
         color: Color.Dark500,
 
         '&:not($selected):not(:active)': {
-          '&$today': {
-            color: Color.Blue300,
-          },
-
           '&:hover, &:focus': {
             backgroundColor: Color.Silver100,
           },
@@ -266,6 +266,13 @@ const useStyles = makeStyles<
           color: Color.White,
           '&:after': {
             backgroundColor: Color.Blue300,
+          },
+          '&$today': {
+            border: 'none',
+          },
+          '&$today:before': {
+            border: `1px solid ${Color.Blue300}`,
+            borderRadius: theme.spacing(0.5),
           },
         },
       },
