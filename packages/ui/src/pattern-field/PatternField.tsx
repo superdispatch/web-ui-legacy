@@ -21,9 +21,18 @@ type SafePatternFormatProps = Pick<
 export interface PatternFieldProps
   extends Omit<
       StandardTextFieldProps,
-      keyof SafePatternFormatProps | 'defaultValue' | 'type' | 'inputRef'
+      | keyof SafePatternFormatProps
+      | 'defaultValue'
+      | 'type'
+      | 'inputRef'
+      | 'inputProps'
     >,
-    SafePatternFormatProps {}
+    SafePatternFormatProps {
+  inputProps?: Omit<
+    React.HTMLAttributes<HTMLInputElement>,
+    keyof SafePatternFormatProps
+  >;
+}
 
 export const PatternField: ForwardRefExoticComponent<PatternFieldProps> =
   forwardRef(

@@ -39,7 +39,8 @@ export interface NumberFieldProps
   extends Omit<StandardTextFieldProps, 'InputProps' | 'inputProps'>,
     Omit<SafeNumberFormatProps, keyof StandardTextFieldProps> {
   InputProps?: Partial<Omit<StandardInputProps, 'inputComponent'>>;
-  inputProps?: NumberFormatCustomProps & StandardTextFieldProps['inputProps'];
+  inputProps?: NumberFormatCustomProps &
+    Omit<React.HTMLAttributes<HTMLInputElement>, 'mask' | 'format'>;
 }
 
 function NumberInputComponent({
