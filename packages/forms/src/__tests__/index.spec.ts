@@ -11,6 +11,7 @@ it('exposes public api', () => {
       "FormikMaxLengthTextField": React.forwardRef(FormikMaxLengthTextField),
       "FormikNumberField": React.forwardRef(FormikNumberField),
       "FormikPasswordField": React.forwardRef(FormikPasswordField),
+      "FormikPatternField": React.forwardRef(FormikPatternField),
       "FormikPhoneField": React.forwardRef(FormikPhoneField),
       "FormikRadioCardField": React.forwardRef(FormikRadioCardField),
       "FormikRadioGroupField": React.forwardRef(FormikRadioGroupField),

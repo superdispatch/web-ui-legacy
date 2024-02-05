@@ -105,19 +105,3 @@ export const error = () => (
     )}
   </UseState>
 );
-
-export const format = () => (
-  <UseState initialState={0}>
-    {(value, setValue) => (
-      <NumberField
-        value={value}
-        inputProps={{
-          format: '### ### ### ###',
-        }}
-        onChange={(event) => {
-          setValue(event.target.value);
-        }}
-      />
-    )}
-  </UseState>
-);
