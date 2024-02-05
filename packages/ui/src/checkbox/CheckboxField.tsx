@@ -58,14 +58,7 @@ export const CheckboxField: ForwardRefExoticComponent<CheckboxFieldProps> =
           checked={checked}
           onBlur={onBlur as FormControlLabelProps['onBlur']}
           onChange={onChange as FormControlLabelProps['onChange']}
-          control={
-            <Checkbox
-              ref={ref}
-              color="primary"
-              disableRipple={true}
-              {...props}
-            />
-          }
+          control={<Checkbox ref={ref} color="primary" {...props} />}
         />
         {helperText && <FormHelperText>{helperText}</FormHelperText>}
       </FormControl>
