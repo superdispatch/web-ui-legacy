@@ -42,6 +42,8 @@ interface ButtonVariables {
   textColorHovered: Color;
   textColorDisabled: Color;
 
+  iconColor: Color;
+
   outlineColor: Color;
 
   borderColor: Color;
@@ -70,6 +72,8 @@ function createButtonVariables(
     textColor = Color.Transparent,
     textColorHovered = textColor,
     textColorDisabled = textColor,
+
+    iconColor = textColor,
 
     outlineColor = Color.Transparent,
 
@@ -108,6 +112,8 @@ function createButtonVariables(
     textColorDisabled,
     borderColorDisabled,
     backgroundColorDisabled,
+
+    iconColor,
   };
 }
 
@@ -144,6 +150,7 @@ function getNeutralVariables(size: ButtonSizeProp): ButtonVariables {
     backgroundColorActive: Color.Blue75,
 
     textColorDisabled: Color.Silver500,
+    iconColor: Color.Dark100,
   });
 }
 
@@ -268,6 +275,7 @@ const ButtonRoot = styled.button<ButtonStyleProps>(
       --button-border-color: ${variables.borderColor};
       --button-outline-color: ${Color.Transparent};
       --button-background-color: ${variables.backgroundColor};
+      --button-icon-color: ${variables.iconColor};
 
       --button-padding-x: ${variables.paddingXMobile}px;
       --button-padding-y: ${variables.paddingYMobile}px;
@@ -285,6 +293,7 @@ const ButtonRoot = styled.button<ButtonStyleProps>(
         --button-text-color: ${variables.textColorDisabled};
         --button-border-color: ${variables.borderColorDisabled};
         --button-background-color: ${variables.backgroundColorDisabled};
+        --button-icon-color: ${variables.textColorDisabled};
 
         &[aria-busy='true'] {
           --button-visibility: hidden;
@@ -296,6 +305,7 @@ const ButtonRoot = styled.button<ButtonStyleProps>(
           --button-text-color: ${variables.textColorHovered};
           --button-border-color: ${variables.borderColorHovered};
           --button-background-color: ${variables.backgroundColorHovered};
+          --button-icon-color: ${variables.textColorHovered};
         }
 
         &,
@@ -363,10 +373,12 @@ const ButtonLabel = styled.span`
 
 const ButtonStartIcon = styled.span`
   margin-right: 4px;
+  color: var(--button-icon-color);
 `;
 
 const ButtonEndIcon = styled.span`
   margin-left: 4px;
+  color: var(--button-icon-color);
 `;
 
 const ButtonPendingIndicator = styled.span`
