@@ -25,7 +25,7 @@ test('format', () => {
 
   // Check onChange values
   expect(onChange).toHaveBeenCalledTimes(4);
-  expect(onChange.mock.calls[3][0].target.value).toBe('1234          ');
+  expect(onChange.mock.calls[3][0].target.value).toBe('1234');
 
   // Check what user sees
   expect(screen.getByRole('textbox')).toHaveValue('1234          ');
@@ -40,7 +40,7 @@ test('format', () => {
 
   // Check onChange values
   expect(onChange).toHaveBeenCalledTimes(12);
-  expect(onChange.mock.calls[11][0].target.value).toBe('1234 5678 9012');
+  expect(onChange.mock.calls[11][0].target.value).toBe('123456789012');
 
   // Check what user sees
   expect(screen.getByRole('textbox')).toHaveValue('1234 5678 9012');
@@ -72,7 +72,7 @@ test('mask', () => {
 
   // Check onChange values
   expect(onChange).toHaveBeenCalledTimes(10);
-  expect(onChange.mock.calls[9][0].target.value).toBe('+1 (123) 4567 890');
+  expect(onChange.mock.calls[9][0].target.value).toBe('1234567890');
 
   // Check what user sees
   expect(screen.getByRole('textbox')).toHaveValue('+1 (123) 4567 890');
