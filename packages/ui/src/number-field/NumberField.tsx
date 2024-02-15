@@ -60,19 +60,18 @@ function NumberInputComponent({
       valueIsNumericString={valueIsNumericString}
       thousandSeparator={thousandSeparator}
       allowedDecimalSeparators={['.', ',']}
-      onValueChange={(values) => {
-        const floatValue = !Number.isNaN(Number(values.floatValue))
-          ? values.floatValue
-          : null;
+      onValueChange={(values, sourceInfo) => {
+        const floatValue = values.floatValue ?? null;
 
-        const event = {
+        const { event } = sourceInfo;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+        onChange?.({
+          ...event,
           target: {
+            ...event?.target,
             value: disableValueParsing ? values.value : floatValue,
           },
-        } as ChangeEvent<HTMLInputElement>;
-
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-        onChange?.(event);
+        } as ChangeEvent<HTMLInputElement>);
       }}
     />
   );
