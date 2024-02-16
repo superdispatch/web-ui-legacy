@@ -43,6 +43,7 @@ export const PatternField: ForwardRefExoticComponent<PatternFieldProps> =
         onChange,
         inputMode = 'decimal',
         valueIsNumericString = true,
+        onValueChange,
         ...props
       },
       ref,
@@ -58,15 +59,13 @@ export const PatternField: ForwardRefExoticComponent<PatternFieldProps> =
           getInputRef={ref}
           valueIsNumericString={valueIsNumericString}
           customInput={TextField}
-          onValueChange={(values) => {
-            const event = {
-              target: {
-                name: props.name,
-                value: values.value,
-              },
-            } as ChangeEvent<HTMLInputElement>;
-
-            onChange?.(event);
+          onValueChange={(values, sourceInfo) => {
+            const { event } = sourceInfo;
+            onChange?.({
+              ...event,
+              target: { ...event?.target, value: values.value },
+            } as ChangeEvent<HTMLInputElement>);
+            onValueChange?.(values, sourceInfo);
           }}
         />
       );
