@@ -17,11 +17,14 @@ it('checks component css', () => {
     ]),
   ).toMatchInlineSnapshot(`
     .SDSnackbar-root {
-      left: 8px;
-      right: 8px;
+      left: 0;
+      right: 0;
+      bottom: 0;
       display: flex;
+      padding: 0;
       z-index: 1400;
       position: fixed;
+      background: transparent;
       align-items: center;
       justify-content: center;
     }
