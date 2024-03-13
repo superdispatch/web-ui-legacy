@@ -47,21 +47,23 @@ export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
     return (
       <SidebarRoot id={id} ref={ref}>
         <SidebarHeader>
-          <SidebarTitle>
-            <Columns space="xsmall" align="center">
-              <Column width="fluid">
-                <TextBox variant="heading-2" noWrap={true} id={titleID}>
-                  {title}
-                </TextBox>
-              </Column>
-
-              {!!count && (
-                <Column width="content">
-                  <TextBox color="secondary">{count}</TextBox>
+          {title && (
+            <SidebarTitle>
+              <Columns space="xsmall" align="center">
+                <Column width="fluid">
+                  <TextBox variant="heading-2" noWrap={true} id={titleID}>
+                    {title}
+                  </TextBox>
                 </Column>
-              )}
-            </Columns>
-          </SidebarTitle>
+
+                {!!count && (
+                  <Column width="content">
+                    <TextBox color="secondary">{count}</TextBox>
+                  </Column>
+                )}
+              </Columns>
+            </SidebarTitle>
+          )}
 
           {header}
         </SidebarHeader>

@@ -39,6 +39,10 @@ const SidebarMenuItemRoot = styled.div<SidebarMenuItemRootProps>(
           background-color: ${Color.Silver200};
           box-shadow: inset 4px 0 0 ${Color.Blue300};
         }
+
+        &:hover {
+          background-color: ${Color.Silver200};
+        }
       }
     `;
   },
@@ -54,11 +58,6 @@ const SidebarMenuItemBadge = styled.div`
 
   color: ${Color.Dark500};
   background-color: ${Color.Silver400};
-
-  .MuiButtonBase-root[aria-current='true'] & {
-    color: ${Color.White};
-    background-color: ${Color.Blue300};
-  }
 `;
 
 const SidebarMenuItemSecondaryAction = styled.div`
