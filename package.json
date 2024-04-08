@@ -13,8 +13,8 @@
   },
   "scripts": {
     "postinstall": "husky install && js-tools lint:yarn-deduplicate --fix",
-    "build": "turbo run version",
-    "build-size": "yarn build && size-limit",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider turbo run version",
+    "build-size": "cross-env NODE_OPTIONS=--openssl-legacy-provider yarn build && size-limit",
     "check:types": "yarn tsc && yarn tsc --project cypress",
     "clean": "git clean -fxd -e '.idea' -e '.vscode'",
     "predocs": "rimraf docs",
