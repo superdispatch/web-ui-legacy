@@ -13,7 +13,7 @@
   },
   "scripts": {
     "postinstall": "husky install && js-tools lint:yarn-deduplicate --fix",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider turbo run version",
+    "build": "turbo run version",
     "build-size": "yarn build && size-limit",
     "check:types": "yarn tsc && yarn tsc --project cypress",
     "clean": "git clean -fxd -e '.idea' -e '.vscode'",
@@ -22,7 +22,7 @@
     "lint": "js-tools lint",
     "lint-changed": "git add . && yarn lint-staged",
     "preplayroom:build": "yarn playroom:generate",
-    "playroom:build": "NODE_OPTIONS=--max_old_space_size=4096 playroom build",
+    "playroom:build": "cross-env NODE_OPTIONS=--openssl-legacy-provider NODE_OPTIONS=--max_old_space_size=4096 playroom build",
     "playroom:generate": "ts-node scripts/generate-playroom-components.ts",
     "preplayroom:start": "yarn playroom:generate",
     "playroom:start": "playroom start",
