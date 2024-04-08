@@ -13,7 +13,7 @@
   },
   "scripts": {
     "postinstall": "husky install && js-tools lint:yarn-deduplicate --fix",
-    "build": "turbo run version",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider turbo run version",
     "build-size": "yarn build && size-limit",
     "check:types": "yarn tsc && yarn tsc --project cypress",
     "clean": "git clean -fxd -e '.idea' -e '.vscode'",
@@ -30,7 +30,7 @@
     "release": "yarn lerna publish",
     "prestart": "yarn",
     "start": "run-p storybook:start playroom:start",
-    "storybook:build": "build-storybook -o docs --quiet",
+    "storybook:build": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook -o docs --quiet",
     "storybook:start": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 5000 --ci",
     "tdd": "jest --watch",
     "test": "jest --coverage --forceExit",
