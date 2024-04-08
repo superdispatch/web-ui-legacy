@@ -23,7 +23,7 @@ test('format', async () => {
 
   expect(view.container).toMatchInlineSnapshot(`
     <div>
-      201-555-0123
+      (201) 555-0123
     </div>
   `);
 });

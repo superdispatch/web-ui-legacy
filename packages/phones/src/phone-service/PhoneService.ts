@@ -63,6 +63,7 @@ interface PhoneNumberJSON {
   number: {
     input: string;
     international?: string;
+    national?: string;
   };
 }
 
@@ -226,7 +227,7 @@ export class PhoneService {
 
     const apn = parsePhoneNumber(phone, { regionCode: countryOption });
     const country = countryOption || toCountryISO(apn.regionCode);
-    const international = apn.number?.international;
+    const international = apn.number ? apn.number[format] : '';
     const { regionCode } = apn;
 
     const formatted =

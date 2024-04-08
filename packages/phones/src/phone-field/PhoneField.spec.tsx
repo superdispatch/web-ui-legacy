@@ -25,7 +25,10 @@ test('basic', async () => {
   );
 
   expect(screen.getByRole('button')).toHaveTextContent('+1');
-  expect(screen.getByRole('button')).toHaveAttribute('title', 'Canada: +1');
+  expect(screen.getByRole('button')).toHaveAttribute(
+    'title',
+    'United States: +1',
+  );
 
   expect(screen.getByRole('button')).toContainElement(
     screen.getByRole('img', { name: 'US' }),
