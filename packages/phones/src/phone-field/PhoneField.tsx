@@ -63,7 +63,8 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
     );
 
     const placeholder = useMemo(
-      () => phoneService.APN.getExample(country).getNumber('international'),
+      (): string =>
+        phoneService.APN.getExample(country).number?.international || '',
       [country, phoneService.APN],
     );
 

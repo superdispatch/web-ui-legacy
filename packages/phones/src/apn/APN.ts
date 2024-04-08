@@ -1,8 +1,8 @@
 import type AwesomePhoneNumber from 'awesome-phonenumber';
+import PhoneNumber from 'awesome-phonenumber';
 
-export type APNType = AwesomePhoneNumber;
 export type APNStatic = typeof AwesomePhoneNumber;
-export type AYTType = ReturnType<APNStatic['getAsYouType']>;
+export type AYTType = PhoneNumber.AsYouType;
 
 let loadError: undefined | Error;
 let loadedAPN: undefined | APNStatic;
@@ -14,13 +14,11 @@ export function loadAPN(): Promise<APNStatic> {
     'awesome-phonenumber'
   ).then(
     (apn) => {
-      loadedAPN = apn.default;
-
+      loadedAPN = apn.default || apn;
       return loadedAPN;
     },
-    (error: Error) => {
+    (error) => {
       loadError = error;
-
       throw error;
     },
   );
@@ -32,7 +30,6 @@ export function getAPN(): APNStatic {
   }
 
   if (!loadedAPN) {
-    // eslint-disable-next-line @typescript-eslint/no-throw-literal
     throw loadAPN();
   }
 
