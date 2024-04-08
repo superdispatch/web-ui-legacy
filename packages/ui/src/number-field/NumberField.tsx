@@ -64,7 +64,6 @@ function NumberInputComponent({
         const floatValue = values.floatValue ?? null;
 
         const { event } = sourceInfo;
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         onChange?.({
           ...event,
           target: {
