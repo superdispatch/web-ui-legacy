@@ -1,4 +1,8 @@
-import { ParsedPhoneNumber, parsePhoneNumber } from 'awesome-phonenumber';
+import {
+  getAsYouType,
+  ParsedPhoneNumber,
+  parsePhoneNumber,
+} from 'awesome-phonenumber';
 import { useMemo } from 'react';
 import { APNStatic, getAPN, loadAPN } from '../apn/APN';
 import {
@@ -114,7 +118,7 @@ export class PhoneService {
   }
 
   createAPN(phone: string, country?: CountryISO): ParsedPhoneNumber {
-    const asYouType = this.APN.getAsYouType(toCountryISO(country));
+    const asYouType = getAsYouType(toCountryISO(country));
 
     asYouType.reset(normalize(phone));
 

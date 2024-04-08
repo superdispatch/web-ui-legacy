@@ -1,5 +1,6 @@
 import { BaseTextFieldProps, TextField } from '@material-ui/core';
 import { mergeRefs } from '@superdispatch/ui';
+import { getExample } from 'awesome-phonenumber';
 import {
   ChangeEvent,
   forwardRef,
@@ -63,9 +64,8 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
     );
 
     const placeholder = useMemo(
-      (): string =>
-        phoneService.APN.getExample(country).number?.international || '',
-      [country, phoneService.APN],
+      (): string => getExample(country).number?.international || '',
+      [country],
     );
 
     function handleChange(

@@ -26,11 +26,11 @@ export interface PhoneLinkProps
 export const PhoneLink: ForwardRefExoticComponent<PhoneLinkProps> = forwardRef(
   ({ phone, country, fallback, format = 'international', ...props }, ref) => {
     const service = usePhoneService();
+
     const [text, href] = useMemo(() => {
       if (service.checkPossibility(phone) !== 'is-possible') {
         return [undefined, undefined];
       }
-
       return [
         service.format(phone, { country, format }),
         service.format(phone, { country, format: 'rfc3966' }),

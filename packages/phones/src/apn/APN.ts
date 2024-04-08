@@ -1,8 +1,7 @@
-import type AwesomePhoneNumber from 'awesome-phonenumber';
-import PhoneNumber from 'awesome-phonenumber';
+import { AsYouType, parsePhoneNumber } from 'awesome-phonenumber';
 
-export type APNStatic = typeof AwesomePhoneNumber;
-export type AYTType = PhoneNumber.AsYouType;
+export type APNStatic = typeof parsePhoneNumber;
+export type AYTType = AsYouType;
 
 let loadError: undefined | Error;
 let loadedAPN: undefined | APNStatic;
@@ -14,7 +13,7 @@ export function loadAPN(): Promise<APNStatic> {
     'awesome-phonenumber'
   ).then(
     (apn) => {
-      loadedAPN = apn.default || apn;
+      loadedAPN = apn.parsePhoneNumber;
       return loadedAPN;
     },
     (error) => {
