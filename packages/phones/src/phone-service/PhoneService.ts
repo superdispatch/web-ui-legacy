@@ -227,13 +227,14 @@ export class PhoneService {
 
     const apn = parsePhoneNumber(phone, { regionCode: countryOption });
     const country = countryOption || toCountryISO(apn.regionCode);
-    const international = apn.number ? apn.number[format] : '';
+    const international = apn.number?.international;
+    const formattedNumber = apn.number ? apn.number[format] : '';
     const { regionCode } = apn;
 
     const formatted =
       format === 'national'
         ? this.formatNationalNumber(country, international)
-        : international;
+        : formattedNumber;
 
     if (!formatted) {
       return this.customFormat(phone, format, regionCode);
