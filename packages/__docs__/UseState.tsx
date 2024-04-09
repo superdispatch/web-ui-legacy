@@ -16,6 +16,7 @@ export function UseState({
   children,
   initialState,
 }: UseStateProps): null | ReactElement {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const [state, setState] = useState(initialState);
 
   return renderChildren(children(state, setState));

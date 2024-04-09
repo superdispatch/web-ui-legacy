@@ -54,6 +54,7 @@ export const PatternField: ForwardRefExoticComponent<PatternFieldProps> =
           {...props}
           id={uid}
           value={value ?? ''}
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
           inputMode={inputMode}
           getInputRef={ref}
           valueIsNumericString={valueIsNumericString}

@@ -17,6 +17,7 @@ export function loadAPN(): Promise<APNStatic> {
       return loadedAPN;
     },
     (error) => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       loadError = error;
       throw error;
     },
@@ -29,6 +30,7 @@ export function getAPN(): APNStatic {
   }
 
   if (!loadedAPN) {
+    // eslint-disable-next-line @typescript-eslint/no-throw-literal
     throw loadAPN();
   }
 
