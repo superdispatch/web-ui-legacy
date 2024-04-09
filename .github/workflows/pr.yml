@@ -30,7 +30,7 @@ jobs:
       - uses: superdispatch/actions/build-size/limit@v1
         with:
           install_command: 'yarn install'
-          build_command: 'cross-env NODE_OPTIONS=--openssl-legacy-provider yarn build'
+          build_command: 'bash -c "export NODE_OPTIONS=--openssl-legacy-provider && yarn build"'
 
   preview:
     runs-on: ubuntu-latest
