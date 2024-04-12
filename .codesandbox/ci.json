@@ -1,5 +1,5 @@
 {
-  "node": "17",
+  "node": "18",
   "buildCommand": "build",
   "sandboxes": ["react-typescript-react-ts"],
   "packages": [
