@@ -25,7 +25,7 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v4
-          node-version: 18
+          node-version: 16
 
       - uses: superdispatch/actions/build-size/limit@v1
         with:
