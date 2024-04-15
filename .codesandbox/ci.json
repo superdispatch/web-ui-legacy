@@ -1,7 +1,7 @@
 {
   "node": "20",
   "buildCommand": "build",
-  "sandboxes": ["react-typescript-react-ts"],
+  "sandboxes": ["new-react-typescript-react-ts"],
   "packages": [
     "packages/dates",
     "packages/eslint-plugin",
