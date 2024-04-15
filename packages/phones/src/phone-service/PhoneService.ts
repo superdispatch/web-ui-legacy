@@ -1,8 +1,4 @@
-import {
-  getAsYouType,
-  ParsedPhoneNumber,
-  parsePhoneNumber,
-} from 'awesome-phonenumber';
+import { getAsYouType, ParsedPhoneNumber } from 'awesome-phonenumber';
 import { useMemo } from 'react';
 import { APNStatic, getAPN, loadAPN } from '../apn/APN';
 import {
@@ -127,7 +123,7 @@ export class PhoneService {
   }
 
   getJSON(phone: string, country?: CountryISO): PhoneNumberJSON {
-    return parsePhoneNumber(phone, { regionCode: country }) as PhoneNumberJSON;
+    return this.APN(phone, { regionCode: country }) as PhoneNumberJSON;
   }
 
   checkPossibility(input: unknown): PhoneNumberPossibility {
@@ -138,8 +134,8 @@ export class PhoneService {
     }
 
     const apn = phone.startsWith(PLUS_SIGN)
-      ? parsePhoneNumber(phone)
-      : parsePhoneNumber(phone, { regionCode: DEFAULT_COUNTRY });
+      ? this.APN(phone)
+      : this.APN(phone, { regionCode: DEFAULT_COUNTRY });
     const { valid, possible, possibility } = apn as PhoneNumberJSON;
 
     // Avoid false positive short phone numbers.
@@ -225,7 +221,7 @@ export class PhoneService {
       return fallback;
     }
 
-    const apn = parsePhoneNumber(phone, { regionCode: countryOption });
+    const apn = this.APN(phone, { regionCode: countryOption });
     const country = countryOption || toCountryISO(apn.regionCode);
     const international = apn.number?.international;
     const formattedNumber = apn.number ? apn.number[format] : '';
