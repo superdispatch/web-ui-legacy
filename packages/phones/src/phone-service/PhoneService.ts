@@ -123,7 +123,7 @@ export class PhoneService {
   }
 
   getJSON(phone: string, country?: CountryISO): PhoneNumberJSON {
-    return this.APN(phone, { regionCode: country }) as PhoneNumberJSON;
+    return this.createAPN(phone, country) as PhoneNumberJSON;
   }
 
   checkPossibility(input: unknown): PhoneNumberPossibility {
