@@ -89,7 +89,7 @@ export const inset = () => (
     <Stack space="xxsmall">
       <DescriptionItem icon={<PersonIcon />}>Antony Hoffman</DescriptionItem>
       <DescriptionItem inset={true}>
-        <PhoneLink phone="303 555 0105" format="national" />
+        <PhoneLink phone="+1 303 555 0105" format="national" />
       </DescriptionItem>
       <DescriptionItem inset={true}>
         <Link href="mailto:dustin.russel@example.com">

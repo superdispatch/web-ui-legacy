@@ -98,7 +98,7 @@ export const inset = () => (
 
     <DescriptionListItem
       inset={true}
-      content={<PhoneLink phone="303 555 0105" format="national" />}
+      content={<PhoneLink phone="+1 303 555 0105" format="national" />}
     />
 
     <DescriptionListItem
@@ -135,7 +135,7 @@ export const nested = () => (
       <DescriptionListItem icon={<PersonIcon />} content="MGR MGR" />
       <DescriptionListItem
         inset={true}
-        content={<PhoneText phone="6018550402" format="national" />}
+        content={<PhoneText phone="+16018550402" format="national" />}
       />
     </DescriptionList>
 
