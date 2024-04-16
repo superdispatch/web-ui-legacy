@@ -27,7 +27,10 @@ jobs:
           cache-key: yarn-v4
           node-version: 18
 
-      - run: yarn build
+      - uses: superdispatch/actions/build-size/limit@v1
+        with:
+          install_command: 'yarn install'
+          build_command: 'yarn build'
 
   preview:
     runs-on: ubuntu-latest

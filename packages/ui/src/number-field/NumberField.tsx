@@ -61,15 +61,13 @@ function NumberInputComponent({
       thousandSeparator={thousandSeparator}
       allowedDecimalSeparators={['.', ',']}
       onValueChange={(values, sourceInfo) => {
-        const inputValue = values.value;
-
         const { event } = sourceInfo;
         // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         onChange?.({
           ...event,
           target: {
             ...event?.target,
-            value: inputValue,
+            value: disableValueParsing ? values.value : values.floatValue,
           },
         } as ChangeEvent<HTMLInputElement>);
       }}
