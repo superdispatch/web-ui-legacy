@@ -1,5 +1,6 @@
+import type { ParsedPhoneNumber } from 'awesome-phonenumber';
 import { useMemo } from 'react';
-import { APNStatic, APNType, getAPN, loadAPN } from '../apn/APN';
+import { APNStatic, getAPN, loadAPN } from '../apn/APN';
 import {
   CountryISO,
   DEFAULT_COUNTRY,
@@ -58,6 +59,7 @@ interface PhoneNumberJSON {
   number: {
     input: string;
     international?: string;
+    national?: string;
   };
 }
 
@@ -112,7 +114,7 @@ export class PhoneService {
     this.APN = APN;
   }
 
-  createAPN(phone: string, country?: CountryISO): APNType {
+  createAPN(phone: string, country?: CountryISO): ParsedPhoneNumber {
     const asYouType = this.APN.getAsYouType(toCountryISO(country));
 
     asYouType.reset(normalize(phone));
@@ -121,7 +123,7 @@ export class PhoneService {
   }
 
   getJSON(phone: string, country?: CountryISO): PhoneNumberJSON {
-    return this.createAPN(phone, country).toJSON() as PhoneNumberJSON;
+    return this.createAPN(phone, country) as PhoneNumberJSON;
   }
 
   checkPossibility(input: unknown): PhoneNumberPossibility {
@@ -132,9 +134,9 @@ export class PhoneService {
     }
 
     const apn = phone.startsWith(PLUS_SIGN)
-      ? new this.APN(phone)
-      : new this.APN(phone, DEFAULT_COUNTRY);
-    const { valid, possible, possibility } = apn.toJSON() as PhoneNumberJSON;
+      ? this.APN.parsePhoneNumber(phone)
+      : this.APN.parsePhoneNumber(phone, { regionCode: DEFAULT_COUNTRY });
+    const { valid, possible, possibility } = apn as PhoneNumberJSON;
 
     // Avoid false positive short phone numbers.
     if (!valid && possible) {
@@ -219,24 +221,28 @@ export class PhoneService {
       return fallback;
     }
 
-    const apn = this.createAPN(phone, countryOption);
-    const country = countryOption || toCountryISO(apn.getRegionCode());
+    const apn = this.APN.parsePhoneNumber(phone, { regionCode: countryOption });
+    const country = countryOption || toCountryISO(apn.regionCode);
+    const international = apn.number?.international;
+    const formattedNumber = apn.number ? apn.number[format] : '';
+    const { regionCode } = apn;
 
     const formatted =
       format === 'national'
-        ? this.formatNationalNumber(apn, country)
-        : apn.getNumber(format);
+        ? this.formatNationalNumber(country, international)
+        : formattedNumber;
 
     if (!formatted) {
-      return this.customFormat(apn, phone, format);
+      return this.customFormat(phone, format, regionCode);
     }
 
     return formatted;
   }
 
-  formatNationalNumber(apn: APNType, country: CountryISO): string | undefined {
-    const internationalNumber = apn.getNumber('international');
-
+  formatNationalNumber(
+    country: CountryISO,
+    internationalNumber?: string,
+  ): string | undefined {
     if (!internationalNumber) {
       return undefined;
     }
@@ -245,12 +251,12 @@ export class PhoneService {
   }
 
   private customFormat(
-    apn: APNType,
     phone: string,
     format: PhoneNumberFormat,
+    regionCode?: string,
   ): string {
     let formatted = '';
-    const country = toCountryISO(apn.getRegionCode());
+    const country = toCountryISO(regionCode);
 
     const nationalNumber = normalizeNationalNumber(country, phone);
 

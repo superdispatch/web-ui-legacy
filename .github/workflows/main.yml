@@ -13,7 +13,7 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v4
-          node-version: 16
+          node-version: 18
 
       - run: yarn check:types
       - run: yarn lint
@@ -28,7 +28,7 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v4
-          node-version: 16
+          node-version: 18
 
       - run: yarn docs
       - id: deploy
@@ -49,7 +49,7 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v4
-          node-version: 16
+          node-version: 18
       - run: yarn cypress install
       - run: yarn cypress run
         env:
@@ -64,7 +64,7 @@ jobs:
       - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           cache-key: yarn-v4
-          node-version: 16
+          node-version: 18
 
       - run: yarn test-visual-ci https://ui.superdispatch.org
 

@@ -1,4 +1,8 @@
-import AwesomePhoneNumber from 'awesome-phonenumber';
+import {
+  getAsYouType,
+  getExample,
+  parsePhoneNumber,
+} from 'awesome-phonenumber';
 import { CountryISO } from '../country-code-metadata/CountryCodeMetadata';
 import {
   PhoneNumberFormat,
@@ -55,7 +59,11 @@ test.each([
 ])(
   '#getInfo(%p): { country: %p, nationalNumber: %p }',
   (input, country, nationalNumber) => {
-    expect(new PhoneService(AwesomePhoneNumber).getInfo(input)).toEqual({
+    expect(
+      new PhoneService({ parsePhoneNumber, getAsYouType, getExample }).getInfo(
+        input,
+      ),
+    ).toEqual({
       country,
       nationalNumber,
     });
@@ -187,7 +195,7 @@ test.each<
   ['+1506234567890', 'international', undefined, '+1 506234567890'],
 ])('formatPhoneNumber(%p, %p): %p', (input, format, country, phone) => {
   expect(
-    new PhoneService(AwesomePhoneNumber).format(
+    new PhoneService({ parsePhoneNumber, getAsYouType, getExample }).format(
       input,
       !format && !country ? undefined : { format, country },
     ),
@@ -201,7 +209,7 @@ test.each([
   ['615-9', 'too-short'],
   ['615-99', 'too-short'],
   ['615-994', 'too-short'],
-  ['615-994-3', 'invalid-number'],
+  ['615-994-3', 'invalid'],
   ['615-994-33', 'too-short'],
   ['615-994-330', 'too-short'],
   ['615-994-3300', 'is-possible'],
@@ -210,10 +218,10 @@ test.each([
   ['1 61', 'too-short'],
   ['1 615-9', 'too-short'],
   ['1 615-99', 'too-short'],
-  ['1 615-994', 'invalid-number'],
+  ['1 615-994', 'invalid'],
   ['1 615-994-3', 'too-short'],
   ['1 615-994-33', 'too-short'],
-  ['1 615-994-330', 'invalid-number'],
+  ['1 615-994-330', 'invalid'],
   ['1 615-994-3300', 'is-possible'],
   ['1 615-994-33001', 'too-long'],
   ['+1 6', 'unknown'],
@@ -221,17 +229,21 @@ test.each([
   ['+1 615-9', 'too-short'],
   ['+1 615-99', 'too-short'],
   ['+1 615-994', 'too-short'],
-  ['+1 615-994-3', 'invalid-number'],
+  ['+1 615-994-3', 'invalid'],
   ['+1 615-994-33', 'too-short'],
   ['+1 615-994-330', 'too-short'],
   ['+1 615-994-3300', 'is-possible'],
   ['+1 615-994-33001', 'too-long'],
 
-  ['3242225555', 'invalid-number'],
+  ['3242225555', 'invalid'],
 ])('#checkPossibility(%p): %p', (input, expected) => {
-  expect(new PhoneService(AwesomePhoneNumber).checkPossibility(input)).toBe(
-    expected,
-  );
+  expect(
+    new PhoneService({
+      parsePhoneNumber,
+      getAsYouType,
+      getExample,
+    }).checkPossibility(input),
+  ).toBe(expected);
 });
 
 test.each<
@@ -271,7 +283,10 @@ test.each<
 
   ['3242225555', undefined, 'Invalid phone number'],
 ])('#validate(%p, %j): %p', (input, rules, expected) => {
-  expect(new PhoneService(AwesomePhoneNumber).validate(input, rules)).toBe(
-    expected,
-  );
+  expect(
+    new PhoneService({ parsePhoneNumber, getAsYouType, getExample }).validate(
+      input,
+      rules,
+    ),
+  ).toBe(expected);
 });
