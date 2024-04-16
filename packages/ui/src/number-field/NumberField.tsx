@@ -67,7 +67,7 @@ function NumberInputComponent({
           ...event,
           target: {
             ...event?.target,
-            value: disableValueParsing ? values.value : Number(values.value),
+            value: disableValueParsing ? values.value : values.floatValue,
           },
         } as ChangeEvent<HTMLInputElement>);
       }}
