@@ -105,3 +105,19 @@ export const error = () => (
     )}
   </UseState>
 );
+
+export const text = () => (
+  <UseState initialState={0}>
+    {(value, setValue) => (
+      <NumberField
+        value={value}
+        isText={true}
+        label="Label"
+        helperText="helperText"
+        onChange={(event) => {
+          setValue(event.target.value);
+        }}
+      />
+    )}
+  </UseState>
+);
