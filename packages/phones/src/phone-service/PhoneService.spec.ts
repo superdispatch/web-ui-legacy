@@ -1,4 +1,8 @@
-import { parsePhoneNumber } from 'awesome-phonenumber';
+import {
+  getAsYouType,
+  getExample,
+  parsePhoneNumber,
+} from 'awesome-phonenumber';
 import { CountryISO } from '../country-code-metadata/CountryCodeMetadata';
 import {
   PhoneNumberFormat,
@@ -55,7 +59,11 @@ test.each([
 ])(
   '#getInfo(%p): { country: %p, nationalNumber: %p }',
   (input, country, nationalNumber) => {
-    expect(new PhoneService(parsePhoneNumber).getInfo(input)).toEqual({
+    expect(
+      new PhoneService({ parsePhoneNumber, getAsYouType, getExample }).getInfo(
+        input,
+      ),
+    ).toEqual({
       country,
       nationalNumber,
     });
@@ -187,7 +195,7 @@ test.each<
   ['+1506234567890', 'international', undefined, '+1 506234567890'],
 ])('formatPhoneNumber(%p, %p): %p', (input, format, country, phone) => {
   expect(
-    new PhoneService(parsePhoneNumber).format(
+    new PhoneService({ parsePhoneNumber, getAsYouType, getExample }).format(
       input,
       !format && !country ? undefined : { format, country },
     ),
@@ -229,9 +237,13 @@ test.each([
 
   ['3242225555', 'invalid'],
 ])('#checkPossibility(%p): %p', (input, expected) => {
-  expect(new PhoneService(parsePhoneNumber).checkPossibility(input)).toBe(
-    expected,
-  );
+  expect(
+    new PhoneService({
+      parsePhoneNumber,
+      getAsYouType,
+      getExample,
+    }).checkPossibility(input),
+  ).toBe(expected);
 });
 
 test.each<
@@ -271,7 +283,10 @@ test.each<
 
   ['3242225555', undefined, 'Invalid phone number'],
 ])('#validate(%p, %j): %p', (input, rules, expected) => {
-  expect(new PhoneService(parsePhoneNumber).validate(input, rules)).toBe(
-    expected,
-  );
+  expect(
+    new PhoneService({ parsePhoneNumber, getAsYouType, getExample }).validate(
+      input,
+      rules,
+    ),
+  ).toBe(expected);
 });
