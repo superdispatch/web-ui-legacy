@@ -40,6 +40,7 @@ export interface NumberFieldProps
     Omit<SafeNumberFormatProps, keyof StandardTextFieldProps> {
   InputProps?: Partial<Omit<StandardInputProps, 'inputComponent'>>;
   inputProps?: NumberFormatCustomProps & StandardTextFieldProps['inputProps'];
+  isText?: boolean;
 }
 
 function NumberInputComponent({
@@ -75,8 +76,41 @@ function NumberInputComponent({
   );
 }
 
+function TextInputComponent({
+  value,
+  inputRef,
+  onChange,
+  valueIsNumericString = true,
+  thousandSeparator = true,
+  disableValueParsing,
+  ...props
+}: NumberFormatCustomProps): JSX.Element {
+  return (
+    <NumericFormat
+      {...props}
+      value={value ?? ''}
+      inputMode="decimal"
+      getInputRef={inputRef}
+      valueIsNumericString={valueIsNumericString}
+      thousandSeparator={thousandSeparator}
+      allowedDecimalSeparators={['.', ',']}
+      onValueChange={(values, sourceInfo) => {
+        const { event } = sourceInfo;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+        onChange?.({
+          ...event,
+          target: {
+            ...event?.target,
+            value: values.value,
+          },
+        } as ChangeEvent<HTMLInputElement>);
+      }}
+    />
+  );
+}
+
 export const NumberField: ForwardRefExoticComponent<NumberFieldProps> =
-  forwardRef(({ id, InputProps, ...props }, ref) => {
+  forwardRef(({ id, InputProps, isText = false, ...props }, ref) => {
     const uid = useUID(id);
 
     return (
@@ -86,7 +120,7 @@ export const NumberField: ForwardRefExoticComponent<NumberFieldProps> =
         id={uid}
         InputProps={{
           ...InputProps,
-          inputComponent: NumberInputComponent,
+          inputComponent: isText ? TextInputComponent : NumberInputComponent,
         }}
       />
     );
