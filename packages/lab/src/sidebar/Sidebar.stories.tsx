@@ -87,15 +87,27 @@ export const list = () => (
         }
       >
         <SidebarMenuItem
+          badge={1}
           selected={true}
           openContentOnClick={true}
           avatar={<SidebarMenuItemAvatar>Eirwen Minoo</SidebarMenuItemAvatar>}
+          secondaryActions={
+            <SidebarMenuItemAction title="Edit">
+              <EditIcon />
+            </SidebarMenuItemAction>
+          }
         >
           Eirwen Minoo
         </SidebarMenuItem>
         <SidebarMenuItem
+          badge={1}
           openContentOnClick={true}
           avatar={<SidebarMenuItemAvatar>Ole Kielo</SidebarMenuItemAvatar>}
+          secondaryActions={
+            <SidebarMenuItemAction title="Edit">
+              <EditIcon />
+            </SidebarMenuItemAction>
+          }
         >
           Ole Kielo
         </SidebarMenuItem>

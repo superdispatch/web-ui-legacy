@@ -60,13 +60,6 @@ const SidebarMenuItemBadge = styled.div`
   background-color: ${Color.Silver400};
 `;
 
-const SidebarMenuItemSecondaryAction = styled.div`
-  top: 50%;
-  right: 24px;
-  position: absolute;
-  transform: translate3d(0, -50%, 0);
-`;
-
 export interface SidebarMenuItemProps {
   selected?: boolean;
   external?: boolean;
@@ -99,19 +92,8 @@ export const SidebarMenuItem = forwardRef<HTMLDivElement, SidebarMenuItemProps>(
   ) => {
     const [hovered, setHovered] = useState(false);
     const rootRef = useRef<HTMLDivElement>(null);
-    const actionsRef = useRef<HTMLDivElement>(null);
-    const actionsPlaceholderRef = useRef<HTMLDivElement>(null);
     const { openSidebarContent } = useSidebarContext();
     const { matches: isHoverSupported } = matchMedia('(hover: hover)');
-
-    useLayoutEffect(() => {
-      if (actionsRef.current && actionsPlaceholderRef.current) {
-        actionsPlaceholderRef.current.style.width = `${Math.max(
-          0,
-          actionsRef.current.offsetWidth - 8,
-        )}px`;
-      }
-    });
 
     useLayoutEffect(() => {
       const rootNode = rootRef.current;
@@ -183,28 +165,22 @@ export const SidebarMenuItem = forwardRef<HTMLDivElement, SidebarMenuItemProps>(
               </Columns>
             </Column>
 
+            {(!!action || !!secondaryActions) && (
+              <Column width="content">
+                <Inline>
+                  {(selected || hovered) && secondaryActions}
+                  {action}
+                </Inline>
+              </Column>
+            )}
+
             {!!badge && (
               <Column width="content">
                 <SidebarMenuItemBadge>{badge}</SidebarMenuItemBadge>
               </Column>
             )}
-
-            {(!!action || !!secondaryActions) && (
-              <Column width="content">
-                <div ref={actionsPlaceholderRef} />
-              </Column>
-            )}
           </Columns>
         </ButtonBase>
-
-        {(!!action || !!secondaryActions) && (
-          <SidebarMenuItemSecondaryAction ref={actionsRef}>
-            <Inline>
-              {hovered && secondaryActions}
-              {action}
-            </Inline>
-          </SidebarMenuItemSecondaryAction>
-        )}
       </SidebarMenuItemRoot>
     );
   },
