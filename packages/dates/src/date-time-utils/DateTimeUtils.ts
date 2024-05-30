@@ -142,7 +142,7 @@ export function formatDate(
     return fallback;
   }
 
-  return date.toLocaleString(DATE_DISPLAY_VARIANTS[variant]);
+  return date.setLocale('en-US').toLocaleString(DATE_DISPLAY_VARIANTS[variant]);
 }
 
 function formatUnit(unit: ToRelativeUnit): string {
