@@ -73,10 +73,9 @@ export function parseDate(
   input: NullableDateInput,
   { format }: DateConfig = defaultDateConfig,
 ): DateTime {
-  const { defaultZone } = Settings;
-  Settings.defaultLocale = 'en-US';
-
   if (input instanceof DateTime) {
+    const { defaultZone } = Settings;
+
     if (!defaultZone.equals(input.zone)) {
       return input.setZone(defaultZone);
     }
