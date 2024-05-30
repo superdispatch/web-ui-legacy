@@ -73,9 +73,10 @@ export function parseDate(
   input: NullableDateInput,
   { format }: DateConfig = defaultDateConfig,
 ): DateTime {
-  if (input instanceof DateTime) {
-    const { defaultZone } = Settings;
+  const { defaultZone } = Settings;
+  Settings.defaultLocale = 'en-US';
 
+  if (input instanceof DateTime) {
     if (!defaultZone.equals(input.zone)) {
       return input.setZone(defaultZone);
     }
@@ -142,7 +143,7 @@ export function formatDate(
     return fallback;
   }
 
-  return date.setLocale('en-US').toLocaleString(DATE_DISPLAY_VARIANTS[variant]);
+  return date.toLocaleString(DATE_DISPLAY_VARIANTS[variant]);
 }
 
 function formatUnit(unit: ToRelativeUnit): string {
