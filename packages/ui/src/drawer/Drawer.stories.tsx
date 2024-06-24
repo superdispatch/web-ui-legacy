@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 import {
   ArrowBack as ArrowBackIcon,
+  Close as CloseIcon,
   Delete as DeleteIcon,
 } from '@material-ui/icons';
 import { Meta } from '@storybook/react';
@@ -47,7 +48,18 @@ export const basic = () => (
             setState(false);
           }}
         >
-          <DrawerTitle title="Title" subtitle="Subtitle" />
+          <DrawerTitle
+            title="Title"
+            subtitle="Subtitle"
+            endAction={
+              <CloseIcon
+                color="action"
+                onClick={() => {
+                  setState(false);
+                }}
+              />
+            }
+          />
 
           <DrawerContent>
             <Stack>
