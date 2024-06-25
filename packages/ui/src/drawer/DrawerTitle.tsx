@@ -100,22 +100,34 @@ export const DrawerTitle = forwardRef<HTMLDivElement, DrawerTitleProps>(
               })}
             >
               <Toolbar className={styles.toolbar}>
-                <Grid container={true}>
-                  {!!startAction && (
-                    <Grid item={true} className={styles.startAction}>
-                      {startAction}
+                <Grid container={true} direction="column">
+                  <Grid item={true}>
+                    <Grid container={true} alignItems="center">
+                      {!!startAction && (
+                        <Grid item={true} className={styles.startAction}>
+                          {startAction}
+                        </Grid>
+                      )}
+
+                      <Grid item={true} xs={true} zeroMinWidth={true}>
+                        <Typography
+                          variant="h3"
+                          noWrap={true}
+                          {...titleTypographyProps}
+                        >
+                          {title}
+                        </Typography>
+                      </Grid>
+
+                      {!!endAction && (
+                        <Grid item={true} className={styles.endAction}>
+                          {endAction}
+                        </Grid>
+                      )}
                     </Grid>
-                  )}
+                  </Grid>
 
-                  <Grid item={true} xs={true} zeroMinWidth={true}>
-                    <Typography
-                      variant="h3"
-                      noWrap={true}
-                      {...titleTypographyProps}
-                    >
-                      {title}
-                    </Typography>
-
+                  <Grid item={true}>
                     {!!subtitle && (
                       <Typography
                         variant="body2"
@@ -126,12 +138,6 @@ export const DrawerTitle = forwardRef<HTMLDivElement, DrawerTitleProps>(
                       </Typography>
                     )}
                   </Grid>
-
-                  {!!endAction && (
-                    <Grid item={true} className={styles.endAction}>
-                      {endAction}
-                    </Grid>
-                  )}
                 </Grid>
               </Toolbar>
             </AppBar>
