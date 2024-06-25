@@ -12,7 +12,7 @@
     ]
   },
   "scripts": {
-    "postinstall": "husky install && js-tools lint:yarn-deduplicate --fix",
+    "postinstall": "patch-package && husky install && js-tools lint:yarn-deduplicate --fix",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider turbo run version",
     "build-size": "cross-env NODE_OPTIONS=--openssl-legacy-provider yarn build && size-limit",
     "check:types": "yarn tsc && yarn tsc --project cypress",
@@ -96,6 +96,9 @@
   "resolutions": {
     "react": "^17",
     "react-docgen-typescript": "2.2.2"
+  },
+  "dependencies": {
+    "patch-package": "^8.0.0"
   },
   "devDependencies": {
     "@codemod/cli": "2.3.2",
