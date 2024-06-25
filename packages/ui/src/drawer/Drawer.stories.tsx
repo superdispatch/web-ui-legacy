@@ -52,12 +52,13 @@ export const basic = () => (
             title="Title"
             subtitle="Subtitle"
             endAction={
-              <CloseIcon
-                color="action"
+              <IconButton
                 onClick={() => {
                   setState(false);
                 }}
-              />
+              >
+                <CloseIcon color="action" />
+              </IconButton>
             }
           />
 
