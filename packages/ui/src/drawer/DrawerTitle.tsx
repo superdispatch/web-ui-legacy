@@ -100,7 +100,7 @@ export const DrawerTitle = forwardRef<HTMLDivElement, DrawerTitleProps>(
               })}
             >
               <Toolbar className={styles.toolbar}>
-                <Grid container={true} alignItems="flex-start">
+                <Grid container={true}>
                   {!!startAction && (
                     <Grid item={true} className={styles.startAction}>
                       {startAction}
