@@ -1,0 +1,13 @@
+diff --git a/node_modules/@pika/pack/dist-node/index.js b/node_modules/@pika/pack/dist-node/index.js
+index 585902c..4a19167 100644
+--- a/node_modules/@pika/pack/dist-node/index.js
++++ b/node_modules/@pika/pack/dist-node/index.js
+@@ -2210,7 +2210,7 @@ async function generatePublishManifest(manifest, config, _dists) {
+     version,
+     license,
+     bin,
+-    files: ['dist-*/', 'bin/'],
++    files: ['dist-*/**', 'bin/'],
+     pika: true,
+     sideEffects: sideEffects || false,
+     keywords,
