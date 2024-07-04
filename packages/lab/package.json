@@ -1,6 +1,6 @@
 {
   "name": "@superdispatch/ui-lab",
-  "version": "0.27.0",
+  "version": "0.28.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/superdispatch/ui.git"
@@ -14,8 +14,8 @@
     "version": "pika build"
   },
   "dependencies": {
-    "@superdispatch/hooks": "^0.27.0",
-    "@superdispatch/ui": "^0.27.0",
+    "@superdispatch/hooks": "^0.28.0",
+    "@superdispatch/ui": "^0.28.0",
     "react-anchorme": "^2.2.1",
     "react-dropzone": "^11.3.4"
   },
