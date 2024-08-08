@@ -1,6 +1,7 @@
 # editors
 .idea
 .vscode
+*.code-workspace
 
 # tests
 coverage
