@@ -17,16 +17,17 @@ export const CalendarQuickSelectionItem = forwardRef<
 ));
 
 export interface CalendarQuickSelectionProps {
+  title?: ReactNode;
   children?: ReactNode;
 }
 
 export const CalendarQuickSelection = forwardRef<
   HTMLUListElement,
   CalendarQuickSelectionProps
->(({ children }, ref) => (
+>(({ title = 'Quick Selection', children }, ref) => (
   <List ref={ref}>
     <ListItem>
-      <Typography variant="h4">Quick Selection</Typography>
+      <Typography variant="h4">{title}</Typography>
     </ListItem>
 
     {children}
