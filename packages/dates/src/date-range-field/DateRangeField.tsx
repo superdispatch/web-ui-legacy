@@ -110,7 +110,7 @@ export interface DateRangeFieldProps
   >;
   CalendarProps?: Omit<
     CalendarProps,
-    'footer' | 'classes' | 'selectedDays' | 'quickSelection' | 'numberOfMonths'
+    'footer' | 'classes' | 'selectedDays' | 'quickSelection'
   >;
 }
 
@@ -135,6 +135,7 @@ export const DateRangeField = forwardRef<HTMLDivElement, DateRangeFieldProps>(
         modifiers,
         onDayClick,
         onDayMouseEnter,
+        numberOfMonths = 2,
         ...calendarProps
       } = {} as const,
 
@@ -226,7 +227,7 @@ export const DateRangeField = forwardRef<HTMLDivElement, DateRangeFieldProps>(
         }}
       >
         <Calendar
-          numberOfMonths={2}
+          numberOfMonths={numberOfMonths}
           {...calendarProps}
           classes={styles}
           initialMonth={startDateString}
