@@ -88,7 +88,10 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
           onChange={(event) => {
             onChange?.(event);
 
-            if (!event.defaultPrevented) {
+            // event.preventDefault is called on handleKeyDown for Textfield select
+            // check out SelectInput.js for more details
+            //https://github.com/mui/material-ui/blob/v4.x/packages/material-ui/src/Select/SelectInput.js
+            if (!event.defaultPrevented || event.type === 'keydown') {
               setValue(parse(event));
             }
           }}
