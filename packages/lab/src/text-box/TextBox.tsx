@@ -15,6 +15,7 @@ export type TextColorProp =
   | 'inherit'
   | 'primary'
   | 'secondary'
+  | 'light-gray'
   | 'white'
   | 'blue'
   | 'green'
@@ -34,7 +35,7 @@ const normalizeTextColor = createRuleNormalizer<TextColorProp>({
 
   primary: Color.Dark500,
   secondary: Color.Dark300,
-
+  'light-gray': Color.Dark100,
   white: Color.White,
   blue: Color.Blue500,
   green: Color.Green500,
