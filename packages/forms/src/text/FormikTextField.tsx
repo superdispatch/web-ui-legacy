@@ -5,9 +5,11 @@ import {
   ChangeEvent,
   forwardRef,
   ForwardRefExoticComponent,
+  KeyboardEvent,
   ReactNode,
 } from 'react';
 import { EMPTY_ERROR_MESSAGE } from './constants';
+import { getOptionsFromChildren, isSingleLetterOrNumber } from './utils';
 
 function parseInputValue(
   event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
@@ -37,6 +39,7 @@ export interface FormikTextFieldProps extends StandardTextFieldProps {
   parse?: (
     event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
   ) => unknown;
+  unstableOnKeyDownSelection?: boolean;
 }
 
 export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
@@ -56,6 +59,7 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
         parse = parseInputValue,
         format = formatInputValue,
         formatError = formatInputError,
+        unstableOnKeyDownSelection,
         ...props
       },
       ref,
@@ -66,6 +70,32 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
         useField<unknown>({ name, validate });
       const errorText: ReactNode =
         touched && error && error !== EMPTY_ERROR_MESSAGE && formatError(error);
+
+      function handleKeyDown(event: KeyboardEvent<HTMLDivElement>): void {
+        if (!props.select) return;
+
+        const options = getOptionsFromChildren(props.children);
+
+        if (options.length === 0) return;
+
+        if (isSingleLetterOrNumber(event.key)) {
+          const matchingOption = options.find((option) =>
+            option.label.toLowerCase().startsWith(event.key.toLowerCase()),
+          );
+
+          if (matchingOption) {
+            const customEvent = {
+              target: {
+                ...event.target,
+                value: matchingOption.value,
+              },
+            } as ChangeEvent<HTMLInputElement>;
+
+            setValue(parse(customEvent));
+            onChange?.(customEvent);
+          }
+        }
+      }
 
       return (
         <TextField
@@ -78,6 +108,15 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
           helperText={errorText || helperText}
           disabled={disabled ?? isSubmitting}
           value={format(field.value)}
+          onKeyDown={(event) => {
+            if (props.onKeyDown) {
+              props.onKeyDown(event);
+            }
+
+            if (!event.defaultPrevented && unstableOnKeyDownSelection) {
+              handleKeyDown(event);
+            }
+          }}
           onBlur={(event) => {
             onBlur?.(event);
 
