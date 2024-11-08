@@ -109,9 +109,7 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
           disabled={disabled ?? isSubmitting}
           value={format(field.value)}
           onKeyDown={(event) => {
-            if (props.onKeyDown) {
-              props.onKeyDown(event);
-            }
+            props.onKeyDown?.(event);
 
             if (!event.defaultPrevented && unstableOnKeyDownSelection) {
               handleKeyDown(event);
