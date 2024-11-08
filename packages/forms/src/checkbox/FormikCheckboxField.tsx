@@ -53,6 +53,11 @@ export const FormikCheckboxField: ForwardRefExoticComponent<FormikCheckboxFieldP
             onBlur?.(event);
             field.onBlur(event);
           }}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter') {
+              event.preventDefault();
+            }
+          }}
           onChange={(event, checked) => {
             onChange?.(event, checked);
             if (parse) {
