@@ -14,8 +14,7 @@ export function getOptionsFromChildren(
     return [];
   }
 
-  const optionsRaw = Children.toArray(children);
-  return optionsRaw
+  return Children.toArray(children)
     .filter(
       (
         child,
