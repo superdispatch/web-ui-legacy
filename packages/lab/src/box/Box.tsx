@@ -73,6 +73,8 @@ const normalizeBorderWidth = createRuleNormalizer<BorderWidthProp>({
 interface BoxRules {
   display?: ResponsiveProp<Property.Display>;
 
+  alignItems?: ResponsiveProp<Property.AlignItems>;
+  justifyContent?: ResponsiveProp<Property.JustifyContent>;
   color?: ResponsiveProp<ColorProp>;
   backgroundColor?: ResponsiveProp<ColorProp>;
 
@@ -182,6 +184,9 @@ const normalizers: Record<keyof BoxRules, undefined | RuleNormalizer> = {
   right: undefined,
   bottom: undefined,
   position: undefined,
+
+  alignItems: undefined,
+  justifyContent: undefined,
 };
 
 function injectRule(
