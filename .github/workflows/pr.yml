@@ -80,7 +80,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
       - uses: umidbekk/actions/npm/install@v2
         with:
           cache-key: yarn-v4
