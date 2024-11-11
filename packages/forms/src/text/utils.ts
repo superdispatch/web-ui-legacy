@@ -1,3 +1,4 @@
+import { get } from 'lodash';
 import {
   Children,
   Fragment,
@@ -25,7 +26,9 @@ export function getOptionsFromChildren(
     )
     .map((child) => ({
       value: child.props.value,
-      label: child.props.children?.toString() || '',
+      label: isValidElement(child.props.children)
+        ? String(get(child.props.children.props, 'children') || '')
+        : String(child.props.children || ''),
     }));
 }
 
