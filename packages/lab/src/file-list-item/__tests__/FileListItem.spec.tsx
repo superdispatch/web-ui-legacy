@@ -27,7 +27,7 @@ it('checks if FileListItem renders properly', () => {
       aria-label="file-list-item"
     >
       <div
-        class="Columns-SD__sc-1a73118-0 iVMHMK"
+        class="Columns-SD__sc-1a73118-0 bwYPTL"
       >
         <div
           class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
@@ -90,7 +90,7 @@ it('checks if FileListItem renders', () => {
           aria-label="file-list-item"
         >
           <div
-            class="Columns-SD__sc-1a73118-0 iVMHMK"
+            class="Columns-SD__sc-1a73118-0 bwYPTL"
           >
             <div
               class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
@@ -158,7 +158,7 @@ it('checks if FileListItem renders', () => {
           aria-label="file-list-item"
         >
           <div
-            class="Columns-SD__sc-1a73118-0 iVMHMK"
+            class="Columns-SD__sc-1a73118-0 bwYPTL"
           >
             <div
               class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
@@ -226,7 +226,7 @@ it('checks if FileListItem renders', () => {
           aria-label="file-list-item"
         >
           <div
-            class="Columns-SD__sc-1a73118-0 iVMHMK"
+            class="Columns-SD__sc-1a73118-0 bwYPTL"
           >
             <div
               class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
@@ -269,7 +269,7 @@ it('checks if FileListItem renders', () => {
           aria-label="file-list-item"
         >
           <div
-            class="Columns-SD__sc-1a73118-0 iVMHMK"
+            class="Columns-SD__sc-1a73118-0 bwYPTL"
           >
             <div
               class="Column__ColumnRoot-SD__sc-m9n6o6-0 jNPayl"
