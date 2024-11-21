@@ -4008,6 +4008,11 @@
     eslint-plugin-testing-library "^5.0.1"
     lodash "^4.17.19"
 
+"@superdispatch/hooks@^0.31.0":
+  version "0.30.0"
+  dependencies:
+    dequal "^2.0.2"
+
 "@superdispatch/js-tools@0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@superdispatch/js-tools/-/js-tools-0.7.0.tgz#72792c4e23d4dfffecf7a3f42f950122dd0d3907"

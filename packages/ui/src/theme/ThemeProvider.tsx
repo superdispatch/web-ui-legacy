@@ -11,7 +11,10 @@ import {
 import { useConstant } from '@superdispatch/hooks';
 import { Rule, StyleSheet } from 'jss';
 import { ReactElement, ReactNode } from 'react';
-import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import {
+  createGlobalStyle,
+  ThemeProvider as StyledThemeProvider,
+} from 'styled-components';
 import { overrideAppBar } from '../app-bar/AppBarOverrides';
 import { overrideAutocomplete } from '../autocomplete/AutocompleteOverrides';
 import { overrideAvatar } from '../avatar/AvatarOverrides';
@@ -45,11 +48,43 @@ import {
 import { Color } from './Color';
 import { SuperDispatchTheme } from './SuperDispatchTheme';
 
+const GlobalStyles = createGlobalStyle`
+    @media (prefers-color-scheme: dark) {
+  :root {
+   --sd-blue50:#0E2947
+    --sd-blue500:#55ADFF
+    --sd-blue300:#0070F5
+    --sd-green300:#03872F
+    --sd-green500:#5EE18A
+    --sd-green50:#092E16
+    --sd-yellow300:#E8671C
+    --sd-yellow500:#FCA542
+    --sd-yellow50:#33200A
+    --sd-red500:#FF6359
+    --sd-red50:#3D0A06
+    --sd-purple300:#6559CF
+    --sd-purple500:#BFA0FF
+    --sd-purple50:#262247
+    --sd-teal300:#007EAB
+    --sd-teal500:#31C7F5
+    --sd-teal50:#11333D
+    --sd-silver500:#47505B
+    --sd-silver200:#0D1017
+    --sd-silver400:#30373D
+    --sd-dark100:#6E7A8A
+    --sd-dark300:#AEB4BD
+    --sd-dark500:#FFFFFF
+    --sd-pinkRed:#FE4A49
+    }
+}     
+
+`;
+
+export default GlobalStyles;
 function createSuperDispatchTheme(): SuperDispatchTheme {
   const breakpoints = createBreakpoints({});
   const theme = createTheme({
     breakpoints,
-
     palette: {
       primary: {
         main: Color.Blue300,
@@ -161,7 +196,6 @@ export function ThemeProvider({
 }: ThemeProviderProps): ReactElement {
   const theme = useConstant(() => {
     const nextTheme = createSuperDispatchTheme();
-
     return !modifier ? nextTheme : modifier(nextTheme);
   });
 
@@ -174,6 +208,7 @@ export function ThemeProvider({
         <CssBaseline />
 
         <StyledThemeProvider theme={theme}>
+          <GlobalStyles />
           <ResponsiveContextProvider>
             <SnackbarStackProvider>{children}</SnackbarStackProvider>
           </ResponsiveContextProvider>
