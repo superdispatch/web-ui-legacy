@@ -1,6 +1,6 @@
 import { BaseTextFieldProps, InputBaseProps } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import { Color, SuperDispatchTheme } from '@superdispatch/ui';
+import { ColorV2, SuperDispatchTheme } from '@superdispatch/ui';
 import { forwardRef, ReactNode, useMemo, useRef, useState } from 'react';
 import {
   BaseDatePicker,
@@ -49,20 +49,20 @@ const useStyles = makeStyles<
 
         '&:not($rangeStart):not($rangeFinish)': {
           '&:after': {
-            backgroundColor: Color.Transparent,
+            backgroundColor: ColorV2.Transparent,
           },
 
           '&$disabled': {
             '&:before': {
-              backgroundColor: Color.Silver100,
+              backgroundColor: ColorV2.Silver100,
             },
           },
 
           '&:not($disabled)': {
-            color: Color.Blue500,
+            color: ColorV2.Blue500,
 
             '&:before': {
-              backgroundColor: Color.Blue50,
+              backgroundColor: ColorV2.Blue50,
             },
           },
         },

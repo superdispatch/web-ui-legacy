@@ -3,15 +3,15 @@ import {
   Alert as MaterialAlert,
   AlertProps as MaterialAlertProps,
 } from '@material-ui/lab';
-import { Color } from '@superdispatch/ui';
+import { ColorV2 } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled, { css, SimpleInterpolation } from 'styled-components';
 
 function colorMixin(
-  textColor: Color,
-  iconColor: Color,
-  backgroundColor: Color,
-  buttonHoverColor: Color,
+  textColor: ColorV2,
+  iconColor: ColorV2,
+  backgroundColor: ColorV2,
+  buttonHoverColor: ColorV2,
 ): readonly SimpleInterpolation[] {
   return css`
     color: ${textColor};
@@ -38,28 +38,38 @@ function colorMixin(
 const StyledAlert = styled(MaterialAlert)`
   &.MuiAlert-outlinedSuccess {
     ${colorMixin(
-      Color.Green500,
-      Color.Green300,
-      Color.Green50,
-      Color.Green400,
+      ColorV2.Green500,
+      ColorV2.Green300,
+      ColorV2.Green50,
+      ColorV2.Green400,
     )};
   }
 
   &.MuiAlert-outlinedInfo {
-    ${colorMixin(Color.Blue500, Color.Blue300, Color.Blue50, Color.Blue400)};
+    ${colorMixin(
+      ColorV2.Blue500,
+      ColorV2.Blue300,
+      ColorV2.Blue50,
+      ColorV2.Blue400,
+    )};
   }
 
   &.MuiAlert-outlinedWarning {
     ${colorMixin(
-      Color.Yellow500,
-      Color.Yellow300,
-      Color.Yellow50,
-      Color.Yellow400,
+      ColorV2.Yellow500,
+      ColorV2.Yellow300,
+      ColorV2.Yellow50,
+      ColorV2.Yellow400,
     )};
   }
 
   &.MuiAlert-outlinedError {
-    ${colorMixin(Color.Red500, Color.Red300, Color.Red50, Color.Red400)};
+    ${colorMixin(
+      ColorV2.Red500,
+      ColorV2.Red300,
+      ColorV2.Red50,
+      ColorV2.Red400,
+    )};
   }
 
   & .MuiAlert-icon {

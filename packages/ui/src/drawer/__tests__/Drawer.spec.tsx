@@ -113,7 +113,7 @@ it('checks component css', () => {
     }
 
     .SD-DrawerActions-appBar.SD-DrawerActions-appBar:not(.SD-DrawerActions-appBarSticky) {
-      border-top-color: Color.Transparent;
+      border-top-color: ColorV2.Transparent;
     }
 
     .SD-DrawerActions-toolbar.MuiToolbar-gutters {
@@ -193,7 +193,7 @@ it('checks component css', () => {
     }
 
     .SD-DrawerTitle-appBar.SD-DrawerTitle-appBar:not(.SD-DrawerTitle-appBarSticky) {
-      border-bottom-color: Color.Transparent;
+      border-bottom-color: ColorV2.Transparent;
     }
 
     .SD-DrawerTitle-toolbar.MuiToolbar-gutters {

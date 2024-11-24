@@ -1,21 +1,21 @@
 import { CSSProperties } from '@material-ui/styles';
-import { Color } from '../theme/Color';
+import { ColorV2 } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
-function outlineShadow(size = 0, color: Color = Color.Transparent): string {
+function outlineShadow(size = 0, color: ColorV2 = ColorV2.Transparent): string {
   return `0 0 0 ${size}px ${color}`;
 }
 
 function textVariant(
-  text: Color,
-  outline: Color,
-  background: Color,
-  progress: Color,
+  text: ColorV2,
+  outline: ColorV2,
+  background: ColorV2,
+  progress: ColorV2,
 ): CSSProperties {
   return {
     color: text,
     boxShadow: outlineShadow(),
-    backgroundColor: Color.Transparent,
+    backgroundColor: ColorV2.Transparent,
 
     '&:hover': {
       backgroundColor: background,
@@ -33,7 +33,7 @@ function textVariant(
     '&$disabled': {
       color: outline,
       boxShadow: outlineShadow(),
-      backgroundColor: Color.Transparent,
+      backgroundColor: ColorV2.Transparent,
     },
 
     '&$disabled[aria-busy="true"]': {
@@ -43,23 +43,23 @@ function textVariant(
 }
 
 function outlinedBorder(
-  borderColor: Color,
-  outlineColor: Color = Color.Transparent,
+  borderColor: ColorV2,
+  outlineColor: ColorV2 = ColorV2.Transparent,
 ): string {
   return `inset 0 0 0 1px ${borderColor}, 0 0 0 2px ${outlineColor}`;
 }
 
 function outlinedVariant(
-  staleText: Color,
-  staleBorder: Color,
-  disabledText: Color,
-  disabledBorder: Color,
-  activeText: Color,
-  activeBorder: Color,
-  activeOutline: Color,
-  activeBackground: Color,
-  progress: Color,
-  backgroundColor: Color,
+  staleText: ColorV2,
+  staleBorder: ColorV2,
+  disabledText: ColorV2,
+  disabledBorder: ColorV2,
+  activeText: ColorV2,
+  activeBorder: ColorV2,
+  activeOutline: ColorV2,
+  activeBackground: ColorV2,
+  progress: ColorV2,
+  backgroundColor: ColorV2,
 ): CSSProperties {
   return {
     backgroundColor,
@@ -97,12 +97,12 @@ function outlinedVariant(
 }
 
 function containedVariant(
-  text: Color,
-  backgroundColor: Color,
-  outline: Color,
-  active: Color,
-  disabledText: Color,
-  disabledBackground: Color,
+  text: ColorV2,
+  backgroundColor: ColorV2,
+  outline: ColorV2,
+  active: ColorV2,
+  disabledText: ColorV2,
+  disabledBackground: ColorV2,
 ): CSSProperties {
   return {
     color: text,
@@ -212,32 +212,32 @@ export function overrideButton(theme: SuperDispatchTheme): void {
       padding: undefined,
 
       '&[data-color="error"]': textVariant(
-        Color.Red300,
-        Color.Red100,
-        Color.Red50,
-        Color.Red200,
+        ColorV2.Red300,
+        ColorV2.Red100,
+        ColorV2.Red50,
+        ColorV2.Red200,
       ),
 
       '&[data-color="success"]': textVariant(
-        Color.Green300,
-        Color.Green100,
-        Color.Green50,
-        Color.Green200,
+        ColorV2.Green300,
+        ColorV2.Green100,
+        ColorV2.Green50,
+        ColorV2.Green200,
       ),
 
       '&[data-color="white"]': textVariant(
-        Color.White,
-        Color.White50,
-        Color.White10,
-        Color.White50,
+        ColorV2.White,
+        ColorV2.White50,
+        ColorV2.White10,
+        ColorV2.White50,
       ),
     },
 
     textPrimary: textVariant(
-      Color.Blue300,
-      Color.Blue100,
-      Color.Blue50,
-      Color.Blue200,
+      ColorV2.Blue300,
+      ColorV2.Blue100,
+      ColorV2.Blue50,
+      ColorV2.Blue200,
     ),
 
     textSizeSmall: { padding: undefined, fontSize: undefined },
@@ -249,56 +249,56 @@ export function overrideButton(theme: SuperDispatchTheme): void {
       '&$disabled': { border: undefined },
 
       '&[data-color="error"]': outlinedVariant(
-        Color.Red300,
-        Color.Red300,
-        Color.Red100,
-        Color.Red100,
-        Color.Red300,
-        Color.Red300,
-        Color.Red100,
-        Color.Red50,
-        Color.Red300,
-        Color.White,
+        ColorV2.Red300,
+        ColorV2.Red300,
+        ColorV2.Red100,
+        ColorV2.Red100,
+        ColorV2.Red300,
+        ColorV2.Red300,
+        ColorV2.Red100,
+        ColorV2.Red50,
+        ColorV2.Red300,
+        ColorV2.White,
       ),
 
       '&[data-color="success"]': outlinedVariant(
-        Color.Green300,
-        Color.Green300,
-        Color.Green100,
-        Color.Green100,
-        Color.Green300,
-        Color.Green300,
-        Color.Green100,
-        Color.Green50,
-        Color.Green300,
-        Color.White,
+        ColorV2.Green300,
+        ColorV2.Green300,
+        ColorV2.Green100,
+        ColorV2.Green100,
+        ColorV2.Green300,
+        ColorV2.Green300,
+        ColorV2.Green100,
+        ColorV2.Green50,
+        ColorV2.Green300,
+        ColorV2.White,
       ),
 
       '&[data-color="white"]': outlinedVariant(
-        Color.White,
-        Color.White50,
-        Color.White50,
-        Color.White40,
-        Color.White,
-        Color.White50,
-        Color.White40,
-        Color.White10,
-        Color.White50,
-        Color.Transparent,
+        ColorV2.White,
+        ColorV2.White50,
+        ColorV2.White50,
+        ColorV2.White40,
+        ColorV2.White,
+        ColorV2.White50,
+        ColorV2.White40,
+        ColorV2.White10,
+        ColorV2.White50,
+        ColorV2.Transparent,
       ),
     },
 
     outlinedPrimary: outlinedVariant(
-      Color.Dark500,
-      Color.Silver500,
-      Color.Silver500,
-      Color.Silver400,
-      Color.Blue300,
-      Color.Blue300,
-      Color.Blue100,
-      Color.Blue50,
-      Color.Dark200,
-      Color.White,
+      ColorV2.Dark500,
+      ColorV2.Silver500,
+      ColorV2.Silver500,
+      ColorV2.Silver400,
+      ColorV2.Blue300,
+      ColorV2.Blue300,
+      ColorV2.Blue100,
+      ColorV2.Blue50,
+      ColorV2.Dark200,
+      ColorV2.White,
     ),
 
     outlinedSizeSmall: { padding: undefined, fontSize: undefined },
@@ -333,40 +333,40 @@ export function overrideButton(theme: SuperDispatchTheme): void {
       },
 
       '&[data-color="error"]': containedVariant(
-        Color.White,
-        Color.Red300,
-        Color.Red100,
-        Color.Red500,
-        Color.White,
-        Color.Red100,
+        ColorV2.White,
+        ColorV2.Red300,
+        ColorV2.Red100,
+        ColorV2.Red500,
+        ColorV2.White,
+        ColorV2.Red100,
       ),
 
       '&[data-color="success"]': containedVariant(
-        Color.White,
-        Color.Green300,
-        Color.Green100,
-        Color.Green500,
-        Color.White,
-        Color.Green100,
+        ColorV2.White,
+        ColorV2.Green300,
+        ColorV2.Green100,
+        ColorV2.Green500,
+        ColorV2.White,
+        ColorV2.Green100,
       ),
 
       '&[data-color="white"]': containedVariant(
-        Color.White,
-        Color.White20,
-        Color.White40,
-        Color.White40,
-        Color.White50,
-        Color.White08,
+        ColorV2.White,
+        ColorV2.White20,
+        ColorV2.White40,
+        ColorV2.White40,
+        ColorV2.White50,
+        ColorV2.White08,
       ),
     },
 
     containedPrimary: containedVariant(
-      Color.White,
-      Color.Blue300,
-      Color.Blue100,
-      Color.Blue500,
-      Color.White,
-      Color.Blue100,
+      ColorV2.White,
+      ColorV2.Blue300,
+      ColorV2.Blue100,
+      ColorV2.Blue500,
+      ColorV2.White,
+      ColorV2.Blue100,
     ),
 
     containedSizeSmall: { padding: undefined, fontSize: undefined },

@@ -1,5 +1,5 @@
 import { CircularProgress } from '@material-ui/core';
-import { Color } from '@superdispatch/ui';
+import { ColorV2 } from '@superdispatch/ui';
 import {
   AriaAttributes,
   FocusEventHandler,
@@ -38,22 +38,22 @@ interface ButtonVariables {
   paddingY: number;
   paddingYMobile: number;
 
-  textColor: Color;
-  textColorHovered: Color;
-  textColorDisabled: Color;
+  textColor: ColorV2;
+  textColorHovered: ColorV2;
+  textColorDisabled: ColorV2;
 
-  iconColor: Color;
+  iconColor: ColorV2;
 
-  outlineColor: Color;
+  outlineColor: ColorV2;
 
-  borderColor: Color;
-  borderColorHovered: Color;
-  borderColorDisabled: Color;
+  borderColor: ColorV2;
+  borderColorHovered: ColorV2;
+  borderColorDisabled: ColorV2;
 
-  backgroundColor: Color;
-  backgroundColorActive: Color;
-  backgroundColorHovered: Color;
-  backgroundColorDisabled: Color;
+  backgroundColor: ColorV2;
+  backgroundColorActive: ColorV2;
+  backgroundColorHovered: ColorV2;
+  backgroundColorDisabled: ColorV2;
 }
 
 function createButtonVariables(
@@ -69,19 +69,19 @@ function createButtonVariables(
     paddingXMobile = size === 'large' ? 64 : 24,
     paddingYMobile = size === 'large' ? 14 : size === 'small' ? 4 : 10,
 
-    textColor = Color.Transparent,
+    textColor = ColorV2.Transparent,
     textColorHovered = textColor,
     textColorDisabled = textColor,
 
     iconColor = textColor,
 
-    outlineColor = Color.Transparent,
+    outlineColor = ColorV2.Transparent,
 
-    borderColor = Color.Transparent,
+    borderColor = ColorV2.Transparent,
     borderColorHovered = borderColor,
     borderColorDisabled = borderColor,
 
-    backgroundColor = Color.Transparent,
+    backgroundColor = ColorV2.Transparent,
     backgroundColorHovered = backgroundColor,
     backgroundColorActive = backgroundColorHovered,
     backgroundColorDisabled = backgroundColor,
@@ -119,16 +119,16 @@ function createButtonVariables(
 
 function getDefaultVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: Color.White,
-    outlineColor: Color.Blue30,
-    backgroundColor: Color.Blue300,
+    textColor: ColorV2.White,
+    outlineColor: ColorV2.Blue30,
+    backgroundColor: ColorV2.Blue300,
 
-    textColorHovered: Color.White,
-    backgroundColorHovered: Color.Blue500,
+    textColorHovered: ColorV2.White,
+    backgroundColorHovered: ColorV2.Blue500,
 
-    backgroundColorActive: Color.Blue400,
+    backgroundColorActive: ColorV2.Blue400,
 
-    backgroundColorDisabled: Color.Blue30,
+    backgroundColorDisabled: ColorV2.Blue30,
   });
 }
 
@@ -138,82 +138,82 @@ function getPrimaryVariables(size: ButtonSizeProp): ButtonVariables {
 
 function getNeutralVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: Color.Dark500,
-    borderColor: Color.Silver500,
-    outlineColor: Color.Blue30,
-    backgroundColor: Color.White,
+    textColor: ColorV2.Dark500,
+    borderColor: ColorV2.Silver500,
+    outlineColor: ColorV2.Blue30,
+    backgroundColor: ColorV2.White,
 
-    textColorHovered: Color.Blue500,
-    borderColorHovered: Color.Blue500,
-    backgroundColorHovered: Color.Blue50,
+    textColorHovered: ColorV2.Blue500,
+    borderColorHovered: ColorV2.Blue500,
+    backgroundColorHovered: ColorV2.Blue50,
 
-    backgroundColorActive: Color.Blue75,
+    backgroundColorActive: ColorV2.Blue75,
 
-    textColorDisabled: Color.Silver500,
-    iconColor: Color.Dark100,
+    textColorDisabled: ColorV2.Silver500,
+    iconColor: ColorV2.Dark100,
   });
 }
 
 function getCriticalVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: Color.Red500,
-    borderColor: Color.Red500,
-    outlineColor: Color.Red30,
-    backgroundColor: Color.Red50,
+    textColor: ColorV2.Red500,
+    borderColor: ColorV2.Red500,
+    outlineColor: ColorV2.Red30,
+    backgroundColor: ColorV2.Red50,
 
-    backgroundColorHovered: Color.Red75,
+    backgroundColorHovered: ColorV2.Red75,
 
-    backgroundColorActive: Color.Red10,
+    backgroundColorActive: ColorV2.Red10,
 
-    textColorDisabled: Color.Red30,
-    borderColorDisabled: Color.Red30,
-    backgroundColorDisabled: Color.Red50,
+    textColorDisabled: ColorV2.Red30,
+    borderColorDisabled: ColorV2.Red30,
+    backgroundColorDisabled: ColorV2.Red50,
   });
 }
 
 function getTextVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: Color.Blue500,
+    textColor: ColorV2.Blue500,
 
-    outlineColor: Color.Blue30,
+    outlineColor: ColorV2.Blue30,
 
-    textColorHovered: Color.Blue500,
-    backgroundColorHovered: Color.Blue50,
+    textColorHovered: ColorV2.Blue500,
+    backgroundColorHovered: ColorV2.Blue50,
 
-    backgroundColorActive: Color.Blue75,
+    backgroundColorActive: ColorV2.Blue75,
 
-    textColorDisabled: Color.Blue30,
+    textColorDisabled: ColorV2.Blue30,
   });
 }
 
 function getInvertedVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: Color.White,
-    outlineColor: Color.White40,
-    backgroundColor: Color.White20,
+    textColor: ColorV2.White,
+    outlineColor: ColorV2.White40,
+    backgroundColor: ColorV2.White20,
 
-    textColorHovered: Color.White,
-    backgroundColorHovered: Color.White40,
+    textColorHovered: ColorV2.White,
+    backgroundColorHovered: ColorV2.White40,
 
-    backgroundColorActive: Color.White20,
+    backgroundColorActive: ColorV2.White20,
 
-    textColorDisabled: Color.White50,
-    backgroundColorDisabled: Color.White08,
+    textColorDisabled: ColorV2.White50,
+    backgroundColorDisabled: ColorV2.White08,
   });
 }
 
 function getSuccessVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: Color.White,
-    outlineColor: Color.Green30,
-    backgroundColor: Color.Green300,
+    textColor: ColorV2.White,
+    outlineColor: ColorV2.Green30,
+    backgroundColor: ColorV2.Green300,
 
-    backgroundColorHovered: Color.Green500,
+    backgroundColorHovered: ColorV2.Green500,
 
-    backgroundColorActive: Color.Green500,
+    backgroundColorActive: ColorV2.Green500,
 
-    textColorDisabled: Color.White,
-    backgroundColorDisabled: Color.Green30,
+    textColorDisabled: ColorV2.White,
+    backgroundColorDisabled: ColorV2.Green30,
   });
 }
 
@@ -273,7 +273,7 @@ const ButtonRoot = styled.button<ButtonStyleProps>(
       --button-visibility: visible;
       --button-text-color: ${variables.textColor};
       --button-border-color: ${variables.borderColor};
-      --button-outline-color: ${Color.Transparent};
+      --button-outline-color: ${ColorV2.Transparent};
       --button-background-color: ${variables.backgroundColor};
       --button-icon-color: ${variables.iconColor};
 

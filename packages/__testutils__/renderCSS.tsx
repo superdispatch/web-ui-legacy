@@ -1,12 +1,16 @@
-import { Color, ThemeProvider } from '@superdispatch/ui';
+import { Color, ColorV2, ThemeProvider } from '@superdispatch/ui';
 import { render } from '@testing-library/react';
 import { parse as parseCSS, stringify as stringifyCSS, Stylesheet } from 'css';
 import { format } from 'prettier';
 import { ReactElement } from 'react';
 
-const colors = new Map<string, string>(
-  Object.entries(Color).map(([k, v]) => [v, `Color.${k}`]),
-);
+const colors = new Map<string, string>();
+Object.entries(Color).forEach(([k, v]) => {
+  colors.set(v, `Color.${k}`);
+});
+Object.entries(ColorV2).forEach(([k, v]) => {
+  colors.set(v, `ColorV2.${k}`);
+});
 
 const colorRegExp = new RegExp(
   Array.from(colors.keys(), (x) =>

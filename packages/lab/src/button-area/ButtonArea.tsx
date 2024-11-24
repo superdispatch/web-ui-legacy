@@ -1,5 +1,5 @@
 import { ButtonBase, ButtonBaseProps, Typography } from '@material-ui/core';
-import { Color, Stack } from '@superdispatch/ui';
+import { ColorV2, Stack } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
 
@@ -9,10 +9,10 @@ const ButtonRoot = styled(ButtonBase)`
   border-width: 1px;
   border-radius: 4px;
   border-style: solid;
-  border-color: ${Color.Silver500};
+  border-color: ${ColorV2.Silver500};
 
-  color: ${Color.Dark100};
-  background-color: ${Color.White};
+  color: ${ColorV2.Dark100};
+  background-color: ${ColorV2.White};
 
   & svg {
     color: inherit;
@@ -24,35 +24,35 @@ const ButtonRoot = styled(ButtonBase)`
   }
 
   &[data-disabled='true'] {
-    color: ${Color.Silver500};
-    border-color: ${Color.Silver400};
+    color: ${ColorV2.Silver500};
+    border-color: ${ColorV2.Silver400};
   }
 
   &[data-variant='success'] {
     &:hover {
-      color: ${Color.Green300};
-      box-shadow: 0 0 0 2px ${Color.Green100};
-      border-color: ${Color.Green300};
+      color: ${ColorV2.Green300};
+      box-shadow: 0 0 0 2px ${ColorV2.Green100};
+      border-color: ${ColorV2.Green300};
     }
 
     &[data-active='true'] {
-      color: ${Color.Green300};
-      border-color: ${Color.Green300};
-      background-color: ${Color.Green50};
+      color: ${ColorV2.Green300};
+      border-color: ${ColorV2.Green300};
+      background-color: ${ColorV2.Green50};
     }
   }
 
   &[data-variant='danger'] {
     &:hover {
-      color: ${Color.Red300};
-      box-shadow: 0 0 0 2px ${Color.Red100};
-      border-color: ${Color.Red300};
+      color: ${ColorV2.Red300};
+      box-shadow: 0 0 0 2px ${ColorV2.Red100};
+      border-color: ${ColorV2.Red300};
     }
 
     &[data-active='true'] {
-      color: ${Color.Red300};
-      border-color: ${Color.Red300};
-      background-color: ${Color.Red50};
+      color: ${ColorV2.Red300};
+      border-color: ${ColorV2.Red300};
+      background-color: ${ColorV2.Red50};
     }
   }
 `;

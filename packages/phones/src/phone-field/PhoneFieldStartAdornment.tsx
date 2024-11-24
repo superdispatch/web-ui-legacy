@@ -1,7 +1,7 @@
 import { ButtonBase, InputAdornment, Typography } from '@material-ui/core';
 import { ArrowDropDown, ArrowDropUp } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/styles';
-import { Color, SuperDispatchTheme } from '@superdispatch/ui';
+import { ColorV2, SuperDispatchTheme } from '@superdispatch/ui';
 import { forwardRef, useMemo } from 'react';
 import {
   CountryISO,
@@ -17,11 +17,11 @@ const useStyles = makeStyles(
       marginRight: 0,
     },
     button: {
-      color: Color.Blue300,
+      color: ColorV2.Blue300,
       padding: theme.spacing(0.5, 0.5, 0.5, 1),
       borderRadius: theme.spacing(0.5, 0, 0, 0.5),
       '&:hover, &:focus': {
-        backgroundColor: Color.Blue50,
+        backgroundColor: ColorV2.Blue50,
       },
     },
   }),
@@ -56,9 +56,9 @@ export const PhoneFieldStartAdornment = forwardRef<
         <PhoneFieldFlag country={country} />
 
         {isExpanded ? (
-          <ArrowDropUp htmlColor={Color.Dark200} />
+          <ArrowDropUp htmlColor={ColorV2.Dark200} />
         ) : (
-          <ArrowDropDown htmlColor={Color.Dark200} />
+          <ArrowDropDown htmlColor={ColorV2.Dark200} />
         )}
 
         <Typography color="textPrimary">{countryCode}</Typography>

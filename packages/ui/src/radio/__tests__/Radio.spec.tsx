@@ -17,7 +17,7 @@ it('checks default props', () => {
         <circle
           cx="12"
           cy="12"
-          fill="#fff"
+          fill="var(--sd-white)"
           r="4"
         />
       </WithStyles(ForwardRef(SvgIcon))>,
@@ -26,7 +26,7 @@ it('checks default props', () => {
         <circle
           cx="12"
           cy="12"
-          fill="#fff"
+          fill="var(--sd-white)"
           r="9"
           stroke="currentColor"
         />
@@ -38,7 +38,7 @@ it('checks default props', () => {
 it('checks component css', () => {
   expect(renderCSS(<Radio />, ['MuiRadio'])).toMatchInlineSnapshot(`
     .MuiRadio-root {
-      color: Color.Dark100;
+      color: ColorV2.Dark100;
       width: 24px;
       height: 24px;
       padding: 0;
@@ -57,11 +57,11 @@ it('checks component css', () => {
     }
 
     .MuiRadio-colorPrimary.Mui-checked.Mui-disabled {
-      color: Color.Silver500;
+      color: ColorV2.Silver500;
     }
 
     .MuiRadio-colorPrimary:hover:not(.Mui-checked) {
-      color: Color.Dark100;
+      color: ColorV2.Dark100;
     }
 
     .MuiRadio-colorPrimary.Mui-checked:hover {

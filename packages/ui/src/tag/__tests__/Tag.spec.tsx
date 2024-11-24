@@ -13,70 +13,70 @@ it('checks component css', () => {
     }
 
     .SD-Tag-variantSubtle.SD-Tag-colorGrey {
-      color: Color.Dark300;
-      background-color: Color.Silver200;
+      color: ColorV2.Dark300;
+      background-color: ColorV2.Silver200;
     }
 
     .SD-Tag-variantSubtle.SD-Tag-colorBlue {
-      color: Color.Blue500;
-      background-color: Color.Blue50;
+      color: ColorV2.Blue500;
+      background-color: ColorV2.Blue50;
     }
 
     .SD-Tag-variantSubtle.SD-Tag-colorGreen {
-      color: Color.Green500;
-      background-color: Color.Green50;
+      color: ColorV2.Green500;
+      background-color: ColorV2.Green50;
     }
 
     .SD-Tag-variantSubtle.SD-Tag-colorPurple {
-      color: Color.Purple500;
-      background-color: Color.Purple50;
+      color: ColorV2.Purple500;
+      background-color: ColorV2.Purple50;
     }
 
     .SD-Tag-variantSubtle.SD-Tag-colorRed {
-      color: Color.Red500;
-      background-color: Color.Red50;
+      color: ColorV2.Red500;
+      background-color: ColorV2.Red50;
     }
 
     .SD-Tag-variantSubtle.SD-Tag-colorTeal {
-      color: Color.Teal500;
-      background-color: Color.Teal50;
+      color: ColorV2.Teal500;
+      background-color: ColorV2.Teal50;
     }
 
     .SD-Tag-variantSubtle.SD-Tag-colorYellow {
-      color: Color.Yellow500;
-      background-color: Color.Yellow50;
+      color: ColorV2.Yellow500;
+      background-color: ColorV2.Yellow50;
     }
 
     .SD-Tag-variantBold {
-      color: Color.White;
+      color: ColorV2.White;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorGrey {
-      background-color: Color.Dark300;
+      background-color: ColorV2.Dark300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorBlue {
-      background-color: Color.Blue300;
+      background-color: ColorV2.Blue300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorGreen {
-      background-color: Color.Green300;
+      background-color: ColorV2.Green300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorPurple {
-      background-color: Color.Purple300;
+      background-color: ColorV2.Purple300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorRed {
-      background-color: Color.Red300;
+      background-color: ColorV2.Red300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorTeal {
-      background-color: Color.Teal300;
+      background-color: ColorV2.Teal300;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorYellow {
-      background-color: Color.Yellow300;
+      background-color: ColorV2.Yellow300;
     }
   `);
 });

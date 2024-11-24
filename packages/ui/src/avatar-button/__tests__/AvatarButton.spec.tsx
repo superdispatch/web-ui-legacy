@@ -12,14 +12,14 @@ it('checks component css', () => {
       > .SD-AvatarButton-overlay,
     .SD-AvatarButton-button:not([disabled])[aria-busy='false']:focus.SD-AvatarButton-withIcon
       > .SD-AvatarButton-overlay {
-      background-color: Color.Dark50;
+      background-color: ColorV2.Dark50;
     }
 
     .SD-AvatarButton-button:not([disabled])[aria-busy='false']:hover:not(.SD-AvatarButton-withIcon)
       > .SD-AvatarButton-overlay,
     .SD-AvatarButton-button:not([disabled])[aria-busy='false']:focus:not(.SD-AvatarButton-withIcon)
       > .SD-AvatarButton-overlay {
-      background-color: Color.Black20;
+      background-color: ColorV2.Black20;
     }
 
     .SD-AvatarButton-button:not([disabled])[aria-busy='false']:hover.SD-AvatarButton-withIcon
@@ -33,7 +33,7 @@ it('checks component css', () => {
 
     .SD-AvatarButton-button[disabled] > .SD-AvatarButton-overlay,
     .SD-AvatarButton-button[aria-busy='true'] > .SD-AvatarButton-overlay {
-      background-color: Color.White50;
+      background-color: ColorV2.White50;
     }
 
     .SD-AvatarButton-overlay {
@@ -47,11 +47,11 @@ it('checks component css', () => {
       align-items: center;
       border-radius: 50%;
       justify-content: center;
-      background-color: Color.Transparent;
+      background-color: ColorV2.Transparent;
     }
 
     .SD-AvatarButton-overlay > svg {
-      color: Color.White;
+      color: ColorV2.White;
       opacity: 0;
       font-size: 24px;
       transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -66,7 +66,7 @@ it('checks component css', () => {
     .SD-AvatarButton-progress {
       top: 0;
       left: 0;
-      color: Color.Blue500;
+      color: ColorV2.Blue500;
       position: absolute;
       font-size: 40px;
     }

@@ -7,7 +7,7 @@ import {
   ForwardRefExoticComponent,
   RefAttributes,
 } from 'react';
-import { Color } from '../theme/Color';
+import { ColorV2 } from '../theme/Color';
 
 export type TagClassKey =
   | 'root'
@@ -36,31 +36,43 @@ const useStyles = makeStyles<
     },
 
     variantSubtle: {
-      '&$colorGrey': { color: Color.Dark300, backgroundColor: Color.Silver200 },
-      '&$colorBlue': { color: Color.Blue500, backgroundColor: Color.Blue50 },
-      '&$colorGreen': { color: Color.Green500, backgroundColor: Color.Green50 },
-      '&$colorPurple': {
-        color: Color.Purple500,
-        backgroundColor: Color.Purple50,
+      '&$colorGrey': {
+        color: ColorV2.Dark300,
+        backgroundColor: ColorV2.Silver200,
       },
-      '&$colorRed': { color: Color.Red500, backgroundColor: Color.Red50 },
-      '&$colorTeal': { color: Color.Teal500, backgroundColor: Color.Teal50 },
+      '&$colorBlue': {
+        color: ColorV2.Blue500,
+        backgroundColor: ColorV2.Blue50,
+      },
+      '&$colorGreen': {
+        color: ColorV2.Green500,
+        backgroundColor: ColorV2.Green50,
+      },
+      '&$colorPurple': {
+        color: ColorV2.Purple500,
+        backgroundColor: ColorV2.Purple50,
+      },
+      '&$colorRed': { color: ColorV2.Red500, backgroundColor: ColorV2.Red50 },
+      '&$colorTeal': {
+        color: ColorV2.Teal500,
+        backgroundColor: ColorV2.Teal50,
+      },
       '&$colorYellow': {
-        color: Color.Yellow500,
-        backgroundColor: Color.Yellow50,
+        color: ColorV2.Yellow500,
+        backgroundColor: ColorV2.Yellow50,
       },
     },
 
     variantBold: {
-      color: Color.White,
+      color: ColorV2.White,
 
-      '&$colorGrey': { backgroundColor: Color.Dark300 },
-      '&$colorBlue': { backgroundColor: Color.Blue300 },
-      '&$colorGreen': { backgroundColor: Color.Green300 },
-      '&$colorPurple': { backgroundColor: Color.Purple300 },
-      '&$colorRed': { backgroundColor: Color.Red300 },
-      '&$colorTeal': { backgroundColor: Color.Teal300 },
-      '&$colorYellow': { backgroundColor: Color.Yellow300 },
+      '&$colorGrey': { backgroundColor: ColorV2.Dark300 },
+      '&$colorBlue': { backgroundColor: ColorV2.Blue300 },
+      '&$colorGreen': { backgroundColor: ColorV2.Green300 },
+      '&$colorPurple': { backgroundColor: ColorV2.Purple300 },
+      '&$colorRed': { backgroundColor: ColorV2.Red300 },
+      '&$colorTeal': { backgroundColor: ColorV2.Teal300 },
+      '&$colorYellow': { backgroundColor: ColorV2.Yellow300 },
     },
 
     colorGrey: {},

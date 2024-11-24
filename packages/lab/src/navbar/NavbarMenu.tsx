@@ -1,18 +1,18 @@
 import { Menu, MenuItem, Typography } from '@material-ui/core';
-import { Color, Inline } from '@superdispatch/ui';
+import { ColorV2, Inline } from '@superdispatch/ui';
 import { Key, MouseEvent, ReactElement, ReactNode, useState } from 'react';
 import styled from 'styled-components';
 import { useNavbarContext } from './NavbarContext';
 
 const Divider = styled.div`
-  border-bottom: 1px solid ${Color.Silver400};
+  border-bottom: 1px solid ${ColorV2.Silver400};
   margin: 8px -16px;
 `;
 
 const StyledMenuItem = styled(MenuItem)`
   & svg {
     font-size: 24px;
-    color: ${Color.Dark100};
+    color: ${ColorV2.Dark100};
   }
 `;
 
@@ -20,14 +20,14 @@ const Wrapper = styled.div<{ active?: boolean }>`
   width: 100%;
   padding: 8px 16px;
   cursor: pointer;
-  background: ${Color.Dark400};
+  background: ${ColorV2.Dark400};
 
   border-left: 4px solid
-    ${({ active }) => (active ? Color.Blue300 : 'transparent')};
+    ${({ active }) => (active ? ColorV2.Blue300 : 'transparent')};
 
   &:hover {
-    border-left-color: ${Color.Blue300};
-    background: ${Color.Dark400};
+    border-left-color: ${ColorV2.Blue300};
+    background: ${ColorV2.Dark400};
   }
 `;
 
@@ -85,7 +85,7 @@ export function NavbarMenu({ items, children }: NavbarMenuProps): ReactElement {
                 <Inline space="small" verticalAlign="center">
                   {item.icon}
 
-                  <Typography style={{ color: Color.Dark500 }}>
+                  <Typography style={{ color: ColorV2.Dark500 }}>
                     {item.label}
                   </Typography>
                 </Inline>

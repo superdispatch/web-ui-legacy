@@ -1,5 +1,5 @@
 import { SvgIcon } from '@material-ui/core';
-import { Color } from '../theme/Color';
+import { ColorV2 } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideRadio(theme: SuperDispatchTheme): void {
@@ -11,7 +11,7 @@ export function overrideRadio(theme: SuperDispatchTheme): void {
           cx="12"
           cy="12"
           r="9"
-          fill={Color.White}
+          fill={ColorV2.White}
           stroke="currentColor"
         />
       </SvgIcon>
@@ -26,14 +26,14 @@ export function overrideRadio(theme: SuperDispatchTheme): void {
           stroke="currentColor"
         />
 
-        <circle cx="12" cy="12" r="4" fill={Color.White} />
+        <circle cx="12" cy="12" r="4" fill={ColorV2.White} />
       </SvgIcon>
     ),
   };
 
   theme.overrides.MuiRadio = {
     root: {
-      color: Color.Dark100,
+      color: ColorV2.Dark100,
       width: theme.spacing(3),
       height: theme.spacing(3),
       marginRight: theme.spacing(1),
@@ -45,11 +45,11 @@ export function overrideRadio(theme: SuperDispatchTheme): void {
 
     colorPrimary: {
       '&$checked$disabled': {
-        color: Color.Silver500,
+        color: ColorV2.Silver500,
       },
 
       '&:hover:not($checked)': {
-        color: Color.Dark100,
+        color: ColorV2.Dark100,
       },
     },
   };

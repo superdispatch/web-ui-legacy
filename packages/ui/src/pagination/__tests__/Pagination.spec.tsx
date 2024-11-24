@@ -22,7 +22,7 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-root {
-      color: Color.Dark500;
+      color: ColorV2.Dark500;
       height: 32px;
       margin: 0 3px;
       padding: 0 6px;
@@ -49,32 +49,32 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-page:hover {
-      background-color: Color.Silver200;
+      background-color: ColorV2.Silver200;
     }
 
     .MuiPaginationItem-page.Mui-focusVisible {
-      border: 1px solid Color.Blue30;
+      border: 1px solid ColorV2.Blue30;
       border-radius: 4px;
-      background-color: Color.White;
+      background-color: ColorV2.White;
     }
 
     .MuiPaginationItem-page.Mui-selected {
-      background-color: Color.Silver400;
+      background-color: ColorV2.Silver400;
     }
 
     .MuiPaginationItem-page.Mui-disabled {
-      color: Color.Dark100;
+      color: ColorV2.Dark100;
     }
 
     .MuiPaginationItem-page.Mui-selected:hover,
     .MuiPaginationItem-page.Mui-selected.Mui-focusVisible {
-      background-color: Color.Silver500;
+      background-color: ColorV2.Silver500;
     }
 
     .MuiPaginationItem-page.Mui-selected.Mui-disabled {
-      color: Color.Dark100;
+      color: ColorV2.Dark100;
       opacity: 1;
-      background-color: Color.Silver400;
+      background-color: ColorV2.Silver400;
     }
 
     @media (hover: none) {

@@ -1,7 +1,7 @@
 import {
-  Color,
   ColorProp,
-  isColorProp,
+  ColorV2,
+  isColorPropV2,
   NegativeSpaceProp,
   parseResponsiveProp,
   parseSpaceProp,
@@ -18,7 +18,7 @@ import { createRuleNormalizer, RuleNormalizer } from '../utils/RuleNormalizer';
 //
 
 function normalizeColor(input: unknown): string | undefined {
-  return isColorProp(input) ? Color[input] : undefined;
+  return isColorPropV2(input) ? ColorV2[input] : undefined;
 }
 
 //

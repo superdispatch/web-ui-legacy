@@ -1,4 +1,4 @@
-import { Color, Column, Columns, useUID } from '@superdispatch/ui';
+import { ColorV2, Column, Columns, useUID } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
 import { TextBox } from '../text-box/TextBox';
@@ -10,8 +10,8 @@ const SidebarRoot = styled.aside`
   overflow-x: hidden;
 
   height: 100vh;
-  background-color: ${Color.White};
-  border-right: 1px solid ${Color.Silver400};
+  background-color: ${ColorV2.White};
+  border-right: 1px solid ${ColorV2.Silver400};
 `;
 
 const SidebarHeader = styled.div`
@@ -21,7 +21,7 @@ const SidebarHeader = styled.div`
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 8px;
-  background-color: ${Color.White};
+  background-color: ${ColorV2.White};
 `;
 
 const SidebarTitle = styled.div`

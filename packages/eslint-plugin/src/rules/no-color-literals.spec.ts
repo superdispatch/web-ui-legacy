@@ -171,7 +171,7 @@ ruleTester.run('prefer-design-system-colors', rule, {
     },
 
     {
-      code: 'const Icon = styled.svg`color: ${Color.White}; background-color: #6a707c`',
+      code: 'const Icon = styled.svg`color: ${ColorV2.White}; background-color: #6a707c`',
       errors: [
         {
           line: 1,

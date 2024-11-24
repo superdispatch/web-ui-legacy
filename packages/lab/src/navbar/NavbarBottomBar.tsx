@@ -1,6 +1,6 @@
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import { Menu } from '@material-ui/icons';
-import { Color } from '@superdispatch/ui';
+import { ColorV2 } from '@superdispatch/ui';
 import {
   ComponentType,
   HTMLAttributes,
@@ -12,13 +12,13 @@ import styled from 'styled-components';
 import { useNavbarContext } from './NavbarContext';
 
 const StyledBottomNavigation = styled(BottomNavigation)`
-  background: ${Color.Dark500};
+  background: ${ColorV2.Dark500};
 `;
 
 const StyledBottomNavigationAction = styled(BottomNavigationAction)`
   && {
     background: #1b2638;
-    color: ${Color.Silver500};
+    color: ${ColorV2.Silver500};
     padding: 6px 0 8px;
     line-height: 20px;
   }
@@ -32,7 +32,7 @@ const StyledBottomNavigationAction = styled(BottomNavigationAction)`
   }
 
   &.Mui-selected {
-    color: ${Color.White};
+    color: ${ColorV2.White};
 
     .MuiBottomNavigationAction-label {
       font-size: 0.75rem;
@@ -51,8 +51,8 @@ const IconLabel = styled.div`
 
   font-size: 12px;
   border-radius: 50%;
-  color: ${Color.White};
-  background: ${Color.Red300};
+  color: ${ColorV2.White};
+  background: ${ColorV2.Red300};
 
   position: absolute;
   top: 0;

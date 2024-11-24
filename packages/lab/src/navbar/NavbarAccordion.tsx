@@ -1,6 +1,6 @@
 import { Accordion, AccordionSummary } from '@material-ui/core';
 import { ExpandMore } from '@material-ui/icons';
-import { Color, useUID } from '@superdispatch/ui';
+import { ColorV2, useUID } from '@superdispatch/ui';
 import {
   MouseEvent,
   ReactElement,
@@ -37,7 +37,7 @@ const NavbarAccordionRoot = styled(Accordion)`
 
   &[aria-current] {
     background-color: #2f394a;
-    color: ${Color.White};
+    color: ${ColorV2.White};
   }
 
   &.MuiAccordion-root:before {
@@ -73,9 +73,9 @@ const NavbarAccordionSummary = styled(AccordionSummary)`
   &:hover,
   &[aria-current],
   &[data-active='true'] {
-    color: ${Color.White};
+    color: ${ColorV2.White};
     background-color: #2f394a;
-    border-left-color: ${Color.Blue300};
+    border-left-color: ${ColorV2.Blue300};
   }
 
   &[data-expanded='false'] {

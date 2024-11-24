@@ -83,7 +83,7 @@ it('checks component css', () => {
 
     .MuiListItem-root.Mui-selected,
     .MuiListItem-root.Mui-selected:hover {
-      background-color: Color.Blue50;
+      background-color: ColorV2.Blue50;
     }
 
     .MuiListItem-root.Mui-disabled {
@@ -91,7 +91,7 @@ it('checks component css', () => {
     }
 
     .MuiListItem-root .MuiTouchRipple-root {
-      color: Color.Blue100;
+      color: ColorV2.Blue100;
     }
 
     .MuiListItem-container {

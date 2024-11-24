@@ -1,17 +1,17 @@
 import { Avatar, AvatarProps, Typography } from '@material-ui/core';
-import { Color, Column, Columns, Stack } from '@superdispatch/ui';
+import { ColorV2, Column, Columns, Stack } from '@superdispatch/ui';
 import { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
 import { useNavbarContext } from './NavbarContext';
 
 const StyledTypography = styled(Typography)`
-  color: ${Color.Silver500};
+  color: ${ColorV2.Silver500};
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 
   &:hover {
-    color: ${Color.White};
+    color: ${ColorV2.White};
   }
 `;
 

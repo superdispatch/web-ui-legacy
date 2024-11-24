@@ -1,6 +1,6 @@
 import { Divider, Grid, GridDirection, Hidden, Theme } from '@material-ui/core';
 import { ClassNameMap, makeStyles } from '@material-ui/styles';
-import { Color, ColorVariant } from '@superdispatch/ui';
+import { ColorV2, ColorVariant } from '@superdispatch/ui';
 import { DateTime } from 'luxon';
 import { forwardRef, ReactNode, useMemo } from 'react';
 import DayPicker, {
@@ -91,7 +91,7 @@ const useStyles = makeStyles<
 
     caption: {
       textAlign: 'center',
-      color: Color.Dark500,
+      color: ColorV2.Dark500,
       fontSize: 12,
       fontWeight: 700,
       textTransform: 'uppercase',
@@ -115,7 +115,7 @@ const useStyles = makeStyles<
       justifyContent: 'center',
       textDecoration: 'none',
 
-      color: Color.Dark300,
+      color: ColorV2.Dark300,
       width: theme.spacing(5),
       height: theme.spacing(5),
     },
@@ -170,7 +170,7 @@ const useStyles = makeStyles<
         bottom: 0,
         zIndex: -1,
         position: 'absolute',
-        backgroundColor: Color.Transparent,
+        backgroundColor: ColorV2.Transparent,
         transition: theme.transitions.create('background-color'),
       },
 
@@ -196,7 +196,7 @@ const useStyles = makeStyles<
         bottom: 0,
         zIndex: -1,
         position: 'absolute',
-        backgroundColor: Color.Transparent,
+        backgroundColor: ColorV2.Transparent,
         transition: theme.transitions.create('background-color'),
       },
 
@@ -205,73 +205,73 @@ const useStyles = makeStyles<
       },
 
       '&$today': {
-        border: `1px solid ${Color.Silver500}`,
+        border: `1px solid ${ColorV2.Silver500}`,
       },
 
       '&$disabled': {
-        color: Color.Dark100,
+        color: ColorV2.Dark100,
         '&$selected:not($outside):after': {
-          backgroundColor: Color.Silver300,
+          backgroundColor: ColorV2.Silver300,
         },
       },
 
       '&:not($outside):not($disabled)': {
         cursor: 'pointer',
-        color: Color.Dark500,
+        color: ColorV2.Dark500,
 
         '&:not($selected):not(:active)': {
           '&:hover, &:focus': {
-            backgroundColor: Color.Silver100,
+            backgroundColor: ColorV2.Silver100,
           },
 
           '&$blue': {
-            color: Color.Blue500,
+            color: ColorV2.Blue500,
             '&': {
-              backgroundColor: Color.Blue50,
+              backgroundColor: ColorV2.Blue50,
             },
           },
           '&$green': {
-            color: Color.Green500,
+            color: ColorV2.Green500,
             '&': {
-              backgroundColor: Color.Green50,
+              backgroundColor: ColorV2.Green50,
             },
           },
           '&$purple': {
-            color: Color.Purple500,
+            color: ColorV2.Purple500,
             '&': {
-              backgroundColor: Color.Purple50,
+              backgroundColor: ColorV2.Purple50,
             },
           },
           '&$red': {
-            color: Color.Red500,
+            color: ColorV2.Red500,
             '&': {
-              backgroundColor: Color.Red50,
+              backgroundColor: ColorV2.Red50,
             },
           },
           '&$teal': {
-            color: Color.Teal500,
+            color: ColorV2.Teal500,
             '&': {
-              backgroundColor: Color.Teal50,
+              backgroundColor: ColorV2.Teal50,
             },
           },
           '&$yellow': {
-            color: Color.Yellow500,
+            color: ColorV2.Yellow500,
             '&': {
-              backgroundColor: Color.Yellow50,
+              backgroundColor: ColorV2.Yellow50,
             },
           },
         },
 
         '&:active, &$selected': {
-          color: Color.White,
+          color: ColorV2.White,
           '&:after': {
-            backgroundColor: Color.Blue300,
+            backgroundColor: ColorV2.Blue300,
           },
           '&$today': {
             border: 'none',
           },
           '&$today:before': {
-            border: `1px solid ${Color.Blue300}`,
+            border: `1px solid ${ColorV2.Blue300}`,
             borderRadius: theme.spacing(0.5),
           },
         },

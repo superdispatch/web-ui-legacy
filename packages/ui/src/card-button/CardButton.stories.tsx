@@ -4,7 +4,7 @@ import {
   Error,
 } from '@material-ui/icons';
 import { Meta } from '@storybook/react';
-import { Color } from '../theme/Color';
+import { ColorV2 } from '../theme/Color';
 import { CardButton } from './CardButton';
 
 export default { title: 'Inputs/CardButton', component: CardButton } as Meta;
@@ -12,7 +12,7 @@ export default { title: 'Inputs/CardButton', component: CardButton } as Meta;
 export const basic = () => (
   <CardButton
     hint="or Drag & Drop files here"
-    startIcon={<AddIcon htmlColor={Color.Blue300} />}
+    startIcon={<AddIcon htmlColor={ColorV2.Blue300} />}
   >
     Add Attachments
   </CardButton>
@@ -21,7 +21,7 @@ export const basic = () => (
 export const endIcon = () => (
   <CardButton
     hint="or Drag & Drop files here"
-    endIcon={<AttachFileIcon htmlColor={Color.Blue300} />}
+    endIcon={<AttachFileIcon htmlColor={ColorV2.Blue300} />}
   >
     Add Attachments
   </CardButton>
@@ -29,7 +29,7 @@ export const endIcon = () => (
 
 export const error = () => (
   <CardButton
-    startIcon={<Error htmlColor={Color.Red300} />}
+    startIcon={<Error htmlColor={ColorV2.Red300} />}
     error="Invalid file extension"
   >
     Add Attachments
