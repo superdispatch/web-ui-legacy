@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@superdispatch/dates": "^0.31.0",
-    "@superdispatch/hooks": "^0.31.0",
+    "@superdispatch/hooks": "^0.30.0",
     "@superdispatch/phones": "^0.31.0",
     "@superdispatch/ui": "^0.31.0"
   },
