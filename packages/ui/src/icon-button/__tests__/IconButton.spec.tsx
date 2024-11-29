@@ -11,7 +11,7 @@ it('checks component css', () => {
   expect(renderCSS(<IconButton />, ['MuiIconButton'])).toMatchInlineSnapshot(`
     .MuiIconButton-root {
       flex: 0 0 auto;
-      color: Color.Dark100;
+      color: ColorV2.Dark100;
       padding: 12px;
       overflow: visible;
       font-size: 1.5rem;
@@ -19,28 +19,28 @@ it('checks component css', () => {
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
       border-radius: 50%;
-      background-color: Color.Transparent;
+      background-color: ColorV2.Transparent;
     }
 
     .MuiIconButton-root:hover {
-      background-color: Color.Transparent;
+      background-color: ColorV2.Transparent;
     }
 
     .MuiIconButton-root.Mui-disabled {
-      color: Color.Silver500;
+      color: ColorV2.Silver500;
       background-color: transparent;
     }
 
     .MuiIconButton-root:active {
-      color: Color.Dark500;
+      color: ColorV2.Dark500;
     }
 
     .MuiIconButton-root:hover {
-      color: Color.Dark300;
+      color: ColorV2.Dark300;
     }
 
     .MuiIconButton-root:focus {
-      background-color: Color.Silver400;
+      background-color: ColorV2.Silver400;
     }
 
     @media (hover: none) {
@@ -78,15 +78,15 @@ it('checks component css', () => {
     }
 
     .MuiIconButton-colorPrimary:active {
-      color: Color.Blue500;
+      color: ColorV2.Blue500;
     }
 
     .MuiIconButton-colorPrimary:hover {
-      color: Color.Blue300;
+      color: ColorV2.Blue300;
     }
 
     .MuiIconButton-colorPrimary:focus {
-      background-color: Color.Blue50;
+      background-color: ColorV2.Blue50;
     }
 
     @media (hover: none) {

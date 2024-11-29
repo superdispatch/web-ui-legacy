@@ -124,7 +124,7 @@ test('css', () => {
     }
 
     .SD-DescriptionList-icon > .MuiSvgIcon-root {
-      color: Color.Dark100;
+      color: ColorV2.Dark100;
       font-size: 24px;
     }
 

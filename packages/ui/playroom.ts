@@ -6,6 +6,7 @@ export {
   CheckboxField,
   CheckboxGroupField,
   Color,
+  ColorV2,
   Column,
   Columns,
   DescriptionList,

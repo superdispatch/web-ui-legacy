@@ -42,11 +42,11 @@ it('checks component css', () => {
       vertical-align: middle;
       justify-content: center;
       text-decoration: none;
-      background-color: Color.Silver200;
+      background-color: ColorV2.Silver200;
     }
 
     .MuiChip-root.Mui-disabled {
-      color: Color.Dark100;
+      color: ColorV2.Dark100;
       pointer-events: none;
     }
 
@@ -101,12 +101,12 @@ it('checks component css', () => {
     }
 
     .MuiChip-clickable:focus {
-      box-shadow: 0 0 0 2px Color.Dark30;
+      box-shadow: 0 0 0 2px ColorV2.Dark30;
     }
 
     .MuiChip-clickable:active,
     .MuiChip-clickable:hover {
-      background-color: Color.Silver400;
+      background-color: ColorV2.Silver400;
     }
 
     .MuiChip-clickableColorPrimary:hover,
@@ -120,7 +120,7 @@ it('checks component css', () => {
     }
 
     .MuiChip-deletable:focus {
-      box-shadow: 0 0 0 2px Color.Silver400;
+      box-shadow: 0 0 0 2px ColorV2.Silver400;
     }
 
     .MuiChip-deletableColorPrimary:focus {
@@ -189,7 +189,7 @@ it('checks component css', () => {
     }
 
     .MuiChip-icon {
-      color: Color.Dark100;
+      color: ColorV2.Dark100;
       font-size: 1em;
       margin-left: 5px;
     }
@@ -246,7 +246,7 @@ it('checks component css', () => {
     }
 
     .MuiChip-deleteIcon > svg {
-      color: Color.Dark100;
+      color: ColorV2.Dark100;
       font-size: 1em;
       border-radius: 50%;
     }
@@ -254,7 +254,7 @@ it('checks component css', () => {
     .MuiChip-deleteIcon:active > svg,
     .MuiChip-deleteIcon:hover > svg,
     .MuiChip-deleteIcon:focus > svg {
-      background-color: Color.Silver400;
+      background-color: ColorV2.Silver400;
     }
 
     .MuiChip-deleteIconSmall {

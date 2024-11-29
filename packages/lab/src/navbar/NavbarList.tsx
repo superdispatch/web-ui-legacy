@@ -1,6 +1,6 @@
 import { IconButton } from '@material-ui/core';
 import { Menu as MenuIcon, MenuOpen } from '@material-ui/icons';
-import { Color, Inline, useResponsiveValue } from '@superdispatch/ui';
+import { ColorV2, Inline, useResponsiveValue } from '@superdispatch/ui';
 import {
   ComponentType,
   HTMLAttributes,
@@ -57,7 +57,7 @@ const Wrapper = styled.div<{ isMobile: boolean }>`
 `;
 
 const ExpandIconButton = styled(IconButton)`
-  color: ${Color.Silver500};
+  color: ${ColorV2.Silver500};
 
   &&:focus {
     background-color: inherit;
@@ -84,7 +84,7 @@ const Root = styled.div`
 
   svg {
     font-size: 24px;
-    color: ${Color.Dark100};
+    color: ${ColorV2.Dark100};
   }
 `;
 
@@ -134,7 +134,7 @@ const Content = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: ${Color.Dark300};
+    background-color: ${ColorV2.Dark300};
     border-radius: 100vw;
     margin-bottom: 100px;
   }

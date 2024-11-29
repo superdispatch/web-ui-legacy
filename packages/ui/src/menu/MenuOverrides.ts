@@ -1,4 +1,4 @@
-import { Color } from '../theme/Color';
+import { ColorV2 } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideMenu(theme: SuperDispatchTheme): void {
@@ -10,7 +10,7 @@ export function overrideMenu(theme: SuperDispatchTheme): void {
 
   theme.overrides.MuiMenu = {
     paper: {
-      border: `1px solid ${Color.Silver400}`,
+      border: `1px solid ${ColorV2.Silver400}`,
     },
   };
 

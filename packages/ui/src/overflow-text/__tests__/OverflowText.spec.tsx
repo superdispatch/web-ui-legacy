@@ -12,7 +12,7 @@ it('checks component css', () => {
 
     .SD-OverflowText-root.SD-OverflowText-truncated {
       cursor: pointer;
-      border-bottom-color: Color.Silver500;
+      border-bottom-color: ColorV2.Silver500;
     }
 
     .SD-OverflowText-sentinel {

@@ -1,4 +1,4 @@
-import { Color } from '../theme/Color';
+import { ColorV2 } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideSvgIcon(theme: SuperDispatchTheme): void {
@@ -26,7 +26,7 @@ export function overrideSvgIcon(theme: SuperDispatchTheme): void {
     },
 
     colorAction: {
-      color: Color.Dark100,
+      color: ColorV2.Dark100,
     },
   };
 }

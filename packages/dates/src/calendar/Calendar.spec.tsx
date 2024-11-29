@@ -355,7 +355,7 @@ test('css', () => {
     }
 
     .SD-Calendar-caption {
-      color: Color.Dark500;
+      color: ColorV2.Dark500;
       display: table-caption;
       padding: 0px 8px;
       font-size: 12px;
@@ -376,7 +376,7 @@ test('css', () => {
     }
 
     .SD-Calendar-weekday {
-      color: Color.Dark300;
+      color: ColorV2.Dark300;
       width: 40px;
       height: 40px;
       margin: 1px;
@@ -419,7 +419,7 @@ test('css', () => {
       z-index: -1;
       position: absolute;
       transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-      background-color: Color.Transparent;
+      background-color: ColorV2.Transparent;
     }
 
     .SD-Calendar-day:after {
@@ -432,7 +432,7 @@ test('css', () => {
       position: absolute;
       transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
       border-radius: 4px;
-      background-color: Color.Transparent;
+      background-color: ColorV2.Transparent;
     }
 
     .SD-Calendar-day:hover,
@@ -441,26 +441,26 @@ test('css', () => {
     }
 
     .SD-Calendar-day.SD-Calendar-today {
-      border: 1px solid Color.Silver500;
+      border: 1px solid ColorV2.Silver500;
     }
 
     .SD-Calendar-day.SD-Calendar-disabled {
-      color: Color.Dark100;
+      color: ColorV2.Dark100;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled) {
-      color: Color.Dark500;
+      color: ColorV2.Dark500;
       cursor: pointer;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active,
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected {
-      color: Color.White;
+      color: ColorV2.White;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active:after,
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected:after {
-      background-color: Color.Blue300;
+      background-color: ColorV2.Blue300;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active.SD-Calendar-today,
@@ -470,65 +470,65 @@ test('css', () => {
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active.SD-Calendar-today:before,
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected.SD-Calendar-today:before {
-      border: 1px solid Color.Blue300;
+      border: 1px solid ColorV2.Blue300;
       border-radius: 4px;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):hover,
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):focus {
-      background-color: Color.Silver100;
+      background-color: ColorV2.Silver100;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-blue {
-      color: Color.Blue500;
+      color: ColorV2.Blue500;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-green {
-      color: Color.Green500;
+      color: ColorV2.Green500;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-purple {
-      color: Color.Purple500;
+      color: ColorV2.Purple500;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-red {
-      color: Color.Red500;
+      color: ColorV2.Red500;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-teal {
-      color: Color.Teal500;
+      color: ColorV2.Teal500;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-yellow {
-      color: Color.Yellow500;
+      color: ColorV2.Yellow500;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-yellow {
-      background-color: Color.Yellow50;
+      background-color: ColorV2.Yellow50;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-teal {
-      background-color: Color.Teal50;
+      background-color: ColorV2.Teal50;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-red {
-      background-color: Color.Red50;
+      background-color: ColorV2.Red50;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-purple {
-      background-color: Color.Purple50;
+      background-color: ColorV2.Purple50;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-green {
-      background-color: Color.Green50;
+      background-color: ColorV2.Green50;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-blue {
-      background-color: Color.Blue50;
+      background-color: ColorV2.Blue50;
     }
 
     .SD-Calendar-day.SD-Calendar-disabled.SD-Calendar-selected:not(.SD-Calendar-outside):after {
-      background-color: Color.Silver300;
+      background-color: ColorV2.Silver300;
     }
 
     .SD-Calendar-day:last-child:before,

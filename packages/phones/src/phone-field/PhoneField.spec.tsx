@@ -149,14 +149,14 @@ test('css', async () => {
     }
 
     .SD-PhoneFieldStartAdornment-button {
-      color: Color.Blue300;
+      color: ColorV2.Blue300;
       padding: 4px 4px 4px 8px;
       border-radius: 4px 0px 0px 4px;
     }
 
     .SD-PhoneFieldStartAdornment-button:hover,
     .SD-PhoneFieldStartAdornment-button:focus {
-      background-color: Color.Blue50;
+      background-color: ColorV2.Blue50;
     }
   `);
 });

@@ -1,6 +1,6 @@
 import { ButtonBase } from '@material-ui/core';
 import { OpenInNew } from '@material-ui/icons';
-import { Color, Column, Columns, Inline, mergeRefs } from '@superdispatch/ui';
+import { ColorV2, Column, Columns, Inline, mergeRefs } from '@superdispatch/ui';
 import {
   forwardRef,
   MouseEvent,
@@ -36,12 +36,12 @@ const SidebarMenuItemRoot = styled.div<SidebarMenuItemRootProps>(
         max-height: ${height}px;
 
         &[aria-current='true'] {
-          background-color: ${Color.Silver200};
-          box-shadow: inset 4px 0 0 ${Color.Blue300};
+          background-color: ${ColorV2.Silver200};
+          box-shadow: inset 4px 0 0 ${ColorV2.Blue300};
         }
 
         &:hover {
-          background-color: ${Color.Silver200};
+          background-color: ${ColorV2.Silver200};
         }
       }
     `;
@@ -56,8 +56,8 @@ const SidebarMenuItemBadge = styled.div`
   padding-right: 4px;
   border-radius: 100px;
 
-  color: ${Color.Dark500};
-  background-color: ${Color.Silver400};
+  color: ${ColorV2.Dark500};
+  background-color: ${ColorV2.Silver400};
 `;
 
 export interface SidebarMenuItemProps {

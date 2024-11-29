@@ -42,8 +42,8 @@ it('checks component css', () => {
     }
 
     .MuiAvatar-colorDefault {
-      color: Color.Dark300;
-      background-color: Color.Silver300;
+      color: ColorV2.Dark300;
+      background-color: ColorV2.Silver300;
     }
 
     .MuiAvatar-rounded {

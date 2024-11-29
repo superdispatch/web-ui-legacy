@@ -1,4 +1,4 @@
-import { Color } from '../theme/Color';
+import { ColorV2 } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideTooltip(theme: SuperDispatchTheme): void {
@@ -8,7 +8,7 @@ export function overrideTooltip(theme: SuperDispatchTheme): void {
     tooltip: {
       ...theme.typography.body2,
       padding: theme.spacing(1, 1.5),
-      backgroundColor: Color.Dark500,
+      backgroundColor: ColorV2.Dark500,
     },
 
     popperArrow: {
@@ -27,7 +27,7 @@ export function overrideTooltip(theme: SuperDispatchTheme): void {
     },
 
     arrow: {
-      color: Color.Dark500,
+      color: ColorV2.Dark500,
       fontSize: theme.spacing(1),
     },
   };

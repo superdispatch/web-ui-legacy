@@ -171,10 +171,10 @@ it('checks component css', () => {
     }
 
     .SD-SnackbarContent-root {
-      color: Color.White;
+      color: ColorV2.White;
       padding: 10px 16px;
       align-items: flex-start;
-      background-color: Color.Dark500;
+      background-color: ColorV2.Dark500;
     }
 
     @media (min-width: 960px) {
@@ -205,22 +205,22 @@ it('checks component css', () => {
     }
 
     .SD-SnackbarContent-closeButton {
-      color: Color.White40;
+      color: ColorV2.White40;
     }
 
     .SD-SnackbarContent-closeButton:hover,
     .SD-SnackbarContent-closeButton:focus {
-      color: Color.White40;
-      background-color: Color.White08;
+      color: ColorV2.White40;
+      background-color: ColorV2.White08;
     }
 
     .SD-SnackbarContent-variantError {
-      color: Color.Red500;
-      background: Color.Red50;
+      color: ColorV2.Red500;
+      background: ColorV2.Red50;
     }
 
     .SD-SnackbarContent-variantError .SD-SnackbarContent-closeButton {
-      color: Color.Red500;
+      color: ColorV2.Red500;
     }
   `);
 });

@@ -43,13 +43,13 @@ import {
   overrideTypography,
 } from '../typography/TypographyOverrides';
 import { Color } from './Color';
+import { GlobalStyles } from './GlobalStyles';
 import { SuperDispatchTheme } from './SuperDispatchTheme';
 
 function createSuperDispatchTheme(): SuperDispatchTheme {
   const breakpoints = createBreakpoints({});
   const theme = createTheme({
     breakpoints,
-
     palette: {
       primary: {
         main: Color.Blue300,
@@ -161,7 +161,6 @@ export function ThemeProvider({
 }: ThemeProviderProps): ReactElement {
   const theme = useConstant(() => {
     const nextTheme = createSuperDispatchTheme();
-
     return !modifier ? nextTheme : modifier(nextTheme);
   });
 
@@ -174,6 +173,7 @@ export function ThemeProvider({
         <CssBaseline />
 
         <StyledThemeProvider theme={theme}>
+          <GlobalStyles />
           <ResponsiveContextProvider>
             <SnackbarStackProvider>{children}</SnackbarStackProvider>
           </ResponsiveContextProvider>

@@ -1,7 +1,7 @@
 import { CircularProgress, SvgIcon } from '@material-ui/core';
 import { Error } from '@material-ui/icons';
 import { mdiUpload } from '@mdi/js';
-import { CardButton, Color, Column, Columns } from '@superdispatch/ui';
+import { CardButton, ColorV2, Column, Columns } from '@superdispatch/ui';
 import { forwardRef, ReactElement, ReactNode, Suspense } from 'react';
 import Dropzone, { FileRejection } from 'react-dropzone';
 import styled from 'styled-components';
@@ -34,7 +34,7 @@ export function formatBytes(bytes: number): string {
 const StyledCardButton = styled(CardButton)<{
   status?: 'idle' | 'active' | 'error';
 }>(({ status }) => ({
-  backgroundColor: status === 'active' ? Color.Blue50 : undefined,
+  backgroundColor: status === 'active' ? ColorV2.Blue50 : undefined,
 }));
 
 interface UploadRejectionProps {

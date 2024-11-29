@@ -1,28 +1,28 @@
-import { Color } from '../theme/Color';
+import { ColorV2 } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideIconButton(theme: SuperDispatchTheme): void {
   theme.overrides.MuiIconButton = {
     root: {
-      color: Color.Dark100,
+      color: ColorV2.Dark100,
 
-      backgroundColor: Color.Transparent,
+      backgroundColor: ColorV2.Transparent,
 
       transition: theme.transitions.create(['color', 'background-color'], {
         duration: theme.transitions.duration.short,
       }),
 
-      '&:hover': { backgroundColor: Color.Transparent },
-      '&:active': { color: Color.Dark500 },
-      '&:hover ': { color: Color.Dark300 },
-      '&:focus': { backgroundColor: Color.Silver400 },
+      '&:hover': { backgroundColor: ColorV2.Transparent },
+      '&:active': { color: ColorV2.Dark500 },
+      '&:hover ': { color: ColorV2.Dark300 },
+      '&:focus': { backgroundColor: ColorV2.Silver400 },
 
-      '&$disabled': { color: Color.Silver500 },
+      '&$disabled': { color: ColorV2.Silver500 },
     },
     colorPrimary: {
-      '&:active': { color: Color.Blue500 },
-      '&:hover ': { color: Color.Blue300 },
-      '&:focus': { backgroundColor: Color.Blue50 },
+      '&:active': { color: ColorV2.Blue500 },
+      '&:hover ': { color: ColorV2.Blue300 },
+      '&:focus': { backgroundColor: ColorV2.Blue50 },
     },
 
     edgeEnd: { marginRight: theme.spacing(-1) },

@@ -90,23 +90,23 @@ it('checks component css', () => {
     }
 
     .MuiSwitch-colorPrimary.Mui-disabled + .MuiSwitch-track {
-      background-color: Color.Dark30;
+      background-color: ColorV2.Dark30;
     }
 
     .MuiSwitch-colorPrimary + .MuiSwitch-track {
-      background-color: Color.Silver500;
+      background-color: ColorV2.Silver500;
     }
 
     .MuiSwitch-colorPrimary.Mui-checked.Mui-disabled + .MuiSwitch-track {
-      background-color: Color.Blue30;
+      background-color: ColorV2.Blue30;
     }
 
     .MuiSwitch-colorPrimary:hover + .MuiSwitch-track {
-      background-color: Color.Dark100;
+      background-color: ColorV2.Dark100;
     }
 
     .MuiSwitch-colorPrimary.Mui-focusVisible + .MuiSwitch-track {
-      box-shadow: 0 0 0 3px Color.Blue30;
+      box-shadow: 0 0 0 3px ColorV2.Blue30;
     }
 
     @media (hover: none) {
@@ -116,7 +116,7 @@ it('checks component css', () => {
     }
 
     .MuiSwitch-colorPrimary.Mui-checked:hover + .MuiSwitch-track {
-      background-color: Color.Blue500;
+      background-color: ColorV2.Blue500;
     }
 
     .MuiSwitch-colorSecondary.Mui-checked {
@@ -170,7 +170,7 @@ it('checks component css', () => {
     }
 
     .MuiSwitch-thumb {
-      color: Color.White;
+      color: ColorV2.White;
       width: 24px;
       height: 24px;
       border-radius: 50%;
@@ -188,7 +188,7 @@ it('checks component css', () => {
       width: 100%;
       height: 100%;
       z-index: -1;
-      box-shadow: 0 0 0 0 Color.Transparent;
+      box-shadow: 0 0 0 0 ColorV2.Transparent;
       transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
         background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
       border-radius: 16px;
