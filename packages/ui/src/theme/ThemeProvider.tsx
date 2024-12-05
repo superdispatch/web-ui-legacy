@@ -8,9 +8,8 @@ import {
   StylesProvider,
   ThemeProvider as MaterialThemeProvider,
 } from '@material-ui/styles';
-import { useConstant } from '@superdispatch/hooks';
 import { Rule, StyleSheet } from 'jss';
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement, ReactNode, useMemo } from 'react';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import { overrideAppBar } from '../app-bar/AppBarOverrides';
 import { overrideAutocomplete } from '../autocomplete/AutocompleteOverrides';
@@ -46,11 +45,12 @@ import { Color } from './Color';
 import { GlobalStyles } from './GlobalStyles';
 import { SuperDispatchTheme } from './SuperDispatchTheme';
 
-function createSuperDispatchTheme(): SuperDispatchTheme {
+function createSuperDispatchTheme(type?: 'light' | 'dark'): SuperDispatchTheme {
   const breakpoints = createBreakpoints({});
   const theme = createTheme({
     breakpoints,
     palette: {
+      type,
       primary: {
         main: Color.Blue300,
       },
@@ -150,6 +150,7 @@ function generateClassName(rule: Rule, sheet?: StyleSheet): string {
 
 export interface ThemeProviderProps {
   children?: ReactNode;
+  mode?: 'dark' | 'light';
   injectFirst?: boolean;
   modifier?: (theme: SuperDispatchTheme) => SuperDispatchTheme;
 }
@@ -157,12 +158,14 @@ export interface ThemeProviderProps {
 export function ThemeProvider({
   modifier,
   children,
+  mode,
   injectFirst = true,
 }: ThemeProviderProps): ReactElement {
-  const theme = useConstant(() => {
-    const nextTheme = createSuperDispatchTheme();
+  const theme = useMemo(() => {
+    const nextTheme = createSuperDispatchTheme(mode);
     return !modifier ? nextTheme : modifier(nextTheme);
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- modifier may update on every render
+  }, [mode]);
 
   return (
     <StylesProvider

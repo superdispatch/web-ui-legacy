@@ -24,13 +24,19 @@ function injectDisplayNames(module, { suffix = '' } = {}) {
 }
 
 addDecorator(withPlayroom);
-addDecorator((story, context) => (
-  <Suspense fallback="Loading story…">
-    <div data-story={context.id}>
-      <ThemeProvider injectFirst={false}>{story()}</ThemeProvider>
-    </div>
-  </Suspense>
-));
+addDecorator((story, context) => {
+  const mode =
+    context.globals.backgrounds?.value === '#333333' ? 'dark' : 'light';
+  return (
+    <Suspense fallback="Loading story…">
+      <div data-story={context.id}>
+        <ThemeProvider injectFirst={false} mode={mode}>
+          {story()}
+        </ThemeProvider>
+      </div>
+    </Suspense>
+  );
+});
 
 function SuperDispatchDocsContainer(props) {
   return (
