@@ -211,7 +211,7 @@ const useStyles = makeStyles<
       '&$disabled': {
         color: ColorV2.Dark100,
         '&$selected:not($outside):after': {
-          backgroundColor: ColorV2.Silver300,
+          backgroundColor: ColorV2.Silver400,
         },
       },
 
@@ -221,7 +221,7 @@ const useStyles = makeStyles<
 
         '&:not($selected):not(:active)': {
           '&:hover, &:focus': {
-            backgroundColor: ColorV2.Silver100,
+            backgroundColor: ColorV2.Silver200,
           },
 
           '&$blue': {
