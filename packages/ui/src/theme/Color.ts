@@ -177,6 +177,7 @@ export enum ColorLightInternal {
   //
 
   White = '#fff',
+  InvertedWhite = '#fff',
   White50 = 'rgba(255, 255, 255, 0.5)',
   White40 = 'rgba(255, 255, 255, 0.4)',
   White20 = 'rgba(255, 255, 255, 0.2)',
@@ -336,12 +337,13 @@ export enum ColorDarkInternal {
   // ???
   //
 
-  White = '#fff',
-  White50 = 'rgba(255, 255, 255, 0.5)',
-  White40 = 'rgba(255, 255, 255, 0.4)',
-  White20 = 'rgba(255, 255, 255, 0.2)',
-  White10 = 'rgba(255, 255, 255, 0.1)',
-  White08 = 'rgba(255, 255, 255, 0.08)',
+  White = 'rgba(255, 255, 255, 0.5)',
+  InvertedWhite = '#192334',
+  White50 = 'rgba(0, 0, 0, 0.5)',
+  White40 = 'rgba(0, 0, 0, 0.4)',
+  White20 = 'rgba(0, 0, 0, 0.2)',
+  White10 = 'rgba(0, 0, 0, 0.1)',
+  White08 = 'rgba(0, 0, 0, 0.08)',
   Transparent = 'rgba(0, 0, 0, 0)',
 
   Black = '#000',
@@ -494,6 +496,7 @@ export enum ColorDarkInternal {
 
 export enum ColorV2 {
   White = 'var(--sd-white)',
+  InvertedWhite = 'var(--sd-inverted-white)',
   White50 = 'var(--sd-white-50)',
   White40 = 'var(--sd-white-40)',
   White20 = 'var(--sd-white-20)',
