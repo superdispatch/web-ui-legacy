@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle(
     return `
     :root{
       --sd-white: ${color.White};
+      --sd-inverted-white: ${color.InvertedWhite};
       --sd-white-50: ${color.White50};
       --sd-white-40: ${color.White40};
       --sd-white-20: ${color.White20};
