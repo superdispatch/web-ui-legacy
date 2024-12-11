@@ -115,7 +115,7 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-textPrimary.Mui-selected {
-      color: Color.White;
+      color: Color.DynamicWhite;
       background-color: Color.Blue300;
     }
 
@@ -136,7 +136,7 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-textSecondary.Mui-selected {
-      color: Color.White;
+      color: Color.DynamicWhite;
       background-color: #f50057;
     }
 

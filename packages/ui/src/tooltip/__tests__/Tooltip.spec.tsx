@@ -84,7 +84,7 @@ it('checks component css', () => {
     }
 
     .MuiTooltip-tooltip {
-      color: Color.White;
+      color: Color.DynamicWhite;
       padding: 8px 12px;
       font-size: 14px;
       max-width: 300px;

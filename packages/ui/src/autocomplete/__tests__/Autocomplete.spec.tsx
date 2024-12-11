@@ -309,7 +309,7 @@ it('checks component css', () => {
 
     .MuiAutocomplete-groupLabel {
       top: -8px;
-      background-color: Color.White;
+      background-color: Color.DynamicWhite;
     }
 
     .MuiAutocomplete-groupUl {
