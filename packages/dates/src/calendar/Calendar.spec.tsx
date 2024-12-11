@@ -476,7 +476,7 @@ test('css', () => {
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):hover,
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active):focus {
-      background-color: ColorV2.Silver100;
+      background-color: ColorV2.Silver200;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):not(.SD-Calendar-selected):not(:active).SD-Calendar-blue {
@@ -528,7 +528,7 @@ test('css', () => {
     }
 
     .SD-Calendar-day.SD-Calendar-disabled.SD-Calendar-selected:not(.SD-Calendar-outside):after {
-      background-color: ColorV2.Silver300;
+      background-color: ColorV2.Silver400;
     }
 
     .SD-Calendar-day:last-child:before,

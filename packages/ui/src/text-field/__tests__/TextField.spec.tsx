@@ -594,7 +594,7 @@ it('checks component css', () => {
 
     .MuiSelect-select:not([multiple]) option,
     .MuiSelect-select:not([multiple]) optgroup {
-      background-color: Color.White;
+      background-color: Color.DynamicWhite;
     }
 
     .MuiSelect-select.MuiSelect-select {

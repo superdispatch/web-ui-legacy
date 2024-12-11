@@ -497,7 +497,7 @@ it('checks component css', () => {
     }
 
     .MuiButton-containedSecondary {
-      color: Color.White;
+      color: Color.DynamicWhite;
       background-color: #f50057;
     }
 

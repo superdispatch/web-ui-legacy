@@ -41,38 +41,39 @@ import {
   createTypographyOptions,
   overrideTypography,
 } from '../typography/TypographyOverrides';
-import { Color } from './Color';
+import { Color, ColorDarkInternal } from './Color';
 import { GlobalStyles } from './GlobalStyles';
 import { SuperDispatchTheme } from './SuperDispatchTheme';
 
 function createSuperDispatchTheme(type?: 'light' | 'dark'): SuperDispatchTheme {
   const breakpoints = createBreakpoints({});
+  const color = type === 'dark' ? ColorDarkInternal : Color;
   const theme = createTheme({
     breakpoints,
     palette: {
       type,
       primary: {
-        main: Color.Blue300,
+        main: color.Blue300,
       },
 
       error: {
-        main: Color.Red300,
+        main: color.Red300,
       },
 
       action: {
-        hover: Color.Silver100,
-        selected: Color.Silver300,
-        disabled: Color.Silver400,
+        hover: color.Silver100,
+        selected: color.Silver300,
+        disabled: color.Silver400,
       },
 
       text: {
-        primary: Color.Dark500,
-        secondary: Color.Dark300,
-        hint: Color.Dark100,
-        disabled: Color.Dark100,
+        primary: color.Dark500,
+        secondary: color.Dark300,
+        hint: color.Dark100,
+        disabled: color.Dark100,
       },
 
-      divider: Color.Silver400,
+      divider: color.Silver400,
     },
 
     typography: createTypographyOptions(breakpoints),

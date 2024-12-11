@@ -112,7 +112,7 @@ it('checks component css', () => {
     }
 
     .SDSnackbar-root {
-      color: Color.White;
+      color: Color.DynamicWhite;
       display: flex;
       padding: 6px 16px;
       flex-grow: 1;

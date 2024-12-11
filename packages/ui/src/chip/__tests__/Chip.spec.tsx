@@ -60,12 +60,12 @@ it('checks component css', () => {
     }
 
     .MuiChip-root .MuiChip-avatarColorPrimary {
-      color: Color.White;
+      color: Color.DynamicWhite;
       background-color: rgb(0, 78, 171);
     }
 
     .MuiChip-root .MuiChip-avatarColorSecondary {
-      color: Color.White;
+      color: Color.DynamicWhite;
       background-color: #c51162;
     }
 
@@ -85,12 +85,12 @@ it('checks component css', () => {
     }
 
     .MuiChip-colorPrimary {
-      color: Color.White;
+      color: Color.DynamicWhite;
       background-color: Color.Blue300;
     }
 
     .MuiChip-colorSecondary {
-      color: Color.White;
+      color: Color.DynamicWhite;
       background-color: #f50057;
     }
 
@@ -275,7 +275,7 @@ it('checks component css', () => {
 
     .MuiChip-deleteIconColorPrimary:hover,
     .MuiChip-deleteIconColorPrimary:active {
-      color: Color.White;
+      color: Color.DynamicWhite;
     }
 
     .MuiChip-deleteIconColorSecondary {
@@ -284,7 +284,7 @@ it('checks component css', () => {
 
     .MuiChip-deleteIconColorSecondary:hover,
     .MuiChip-deleteIconColorSecondary:active {
-      color: Color.White;
+      color: Color.DynamicWhite;
     }
 
     .MuiChip-deleteIconOutlinedColorPrimary {

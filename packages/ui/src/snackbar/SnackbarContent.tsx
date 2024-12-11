@@ -36,7 +36,7 @@ const useStyles = makeStyles<
 >(
   (theme) => ({
     root: {
-      color: ColorV2.InvertedWhite,
+      color: ColorV2.White,
       backgroundColor: ColorV2.Dark500,
       alignItems: 'flex-start',
       padding: '10px 16px',
