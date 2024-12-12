@@ -12,7 +12,7 @@ import {
   ForwardRefExoticComponent,
   useState,
 } from 'react';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 import { VisibilityObserver } from '../utils/VisibilityObserver';
 
@@ -27,7 +27,7 @@ const useStyles = makeStyles(
 
       '&$truncated': {
         cursor: 'pointer',
-        borderBottomColor: ColorV2.Silver500,
+        borderBottomColor: ColorDynamic.Silver500,
       },
     },
     truncated: {},

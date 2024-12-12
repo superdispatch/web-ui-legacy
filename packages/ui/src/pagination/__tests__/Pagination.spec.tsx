@@ -22,7 +22,7 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-root {
-      color: ColorV2.Dark500;
+      color: ColorDynamic.Dark500;
       height: 32px;
       margin: 0 3px;
       padding: 0 6px;
@@ -49,32 +49,32 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-page:hover {
-      background-color: ColorV2.Silver200;
+      background-color: ColorDynamic.Silver200;
     }
 
     .MuiPaginationItem-page.Mui-focusVisible {
-      border: 1px solid ColorV2.Blue30;
+      border: 1px solid ColorDynamic.Blue30;
       border-radius: 4px;
-      background-color: ColorV2.White;
+      background-color: ColorDynamic.White;
     }
 
     .MuiPaginationItem-page.Mui-selected {
-      background-color: ColorV2.Silver400;
+      background-color: ColorDynamic.Silver400;
     }
 
     .MuiPaginationItem-page.Mui-disabled {
-      color: ColorV2.Dark100;
+      color: ColorDynamic.Dark100;
     }
 
     .MuiPaginationItem-page.Mui-selected:hover,
     .MuiPaginationItem-page.Mui-selected.Mui-focusVisible {
-      background-color: ColorV2.Silver500;
+      background-color: ColorDynamic.Silver500;
     }
 
     .MuiPaginationItem-page.Mui-selected.Mui-disabled {
-      color: ColorV2.Dark100;
+      color: ColorDynamic.Dark100;
       opacity: 1;
-      background-color: ColorV2.Silver400;
+      background-color: ColorDynamic.Silver400;
     }
 
     @media (hover: none) {
@@ -115,7 +115,7 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-textPrimary.Mui-selected {
-      color: Color.DynamicWhite;
+      color: Color.White;
       background-color: Color.Blue300;
     }
 
@@ -136,7 +136,7 @@ it('checks component css', () => {
     }
 
     .MuiPaginationItem-textSecondary.Mui-selected {
-      color: Color.DynamicWhite;
+      color: Color.White;
       background-color: #f50057;
     }
 

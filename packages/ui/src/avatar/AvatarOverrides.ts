@@ -1,4 +1,4 @@
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideAvatar(theme: SuperDispatchTheme): void {
@@ -17,8 +17,8 @@ export function overrideAvatar(theme: SuperDispatchTheme): void {
     },
 
     colorDefault: {
-      color: ColorV2.Dark300,
-      backgroundColor: ColorV2.Silver300,
+      color: ColorDynamic.Dark300,
+      backgroundColor: ColorDynamic.Silver300,
     },
   };
 }

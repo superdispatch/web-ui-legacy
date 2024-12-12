@@ -1,21 +1,24 @@
 import { CSSProperties } from '@material-ui/styles';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
-function outlineShadow(size = 0, color: ColorV2 = ColorV2.Transparent): string {
+function outlineShadow(
+  size = 0,
+  color: ColorDynamic = ColorDynamic.Transparent,
+): string {
   return `0 0 0 ${size}px ${color}`;
 }
 
 function textVariant(
-  text: ColorV2,
-  outline: ColorV2,
-  background: ColorV2,
-  progress: ColorV2,
+  text: ColorDynamic,
+  outline: ColorDynamic,
+  background: ColorDynamic,
+  progress: ColorDynamic,
 ): CSSProperties {
   return {
     color: text,
     boxShadow: outlineShadow(),
-    backgroundColor: ColorV2.Transparent,
+    backgroundColor: ColorDynamic.Transparent,
 
     '&:hover': {
       backgroundColor: background,
@@ -33,7 +36,7 @@ function textVariant(
     '&$disabled': {
       color: outline,
       boxShadow: outlineShadow(),
-      backgroundColor: ColorV2.Transparent,
+      backgroundColor: ColorDynamic.Transparent,
     },
 
     '&$disabled[aria-busy="true"]': {
@@ -43,23 +46,23 @@ function textVariant(
 }
 
 function outlinedBorder(
-  borderColor: ColorV2,
-  outlineColor: ColorV2 = ColorV2.Transparent,
+  borderColor: ColorDynamic,
+  outlineColor: ColorDynamic = ColorDynamic.Transparent,
 ): string {
   return `inset 0 0 0 1px ${borderColor}, 0 0 0 2px ${outlineColor}`;
 }
 
 function outlinedVariant(
-  staleText: ColorV2,
-  staleBorder: ColorV2,
-  disabledText: ColorV2,
-  disabledBorder: ColorV2,
-  activeText: ColorV2,
-  activeBorder: ColorV2,
-  activeOutline: ColorV2,
-  activeBackground: ColorV2,
-  progress: ColorV2,
-  backgroundColor: ColorV2,
+  staleText: ColorDynamic,
+  staleBorder: ColorDynamic,
+  disabledText: ColorDynamic,
+  disabledBorder: ColorDynamic,
+  activeText: ColorDynamic,
+  activeBorder: ColorDynamic,
+  activeOutline: ColorDynamic,
+  activeBackground: ColorDynamic,
+  progress: ColorDynamic,
+  backgroundColor: ColorDynamic,
 ): CSSProperties {
   return {
     backgroundColor,
@@ -97,12 +100,12 @@ function outlinedVariant(
 }
 
 function containedVariant(
-  text: ColorV2,
-  backgroundColor: ColorV2,
-  outline: ColorV2,
-  active: ColorV2,
-  disabledText: ColorV2,
-  disabledBackground: ColorV2,
+  text: ColorDynamic,
+  backgroundColor: ColorDynamic,
+  outline: ColorDynamic,
+  active: ColorDynamic,
+  disabledText: ColorDynamic,
+  disabledBackground: ColorDynamic,
 ): CSSProperties {
   return {
     color: text,
@@ -212,32 +215,32 @@ export function overrideButton(theme: SuperDispatchTheme): void {
       padding: undefined,
 
       '&[data-color="error"]': textVariant(
-        ColorV2.Red300,
-        ColorV2.Red100,
-        ColorV2.Red50,
-        ColorV2.Red200,
+        ColorDynamic.Red300,
+        ColorDynamic.Red100,
+        ColorDynamic.Red50,
+        ColorDynamic.Red200,
       ),
 
       '&[data-color="success"]': textVariant(
-        ColorV2.Green300,
-        ColorV2.Green100,
-        ColorV2.Green50,
-        ColorV2.Green200,
+        ColorDynamic.Green300,
+        ColorDynamic.Green100,
+        ColorDynamic.Green50,
+        ColorDynamic.Green200,
       ),
 
       '&[data-color="white"]': textVariant(
-        ColorV2.White,
-        ColorV2.White50,
-        ColorV2.White10,
-        ColorV2.White50,
+        ColorDynamic.White,
+        ColorDynamic.White50,
+        ColorDynamic.White10,
+        ColorDynamic.White50,
       ),
     },
 
     textPrimary: textVariant(
-      ColorV2.Blue300,
-      ColorV2.Blue100,
-      ColorV2.Blue50,
-      ColorV2.Blue200,
+      ColorDynamic.Blue300,
+      ColorDynamic.Blue100,
+      ColorDynamic.Blue50,
+      ColorDynamic.Blue200,
     ),
 
     textSizeSmall: { padding: undefined, fontSize: undefined },
@@ -249,56 +252,56 @@ export function overrideButton(theme: SuperDispatchTheme): void {
       '&$disabled': { border: undefined },
 
       '&[data-color="error"]': outlinedVariant(
-        ColorV2.Red300,
-        ColorV2.Red300,
-        ColorV2.Red100,
-        ColorV2.Red100,
-        ColorV2.Red300,
-        ColorV2.Red300,
-        ColorV2.Red100,
-        ColorV2.Red50,
-        ColorV2.Red300,
-        ColorV2.White,
+        ColorDynamic.Red300,
+        ColorDynamic.Red300,
+        ColorDynamic.Red100,
+        ColorDynamic.Red100,
+        ColorDynamic.Red300,
+        ColorDynamic.Red300,
+        ColorDynamic.Red100,
+        ColorDynamic.Red50,
+        ColorDynamic.Red300,
+        ColorDynamic.White,
       ),
 
       '&[data-color="success"]': outlinedVariant(
-        ColorV2.Green300,
-        ColorV2.Green300,
-        ColorV2.Green100,
-        ColorV2.Green100,
-        ColorV2.Green300,
-        ColorV2.Green300,
-        ColorV2.Green100,
-        ColorV2.Green50,
-        ColorV2.Green300,
-        ColorV2.White,
+        ColorDynamic.Green300,
+        ColorDynamic.Green300,
+        ColorDynamic.Green100,
+        ColorDynamic.Green100,
+        ColorDynamic.Green300,
+        ColorDynamic.Green300,
+        ColorDynamic.Green100,
+        ColorDynamic.Green50,
+        ColorDynamic.Green300,
+        ColorDynamic.White,
       ),
 
       '&[data-color="white"]': outlinedVariant(
-        ColorV2.White,
-        ColorV2.White50,
-        ColorV2.White50,
-        ColorV2.White40,
-        ColorV2.White,
-        ColorV2.White50,
-        ColorV2.White40,
-        ColorV2.White10,
-        ColorV2.White50,
-        ColorV2.Transparent,
+        ColorDynamic.White,
+        ColorDynamic.White50,
+        ColorDynamic.White50,
+        ColorDynamic.White40,
+        ColorDynamic.White,
+        ColorDynamic.White50,
+        ColorDynamic.White40,
+        ColorDynamic.White10,
+        ColorDynamic.White50,
+        ColorDynamic.Transparent,
       ),
     },
 
     outlinedPrimary: outlinedVariant(
-      ColorV2.Dark500,
-      ColorV2.Silver500,
-      ColorV2.Silver500,
-      ColorV2.Silver400,
-      ColorV2.Blue300,
-      ColorV2.Blue300,
-      ColorV2.Blue100,
-      ColorV2.Blue50,
-      ColorV2.Dark200,
-      ColorV2.White,
+      ColorDynamic.Dark500,
+      ColorDynamic.Silver500,
+      ColorDynamic.Silver500,
+      ColorDynamic.Silver400,
+      ColorDynamic.Blue300,
+      ColorDynamic.Blue300,
+      ColorDynamic.Blue100,
+      ColorDynamic.Blue50,
+      ColorDynamic.Dark200,
+      ColorDynamic.White,
     ),
 
     outlinedSizeSmall: { padding: undefined, fontSize: undefined },
@@ -333,40 +336,40 @@ export function overrideButton(theme: SuperDispatchTheme): void {
       },
 
       '&[data-color="error"]': containedVariant(
-        ColorV2.White,
-        ColorV2.Red300,
-        ColorV2.Red100,
-        ColorV2.Red500,
-        ColorV2.White,
-        ColorV2.Red100,
+        ColorDynamic.White,
+        ColorDynamic.Red300,
+        ColorDynamic.Red100,
+        ColorDynamic.Red500,
+        ColorDynamic.White,
+        ColorDynamic.Red100,
       ),
 
       '&[data-color="success"]': containedVariant(
-        ColorV2.White,
-        ColorV2.Green300,
-        ColorV2.Green100,
-        ColorV2.Green500,
-        ColorV2.White,
-        ColorV2.Green100,
+        ColorDynamic.White,
+        ColorDynamic.Green300,
+        ColorDynamic.Green100,
+        ColorDynamic.Green500,
+        ColorDynamic.White,
+        ColorDynamic.Green100,
       ),
 
       '&[data-color="white"]': containedVariant(
-        ColorV2.White,
-        ColorV2.White20,
-        ColorV2.White40,
-        ColorV2.White40,
-        ColorV2.White50,
-        ColorV2.White08,
+        ColorDynamic.White,
+        ColorDynamic.White20,
+        ColorDynamic.White40,
+        ColorDynamic.White40,
+        ColorDynamic.White50,
+        ColorDynamic.White08,
       ),
     },
 
     containedPrimary: containedVariant(
-      ColorV2.White,
-      ColorV2.Blue300,
-      ColorV2.Blue100,
-      ColorV2.Blue500,
-      ColorV2.White,
-      ColorV2.Blue100,
+      ColorDynamic.White,
+      ColorDynamic.Blue300,
+      ColorDynamic.Blue100,
+      ColorDynamic.Blue500,
+      ColorDynamic.White,
+      ColorDynamic.Blue100,
     ),
 
     containedSizeSmall: { padding: undefined, fontSize: undefined },

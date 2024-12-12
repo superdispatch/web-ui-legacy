@@ -112,7 +112,7 @@ it('checks component css', () => {
     }
 
     .SDSnackbar-root {
-      color: Color.DynamicWhite;
+      color: Color.White;
       display: flex;
       padding: 6px 16px;
       flex-grow: 1;
@@ -171,10 +171,10 @@ it('checks component css', () => {
     }
 
     .SD-SnackbarContent-root {
-      color: ColorV2.White;
+      color: ColorDynamic.White;
       padding: 10px 16px;
       align-items: flex-start;
-      background-color: ColorV2.Dark500;
+      background-color: ColorDynamic.Dark500;
     }
 
     @media (min-width: 960px) {
@@ -205,22 +205,22 @@ it('checks component css', () => {
     }
 
     .SD-SnackbarContent-closeButton {
-      color: ColorV2.White40;
+      color: ColorDynamic.White40;
     }
 
     .SD-SnackbarContent-closeButton:hover,
     .SD-SnackbarContent-closeButton:focus {
-      color: ColorV2.White40;
-      background-color: ColorV2.White08;
+      color: ColorDynamic.White40;
+      background-color: ColorDynamic.White08;
     }
 
     .SD-SnackbarContent-variantError {
-      color: ColorV2.Red500;
-      background: ColorV2.Red50;
+      color: ColorDynamic.Red500;
+      background: ColorDynamic.Red50;
     }
 
     .SD-SnackbarContent-variantError .SD-SnackbarContent-closeButton {
-      color: ColorV2.Red500;
+      color: ColorDynamic.Red500;
     }
   `);
 });

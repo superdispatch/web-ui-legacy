@@ -53,7 +53,7 @@ it('checks default props', () => {
 it('checks component css', () => {
   expect(renderCSS(<Checkbox />, ['MuiCheckbox'])).toMatchInlineSnapshot(`
     .MuiCheckbox-root {
-      color: ColorV2.Dark100;
+      color: ColorDynamic.Dark100;
       width: 24px;
       height: 24px;
       padding: 0;
@@ -64,7 +64,7 @@ it('checks component css', () => {
     }
 
     .MuiCheckbox-root:hover {
-      background-color: ColorV2.Blue10;
+      background-color: ColorDynamic.Blue10;
     }
 
     .MuiCheckbox-root.MuiButtonBase-root {
@@ -80,12 +80,12 @@ it('checks component css', () => {
     }
 
     .MuiCheckbox-colorPrimary.Mui-checked.Mui-disabled {
-      color: ColorV2.Silver500;
+      color: ColorDynamic.Silver500;
     }
 
     .MuiCheckbox-colorPrimary:hover:not(.Mui-checked) {
-      color: ColorV2.Dark100;
-      background-color: ColorV2.Blue10;
+      color: ColorDynamic.Dark100;
+      background-color: ColorDynamic.Blue10;
     }
 
     .MuiCheckbox-colorPrimary.Mui-checked:hover {

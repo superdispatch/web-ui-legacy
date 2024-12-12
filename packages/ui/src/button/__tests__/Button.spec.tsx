@@ -101,119 +101,119 @@ it('checks component css', () => {
     }
 
     .MuiButton-text[data-color='error'] {
-      color: ColorV2.Red300;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Transparent;
+      color: ColorDynamic.Red300;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Transparent;
     }
 
     .MuiButton-text[data-color='success'] {
-      color: ColorV2.Green300;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Transparent;
+      color: ColorDynamic.Green300;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Transparent;
     }
 
     .MuiButton-text[data-color='white'] {
-      color: ColorV2.White;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Transparent;
+      color: ColorDynamic.White;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Transparent;
     }
 
     .MuiButton-text[data-color='white']:hover {
-      background-color: ColorV2.White10;
+      background-color: ColorDynamic.White10;
     }
 
     .MuiButton-text[data-color='white'][aria-expanded='true'] {
-      background-color: ColorV2.White10;
+      background-color: ColorDynamic.White10;
     }
 
     .MuiButton-text[data-color='white']:focus {
-      box-shadow: 0 0 0 2px ColorV2.White50;
-      background-color: ColorV2.White10;
+      box-shadow: 0 0 0 2px ColorDynamic.White50;
+      background-color: ColorDynamic.White10;
     }
 
     .MuiButton-text[data-color='white'].Mui-disabled {
-      color: ColorV2.White50;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Transparent;
+      color: ColorDynamic.White50;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Transparent;
     }
 
     .MuiButton-text[data-color='white'].Mui-disabled[aria-busy='true'] {
-      color: ColorV2.White50;
+      color: ColorDynamic.White50;
     }
 
     .MuiButton-text[data-color='success']:hover {
-      background-color: ColorV2.Green50;
+      background-color: ColorDynamic.Green50;
     }
 
     .MuiButton-text[data-color='success'][aria-expanded='true'] {
-      background-color: ColorV2.Green50;
+      background-color: ColorDynamic.Green50;
     }
 
     .MuiButton-text[data-color='success']:focus {
-      box-shadow: 0 0 0 2px ColorV2.Green100;
-      background-color: ColorV2.Green50;
+      box-shadow: 0 0 0 2px ColorDynamic.Green100;
+      background-color: ColorDynamic.Green50;
     }
 
     .MuiButton-text[data-color='success'].Mui-disabled {
-      color: ColorV2.Green100;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Transparent;
+      color: ColorDynamic.Green100;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Transparent;
     }
 
     .MuiButton-text[data-color='success'].Mui-disabled[aria-busy='true'] {
-      color: ColorV2.Green200;
+      color: ColorDynamic.Green200;
     }
 
     .MuiButton-text[data-color='error']:hover {
-      background-color: ColorV2.Red50;
+      background-color: ColorDynamic.Red50;
     }
 
     .MuiButton-text[data-color='error'][aria-expanded='true'] {
-      background-color: ColorV2.Red50;
+      background-color: ColorDynamic.Red50;
     }
 
     .MuiButton-text[data-color='error']:focus {
-      box-shadow: 0 0 0 2px ColorV2.Red100;
-      background-color: ColorV2.Red50;
+      box-shadow: 0 0 0 2px ColorDynamic.Red100;
+      background-color: ColorDynamic.Red50;
     }
 
     .MuiButton-text[data-color='error'].Mui-disabled {
-      color: ColorV2.Red100;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Transparent;
+      color: ColorDynamic.Red100;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Transparent;
     }
 
     .MuiButton-text[data-color='error'].Mui-disabled[aria-busy='true'] {
-      color: ColorV2.Red200;
+      color: ColorDynamic.Red200;
     }
 
     .MuiButton-textPrimary {
-      color: ColorV2.Blue300;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Transparent;
+      color: ColorDynamic.Blue300;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Transparent;
     }
 
     .MuiButton-textPrimary:hover {
-      background-color: ColorV2.Blue50;
+      background-color: ColorDynamic.Blue50;
     }
 
     .MuiButton-textPrimary[aria-expanded='true'] {
-      background-color: ColorV2.Blue50;
+      background-color: ColorDynamic.Blue50;
     }
 
     .MuiButton-textPrimary:focus {
-      box-shadow: 0 0 0 2px ColorV2.Blue100;
-      background-color: ColorV2.Blue50;
+      box-shadow: 0 0 0 2px ColorDynamic.Blue100;
+      background-color: ColorDynamic.Blue50;
     }
 
     .MuiButton-textPrimary.Mui-disabled {
-      color: ColorV2.Blue100;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Transparent;
+      color: ColorDynamic.Blue100;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Transparent;
     }
 
     .MuiButton-textPrimary.Mui-disabled[aria-busy='true'] {
-      color: ColorV2.Blue200;
+      color: ColorDynamic.Blue200;
     }
 
     @media (hover: none) {
@@ -237,131 +237,150 @@ it('checks component css', () => {
     }
 
     .MuiButton-outlined[data-color='error'] {
-      color: ColorV2.Red300;
-      box-shadow: inset 0 0 0 1px ColorV2.Red300, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.White;
+      color: ColorDynamic.Red300;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Red300,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.White;
     }
 
     .MuiButton-outlined[data-color='success'] {
-      color: ColorV2.Green300;
-      box-shadow: inset 0 0 0 1px ColorV2.Green300, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.White;
+      color: ColorDynamic.Green300;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Green300,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.White;
     }
 
     .MuiButton-outlined[data-color='white'] {
-      color: ColorV2.White;
-      box-shadow: inset 0 0 0 1px ColorV2.White50, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.Transparent;
+      color: ColorDynamic.White;
+      box-shadow: inset 0 0 0 1px ColorDynamic.White50,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Transparent;
     }
 
     .MuiButton-outlined[data-color='white']:hover {
-      color: ColorV2.White;
-      box-shadow: inset 0 0 0 1px ColorV2.White50, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.White10;
+      color: ColorDynamic.White;
+      box-shadow: inset 0 0 0 1px ColorDynamic.White50,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.White10;
     }
 
     .MuiButton-outlined[data-color='white'][aria-expanded='true'] {
-      color: ColorV2.White;
-      box-shadow: inset 0 0 0 1px ColorV2.White50, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.White10;
+      color: ColorDynamic.White;
+      box-shadow: inset 0 0 0 1px ColorDynamic.White50,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.White10;
     }
 
     .MuiButton-outlined[data-color='white']:focus {
-      box-shadow: inset 0 0 0 1px ColorV2.White50, 0 0 0 2px ColorV2.White40;
+      box-shadow: inset 0 0 0 1px ColorDynamic.White50,
+        0 0 0 2px ColorDynamic.White40;
     }
 
     .MuiButton-outlined[data-color='white'].Mui-disabled {
-      color: ColorV2.White50;
-      box-shadow: inset 0 0 0 1px ColorV2.White40, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.Transparent;
+      color: ColorDynamic.White50;
+      box-shadow: inset 0 0 0 1px ColorDynamic.White40,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Transparent;
     }
 
     .MuiButton-outlined[data-color='white'].Mui-disabled[aria-busy='true'] {
-      color: ColorV2.White50;
+      color: ColorDynamic.White50;
     }
 
     .MuiButton-outlined[data-color='success']:hover {
-      color: ColorV2.Green300;
-      box-shadow: inset 0 0 0 1px ColorV2.Green300, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.Green50;
+      color: ColorDynamic.Green300;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Green300,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Green50;
     }
 
     .MuiButton-outlined[data-color='success'][aria-expanded='true'] {
-      color: ColorV2.Green300;
-      box-shadow: inset 0 0 0 1px ColorV2.Green300, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.Green50;
+      color: ColorDynamic.Green300;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Green300,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Green50;
     }
 
     .MuiButton-outlined[data-color='success']:focus {
-      box-shadow: inset 0 0 0 1px ColorV2.Green300, 0 0 0 2px ColorV2.Green100;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Green300,
+        0 0 0 2px ColorDynamic.Green100;
     }
 
     .MuiButton-outlined[data-color='success'].Mui-disabled {
-      color: ColorV2.Green100;
-      box-shadow: inset 0 0 0 1px ColorV2.Green100, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.White;
+      color: ColorDynamic.Green100;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Green100,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.White;
     }
 
     .MuiButton-outlined[data-color='success'].Mui-disabled[aria-busy='true'] {
-      color: ColorV2.Green300;
+      color: ColorDynamic.Green300;
     }
 
     .MuiButton-outlined[data-color='error']:hover {
-      color: ColorV2.Red300;
-      box-shadow: inset 0 0 0 1px ColorV2.Red300, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.Red50;
+      color: ColorDynamic.Red300;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Red300,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Red50;
     }
 
     .MuiButton-outlined[data-color='error'][aria-expanded='true'] {
-      color: ColorV2.Red300;
-      box-shadow: inset 0 0 0 1px ColorV2.Red300, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.Red50;
+      color: ColorDynamic.Red300;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Red300,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Red50;
     }
 
     .MuiButton-outlined[data-color='error']:focus {
-      box-shadow: inset 0 0 0 1px ColorV2.Red300, 0 0 0 2px ColorV2.Red100;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Red300, 0 0 0 2px ColorDynamic.Red100;
     }
 
     .MuiButton-outlined[data-color='error'].Mui-disabled {
-      color: ColorV2.Red100;
-      box-shadow: inset 0 0 0 1px ColorV2.Red100, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.White;
+      color: ColorDynamic.Red100;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Red100,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.White;
     }
 
     .MuiButton-outlined[data-color='error'].Mui-disabled[aria-busy='true'] {
-      color: ColorV2.Red300;
+      color: ColorDynamic.Red300;
     }
 
     .MuiButton-outlinedPrimary {
-      color: ColorV2.Dark500;
-      box-shadow: inset 0 0 0 1px ColorV2.Silver500, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.White;
+      color: ColorDynamic.Dark500;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Silver500,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.White;
     }
 
     .MuiButton-outlinedPrimary:hover {
-      color: ColorV2.Blue300;
-      box-shadow: inset 0 0 0 1px ColorV2.Blue300, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.Blue50;
+      color: ColorDynamic.Blue300;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Blue300,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Blue50;
     }
 
     .MuiButton-outlinedPrimary[aria-expanded='true'] {
-      color: ColorV2.Blue300;
-      box-shadow: inset 0 0 0 1px ColorV2.Blue300, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.Blue50;
+      color: ColorDynamic.Blue300;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Blue300,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Blue50;
     }
 
     .MuiButton-outlinedPrimary:focus {
-      box-shadow: inset 0 0 0 1px ColorV2.Blue300, 0 0 0 2px ColorV2.Blue100;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Blue300,
+        0 0 0 2px ColorDynamic.Blue100;
     }
 
     .MuiButton-outlinedPrimary.Mui-disabled {
-      color: ColorV2.Silver500;
-      box-shadow: inset 0 0 0 1px ColorV2.Silver400, 0 0 0 2px ColorV2.Transparent;
-      background-color: ColorV2.White;
+      color: ColorDynamic.Silver500;
+      box-shadow: inset 0 0 0 1px ColorDynamic.Silver400,
+        0 0 0 2px ColorDynamic.Transparent;
+      background-color: ColorDynamic.White;
     }
 
     .MuiButton-outlinedPrimary.Mui-disabled[aria-busy='true'] {
-      color: ColorV2.Dark200;
+      color: ColorDynamic.Dark200;
     }
 
     @media (hover: none) {
@@ -395,99 +414,99 @@ it('checks component css', () => {
     }
 
     .MuiButton-contained[data-color='error'] {
-      color: ColorV2.White;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Red300;
+      color: ColorDynamic.White;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Red300;
     }
 
     .MuiButton-contained[data-color='success'] {
-      color: ColorV2.White;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Green300;
+      color: ColorDynamic.White;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Green300;
     }
 
     .MuiButton-contained[data-color='white'] {
-      color: ColorV2.White;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.White20;
+      color: ColorDynamic.White;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.White20;
     }
 
     .MuiButton-contained[data-color='white']:hover {
-      background-color: ColorV2.White40;
+      background-color: ColorDynamic.White40;
     }
 
     .MuiButton-contained[data-color='white'][aria-expanded='true'] {
-      background-color: ColorV2.White40;
+      background-color: ColorDynamic.White40;
     }
 
     .MuiButton-contained[data-color='white']:focus {
-      box-shadow: 0 0 0 3px ColorV2.White40;
+      box-shadow: 0 0 0 3px ColorDynamic.White40;
     }
 
     .MuiButton-contained[data-color='white'].Mui-disabled {
-      color: ColorV2.White50;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.White08;
+      color: ColorDynamic.White50;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.White08;
     }
 
     .MuiButton-contained[data-color='success']:hover {
-      background-color: ColorV2.Green500;
+      background-color: ColorDynamic.Green500;
     }
 
     .MuiButton-contained[data-color='success'][aria-expanded='true'] {
-      background-color: ColorV2.Green500;
+      background-color: ColorDynamic.Green500;
     }
 
     .MuiButton-contained[data-color='success']:focus {
-      box-shadow: 0 0 0 3px ColorV2.Green100;
+      box-shadow: 0 0 0 3px ColorDynamic.Green100;
     }
 
     .MuiButton-contained[data-color='success'].Mui-disabled {
-      color: ColorV2.White;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Green100;
+      color: ColorDynamic.White;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Green100;
     }
 
     .MuiButton-contained[data-color='error']:hover {
-      background-color: ColorV2.Red500;
+      background-color: ColorDynamic.Red500;
     }
 
     .MuiButton-contained[data-color='error'][aria-expanded='true'] {
-      background-color: ColorV2.Red500;
+      background-color: ColorDynamic.Red500;
     }
 
     .MuiButton-contained[data-color='error']:focus {
-      box-shadow: 0 0 0 3px ColorV2.Red100;
+      box-shadow: 0 0 0 3px ColorDynamic.Red100;
     }
 
     .MuiButton-contained[data-color='error'].Mui-disabled {
-      color: ColorV2.White;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Red100;
+      color: ColorDynamic.White;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Red100;
     }
 
     .MuiButton-containedPrimary {
-      color: ColorV2.White;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Blue300;
+      color: ColorDynamic.White;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Blue300;
     }
 
     .MuiButton-containedPrimary:hover {
-      background-color: ColorV2.Blue500;
+      background-color: ColorDynamic.Blue500;
     }
 
     .MuiButton-containedPrimary[aria-expanded='true'] {
-      background-color: ColorV2.Blue500;
+      background-color: ColorDynamic.Blue500;
     }
 
     .MuiButton-containedPrimary:focus {
-      box-shadow: 0 0 0 3px ColorV2.Blue100;
+      box-shadow: 0 0 0 3px ColorDynamic.Blue100;
     }
 
     .MuiButton-containedPrimary.Mui-disabled {
-      color: ColorV2.White;
-      box-shadow: 0 0 0 0px ColorV2.Transparent;
-      background-color: ColorV2.Blue100;
+      color: ColorDynamic.White;
+      box-shadow: 0 0 0 0px ColorDynamic.Transparent;
+      background-color: ColorDynamic.Blue100;
     }
 
     @media (hover: none) {
@@ -497,7 +516,7 @@ it('checks component css', () => {
     }
 
     .MuiButton-containedSecondary {
-      color: Color.DynamicWhite;
+      color: Color.White;
       background-color: #f50057;
     }
 

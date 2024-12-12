@@ -1,6 +1,6 @@
 import { SvgIcon, SvgIconProps } from '@material-ui/core';
 import { forwardRef } from 'react';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 const SelectIcon = forwardRef<SVGSVGElement, SvgIconProps>((props, ref) => (
@@ -17,7 +17,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
   theme.overrides.MuiFormLabel = {
     root: {
       ...theme.typography.body2,
-      color: ColorV2.Dark500,
+      color: ColorDynamic.Dark500,
 
       '&.MuiFormLabel-root': {
         fontSize: theme.spacing(2),
@@ -34,27 +34,27 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
     root: {
       ...theme.typography.body2,
       '&$disabled': {
-        backgroundColor: ColorV2.Silver30,
+        backgroundColor: ColorDynamic.Silver30,
       },
-      '&$error': { borderColor: ColorV2.Red500 },
+      '&$error': { borderColor: ColorDynamic.Red500 },
       '&.MuiOutlinedInput-root': {
         '& fieldset': {
-          borderColor: ColorV2.Silver500,
+          borderColor: ColorDynamic.Silver500,
         },
         '&:hover fieldset': {
-          borderColor: ColorV2.Dark100,
+          borderColor: ColorDynamic.Dark100,
         },
         '&.Mui-focused fieldset': {
-          borderColor: ColorV2.Blue500,
+          borderColor: ColorDynamic.Blue500,
         },
         '&.Mui-error fieldset': {
-          borderColor: ColorV2.Red500,
+          borderColor: ColorDynamic.Red500,
         },
         '&.Mui-error:hover fieldset': {
-          borderColor: ColorV2.Red500,
+          borderColor: ColorDynamic.Red500,
         },
         '&.Mui-disabled fieldset': {
-          borderColor: ColorV2.Silver400,
+          borderColor: ColorDynamic.Silver400,
         },
       },
     },
@@ -62,7 +62,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
       textOverflow: 'ellipsis',
 
       '&::placeholder': {
-        color: ColorV2.Dark100,
+        color: ColorDynamic.Dark100,
         opacity: 1,
       },
 
@@ -114,7 +114,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
 
     notchedOutline: {
       top: 0,
-      borderColor: ColorV2.Silver500,
+      borderColor: ColorDynamic.Silver500,
       '& legend': { display: 'none' },
     },
   };
@@ -126,7 +126,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
   theme.overrides.MuiSelect = {
     icon: {
       top: 'calc(50% - 0.5em)',
-      '$disabled &': { color: ColorV2.Dark100 },
+      '$disabled &': { color: ColorDynamic.Dark100 },
 
       fontSize: theme.spacing(3),
       [sm]: { fontSize: theme.spacing(2) },
@@ -179,11 +179,11 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
   theme.overrides.MuiFormHelperText = {
     root: {
       ...theme.typography.body2,
-      color: ColorV2.Dark300,
+      color: ColorDynamic.Dark300,
       marginTop: theme.spacing(0.5),
 
       '&.Mui-error': {
-        color: ColorV2.Red500,
+        color: ColorDynamic.Red500,
       },
       '&.MuiFormHelperText-root': {
         fontSize: theme.spacing(2),

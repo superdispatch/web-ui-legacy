@@ -1,6 +1,6 @@
 import { Breakpoints } from '@material-ui/core/styles/createBreakpoints';
 import { TypographyOptions } from '@material-ui/core/styles/createTypography';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function createTypographyOptions(
@@ -126,10 +126,10 @@ export function overrideTypography(theme: SuperDispatchTheme): void {
 
   theme.overrides.MuiTypography = {
     colorError: {
-      color: ColorV2.Red500,
+      color: ColorDynamic.Red500,
     },
     colorPrimary: {
-      color: ColorV2.Blue500,
+      color: ColorDynamic.Blue500,
     },
   };
 }

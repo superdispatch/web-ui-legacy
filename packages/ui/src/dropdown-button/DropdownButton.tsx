@@ -8,7 +8,7 @@ import {
 import * as React from 'react';
 import { forwardRef, MouseEvent, ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
-import { ColorV2, mergeRefs, useUID } from '..';
+import { ColorDynamic, mergeRefs, useUID } from '..';
 import { Button, ButtonProps } from '../button/Button';
 
 function CaretDownIcon(): ReactElement {
@@ -25,7 +25,8 @@ function CaretDownIcon(): ReactElement {
 const CaretButton = styled(Button)`
   width: auto;
   ${({ variant }) =>
-    variant === 'contained' && `border-left: 1px solid ${ColorV2.Blue500}`};
+    variant === 'contained' &&
+    `border-left: 1px solid ${ColorDynamic.Blue500}`};
 `;
 
 interface DropdownButtonProps extends Omit<ButtonProps, 'children'> {

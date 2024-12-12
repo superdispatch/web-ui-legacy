@@ -1,4 +1,4 @@
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideSwitch(theme: SuperDispatchTheme): void {
@@ -24,7 +24,7 @@ export function overrideSwitch(theme: SuperDispatchTheme): void {
 
     track: {
       opacity: undefined,
-      boxShadow: `0 0 0 0 ${ColorV2.Transparent}`,
+      boxShadow: `0 0 0 0 ${ColorDynamic.Transparent}`,
 
       transition: theme.transitions.create(['box-shadow', 'background-color'], {
         duration: theme.transitions.duration.shortest,
@@ -35,7 +35,7 @@ export function overrideSwitch(theme: SuperDispatchTheme): void {
     },
 
     thumb: {
-      color: ColorV2.White,
+      color: ColorDynamic.White,
       boxShadow: undefined,
       width: theme.spacing(3),
       height: theme.spacing(3),
@@ -68,20 +68,20 @@ export function overrideSwitch(theme: SuperDispatchTheme): void {
         '&:hover': {
           backgroundColor: undefined,
 
-          '& + $track': { backgroundColor: ColorV2.Blue500 },
+          '& + $track': { backgroundColor: ColorDynamic.Blue500 },
         },
       },
 
-      '& + $track': { backgroundColor: ColorV2.Silver500 },
+      '& + $track': { backgroundColor: ColorDynamic.Silver500 },
 
-      '&$disabled + $track': { backgroundColor: ColorV2.Dark30 },
+      '&$disabled + $track': { backgroundColor: ColorDynamic.Dark30 },
 
-      '&$checked$disabled + $track': { backgroundColor: ColorV2.Blue30 },
+      '&$checked$disabled + $track': { backgroundColor: ColorDynamic.Blue30 },
 
-      '&:hover + $track': { backgroundColor: ColorV2.Dark100 },
+      '&:hover + $track': { backgroundColor: ColorDynamic.Dark100 },
 
       '&.Mui-focusVisible + $track': {
-        boxShadow: `0 0 0 3px ${ColorV2.Blue30}`,
+        boxShadow: `0 0 0 3px ${ColorDynamic.Blue30}`,
       },
     },
   };

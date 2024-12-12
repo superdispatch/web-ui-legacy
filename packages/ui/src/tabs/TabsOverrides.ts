@@ -1,4 +1,4 @@
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideTabs(theme: SuperDispatchTheme): void {
@@ -12,7 +12,7 @@ export function overrideTabs(theme: SuperDispatchTheme): void {
     root: { minHeight: theme.spacing(6) },
     scrollButtons: {
       opacity: 1,
-      color: ColorV2.Dark100,
+      color: ColorDynamic.Dark100,
       width: theme.spacing(4),
       transition: theme.transitions.create('opacity', {
         duration: theme.transitions.duration.short,
@@ -38,8 +38,8 @@ export function overrideTabs(theme: SuperDispatchTheme): void {
     },
 
     textColorPrimary: {
-      color: ColorV2.Dark500,
-      '&:hover, &:focus': { color: ColorV2.Blue300 },
+      color: ColorDynamic.Dark500,
+      '&:hover, &:focus': { color: ColorDynamic.Blue300 },
     },
   };
 }

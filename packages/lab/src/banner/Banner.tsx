@@ -1,4 +1,4 @@
-import { ColorV2 } from '@superdispatch/ui';
+import { ColorDynamic } from '@superdispatch/ui';
 import { forwardRef, useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 // eslint-disable-next-line import/no-internal-modules
@@ -13,8 +13,8 @@ import styled, {
 function enterMixin(border: BorderPlacement): readonly SimpleInterpolation[] {
   return css`
   min-height: 56px;
-  color: ${ColorV2.Dark500};
-  background-color: ${ColorV2.White};
+  color: ${ColorDynamic.Dark500};
+  background-color: ${ColorDynamic.White};
 
   border-${border}: 1px #dfe3e8 solid;
 `;
@@ -24,20 +24,20 @@ function enterAnimation(border: BorderPlacement): Keyframes {
   return keyframes`
     0% { 
       min-height: 0; 
-      color: ${ColorV2.White};  
-      background-color: ${ColorV2.Dark500};
+      color: ${ColorDynamic.White};  
+      background-color: ${ColorDynamic.Dark500};
     }
   
     50% { 
       min-height: 56px; 
-      color: ${ColorV2.White};
-      background-color: ${ColorV2.Dark500};
+      color: ${ColorDynamic.White};
+      background-color: ${ColorDynamic.Dark500};
     } 
   
     70% { 
       min-height: 56px; 
-      color: ${ColorV2.White};
-      background-color: ${ColorV2.Dark500};
+      color: ${ColorDynamic.White};
+      background-color: ${ColorDynamic.Dark500};
     } 
   
     100% {
@@ -78,8 +78,8 @@ const BannerContent = styled(CustomTransition)<CustomerTransitionProps>(
       align-items: center;
       justify-content: center;
 
-      color: ${ColorV2.White};
-      background-color: ${ColorV2.White};
+      color: ${ColorDynamic.White};
+      background-color: ${ColorDynamic.White};
 
       &-enter-active {
         animation: ${enterAnimation(border)} 2s 1s forwards;

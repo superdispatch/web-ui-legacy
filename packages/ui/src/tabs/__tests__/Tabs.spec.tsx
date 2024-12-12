@@ -77,7 +77,7 @@ it('checks component css', () => {
     }
 
     .MuiTab-textColorPrimary {
-      color: ColorV2.Dark500;
+      color: ColorDynamic.Dark500;
     }
 
     .MuiTab-textColorPrimary.Mui-selected {
@@ -90,7 +90,7 @@ it('checks component css', () => {
 
     .MuiTab-textColorPrimary:hover,
     .MuiTab-textColorPrimary:focus {
-      color: ColorV2.Blue300;
+      color: ColorDynamic.Blue300;
     }
 
     .MuiTab-textColorSecondary {
@@ -170,7 +170,7 @@ it('checks component css', () => {
     }
 
     .MuiTabs-scrollButtons {
-      color: ColorV2.Dark100;
+      color: ColorDynamic.Dark100;
       width: 32px;
       opacity: 1;
       transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;

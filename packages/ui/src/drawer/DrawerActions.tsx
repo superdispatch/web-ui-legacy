@@ -2,7 +2,7 @@ import { AppBar, Toolbar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import clsx from 'clsx';
 import { forwardRef, HTMLAttributes } from 'react';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 import { VisibilityObserver } from '../utils/VisibilityObserver';
 
@@ -18,7 +18,7 @@ const useStyles = makeStyles(
         transition: theme.transitions.create(['border-color']),
 
         '&:not($appBarSticky)': {
-          borderTopColor: ColorV2.Transparent,
+          borderTopColor: ColorDynamic.Transparent,
         },
       },
     },

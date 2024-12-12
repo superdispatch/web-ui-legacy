@@ -17,38 +17,38 @@ it('checks component css', () => {
       border-radius: 4px;
       flex-direction: column;
       justify-content: center;
-      background-color: ColorV2.White;
+      background-color: ColorDynamic.White;
     }
 
     .SD-CardButton-disabled {
-      color: ColorV2.Dark200;
-      border-color: ColorV2.Silver500;
-      background-color: ColorV2.Silver100;
+      color: ColorDynamic.Dark200;
+      border-color: ColorDynamic.Silver500;
+      background-color: ColorDynamic.Silver100;
     }
 
     .SD-CardButton-error {
-      color: ColorV2.Red500;
-      border-color: ColorV2.Red500;
-      background-color: ColorV2.Red50;
+      color: ColorDynamic.Red500;
+      border-color: ColorDynamic.Red500;
+      background-color: ColorDynamic.Red50;
     }
 
     .SD-CardButton-error:focus {
-      background-color: ColorV2.Red75;
+      background-color: ColorDynamic.Red75;
     }
 
     .SD-CardButton-primary {
-      color: ColorV2.Blue500;
-      border-color: ColorV2.Silver500;
+      color: ColorDynamic.Blue500;
+      border-color: ColorDynamic.Silver500;
     }
 
     .SD-CardButton-primary:focus {
-      background-color: ColorV2.Blue50;
+      background-color: ColorDynamic.Blue50;
     }
 
     .SD-CardButton-primary:hover,
     .SD-CardButton-primary:active {
-      border-color: ColorV2.Blue300;
-      background-color: ColorV2.Blue50;
+      border-color: ColorDynamic.Blue300;
+      background-color: ColorDynamic.Blue50;
     }
 
     .SD-CardButton-sizeSmall {

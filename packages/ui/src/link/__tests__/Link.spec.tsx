@@ -16,7 +16,7 @@ it('checks component css', () => {
   expect(renderCSS(<Link>Text</Link>, ['MuiLink'])).toMatchInlineSnapshot(`
     .MuiLink-root {
       background-size: 100% 1px;
-      background-color: ColorV2.Transparent;
+      background-color: ColorDynamic.Transparent;
       background-repeat: repeat-x;
       background-position: 0 100%;
     }
@@ -26,11 +26,11 @@ it('checks component css', () => {
     }
 
     .MuiLink-root:disabled {
-      color: ColorV2.Dark100;
+      color: ColorDynamic.Dark100;
       background-image: linear-gradient(
         to right,
-        ColorV2.Silver500 0%,
-        ColorV2.Silver500 100%
+        ColorDynamic.Silver500 0%,
+        ColorDynamic.Silver500 100%
       );
     }
 
@@ -38,8 +38,8 @@ it('checks component css', () => {
       text-decoration: none;
       background-image: linear-gradient(
         to right,
-        ColorV2.Silver500 0%,
-        ColorV2.Silver500 100%
+        ColorDynamic.Silver500 0%,
+        ColorDynamic.Silver500 100%
       );
     }
 
@@ -61,11 +61,11 @@ it('checks component css', () => {
     .MuiLink-root.MuiTypography-colorTextSecondary:focus,
     .MuiLink-root.MuiTypography-colorTextSecondary:hover,
     .MuiLink-root.MuiTypography-colorTextSecondary:active {
-      color: ColorV2.Blue500;
+      color: ColorDynamic.Blue500;
       background-image: linear-gradient(
         to right,
-        ColorV2.Blue500 0%,
-        ColorV2.Blue500 100%
+        ColorDynamic.Blue500 0%,
+        ColorDynamic.Blue500 100%
       );
     }
 
@@ -107,11 +107,11 @@ it('checks component css', () => {
     .MuiLink-root:disabled:focus,
     .MuiLink-root:disabled:hover,
     .MuiLink-root:disabled:active {
-      color: ColorV2.Dark100;
+      color: ColorDynamic.Dark100;
       background-image: linear-gradient(
         to right,
-        ColorV2.Silver500 0%,
-        ColorV2.Silver500 100%
+        ColorDynamic.Silver500 0%,
+        ColorDynamic.Silver500 100%
       );
     }
 

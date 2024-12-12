@@ -1,5 +1,5 @@
 import { SvgIcon } from '@material-ui/core';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideChip(theme: SuperDispatchTheme): void {
@@ -26,10 +26,10 @@ export function overrideChip(theme: SuperDispatchTheme): void {
       color: undefined,
       height: undefined,
       borderRadius: 4,
-      backgroundColor: ColorV2.Silver200,
+      backgroundColor: ColorDynamic.Silver200,
       '&$disabled': {
         opacity: undefined,
-        color: ColorV2.Dark100,
+        color: ColorDynamic.Dark100,
       },
     },
 
@@ -51,17 +51,17 @@ export function overrideChip(theme: SuperDispatchTheme): void {
         boxShadow: undefined,
       },
       '&:focus': {
-        boxShadow: `0 0 0 2px ${ColorV2.Dark30}`,
+        boxShadow: `0 0 0 2px ${ColorDynamic.Dark30}`,
       },
       '&:active, &:hover': {
-        backgroundColor: ColorV2.Silver400,
+        backgroundColor: ColorDynamic.Silver400,
       },
     },
 
     deletable: {
       '&:focus': {
         backgroundColor: undefined,
-        boxShadow: `0 0 0 2px ${ColorV2.Silver400}`,
+        boxShadow: `0 0 0 2px ${ColorDynamic.Silver400}`,
       },
     },
 
@@ -73,13 +73,13 @@ export function overrideChip(theme: SuperDispatchTheme): void {
 
       '&:active, &:hover, &:focus': {
         '& > svg': {
-          backgroundColor: ColorV2.Silver400,
+          backgroundColor: ColorDynamic.Silver400,
         },
       },
 
       '& > svg': {
         borderRadius: '50%',
-        color: ColorV2.Dark100,
+        color: ColorDynamic.Dark100,
         fontSize: '1em',
       },
     },
@@ -95,7 +95,7 @@ export function overrideChip(theme: SuperDispatchTheme): void {
     },
 
     icon: {
-      color: ColorV2.Dark100,
+      color: ColorDynamic.Dark100,
       fontSize: '1em',
       marginRight: undefined,
     },

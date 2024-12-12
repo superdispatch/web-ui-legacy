@@ -41,13 +41,13 @@ import {
   createTypographyOptions,
   overrideTypography,
 } from '../typography/TypographyOverrides';
-import { Color, ColorDarkInternal } from './Color';
+import { Color, ColorDark } from './Color';
 import { GlobalStyles } from './GlobalStyles';
 import { SuperDispatchTheme } from './SuperDispatchTheme';
 
 function createSuperDispatchTheme(type?: 'light' | 'dark'): SuperDispatchTheme {
   const breakpoints = createBreakpoints({});
-  const color = type === 'dark' ? ColorDarkInternal : Color;
+  const color = type === 'dark' ? ColorDark : Color;
   const theme = createTheme({
     breakpoints,
     palette: {

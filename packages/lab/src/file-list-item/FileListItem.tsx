@@ -9,7 +9,7 @@ import {
 import { CheckCircle, Delete, Error, Image, Refresh } from '@material-ui/icons';
 import { mdiFilePdfBox, mdiTextBox } from '@mdi/js';
 import {
-  ColorV2,
+  ColorDynamic,
   Column,
   Columns,
   useResponsiveValue,
@@ -128,7 +128,10 @@ export const FileListItem = forwardRef<HTMLDivElement, FileListItemProps>(
               </IconButton>
             ) : !isHovered && status === 'success' ? (
               <IconButton size="small">
-                <CheckCircle fontSize="small" htmlColor={ColorV2.Green300} />
+                <CheckCircle
+                  fontSize="small"
+                  htmlColor={ColorDynamic.Green300}
+                />
               </IconButton>
             ) : canDelete ? (
               <Tooltip title="Delete">

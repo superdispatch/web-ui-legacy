@@ -1,5 +1,5 @@
 import { ButtonBase, ButtonBaseProps, Typography } from '@material-ui/core';
-import { ColorV2, Stack } from '@superdispatch/ui';
+import { ColorDynamic, Stack } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
 
@@ -9,10 +9,10 @@ const ButtonRoot = styled(ButtonBase)`
   border-width: 1px;
   border-radius: 4px;
   border-style: solid;
-  border-color: ${ColorV2.Silver500};
+  border-color: ${ColorDynamic.Silver500};
 
-  color: ${ColorV2.Dark100};
-  background-color: ${ColorV2.White};
+  color: ${ColorDynamic.Dark100};
+  background-color: ${ColorDynamic.White};
 
   & svg {
     color: inherit;
@@ -24,35 +24,35 @@ const ButtonRoot = styled(ButtonBase)`
   }
 
   &[data-disabled='true'] {
-    color: ${ColorV2.Silver500};
-    border-color: ${ColorV2.Silver400};
+    color: ${ColorDynamic.Silver500};
+    border-color: ${ColorDynamic.Silver400};
   }
 
   &[data-variant='success'] {
     &:hover {
-      color: ${ColorV2.Green300};
-      box-shadow: 0 0 0 2px ${ColorV2.Green100};
-      border-color: ${ColorV2.Green300};
+      color: ${ColorDynamic.Green300};
+      box-shadow: 0 0 0 2px ${ColorDynamic.Green100};
+      border-color: ${ColorDynamic.Green300};
     }
 
     &[data-active='true'] {
-      color: ${ColorV2.Green300};
-      border-color: ${ColorV2.Green300};
-      background-color: ${ColorV2.Green50};
+      color: ${ColorDynamic.Green300};
+      border-color: ${ColorDynamic.Green300};
+      background-color: ${ColorDynamic.Green50};
     }
   }
 
   &[data-variant='danger'] {
     &:hover {
-      color: ${ColorV2.Red300};
-      box-shadow: 0 0 0 2px ${ColorV2.Red100};
-      border-color: ${ColorV2.Red300};
+      color: ${ColorDynamic.Red300};
+      box-shadow: 0 0 0 2px ${ColorDynamic.Red100};
+      border-color: ${ColorDynamic.Red300};
     }
 
     &[data-active='true'] {
-      color: ${ColorV2.Red300};
-      border-color: ${ColorV2.Red300};
-      background-color: ${ColorV2.Red50};
+      color: ${ColorDynamic.Red300};
+      border-color: ${ColorDynamic.Red300};
+      background-color: ${ColorDynamic.Red50};
     }
   }
 `;

@@ -3,7 +3,7 @@ import { CSSProperties, makeStyles } from '@material-ui/styles';
 import clsx from 'clsx';
 import { forwardRef, ReactNode } from 'react';
 import { OverflowText, OverflowTextProps } from '../overflow-text/OverflowText';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 import { isEmptyReactNode } from '../utils/isEmptyReactNode';
 import { useUID } from '../utils/useUID';
@@ -42,7 +42,7 @@ const useStyles = makeStyles(
       marginRight: theme.spacing(1),
 
       '& > .MuiSvgIcon-root': {
-        color: ColorV2.Dark100,
+        color: ColorDynamic.Dark100,
         fontSize: theme.spacing(3),
 
         [theme.breakpoints.up('sm')]: {

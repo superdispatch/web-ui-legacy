@@ -18,7 +18,6 @@ export enum Color {
   //
 
   White = '#fff',
-  DynamicWhite = '#fff',
   White50 = 'rgba(255, 255, 255, 0.5)',
   White40 = 'rgba(255, 255, 255, 0.4)',
   White20 = 'rgba(255, 255, 255, 0.2)',
@@ -170,22 +169,21 @@ export enum Color {
   Yellow500 = '#B84807',
 }
 
-// `ColorDarkInternal`: Represents the color palette for dark themes.
+// `ColorDark`: Represents the color palette for dark themes.
 //     - Tailored for dark theme usage.
 //     - Update colors by modifying the associated values.
 
-export enum ColorDarkInternal {
+export enum ColorDark {
   //
   // ???
   //
 
-  White = '#fff',
-  DynamicWhite = '#192334',
-  White50 = 'rgba(255, 255, 255, 0.5)',
-  White40 = 'rgba(255, 255, 255, 0.4)',
-  White20 = 'rgba(255, 255, 255, 0.2)',
-  White10 = 'rgba(255, 255, 255, 0.1)',
-  White08 = 'rgba(255, 255, 255, 0.08)',
+  White = '#151B22',
+  White50 = 'rgba(21, 27, 34, 0.5)',
+  White40 = 'rgba(21, 27, 34, 0.4)',
+  White20 = 'rgba(21, 27, 34, 0.2)',
+  White10 = 'rgba(21, 27, 34, 0.1)',
+  White08 = 'rgba(21, 27, 34, 0.08)',
   Transparent = 'rgba(0, 0, 0, 0)',
 
   Black = '#000',
@@ -332,13 +330,12 @@ export enum ColorDarkInternal {
   Yellow500 = '#FCA542',
 }
 
-// `ColorV2`: Represents a newer version of the color palette using CSS variables.
+// `ColorDynamic`: Represents a newer version of the color palette using CSS variables.
 //   - Designed for more dynamic theming using CSS custom properties.
 //   - Update colors by changing the CSS variable references.
 
-export enum ColorV2 {
+export enum ColorDynamic {
   White = 'var(--sd-white)',
-  DynamicWhite = 'var(--sd-dynamic-white)',
   White50 = 'var(--sd-white-50)',
   White40 = 'var(--sd-white-40)',
   White20 = 'var(--sd-white-20)',
@@ -485,17 +482,24 @@ export enum ColorV2 {
 }
 
 export type ColorProp = keyof typeof Color;
-export type ColorPropV2 = keyof typeof ColorV2;
-
+export type ColorDynamicProp = keyof typeof ColorDynamic;
+export type ColorDarkProp = keyof typeof ColorDark;
 export function isColorProp(name: unknown): name is ColorProp {
   return (
     typeof name == 'string' && Object.prototype.hasOwnProperty.call(Color, name)
   );
 }
 
-export function isColorPropV2(name: unknown): name is ColorPropV2 {
+export function isColorDynamicProp(name: unknown): name is ColorDynamicProp {
   return (
     typeof name == 'string' &&
-    Object.prototype.hasOwnProperty.call(ColorV2, name)
+    Object.prototype.hasOwnProperty.call(ColorDynamic, name)
+  );
+}
+
+export function isColorPropDark(name: unknown): name is ColorDarkProp {
+  return (
+    typeof name == 'string' &&
+    Object.prototype.hasOwnProperty.call(ColorDark, name)
   );
 }

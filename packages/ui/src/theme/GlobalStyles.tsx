@@ -1,14 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
-import { Color, ColorDarkInternal } from './Color';
+import { Color, ColorDark } from './Color';
 import { SuperDispatchTheme } from './SuperDispatchTheme';
 
 export const GlobalStyles = createGlobalStyle(
   ({ theme }: { theme: SuperDispatchTheme }) => {
-    const color = theme.palette.type === 'dark' ? ColorDarkInternal : Color;
+    const color = theme.palette.type === 'dark' ? ColorDark : Color;
     return `
     :root{
       --sd-white: ${color.White};
-      --sd-dynamic-white: ${color.DynamicWhite};
       --sd-white-50: ${color.White50};
       --sd-white-40: ${color.White40};
       --sd-white-20: ${color.White20};
