@@ -1,5 +1,5 @@
 import { CircularProgress } from '@material-ui/core';
-import { ColorV2 } from '@superdispatch/ui';
+import { Color, ColorDynamic } from '@superdispatch/ui';
 import {
   AriaAttributes,
   FocusEventHandler,
@@ -38,22 +38,22 @@ interface ButtonVariables {
   paddingY: number;
   paddingYMobile: number;
 
-  textColor: ColorV2;
-  textColorHovered: ColorV2;
-  textColorDisabled: ColorV2;
+  textColor: ColorDynamic | Color;
+  textColorHovered: ColorDynamic | Color;
+  textColorDisabled: ColorDynamic | Color;
 
-  iconColor: ColorV2;
+  iconColor: ColorDynamic | Color;
 
-  outlineColor: ColorV2;
+  outlineColor: ColorDynamic;
 
-  borderColor: ColorV2;
-  borderColorHovered: ColorV2;
-  borderColorDisabled: ColorV2;
+  borderColor: ColorDynamic;
+  borderColorHovered: ColorDynamic;
+  borderColorDisabled: ColorDynamic;
 
-  backgroundColor: ColorV2;
-  backgroundColorActive: ColorV2;
-  backgroundColorHovered: ColorV2;
-  backgroundColorDisabled: ColorV2;
+  backgroundColor: ColorDynamic;
+  backgroundColorActive: ColorDynamic;
+  backgroundColorHovered: ColorDynamic;
+  backgroundColorDisabled: ColorDynamic;
 }
 
 function createButtonVariables(
@@ -69,19 +69,19 @@ function createButtonVariables(
     paddingXMobile = size === 'large' ? 64 : 24,
     paddingYMobile = size === 'large' ? 14 : size === 'small' ? 4 : 10,
 
-    textColor = ColorV2.Transparent,
+    textColor = ColorDynamic.Transparent,
     textColorHovered = textColor,
     textColorDisabled = textColor,
 
     iconColor = textColor,
 
-    outlineColor = ColorV2.Transparent,
+    outlineColor = ColorDynamic.Transparent,
 
-    borderColor = ColorV2.Transparent,
+    borderColor = ColorDynamic.Transparent,
     borderColorHovered = borderColor,
     borderColorDisabled = borderColor,
 
-    backgroundColor = ColorV2.Transparent,
+    backgroundColor = ColorDynamic.Transparent,
     backgroundColorHovered = backgroundColor,
     backgroundColorActive = backgroundColorHovered,
     backgroundColorDisabled = backgroundColor,
@@ -119,16 +119,16 @@ function createButtonVariables(
 
 function getDefaultVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: ColorV2.White,
-    outlineColor: ColorV2.Blue30,
-    backgroundColor: ColorV2.Blue300,
+    textColor: Color.White,
+    outlineColor: ColorDynamic.Blue30,
+    backgroundColor: ColorDynamic.Blue300,
 
-    textColorHovered: ColorV2.White,
-    backgroundColorHovered: ColorV2.Blue500,
+    textColorHovered: Color.White,
+    backgroundColorHovered: ColorDynamic.Blue500,
 
-    backgroundColorActive: ColorV2.Blue400,
+    backgroundColorActive: ColorDynamic.Blue400,
 
-    backgroundColorDisabled: ColorV2.Blue30,
+    backgroundColorDisabled: ColorDynamic.Blue30,
   });
 }
 
@@ -138,82 +138,82 @@ function getPrimaryVariables(size: ButtonSizeProp): ButtonVariables {
 
 function getNeutralVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: ColorV2.Dark500,
-    borderColor: ColorV2.Silver500,
-    outlineColor: ColorV2.Blue30,
-    backgroundColor: ColorV2.White,
+    textColor: ColorDynamic.Dark500,
+    borderColor: ColorDynamic.Silver500,
+    outlineColor: ColorDynamic.Blue30,
+    backgroundColor: ColorDynamic.White,
 
-    textColorHovered: ColorV2.Blue500,
-    borderColorHovered: ColorV2.Blue500,
-    backgroundColorHovered: ColorV2.Blue50,
+    textColorHovered: ColorDynamic.Blue500,
+    borderColorHovered: ColorDynamic.Blue500,
+    backgroundColorHovered: ColorDynamic.Blue50,
 
-    backgroundColorActive: ColorV2.Blue75,
+    backgroundColorActive: ColorDynamic.Blue75,
 
-    textColorDisabled: ColorV2.Silver500,
-    iconColor: ColorV2.Dark100,
+    textColorDisabled: ColorDynamic.Silver500,
+    iconColor: ColorDynamic.Dark100,
   });
 }
 
 function getCriticalVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: ColorV2.Red500,
-    borderColor: ColorV2.Red500,
-    outlineColor: ColorV2.Red30,
-    backgroundColor: ColorV2.Red50,
+    textColor: ColorDynamic.Red500,
+    borderColor: ColorDynamic.Red500,
+    outlineColor: ColorDynamic.Red30,
+    backgroundColor: ColorDynamic.Red50,
 
-    backgroundColorHovered: ColorV2.Red75,
+    backgroundColorHovered: ColorDynamic.Red75,
 
-    backgroundColorActive: ColorV2.Red10,
+    backgroundColorActive: ColorDynamic.Red10,
 
-    textColorDisabled: ColorV2.Red30,
-    borderColorDisabled: ColorV2.Red30,
-    backgroundColorDisabled: ColorV2.Red50,
+    textColorDisabled: ColorDynamic.Red30,
+    borderColorDisabled: ColorDynamic.Red30,
+    backgroundColorDisabled: ColorDynamic.Red50,
   });
 }
 
 function getTextVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: ColorV2.Blue500,
+    textColor: Color.Blue500,
 
-    outlineColor: ColorV2.Blue30,
+    outlineColor: ColorDynamic.Blue30,
 
-    textColorHovered: ColorV2.Blue500,
-    backgroundColorHovered: ColorV2.Blue50,
+    textColorHovered: Color.Blue500,
+    backgroundColorHovered: ColorDynamic.Blue50,
 
-    backgroundColorActive: ColorV2.Blue75,
+    backgroundColorActive: ColorDynamic.Blue75,
 
-    textColorDisabled: ColorV2.Blue30,
+    textColorDisabled: ColorDynamic.Blue30,
   });
 }
 
 function getInvertedVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: ColorV2.White,
-    outlineColor: ColorV2.White40,
-    backgroundColor: ColorV2.White20,
+    textColor: ColorDynamic.White,
+    outlineColor: ColorDynamic.White40,
+    backgroundColor: ColorDynamic.White20,
 
-    textColorHovered: ColorV2.White,
-    backgroundColorHovered: ColorV2.White40,
+    textColorHovered: ColorDynamic.White,
+    backgroundColorHovered: ColorDynamic.White40,
 
-    backgroundColorActive: ColorV2.White20,
+    backgroundColorActive: ColorDynamic.White20,
 
-    textColorDisabled: ColorV2.White50,
-    backgroundColorDisabled: ColorV2.White08,
+    textColorDisabled: ColorDynamic.White50,
+    backgroundColorDisabled: ColorDynamic.White08,
   });
 }
 
 function getSuccessVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: ColorV2.White,
-    outlineColor: ColorV2.Green30,
-    backgroundColor: ColorV2.Green300,
+    textColor: Color.White,
+    outlineColor: ColorDynamic.Green30,
+    backgroundColor: ColorDynamic.Green300,
 
-    backgroundColorHovered: ColorV2.Green500,
+    backgroundColorHovered: ColorDynamic.Green500,
 
-    backgroundColorActive: ColorV2.Green500,
+    backgroundColorActive: ColorDynamic.Green500,
 
-    textColorDisabled: ColorV2.White,
-    backgroundColorDisabled: ColorV2.Green30,
+    textColorDisabled: Color.White,
+    backgroundColorDisabled: ColorDynamic.Green30,
   });
 }
 
@@ -273,7 +273,7 @@ const ButtonRoot = styled.button<ButtonStyleProps>(
       --button-visibility: visible;
       --button-text-color: ${variables.textColor};
       --button-border-color: ${variables.borderColor};
-      --button-outline-color: ${ColorV2.Transparent};
+      --button-outline-color: ${ColorDynamic.Transparent};
       --button-background-color: ${variables.backgroundColor};
       --button-icon-color: ${variables.iconColor};
 

@@ -1,5 +1,5 @@
 import {
-  ColorV2,
+  ColorDynamic,
   parseResponsiveProp,
   ResponsiveProp,
   ResponsivePropTuple,
@@ -33,16 +33,16 @@ export type TextDisplayProp =
 const normalizeTextColor = createRuleNormalizer<TextColorProp>({
   inherit: 'inherit',
 
-  primary: ColorV2.Dark500,
-  secondary: ColorV2.Dark300,
-  'light-gray': ColorV2.Dark100,
-  white: ColorV2.White,
-  blue: ColorV2.Blue500,
-  green: ColorV2.Green500,
-  purple: ColorV2.Purple500,
-  red: ColorV2.Red500,
-  teal: ColorV2.Teal500,
-  yellow: ColorV2.Yellow500,
+  primary: ColorDynamic.Dark500,
+  secondary: ColorDynamic.Dark300,
+  'light-gray': ColorDynamic.Dark100,
+  white: ColorDynamic.White,
+  blue: ColorDynamic.Blue500,
+  green: ColorDynamic.Green500,
+  purple: ColorDynamic.Purple500,
+  red: ColorDynamic.Red500,
+  teal: ColorDynamic.Teal500,
+  yellow: ColorDynamic.Yellow500,
 });
 
 export type TextVariantProp =

@@ -10,7 +10,7 @@ import {
 import { Clear } from '@material-ui/icons';
 import { mdiCalendarMonth } from '@mdi/js';
 import { useValueObserver } from '@superdispatch/hooks';
-import { ColorV2, mergeRefs, useUID } from '@superdispatch/ui';
+import { ColorDynamic, mergeRefs, useUID } from '@superdispatch/ui';
 import { forwardRef, Ref, useImperativeHandle, useRef, useState } from 'react';
 import styled from 'styled-components';
 
@@ -20,7 +20,7 @@ export interface InternalBaseDateFieldAPI {
 
 const Popover = styled(MuiPopover)`
   .MuiPaper-rounded {
-    border: 1px solid ${ColorV2.Silver400};
+    border: 1px solid ${ColorDynamic.Silver400};
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05),
       0px 4px 8px 0px rgba(0, 0, 0, 0.12);
   }

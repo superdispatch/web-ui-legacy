@@ -59,16 +59,16 @@ Object {
   "augmentColor": [Function],
   "background": Object {
     "default": "#fafafa",
-    "paper": "Color.DynamicWhite",
+    "paper": "Color.White",
   },
   "common": Object {
     "black": "Color.Black",
-    "white": "Color.DynamicWhite",
+    "white": "Color.White",
   },
   "contrastThreshold": 3,
   "divider": "Color.Silver400",
   "error": Object {
-    "contrastText": "Color.DynamicWhite",
+    "contrastText": "Color.White",
     "dark": "rgb(160, 24, 9)",
     "light": "rgb(234, 79, 61)",
     "main": "Color.Red300",
@@ -91,19 +91,19 @@ Object {
     "A700": "#616161",
   },
   "info": Object {
-    "contrastText": "Color.DynamicWhite",
+    "contrastText": "Color.White",
     "dark": "#1976d2",
     "light": "#64b5f6",
     "main": "#2196f3",
   },
   "primary": Object {
-    "contrastText": "Color.DynamicWhite",
+    "contrastText": "Color.White",
     "dark": "rgb(0, 78, 171)",
     "light": "rgb(51, 140, 247)",
     "main": "Color.Blue300",
   },
   "secondary": Object {
-    "contrastText": "Color.DynamicWhite",
+    "contrastText": "Color.White",
     "dark": "#c51162",
     "light": "#ff4081",
     "main": "#f50057",

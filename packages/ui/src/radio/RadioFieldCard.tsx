@@ -10,7 +10,7 @@ import { forwardRef, ForwardRefExoticComponent } from 'react';
 import styled from 'styled-components';
 import { Column } from '../columns/Column';
 import { Columns } from '../columns/Columns';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 
 const ClickableCard = styled(ButtonBase)`
   display: block;
@@ -32,7 +32,7 @@ const Content = styled.div<{ active?: boolean }>`
   width: 100%;
   border-radius: 4px;
   border: 1px solid
-    ${({ active }) => (active ? ColorV2.Blue300 : ColorV2.Silver500)};
+    ${({ active }) => (active ? ColorDynamic.Blue300 : ColorDynamic.Silver500)};
 `;
 
 const Caption = styled.div`

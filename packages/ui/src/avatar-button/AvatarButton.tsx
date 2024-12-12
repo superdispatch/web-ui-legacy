@@ -15,7 +15,7 @@ import {
   Ref,
   RefAttributes,
 } from 'react';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export type AvatarButtonClassKey =
@@ -36,20 +36,20 @@ const useStyles = makeStyles(
 
         '&[disabled], &[aria-busy="true"]': {
           '& > $overlay': {
-            backgroundColor: ColorV2.White50,
+            backgroundColor: ColorDynamic.White50,
           },
         },
 
         '&:not([disabled])[aria-busy="false"]': {
           '&:hover, &:focus': {
             '&$withIcon > $overlay': {
-              backgroundColor: ColorV2.Dark50,
+              backgroundColor: ColorDynamic.Dark50,
 
               '& > svg': { opacity: 1 },
             },
 
             '&:not($withIcon) > $overlay': {
-              backgroundColor: ColorV2.Black20,
+              backgroundColor: ColorDynamic.Black20,
             },
           },
         },
@@ -67,12 +67,12 @@ const useStyles = makeStyles(
         justifyContent: 'center',
 
         borderRadius: '50%',
-        backgroundColor: ColorV2.Transparent,
+        backgroundColor: ColorDynamic.Transparent,
         transition: theme.transitions.create('background-color'),
 
         '& > svg': {
           opacity: 0,
-          color: ColorV2.White,
+          color: ColorDynamic.White,
           transition: theme.transitions.create('opacity'),
 
           fontSize: theme.spacing(3),
@@ -84,7 +84,7 @@ const useStyles = makeStyles(
         top: 0,
         left: 0,
         position: 'absolute',
-        color: ColorV2.Blue500,
+        color: ColorDynamic.Blue500,
 
         fontSize: theme.spacing(5),
         [sm]: { fontSize: theme.spacing(4) },

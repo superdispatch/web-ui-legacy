@@ -16,7 +16,7 @@ import {
   RefAttributes,
 } from 'react';
 import styled from 'styled-components';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 
 const PaddedContent = styled.span`
   padding: 2px 0 0;
@@ -36,8 +36,8 @@ const useStyles = makeStyles<
 >(
   (theme) => ({
     root: {
-      color: ColorV2.White,
-      backgroundColor: ColorV2.Dark500,
+      color: ColorDynamic.White,
+      backgroundColor: ColorDynamic.Dark500,
       alignItems: 'flex-start',
       padding: '10px 16px',
       [theme.breakpoints.up('md')]: {
@@ -64,17 +64,17 @@ const useStyles = makeStyles<
     },
 
     closeButton: {
-      color: ColorV2.White40,
+      color: ColorDynamic.White40,
       '&:hover, &:focus': {
-        backgroundColor: ColorV2.White08,
-        color: ColorV2.White40,
+        backgroundColor: ColorDynamic.White08,
+        color: ColorDynamic.White40,
       },
     },
     variantError: {
-      color: ColorV2.Red500,
-      background: ColorV2.Red50,
+      color: ColorDynamic.Red500,
+      background: ColorDynamic.Red50,
       '& $closeButton': {
-        color: ColorV2.Red500,
+        color: ColorDynamic.Red500,
       },
     },
     variantSuccess: {},

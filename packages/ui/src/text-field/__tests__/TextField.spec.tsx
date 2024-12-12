@@ -91,7 +91,7 @@ it('checks component css', () => {
     }
 
     .MuiFormHelperText-root {
-      color: ColorV2.Dark300;
+      color: ColorDynamic.Dark300;
       margin: 0;
       font-size: 14px;
       margin-top: 4px;
@@ -117,7 +117,7 @@ it('checks component css', () => {
     }
 
     .MuiFormHelperText-root.Mui-error {
-      color: ColorV2.Red500;
+      color: ColorDynamic.Red500;
     }
 
     .MuiFormHelperText-root.MuiFormHelperText-root {
@@ -135,7 +135,7 @@ it('checks component css', () => {
     }
 
     .MuiFormLabel-root {
-      color: ColorV2.Dark500;
+      color: ColorDynamic.Dark500;
       padding: 0;
       font-size: 14px;
       font-family: 'Inter', sans-serif;
@@ -255,35 +255,35 @@ it('checks component css', () => {
     .MuiInputBase-root.Mui-disabled {
       color: Color.Dark100;
       cursor: default;
-      background-color: ColorV2.Silver30;
+      background-color: ColorDynamic.Silver30;
     }
 
     .MuiInputBase-root.Mui-error {
-      border-color: ColorV2.Red500;
+      border-color: ColorDynamic.Red500;
     }
 
     .MuiInputBase-root.MuiOutlinedInput-root fieldset {
-      border-color: ColorV2.Silver500;
+      border-color: ColorDynamic.Silver500;
     }
 
     .MuiInputBase-root.MuiOutlinedInput-root:hover fieldset {
-      border-color: ColorV2.Dark100;
+      border-color: ColorDynamic.Dark100;
     }
 
     .MuiInputBase-root.MuiOutlinedInput-root.Mui-focused fieldset {
-      border-color: ColorV2.Blue500;
+      border-color: ColorDynamic.Blue500;
     }
 
     .MuiInputBase-root.MuiOutlinedInput-root.Mui-error fieldset {
-      border-color: ColorV2.Red500;
+      border-color: ColorDynamic.Red500;
     }
 
     .MuiInputBase-root.MuiOutlinedInput-root.Mui-error:hover fieldset {
-      border-color: ColorV2.Red500;
+      border-color: ColorDynamic.Red500;
     }
 
     .MuiInputBase-root.MuiOutlinedInput-root.Mui-disabled fieldset {
-      border-color: ColorV2.Silver400;
+      border-color: ColorDynamic.Silver400;
     }
 
     .MuiInputBase-multiline {
@@ -363,7 +363,7 @@ it('checks component css', () => {
     }
 
     .MuiInputBase-input::placeholder {
-      color: ColorV2.Dark100;
+      color: ColorDynamic.Dark100;
       opacity: 1;
     }
 
@@ -529,7 +529,7 @@ it('checks component css', () => {
 
     .MuiOutlinedInput-notchedOutline {
       top: 0;
-      border-color: ColorV2.Silver500;
+      border-color: ColorDynamic.Silver500;
     }
 
     .MuiOutlinedInput-notchedOutline legend {
@@ -594,7 +594,7 @@ it('checks component css', () => {
 
     .MuiSelect-select:not([multiple]) option,
     .MuiSelect-select:not([multiple]) optgroup {
-      background-color: Color.DynamicWhite;
+      background-color: Color.White;
     }
 
     .MuiSelect-select.MuiSelect-select {
@@ -645,7 +645,7 @@ it('checks component css', () => {
     }
 
     .Mui-disabled .MuiSelect-icon {
-      color: ColorV2.Dark100;
+      color: ColorDynamic.Dark100;
     }
 
     @media (min-width: 600px) {

@@ -35,7 +35,7 @@ it('checks component css', () => {
     }
 
     .MuiSvgIcon-colorAction {
-      color: ColorV2.Dark100;
+      color: ColorDynamic.Dark100;
     }
 
     .MuiSvgIcon-colorError {

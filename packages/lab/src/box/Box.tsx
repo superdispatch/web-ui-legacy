@@ -1,7 +1,7 @@
 import {
+  ColorDynamic,
   ColorProp,
-  ColorV2,
-  isColorPropV2,
+  isColorDynamicProp,
   NegativeSpaceProp,
   parseResponsiveProp,
   parseSpaceProp,
@@ -18,7 +18,7 @@ import { createRuleNormalizer, RuleNormalizer } from '../utils/RuleNormalizer';
 //
 
 function normalizeColor(input: unknown): string | undefined {
-  return isColorPropV2(input) ? ColorV2[input] : undefined;
+  return isColorDynamicProp(input) ? ColorDynamic[input] : undefined;
 }
 
 //

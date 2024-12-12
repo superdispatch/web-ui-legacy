@@ -8,20 +8,20 @@ import {
 } from '@material-ui/core';
 import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
 import styled from 'styled-components';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 
 const FormControl = styled(FormControlMui)`
   justify-content: center;
 `;
 
 const FormHelperText = styled(FormHelperTextMui)`
-  color: ${ColorV2.Dark300};
+  color: ${ColorDynamic.Dark300};
   margin-left: 30px;
   margin-top: 0;
   margin-bottom: 4px;
 
   &.Mui-error {
-    color: ${ColorV2.Red500};
+    color: ${ColorDynamic.Red500};
   }
 `;
 

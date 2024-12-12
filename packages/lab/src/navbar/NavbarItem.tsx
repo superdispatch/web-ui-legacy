@@ -1,4 +1,4 @@
-import { ColorV2, useUID } from '@superdispatch/ui';
+import { ColorDynamic, useUID } from '@superdispatch/ui';
 import {
   ComponentType,
   HTMLAttributes,
@@ -20,13 +20,13 @@ export const NavbarBadge = styled.span`
   background: #131c2a;
 
   &[data-variant='primary'] {
-    color: ${ColorV2.White};
-    background: ${ColorV2.Blue300};
+    color: ${ColorDynamic.White};
+    background: ${ColorDynamic.Blue300};
   }
 
   &[data-variant='danger'] {
-    color: ${ColorV2.White};
-    background: ${ColorV2.Red500};
+    color: ${ColorDynamic.White};
+    background: ${ColorDynamic.Red500};
   }
 `;
 
@@ -55,9 +55,9 @@ const NavbarItemRoot = styled.div`
   &:hover,
   &[aria-current],
   &[data-active='true'] {
-    color: ${ColorV2.White};
+    color: ${ColorDynamic.White};
     background-color: #2f394a;
-    border-left-color: ${ColorV2.Blue300};
+    border-left-color: ${ColorDynamic.Blue300};
   }
 `;
 

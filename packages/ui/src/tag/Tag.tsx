@@ -7,7 +7,7 @@ import {
   ForwardRefExoticComponent,
   RefAttributes,
 } from 'react';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 
 export type TagClassKey =
   | 'root'
@@ -37,42 +37,45 @@ const useStyles = makeStyles<
 
     variantSubtle: {
       '&$colorGrey': {
-        color: ColorV2.Dark300,
-        backgroundColor: ColorV2.Silver200,
+        color: ColorDynamic.Dark300,
+        backgroundColor: ColorDynamic.Silver200,
       },
       '&$colorBlue': {
-        color: ColorV2.Blue500,
-        backgroundColor: ColorV2.Blue50,
+        color: ColorDynamic.Blue500,
+        backgroundColor: ColorDynamic.Blue50,
       },
       '&$colorGreen': {
-        color: ColorV2.Green500,
-        backgroundColor: ColorV2.Green50,
+        color: ColorDynamic.Green500,
+        backgroundColor: ColorDynamic.Green50,
       },
       '&$colorPurple': {
-        color: ColorV2.Purple500,
-        backgroundColor: ColorV2.Purple50,
+        color: ColorDynamic.Purple500,
+        backgroundColor: ColorDynamic.Purple50,
       },
-      '&$colorRed': { color: ColorV2.Red500, backgroundColor: ColorV2.Red50 },
+      '&$colorRed': {
+        color: ColorDynamic.Red500,
+        backgroundColor: ColorDynamic.Red50,
+      },
       '&$colorTeal': {
-        color: ColorV2.Teal500,
-        backgroundColor: ColorV2.Teal50,
+        color: ColorDynamic.Teal500,
+        backgroundColor: ColorDynamic.Teal50,
       },
       '&$colorYellow': {
-        color: ColorV2.Yellow500,
-        backgroundColor: ColorV2.Yellow50,
+        color: ColorDynamic.Yellow500,
+        backgroundColor: ColorDynamic.Yellow50,
       },
     },
 
     variantBold: {
-      color: ColorV2.White,
+      color: ColorDynamic.White,
 
-      '&$colorGrey': { backgroundColor: ColorV2.Dark300 },
-      '&$colorBlue': { backgroundColor: ColorV2.Blue300 },
-      '&$colorGreen': { backgroundColor: ColorV2.Green300 },
-      '&$colorPurple': { backgroundColor: ColorV2.Purple300 },
-      '&$colorRed': { backgroundColor: ColorV2.Red300 },
-      '&$colorTeal': { backgroundColor: ColorV2.Teal300 },
-      '&$colorYellow': { backgroundColor: ColorV2.Yellow300 },
+      '&$colorGrey': { backgroundColor: ColorDynamic.Dark300 },
+      '&$colorBlue': { backgroundColor: ColorDynamic.Blue300 },
+      '&$colorGreen': { backgroundColor: ColorDynamic.Green300 },
+      '&$colorPurple': { backgroundColor: ColorDynamic.Purple300 },
+      '&$colorRed': { backgroundColor: ColorDynamic.Red300 },
+      '&$colorTeal': { backgroundColor: ColorDynamic.Teal300 },
+      '&$colorYellow': { backgroundColor: ColorDynamic.Yellow300 },
     },
 
     colorGrey: {},

@@ -12,7 +12,7 @@ import {
   ReactNode,
   RefAttributes,
 } from 'react';
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 
 export type CardButtonClassKey =
   | 'root'
@@ -39,7 +39,7 @@ const useStyles = makeStyles<
       alignItems: 'center',
       flexDirection: 'column',
       justifyContent: 'center',
-      backgroundColor: ColorV2.White,
+      backgroundColor: ColorDynamic.White,
 
       border: '1px dashed',
       borderRadius: theme.spacing(0.5),
@@ -56,25 +56,25 @@ const useStyles = makeStyles<
     },
 
     disabled: {
-      color: ColorV2.Dark200,
-      borderColor: ColorV2.Silver500,
-      backgroundColor: ColorV2.Silver100,
+      color: ColorDynamic.Dark200,
+      borderColor: ColorDynamic.Silver500,
+      backgroundColor: ColorDynamic.Silver100,
     },
 
     error: {
-      color: ColorV2.Red500,
-      borderColor: ColorV2.Red500,
-      backgroundColor: ColorV2.Red50,
-      '&:focus': { backgroundColor: ColorV2.Red75 },
+      color: ColorDynamic.Red500,
+      borderColor: ColorDynamic.Red500,
+      backgroundColor: ColorDynamic.Red50,
+      '&:focus': { backgroundColor: ColorDynamic.Red75 },
     },
 
     primary: {
-      color: ColorV2.Blue500,
-      borderColor: ColorV2.Silver500,
-      '&:focus': { backgroundColor: ColorV2.Blue50 },
+      color: ColorDynamic.Blue500,
+      borderColor: ColorDynamic.Silver500,
+      '&:focus': { backgroundColor: ColorDynamic.Blue50 },
       '&:hover, &:active': {
-        borderColor: ColorV2.Blue300,
-        backgroundColor: ColorV2.Blue50,
+        borderColor: ColorDynamic.Blue300,
+        backgroundColor: ColorDynamic.Blue50,
       },
     },
 

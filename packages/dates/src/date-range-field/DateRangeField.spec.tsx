@@ -300,19 +300,19 @@ test('css', () => {
     }
 
     .SD-DateRangeField-day.SD-DateRangeField-selected:not(.SD-DateRangeField-outside):not(.SD-DateRangeField-rangeStart):not(.SD-DateRangeField-rangeFinish):after {
-      background-color: ColorV2.Transparent;
+      background-color: ColorDynamic.Transparent;
     }
 
     .SD-DateRangeField-day.SD-DateRangeField-selected:not(.SD-DateRangeField-outside):not(.SD-DateRangeField-rangeStart):not(.SD-DateRangeField-rangeFinish):not(.SD-DateRangeField-disabled) {
-      color: ColorV2.Blue500;
+      color: ColorDynamic.Blue500;
     }
 
     .SD-DateRangeField-day.SD-DateRangeField-selected:not(.SD-DateRangeField-outside):not(.SD-DateRangeField-rangeStart):not(.SD-DateRangeField-rangeFinish):not(.SD-DateRangeField-disabled):before {
-      background-color: ColorV2.Blue50;
+      background-color: ColorDynamic.Blue50;
     }
 
     .SD-DateRangeField-day.SD-DateRangeField-selected:not(.SD-DateRangeField-outside):not(.SD-DateRangeField-rangeStart):not(.SD-DateRangeField-rangeFinish).SD-DateRangeField-disabled:before {
-      background-color: ColorV2.Silver100;
+      background-color: ColorDynamic.Silver100;
     }
   `);
 });

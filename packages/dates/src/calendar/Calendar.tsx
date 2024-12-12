@@ -1,6 +1,6 @@
 import { Divider, Grid, GridDirection, Hidden, Theme } from '@material-ui/core';
 import { ClassNameMap, makeStyles } from '@material-ui/styles';
-import { ColorV2, ColorVariant } from '@superdispatch/ui';
+import { ColorDynamic, ColorVariant } from '@superdispatch/ui';
 import { DateTime } from 'luxon';
 import { forwardRef, ReactNode, useMemo } from 'react';
 import DayPicker, {
@@ -91,7 +91,7 @@ const useStyles = makeStyles<
 
     caption: {
       textAlign: 'center',
-      color: ColorV2.Dark500,
+      color: ColorDynamic.Dark500,
       fontSize: 12,
       fontWeight: 700,
       textTransform: 'uppercase',
@@ -115,7 +115,7 @@ const useStyles = makeStyles<
       justifyContent: 'center',
       textDecoration: 'none',
 
-      color: ColorV2.Dark300,
+      color: ColorDynamic.Dark300,
       width: theme.spacing(5),
       height: theme.spacing(5),
     },
@@ -170,7 +170,7 @@ const useStyles = makeStyles<
         bottom: 0,
         zIndex: -1,
         position: 'absolute',
-        backgroundColor: ColorV2.Transparent,
+        backgroundColor: ColorDynamic.Transparent,
         transition: theme.transitions.create('background-color'),
       },
 
@@ -196,7 +196,7 @@ const useStyles = makeStyles<
         bottom: 0,
         zIndex: -1,
         position: 'absolute',
-        backgroundColor: ColorV2.Transparent,
+        backgroundColor: ColorDynamic.Transparent,
         transition: theme.transitions.create('background-color'),
       },
 
@@ -205,73 +205,73 @@ const useStyles = makeStyles<
       },
 
       '&$today': {
-        border: `1px solid ${ColorV2.Silver500}`,
+        border: `1px solid ${ColorDynamic.Silver500}`,
       },
 
       '&$disabled': {
-        color: ColorV2.Dark100,
+        color: ColorDynamic.Dark100,
         '&$selected:not($outside):after': {
-          backgroundColor: ColorV2.Silver400,
+          backgroundColor: ColorDynamic.Silver400,
         },
       },
 
       '&:not($outside):not($disabled)': {
         cursor: 'pointer',
-        color: ColorV2.Dark500,
+        color: ColorDynamic.Dark500,
 
         '&:not($selected):not(:active)': {
           '&:hover, &:focus': {
-            backgroundColor: ColorV2.Silver200,
+            backgroundColor: ColorDynamic.Silver200,
           },
 
           '&$blue': {
-            color: ColorV2.Blue500,
+            color: ColorDynamic.Blue500,
             '&': {
-              backgroundColor: ColorV2.Blue50,
+              backgroundColor: ColorDynamic.Blue50,
             },
           },
           '&$green': {
-            color: ColorV2.Green500,
+            color: ColorDynamic.Green500,
             '&': {
-              backgroundColor: ColorV2.Green50,
+              backgroundColor: ColorDynamic.Green50,
             },
           },
           '&$purple': {
-            color: ColorV2.Purple500,
+            color: ColorDynamic.Purple500,
             '&': {
-              backgroundColor: ColorV2.Purple50,
+              backgroundColor: ColorDynamic.Purple50,
             },
           },
           '&$red': {
-            color: ColorV2.Red500,
+            color: ColorDynamic.Red500,
             '&': {
-              backgroundColor: ColorV2.Red50,
+              backgroundColor: ColorDynamic.Red50,
             },
           },
           '&$teal': {
-            color: ColorV2.Teal500,
+            color: ColorDynamic.Teal500,
             '&': {
-              backgroundColor: ColorV2.Teal50,
+              backgroundColor: ColorDynamic.Teal50,
             },
           },
           '&$yellow': {
-            color: ColorV2.Yellow500,
+            color: ColorDynamic.Yellow500,
             '&': {
-              backgroundColor: ColorV2.Yellow50,
+              backgroundColor: ColorDynamic.Yellow50,
             },
           },
         },
 
         '&:active, &$selected': {
-          color: ColorV2.White,
+          color: ColorDynamic.White,
           '&:after': {
-            backgroundColor: ColorV2.Blue300,
+            backgroundColor: ColorDynamic.Blue300,
           },
           '&$today': {
             border: 'none',
           },
           '&$today:before': {
-            border: `1px solid ${ColorV2.Blue300}`,
+            border: `1px solid ${ColorDynamic.Blue300}`,
             borderRadius: theme.spacing(0.5),
           },
         },

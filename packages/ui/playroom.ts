@@ -6,7 +6,7 @@ export {
   CheckboxField,
   CheckboxGroupField,
   Color,
-  ColorV2,
+  ColorDynamic,
   Column,
   Columns,
   DescriptionList,

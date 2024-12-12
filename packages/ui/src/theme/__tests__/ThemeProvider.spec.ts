@@ -1,5 +1,5 @@
 import { renderTheme } from '@superdispatch/ui-testutils';
-import { Color, ColorV2 } from '../Color';
+import { Color, ColorDynamic } from '../Color';
 
 const colors = new Map<string, string>();
 
@@ -7,8 +7,8 @@ Object.entries(Color).forEach(([k, v]) => {
   colors.set(v, `Color.${k}`);
 });
 
-Object.entries(ColorV2).forEach(([k, v]) => {
-  colors.set(v, `ColorV2.${k}`);
+Object.entries(ColorDynamic).forEach(([k, v]) => {
+  colors.set(v, `ColorDynamic.${k}`);
 });
 
 const colorRegExp = new RegExp(

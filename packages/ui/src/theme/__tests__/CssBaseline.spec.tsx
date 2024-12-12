@@ -38,7 +38,7 @@ it('checks component css', () => {
 
     @media print {
       body {
-        background-color: Color.DynamicWhite;
+        background-color: Color.White;
       }
     }
 

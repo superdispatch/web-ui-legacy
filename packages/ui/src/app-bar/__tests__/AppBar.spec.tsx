@@ -65,12 +65,12 @@ it('checks component css', () => {
     }
 
     .MuiAppBar-colorPrimary {
-      color: Color.DynamicWhite;
+      color: Color.White;
       background-color: Color.Blue300;
     }
 
     .MuiAppBar-colorSecondary {
-      color: Color.DynamicWhite;
+      color: Color.White;
       background-color: #f50057;
     }
 

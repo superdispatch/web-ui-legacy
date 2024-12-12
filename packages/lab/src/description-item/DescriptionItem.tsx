@@ -1,5 +1,5 @@
 import {
-  ColorV2,
+  ColorDynamic,
   Column,
   Columns,
   Inline,
@@ -30,7 +30,7 @@ const DescriptionItemIcon = styled.div(
       align-items: center;
 
       & > .MuiSvgIcon-root {
-        color: ${ColorV2.Dark100};
+        color: ${ColorDynamic.Dark100};
       }
 
       ${descriptionItemIconMixin(20)};

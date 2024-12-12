@@ -1,4 +1,4 @@
-import { ColorV2 } from '../theme/Color';
+import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 function line(color: string): string {
@@ -13,23 +13,23 @@ export function overrideLink(theme: SuperDispatchTheme): void {
       backgroundSize: '100% 1px',
       backgroundRepeat: 'repeat-x',
       backgroundPosition: '0 100%',
-      backgroundColor: ColorV2.Transparent,
+      backgroundColor: ColorDynamic.Transparent,
 
       '&:focus': { outline: 'none' },
 
       '&:disabled': {
-        color: ColorV2.Dark100,
-        backgroundImage: line(ColorV2.Silver500),
+        color: ColorDynamic.Dark100,
+        backgroundImage: line(ColorDynamic.Silver500),
 
         '&:focus, &:hover, &:active': {
-          color: ColorV2.Dark100,
-          backgroundImage: line(ColorV2.Silver500),
+          color: ColorDynamic.Dark100,
+          backgroundImage: line(ColorDynamic.Silver500),
         },
       },
 
       '&.MuiLink-underlineAlways': {
         textDecoration: 'none',
-        backgroundImage: line(ColorV2.Silver500),
+        backgroundImage: line(ColorDynamic.Silver500),
         '&:hover, &:active': { backgroundImage: line('currentColor') },
       },
 
@@ -58,8 +58,8 @@ export function overrideLink(theme: SuperDispatchTheme): void {
 
       '&.MuiTypography-colorTextPrimary, &.MuiTypography-colorTextSecondary': {
         '&:focus, &:hover, &:active': {
-          color: ColorV2.Blue500,
-          backgroundImage: line(ColorV2.Blue500),
+          color: ColorDynamic.Blue500,
+          backgroundImage: line(ColorDynamic.Blue500),
         },
       },
     },

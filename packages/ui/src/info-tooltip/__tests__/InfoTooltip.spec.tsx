@@ -68,7 +68,7 @@ it('checks component css InfoTooltip', () => {
     }
 
     .MuiTooltip-tooltip {
-      color: Color.DynamicWhite;
+      color: Color.White;
       padding: 8px 12px;
       font-size: 14px;
       max-width: 300px;
@@ -77,7 +77,7 @@ it('checks component css InfoTooltip', () => {
       font-weight: 400;
       line-height: 20px;
       border-radius: 4px;
-      background-color: ColorV2.Dark500;
+      background-color: ColorDynamic.Dark500;
     }
 
     @media (min-width: 0px) and (max-width: 599.95px) {
@@ -93,7 +93,7 @@ it('checks component css InfoTooltip', () => {
     }
 
     .MuiTooltip-arrow {
-      color: ColorV2.Dark500;
+      color: ColorDynamic.Dark500;
       width: 1em;
       height: 0.71em;
       overflow: hidden;

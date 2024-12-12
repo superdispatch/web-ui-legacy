@@ -1,4 +1,4 @@
-import { Color, ColorV2, ThemeProvider } from '@superdispatch/ui';
+import { Color, ColorDynamic, ThemeProvider } from '@superdispatch/ui';
 import { render } from '@testing-library/react';
 import { parse as parseCSS, stringify as stringifyCSS, Stylesheet } from 'css';
 import { format } from 'prettier';
@@ -8,8 +8,8 @@ const colors = new Map<string, string>();
 Object.entries(Color).forEach(([k, v]) => {
   colors.set(v, `Color.${k}`);
 });
-Object.entries(ColorV2).forEach(([k, v]) => {
-  colors.set(v, `ColorV2.${k}`);
+Object.entries(ColorDynamic).forEach(([k, v]) => {
+  colors.set(v, `ColorDynamic.${k}`);
 });
 
 const colorRegExp = new RegExp(
