@@ -102,6 +102,7 @@ export enum Color {
 
   /** @deprecated */
   Red75 = '#FDD9D3',
+
   /** @deprecated */
   Red100 = '#FDC2BA',
   /** @deprecated */
@@ -158,6 +159,7 @@ export enum Color {
 
   Red50 = '#FFEDEB',
   Red300 = '#E5230D',
+  Red300Aplha20 = 'rgba(229, 35, 13, 0.2)',
   Red500 = '#C31909',
 
   Teal50 = '#E3F6FC',
@@ -319,6 +321,7 @@ export enum ColorDark {
 
   Red50 = '#3D0A06',
   Red300 = '#E5230D',
+  Red300Aplha20 = 'rgba(233, 27, 12, 0.3)',
   Red500 = '#FF6359',
 
   Teal50 = '#11333D',
@@ -471,6 +474,7 @@ export enum ColorDynamic {
   Red50 = 'var(--sd-red-50)',
   Red300 = 'var(--sd-red-300)',
   Red500 = 'var(--sd-red-500)',
+  Red300Aplha20 = 'var(--sd-red-300-alpha-20)',
 
   Teal50 = 'var(--sd-teal-50)',
   Teal300 = 'var(--sd-teal-300)',

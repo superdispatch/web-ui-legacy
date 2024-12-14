@@ -161,7 +161,7 @@ function getCriticalVariables(size: ButtonSizeProp): ButtonVariables {
     outlineColor: ColorDynamic.Red30,
     backgroundColor: ColorDynamic.Red50,
 
-    backgroundColorHovered: ColorDynamic.Red75,
+    backgroundColorHovered: ColorDynamic.Red300Aplha20,
 
     backgroundColorActive: ColorDynamic.Red10,
 

@@ -23,6 +23,7 @@ export const GlobalStyles = createGlobalStyle(
       --sd-blue-30: ${color.Blue30};
       --sd-green-30: ${color.Green30};
       --sd-red-30: ${color.Red30};
+      --sd-red-300-alpha-20: ${color.Red300Aplha20};
       --sd-silver-30: ${color.Silver30};
 
       --sd-blue-10: ${color.Blue10};
