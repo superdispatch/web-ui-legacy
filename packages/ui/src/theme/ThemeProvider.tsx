@@ -72,7 +72,10 @@ function createSuperDispatchTheme(type?: 'light' | 'dark'): SuperDispatchTheme {
         hint: color.Dark100,
         disabled: color.Dark100,
       },
-
+      common: {
+        white: color.White,
+        black: color.Black,
+      },
       divider: color.Silver400,
     },
 
