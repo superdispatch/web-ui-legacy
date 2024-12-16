@@ -1,6 +1,6 @@
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import { addDecorator, addParameters } from '@storybook/react';
-import { ThemeProvider } from '@superdispatch/ui';
+import { Color, ColorDark, ThemeProvider } from '@superdispatch/ui';
 import 'fontsource-inter/400.css';
 import 'fontsource-inter/500.css';
 import 'fontsource-inter/600.css';
@@ -26,7 +26,7 @@ function injectDisplayNames(module, { suffix = '' } = {}) {
 addDecorator(withPlayroom);
 addDecorator((story, context) => {
   const mode =
-    context.globals.backgrounds?.value === '#333333' ? 'dark' : 'light';
+    context.globals.backgrounds?.value === ColorDark.White ? 'dark' : 'light';
   return (
     <Suspense fallback="Loading story…">
       <div data-story={context.id}>
@@ -55,5 +55,13 @@ addParameters({
     // otherwise set undefined to use the default Playroom URL (localhost)
     url: process.env.NODE_ENV === 'production' ? '/playroom/' : undefined,
     reactElementToJSXStringOptions: { showFunctions: true },
+  },
+
+  backgrounds: {
+    default: 'light',
+    values: [
+      { name: 'light', value: Color.White },
+      { name: 'dark', value: ColorDark.White },
+    ],
   },
 });
