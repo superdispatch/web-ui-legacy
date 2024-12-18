@@ -80,7 +80,7 @@ it('checks component css', () => {
     @media (hover: none) {
       .MuiPaginationItem-page.Mui-selected:hover,
       .MuiPaginationItem-page.Mui-selected.Mui-focusVisible {
-        background-color: Color.Silver300;
+        background-color: Color.Blue50;
       }
     }
 

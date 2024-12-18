@@ -291,15 +291,15 @@ it('checks component css', () => {
     }
 
     .MuiAutocomplete-option[aria-selected='true'] {
-      background-color: Color.Silver300;
+      background-color: Color.Blue50;
     }
 
     .MuiAutocomplete-option[data-focus='true'] {
-      background-color: Color.Silver100;
+      background-color: Color.Silver200;
     }
 
     .MuiAutocomplete-option:active {
-      background-color: Color.Silver300;
+      background-color: Color.Blue50;
     }
 
     .MuiAutocomplete-option[aria-disabled='true'] {
