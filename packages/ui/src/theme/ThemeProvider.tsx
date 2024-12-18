@@ -77,6 +77,9 @@ function createSuperDispatchTheme(type?: 'light' | 'dark'): SuperDispatchTheme {
         black: color.Black,
       },
       divider: color.Silver400,
+      background: {
+        paper: color.White,
+      },
     },
 
     typography: createTypographyOptions(breakpoints),

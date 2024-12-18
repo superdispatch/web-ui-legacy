@@ -1,6 +1,6 @@
 import { DialogActions, DialogContent, DialogTitle } from '@material-ui/core';
 import { PropsLink, UseState } from '@superdispatch/ui-docs';
-import { Button } from '..';
+import { Button } from '@superdispatch/ui-lab';
 import { Dialog } from './Dialog.playroom';
 
 export default {
@@ -20,6 +20,7 @@ export const basic = () => (
           onClick={() => {
             setOpen(true);
           }}
+          variant="neutral"
         >
           Open Dialog
         </Button>
@@ -41,6 +42,7 @@ export const basic = () => (
               onClick={() => {
                 setOpen(false);
               }}
+              variant="neutral"
             >
               Disagree
             </Button>
@@ -48,7 +50,7 @@ export const basic = () => (
               onClick={() => {
                 setOpen(false);
               }}
-              variant="contained"
+              variant="primary"
             >
               Agree
             </Button>
