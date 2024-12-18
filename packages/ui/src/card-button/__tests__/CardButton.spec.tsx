@@ -21,9 +21,13 @@ it('checks component css', () => {
     }
 
     .SD-CardButton-disabled {
-      color: ColorDynamic.Dark200;
+      color: ColorDynamic.Dark100;
       border-color: ColorDynamic.Silver500;
-      background-color: ColorDynamic.Silver100;
+      background-color: ColorDynamic.Silver400Alpha30;
+    }
+
+    .SD-CardButton-disabled .SD-CardButton-hint {
+      color: ColorDynamic.Dark100;
     }
 
     .SD-CardButton-error {
@@ -33,7 +37,7 @@ it('checks component css', () => {
     }
 
     .SD-CardButton-error:focus {
-      background-color: ColorDynamic.Red75;
+      background-color: ColorDynamic.Red300Aplha20;
     }
 
     .SD-CardButton-primary {
