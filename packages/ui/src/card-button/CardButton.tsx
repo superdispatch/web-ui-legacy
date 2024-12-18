@@ -56,16 +56,19 @@ const useStyles = makeStyles<
     },
 
     disabled: {
-      color: ColorDynamic.Dark200,
+      color: ColorDynamic.Dark100,
       borderColor: ColorDynamic.Silver500,
-      backgroundColor: ColorDynamic.Silver100,
+      backgroundColor: ColorDynamic.Silver400Alpha30,
+      '& $hint': {
+        color: ColorDynamic.Dark100,
+      },
     },
 
     error: {
       color: ColorDynamic.Red500,
       borderColor: ColorDynamic.Red500,
       backgroundColor: ColorDynamic.Red50,
-      '&:focus': { backgroundColor: ColorDynamic.Red75 },
+      '&:focus': { backgroundColor: ColorDynamic.Red300Aplha20 },
     },
 
     primary: {
