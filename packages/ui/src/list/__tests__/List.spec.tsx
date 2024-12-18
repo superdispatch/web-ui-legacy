@@ -78,7 +78,7 @@ it('checks component css', () => {
     }
 
     .MuiListItem-root.Mui-focusVisible {
-      background-color: Color.Silver300;
+      background-color: Color.Blue50;
     }
 
     .MuiListItem-root.Mui-selected,
@@ -123,7 +123,7 @@ it('checks component css', () => {
 
     .MuiListItem-button:hover {
       text-decoration: none;
-      background-color: Color.Silver100;
+      background-color: Color.Silver200;
     }
 
     @media (hover: none) {

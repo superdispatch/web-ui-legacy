@@ -61,8 +61,8 @@ function createSuperDispatchTheme(type?: 'light' | 'dark'): SuperDispatchTheme {
       },
 
       action: {
-        hover: color.Silver100,
-        selected: color.Silver300,
+        hover: color.Silver200,
+        selected: color.Blue50,
         disabled: color.Silver400,
       },
 

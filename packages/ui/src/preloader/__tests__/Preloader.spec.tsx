@@ -58,7 +58,7 @@ it('checks component css', () => {
       position: absolute;
       animation: MuiSkeleton-keyframes-wave 1.6s linear 0.5s infinite;
       transform: translateX(-100%);
-      background: linear-gradient(90deg, transparent, Color.Silver100, transparent);
+      background: linear-gradient(90deg, transparent, Color.Silver200, transparent);
     }
 
     @keyframes MuiSkeleton-keyframes-wave {
