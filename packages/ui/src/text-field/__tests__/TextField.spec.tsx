@@ -255,7 +255,7 @@ it('checks component css', () => {
     .MuiInputBase-root.Mui-disabled {
       color: Color.Dark100;
       cursor: default;
-      background-color: ColorDynamic.Silver30;
+      background-color: ColorDynamic.Silver400Alpha30;
     }
 
     .MuiInputBase-root.Mui-error {

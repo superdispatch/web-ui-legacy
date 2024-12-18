@@ -98,6 +98,7 @@ export const GlobalStyles = createGlobalStyle(
       --sd-silver-500: ${color.Silver500};
       --sd-silver-200: ${color.Silver200};
       --sd-silver-400: ${color.Silver400};
+      --sd-silver-400-alpha-30: ${color.Silver400Alpha30};
       --sd-dark-100: ${color.Dark100};
       --sd-dark-300: ${color.Dark300};
       --sd-dark-500: ${color.Dark500};

@@ -34,7 +34,7 @@ export function overrideTextField(theme: SuperDispatchTheme): void {
     root: {
       ...theme.typography.body2,
       '&$disabled': {
-        backgroundColor: ColorDynamic.Silver30,
+        backgroundColor: ColorDynamic.Silver400Alpha30,
       },
       '&$error': { borderColor: ColorDynamic.Red500 },
       '&.MuiOutlinedInput-root': {
