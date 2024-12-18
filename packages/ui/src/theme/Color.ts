@@ -140,6 +140,7 @@ export enum Color {
   Silver200 = '#F3F5F8',
   Silver400 = '#E1E5EA',
   Silver500 = '#C4CDD5',
+  Silver400Alpha30 = 'rgba(225, 229, 234, 0.3)',
 
   //
   // Extended Palette
@@ -302,7 +303,7 @@ export enum ColorDark {
   Silver200 = '#0D1017',
   Silver400 = '#30373D',
   Silver500 = '#47505B',
-
+  Silver400Alpha30 = 'rgba(48, 55, 61, 0.3)',
   //
   // Extended Palette
   //
@@ -454,7 +455,7 @@ export enum ColorDynamic {
   Silver200 = 'var(--sd-silver-200)',
   Silver400 = 'var(--sd-silver-400)',
   Silver500 = 'var(--sd-silver-500)',
-
+  Silver400Alpha30 = 'var(--sd-silver-400-alpha-30)',
   //
   // Extended Palette
   //
