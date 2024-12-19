@@ -17,19 +17,19 @@ export const basic = () => (
 export const alignment = () => (
   <Columns space="xsmall">
     <Column>
-      <Box backgroundColor="Silver300" padding="xsmall" borderRadius="small">
+      <Box backgroundColor="Silver400" padding="xsmall" borderRadius="small">
         <TextBox align="right">Align Right</TextBox>
       </Box>
     </Column>
 
     <Column>
-      <Box backgroundColor="Silver300" padding="xsmall" borderRadius="small">
+      <Box backgroundColor="Silver400" padding="xsmall" borderRadius="small">
         <TextBox align="center">Align Center</TextBox>
       </Box>
     </Column>
 
     <Column>
-      <Box backgroundColor="Silver300" padding="xsmall" borderRadius="small">
+      <Box backgroundColor="Silver400" padding="xsmall" borderRadius="small">
         <TextBox align="left">Align Left</TextBox>
       </Box>
     </Column>
@@ -37,13 +37,13 @@ export const alignment = () => (
 );
 
 export const responsiveAlignment = () => (
-  <Box backgroundColor="Silver300" padding="xsmall" borderRadius="small">
+  <Box backgroundColor="Silver400" padding="xsmall" borderRadius="small">
     <TextBox align={['center', 'right']}>Text</TextBox>
   </Box>
 );
 
 export const colors = () => (
-  <Box backgroundColor="Silver300" borderRadius="small" padding="xsmall">
+  <Box backgroundColor="Silver400" borderRadius="small" padding="xsmall">
     <Inline>
       <TextBox color="primary">Primary</TextBox>
       <TextBox color="secondary">Secondary</TextBox>
