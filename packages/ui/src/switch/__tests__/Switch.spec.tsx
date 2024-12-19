@@ -170,7 +170,7 @@ it('checks component css', () => {
     }
 
     .MuiSwitch-thumb {
-      color: ColorDynamic.White;
+      color: Color.White;
       width: 24px;
       height: 24px;
       border-radius: 50%;
