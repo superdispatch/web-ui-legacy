@@ -48,10 +48,11 @@ it('checks component css', () => {
     }
 
     .SD-Tag-variantBold {
-      color: ColorDynamic.White;
+      color: Color.White;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorGrey {
+      color: ColorDynamic.White;
       background-color: ColorDynamic.Dark300;
     }
 

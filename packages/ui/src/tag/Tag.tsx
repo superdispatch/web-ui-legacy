@@ -7,7 +7,7 @@ import {
   ForwardRefExoticComponent,
   RefAttributes,
 } from 'react';
-import { ColorDynamic } from '../theme/Color';
+import { Color, ColorDynamic } from '../theme/Color';
 
 export type TagClassKey =
   | 'root'
@@ -67,9 +67,12 @@ const useStyles = makeStyles<
     },
 
     variantBold: {
-      color: ColorDynamic.White,
+      color: Color.White,
 
-      '&$colorGrey': { backgroundColor: ColorDynamic.Dark300 },
+      '&$colorGrey': {
+        backgroundColor: ColorDynamic.Dark300,
+        color: ColorDynamic.White,
+      },
       '&$colorBlue': { backgroundColor: ColorDynamic.Blue300 },
       '&$colorGreen': { backgroundColor: ColorDynamic.Green300 },
       '&$colorPurple': { backgroundColor: ColorDynamic.Purple300 },
