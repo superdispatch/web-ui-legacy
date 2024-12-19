@@ -17,7 +17,7 @@ it('checks default props', () => {
         <circle
           cx="12"
           cy="12"
-          fill="var(--sd-white)"
+          fill="#fff"
           r="4"
         />
       </WithStyles(ForwardRef(SvgIcon))>,

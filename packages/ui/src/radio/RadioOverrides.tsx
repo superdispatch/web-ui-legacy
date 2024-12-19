@@ -1,5 +1,5 @@
 import { SvgIcon } from '@material-ui/core';
-import { ColorDynamic } from '../theme/Color';
+import { Color, ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideRadio(theme: SuperDispatchTheme): void {
@@ -26,7 +26,7 @@ export function overrideRadio(theme: SuperDispatchTheme): void {
           stroke="currentColor"
         />
 
-        <circle cx="12" cy="12" r="4" fill={ColorDynamic.White} />
+        <circle cx="12" cy="12" r="4" fill={Color.White} />
       </SvgIcon>
     ),
   };
