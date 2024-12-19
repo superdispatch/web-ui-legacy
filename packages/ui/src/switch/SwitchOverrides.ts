@@ -1,4 +1,4 @@
-import { ColorDynamic } from '../theme/Color';
+import { Color, ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideSwitch(theme: SuperDispatchTheme): void {
@@ -35,7 +35,7 @@ export function overrideSwitch(theme: SuperDispatchTheme): void {
     },
 
     thumb: {
-      color: ColorDynamic.White,
+      color: Color.White,
       boxShadow: undefined,
       width: theme.spacing(3),
       height: theme.spacing(3),
