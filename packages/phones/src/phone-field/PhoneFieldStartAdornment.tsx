@@ -32,12 +32,13 @@ export interface PhoneFieldProps {
   onClick?: () => void;
   isExpanded?: boolean;
   country: CountryISO;
+  disabled?: boolean;
 }
 
 export const PhoneFieldStartAdornment = forwardRef<
   HTMLDivElement,
   PhoneFieldProps
->(({ country, onClick, isExpanded }, ref) => {
+>(({ country, onClick, isExpanded, disabled }, ref) => {
   const styles = useStyles();
   const [title, countryCode] = useMemo(() => {
     const code = `+${getCountryCode(country)}`;
@@ -52,6 +53,7 @@ export const PhoneFieldStartAdornment = forwardRef<
         onClick={onClick}
         className={styles.button}
         aria-expanded={isExpanded}
+        disabled={disabled}
       >
         <PhoneFieldFlag country={country} />
 

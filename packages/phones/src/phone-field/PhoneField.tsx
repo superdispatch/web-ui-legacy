@@ -119,7 +119,9 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
             setMenuAnchor(null);
           }}
           onChange={(nextRegion) => {
-            handleChange(onChange, nextRegion, nationalNumber);
+            if (!props.disabled) {
+              handleChange(onChange, nextRegion, nationalNumber);
+            }
           }}
         />
 
@@ -145,6 +147,7 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
             startAdornment: (
               <PhoneFieldStartAdornment
                 country={country}
+                disabled={props.disabled}
                 isExpanded={!!menuAnchor}
                 onClick={() => {
                   // `FocusTrap` inside of `Menu` will restore focus to
