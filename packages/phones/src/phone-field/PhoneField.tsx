@@ -115,7 +115,6 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
         <PhoneFieldMenu
           value={country}
           anchorEl={menuAnchor}
-          disabled={props.disabled}
           onClose={() => {
             setMenuAnchor(null);
           }}
@@ -148,6 +147,7 @@ export const PhoneField = forwardRef<HTMLDivElement, PhoneFieldProps>(
             startAdornment: (
               <PhoneFieldStartAdornment
                 country={country}
+                disabled={props.disabled}
                 isExpanded={!!menuAnchor}
                 onClick={() => {
                   // `FocusTrap` inside of `Menu` will restore focus to
