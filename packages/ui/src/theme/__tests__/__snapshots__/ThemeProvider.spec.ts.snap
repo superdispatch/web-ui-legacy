@@ -100,7 +100,7 @@ Object {
     "contrastText": "Color.White",
     "dark": "rgb(0, 78, 171)",
     "light": "rgb(51, 140, 247)",
-    "main": "Color.Blue300",
+    "main": "ColorDynamic.Blue500",
   },
   "secondary": Object {
     "contrastText": "Color.White",

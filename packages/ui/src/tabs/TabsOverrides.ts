@@ -7,6 +7,7 @@ export function overrideTabs(theme: SuperDispatchTheme): void {
     textColor: 'primary',
     indicatorColor: 'primary',
   };
+  theme.palette.primary.main = ColorDynamic.Blue500;
 
   theme.overrides.MuiTabs = {
     root: { minHeight: theme.spacing(6) },
@@ -39,7 +40,7 @@ export function overrideTabs(theme: SuperDispatchTheme): void {
 
     textColorPrimary: {
       color: ColorDynamic.Dark500,
-      '&:hover, &:focus': { color: ColorDynamic.Blue300 },
+      '&:hover, &:focus': { color: ColorDynamic.Blue500 },
     },
   };
 }

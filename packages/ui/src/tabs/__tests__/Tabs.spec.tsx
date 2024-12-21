@@ -81,7 +81,7 @@ it('checks component css', () => {
     }
 
     .MuiTab-textColorPrimary.Mui-selected {
-      color: Color.Blue300;
+      color: ColorDynamic.Blue500;
     }
 
     .MuiTab-textColorPrimary.Mui-disabled {
@@ -90,7 +90,7 @@ it('checks component css', () => {
 
     .MuiTab-textColorPrimary:hover,
     .MuiTab-textColorPrimary:focus {
-      color: ColorDynamic.Blue300;
+      color: ColorDynamic.Blue500;
     }
 
     .MuiTab-textColorSecondary {
@@ -210,7 +210,7 @@ it('checks component css', () => {
     }
 
     .PrivateTabIndicator-colorPrimary-2 {
-      background-color: Color.Blue300;
+      background-color: ColorDynamic.Blue500;
     }
 
     .PrivateTabIndicator-colorSecondary-3 {

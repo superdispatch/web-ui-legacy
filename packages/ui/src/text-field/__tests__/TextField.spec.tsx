@@ -494,7 +494,7 @@ it('checks component css', () => {
     }
 
     .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-      border-color: Color.Blue300;
+      border-color: ColorDynamic.Blue500;
       border-width: 2px;
     }
 
