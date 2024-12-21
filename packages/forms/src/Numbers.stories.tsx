@@ -1,7 +1,7 @@
 import { Alert } from '@material-ui/lab';
 import { Meta } from '@storybook/react';
-import { Button, Inline, Stack, useSnackbarStack } from '@superdispatch/ui';
-import { Box } from '@superdispatch/ui-lab';
+import { Inline, Stack, useSnackbarStack } from '@superdispatch/ui';
+import { Box, Button } from '@superdispatch/ui-lab';
 import { Form, FormikProvider } from 'formik';
 import { FormikCurrencyField, FormikNumberField, useFormikEnhanced } from '.';
 
@@ -53,7 +53,7 @@ export const NumberFields = () => {
         <pre>{JSON.stringify(status.payload, null, 2)}</pre>
 
         <Button
-          variant="contained"
+          variant="primary"
           onClick={() => {
             resetForm();
           }}
@@ -95,11 +95,7 @@ export const NumberFields = () => {
             )}
 
             <Inline>
-              <Button
-                type="submit"
-                variant="contained"
-                isLoading={isSubmitting}
-              >
+              <Button type="submit" variant="primary" pending={isSubmitting}>
                 Send
               </Button>
 
@@ -107,7 +103,7 @@ export const NumberFields = () => {
                 onClick={() => {
                   resetForm();
                 }}
-                variant="outlined"
+                variant="neutral"
                 disabled={isSubmitting}
               >
                 Reset

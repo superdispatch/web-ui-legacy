@@ -7,7 +7,8 @@ import NotificationsOffIcon from '@material-ui/icons/NotificationsOff';
 import SearchIcon from '@material-ui/icons/Search';
 import SettingsIcon from '@material-ui/icons/Settings';
 import { Meta } from '@storybook/react';
-import { Button, Stack } from '@superdispatch/ui';
+import { Stack } from '@superdispatch/ui';
+import { Button } from '@superdispatch/ui-lab';
 import { Placeholder } from '../../../__docs__';
 import { Box } from '../box/Box';
 import { Sidebar } from './Sidebar';
@@ -64,11 +65,7 @@ export const list = () => (
         count={9}
         header={
           <Stack space="small">
-            <Button
-              fullWidth={true}
-              variant="contained"
-              startIcon={<AddIcon />}
-            >
+            <Button fullWidth={true} variant="primary" startIcon={<AddIcon />}>
               Create New
             </Button>
 
@@ -162,7 +159,7 @@ export const list = () => (
   >
     <SidebarContent
       title="List"
-      action={<Button variant="contained">Create</Button>}
+      action={<Button variant="primary">Create</Button>}
     >
       <Placeholder height="100%" width="100%" text="Content" />
     </SidebarContent>
@@ -366,6 +363,7 @@ export const complex = () => (
           <Button
             fullWidth={true}
             startIcon={<NotificationsOffIcon color="action" />}
+            variant="neutral"
           >
             Create Load Alert
           </Button>
