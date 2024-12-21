@@ -13,7 +13,8 @@ import {
 } from '@material-ui/icons';
 import { Meta } from '@storybook/react';
 import { PropsLink, UseState } from '@superdispatch/ui-docs';
-import { Button, Inline, Stack } from '..';
+import { Button } from '@superdispatch/ui-lab';
+import { Inline, Stack } from '..';
 import { DrawerActions } from './DrawerActions';
 import { DrawerContent } from './DrawerContent';
 import { DrawerList } from './DrawerList';
@@ -38,6 +39,7 @@ export const basic = () => (
           onClick={() => {
             setState(true);
           }}
+          variant="neutral"
         >
           Open Drawer
         </Button>
@@ -73,13 +75,9 @@ export const basic = () => (
 
           <DrawerActions>
             <Inline space="small">
-              <Button color="primary" variant="contained">
-                Primary
-              </Button>
+              <Button variant="primary">Primary</Button>
 
-              <Button color="primary" variant="outlined">
-                Secondary
-              </Button>
+              <Button variant="neutral">Secondary</Button>
             </Inline>
           </DrawerActions>
         </Drawer>
@@ -96,6 +94,7 @@ export const titleStartAction = () => (
           onClick={() => {
             setState(true);
           }}
+          variant="neutral"
         >
           Open Drawer
         </Button>
@@ -128,6 +127,7 @@ export const titleEndAction = () => (
           onClick={() => {
             setState(true);
           }}
+          variant="neutral"
         >
           Open Drawer
         </Button>
@@ -160,6 +160,7 @@ export const drawerList = () => (
           onClick={() => {
             setState(true);
           }}
+          variant="neutral"
         >
           Open Drawer
         </Button>
@@ -191,13 +192,9 @@ export const drawerList = () => (
 
           <DrawerActions>
             <Inline space="small">
-              <Button color="primary" variant="contained">
-                Primary
-              </Button>
+              <Button variant="primary">Primary</Button>
 
-              <Button color="primary" variant="outlined">
-                Secondary
-              </Button>
+              <Button variant="neutral">Secondary</Button>
             </Inline>
           </DrawerActions>
         </Drawer>

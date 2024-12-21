@@ -2,8 +2,8 @@ import { FormControlLabel, Radio } from '@material-ui/core';
 import { MessageOutlined, PostAdd as PostAddIcon } from '@material-ui/icons';
 import { Alert } from '@material-ui/lab';
 import { Meta } from '@storybook/react';
-import { Button, Inline, Stack, useSnackbarStack } from '@superdispatch/ui';
-import { Box } from '@superdispatch/ui-lab';
+import { Inline, Stack, useSnackbarStack } from '@superdispatch/ui';
+import { Box, Button } from '@superdispatch/ui-lab';
 import { Form, FormikProvider } from 'formik';
 import {
   FormikCheckboxField,
@@ -81,7 +81,7 @@ export const SignUp = () => {
         <pre>{JSON.stringify(status.payload, null, 2)}</pre>
 
         <Button
-          variant="contained"
+          variant="primary"
           onClick={() => {
             resetForm();
           }}
@@ -188,11 +188,7 @@ export const SignUp = () => {
             )}
 
             <Inline>
-              <Button
-                type="submit"
-                variant="contained"
-                isLoading={isSubmitting}
-              >
+              <Button type="submit" variant="primary" pending={isSubmitting}>
                 Sign Up
               </Button>
 
@@ -200,7 +196,7 @@ export const SignUp = () => {
                 onClick={() => {
                   resetForm();
                 }}
-                variant="outlined"
+                variant="neutral"
                 disabled={isSubmitting}
               >
                 Reset

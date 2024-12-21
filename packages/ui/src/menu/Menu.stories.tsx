@@ -1,6 +1,7 @@
-import { Button, Menu, MenuItem } from '@material-ui/core';
+import { Menu, MenuItem } from '@material-ui/core';
 import { Meta } from '@storybook/react';
 import { UseState } from '@superdispatch/ui-docs';
+import { Button } from '@superdispatch/ui-lab';
 
 export default { title: 'Navigation/Menu' } as Meta;
 
@@ -9,8 +10,7 @@ export const basic = () => (
     {(state, setState) => (
       <>
         <Button
-          color="primary"
-          variant="contained"
+          variant="primary"
           onClick={(event) => {
             setState(event.currentTarget);
           }}
