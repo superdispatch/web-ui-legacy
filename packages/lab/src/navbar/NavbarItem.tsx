@@ -1,4 +1,4 @@
-import { ColorDynamic, useUID } from '@superdispatch/ui';
+import { Color, ColorDynamic, useUID } from '@superdispatch/ui';
 import {
   ComponentType,
   HTMLAttributes,
@@ -52,11 +52,16 @@ const NavbarItemRoot = styled.div`
   padding: 8px 16px;
   border-left: 4px solid transparent;
 
-  &:hover,
   &[aria-current],
   &[data-active='true'] {
-    color: ${ColorDynamic.White};
-    background-color: #2f394a;
+    color: ${Color.White};
+    background-color: ${Color.White10};
+    border-left-color: ${ColorDynamic.Blue300};
+  }
+
+  &:hover {
+    background-color: ${Color.White08};
+    color: ${Color.White};
     border-left-color: ${ColorDynamic.Blue300};
   }
 `;

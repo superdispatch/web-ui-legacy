@@ -1,5 +1,5 @@
 import { Menu, MenuItem, Typography } from '@material-ui/core';
-import { ColorDynamic, Inline } from '@superdispatch/ui';
+import { Color, ColorDynamic, Inline } from '@superdispatch/ui';
 import { Key, MouseEvent, ReactElement, ReactNode, useState } from 'react';
 import styled from 'styled-components';
 import { useNavbarContext } from './NavbarContext';
@@ -20,14 +20,14 @@ const Wrapper = styled.div<{ active?: boolean }>`
   width: 100%;
   padding: 8px 16px;
   cursor: pointer;
-  background: ${ColorDynamic.Dark400};
+  background: ${Color.White10};
 
   border-left: 4px solid
     ${({ active }) => (active ? ColorDynamic.Blue300 : 'transparent')};
 
   &:hover {
     border-left-color: ${ColorDynamic.Blue300};
-    background: ${ColorDynamic.Dark400};
+    background: ${Color.White08};
   }
 `;
 
