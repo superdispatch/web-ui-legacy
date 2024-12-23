@@ -81,7 +81,7 @@ it('checks component css', () => {
     }
 
     .MuiTab-textColorPrimary.Mui-selected {
-      color: Color.Blue300;
+      color: ColorDynamic.Blue500;
     }
 
     .MuiTab-textColorPrimary.Mui-disabled {
@@ -90,7 +90,7 @@ it('checks component css', () => {
 
     .MuiTab-textColorPrimary:hover,
     .MuiTab-textColorPrimary:focus {
-      color: ColorDynamic.Blue300;
+      color: ColorDynamic.Blue500;
     }
 
     .MuiTab-textColorSecondary {
@@ -180,6 +180,10 @@ it('checks component css', () => {
       .MuiTabs-scrollButtonsDesktop {
         display: none;
       }
+    }
+
+    .MuiTabs-indicator {
+      background-color: ColorDynamic.Blue500;
     }
 
     .MuiTabScrollButton-root {
