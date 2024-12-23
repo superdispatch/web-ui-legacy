@@ -1,6 +1,6 @@
 import { Typography } from '@material-ui/core';
 import { Meta } from '@storybook/react';
-import { Button } from '../button/Button';
+import { Button } from '@superdispatch/ui-lab';
 import { InfoTooltip } from './InfoTooltip';
 
 export default {
@@ -18,7 +18,7 @@ export const basic = () => (
       <>
         <Typography variant="h3">Title</Typography>
         <Typography>Content</Typography>
-        <Button>Button</Button>
+        <Button variant="neutral">Button</Button>
       </>
     }
   />
@@ -34,7 +34,7 @@ export const withLabel = () => (
       <>
         <Typography variant="h3">Title</Typography>
         <Typography>Content</Typography>
-        <Button>Button</Button>
+        <Button variant="neutral">Button</Button>
       </>
     }
   >
@@ -53,7 +53,7 @@ export const medium = () => (
       <>
         <Typography variant="h3">Title</Typography>
         <Typography>Non-Interactive Content</Typography>
-        <Button>Button</Button>
+        <Button variant="neutral">Button</Button>
       </>
     }
   />
@@ -70,7 +70,7 @@ export const large = () => (
       <>
         <Typography variant="h3">Title</Typography>
         <Typography>Non-Interactive Content</Typography>
-        <Button>Button</Button>
+        <Button variant="neutral">Button</Button>
       </>
     }
   />

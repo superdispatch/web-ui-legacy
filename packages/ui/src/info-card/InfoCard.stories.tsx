@@ -1,6 +1,6 @@
 import { Typography } from '@material-ui/core';
 import { Meta } from '@storybook/react';
-import { Button } from '../button/Button';
+import { Button } from '@superdispatch/ui-lab';
 import { Stack } from '../stack/Stack';
 import { InfoCard } from './InfoCard';
 
@@ -12,7 +12,7 @@ export const basic = () => (
       <Typography variant="h3">Title</Typography>
       <Typography>Content</Typography>
 
-      <Button>Button</Button>
+      <Button variant="neutral">Button</Button>
     </Stack>
   </InfoCard>
 );
@@ -23,7 +23,7 @@ export const large = () => (
       <Typography variant="h3">Title</Typography>
       <Typography>Content</Typography>
 
-      <Button>Button</Button>
+      <Button variant="neutral">Button</Button>
     </Stack>
   </InfoCard>
 );

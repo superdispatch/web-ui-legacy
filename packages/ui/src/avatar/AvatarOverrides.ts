@@ -18,7 +18,7 @@ export function overrideAvatar(theme: SuperDispatchTheme): void {
 
     colorDefault: {
       color: ColorDynamic.Dark300,
-      backgroundColor: ColorDynamic.Silver300,
+      backgroundColor: ColorDynamic.Silver400,
     },
   };
 }
