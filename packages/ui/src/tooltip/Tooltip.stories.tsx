@@ -1,5 +1,6 @@
-import { Button, Tooltip } from '@material-ui/core';
+import { Tooltip } from '@material-ui/core';
 import { PropsLink } from '@superdispatch/ui-docs';
+import { Button } from '@superdispatch/ui-lab';
 import { Inline } from '../inline/Inline';
 
 export default {
@@ -14,19 +15,19 @@ export default {
 export const basic = () => (
   <Inline>
     <Tooltip title="Default">
-      <Button>Default</Button>
+      <Button variant="neutral">Default</Button>
     </Tooltip>
 
     <Tooltip title="Left" placement="left">
-      <Button>Left</Button>
+      <Button variant="neutral">Left</Button>
     </Tooltip>
 
     <Tooltip title="Top" placement="top">
-      <Button>Top</Button>
+      <Button variant="neutral">Top</Button>
     </Tooltip>
 
     <Tooltip title="Right" placement="right">
-      <Button>Right</Button>
+      <Button variant="neutral">Right</Button>
     </Tooltip>
   </Inline>
 );

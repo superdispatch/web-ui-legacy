@@ -1,6 +1,12 @@
 import { IconButton } from '@material-ui/core';
 import { Menu as MenuIcon, MenuOpen } from '@material-ui/icons';
-import { ColorDynamic, Inline, useResponsiveValue } from '@superdispatch/ui';
+import {
+  Color,
+  ColorDark,
+  ColorDynamic,
+  Inline,
+  useResponsiveValue,
+} from '@superdispatch/ui';
 import {
   ComponentType,
   HTMLAttributes,
@@ -37,7 +43,8 @@ const Wrapper = styled.div<{ isMobile: boolean }>`
 
   overflow: hidden;
   padding-top: 16px;
-  background: #1b2638;
+  background: ${({ theme }) =>
+    theme.palette.type === 'dark' ? ColorDark.White : Color.Dark500};
   transition: width 0.3s linear;
 
   height: 100%;
@@ -57,7 +64,7 @@ const Wrapper = styled.div<{ isMobile: boolean }>`
 `;
 
 const ExpandIconButton = styled(IconButton)`
-  color: ${ColorDynamic.Silver500};
+  color: ${ColorDynamic.Dark100};
 
   &&:focus {
     background-color: inherit;

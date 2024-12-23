@@ -1,12 +1,7 @@
 import { FormControlLabel, FormGroup, Switch } from '@material-ui/core';
 import { UseState } from '@superdispatch/ui-docs';
-import {
-  Button,
-  Inline,
-  Snackbar,
-  SnackbarContent,
-  SnackbarStackConsumer,
-} from '..';
+import { Button } from '@superdispatch/ui-lab';
+import { Inline, Snackbar, SnackbarContent, SnackbarStackConsumer } from '..';
 import { Stack } from '../stack/Stack';
 
 export default {
@@ -20,6 +15,7 @@ export const basic = () => (
     {(open, setOpen) => (
       <>
         <Button
+          variant="neutral"
           onClick={() => {
             setOpen(!open);
           }}
@@ -41,6 +37,7 @@ export const closable = () => (
           onClick={() => {
             setOpen(!open);
           }}
+          variant="neutral"
         >
           Toggle snackbar visibility
         </Button>
@@ -121,6 +118,7 @@ export const stack = () => (
             onClick={() => {
               addSnackbar(`This is default snackbar (${getTime()})`);
             }}
+            variant="neutral"
           >
             Add default snackbar
           </Button>
@@ -130,6 +128,7 @@ export const stack = () => (
                 variant: 'success',
               });
             }}
+            variant="neutral"
           >
             Add success snackbar
           </Button>
@@ -139,6 +138,7 @@ export const stack = () => (
                 variant: 'error',
               });
             }}
+            variant="neutral"
           >
             Add error snackbar
           </Button>
@@ -147,6 +147,7 @@ export const stack = () => (
             onClick={() => {
               clearStack();
             }}
+            variant="neutral"
           >
             Clear stack
           </Button>
@@ -173,8 +174,7 @@ export const undoable = () => (
               action: (
                 <Button
                   size="small"
-                  color="white"
-                  variant="contained"
+                  variant="inverted"
                   onClick={() => {
                     closeSnackbar();
                     addSnackbar(
@@ -190,6 +190,7 @@ export const undoable = () => (
             },
           );
         }}
+        variant="neutral"
       >
         Confirm transaction
       </Button>
@@ -218,7 +219,7 @@ export const lotOfText = () => (
               </ul>
               <Button
                 size="small"
-                variant="outlined"
+                variant="neutral"
                 onClick={() => {
                   closeSnackbar();
                 }}
@@ -233,6 +234,7 @@ export const lotOfText = () => (
             },
           );
         }}
+        variant="neutral"
       >
         Snackbar with a lot of text
       </Button>

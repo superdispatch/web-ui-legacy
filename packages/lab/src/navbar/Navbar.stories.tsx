@@ -8,7 +8,9 @@ import {
   Settings,
 } from '@material-ui/icons';
 import { Meta } from '@storybook/react';
+import { Color } from '@superdispatch/ui';
 import { noop } from 'lodash';
+import styled from 'styled-components';
 import { Box, Navbar, NavbarAvatar, NavbarMenu, TextBox } from '../..';
 
 export default {
@@ -105,17 +107,17 @@ const items = [
   },
 ];
 
+const HeaderText = styled(TextBox)`
+  color: ${Color.White};
+`;
+
 export const basic = () => {
   return (
     <Box height="100vh">
       <Navbar
         items={items}
         bottomItems={bottomItems}
-        header={
-          <TextBox variant="heading-3" color="white">
-            Super Navbar
-          </TextBox>
-        }
+        header={<HeaderText variant="heading-3">Super Navbar</HeaderText>}
         footer={
           <NavbarMenu items={menuItems}>
             <NavbarAvatar

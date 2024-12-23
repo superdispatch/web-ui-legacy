@@ -1,6 +1,6 @@
 import { Accordion, AccordionSummary } from '@material-ui/core';
 import { ExpandMore } from '@material-ui/icons';
-import { ColorDynamic, useUID } from '@superdispatch/ui';
+import { Color, ColorDark, ColorDynamic, useUID } from '@superdispatch/ui';
 import {
   MouseEvent,
   ReactElement,
@@ -33,10 +33,11 @@ const NavbarAccordionRoot = styled(Accordion)`
   text-decoration: none;
   outline: none;
   cursor: pointer;
-  background-color: #1b2638;
+  background-color: ${({ theme }) =>
+    theme.palette.type === 'dark' ? ColorDark.White : Color.Dark500};
 
   &[aria-current] {
-    background-color: #2f394a;
+    background-color: ${Color.White10};
     color: ${ColorDynamic.White};
   }
 
@@ -73,8 +74,8 @@ const NavbarAccordionSummary = styled(AccordionSummary)`
   &:hover,
   &[aria-current],
   &[data-active='true'] {
-    color: ${ColorDynamic.White};
-    background-color: #2f394a;
+    color: ${Color.White};
+    background-color: ${Color.White10};
     border-left-color: ${ColorDynamic.Blue300};
   }
 
