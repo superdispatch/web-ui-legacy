@@ -18,6 +18,9 @@ export function overrideTabs(theme: SuperDispatchTheme): void {
         duration: theme.transitions.duration.short,
       }),
     },
+    indicator: {
+      backgroundColor: ColorDynamic.Blue500,
+    },
   };
 
   theme.overrides.MuiTab = {
@@ -39,7 +42,10 @@ export function overrideTabs(theme: SuperDispatchTheme): void {
 
     textColorPrimary: {
       color: ColorDynamic.Dark500,
-      '&:hover, &:focus': { color: ColorDynamic.Blue300 },
+      '&:hover, &:focus': { color: ColorDynamic.Blue500 },
+      '&$selected': {
+        color: ColorDynamic.Blue500,
+      },
     },
   };
 }
