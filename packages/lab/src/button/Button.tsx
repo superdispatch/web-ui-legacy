@@ -173,11 +173,11 @@ function getCriticalVariables(size: ButtonSizeProp): ButtonVariables {
 
 function getTextVariables(size: ButtonSizeProp): ButtonVariables {
   return createButtonVariables(size, {
-    textColor: Color.Blue500,
+    textColor: ColorDynamic.Blue500,
 
     outlineColor: ColorDynamic.Blue30,
 
-    textColorHovered: Color.Blue500,
+    textColorHovered: ColorDynamic.Blue500,
     backgroundColorHovered: ColorDynamic.Blue50,
 
     backgroundColorActive: ColorDynamic.Blue75,
