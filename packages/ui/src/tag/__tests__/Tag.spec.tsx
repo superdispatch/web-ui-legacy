@@ -14,7 +14,7 @@ it('checks component css', () => {
 
     .SD-Tag-variantSubtle.SD-Tag-colorGrey {
       color: ColorDynamic.Dark300;
-      background-color: ColorDynamic.Silver200;
+      background-color: ColorDynamic.Silver400;
     }
 
     .SD-Tag-variantSubtle.SD-Tag-colorBlue {

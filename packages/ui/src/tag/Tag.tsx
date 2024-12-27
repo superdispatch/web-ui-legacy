@@ -38,7 +38,7 @@ const useStyles = makeStyles<
     variantSubtle: {
       '&$colorGrey': {
         color: ColorDynamic.Dark300,
-        backgroundColor: ColorDynamic.Silver200,
+        backgroundColor: ColorDynamic.Silver400,
       },
       '&$colorBlue': {
         color: ColorDynamic.Blue500,
