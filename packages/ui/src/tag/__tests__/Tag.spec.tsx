@@ -14,6 +14,11 @@ it('checks component css', () => {
 
     .SD-Tag-variantSubtle.SD-Tag-colorGrey {
       color: ColorDynamic.Dark300;
+      background-color: ColorDynamic.Silver200;
+    }
+
+    .SD-Tag-variantSubtle.SD-Tag-colorDark {
+      color: ColorDynamic.Dark500;
       background-color: ColorDynamic.Silver400;
     }
 
@@ -54,6 +59,11 @@ it('checks component css', () => {
     .SD-Tag-variantBold.SD-Tag-colorGrey {
       color: ColorDynamic.White;
       background-color: ColorDynamic.Dark300;
+    }
+
+    .SD-Tag-variantBold.SD-Tag-colorDark {
+      color: ColorDynamic.White;
+      background-color: ColorDynamic.Dark500;
     }
 
     .SD-Tag-variantBold.SD-Tag-colorBlue {
