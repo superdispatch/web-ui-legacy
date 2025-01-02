@@ -8,6 +8,9 @@ export const subtle = () => (
     <Tag color="grey" variant="subtle">
       Grey
     </Tag>
+    <Tag color="dark" variant="subtle">
+      Dark
+    </Tag>
     <Tag color="blue" variant="subtle">
       Blue
     </Tag>
@@ -30,6 +33,9 @@ export const bold = () => (
   <Inline>
     <Tag color="grey" variant="bold">
       Grey
+    </Tag>
+    <Tag color="dark" variant="bold">
+      Dark
     </Tag>
     <Tag color="blue" variant="bold">
       Blue

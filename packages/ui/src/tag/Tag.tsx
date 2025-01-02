@@ -12,6 +12,7 @@ import { Color, ColorDynamic } from '../theme/Color';
 export type TagClassKey =
   | 'root'
   | 'colorGrey'
+  | 'colorDark'
   | 'colorBlue'
   | 'colorGreen'
   | 'colorPurple'
@@ -38,6 +39,10 @@ const useStyles = makeStyles<
     variantSubtle: {
       '&$colorGrey': {
         color: ColorDynamic.Dark300,
+        backgroundColor: ColorDynamic.Silver200,
+      },
+      '&$colorDark': {
+        color: ColorDynamic.Dark500,
         backgroundColor: ColorDynamic.Silver400,
       },
       '&$colorBlue': {
@@ -73,6 +78,10 @@ const useStyles = makeStyles<
         backgroundColor: ColorDynamic.Dark300,
         color: ColorDynamic.White,
       },
+      '&$colorDark': {
+        backgroundColor: ColorDynamic.Dark500,
+        color: ColorDynamic.White,
+      },
       '&$colorBlue': { backgroundColor: ColorDynamic.Blue300 },
       '&$colorGreen': { backgroundColor: ColorDynamic.Green300 },
       '&$colorPurple': { backgroundColor: ColorDynamic.Purple300 },
@@ -82,6 +91,7 @@ const useStyles = makeStyles<
     },
 
     colorGrey: {},
+    colorDark: {},
     colorBlue: {},
     colorGreen: {},
     colorPurple: {},
@@ -98,7 +108,15 @@ export interface TagProps
   classes?: Partial<ClassNameMap<TagClassKey>>;
   component?: ElementType;
 
-  color: 'grey' | 'blue' | 'green' | 'purple' | 'red' | 'teal' | 'yellow';
+  color:
+    | 'grey'
+    | 'dark'
+    | 'blue'
+    | 'green'
+    | 'purple'
+    | 'red'
+    | 'teal'
+    | 'yellow';
   variant: 'subtle' | 'bold';
   fontWeight?: 'regular' | 'bold';
 }
@@ -130,6 +148,7 @@ export const Tag: ForwardRefExoticComponent<TagProps> = forwardRef(
         className={cx(
           styles.root,
           color === 'grey' && styles.colorGrey,
+          color === 'dark' && styles.colorDark,
           color === 'blue' && styles.colorBlue,
           color === 'green' && styles.colorGreen,
           color === 'purple' && styles.colorPurple,
