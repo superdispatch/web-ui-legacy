@@ -147,7 +147,7 @@ function getNeutralVariables(size: ButtonSizeProp): ButtonVariables {
     borderColorHovered: ColorDynamic.Blue500,
     backgroundColorHovered: ColorDynamic.Blue50,
 
-    backgroundColorActive: ColorDynamic.Blue75,
+    backgroundColorActive: ColorDynamic.Blue50,
 
     textColorDisabled: ColorDynamic.Silver500,
     iconColor: ColorDynamic.Dark100,
@@ -180,7 +180,7 @@ function getTextVariables(size: ButtonSizeProp): ButtonVariables {
     textColorHovered: ColorDynamic.Blue500,
     backgroundColorHovered: ColorDynamic.Blue50,
 
-    backgroundColorActive: ColorDynamic.Blue75,
+    backgroundColorActive: ColorDynamic.Blue50,
 
     textColorDisabled: ColorDynamic.Blue30,
   });
