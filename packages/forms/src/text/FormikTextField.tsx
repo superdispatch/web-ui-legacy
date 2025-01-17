@@ -5,11 +5,10 @@ import {
   ChangeEvent,
   forwardRef,
   ForwardRefExoticComponent,
-  KeyboardEvent,
   ReactNode,
 } from 'react';
 import { EMPTY_ERROR_MESSAGE } from './constants';
-import { getOptionsFromChildren, isSingleLetterOrNumber } from './utils';
+import { getOptionsFromChildren, useKeyboardSelection } from './utils';
 
 function parseInputValue(
   event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
@@ -71,31 +70,17 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
       const errorText: ReactNode =
         touched && error && error !== EMPTY_ERROR_MESSAGE && formatError(error);
 
-      function handleKeyDown(event: KeyboardEvent<HTMLDivElement>): void {
-        if (!props.select) return;
+      const handleKeyboardSelection = useKeyboardSelection({
+        options: getOptionsFromChildren(props.children),
+        onSelect: (value) => {
+          const syntheticEvent = {
+            target: { value },
+          } as ChangeEvent<HTMLInputElement>;
 
-        const options = getOptionsFromChildren(props.children);
-
-        if (options.length === 0) return;
-
-        if (isSingleLetterOrNumber(event.key)) {
-          const matchingOption = options.find((option) =>
-            option.label.toLowerCase().startsWith(event.key.toLowerCase()),
-          );
-
-          if (matchingOption) {
-            const customEvent = {
-              target: {
-                ...event.target,
-                value: matchingOption.value,
-              },
-            } as ChangeEvent<HTMLInputElement>;
-
-            setValue(parse(customEvent));
-            onChange?.(customEvent);
-          }
-        }
-      }
+          setValue(parse(syntheticEvent));
+          onChange?.(syntheticEvent);
+        },
+      });
 
       return (
         <TextField
@@ -112,7 +97,7 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
             props.onKeyDown?.(event);
 
             if (!event.defaultPrevented && unstableOnKeyDownSelection) {
-              handleKeyDown(event);
+              handleKeyboardSelection(event);
             }
           }}
           onBlur={(event) => {
