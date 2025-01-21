@@ -38,7 +38,6 @@ export interface FormikTextFieldProps extends StandardTextFieldProps {
   parse?: (
     event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
   ) => unknown;
-  unstableOnKeyDownSelection?: boolean;
 }
 
 export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
@@ -58,7 +57,6 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
         parse = parseInputValue,
         format = formatInputValue,
         formatError = formatInputError,
-        unstableOnKeyDownSelection,
         ...props
       },
       ref,
@@ -96,7 +94,7 @@ export const FormikTextField: ForwardRefExoticComponent<FormikTextFieldProps> =
           onKeyDown={(event) => {
             props.onKeyDown?.(event);
 
-            if (!event.defaultPrevented && unstableOnKeyDownSelection) {
+            if (!event.defaultPrevented) {
               handleKeyboardSelection(event);
             }
           }}
