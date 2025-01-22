@@ -76,6 +76,7 @@ it('checks component css InfoTooltip', () => {
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       line-height: 20px;
+      --sd-dark-300: ColorDynamic.Silver500;
       border-radius: 4px;
       background-color: ColorDynamic.Dark500;
     }

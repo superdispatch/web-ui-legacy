@@ -71,6 +71,10 @@ it('checks component css', () => {
       }
     }
 
+    .MuiMenuItem-root:hover {
+      background-color: ColorDynamic.Silver200;
+    }
+
     .MuiMenuItem-dense {
       font-size: 14px;
       min-height: auto;

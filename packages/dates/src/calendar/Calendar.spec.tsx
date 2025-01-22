@@ -455,7 +455,7 @@ test('css', () => {
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active,
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled).SD-Calendar-selected {
-      color: ColorDynamic.White;
+      color: Color.White;
     }
 
     .SD-Calendar-day:not(.SD-Calendar-outside):not(.SD-Calendar-disabled):active:after,

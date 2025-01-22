@@ -47,6 +47,7 @@ export const colors = () => (
     <Inline>
       <TextBox color="primary">Primary</TextBox>
       <TextBox color="secondary">Secondary</TextBox>
+      <TextBox color="disabled">Disabled</TextBox>
       <TextBox color="white">White</TextBox>
       <TextBox color="blue">Blue</TextBox>
       <TextBox color="green">Green</TextBox>

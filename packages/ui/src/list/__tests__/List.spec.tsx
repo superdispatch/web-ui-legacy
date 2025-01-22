@@ -123,7 +123,7 @@ it('checks component css', () => {
 
     .MuiListItem-button:hover {
       text-decoration: none;
-      background-color: Color.Silver200;
+      background-color: ColorDynamic.Silver200;
     }
 
     @media (hover: none) {

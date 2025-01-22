@@ -1,7 +1,7 @@
-import { StyleRules } from '@material-ui/core';
+import { alpha, StyleRules } from '@material-ui/core';
 import { PaginationItemClassKey, PaginationItemProps } from '@material-ui/lab';
 import { CSSProperties } from '@material-ui/styles';
-import { ColorDynamic } from '../theme/Color';
+import { Color, ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 type Overrides<T extends string> = Partial<StyleRules<T>> & {
@@ -10,13 +10,16 @@ type Overrides<T extends string> = Partial<StyleRules<T>> & {
 
 export function overridePagination(theme: SuperDispatchTheme): void {
   const props: Partial<PaginationItemProps> = {};
+  const mode = theme.palette.type;
+  const color =
+    mode === 'dark' ? alpha(Color.White, 0.08) : ColorDynamic.Silver200;
   const overrides: Overrides<PaginationItemClassKey> = {
     root: {
       color: ColorDynamic.Dark500,
     },
     page: {
       '&:hover': {
-        backgroundColor: ColorDynamic.Silver200,
+        backgroundColor: color,
       },
       '&$focusVisible': {
         borderRadius: 4,
