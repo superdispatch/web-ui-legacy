@@ -1,6 +1,7 @@
-import { ButtonBase } from '@material-ui/core';
+import { alpha, ButtonBase } from '@material-ui/core';
 import { OpenInNew } from '@material-ui/icons';
 import {
+  Color,
   ColorDynamic,
   Column,
   Columns,
@@ -25,9 +26,11 @@ interface SidebarMenuItemRootProps {
 }
 
 const SidebarMenuItemRoot = styled.div<SidebarMenuItemRootProps>(
-  ({ hasAvatar }) => {
+  ({ hasAvatar, theme }) => {
     const height = hasAvatar ? 48 : 40;
-
+    const mode = theme.palette.type;
+    const color =
+      mode === 'dark' ? alpha(Color.White, 0.08) : ColorDynamic.Silver200;
     return css`
       position: relative;
 
@@ -42,12 +45,12 @@ const SidebarMenuItemRoot = styled.div<SidebarMenuItemRootProps>(
         max-height: ${height}px;
 
         &[aria-current='true'] {
-          background-color: ${ColorDynamic.Silver200};
+          background-color: ${color};
           box-shadow: inset 4px 0 0 ${ColorDynamic.Blue300};
         }
 
         &:hover {
-          background-color: ${ColorDynamic.Silver200};
+          background-color: ${color};
         }
       }
     `;

@@ -1,7 +1,13 @@
-import { ColorDynamic } from '../theme/Color';
+import { alpha } from '@material-ui/core';
+import { Color, ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideMenu(theme: SuperDispatchTheme): void {
+  const color =
+    theme.palette.type === 'dark'
+      ? alpha(Color.White, 0.08)
+      : ColorDynamic.Silver200;
+
   theme.props.MuiMenu = {
     getContentAnchorEl: null,
     anchorOrigin: { vertical: 'bottom', horizontal: 'left' },
@@ -19,6 +25,9 @@ export function overrideMenu(theme: SuperDispatchTheme): void {
       ...theme.typography.body2,
       paddingTop: theme.spacing(1),
       paddingBottom: theme.spacing(1),
+      '&:hover': {
+        backgroundColor: color,
+      },
     },
   };
 }

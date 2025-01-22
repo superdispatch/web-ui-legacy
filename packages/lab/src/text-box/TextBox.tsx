@@ -15,7 +15,8 @@ export type TextColorProp =
   | 'inherit'
   | 'primary'
   | 'secondary'
-  | 'light-gray'
+  | 'light-gray' //*deprecated use disabled instead
+  | 'disabled'
   | 'white'
   | 'blue'
   | 'green'
@@ -32,10 +33,10 @@ export type TextDisplayProp =
 
 const normalizeTextColor = createRuleNormalizer<TextColorProp>({
   inherit: 'inherit',
-
   primary: ColorDynamic.Dark500,
   secondary: ColorDynamic.Dark300,
-  'light-gray': ColorDynamic.Dark100,
+  'light-gray': ColorDynamic.Dark100, //*deprecated use disabled instead
+  disabled: ColorDynamic.Dark100,
   white: ColorDynamic.White,
   blue: ColorDynamic.Blue500,
   green: ColorDynamic.Green500,

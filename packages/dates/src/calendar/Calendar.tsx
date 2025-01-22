@@ -1,6 +1,13 @@
-import { Divider, Grid, GridDirection, Hidden, Theme } from '@material-ui/core';
+import {
+  alpha,
+  Divider,
+  Grid,
+  GridDirection,
+  Hidden,
+  Theme,
+} from '@material-ui/core';
 import { ClassNameMap, makeStyles } from '@material-ui/styles';
-import { ColorDynamic, ColorVariant } from '@superdispatch/ui';
+import { Color, ColorDynamic, ColorVariant } from '@superdispatch/ui';
 import { DateTime } from 'luxon';
 import { forwardRef, ReactNode, useMemo } from 'react';
 import DayPicker, {
@@ -221,7 +228,10 @@ const useStyles = makeStyles<
 
         '&:not($selected):not(:active)': {
           '&:hover, &:focus': {
-            backgroundColor: ColorDynamic.Silver200,
+            backgroundColor:
+              theme.palette.type === 'dark'
+                ? alpha(Color.White, 0.08)
+                : ColorDynamic.Silver200,
           },
 
           '&$blue': {
@@ -263,7 +273,7 @@ const useStyles = makeStyles<
         },
 
         '&:active, &$selected': {
-          color: ColorDynamic.White,
+          color: Color.White,
           '&:after': {
             backgroundColor: ColorDynamic.Blue300,
           },
