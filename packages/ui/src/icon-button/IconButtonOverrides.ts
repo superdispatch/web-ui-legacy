@@ -23,6 +23,7 @@ export function overrideIconButton(theme: SuperDispatchTheme): void {
       '&:active': { color: ColorDynamic.Blue500 },
       '&:hover ': { color: ColorDynamic.Blue300 },
       '&:focus': { backgroundColor: ColorDynamic.Blue50 },
+      color: ColorDynamic.Blue500,
     },
 
     edgeEnd: { marginRight: theme.spacing(-1) },

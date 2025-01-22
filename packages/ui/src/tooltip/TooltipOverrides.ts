@@ -9,6 +9,7 @@ export function overrideTooltip(theme: SuperDispatchTheme): void {
       ...theme.typography.body2,
       padding: theme.spacing(1, 1.5),
       backgroundColor: ColorDynamic.Dark500,
+      '--sd-dark-300': ColorDynamic.Silver500, //tooltip secondary color(Dark300) is invisible in dark mode
     },
 
     popperArrow: {
