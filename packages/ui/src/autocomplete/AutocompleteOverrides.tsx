@@ -1,8 +1,13 @@
-import { SvgIcon } from '@material-ui/core';
+import { alpha, SvgIcon } from '@material-ui/core';
+import { Color, ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideAutocomplete(theme: SuperDispatchTheme): void {
   const sm = theme.breakpoints.up('sm');
+  const color =
+    theme.palette.type === 'dark'
+      ? alpha(Color.White, 0.08)
+      : ColorDynamic.Silver200;
 
   // Remove `Object.assign` after official release of `Autocomplete`.
   Object.assign(theme.props, {
@@ -51,6 +56,11 @@ export function overrideAutocomplete(theme: SuperDispatchTheme): void {
             '& $input': { padding: '2px' },
             '& $endAdornment': { right: '8px' },
           },
+        },
+      },
+      option: {
+        '&[data-focus="true"]': {
+          backgroundColor: color,
         },
       },
     },
