@@ -2,6 +2,7 @@ import {
   FormControl as FormControlMui,
   FormControlLabel,
   FormControlLabelProps,
+  FormControlProps,
   FormHelperText as FormHelperTextMui,
   Radio,
   RadioProps,
@@ -30,6 +31,7 @@ export interface RadioFieldProps
     Pick<FormControlLabelProps, 'label' | 'onBlur' | 'onChange'> {
   error?: boolean;
   helperText?: ReactNode;
+  FormControlProps?: Omit<FormControlProps, 'error'>;
   FormControlLabelProps?: Omit<
     FormControlLabelProps,
     | 'label'
@@ -52,12 +54,13 @@ export const RadioField: ForwardRefExoticComponent<RadioFieldProps> =
         onBlur,
         onChange,
         helperText,
+        FormControlProps: formControlProps,
         FormControlLabelProps: formControlLabelProps,
         ...props
       },
       ref,
     ) => (
-      <FormControl error={error}>
+      <FormControl error={error} {...formControlProps}>
         <FormControlLabel
           {...formControlLabelProps}
           label={label}
