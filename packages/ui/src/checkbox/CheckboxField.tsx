@@ -4,6 +4,7 @@ import {
   FormControl as FormControlMui,
   FormControlLabel,
   FormControlLabelProps,
+  FormControlProps,
   FormHelperText as FormHelperTextMui,
 } from '@material-ui/core';
 import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
@@ -30,6 +31,7 @@ export interface CheckboxFieldProps
     Pick<FormControlLabelProps, 'label'> {
   error?: boolean;
   helperText?: ReactNode;
+  FormControlProps?: Omit<FormControlProps, 'error'>;
   FormControlLabelProps?: Omit<
     FormControlLabelProps,
     'label' | 'checked' | 'onBlur' | 'onChange' | 'control'
@@ -46,12 +48,13 @@ export const CheckboxField: ForwardRefExoticComponent<CheckboxFieldProps> =
         onBlur,
         onChange,
         helperText,
+        FormControlProps: formControlProps,
         FormControlLabelProps: formControlLabelProps,
         ...props
       },
       ref,
     ) => (
-      <FormControl error={error}>
+      <FormControl error={error} {...formControlProps}>
         <FormControlLabel
           {...formControlLabelProps}
           label={label}
