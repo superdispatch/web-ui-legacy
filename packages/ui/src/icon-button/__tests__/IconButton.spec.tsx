@@ -70,7 +70,7 @@ it('checks component css', () => {
     }
 
     .MuiIconButton-colorPrimary {
-      color: Color.Blue300;
+      color: ColorDynamic.Blue500;
     }
 
     .MuiIconButton-colorPrimary:hover {

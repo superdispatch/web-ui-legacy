@@ -295,7 +295,7 @@ it('checks component css', () => {
     }
 
     .MuiAutocomplete-option[data-focus='true'] {
-      background-color: Color.Silver200;
+      background-color: ColorDynamic.Silver200;
     }
 
     .MuiAutocomplete-option:active {
