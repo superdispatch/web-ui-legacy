@@ -413,6 +413,8 @@ interface BaseButtonProps<T extends HTMLElement>
   onClick?: MouseEventHandler<T>;
   onFocus?: FocusEventHandler<T>;
   onBlur?: FocusEventHandler<T>;
+
+  form?: string;
 }
 
 function useButtonProps<T extends HTMLElement>({
