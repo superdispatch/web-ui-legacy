@@ -1,4 +1,4 @@
-import { CheckCircle, Error, Info, Warning } from '@material-ui/icons';
+import { CheckCircle, Error, Info, WarningRounded } from '@material-ui/icons';
 import {
   Alert as MaterialAlert,
   AlertProps as MaterialAlertProps,
@@ -116,7 +116,7 @@ const iconMapping: MaterialAlertProps['iconMapping'] = {
   success: <CheckCircle />,
   info: <Info />,
   error: <Error />,
-  warning: <Warning />,
+  warning: <WarningRounded />,
 };
 
 export const Alert = forwardRef<HTMLDivElement, AlertProps>(

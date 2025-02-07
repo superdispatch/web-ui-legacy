@@ -1,5 +1,5 @@
 import { Drawer, useMediaQuery, useTheme } from '@material-ui/core';
-import { useResponsiveValue } from '@superdispatch/ui';
+import { ColorDynamic, useResponsiveValue } from '@superdispatch/ui';
 import {
   CSSProperties,
   ReactElement,
@@ -16,6 +16,7 @@ const Aside = styled.aside`
   display: flex;
   flex-direction: column;
   overflow: auto;
+  border-right: 1px solid ${ColorDynamic.Silver400};
 `;
 
 const Main = styled.main`
