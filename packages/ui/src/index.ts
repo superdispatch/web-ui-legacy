@@ -15,6 +15,7 @@ export * from './drawer/DrawerTitle';
 export * from './dropdown-button/DropdownButton';
 export * from './grid/GridStack';
 export * from './grid/InlineGrid';
+export * from './Image/Image';
 export * from './info-card/InfoCard';
 export * from './info-tooltip/InfoTooltip';
 export * from './inline/Inline';
