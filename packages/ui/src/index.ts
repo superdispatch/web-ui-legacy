@@ -19,6 +19,7 @@ export * from './Image/Image';
 export * from './info-card/InfoCard';
 export * from './info-tooltip/InfoTooltip';
 export * from './inline/Inline';
+export * from './LightDark/LightDark';
 export * from './number-field/NumberField';
 export * from './overflow-text/OverflowText';
 export * from './pattern-field/PatternField';
