@@ -1,6 +1,6 @@
 {
   "name": "@superdispatch/ui",
-  "version": "0.38.1",
+  "version": "0.39.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/superdispatch/ui.git"
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@juggle/resize-observer": "^3.3.1",
-    "@superdispatch/hooks": "^0.38.0",
+    "@superdispatch/hooks": "^0.39.0",
     "clsx": "^1.1.1",
     "react-keyed-flatten-children": "^1.2.0",
     "react-number-format": "5.3.1"
