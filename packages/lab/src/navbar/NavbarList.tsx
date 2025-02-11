@@ -141,7 +141,7 @@ const Content = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: ${ColorDynamic.Dark300};
+    background-color: ${ColorDark.Silver500};
     border-radius: 100vw;
     margin-bottom: 100px;
   }
