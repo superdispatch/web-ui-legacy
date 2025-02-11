@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle(
     const color = theme.palette.type === 'dark' ? ColorDark : Color;
     return `
     :root{
+      color-scheme: only ${theme.palette.type};
       --sd-white: ${color.White};
       --sd-white-50: ${color.White50};
       --sd-white-40: ${color.White40};
