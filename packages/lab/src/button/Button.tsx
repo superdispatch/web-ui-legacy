@@ -477,6 +477,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 export interface AnchorButtonProps extends BaseButtonProps<HTMLAnchorElement> {
   href: string;
   target?: '_self' | '_blank';
+  rel?:
+    | 'noopener'
+    | 'noreferrer'
+    | 'nofollow'
+    | 'noopener noreferrer'
+    | 'noreferrer noopener';
 }
 
 export const AnchorButton = forwardRef<HTMLAnchorElement, AnchorButtonProps>(
