@@ -1,3 +1,4 @@
+import { alpha } from '@material-ui/core';
 import { Color, ColorDynamic, useUID } from '@superdispatch/ui';
 import {
   ComponentType,
@@ -17,16 +18,16 @@ export const NavbarBadge = styled.span`
   font-weight: 400;
   border-radius: 10px;
   text-align: center;
-  background: #131c2a;
+  background: ${alpha(Color.White, 0.05)};
 
   &[data-variant='primary'] {
-    color: ${ColorDynamic.White};
+    color: ${Color.White};
     background: ${ColorDynamic.Blue300};
   }
 
   &[data-variant='danger'] {
-    color: ${ColorDynamic.White};
-    background: ${ColorDynamic.Red500};
+    color: ${Color.White};
+    background: ${ColorDynamic.Red300};
   }
 `;
 
