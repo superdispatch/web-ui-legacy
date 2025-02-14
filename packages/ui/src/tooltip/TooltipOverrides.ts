@@ -1,15 +1,18 @@
-import { ColorDynamic } from '../theme/Color';
+import { Color, ColorDark } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideTooltip(theme: SuperDispatchTheme): void {
+  const mode = theme.palette.type;
+  const color = mode === 'dark' ? ColorDark.Silver400 : Color.Dark500;
   theme.props.MuiTooltip = { arrow: true };
 
   theme.overrides.MuiTooltip = {
     tooltip: {
       ...theme.typography.body2,
       padding: theme.spacing(1, 1.5),
-      backgroundColor: ColorDynamic.Dark500,
-      '--sd-dark-300': ColorDynamic.Silver500, //tooltip secondary color(Dark300) is invisible in dark mode
+      backgroundColor: color,
+      color: Color.White,
+      '--sd-dark-300': Color.Silver500, //tooltip secondary color(Dark300) is invisible in light mode
     },
 
     popperArrow: {
@@ -28,7 +31,7 @@ export function overrideTooltip(theme: SuperDispatchTheme): void {
     },
 
     arrow: {
-      color: ColorDynamic.Dark500,
+      color,
       fontSize: theme.spacing(1),
     },
   };
