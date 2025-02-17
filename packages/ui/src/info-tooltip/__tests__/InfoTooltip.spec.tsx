@@ -73,11 +73,11 @@ it('checks component css InfoTooltip', () => {
       font-size: 14px;
       max-width: 300px;
       word-wrap: break-word;
+      --sd-white: Color.White;
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       line-height: 20px;
       --sd-dark-300: Color.Silver500;
-      '--sd-white': Color.White;
       border-radius: 4px;
       background-color: Color.Dark500;
     }
