@@ -76,9 +76,9 @@ it('checks component css InfoTooltip', () => {
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       line-height: 20px;
-      --sd-dark-300: Color.Silver500;
+      --sd-dark-300: ColorDynamic.Silver500;
       border-radius: 4px;
-      background-color: Color.Dark500;
+      background-color: ColorDynamic.Dark500;
     }
 
     @media (min-width: 0px) and (max-width: 599.95px) {
@@ -94,7 +94,7 @@ it('checks component css InfoTooltip', () => {
     }
 
     .MuiTooltip-arrow {
-      color: Color.Dark500;
+      color: ColorDynamic.Silver500;
       width: 1em;
       height: 0.71em;
       overflow: hidden;
