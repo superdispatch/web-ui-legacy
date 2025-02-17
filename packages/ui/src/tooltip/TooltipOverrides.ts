@@ -13,6 +13,7 @@ export function overrideTooltip(theme: SuperDispatchTheme): void {
       backgroundColor: color,
       color: Color.White,
       '--sd-dark-300': Color.Silver500, //tooltip secondary color(Dark300) is invisible in light mode
+      ' --sd-white': Color.White, //tooltip text color should always be white
     },
 
     popperArrow: {

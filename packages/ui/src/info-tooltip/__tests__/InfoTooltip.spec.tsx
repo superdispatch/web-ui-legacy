@@ -77,6 +77,7 @@ it('checks component css InfoTooltip', () => {
       font-weight: 400;
       line-height: 20px;
       --sd-dark-300: Color.Silver500;
+      '--sd-white': Color.White;
       border-radius: 4px;
       background-color: Color.Dark500;
     }
