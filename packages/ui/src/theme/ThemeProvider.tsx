@@ -8,6 +8,9 @@ import {
   StylesProvider,
   ThemeProvider as MaterialThemeProvider,
 } from '@material-ui/styles';
+// eslint-disable-next-line import/no-internal-modules
+import { ThemeProvider as MaterialV5ThemeProvider } from '@mui/material/styles';
+import { StylesProvider as MaterialV5StylesProvider } from '@mui/styles';
 import { Rule, StyleSheet } from 'jss';
 import { ReactElement, ReactNode, useMemo } from 'react';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
@@ -179,16 +182,23 @@ export function ThemeProvider({
       injectFirst={injectFirst}
       generateClassName={generateClassName}
     >
-      <MaterialThemeProvider theme={theme}>
-        <CssBaseline />
+      <MaterialV5StylesProvider
+        injectFirst={injectFirst}
+        generateClassName={generateClassName}
+      >
+        <MaterialThemeProvider theme={theme}>
+          <MaterialV5ThemeProvider theme={theme}>
+            <CssBaseline />
 
-        <StyledThemeProvider theme={theme}>
-          <GlobalStyles />
-          <ResponsiveContextProvider>
-            <SnackbarStackProvider>{children}</SnackbarStackProvider>
-          </ResponsiveContextProvider>
-        </StyledThemeProvider>
-      </MaterialThemeProvider>
+            <StyledThemeProvider theme={theme}>
+              <GlobalStyles />
+              <ResponsiveContextProvider>
+                <SnackbarStackProvider>{children}</SnackbarStackProvider>
+              </ResponsiveContextProvider>
+            </StyledThemeProvider>
+          </MaterialV5ThemeProvider>
+        </MaterialThemeProvider>
+      </MaterialV5StylesProvider>
     </StylesProvider>
   );
 }
