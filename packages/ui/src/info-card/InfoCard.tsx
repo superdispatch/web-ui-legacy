@@ -6,7 +6,7 @@ import {
   CardProps,
 } from '@material-ui/core';
 import { CSSProperties, makeStyles } from '@material-ui/styles';
-import { default as clsx } from 'clsx';
+import clsx from 'clsx';
 import { forwardRef, ForwardRefExoticComponent, useState } from 'react';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 import { assignRef } from '../utils/mergeRefs';

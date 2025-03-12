@@ -16,7 +16,7 @@
   "dependencies": {
     "@superdispatch/ui": "^0.40.2",
     "awesome-phonenumber": "6.7.0",
-    "clsx": "^1.1.1"
+    "clsx": "^1.2.1"
   },
   "peerDependencies": {
     "@babel/runtime": "^7.0.0",
