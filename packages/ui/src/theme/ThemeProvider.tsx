@@ -8,8 +8,12 @@ import {
   StylesProvider,
   ThemeProvider as MaterialThemeProvider,
 } from '@material-ui/styles';
-// eslint-disable-next-line import/no-internal-modules
-import { ThemeProvider as MaterialV5ThemeProvider } from '@mui/material/styles';
+import {
+  adaptV4Theme,
+  createTheme as createMaterialV5Theme,
+  DeprecatedThemeOptions,
+  ThemeProvider as MaterialV5ThemeProvider,
+} from '@mui/material/styles';
 import { StylesProvider as MaterialV5StylesProvider } from '@mui/styles';
 import { Rule, StyleSheet } from 'jss';
 import { ReactElement, ReactNode, useMemo } from 'react';
@@ -177,6 +181,10 @@ export function ThemeProvider({
     // eslint-disable-next-line react-hooks/exhaustive-deps -- modifier may update on every render
   }, [mode]);
 
+  const themeV5 = createMaterialV5Theme(
+    adaptV4Theme(createSuperDispatchTheme(mode) as DeprecatedThemeOptions),
+  );
+
   return (
     <StylesProvider
       injectFirst={injectFirst}
@@ -187,7 +195,7 @@ export function ThemeProvider({
         generateClassName={generateClassName}
       >
         <MaterialThemeProvider theme={theme}>
-          <MaterialV5ThemeProvider theme={theme}>
+          <MaterialV5ThemeProvider theme={themeV5}>
             <CssBaseline />
 
             <StyledThemeProvider theme={theme}>
