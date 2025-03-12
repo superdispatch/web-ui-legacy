@@ -3,7 +3,7 @@ import { SkeletonClassKey } from '@material-ui/lab';
 import { Theme as MaterialV5Theme } from '@mui/material/styles';
 
 declare module '@mui/styles/defaultTheme' {
-  type DefaultTheme = MaterialV5Theme;
+  export type DefaultTheme = MaterialV5Theme;
 }
 declare module '@material-ui/core/styles/overrides' {
   export interface ComponentNameToClassKey {
@@ -11,4 +11,5 @@ declare module '@material-ui/core/styles/overrides' {
   }
 }
 
+export type DefaultTheme = MaterialV5Theme;
 export type SuperDispatchTheme = Readonly<Required<Theme>>;
