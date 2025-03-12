@@ -5,7 +5,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import { ClassNameMap, makeStyles } from '@material-ui/styles';
-import { default as clsx } from 'clsx';
+import clsx from 'clsx';
 import {
   forwardRef,
   ForwardRefExoticComponent,
