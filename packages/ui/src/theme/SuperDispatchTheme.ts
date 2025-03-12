@@ -1,6 +1,5 @@
 import { Theme } from '@material-ui/core';
 import { SkeletonClassKey } from '@material-ui/lab';
-// eslint-disable-next-line import/no-internal-modules
 import { Theme as MaterialV5Theme } from '@mui/material/styles';
 
 declare module '@mui/styles/defaultTheme' {
