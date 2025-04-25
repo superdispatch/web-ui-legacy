@@ -69,6 +69,7 @@ export interface DrawerTitleProps
   endAction?: ReactNode;
 }
 
+/** @deprecated - Please use `<Drawer>` component */
 export const DrawerTitle = forwardRef<HTMLDivElement, DrawerTitleProps>(
   (
     {
