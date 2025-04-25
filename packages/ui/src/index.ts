@@ -1,5 +1,6 @@
 export * from './adaptive-toolbar/AdaptiveToolbar';
 export * from './adaptive-vertical-toolbar/AdaptiveVerticalToolbar';
+export * from './app-drawer/AppDrawer';
 export * from './avatar-button/AvatarButton';
 export * from './button/Button';
 export * from './card-button/CardButton';

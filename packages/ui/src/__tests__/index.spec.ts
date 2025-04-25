@@ -5,6 +5,7 @@ it('exposes public api', () => {
     Object {
       "AdaptiveToolbar": React.forwardRef(AdaptiveToolbar),
       "AdaptiveVerticalToolbar": React.forwardRef(AdaptiveVerticalToolbar),
+      "AppDrawer": [Function],
       "AvatarButton": React.forwardRef(AvatarButton),
       "Button": React.forwardRef(Button),
       "CardButton": React.forwardRef(CardButton),
