@@ -11,7 +11,6 @@ import { UseState } from '@superdispatch/ui-docs';
 import { Button } from '@superdispatch/ui-lab';
 import { Stack } from '..';
 import Drawer, { DrawerSize, DRAWER_SIZE_VALUES } from './Drawer';
-import { DrawerContent } from './DrawerContent';
 import { DrawerList } from './DrawerList';
 
 export default {
@@ -62,14 +61,12 @@ export const basic = (args: { size: DrawerSize }) => (
             },
           }}
         >
-          <DrawerContent>
-            <Stack>
-              <TextField fullWidth={true} label="Field 1" />
-              <TextField fullWidth={true} label="Field 2" />
-              <TextField fullWidth={true} label="Field 3" />
-              <TextField fullWidth={true} label="Field 4" />
-            </Stack>
-          </DrawerContent>
+          <Stack>
+            <TextField fullWidth={true} label="Field 1" />
+            <TextField fullWidth={true} label="Field 2" />
+            <TextField fullWidth={true} label="Field 3" />
+            <TextField fullWidth={true} label="Field 4" />
+          </Stack>
         </Drawer>
       </>
     )}
@@ -99,7 +96,7 @@ export const drawerWithBackButton = () => (
             setState(false);
           }}
         >
-          <DrawerContent>This drawer has a back button</DrawerContent>
+          This drawer has a back button
         </Drawer>
       </>
     )}
@@ -122,6 +119,7 @@ export const drawerList = () => (
         <Drawer
           title="Title"
           open={state}
+          disableContentPadding={true}
           onClose={() => {
             setState(false);
           }}
