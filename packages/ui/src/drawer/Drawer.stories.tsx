@@ -1,37 +1,34 @@
 import {
-  Drawer,
   IconButton,
   ListItem,
   ListItemSecondaryAction,
   ListItemText,
   TextField,
 } from '@material-ui/core';
-import {
-  ArrowBack as ArrowBackIcon,
-  Close as CloseIcon,
-  Delete as DeleteIcon,
-} from '@material-ui/icons';
+import { Delete as DeleteIcon } from '@material-ui/icons';
 import { Meta } from '@storybook/react';
-import { PropsLink, UseState } from '@superdispatch/ui-docs';
+import { UseState } from '@superdispatch/ui-docs';
 import { Button } from '@superdispatch/ui-lab';
-import { Inline, Stack } from '..';
-import { DrawerActions } from './DrawerActions';
+import { Stack } from '..';
+import Drawer, { DrawerSize, DRAWER_SIZE_VALUES } from './Drawer';
 import { DrawerContent } from './DrawerContent';
 import { DrawerList } from './DrawerList';
-import { DrawerTitle } from './DrawerTitle';
 
 export default {
   title: 'Navigation/Drawer',
-  component: DrawerTitle,
+  component: Drawer,
   subcomponents: { DrawerList },
-  parameters: {
-    componentSubtitle: (
-      <PropsLink url="https://material-ui.com/api/drawer/#props" />
-    ),
+  argTypes: {
+    size: {
+      control: {
+        type: 'select',
+        options: DRAWER_SIZE_VALUES,
+      },
+    },
   },
 } as Meta;
 
-export const basic = () => (
+export const basic = (args: { size: DrawerSize }) => (
   <UseState initialState={false}>
     {(state, setState) => (
       <>
@@ -45,25 +42,26 @@ export const basic = () => (
         </Button>
 
         <Drawer
+          title="Title"
+          subtitle="Subtitle"
           open={state}
+          size={args.size}
           onClose={() => {
             setState(false);
           }}
+          primaryAction={{
+            label: 'Primary',
+            onClick: () => {
+              /* noop */
+            },
+          }}
+          secondaryAction={{
+            label: 'Secondary',
+            onClick: () => {
+              /* noop */
+            },
+          }}
         >
-          <DrawerTitle
-            title="Title"
-            subtitle="Subtitle"
-            endAction={
-              <IconButton
-                onClick={() => {
-                  setState(false);
-                }}
-              >
-                <CloseIcon color="action" />
-              </IconButton>
-            }
-          />
-
           <DrawerContent>
             <Stack>
               <TextField fullWidth={true} label="Field 1" />
@@ -72,21 +70,13 @@ export const basic = () => (
               <TextField fullWidth={true} label="Field 4" />
             </Stack>
           </DrawerContent>
-
-          <DrawerActions>
-            <Inline space="small">
-              <Button variant="primary">Primary</Button>
-
-              <Button variant="neutral">Secondary</Button>
-            </Inline>
-          </DrawerActions>
         </Drawer>
       </>
     )}
   </UseState>
 );
 
-export const titleStartAction = () => (
+export const drawerWithBackButton = () => (
   <UseState initialState={false}>
     {(state, setState) => (
       <>
@@ -100,52 +90,16 @@ export const titleStartAction = () => (
         </Button>
 
         <Drawer
+          title="Title"
           open={state}
           onClose={() => {
             setState(false);
           }}
-        >
-          <DrawerTitle
-            title="Title"
-            startAction={
-              <IconButton edge="start">
-                <ArrowBackIcon />
-              </IconButton>
-            }
-          />
-        </Drawer>
-      </>
-    )}
-  </UseState>
-);
-
-export const titleEndAction = () => (
-  <UseState initialState={false}>
-    {(state, setState) => (
-      <>
-        <Button
-          onClick={() => {
-            setState(true);
-          }}
-          variant="neutral"
-        >
-          Open Drawer
-        </Button>
-
-        <Drawer
-          open={state}
-          onClose={() => {
+          onBack={() => {
             setState(false);
           }}
         >
-          <DrawerTitle
-            title="Title"
-            startAction={
-              <IconButton edge="start">
-                <ArrowBackIcon />
-              </IconButton>
-            }
-          />
+          <DrawerContent>This drawer has a back button</DrawerContent>
         </Drawer>
       </>
     )}
@@ -166,13 +120,24 @@ export const drawerList = () => (
         </Button>
 
         <Drawer
+          title="Title"
           open={state}
           onClose={() => {
             setState(false);
           }}
+          primaryAction={{
+            label: 'Primary',
+            onClick: () => {
+              /* noop */
+            },
+          }}
+          secondaryAction={{
+            label: 'Secondary',
+            onClick: () => {
+              /* noop */
+            },
+          }}
         >
-          <DrawerTitle title="Title" />
-
           <DrawerList>
             {Array.from({ length: 30 }, (_, idx) => (
               <ListItem key={idx} button={true} ContainerComponent="div">
@@ -189,14 +154,6 @@ export const drawerList = () => (
               </ListItem>
             ))}
           </DrawerList>
-
-          <DrawerActions>
-            <Inline space="small">
-              <Button variant="primary">Primary</Button>
-
-              <Button variant="neutral">Secondary</Button>
-            </Inline>
-          </DrawerActions>
         </Drawer>
       </>
     )}

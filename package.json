@@ -189,7 +189,7 @@
     "typescript": "4.6.3"
   },
   "engines": {
-    "node": "^18 || ^20"
+    "node": "^18 || ^20 || ^21"
   },
   "size-limit": [
     {

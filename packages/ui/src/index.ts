@@ -8,6 +8,7 @@ export * from './checkbox/CheckboxGroudField';
 export * from './columns/Column';
 export * from './columns/Columns';
 export * from './description-list/DescriptionList';
+export * from './drawer/Drawer';
 export * from './drawer/DrawerActions';
 export * from './drawer/DrawerContent';
 export * from './drawer/DrawerList';
