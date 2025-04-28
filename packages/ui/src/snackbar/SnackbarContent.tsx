@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core';
 import { CheckCircle, Close, Error } from '@material-ui/icons';
 import { ClassNameMap, makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import {
   forwardRef,
   ForwardRefExoticComponent,

@@ -1,6 +1,6 @@
 import { List, ListProps } from '@material-ui/core';
 import { CSSProperties, makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { forwardRef } from 'react';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 

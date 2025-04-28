@@ -1,5 +1,5 @@
 import { ClassNameMap, CSSProperties, makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { forwardRef, ReactNode } from 'react';
 import flattenChildren from 'react-keyed-flatten-children';
 import {

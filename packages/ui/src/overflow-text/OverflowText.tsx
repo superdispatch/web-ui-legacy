@@ -5,7 +5,7 @@ import {
   TypographyProps,
 } from '@material-ui/core';
 import { CSSProperties, makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import {
   ElementType,
   forwardRef,
