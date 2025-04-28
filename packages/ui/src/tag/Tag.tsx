@@ -1,6 +1,6 @@
 import { Theme, Typography, TypographyProps } from '@material-ui/core';
 import { ClassNameMap, makeStyles } from '@material-ui/styles';
-import cx from 'clsx';
+import { clsx } from 'clsx';
 import {
   ElementType,
   forwardRef,
@@ -145,7 +145,7 @@ export const Tag: ForwardRefExoticComponent<TagProps> = forwardRef(
         noWrap={noWrap}
         component={component}
         variant={fontWeight === 'bold' ? 'body1' : 'body2'}
-        className={cx(
+        className={clsx(
           styles.root,
           color === 'grey' && styles.colorGrey,
           color === 'dark' && styles.colorDark,

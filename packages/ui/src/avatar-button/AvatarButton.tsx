@@ -6,7 +6,7 @@ import {
   CircularProgress,
 } from '@material-ui/core';
 import { ClassNameMap, CSSProperties, makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import {
   ButtonHTMLAttributes,
   forwardRef,

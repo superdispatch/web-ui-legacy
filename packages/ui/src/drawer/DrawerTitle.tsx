@@ -6,7 +6,7 @@ import {
   TypographyProps,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { forwardRef, HTMLAttributes, ReactNode } from 'react';
 import { ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
