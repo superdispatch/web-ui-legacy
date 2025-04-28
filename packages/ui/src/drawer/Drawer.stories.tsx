@@ -10,7 +10,8 @@ import { Meta } from '@storybook/react';
 import { UseState } from '@superdispatch/ui-docs';
 import { Button } from '@superdispatch/ui-lab';
 import { Stack } from '..';
-import Drawer, { DrawerSize, DRAWER_SIZE_VALUES } from './Drawer';
+import { DRAWER_SIZE_VALUES } from './constants';
+import Drawer, { DrawerSize } from './Drawer';
 import { DrawerList } from './DrawerList';
 
 export default {

@@ -2,13 +2,12 @@ import { Drawer as MuiDrawer, IconButton } from '@material-ui/core';
 import { ArrowBack as BackIcon, Close as CloseIcon } from '@mui/icons-material';
 import styled from 'styled-components';
 import { Button } from '../button/Button';
+import { DRAWER_SIZE_VALUES } from './constants';
 import { DrawerActions } from './DrawerActions';
 import { DrawerContent } from './DrawerContent';
 import { DrawerTitle } from './DrawerTitle';
 
 export type DrawerAnchor = 'left' | 'right';
-
-export const DRAWER_SIZE_VALUES = ['md', 'lg', 'xl', '2xl'] as const;
 export type DrawerSize = typeof DRAWER_SIZE_VALUES[number];
 
 export interface DrawerActionDef {
