@@ -12,7 +12,7 @@
 ## Publishing to NPM
 
 1.  Open an [NPM](https://www.npmjs.com/) account if you don't have one
-2.  Ask frontend chapter lead to give access to Superdispatch organization in NPM
+2.  Ask frontend chapter lead to give access to Superdispatch organization in NPMs
 3.  Enable 2FA for your NPM account
 4.  Run `npm login` from your terminal and login into your account
 5.  Run `yarn release`
