@@ -1,5 +1,6 @@
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
+/** @deprecated Use `<AppDrawer>` instead. */
 export function overrideDrawer(theme: SuperDispatchTheme): void {
   theme.props.MuiDrawer = {
     anchor: 'right',
