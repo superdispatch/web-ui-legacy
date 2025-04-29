@@ -19,6 +19,7 @@ const useStyles = makeStyles(
 
 export type DrawerContentProps = HTMLAttributes<HTMLDivElement>;
 
+/** @deprecated Use `<AppDrawer>` instead. */
 export const DrawerContent = forwardRef<HTMLDivElement, DrawerContentProps>(
   ({ className, ...props }, ref) => {
     const styles = useStyles();

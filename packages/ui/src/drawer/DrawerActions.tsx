@@ -41,6 +41,7 @@ const useStyles = makeStyles(
 
 export type DrawerActionsProps = Omit<HTMLAttributes<HTMLDivElement>, 'color'>;
 
+/** @deprecated Use `<AppDrawer>` instead. */
 export const DrawerActions = forwardRef<HTMLDivElement, DrawerActionsProps>(
   ({ children, className, ...props }, appBarRef) => {
     const styles = useStyles();
