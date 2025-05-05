@@ -1,7 +1,7 @@
 import { Drawer as MuiDrawer, IconButton } from '@material-ui/core';
 import { ArrowBack as BackIcon, Close as CloseIcon } from '@material-ui/icons';
 import styled from 'styled-components';
-import { Button } from '../button/Button';
+import { Button, ButtonProps } from '../button/Button';
 import { DrawerActions } from '../drawer/DrawerActions';
 import { DrawerContent } from '../drawer/DrawerContent';
 import { DrawerTitle } from '../drawer/DrawerTitle';
@@ -9,10 +9,8 @@ import { DRAWER_SIZE_VALUES } from './constants';
 
 export type AppDrawerSize = typeof DRAWER_SIZE_VALUES[number];
 
-export interface DrawerActionDef {
+export interface DrawerActionDef extends Omit<ButtonProps, 'variant'> {
   label: string;
-  form?: string;
-  onClick: () => void;
 }
 
 export interface AppDrawerProps {
@@ -113,21 +111,13 @@ export function AppDrawer({
         <DrawerActions>
           <StyledActionsLayout>
             {primaryAction && (
-              <Button
-                type="button"
-                onClick={primaryAction.onClick}
-                variant="contained"
-              >
+              <Button type="button" variant="contained" {...primaryAction}>
                 {primaryAction.label}
               </Button>
             )}
 
             {secondaryAction && (
-              <Button
-                type="button"
-                onClick={secondaryAction.onClick}
-                variant="outlined"
-              >
+              <Button type="button" variant="outlined" {...secondaryAction}>
                 {secondaryAction.label}
               </Button>
             )}
