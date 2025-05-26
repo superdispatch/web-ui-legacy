@@ -53,7 +53,7 @@ export const FlagList = forwardRef<HTMLDivElement, BannerListProps>(
         data-variant={isStandalone ? 'standalone' : 'with-header'}
         ref={ref}
       >
-        {!isStandalone && (title || endActionTitle) && (
+        {(title || endActionTitle) && (
           <FlagListHeader>
             {title}
             {endActionTitle && (
