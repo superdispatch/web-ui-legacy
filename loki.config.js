@@ -2,7 +2,7 @@
 
 module.exports = {
   storiesFilter:
-    /^Data Display|^Surfaces|^Inputs|^Navigation\/Tabs|^Navigation\/Link|^Navigation\/Button|^Layout|^Feedback\/Dialog|^Navigation\/Drawer|^Navigation\/AppDrawer|^Lab|^Phones|Dates\/DateField|Dates\/DateRangeField|Dates\/TimeField|^Recipes/i,
+    /^Data Display|^Surfaces|^Inputs|^Navigation\/Tabs|^Navigation\/Link|^Navigation\/Button|^Layout|^Feedback\/Dialog|^Navigation\/Drawer|^Navigation\/AppDrawer|^Lab|^Phones|Dates\/DateField|Dates\/DateRangeField|Dates\/TimeField|^Recipes|^Lab\/FlagList/i,
 
   configurations: {
     'chrome.laptop': {

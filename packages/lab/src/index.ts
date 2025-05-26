@@ -10,6 +10,8 @@ export * from './description-item/DescriptionItem';
 export * from './description-line-item/DescriptionLineItem';
 export * from './file-drop-zone/FileDropZone';
 export * from './file-list-item/FileListItem';
+export * from './flag-list/FlagList';
+export * from './flag-list/FlagListItem';
 export * from './linked-text/LinkedText';
 export * from './multiline-text/MultilineText';
 export * from './navbar/Navbar';
