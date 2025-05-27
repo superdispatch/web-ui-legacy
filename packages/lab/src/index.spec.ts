@@ -17,6 +17,8 @@ test('api', () => {
       "DottedLine": React.forwardRef(DescriptionLineItem__DottedLine),
       "FileDropZone": React.forwardRef(FileDropZone),
       "FileListItem": React.forwardRef(FileListItem),
+      "FlagList": React.forwardRef(FlagList),
+      "FlagListItem": React.forwardRef(FlagListItem),
       "LinkedText": [Function],
       "MultilineText": React.forwardRef(MultilineText),
       "Navbar": [Function],

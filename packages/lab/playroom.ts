@@ -7,6 +7,7 @@ export {
   DescriptionItem,
   FileDropZone,
   FileListItem,
+  FlagList,
   LinkedText,
   MultilineText,
   Navbar,
