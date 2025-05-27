@@ -30,6 +30,11 @@ const EndActions = styled.div`
   margin-left: auto;
   gap: 8px;
 
+  & > svg {
+    font-size: 16px;
+    color: ${ColorDynamic.Dark500};
+  }
+
   ${({ theme }) => theme.breakpoints.down('xs')} {
     margin-left: 0;
     width: 100%;
@@ -63,20 +68,25 @@ const BannerListContainer = styled.div<{ $variant: Variant }>`
   transition: ${({ theme }) =>
     theme.transitions.create(['color', 'background-color'])};
 
-  &:hover {
-    background: ${ColorDynamic.Blue50};
-
-    & ${IconContainer} {
-      background: ${ColorDynamic.White};
-    }
-  }
-
   & + & {
     border-top: none;
   }
 
   &:last-child {
     border-radius: 0 0 4px 4px;
+  }
+
+  &:hover {
+    background: ${ColorDynamic.Blue50};
+
+    & ${IconContainer} {
+      background: ${ColorDynamic.White};
+    }
+
+    & ${EndActions} > svg {
+      color: ${({ $variant }) =>
+        $variant === 'danger' ? ColorDynamic.Red300 : ColorDynamic.Blue300};
+    }
   }
 
   [data-variant='standalone'] &:not(:hover) {
@@ -121,16 +131,7 @@ export const FlagListItem = forwardRef<HTMLDivElement, BannerItemProps>(
 
         <EndActions>
           {endAction}
-          {showHelpIcon && (
-            <Help
-              fontSize="small"
-              htmlColor={
-                variant === 'danger'
-                  ? ColorDynamic.Red300
-                  : ColorDynamic.Dark500
-              }
-            />
-          )}
+          {showHelpIcon && <Help />}
         </EndActions>
       </BannerListContainer>
     );
