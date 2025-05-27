@@ -21,7 +21,17 @@ const IconContainer = styled.div`
 const Content = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
   gap: 8px;
+`;
+
+const HelpIcon = styled.div`
+  margin-left: auto;
+
+  & > svg {
+    font-size: 16px;
+    color: ${ColorDynamic.Dark500};
+  }
 `;
 
 const EndActions = styled.div`
@@ -29,11 +39,6 @@ const EndActions = styled.div`
   align-items: center;
   margin-left: auto;
   gap: 8px;
-
-  & > svg {
-    font-size: 16px;
-    color: ${ColorDynamic.Dark500};
-  }
 
   ${({ theme }) => theme.breakpoints.down('xs')} {
     margin-left: 0;
@@ -57,8 +62,9 @@ const BannerListItemStandalone = css`
 `;
 
 const BannerListContainer = styled.div<{ $variant: Variant }>`
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  gap: 8px;
 
   padding: 8px 16px 8px 12px;
   border: 1px solid ${ColorDynamic.Silver400};
@@ -83,7 +89,7 @@ const BannerListContainer = styled.div<{ $variant: Variant }>`
       background: ${ColorDynamic.White};
     }
 
-    & ${EndActions} > svg {
+    & ${HelpIcon} > svg {
       color: ${({ $variant }) =>
         $variant === 'danger' ? ColorDynamic.Red300 : ColorDynamic.Blue300};
     }
@@ -127,12 +133,11 @@ export const FlagListItem = forwardRef<HTMLDivElement, BannerItemProps>(
           </IconContainer>
 
           {children}
+
+          <HelpIcon>{showHelpIcon && <Help />}</HelpIcon>
         </Content>
 
-        <EndActions>
-          {endAction}
-          {showHelpIcon && <Help />}
-        </EndActions>
+        {endAction && <EndActions>{endAction}</EndActions>}
       </BannerListContainer>
     );
   },
