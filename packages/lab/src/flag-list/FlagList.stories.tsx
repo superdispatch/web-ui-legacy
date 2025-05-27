@@ -15,12 +15,7 @@ export const basic = () => (
     title={<Link href="#">Alexandrino Cappuccino</Link>}
     endAction={<Button variant="neutral">View Profile</Button>}
   >
-    <FlagListItem
-      showHelpIcon={true}
-      endAction={<Button variant="neutral">Action</Button>}
-    >
-      New Item
-    </FlagListItem>
+    <FlagListItem showHelpIcon={true}>New Item</FlagListItem>
     <FlagListItem
       variant="warning"
       showHelpIcon={true}
