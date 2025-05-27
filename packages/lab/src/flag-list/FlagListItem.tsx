@@ -52,7 +52,7 @@ const BannerListItemStandalone = css`
   background: ${ColorDynamic.Silver200};
 `;
 
-const BannerListContainer = styled.div<{ variant: Variant }>`
+const BannerListContainer = styled.div<{ $variant: Variant }>`
   display: inline-flex;
   align-items: center;
 
@@ -84,7 +84,7 @@ const BannerListContainer = styled.div<{ variant: Variant }>`
     ${BannerListItemStandalone}
   }
 
-  ${({ variant }) => (variant === 'danger' ? BannerListItemDanger : null)}
+  ${({ $variant }) => ($variant === 'danger' ? BannerListItemDanger : null)}
 
   ${({ theme }) => theme.breakpoints.down('xs')} {
     flex-direction: column;
@@ -114,7 +114,7 @@ export const FlagListItem = forwardRef<HTMLDivElement, BannerItemProps>(
   ) => {
     const isMobile = useResponsiveValue(true, false);
     return (
-      <BannerListContainer {...rest} ref={ref} variant={variant}>
+      <BannerListContainer {...rest} ref={ref} $variant={variant}>
         <Content>
           <IconContainer>
             {variant === 'danger' ? (
