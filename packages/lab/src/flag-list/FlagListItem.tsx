@@ -1,8 +1,7 @@
 import { Error, Flag, Help, Warning } from '@material-ui/icons';
-import { ColorDynamic, useResponsiveValue } from '@superdispatch/ui';
+import { ColorDynamic } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled, { css } from 'styled-components';
-import { Button, ButtonProps } from '../button/Button';
 
 type Variant = 'primary' | 'warning' | 'danger';
 
@@ -95,24 +94,15 @@ const BannerListContainer = styled.div<{ $variant: Variant }>`
 interface BannerItemProps {
   variant?: Variant;
   showHelpIcon?: boolean;
-  endAction?: {
-    title: string;
-  } & ButtonProps;
+  endAction?: ReactNode;
   children?: ReactNode;
 }
 
 export const FlagListItem = forwardRef<HTMLDivElement, BannerItemProps>(
   (
-    {
-      variant = 'primary',
-      showHelpIcon,
-      endAction: { title: endActionTitle, ...endActionProps } = {},
-      children,
-      ...rest
-    },
+    { variant = 'primary', showHelpIcon, endAction, children, ...rest },
     ref,
   ) => {
-    const isMobile = useResponsiveValue(true, false);
     return (
       <BannerListContainer {...rest} ref={ref} $variant={variant}>
         <Content>
@@ -130,11 +120,7 @@ export const FlagListItem = forwardRef<HTMLDivElement, BannerItemProps>(
         </Content>
 
         <EndActions>
-          {endActionTitle && (
-            <Button fullWidth={isMobile} variant="neutral" {...endActionProps}>
-              {endActionTitle}
-            </Button>
-          )}
+          {endAction}
           {showHelpIcon && (
             <Help
               fontSize="small"

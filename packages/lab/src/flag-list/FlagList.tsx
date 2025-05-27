@@ -1,7 +1,6 @@
-import { ColorDynamic, useResponsiveValue } from '@superdispatch/ui';
+import { ColorDynamic } from '@superdispatch/ui';
 import { forwardRef, ReactNode } from 'react';
 import styled from 'styled-components';
-import { Button, ButtonProps } from '../button/Button';
 
 const FlagListHeader = styled.div`
   display: flex;
@@ -31,40 +30,21 @@ const FlagListContainer = styled.div`
 interface BannerListProps {
   isStandalone?: boolean;
   title?: ReactNode;
-  endAction?: {
-    title: string;
-  } & ButtonProps;
+  endAction?: ReactNode;
   children: ReactNode;
 }
 
 export const FlagList = forwardRef<HTMLDivElement, BannerListProps>(
-  (
-    {
-      isStandalone = false,
-      title,
-      endAction: { title: endActionTitle, ...endActionProps } = {},
-      children,
-    },
-    ref,
-  ) => {
-    const isMobile = useResponsiveValue(true, false);
+  ({ isStandalone = false, title, endAction, children }, ref) => {
     return (
       <FlagListContainer
         data-variant={isStandalone ? 'standalone' : 'with-header'}
         ref={ref}
       >
-        {(title || endActionTitle) && (
+        {(title || endAction) && (
           <FlagListHeader>
             {title}
-            {endActionTitle && (
-              <Button
-                fullWidth={isMobile}
-                variant="neutral"
-                {...endActionProps}
-              >
-                {endActionTitle}
-              </Button>
-            )}
+            {endAction}
           </FlagListHeader>
         )}
         {children}
