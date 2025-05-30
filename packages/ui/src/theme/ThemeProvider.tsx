@@ -8,14 +8,6 @@ import {
   StylesProvider,
   ThemeProvider as MaterialThemeProvider,
 } from '@material-ui/styles';
-import {
-  createTheme as createMaterialV5Theme,
-  ThemeProvider as MaterialV5ThemeProvider,
-} from '@mui/material/styles';
-import {
-  DefaultTheme,
-  StylesProvider as MaterialV5StylesProvider,
-} from '@mui/styles';
 import { Rule, StyleSheet } from 'jss';
 import { ReactElement, ReactNode, useMemo } from 'react';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
@@ -125,45 +117,6 @@ function createSuperDispatchTheme(type?: 'light' | 'dark'): SuperDispatchTheme {
   return theme;
 }
 
-function createThemeV5(type?: 'light' | 'dark'): DefaultTheme {
-  const breakpoints = createBreakpoints({});
-  const color = type === 'dark' ? ColorDark : Color;
-  return createMaterialV5Theme({
-    breakpoints,
-    palette: {
-      mode: type,
-      primary: {
-        main: color.Blue300,
-      },
-
-      error: {
-        main: color.Red300,
-      },
-
-      action: {
-        hover: color.Silver200,
-        selected: color.Blue50,
-        disabled: color.Silver400,
-      },
-
-      text: {
-        primary: color.Dark500,
-        secondary: color.Dark300,
-        disabled: color.Dark100,
-      },
-      common: {
-        white: color.White,
-        black: color.Black,
-      },
-      divider: color.Silver400,
-      background: {
-        paper: color.White,
-      },
-    },
-    components: {},
-  });
-}
-
 const generateMaterialClassName = createGenerateClassName();
 
 function generateClassName(rule: Rule, sheet?: StyleSheet): string {
@@ -221,30 +174,21 @@ export function ThemeProvider({
     // eslint-disable-next-line react-hooks/exhaustive-deps -- modifier may update on every render
   }, [mode]);
 
-  const themeV5 = createThemeV5(mode);
-
   return (
     <StylesProvider
       injectFirst={injectFirst}
       generateClassName={generateClassName}
     >
-      <MaterialV5StylesProvider
-        injectFirst={injectFirst}
-        generateClassName={generateClassName}
-      >
-        <MaterialThemeProvider theme={theme}>
-          <MaterialV5ThemeProvider theme={themeV5}>
-            <CssBaseline />
+      <MaterialThemeProvider theme={theme}>
+        <CssBaseline />
 
-            <StyledThemeProvider theme={theme}>
-              <GlobalStyles />
-              <ResponsiveContextProvider>
-                <SnackbarStackProvider>{children}</SnackbarStackProvider>
-              </ResponsiveContextProvider>
-            </StyledThemeProvider>
-          </MaterialV5ThemeProvider>
-        </MaterialThemeProvider>
-      </MaterialV5StylesProvider>
+        <StyledThemeProvider theme={theme}>
+          <GlobalStyles />
+          <ResponsiveContextProvider>
+            <SnackbarStackProvider>{children}</SnackbarStackProvider>
+          </ResponsiveContextProvider>
+        </StyledThemeProvider>
+      </MaterialThemeProvider>
     </StylesProvider>
   );
 }
