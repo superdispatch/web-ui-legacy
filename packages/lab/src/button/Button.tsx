@@ -127,7 +127,7 @@ function getDefaultVariables(size: ButtonSizeProp): ButtonVariables {
     backgroundColorHovered: ColorDynamic.Blue500,
 
     backgroundColorActive: ColorDynamic.Blue400,
-
+    textColorDisabled: Color.White50,
     backgroundColorDisabled: ColorDynamic.Blue30,
   });
 }
@@ -212,7 +212,7 @@ function getSuccessVariables(size: ButtonSizeProp): ButtonVariables {
 
     backgroundColorActive: ColorDynamic.Green500,
 
-    textColorDisabled: Color.White,
+    textColorDisabled: Color.White50,
     backgroundColorDisabled: ColorDynamic.Green30,
   });
 }
