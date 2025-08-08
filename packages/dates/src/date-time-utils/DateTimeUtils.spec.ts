@@ -24,7 +24,7 @@ const STUB_UTC = Date.UTC(2019, 4, 24, 1, 2, 3, 4);
 
 beforeEach(() => {
   mockDate();
-  setDefaultTimeZone('local');
+  setDefaultTimeZone('system');
 });
 
 test.each<[NullableDateInput, PrimitiveDateInput]>([
@@ -335,8 +335,8 @@ test.each<
     {
       ShortDate: 'May 24',
       Date: 'May 24, 2019',
-      Time: '12:13 PM',
-      DateTime: 'May 24, 2019, 12:13 PM',
+      Time: '12:13 PM',
+      DateTime: 'May 24, 2019, 12:13 PM',
     },
   ],
 

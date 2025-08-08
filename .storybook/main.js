@@ -8,7 +8,11 @@ module.exports = {
 
   webpackFinal(config) {
     const babelConfig = createBabelConfig({ docs: true });
-    config.module.rules[0].use[0].options.plugins.push(...babelConfig.plugins);
+
+    const jsRule = config.module.rules[0];
+    jsRule.exclude = /node_modules\/(?!(luxon)\/).*/; // Luxon has optional chaining and nullish coalescing operators. So we need to compile it.
+    jsRule.use[0].options.plugins.push(...babelConfig.plugins);
+
     config.resolve.mainFields = ['module', 'browser', 'main'];
 
     return config;
