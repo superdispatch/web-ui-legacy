@@ -9,21 +9,22 @@ import {
 
 Settings.defaultLocale = 'en-US';
 
-export function setDefaultTimeZone(offset: number | 'local'): string {
-  if (offset === 'local') {
-    Settings.defaultZoneName = offset;
+export function setDefaultTimeZone(offset: number | 'system'): string {
+  if (offset === 'system') {
+    Settings.defaultZone = offset;
   } else {
     const zone = FixedOffsetZone.instance(offset);
-
-    if (zone.isValid) {
-      Settings.defaultZoneName = zone.name;
-    }
+    Settings.defaultZone = zone.name;
   }
 
-  return Settings.defaultZoneName;
+  if (typeof Settings.defaultZone === 'string') {
+    return Settings.defaultZone;
+  }
+
+  return Settings.defaultZone.name;
 }
 
-export function useDefaultTimeZone(offset: number | 'local'): string {
+export function useDefaultTimeZone(offset: number | 'system'): string {
   return useMemo(() => setDefaultTimeZone(offset), [offset]);
 }
 
