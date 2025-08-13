@@ -15,6 +15,7 @@ test('api', () => {
       "DescriptionItem": React.forwardRef(DescriptionItem),
       "DescriptionLineItem": React.forwardRef(DescriptionLineItem),
       "DottedLine": React.forwardRef(DescriptionLineItem__DottedLine),
+      "EmailAutocomplete": React.forwardRef(EmailAutocomplete),
       "FileDropZone": React.forwardRef(FileDropZone),
       "FileListItem": React.forwardRef(FileListItem),
       "FlagList": React.forwardRef(FlagList),
