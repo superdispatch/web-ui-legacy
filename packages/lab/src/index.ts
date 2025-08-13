@@ -8,6 +8,7 @@ export * from './chat/ChatMessage';
 export * from './container/Container';
 export * from './description-item/DescriptionItem';
 export * from './description-line-item/DescriptionLineItem';
+export * from './email-autocomplate/EmailAutocomplete';
 export * from './file-drop-zone/FileDropZone';
 export * from './file-list-item/FileListItem';
 export * from './flag-list/FlagList';
