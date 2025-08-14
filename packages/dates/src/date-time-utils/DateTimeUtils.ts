@@ -62,7 +62,7 @@ export function toPrimitiveDateInput(
     return input;
   }
 
-  if (input instanceof Date || input instanceof DateTime) {
+  if (input instanceof Date || DateTime.isDateTime(input)) {
     return input.valueOf();
   }
 
@@ -73,7 +73,7 @@ export function parseDate(
   input: NullableDateInput,
   { format }: DateConfig = defaultDateConfig,
 ): DateTime {
-  if (input instanceof DateTime) {
+  if (DateTime.isDateTime(input)) {
     const { defaultZone } = Settings;
 
     if (!defaultZone.equals(input.zone)) {
