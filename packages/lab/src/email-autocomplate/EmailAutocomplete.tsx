@@ -68,33 +68,18 @@ export const EmailAutocomplete = forwardRef(
         ref={ref}
         multiple={true}
         freeSolo={true}
-        filterSelectedOptions={true}
-        disableClearable={true}
         value={value}
+        disableClearable={true}
+        filterSelectedOptions={true}
         filterOptions={(filterOptions) => {
           return filterOptions.filter((option) => option !== '');
         }}
-        onChange={(event, selectedValue) => {
-          const keyboardEvent = event as React.KeyboardEvent<HTMLInputElement>;
-          const lastElement = selectedValue[selectedValue.length - 1];
+        onChange={(_event, selectedValue, reason) => {
+          const emails = selectedValue
+            .flatMap((item) => item.split(','))
+            .map((item) => item.trim());
 
-          if (keyboardEvent.key === 'Backspace') {
-            const removeLatesElement = value?.filter(
-              (_, index) => index < value.length - 1,
-            );
-
-            onChange?.(removeLatesElement, 'remove-option');
-          } else if (keyboardEvent.key === 'Enter' && lastElement) {
-            onChange?.([...(value || []), lastElement], 'select-option');
-          } else if (lastElement) {
-            const emails = lastElement
-              .split(',')
-              .map((item) => item.replace(' ', ''));
-
-            onChange?.(emails, 'select-option');
-          } else {
-            onChange?.(selectedValue, 'select-option');
-          }
+          onChange?.(emails, reason);
         }}
         renderTags={(items) => {
           return (
