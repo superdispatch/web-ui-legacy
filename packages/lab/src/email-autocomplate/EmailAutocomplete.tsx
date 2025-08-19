@@ -9,9 +9,9 @@ import {
   AutocompleteProps,
 } from '@material-ui/lab';
 import { Inline, Tag } from '@superdispatch/ui';
-import { TextBox } from '@superdispatch/ui-lab';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
+import { TextBox } from '../text-box/TextBox';
 import { CloseIcon } from './CloseIcon';
 
 const MultipleFieldText = styled(TextField)`

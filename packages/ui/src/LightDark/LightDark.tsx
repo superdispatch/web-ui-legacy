@@ -1,6 +1,6 @@
 import { useTheme } from '@material-ui/core';
-import { renderChildren } from '@superdispatch/ui';
 import { ReactElement, ReactNode } from 'react';
+import { renderChildren } from '..//utils/renderChildren';
 
 interface LightDarkProps {
   light: ReactNode;

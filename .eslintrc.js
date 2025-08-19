@@ -144,6 +144,24 @@ module.exports = {
     },
 
     {
+      files: ['packages/**/*.{ts,tsx}'],
+      excludedFiles: [
+        '**/*.stories.{ts,tsx}',
+        'packages/__docs__/**',
+        '*.playroom.tsx',
+      ],
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'error',
+          {
+            peerDependencies: true,
+            devDependencies: false,
+          },
+        ],
+      },
+    },
+
+    {
       files: [
         'setupTests.ts',
         'globalSetup.ts',

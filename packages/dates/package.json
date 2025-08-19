@@ -14,13 +14,20 @@
     "version": "pika build"
   },
   "dependencies": {
+    "@superdispatch/hooks": "^0.47.0",
     "@superdispatch/ui": "^0.47.0",
     "luxon": "^3.7.1",
     "react-day-picker": "7.4.10"
   },
   "peerDependencies": {
     "@babel/runtime": "^7.0.0",
-    "@material-ui/lab": "^4.0.0-alpha.40"
+    "@material-ui/core": "^4.12.2",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.40",
+    "@material-ui/styles": "^4.11.4",
+    "@mdi/js": "^6.0.0",
+    "react": "^17.0.2",
+    "styled-components": "^5.2.1"
   },
   "publishConfig": {
     "access": "public",
