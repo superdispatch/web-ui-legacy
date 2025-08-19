@@ -17,10 +17,13 @@
     "@superdispatch/dates": "^0.47.1",
     "@superdispatch/hooks": "^0.47.0",
     "@superdispatch/phones": "^0.47.0",
-    "@superdispatch/ui": "^0.47.0"
+    "@superdispatch/ui": "^0.47.0",
+    "@superdispatch/ui-lab": "^0.47.2"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.8.0",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.40",
     "formik": "^2.1.4",
     "react": "^17.0.2"
   },

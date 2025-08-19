@@ -1,9 +1,9 @@
 import { Typography } from '@material-ui/core';
 import { formatDate, PrimitiveDateInput } from '@superdispatch/dates';
 import { Inline, Stack } from '@superdispatch/ui';
-import { Box } from '@superdispatch/ui-lab';
 import { DateTime } from 'luxon';
 import { forwardRef } from 'react';
+import { Box } from '../box/Box';
 
 interface ChatMessageProps {
   author: string;

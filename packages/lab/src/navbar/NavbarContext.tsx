@@ -1,4 +1,3 @@
-import { noop } from 'lodash';
 import { createContext, useContext } from 'react';
 
 export interface NavbarContextType {
@@ -14,8 +13,8 @@ export const NavbarContext = createContext<NavbarContextType>({
   isDrawerOpen: false,
   isMenuExpanded: false,
   isNavbarExpanded: false,
-  setMenuExpanded: noop,
-  setDrawerOpen: noop,
+  setMenuExpanded: () => void 0,
+  setDrawerOpen: () => void 0,
 });
 
 export function useNavbarContext(): NavbarContextType {
