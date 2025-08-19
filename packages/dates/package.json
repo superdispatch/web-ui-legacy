@@ -1,6 +1,6 @@
 {
   "name": "@superdispatch/dates",
-  "version": "0.47.1",
+  "version": "0.48.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/superdispatch/ui.git"
@@ -14,8 +14,8 @@
     "version": "pika build"
   },
   "dependencies": {
-    "@superdispatch/hooks": "^0.47.0",
-    "@superdispatch/ui": "^0.47.0",
+    "@superdispatch/hooks": "^0.48.0",
+    "@superdispatch/ui": "^0.48.0",
     "luxon": "^3.7.1",
     "react-day-picker": "7.4.10"
   },
