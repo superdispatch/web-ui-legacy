@@ -6,6 +6,7 @@ import {
   FormikValues,
   useFormik,
 } from 'formik';
+import { ReactNode } from 'react';
 import { useFormsContext } from './FormsProvider';
 
 export interface FormikEnhancedConfig<TValues extends FormikValues, TResponse>
@@ -27,6 +28,11 @@ export interface FormikEnhancedConfig<TValues extends FormikValues, TResponse>
   onSubmit: (values: TValues) => TResponse | PromiseLike<TResponse>;
   onSubmitSuccess?: (response: TResponse, values: TValues) => void;
   onSubmitFailure?: (error: Error, values: TValues) => void;
+
+  /**
+   * Children to render inside the form, required for React 18 compatibility
+   */
+  children?: ReactNode;
 }
 
 export type FormikEnhancedStatus<TResponse> =
@@ -41,6 +47,7 @@ export interface FormikContextTypeEnhanced<
 > extends FormikContextType<TValues> {
   status: FormikEnhancedStatus<TResponse>;
   setStatus: (status: FormikEnhancedStatus<TResponse>) => void;
+  children?: ReactNode;
 }
 
 export function useFormikEnhanced<TValues extends FormikValues, TResponse>({
@@ -52,6 +59,7 @@ export function useFormikEnhanced<TValues extends FormikValues, TResponse>({
 
   enableReinitialize = true,
   initialStatus = { type: 'initial' },
+  children,
   ...config
 }: FormikEnhancedConfig<TValues, TResponse>): FormikContextTypeEnhanced<
   TValues,
@@ -88,6 +96,9 @@ export function useFormikEnhanced<TValues extends FormikValues, TResponse>({
           }
         }),
   }) as FormikContextTypeEnhanced<TValues, TResponse>;
+
+  // Attach children to the returned context for React 18 compatibility
+  formik.children = children;
 
   useValueObserver(key, () => {
     if (formik.dirty) {
