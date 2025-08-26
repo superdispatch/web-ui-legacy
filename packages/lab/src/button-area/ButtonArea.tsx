@@ -64,6 +64,7 @@ export interface ButtonAreaProps extends ButtonBaseProps {
   active?: boolean;
   fullWidth?: boolean;
   variant?: ButtonAreaVariant;
+  children?: ReactNode;
 }
 
 export const ButtonArea = forwardRef<HTMLButtonElement, ButtonAreaProps>(
