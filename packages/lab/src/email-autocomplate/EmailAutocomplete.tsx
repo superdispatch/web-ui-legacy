@@ -40,7 +40,7 @@ interface EmailAutocompleteProps
     'onChange' | 'renderInput' | 'renderTags'
   > {
   options: string[];
-  TextFieldProps?: StandardTextFieldProps;
+  TextFieldProps?: Omit<StandardTextFieldProps, 'onChange'>;
 
   onAdd?: (value: string) => void;
   onRemove?: (value: string) => void;
@@ -111,16 +111,11 @@ export const EmailAutocomplete = forwardRef(
           <MultipleFieldText
             {...params}
             {...TextFieldProps}
-            multiline={true}
-            minRows={2}
-            variant="outlined"
-            fullWidth={true}
             InputProps={{
               ...TextFieldProps?.InputProps,
               ...params.InputProps,
               startAdornment: params.InputProps.startAdornment,
             }}
-            placeholder="Enter individual emails on each line or separate them with comma (,)"
             onChange={(event) => {
               const text = event.target.value.replace(/,/g, '');
               const hasCommaOrSpace = /,|\s/.test(event.target.value);
