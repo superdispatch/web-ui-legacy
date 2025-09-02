@@ -1,7 +1,7 @@
 import { List, ListProps } from '@material-ui/core';
 import { CSSProperties, makeStyles } from '@material-ui/styles';
 import { clsx } from 'clsx';
-import { forwardRef } from 'react';
+import { forwardRef, ReactNode } from 'react';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 function listItemMixins(
@@ -42,7 +42,9 @@ const useStyles = makeStyles(
   { name: 'SD-DrawerList' },
 );
 
-export type DrawerListProps = Omit<ListProps<'div'>, 'component'>;
+export type DrawerListProps = Omit<ListProps<'div'>, 'component'> & {
+  children?: ReactNode;
+};
 
 export const DrawerList = forwardRef<HTMLDivElement, DrawerListProps>(
   ({ className, ...props }, ref) => {
