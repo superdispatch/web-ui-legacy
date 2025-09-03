@@ -29,3 +29,19 @@ export const basic = () => (
     )}
   </UseState>
 );
+
+export const textarea = () => (
+  <UseState initialState={[]}>
+    {(state, setState) => (
+      <EmailAutocomplete
+        options={options}
+        value={state}
+        onChange={setState}
+        TextFieldProps={{
+          multiline: true,
+          placeholder: 'Enter email addresses',
+        }}
+      />
+    )}
+  </UseState>
+);

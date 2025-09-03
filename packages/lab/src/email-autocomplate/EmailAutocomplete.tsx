@@ -1,7 +1,7 @@
 import {
   IconButton,
-  StandardTextFieldProps,
   TextField,
+  TextFieldProps as TextFieldPropsType,
 } from '@material-ui/core';
 import {
   Autocomplete,
@@ -40,7 +40,7 @@ interface EmailAutocompleteProps
     'onChange' | 'renderInput' | 'renderTags'
   > {
   options: string[];
-  TextFieldProps?: Omit<StandardTextFieldProps, 'onChange'>;
+  TextFieldProps?: Omit<TextFieldPropsType, 'onChange' | 'onBlur'>;
 
   onAdd?: (value: string) => void;
   onRemove?: (value: string) => void;
@@ -50,85 +50,89 @@ interface EmailAutocompleteProps
   ) => void;
 }
 
-export const EmailAutocomplete = forwardRef(
-  (
-    { value, onChange, TextFieldProps, ...props }: EmailAutocompleteProps,
-    ref,
-  ) => {
-    function handleDelete(index: number): void {
-      const filteredOrders = value?.filter(
-        (_item, fieldIndex) => fieldIndex !== index,
-      );
-      void onChange?.(filteredOrders, 'remove-option');
-    }
-
-    return (
-      <Autocomplete
-        {...props}
-        ref={ref}
-        multiple={true}
-        freeSolo={true}
-        value={value}
-        disableClearable={true}
-        filterSelectedOptions={true}
-        filterOptions={(filterOptions) => {
-          return filterOptions.filter((option) => option !== '');
-        }}
-        onChange={(_event, selectedValue, reason) => {
-          const emails = selectedValue
-            .flatMap((item) => item.split(','))
-            .map((item) => item.trim());
-
-          onChange?.(emails, reason);
-        }}
-        renderTags={(items) => {
-          return (
-            <Inline space="xxsmall">
-              {items.map((option, index) => {
-                return (
-                  <Tag key={index} color="grey" variant="subtle">
-                    <Inline space="xxsmall">
-                      <TextBox wrapOverflow={true} color="primary">
-                        {option}
-                      </TextBox>
-
-                      <IconButton
-                        size="small"
-                        onClick={() => {
-                          handleDelete(index);
-                        }}
-                      >
-                        <CloseIcon />
-                      </IconButton>
-                    </Inline>
-                  </Tag>
-                );
-              })}
-            </Inline>
-          );
-        }}
-        renderInput={(params) => (
-          <MultipleFieldText
-            {...params}
-            {...TextFieldProps}
-            InputProps={{
-              ...TextFieldProps?.InputProps,
-              ...params.InputProps,
-              startAdornment: params.InputProps.startAdornment,
-            }}
-            onChange={(event) => {
-              const text = event.target.value.replace(/,/g, '');
-              const hasCommaOrSpace = /,|\s/.test(event.target.value);
-
-              if (hasCommaOrSpace && text.trim() !== '') {
-                onChange?.([...(value || []), text.trim()], 'select-option');
-              }
-            }}
-          />
-        )}
-      />
+export const EmailAutocomplete = forwardRef<
+  HTMLDivElement,
+  EmailAutocompleteProps
+>(({ value, onChange, TextFieldProps, ...props }, ref) => {
+  function handleDelete(index: number): void {
+    const filteredOrders = value?.filter(
+      (_item, fieldIndex) => fieldIndex !== index,
     );
-  },
-);
+    void onChange?.(filteredOrders, 'remove-option');
+  }
+
+  return (
+    <Autocomplete
+      {...props}
+      ref={ref}
+      multiple={true}
+      freeSolo={true}
+      value={value}
+      disableClearable={true}
+      filterSelectedOptions={true}
+      filterOptions={(filterOptions) => {
+        return filterOptions.filter((option) => option !== '');
+      }}
+      onChange={(_event, selectedValue, reason) => {
+        const emails = selectedValue
+          .flatMap((item) => item.split(','))
+          .map((item) => item.trim());
+
+        onChange?.(emails, reason);
+      }}
+      renderTags={(items) => {
+        return (
+          <Inline space="xxsmall">
+            {items.map((option, index) => {
+              return (
+                <Tag key={index} color="grey" variant="subtle">
+                  <Inline space="xxsmall">
+                    <TextBox wrapOverflow={true} color="primary">
+                      {option}
+                    </TextBox>
+
+                    <IconButton
+                      size="small"
+                      onClick={() => {
+                        handleDelete(index);
+                      }}
+                    >
+                      <CloseIcon />
+                    </IconButton>
+                  </Inline>
+                </Tag>
+              );
+            })}
+          </Inline>
+        );
+      }}
+      renderInput={(params) => (
+        <MultipleFieldText
+          {...params}
+          {...TextFieldProps}
+          InputProps={{
+            ...TextFieldProps?.InputProps,
+            ...params.InputProps,
+            startAdornment: params.InputProps.startAdornment,
+          }}
+          onChange={(event) => {
+            const text = event.target.value.replace(/,/g, '');
+            const hasCommaOrSpace = /,|\s/.test(event.target.value);
+
+            if (hasCommaOrSpace && text.trim() !== '') {
+              onChange?.([...(value || []), text.trim()], 'select-option');
+            }
+          }}
+          onBlur={(event) => {
+            const text = event.target.value;
+            if (text.trim() !== '') {
+              onChange?.([...(value || []), text.trim()], 'select-option');
+            }
+          }}
+        />
+      )}
+    />
+  );
+});
 
 EmailAutocomplete.displayName = 'EmailAutocomplete';
