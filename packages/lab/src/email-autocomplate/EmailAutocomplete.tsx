@@ -52,7 +52,7 @@ export interface EmailAutocompleteProps
 
 export const EmailAutocomplete = forwardRef<
   HTMLDivElement,
-  EmailAutocompleteProps
+  Omit<EmailAutocompleteProps, 'ref'>
 >(({ value, onChange, TextFieldProps, ...props }, ref) => {
   function handleDelete(index: number): void {
     const filteredOrders = value?.filter(

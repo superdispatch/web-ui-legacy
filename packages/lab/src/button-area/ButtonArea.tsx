@@ -67,23 +67,24 @@ export interface ButtonAreaProps extends ButtonBaseProps {
   children?: ReactNode;
 }
 
-export const ButtonArea = forwardRef<HTMLButtonElement, ButtonAreaProps>(
-  ({ icon, children, variant, active, disabled, fullWidth, ...props }, ref) => (
-    <ButtonRoot
-      ref={ref}
-      disabled={disabled}
-      data-active={active}
-      data-disabled={disabled}
-      data-variant={variant}
-      data-full-width={fullWidth}
-      {...props}
-    >
-      <Stack align="center" space="xxsmall">
-        {icon}
-        <Typography variant="h4" color={disabled ? 'inherit' : 'textPrimary'}>
-          {children}
-        </Typography>
-      </Stack>
-    </ButtonRoot>
-  ),
-);
+export const ButtonArea = forwardRef<
+  HTMLButtonElement,
+  Omit<ButtonAreaProps, 'ref'>
+>(({ icon, children, variant, active, disabled, fullWidth, ...props }, ref) => (
+  <ButtonRoot
+    ref={ref}
+    disabled={disabled}
+    data-active={active}
+    data-disabled={disabled}
+    data-variant={variant}
+    data-full-width={fullWidth}
+    {...props}
+  >
+    <Stack align="center" space="xxsmall">
+      {icon}
+      <Typography variant="h4" color={disabled ? 'inherit' : 'textPrimary'}>
+        {children}
+      </Typography>
+    </Stack>
+  </ButtonRoot>
+));
