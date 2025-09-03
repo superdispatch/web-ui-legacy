@@ -46,17 +46,18 @@ export type DrawerListProps = Omit<ListProps<'div'>, 'component'> & {
   children?: ReactNode;
 };
 
-export const DrawerList = forwardRef<HTMLDivElement, DrawerListProps>(
-  ({ className, ...props }, ref) => {
-    const styles = useStyles();
+export const DrawerList = forwardRef<
+  HTMLDivElement,
+  Omit<DrawerListProps, 'ref'>
+>(({ className, ...props }, ref) => {
+  const styles = useStyles();
 
-    return (
-      <List
-        {...props}
-        ref={ref}
-        component="div"
-        className={clsx(className, styles.root)}
-      />
-    );
-  },
-);
+  return (
+    <List
+      {...props}
+      ref={ref}
+      component="div"
+      className={clsx(className, styles.root)}
+    />
+  );
+});
