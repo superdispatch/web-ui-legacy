@@ -34,7 +34,7 @@ const MultipleFieldText = styled(TextField)`
   }
 `;
 
-interface EmailAutocompleteProps
+export interface EmailAutocompleteProps
   extends Omit<
     AutocompleteProps<string, true, true, true>,
     'onChange' | 'renderInput' | 'renderTags'
