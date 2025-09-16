@@ -22,6 +22,7 @@ export { useNavbarContext } from './navbar/NavbarContext';
 export * from './navbar/NavbarItem';
 export * from './navbar/NavbarList';
 export * from './navbar/NavbarMenu';
+export * from './passwordStepper/PasswordStrength';
 export * from './sidebar/Sidebar';
 export * from './sidebar/SidebarBackButton';
 export * from './sidebar/SidebarContainer';

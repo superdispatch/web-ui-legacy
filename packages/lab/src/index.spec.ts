@@ -31,6 +31,7 @@ test('api', () => {
       "NavbarList": [Function],
       "NavbarMenu": [Function],
       "NavbarMenuItem": [Function],
+      "PasswordStrength": [Function],
       "Sidebar": React.forwardRef(Sidebar),
       "SidebarBackButton": [Function],
       "SidebarContainer": React.forwardRef(SidebarContainer),
