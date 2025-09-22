@@ -20,6 +20,7 @@ const ClickableCard = styled(ButtonBase)`
 
 const Card = styled(MuiCard)`
   width: 100%;
+  border: none;
   opacity: ${(props: { disabled?: boolean }) => (props.disabled ? 0.5 : 1)};
 `;
 
