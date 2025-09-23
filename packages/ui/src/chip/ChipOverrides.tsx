@@ -1,5 +1,5 @@
 import { SvgIcon } from '@material-ui/core';
-import { ColorDynamic } from '../theme/Color';
+import { Color, ColorDynamic } from '../theme/Color';
 import { SuperDispatchTheme } from '../theme/SuperDispatchTheme';
 
 export function overrideChip(theme: SuperDispatchTheme): void {
@@ -62,6 +62,18 @@ export function overrideChip(theme: SuperDispatchTheme): void {
       '&:focus': {
         backgroundColor: undefined,
         boxShadow: `0 0 0 2px ${ColorDynamic.Silver400}`,
+      },
+    },
+
+    colorPrimary: {
+      '& $deleteIcon svg': {
+        color: Color.White,
+      },
+    },
+
+    colorSecondary: {
+      '& $deleteIcon svg': {
+        color: Color.White,
       },
     },
 

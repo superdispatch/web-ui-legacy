@@ -89,9 +89,17 @@ it('checks component css', () => {
       background-color: Color.Blue300;
     }
 
+    .MuiChip-colorPrimary .MuiChip-deleteIcon svg {
+      color: Color.White;
+    }
+
     .MuiChip-colorSecondary {
       color: Color.White;
       background-color: #f50057;
+    }
+
+    .MuiChip-colorSecondary .MuiChip-deleteIcon svg {
+      color: Color.White;
     }
 
     .MuiChip-clickable {
