@@ -6,10 +6,11 @@ import {
   Radio,
   Typography,
 } from '@material-ui/core';
-import { forwardRef, ForwardRefExoticComponent } from 'react';
+import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
 import styled from 'styled-components';
 import { Column } from '../columns/Column';
 import { Columns } from '../columns/Columns';
+import { CollapseProp } from '../props/CollapseProp';
 import { ColorDynamic } from '../theme/Color';
 
 const ClickableCard = styled(ButtonBase)`
@@ -40,12 +41,21 @@ const Caption = styled.div`
   padding-left: 30px;
 `;
 
+const IconWrapper = styled.div<{ isCollapsible: boolean }>`
+  display: flex;
+
+  ${({ theme }) => theme.breakpoints.down('xs')} {
+    padding-left: ${({ isCollapsible }) => (isCollapsible ? '30px' : '16px')};
+  }
+`;
+
 export interface RadioCardItemProps {
   value: string;
   label: string;
   name?: string;
   caption?: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
+  collapseIconBelow?: CollapseProp;
 }
 
 interface RadioCardProps
@@ -67,6 +77,7 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
         icon,
         checked,
         onChange,
+        collapseIconBelow,
         ...props
       },
       ref,
@@ -75,7 +86,7 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
         <Card disabled={disabled} key={value}>
           <ClickableCard name={name} disabled={disabled} {...props}>
             <Content active={checked}>
-              <Columns space="small">
+              <Columns collapseBelow={collapseIconBelow} space="small">
                 <Column>
                   <FormControlLabel
                     value={value}
@@ -90,7 +101,11 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
                   </Caption>
                 </Column>
 
-                <Column width="content">{icon}</Column>
+                <Column width="content">
+                  <IconWrapper isCollapsible={!!collapseIconBelow}>
+                    {icon}
+                  </IconWrapper>
+                </Column>
               </Columns>
             </Content>
           </ClickableCard>
