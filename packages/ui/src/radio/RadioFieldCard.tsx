@@ -10,7 +10,6 @@ import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
 import styled from 'styled-components';
 import { Column } from '../columns/Column';
 import { Columns } from '../columns/Columns';
-import { CollapseProp } from '../props/CollapseProp';
 import { ColorDynamic } from '../theme/Color';
 
 const ClickableCard = styled(ButtonBase)`
@@ -41,11 +40,11 @@ const Caption = styled.div`
   padding-left: 30px;
 `;
 
-const IconWrapper = styled.div<{ isCollapsible: boolean }>`
+const IconWrapper = styled.div`
   display: flex;
 
   ${({ theme }) => theme.breakpoints.down('xs')} {
-    padding-left: ${({ isCollapsible }) => (isCollapsible ? '30px' : '16px')};
+    padding-left: 30px;
   }
 `;
 
@@ -55,7 +54,6 @@ export interface RadioCardItemProps {
   name?: string;
   caption?: string;
   icon?: ReactNode;
-  collapseIconBelow?: CollapseProp;
 }
 
 interface RadioCardProps
@@ -77,7 +75,6 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
         icon,
         checked,
         onChange,
-        collapseIconBelow,
         ...props
       },
       ref,
@@ -86,7 +83,7 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
         <Card disabled={disabled} key={value}>
           <ClickableCard name={name} disabled={disabled} {...props}>
             <Content active={checked}>
-              <Columns collapseBelow={collapseIconBelow} space="small">
+              <Columns collapseBelow="tablet" space="small">
                 <Column>
                   <FormControlLabel
                     value={value}
@@ -102,9 +99,7 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
                 </Column>
 
                 <Column width="content">
-                  <IconWrapper isCollapsible={!!collapseIconBelow}>
-                    {icon}
-                  </IconWrapper>
+                  <IconWrapper>{icon}</IconWrapper>
                 </Column>
               </Columns>
             </Content>
