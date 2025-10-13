@@ -6,7 +6,7 @@ import {
   Radio,
   Typography,
 } from '@material-ui/core';
-import { forwardRef, ForwardRefExoticComponent } from 'react';
+import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
 import styled from 'styled-components';
 import { Column } from '../columns/Column';
 import { Columns } from '../columns/Columns';
@@ -40,12 +40,20 @@ const Caption = styled.div`
   padding-left: 30px;
 `;
 
+const IconWrapper = styled.div`
+  display: flex;
+
+  ${({ theme }) => theme.breakpoints.down('xs')} {
+    padding-left: 30px;
+  }
+`;
+
 export interface RadioCardItemProps {
   value: string;
   label: string;
   name?: string;
   caption?: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 }
 
 interface RadioCardProps
@@ -75,7 +83,7 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
         <Card disabled={disabled} key={value}>
           <ClickableCard name={name} disabled={disabled} {...props}>
             <Content active={checked}>
-              <Columns space="small">
+              <Columns collapseBelow="tablet" space="small">
                 <Column>
                   <FormControlLabel
                     value={value}
@@ -90,7 +98,9 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
                   </Caption>
                 </Column>
 
-                <Column width="content">{icon}</Column>
+                <Column width="content">
+                  <IconWrapper>{icon}</IconWrapper>
+                </Column>
               </Columns>
             </Content>
           </ClickableCard>

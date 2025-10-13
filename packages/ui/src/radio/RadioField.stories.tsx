@@ -4,17 +4,20 @@ import {
   Switch,
   TextField,
 } from '@material-ui/core';
-import { AccountBoxOutlined, Error, VerifiedUser } from '@material-ui/icons';
+import { AccountBoxOutlined, Error } from '@material-ui/icons';
 import { UseState } from '@superdispatch/ui-docs';
 import {
   CheckboxField,
+  CollapseProp,
   Column,
   Columns,
+  Image,
   Inline,
   RadioField,
   RadioFieldCard,
   RadioGroupField,
   Stack,
+  Tag,
 } from '..';
 
 export default { title: 'Inputs/RadioField', component: RadioField };
@@ -197,7 +200,27 @@ export const radioGroupCard = () => {
       name: 'driver_dispatcher',
       label: 'I Drive And Dispatch',
       caption: 'I use both Carrier TMS and Driver App.',
-      icon: <VerifiedUser />,
+      icon: <Image src="https://dummyimage.com/72x72/7a7a7a/fff" />,
+      collapseIconBelow: 'tablet' as CollapseProp,
+    },
+    {
+      value: 'truck',
+      name: 'truck',
+      label: 'Im truck',
+      caption: 'Im truck',
+      icon: <Image src="https://dummyimage.com/144x72/7a7a7a/fff" />,
+      collapseIconBelow: 'tablet' as CollapseProp,
+    },
+    {
+      value: 'tag',
+      name: 'tag',
+      label: 'Im tag',
+      caption: 'Im tag',
+      icon: (
+        <Tag variant="subtle" color="grey">
+          Verified
+        </Tag>
+      ),
     },
   ];
 
