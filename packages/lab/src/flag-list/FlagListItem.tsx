@@ -46,22 +46,11 @@ const EndActions = styled.div`
   }
 `;
 
-const BannerListItemDanger = css`
-  & ${IconContainer} {
-    background: ${ColorDynamic.Red50};
-    color: ${ColorDynamic.Red300};
-  }
-
-  &:hover {
-    background: ${ColorDynamic.Red50};
-  }
-`;
-
 const BannerListItemStandalone = css`
   background: ${ColorDynamic.Silver200};
 `;
 
-const BannerListContainer = styled.div<{ $variant: Variant }>`
+const BannerListContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -83,23 +72,16 @@ const BannerListContainer = styled.div<{ $variant: Variant }>`
   }
 
   &:hover {
-    background: ${ColorDynamic.Blue50};
+    background: ${ColorDynamic.Silver200};
 
     & ${IconContainer} {
       background: ${ColorDynamic.White};
-    }
-
-    & ${HelpIcon} > svg {
-      color: ${({ $variant }) =>
-        $variant === 'danger' ? ColorDynamic.Red300 : ColorDynamic.Blue300};
     }
   }
 
   [data-variant='standalone'] &:not(:hover) {
     ${BannerListItemStandalone}
   }
-
-  ${({ $variant }) => ($variant === 'danger' ? BannerListItemDanger : null)}
 
   ${({ theme }) => theme.breakpoints.down('xs')} {
     flex-direction: column;
@@ -120,13 +102,13 @@ export const FlagListItem = forwardRef<HTMLDivElement, BannerItemProps>(
     ref,
   ) => {
     return (
-      <BannerListContainer {...rest} ref={ref} $variant={variant}>
+      <BannerListContainer {...rest} ref={ref}>
         <Content>
           <IconContainer>
             {variant === 'danger' ? (
-              <Error />
+              <Error htmlColor={ColorDynamic.Red300} />
             ) : variant === 'warning' ? (
-              <Warning />
+              <Warning htmlColor={ColorDynamic.Yellow300} />
             ) : (
               <Flag />
             )}
