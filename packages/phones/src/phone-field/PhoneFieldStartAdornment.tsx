@@ -58,12 +58,24 @@ export const PhoneFieldStartAdornment = forwardRef<
         <PhoneFieldFlag country={country} />
 
         {isExpanded ? (
-          <ArrowDropUp htmlColor={ColorDynamic.Dark200} />
+          <ArrowDropUp
+            htmlColor={disabled ? ColorDynamic.Dark100 : ColorDynamic.Dark200}
+          />
         ) : (
-          <ArrowDropDown htmlColor={ColorDynamic.Dark200} />
+          <ArrowDropDown
+            htmlColor={disabled ? ColorDynamic.Dark100 : ColorDynamic.Dark200}
+          />
         )}
 
-        <Typography color="textPrimary">{countryCode}</Typography>
+        <Typography>
+          <span
+            style={{
+              color: disabled ? ColorDynamic.Dark100 : ColorDynamic.Dark500,
+            }}
+          >
+            {countryCode}
+          </span>
+        </Typography>
       </ButtonBase>
     </InputAdornment>
   );
