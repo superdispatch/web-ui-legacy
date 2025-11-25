@@ -16,6 +16,7 @@ export * from './flag-list/FlagListItem';
 export * from './linked-text/LinkedText';
 export * from './multiline-text/MultilineText';
 export * from './navbar/Navbar';
+export * from './navbar/NavbarAccordion';
 export * from './navbar/NavbarAvatar';
 export * from './navbar/NavbarBottomBar';
 export { useNavbarContext } from './navbar/NavbarContext';

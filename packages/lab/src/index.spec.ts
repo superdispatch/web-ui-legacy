@@ -23,6 +23,8 @@ test('api', () => {
       "LinkedText": [Function],
       "MultilineText": React.forwardRef(MultilineText),
       "Navbar": [Function],
+      "NavbarAccordion": [Function],
+      "NavbarAccordionLabel": React.forwardRef(NavbarAccordion__NavbarAccordionLabel),
       "NavbarAvatar": [Function],
       "NavbarBadge": React.forwardRef(NavbarItem__NavbarBadge),
       "NavbarBottomBar": [Function],

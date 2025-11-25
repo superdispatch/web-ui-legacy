@@ -101,6 +101,8 @@ export interface NavbarAccordionProps {
   gutter?: boolean;
   items: Array<Omit<NavbarItemOptions, 'icon'>>;
   onClick?: (event: MouseEvent<HTMLDivElement>) => void;
+  isExpanded?: boolean;
+  onExpandedChange?: (isExpanded: boolean) => void;
 }
 
 export function NavbarAccordion({
@@ -109,16 +111,31 @@ export function NavbarAccordion({
   gutter,
   items,
   onClick,
+  isExpanded: controlledIsExpanded,
+  onExpandedChange,
 }: NavbarAccordionProps): ReactElement {
   const uid = useUID();
   const { setDrawerOpen, isNavbarExpanded } = useNavbarContext();
 
-  const [isExpanded, setExpanded] = useState(true);
+  const [internalIsExpanded, setInternalExpanded] = useState(true);
 
-  // sync accordion state with Desktop menu state
   useEffect(() => {
-    setExpanded(isNavbarExpanded);
-  }, [isNavbarExpanded]);
+    if (controlledIsExpanded === undefined) {
+      setInternalExpanded(isNavbarExpanded);
+    }
+  }, [isNavbarExpanded, controlledIsExpanded]);
+
+  const isExpanded =
+    controlledIsExpanded !== undefined
+      ? controlledIsExpanded
+      : internalIsExpanded;
+
+  function setExpanded(value: boolean): void {
+    if (controlledIsExpanded === undefined) {
+      setInternalExpanded(value);
+    }
+    onExpandedChange?.(value);
+  }
 
   const filteredItems: Array<Omit<NavbarItemOptions, 'icon'>> = useMemo(
     () => items.filter((item) => !item.hide),
@@ -134,7 +151,7 @@ export function NavbarAccordion({
       onClick={(event) => {
         onClick?.(event);
 
-        if (isNavbarExpanded) {
+        if (controlledIsExpanded !== undefined || isNavbarExpanded) {
           setExpanded(!isExpanded);
         }
       }}
