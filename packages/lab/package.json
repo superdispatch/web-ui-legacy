@@ -17,7 +17,7 @@
     "@superdispatch/dates": "^0.50.3",
     "@superdispatch/hooks": "^0.50.0",
     "@superdispatch/ui": "^0.50.3",
-    "react-anchorme": "^2.2.1",
+    "react-anchorme": "^3.0.0",
     "react-dropzone": "^11.3.4"
   },
   "peerDependencies": {
