@@ -4,6 +4,7 @@ import {
   CSSProperties,
   ReactElement,
   ReactNode,
+  useCallback,
   useMemo,
   useState,
 } from 'react';
@@ -36,6 +37,8 @@ interface NavbarProps {
   footer?: ReactNode;
 
   hasExtraBadge?: boolean;
+  isMenuExpanded?: boolean;
+  onMenuExpandedChange?: (isExpanded: boolean) => void;
 }
 
 export function Navbar({
@@ -46,6 +49,8 @@ export function Navbar({
   children,
   containerStyle,
   hasExtraBadge,
+  isMenuExpanded: controlledIsMenuExpanded,
+  onMenuExpandedChange,
 }: NavbarProps): ReactElement {
   const theme = useTheme();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -54,7 +59,22 @@ export function Navbar({
   const isMobile = platform === 'mobile';
 
   const matches = useMediaQuery(theme.breakpoints.up('md'), { noSsr: true });
-  const [isMenuExpanded, setMenuExpanded] = useState(matches);
+  const [internalIsMenuExpanded, setInternalMenuExpanded] = useState(matches);
+
+  const isMenuExpanded =
+    controlledIsMenuExpanded !== undefined
+      ? controlledIsMenuExpanded
+      : internalIsMenuExpanded;
+
+  const setMenuExpanded = useCallback(
+    (value: boolean): void => {
+      if (controlledIsMenuExpanded === undefined) {
+        setInternalMenuExpanded(value);
+      }
+      onMenuExpandedChange?.(value);
+    },
+    [controlledIsMenuExpanded, onMenuExpandedChange],
+  );
 
   const hasBadge = hasExtraBadge || items.some((item) => item.badge);
 
@@ -66,7 +86,7 @@ export function Navbar({
       setMenuExpanded,
       isNavbarExpanded: isMenuExpanded || isDrawerOpen,
     }),
-    [isDrawerOpen, isMenuExpanded, setMenuExpanded, setDrawerOpen],
+    [isDrawerOpen, isMenuExpanded, setDrawerOpen, setMenuExpanded],
   );
 
   return (
