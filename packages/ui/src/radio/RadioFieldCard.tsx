@@ -5,6 +5,7 @@ import {
   FormControlLabel as MuiFormControlLabel,
   Radio,
   Typography,
+  useFormControl,
 } from '@material-ui/core';
 import { forwardRef, ForwardRefExoticComponent, ReactNode } from 'react';
 import styled from 'styled-components';
@@ -79,9 +80,11 @@ export const RadioFieldCard: ForwardRefExoticComponent<RadioCardProps> =
       },
       ref,
     ) => {
+      const muiFormControl = useFormControl();
+      const disabledState = disabled ?? muiFormControl?.disabled ?? false;
       return (
-        <Card disabled={disabled} key={value}>
-          <ClickableCard name={name} disabled={disabled} {...props}>
+        <Card disabled={disabledState} key={value}>
+          <ClickableCard name={name} disabled={disabledState} {...props}>
             <Content active={checked}>
               <Columns collapseBelow="tablet" space="small">
                 <Column>
