@@ -1,6 +1,6 @@
 {
   "name": "@superdispatch/dates",
-  "version": "0.50.3",
+  "version": "0.50.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/superdispatch/ui.git"
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@superdispatch/hooks": "^0.50.0",
-    "@superdispatch/ui": "^0.50.3",
+    "@superdispatch/ui": "^0.50.6",
     "luxon": "^3.7.1",
     "react-day-picker": "7.4.10"
   },
