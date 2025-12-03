@@ -147,7 +147,8 @@ const Content = styled.div`
   }
 `;
 
-export interface NavbarAccordionOptions extends NavbarAccordionProps {
+export interface NavbarAccordionOptions
+  extends Omit<NavbarAccordionProps, 'groupKey'> {
   key: Key;
   groupKey?: Key;
   hide?: boolean;
@@ -221,6 +222,7 @@ export function NavbarList({
                 key={item.key}
                 gutter={prev && prev.groupKey !== item.groupKey}
                 onClick={item.onClick}
+                groupKey={item.groupKey || item.key}
               />
             );
           }

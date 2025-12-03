@@ -1,14 +1,7 @@
 import { Accordion, AccordionSummary } from '@material-ui/core';
 import { ExpandMore } from '@material-ui/icons';
 import { Color, ColorDark, ColorDynamic, useUID } from '@superdispatch/ui';
-import {
-  MouseEvent,
-  ReactElement,
-  ReactNode,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import { Key, MouseEvent, ReactElement, ReactNode, useMemo } from 'react';
 import styled from 'styled-components';
 import { useNavbarContext } from './NavbarContext';
 import { NavbarItem } from './NavbarItem';
@@ -101,8 +94,7 @@ export interface NavbarAccordionProps {
   gutter?: boolean;
   items: Array<Omit<NavbarItemOptions, 'icon'>>;
   onClick?: (event: MouseEvent<HTMLDivElement>) => void;
-  isExpanded?: boolean;
-  onExpandedChange?: (isExpanded: boolean) => void;
+  groupKey: Key;
 }
 
 export function NavbarAccordion({
@@ -111,31 +103,12 @@ export function NavbarAccordion({
   gutter,
   items,
   onClick,
-  isExpanded: controlledIsExpanded,
-  onExpandedChange,
+  groupKey,
 }: NavbarAccordionProps): ReactElement {
   const uid = useUID();
-  const { setDrawerOpen, isNavbarExpanded } = useNavbarContext();
-
-  const [internalIsExpanded, setInternalExpanded] = useState(true);
-
-  useEffect(() => {
-    if (controlledIsExpanded === undefined) {
-      setInternalExpanded(isNavbarExpanded);
-    }
-  }, [isNavbarExpanded, controlledIsExpanded]);
-
-  const isExpanded =
-    controlledIsExpanded !== undefined
-      ? controlledIsExpanded
-      : internalIsExpanded;
-
-  function setExpanded(value: boolean): void {
-    if (controlledIsExpanded === undefined) {
-      setInternalExpanded(value);
-    }
-    onExpandedChange?.(value);
-  }
+  const { setDrawerOpen, isNavbarExpanded, groupExpanded, setGroupExpanded } =
+    useNavbarContext();
+  const isExpanded = groupExpanded[groupKey] ?? true;
 
   const filteredItems: Array<Omit<NavbarItemOptions, 'icon'>> = useMemo(
     () => items.filter((item) => !item.hide),
@@ -151,8 +124,8 @@ export function NavbarAccordion({
       onClick={(event) => {
         onClick?.(event);
 
-        if (controlledIsExpanded !== undefined || isNavbarExpanded) {
-          setExpanded(!isExpanded);
+        if (isNavbarExpanded) {
+          setGroupExpanded(groupKey, !isExpanded);
         }
       }}
     >
