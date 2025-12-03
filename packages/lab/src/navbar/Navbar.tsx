@@ -39,7 +39,7 @@ interface NavbarProps {
 
   hasExtraBadge?: boolean;
   isMenuExpanded?: boolean;
-  groupExpanded?: Record<string, boolean>;
+  groupExpanded?: Record<Key, boolean>;
   onMenuExpandedChange?: (isExpanded: boolean) => void;
   onGroupExpandedChange?: (groupExpanded: Record<Key, boolean>) => void;
 }
