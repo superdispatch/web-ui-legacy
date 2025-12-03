@@ -41,7 +41,7 @@ interface NavbarProps {
   isMenuExpanded?: boolean;
   groupExpanded?: Record<string, boolean>;
   onMenuExpandedChange?: (isExpanded: boolean) => void;
-  onGroupExpandedChange?: (groupExpanded: Record<string, boolean>) => void;
+  onGroupExpandedChange?: (groupExpanded: Record<Key, boolean>) => void;
 }
 
 export function Navbar({
