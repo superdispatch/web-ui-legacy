@@ -8,7 +8,6 @@ import { AccountBoxOutlined, Error } from '@material-ui/icons';
 import { UseState } from '@superdispatch/ui-docs';
 import {
   CheckboxField,
-  CollapseProp,
   Column,
   Columns,
   Image,
@@ -132,104 +131,72 @@ export const inlineForm = () => (
   </RadioGroupField>
 );
 
-export const radioCard = () => {
-  const item = {
+const cards = [
+  {
     value: 'dispatcher',
     name: 'dispatcher',
     label: 'I Only Dispatch',
     caption: 'I use Carrier TMS and do not use Driver App.',
     icon: <AccountBoxOutlined />,
-  };
-
-  return (
-    <UseState initialState="">
-      {(value, setValue) => (
-        <RadioGroupField fullWidth={true}>
-          <RadioFieldCard
-            {...item}
-            value={value}
-            checked={value === item.value}
-            onClick={() => {
-              setValue(item.value);
-            }}
-          />
-        </RadioGroupField>
-      )}
-    </UseState>
-  );
-};
-
-export const radioCardDisabled = () => {
-  const item = {
-    value: 'dispatcher',
-    name: 'dispatcher',
-    label: 'I Only Dispatch',
-    caption: 'I use Carrier TMS and do not use Driver App.',
-    icon: <AccountBoxOutlined />,
-  };
-
-  return (
-    <UseState initialState="">
-      {(value, setValue) => (
-        <RadioGroupField fullWidth={true}>
-          <RadioFieldCard
-            {...item}
-            value={value}
-            disabled={true}
-            onClick={() => {
-              setValue(item.value);
-            }}
-          />
-        </RadioGroupField>
-      )}
-    </UseState>
-  );
-};
+  },
+  {
+    value: 'driver_dispatcher',
+    name: 'driver_dispatcher',
+    label: 'I Drive And Dispatch',
+    caption: 'I use both Carrier TMS and Driver App.',
+    icon: <Image src="https://dummyimage.com/72x72/7a7a7a/fff" />,
+  },
+  {
+    value: 'truck',
+    name: 'truck',
+    label: 'Im truck',
+    caption: 'Im truck',
+    icon: <Image src="https://dummyimage.com/144x72/7a7a7a/fff" />,
+  },
+  {
+    value: 'tag',
+    name: 'tag',
+    label: 'Im tag',
+    caption: 'Im tag',
+    icon: (
+      <Tag variant="subtle" color="grey">
+        Verified
+      </Tag>
+    ),
+  },
+];
 
 export const radioGroupCard = () => {
-  const values = [
-    {
-      value: 'dispatcher',
-      name: 'dispatcher',
-      label: 'I Only Dispatch',
-      caption: 'I use Carrier TMS and do not use Driver App.',
-      icon: <AccountBoxOutlined />,
-    },
-    {
-      value: 'driver_dispatcher',
-      name: 'driver_dispatcher',
-      label: 'I Drive And Dispatch',
-      caption: 'I use both Carrier TMS and Driver App.',
-      icon: <Image src="https://dummyimage.com/72x72/7a7a7a/fff" />,
-      collapseIconBelow: 'tablet' as CollapseProp,
-    },
-    {
-      value: 'truck',
-      name: 'truck',
-      label: 'Im truck',
-      caption: 'Im truck',
-      icon: <Image src="https://dummyimage.com/144x72/7a7a7a/fff" />,
-      collapseIconBelow: 'tablet' as CollapseProp,
-    },
-    {
-      value: 'tag',
-      name: 'tag',
-      label: 'Im tag',
-      caption: 'Im tag',
-      icon: (
-        <Tag variant="subtle" color="grey">
-          Verified
-        </Tag>
-      ),
-    },
-  ];
-
   return (
-    <UseState initialState="">
+    <UseState initialState="driver_dispatcher">
       {(value, setValue) => (
         <RadioGroupField fullWidth={true}>
           <Stack space="small">
-            {values.map((item, index) => (
+            {cards.map((item, index) => (
+              <RadioFieldCard
+                {...item}
+                key={index}
+                value={value}
+                checked={value === item.value}
+                onClick={() => {
+                  setValue(item.value);
+                }}
+              />
+            ))}
+          </Stack>
+        </RadioGroupField>
+      )}
+    </UseState>
+  );
+};
+
+export const radioDisabledGroupCard = () => {
+  return (
+    <UseState initialState="truck">
+      {(value, setValue) => (
+        <RadioGroupField disabled={true} fullWidth={true}>
+          <Stack space="small">
+            {cards.map((item, index) => (
               <RadioFieldCard
                 {...item}
                 key={index}
