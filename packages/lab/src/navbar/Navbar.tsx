@@ -2,6 +2,7 @@ import { Drawer, useMediaQuery, useTheme } from '@material-ui/core';
 import { ColorDynamic, useResponsiveValue } from '@superdispatch/ui';
 import {
   CSSProperties,
+  Key,
   ReactElement,
   ReactNode,
   useCallback,
@@ -38,7 +39,9 @@ interface NavbarProps {
 
   hasExtraBadge?: boolean;
   isMenuExpanded?: boolean;
+  groupExpanded?: Record<Key, boolean>;
   onMenuExpandedChange?: (isExpanded: boolean) => void;
+  onGroupExpandedChange?: (groupExpanded: Record<Key, boolean>) => void;
 }
 
 export function Navbar({
@@ -49,8 +52,10 @@ export function Navbar({
   children,
   containerStyle,
   hasExtraBadge,
+  groupExpanded: controlledGroupExpanded,
   isMenuExpanded: controlledIsMenuExpanded,
   onMenuExpandedChange,
+  onGroupExpandedChange,
 }: NavbarProps): ReactElement {
   const theme = useTheme();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -60,6 +65,14 @@ export function Navbar({
 
   const matches = useMediaQuery(theme.breakpoints.up('md'), { noSsr: true });
   const [internalIsMenuExpanded, setInternalMenuExpanded] = useState(matches);
+
+  const [groupExpandedState, setGroupExpandedState] = useState<
+    Record<string, boolean>
+  >(controlledGroupExpanded || {});
+
+  const groupExpanded = controlledGroupExpanded
+    ? controlledGroupExpanded
+    : groupExpandedState;
 
   const isMenuExpanded =
     controlledIsMenuExpanded !== undefined
@@ -76,6 +89,22 @@ export function Navbar({
     [controlledIsMenuExpanded, onMenuExpandedChange],
   );
 
+  const setGroupExpanded = useCallback(
+    (groupKey: Key, isExpanded: boolean) => {
+      const updatedGroupExpanded = {
+        ...groupExpanded,
+        [groupKey]: isExpanded,
+      };
+
+      if (!controlledGroupExpanded) {
+        setGroupExpandedState(updatedGroupExpanded);
+      }
+
+      onGroupExpandedChange?.(updatedGroupExpanded);
+    },
+    [controlledGroupExpanded, groupExpanded, onGroupExpandedChange],
+  );
+
   const hasBadge = hasExtraBadge || items.some((item) => item.badge);
 
   const ctx = useMemo<NavbarContextType>(
@@ -85,8 +114,16 @@ export function Navbar({
       setDrawerOpen,
       setMenuExpanded,
       isNavbarExpanded: isMenuExpanded || isDrawerOpen,
+      setGroupExpanded,
+      groupExpanded,
     }),
-    [isDrawerOpen, isMenuExpanded, setDrawerOpen, setMenuExpanded],
+    [
+      isDrawerOpen,
+      isMenuExpanded,
+      setMenuExpanded,
+      setGroupExpanded,
+      groupExpanded,
+    ],
   );
 
   return (
