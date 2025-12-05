@@ -108,7 +108,7 @@ export function NavbarAccordion({
   const uid = useUID();
   const { setDrawerOpen, isNavbarExpanded, groupExpanded, setGroupExpanded } =
     useNavbarContext();
-  const isExpanded = groupExpanded[groupKey] ?? true;
+  const isExpanded = isNavbarExpanded ? groupExpanded[groupKey] ?? true : false;
 
   const filteredItems: Array<Omit<NavbarItemOptions, 'icon'>> = useMemo(
     () => items.filter((item) => !item.hide),
