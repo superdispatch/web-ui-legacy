@@ -1,6 +1,6 @@
 {
   "name": "@superdispatch/forms",
-  "version": "0.50.7",
+  "version": "0.50.8",
   "repository": {
     "type": "git",
     "url": "https://github.com/superdispatch/ui.git"
@@ -18,7 +18,7 @@
     "@superdispatch/hooks": "^0.50.0",
     "@superdispatch/phones": "^0.50.6",
     "@superdispatch/ui": "^0.50.6",
-    "@superdispatch/ui-lab": "^0.50.7"
+    "@superdispatch/ui-lab": "^0.50.8"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.8.0",
