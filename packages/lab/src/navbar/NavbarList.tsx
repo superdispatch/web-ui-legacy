@@ -48,14 +48,16 @@ const Wrapper = styled.div<{ isMobile: boolean }>`
   transition: width 0.3s linear;
 
   height: 100%;
-  width: ${({ isMobile }) => (isMobile ? '280px' : 'initial')};
+
+  --_Navbar-width: ${({ isMobile }) => (isMobile ? '280px' : 'initial')};
+  width: var(--_Navbar-width);
 
   &[data-expanded='true'] {
-    width: ${({ isMobile }) => (isMobile ? '280px' : '240px')};
+    --_Navbar-width: ${({ isMobile }) => (isMobile ? '280px' : '240px')};
   }
 
   &[data-expanded='false'] {
-    width: ${({ isMobile }) => (isMobile ? '280px' : '72px')};
+    --_Navbar-width: ${({ isMobile }) => (isMobile ? '280px' : '72px')};
 
     & > ${Header} {
       justify-content: center;
@@ -147,6 +149,11 @@ const Content = styled.div`
   }
 `;
 
+const ContentInner = styled.div`
+  width: var(--_Navbar-width);
+  transition: width 0.3s linear;
+`;
+
 export interface NavbarAccordionOptions
   extends Omit<NavbarAccordionProps, 'groupKey'> {
   key: Key;
@@ -211,36 +218,38 @@ export function NavbarList({
       </Header>
 
       <Content aria-expanded={isSidebarOpened}>
-        {filteredItems.map((item) => {
-          const index = filteredItems.indexOf(item);
-          const prev = filteredItems[index - 1];
+        <ContentInner>
+          {filteredItems.map((item) => {
+            const index = filteredItems.indexOf(item);
+            const prev = filteredItems[index - 1];
 
-          if ('items' in item) {
+            if ('items' in item) {
+              return (
+                <NavbarAccordion
+                  {...item}
+                  key={item.key}
+                  gutter={prev && prev.groupKey !== item.groupKey}
+                  onClick={item.onClick}
+                  groupKey={item.groupKey || item.key}
+                />
+              );
+            }
             return (
-              <NavbarAccordion
+              <NavbarItem
                 {...item}
                 key={item.key}
                 gutter={prev && prev.groupKey !== item.groupKey}
-                onClick={item.onClick}
-                groupKey={item.groupKey || item.key}
+                onClick={(event) => {
+                  item.onClick?.(event);
+
+                  if (!event.isDefaultPrevented()) {
+                    setDrawerOpen(false);
+                  }
+                }}
               />
             );
-          }
-          return (
-            <NavbarItem
-              {...item}
-              key={item.key}
-              gutter={prev && prev.groupKey !== item.groupKey}
-              onClick={(event) => {
-                item.onClick?.(event);
-
-                if (!event.isDefaultPrevented()) {
-                  setDrawerOpen(false);
-                }
-              }}
-            />
-          );
-        })}
+          })}
+        </ContentInner>
       </Content>
 
       <Footer>{footer}</Footer>

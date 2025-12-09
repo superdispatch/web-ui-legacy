@@ -55,12 +55,13 @@ const NavbarAccordionSummary = styled(AccordionSummary)`
   border-left: 4px solid transparent;
   padding-left: 20px;
 
-  &.MuiAccordionSummary-root {
+  &.MuiAccordionSummary-root,
+  &.MuiAccordionSummary-root.Mui-expanded {
     max-height: 40px;
     min-height: 40px;
   }
 
-  &.MuiAccordionSummary-content {
+  & .MuiAccordionSummary-content {
     align-items: center;
   }
 
