@@ -49,15 +49,15 @@ const Wrapper = styled.div<{ isMobile: boolean }>`
 
   height: 100%;
 
-  --_Navbar-width: ${({ isMobile }) => (isMobile ? '280px' : 'initial')};
-  width: var(--_Navbar-width);
+  --_SdNavbar-width: ${({ isMobile }) => (isMobile ? '280px' : 'initial')};
+  width: var(--_SdNavbar-width);
 
   &[data-expanded='true'] {
-    --_Navbar-width: ${({ isMobile }) => (isMobile ? '280px' : '240px')};
+    --_SdNavbar-width: ${({ isMobile }) => (isMobile ? '280px' : '240px')};
   }
 
   &[data-expanded='false'] {
-    --_Navbar-width: ${({ isMobile }) => (isMobile ? '280px' : '72px')};
+    --_SdNavbar-width: ${({ isMobile }) => (isMobile ? '280px' : '72px')};
 
     & > ${Header} {
       justify-content: center;
@@ -150,7 +150,7 @@ const Content = styled.div`
 `;
 
 const ContentInner = styled.div`
-  width: var(--_Navbar-width);
+  width: var(--_SdNavbar-width);
   transition: width 0.3s linear;
 `;
 
