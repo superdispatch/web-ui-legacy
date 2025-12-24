@@ -83,6 +83,7 @@ export interface NavbarItemProps {
   label: ReactNode;
   icon?: ReactNode;
   badge?: ReactNode;
+  badgeIcon?: ReactNode;
   ident?: number;
   gutter?: boolean;
   variant?: 'danger' | 'primary';
@@ -93,6 +94,7 @@ export function NavbarItem({
   label,
   gutter,
   badge,
+  badgeIcon,
   icon,
   component,
   onClick,
@@ -117,9 +119,11 @@ export function NavbarItem({
 
       <NavbarLabel id={uid}>{label}</NavbarLabel>
 
-      {badge != null && (
+      {badge != null && !badgeIcon && (
         <NavbarBadge data-variant={variant}>{badge}</NavbarBadge>
       )}
+
+      {badgeIcon}
     </NavbarItemRoot>
   );
 }
