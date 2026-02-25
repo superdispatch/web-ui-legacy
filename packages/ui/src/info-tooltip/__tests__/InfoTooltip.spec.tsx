@@ -94,7 +94,7 @@ it('checks component css InfoTooltip', () => {
     }
 
     .MuiTooltip-arrow {
-      color: ColorDynamic.Silver500;
+      color: ColorDynamic.Dark500;
       width: 1em;
       height: 0.71em;
       overflow: hidden;

@@ -106,7 +106,7 @@ it('checks component css', () => {
     }
 
     .MuiTooltip-arrow {
-      color: ColorDynamic.Silver500;
+      color: ColorDynamic.Dark500;
       width: 1em;
       height: 0.71em;
       overflow: hidden;
