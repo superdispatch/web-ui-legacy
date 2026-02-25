@@ -26,7 +26,7 @@ export function overrideTooltip(theme: SuperDispatchTheme): void {
     },
 
     arrow: {
-      color: ColorDynamic.Silver500,
+      color: ColorDynamic.Dark500,
       fontSize: theme.spacing(1),
     },
   };
