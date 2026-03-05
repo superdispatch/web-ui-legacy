@@ -16,7 +16,6 @@ export interface DrawerActionDef extends Omit<ButtonProps, 'variant'> {
 export interface AppDrawerProps {
   title: React.ReactNode;
   subtitle?: React.ReactNode;
-
   children: React.ReactNode;
 
   primaryAction?: DrawerActionDef;
