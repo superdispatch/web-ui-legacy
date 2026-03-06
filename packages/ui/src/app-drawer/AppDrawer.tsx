@@ -72,8 +72,8 @@ export function AppDrawer({
   return (
     <MuiDrawer
       open={open}
-      anchor="right"
       onClose={onClose}
+      anchor="right"
       PaperProps={{
         style: {
           width: '100%',
