@@ -33,7 +33,8 @@
   },
   "publishConfig": {
     "access": "public",
-    "directory": "pkg"
+    "directory": "pkg",
+    "registry": "https://registry.npmjs.org/"
   },
   "@pika/pack": {
     "pipeline": [
