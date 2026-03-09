@@ -51,6 +51,7 @@ const StyledActionsLayout = styled.div`
 
 const sizeToMaxWidthMap: Record<AppDrawerSize, string> = {
   md: '432px',
+  mdLg: '520px',
   lg: '600px',
   xl: '746px',
   xxl: '900px',
