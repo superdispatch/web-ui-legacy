@@ -17,6 +17,7 @@ export interface AppDrawerProps {
   title: React.ReactNode;
   subtitle?: React.ReactNode;
   children: React.ReactNode;
+  footer?: React.ReactNode;
 
   primaryAction?: DrawerActionDef;
   secondaryAction?: DrawerActionDef;
@@ -60,6 +61,7 @@ export function AppDrawer({
   title,
   subtitle,
   children,
+  footer,
   open,
   onClose,
   onBack,
@@ -106,7 +108,9 @@ export function AppDrawer({
         <DrawerContent>{children}</DrawerContent>
       )}
 
-      {(primaryAction || secondaryAction) && (
+      {footer && <DrawerActions>{footer}</DrawerActions>}
+
+      {(primaryAction || secondaryAction) && !footer && (
         <DrawerActions>
           <StyledActionsLayout>
             {primaryAction && (
