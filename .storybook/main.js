@@ -10,7 +10,7 @@ module.exports = {
     const babelConfig = createBabelConfig({ docs: true });
 
     const jsRule = config.module.rules[0];
-    jsRule.exclude = /node_modules\/(?!(luxon)\/).*/; // Luxon has optional chaining and nullish coalescing operators. So we need to compile it.
+    jsRule.exclude = /node_modules\/(?!\.pnpm\/luxon|luxon\/).*/; // Luxon has optional chaining and nullish coalescing operators. So we need to compile it.
     jsRule.use[0].options.plugins.push(...babelConfig.plugins);
 
     config.resolve.mainFields = ['module', 'browser', 'main'];
