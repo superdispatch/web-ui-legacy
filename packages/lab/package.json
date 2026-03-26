@@ -11,7 +11,7 @@
   "browser": "pkg/dist-web/index.js",
   "types": "src/index.ts",
   "scripts": {
-    "version": "pika build"
+    "version": "pika-pack build"
   },
   "dependencies": {
     "@superdispatch/dates": "^0.50.12",

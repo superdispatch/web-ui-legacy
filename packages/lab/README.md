@@ -6,5 +6,5 @@
 #### Installation
 
 ```bash
-yarn add @superdispatch/ui-lab
+pnpm add @superdispatch/ui-lab
 ```

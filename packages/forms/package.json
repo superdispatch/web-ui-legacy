@@ -11,14 +11,16 @@
   "browser": "pkg/dist-web/index.js",
   "types": "src/index.ts",
   "scripts": {
-    "version": "pika build"
+    "version": "pika-pack build"
   },
   "dependencies": {
+    "@babel/runtime": "^7.26.9",
     "@superdispatch/dates": "^0.50.12",
     "@superdispatch/hooks": "^0.50.12",
     "@superdispatch/phones": "^0.50.12",
     "@superdispatch/ui": "^0.50.12",
-    "@superdispatch/ui-lab": "^0.50.12"
+    "@superdispatch/ui-lab": "^0.50.12",
+    "luxon": "^3.7.1"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.8.0",

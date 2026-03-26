@@ -9,7 +9,7 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "scripts": {
-    "version": "pika build"
+    "version": "pika-pack build"
   },
   "dependencies": {
     "faker": "^5.5.3"

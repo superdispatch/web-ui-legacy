@@ -15,7 +15,7 @@
 2.  Ask frontend chapter lead to give access to Superdispatch organization in NPM
 3.  Enable 2FA for your NPM account
 4.  Run `npm login` from your terminal and login into your account
-5.  Run `yarn release`
+5.  Run `pnpm release`
 6.  Make sure the tag is created on Github and packages published into NPM
 7.  Update all usages of packages in product repositories.
 
@@ -26,7 +26,7 @@ In our project, we use Plop, a micro-generator framework that helps developers t
 To generate component use command:
 
 ```bash
-yarn run generate
+pnpm generate
 ```
 
 1. Plop will ask you what type of component you'd like to generate
@@ -39,9 +39,9 @@ yarn run generate
 
 #### `tsc` error: Output file '...' has not been built from source file '...'
 
-If error points at `@superdispatch/...` package, open respective package directory and run `yarn tsc` command.
+If error points at `@superdispatch/...` package, open respective package directory and run `pnpm tsc` command.
 
-#### `tsc` error on `yarn run release` or `lerna publish` commands:
+#### `tsc` error on `pnpm release` or `lerna publish` commands:
 
 - Run logged `tsc` command.
 - Try solution of error described above (_tsc error: Output file ..._).

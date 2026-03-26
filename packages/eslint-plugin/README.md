@@ -5,5 +5,5 @@
 #### Installation
 
 ```bash
-yarn add @superdispatch/eslint-plugin-ui
+pnpm add @superdispatch/eslint-plugin-ui
 ```
