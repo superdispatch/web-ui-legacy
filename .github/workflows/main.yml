@@ -10,27 +10,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: umidbekk/actions/prepare-node-repo@v2
+      - uses: superdispatch/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v4
-          node-version: 18
+          cache-key: cache-v4-
+          node-version: 24
+          pnpm-version: 10.25
 
-      - run: yarn check:types
-      - run: yarn lint
-      - run: yarn test
+      - run: pnpm check:types
+      - run: pnpm lint
+      - run: pnpm test
       - uses: codecov/codecov-action@v2.1.0
-      - run: yarn build
+      - run: pnpm build
 
   docs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: umidbekk/actions/prepare-node-repo@v2
+      - uses: superdispatch/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v4
-          node-version: 18
+          cache-key: cache-v4-
+          node-version: 24
+          pnpm-version: 10.25
 
-      - run: yarn docs
+      - run: pnpm docs
       - id: deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -46,12 +48,13 @@ jobs:
       - docs
     runs-on: ubuntu-latest
     steps:
-      - uses: umidbekk/actions/prepare-node-repo@v2
+      - uses: superdispatch/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v4
-          node-version: 18
-      - run: yarn cypress install
-      - run: yarn cypress run
+          cache-key: cache-v4-
+          node-version: 24
+          pnpm-version: 10.25
+      - run: pnpm cypress install
+      - run: pnpm cypress run
         env:
           CYPRESS_HOST: https://ui.superdispatch.org
 
@@ -61,12 +64,13 @@ jobs:
       - docs
     runs-on: ubuntu-latest
     steps:
-      - uses: umidbekk/actions/prepare-node-repo@v2
+      - uses: superdispatch/actions/prepare-node-repo@v2
         with:
-          cache-key: yarn-v4
-          node-version: 18
+          cache-key: cache-v4-
+          node-version: 24
+          pnpm-version: 10.25
 
-      - run: yarn test-visual-ci https://ui.superdispatch.org
+      - run: pnpm test-visual-ci https://ui.superdispatch.org
 
       - if: ${{ failure() }}
         uses: actions/upload-artifact@v4
