@@ -5,7 +5,7 @@
 #### Installation
 
 ```bash
-yarn add @superdispatch/testutils @testing-library/react
+pnpm add @superdispatch/testutils @testing-library/react
 ```
 
 #### Setup

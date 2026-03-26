@@ -11,9 +11,10 @@
   "browser": "pkg/dist-web/index.js",
   "types": "src/index.ts",
   "scripts": {
-    "version": "pika build"
+    "version": "pika-pack build"
   },
   "dependencies": {
+    "@babel/runtime": "^7.29.2",
     "dequal": "^2.0.2"
   },
   "peerDependencies": {

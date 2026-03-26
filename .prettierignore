@@ -2,5 +2,6 @@ pkg/
 docs/
 coverage/
 lerna.json
+pnpm-lock.yaml
 plop-templates/
 packages/*/generated/

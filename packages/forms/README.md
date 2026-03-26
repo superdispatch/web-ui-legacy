@@ -6,7 +6,7 @@
 #### Installation
 
 ```bash
-yarn add @superdispatch/forms @material-ui/core formik
+pnpm add @superdispatch/forms @material-ui/core formik
 ```
 
 #### Description

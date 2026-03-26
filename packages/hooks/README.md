@@ -6,5 +6,5 @@
 #### Installation
 
 ```bash
-yarn add @superdispatch/hooks
+pnpm add @superdispatch/hooks
 ```
